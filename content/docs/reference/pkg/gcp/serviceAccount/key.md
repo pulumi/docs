@@ -13,11 +13,17 @@ meta_desc: "Documentation for the gcp.serviceAccount.Key resource with examples,
 Creates and manages service account key-pairs, which allow the user to establish identity of a service account outside of GCP. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creating A New Key Pair
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -88,9 +100,12 @@ mykey = gcp.service_account.Key("mykey",
     public_key_type="TYPE_X509_PEM_FILE")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Key Resource {#create}
@@ -133,9 +155,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceaccountid_csharp">
 <a href="#serviceaccountid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
@@ -302,8 +293,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_csharp">
 <a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -312,8 +302,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyalgorithm_csharp">
 <a href="#keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -325,8 +314,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeytype_csharp">
 <a href="#privatekeytype_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
@@ -335,8 +323,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_csharp">
 <a href="#publickeydata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -345,8 +332,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeytype_csharp">
 <a href="#publickeytype_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Type</a>
@@ -355,14 +341,11 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceaccountid_go">
 <a href="#serviceaccountid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
@@ -373,8 +356,7 @@ Valid values are listed at
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_go">
 <a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -383,8 +365,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyalgorithm_go">
 <a href="#keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -396,8 +377,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeytype_go">
 <a href="#privatekeytype_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
@@ -406,8 +386,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_go">
 <a href="#publickeydata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -416,8 +395,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeytype_go">
 <a href="#publickeytype_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Type</a>
@@ -426,14 +404,11 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceaccountid_nodejs">
 <a href="#serviceaccountid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Id</a>
@@ -444,8 +419,7 @@ Valid values are listed at
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_nodejs">
 <a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -454,8 +428,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyalgorithm_nodejs">
 <a href="#keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -467,8 +440,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeytype_nodejs">
 <a href="#privatekeytype_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Type</a>
@@ -477,8 +449,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_nodejs">
 <a href="#publickeydata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Data</a>
@@ -487,8 +458,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeytype_nodejs">
 <a href="#publickeytype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Type</a>
@@ -497,14 +467,11 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_account_id_python">
 <a href="#service_account_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>id</a>
@@ -515,8 +482,7 @@ Valid values are listed at
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepers_python">
 <a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -525,8 +491,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_algorithm_python">
 <a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -538,8 +503,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_type_python">
 <a href="#private_key_type_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>type</a>
@@ -548,8 +512,7 @@ Valid values are listed at
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_data_python">
 <a href="#public_key_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>data</a>
@@ -558,8 +521,7 @@ Valid values are listed at
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_type_python">
 <a href="#public_key_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>type</a>
@@ -568,8 +530,7 @@ Valid values are listed at
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -580,9 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -600,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -611,8 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -621,8 +577,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validafter_csharp">
 <a href="#validafter_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>After</a>
@@ -631,8 +586,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validbefore_csharp">
 <a href="#validbefore_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Before</a>
@@ -642,14 +596,11 @@ service account keys through the CLI or web console. This is only populated when
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -657,8 +608,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -667,8 +617,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -678,8 +627,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -688,8 +636,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validafter_go">
 <a href="#validafter_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>After</a>
@@ -698,8 +645,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validbefore_go">
 <a href="#validbefore_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Before</a>
@@ -709,14 +655,11 @@ service account keys through the CLI or web console. This is only populated when
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -724,8 +667,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -734,8 +676,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -745,8 +686,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -755,8 +695,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validafter_nodejs">
 <a href="#validafter_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>After</a>
@@ -765,8 +704,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validbefore_nodejs">
 <a href="#validbefore_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Before</a>
@@ -776,14 +714,11 @@ service account keys through the CLI or web console. This is only populated when
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -791,8 +726,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -801,8 +735,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -812,8 +745,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -822,8 +754,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_after_python">
 <a href="#valid_after_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>after</a>
@@ -832,8 +763,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_before_python">
 <a href="#valid_before_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>before</a>
@@ -843,8 +773,7 @@ service account keys through the CLI or web console. This is only populated when
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -971,9 +900,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_csharp">
 <a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -982,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_csharp">
 <a href="#state_keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -995,8 +921,7 @@ The following state arguments are supported:
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1005,8 +930,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1016,8 +940,7 @@ Valid values are listed at
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeytype_csharp">
 <a href="#state_privatekeytype_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
@@ -1026,8 +949,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_csharp">
 <a href="#state_publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1036,8 +958,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeydata_csharp">
 <a href="#state_publickeydata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -1046,8 +967,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeytype_csharp">
 <a href="#state_publickeytype_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Type</a>
@@ -1056,8 +976,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_csharp">
 <a href="#state_serviceaccountid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
@@ -1068,8 +987,7 @@ service account keys through the CLI or web console. This is only populated when
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validafter_csharp">
 <a href="#state_validafter_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>After</a>
@@ -1078,8 +996,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validbefore_csharp">
 <a href="#state_validbefore_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Before</a>
@@ -1089,14 +1006,11 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_go">
 <a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -1105,8 +1019,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_go">
 <a href="#state_keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -1118,8 +1031,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1128,8 +1040,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1139,8 +1050,7 @@ Valid values are listed at
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeytype_go">
 <a href="#state_privatekeytype_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Type</a>
@@ -1149,8 +1059,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_go">
 <a href="#state_publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1159,8 +1068,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeydata_go">
 <a href="#state_publickeydata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -1169,8 +1077,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeytype_go">
 <a href="#state_publickeytype_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Type</a>
@@ -1179,8 +1086,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_go">
 <a href="#state_serviceaccountid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
@@ -1191,8 +1097,7 @@ service account keys through the CLI or web console. This is only populated when
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validafter_go">
 <a href="#state_validafter_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>After</a>
@@ -1201,8 +1106,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validbefore_go">
 <a href="#state_validbefore_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Before</a>
@@ -1212,14 +1116,11 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_nodejs">
 <a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -1228,8 +1129,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_nodejs">
 <a href="#state_keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -1241,8 +1141,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1251,8 +1150,7 @@ Valid values are listed at
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1262,8 +1160,7 @@ Valid values are listed at
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeytype_nodejs">
 <a href="#state_privatekeytype_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Type</a>
@@ -1272,8 +1169,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_nodejs">
 <a href="#state_publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -1282,8 +1178,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeydata_nodejs">
 <a href="#state_publickeydata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Data</a>
@@ -1292,8 +1187,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeytype_nodejs">
 <a href="#state_publickeytype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Type</a>
@@ -1302,8 +1196,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountid_nodejs">
 <a href="#state_serviceaccountid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Id</a>
@@ -1314,8 +1207,7 @@ service account keys through the CLI or web console. This is only populated when
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validafter_nodejs">
 <a href="#state_validafter_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>After</a>
@@ -1324,8 +1216,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validbefore_nodejs">
 <a href="#state_validbefore_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Before</a>
@@ -1335,14 +1226,11 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_python">
 <a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -1351,8 +1239,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will trigger a new key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_algorithm_python">
 <a href="#state_key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -1364,8 +1251,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 Valid values are listed at
 [ServiceAccountPrivateKeyType](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm)
 (only used on create)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1374,8 +1260,7 @@ Valid values are listed at
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name used for this key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1385,8 +1270,7 @@ Valid values are listed at
     </dt>
     <dd>{{% md %}}The private key in JSON format, base64 encoded. This is what you normally get as a file when creating
 service account keys through the CLI or web console. This is only populated when creating a new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_type_python">
 <a href="#state_private_key_type_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>type</a>
@@ -1395,8 +1279,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_python">
 <a href="#state_public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -1405,8 +1288,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key, base64 encoded
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_data_python">
 <a href="#state_public_key_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>data</a>
@@ -1415,8 +1297,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_type_python">
 <a href="#state_public_key_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>type</a>
@@ -1425,8 +1306,7 @@ service account keys through the CLI or web console. This is only populated when
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_id_python">
 <a href="#state_service_account_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>id</a>
@@ -1437,8 +1317,7 @@ service account keys through the CLI or web console. This is only populated when
     <dd>{{% md %}}The Service account id of the Key Pair. This can be a string in the format
 `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_after_python">
 <a href="#state_valid_after_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>after</a>
@@ -1447,8 +1326,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_before_python">
 <a href="#state_valid_before_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>before</a>
@@ -1458,8 +1336,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
     </dt>
     <dd>{{% md %}}The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1481,6 +1358,6 @@ This resource does not support import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

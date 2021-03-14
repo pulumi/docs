@@ -15,11 +15,17 @@ Provides a WorkSpaces directory in AWS WorkSpaces Service.
 > **NOTE:** AWS WorkSpaces service requires [`workspaces_DefaultRole`](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-access-control.html#create-default-role) IAM role to operate normally.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -160,9 +166,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -313,9 +322,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -400,9 +412,12 @@ example_directoryservice_directory_directory = aws.directoryservice.Directory("e
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -499,10 +514,17 @@ const exampleDirectoryservice_directoryDirectory = new aws.directoryservice.Dire
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### IP Groups
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -527,9 +549,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -558,9 +583,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -571,9 +599,12 @@ example_directory = aws.workspaces.Directory("exampleDirectory",
     ip_group_ids=[example_ip_group.id])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -586,9 +617,16 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Directory Resource {#create}
@@ -613,9 +651,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -623,9 +659,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -633,9 +667,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -643,10 +675,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -672,9 +701,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -682,9 +709,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -692,9 +717,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -702,9 +725,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -712,18 +733,13 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -731,9 +747,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -741,9 +755,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -751,10 +763,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -769,9 +778,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_csharp">
 <a href="#directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -780,8 +787,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgroupids_csharp">
 <a href="#ipgroupids_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
@@ -790,8 +796,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selfservicepermissions_csharp">
 <a href="#selfservicepermissions_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
@@ -800,8 +805,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -810,8 +814,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -820,8 +823,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceaccessproperties_csharp">
 <a href="#workspaceaccessproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
@@ -830,8 +832,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecreationproperties_csharp">
 <a href="#workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
@@ -840,14 +841,11 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_go">
 <a href="#directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -856,8 +854,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgroupids_go">
 <a href="#ipgroupids_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
@@ -866,8 +863,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selfservicepermissions_go">
 <a href="#selfservicepermissions_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
@@ -876,8 +872,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -886,8 +881,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -896,8 +890,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceaccessproperties_go">
 <a href="#workspaceaccessproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
@@ -906,8 +899,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecreationproperties_go">
 <a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
@@ -916,14 +908,11 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_nodejs">
 <a href="#directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
@@ -932,8 +921,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgroupids_nodejs">
 <a href="#ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
@@ -942,8 +930,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selfservicepermissions_nodejs">
 <a href="#selfservicepermissions_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Permissions</a>
@@ -952,8 +939,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -962,8 +948,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -972,8 +957,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceaccessproperties_nodejs">
 <a href="#workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
@@ -982,8 +966,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecreationproperties_nodejs">
 <a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
@@ -992,14 +975,11 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directory_id_python">
 <a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
@@ -1008,8 +988,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_group_ids_python">
 <a href="#ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
@@ -1018,8 +997,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_service_permissions_python">
 <a href="#self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
@@ -1028,8 +1006,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -1038,8 +1015,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1048,8 +1024,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_access_properties_python">
 <a href="#workspace_access_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>access_<wbr>properties</a>
@@ -1058,8 +1033,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_creation_properties_python">
 <a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
@@ -1068,8 +1042,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1080,9 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1091,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerusername_csharp">
 <a href="#customerusername_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>User<wbr>Name</a>
@@ -1101,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directoryname_csharp">
 <a href="#directoryname_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Name</a>
@@ -1111,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directorytype_csharp">
 <a href="#directorytype_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
@@ -1121,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsipaddresses_csharp">
 <a href="#dnsipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip<wbr>Addresses</a>
@@ -1131,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroleid_csharp">
 <a href="#iamroleid_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Id</a>
@@ -1141,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1150,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationcode_csharp">
 <a href="#registrationcode_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Code</a>
@@ -1160,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspacesecuritygroupid_csharp">
 <a href="#workspacesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1170,14 +1133,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1186,8 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerusername_go">
 <a href="#customerusername_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>User<wbr>Name</a>
@@ -1196,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directoryname_go">
 <a href="#directoryname_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Name</a>
@@ -1206,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directorytype_go">
 <a href="#directorytype_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
@@ -1216,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsipaddresses_go">
 <a href="#dnsipaddresses_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip<wbr>Addresses</a>
@@ -1226,8 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroleid_go">
 <a href="#iamroleid_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Id</a>
@@ -1236,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1245,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationcode_go">
 <a href="#registrationcode_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Code</a>
@@ -1255,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspacesecuritygroupid_go">
 <a href="#workspacesecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1265,14 +1217,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1281,8 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerusername_nodejs">
 <a href="#customerusername_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>User<wbr>Name</a>
@@ -1291,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directoryname_nodejs">
 <a href="#directoryname_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Name</a>
@@ -1301,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directorytype_nodejs">
 <a href="#directorytype_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Type</a>
@@ -1311,8 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsipaddresses_nodejs">
 <a href="#dnsipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ip<wbr>Addresses</a>
@@ -1321,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroleid_nodejs">
 <a href="#iamroleid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Id</a>
@@ -1331,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1340,8 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationcode_nodejs">
 <a href="#registrationcode_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Code</a>
@@ -1350,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspacesecuritygroupid_nodejs">
 <a href="#workspacesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1360,14 +1301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1376,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_user_name_python">
 <a href="#customer_user_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>user_<wbr>name</a>
@@ -1386,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directory_name_python">
 <a href="#directory_name_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>name</a>
@@ -1396,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="directory_type_python">
 <a href="#directory_type_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>type</a>
@@ -1406,8 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_ip_addresses_python">
 <a href="#dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip_<wbr>addresses</a>
@@ -1416,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iam_role_id_python">
 <a href="#iam_role_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>id</a>
@@ -1426,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1435,8 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registration_code_python">
 <a href="#registration_code_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>code</a>
@@ -1445,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspace_security_group_id_python">
 <a href="#workspace_security_group_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>security_<wbr>group_<wbr>id</a>
@@ -1455,8 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1583,9 +1512,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_csharp">
 <a href="#state_alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1594,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerusername_csharp">
 <a href="#state_customerusername_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>User<wbr>Name</a>
@@ -1604,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_csharp">
 <a href="#state_directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -1614,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryname_csharp">
 <a href="#state_directoryname_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Name</a>
@@ -1624,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directorytype_csharp">
 <a href="#state_directorytype_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
@@ -1634,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsipaddresses_csharp">
 <a href="#state_dnsipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip<wbr>Addresses</a>
@@ -1644,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroleid_csharp">
 <a href="#state_iamroleid_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Id</a>
@@ -1654,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipgroupids_csharp">
 <a href="#state_ipgroupids_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
@@ -1664,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationcode_csharp">
 <a href="#state_registrationcode_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Code</a>
@@ -1674,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selfservicepermissions_csharp">
 <a href="#state_selfservicepermissions_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
@@ -1684,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1694,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1704,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceaccessproperties_csharp">
 <a href="#state_workspaceaccessproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
@@ -1714,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacecreationproperties_csharp">
 <a href="#state_workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
@@ -1724,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacesecuritygroupid_csharp">
 <a href="#state_workspacesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1734,14 +1647,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_go">
 <a href="#state_alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1750,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerusername_go">
 <a href="#state_customerusername_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>User<wbr>Name</a>
@@ -1760,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_go">
 <a href="#state_directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -1770,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryname_go">
 <a href="#state_directoryname_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Name</a>
@@ -1780,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directorytype_go">
 <a href="#state_directorytype_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Type</a>
@@ -1790,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsipaddresses_go">
 <a href="#state_dnsipaddresses_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip<wbr>Addresses</a>
@@ -1800,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroleid_go">
 <a href="#state_iamroleid_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Id</a>
@@ -1810,8 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipgroupids_go">
 <a href="#state_ipgroupids_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
@@ -1820,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationcode_go">
 <a href="#state_registrationcode_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Code</a>
@@ -1830,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selfservicepermissions_go">
 <a href="#state_selfservicepermissions_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
@@ -1840,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
 <a href="#state_subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1850,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1860,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceaccessproperties_go">
 <a href="#state_workspaceaccessproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
@@ -1870,8 +1768,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacecreationproperties_go">
 <a href="#state_workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
@@ -1880,8 +1777,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacesecuritygroupid_go">
 <a href="#state_workspacesecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1890,14 +1786,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_nodejs">
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1906,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerusername_nodejs">
 <a href="#state_customerusername_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>User<wbr>Name</a>
@@ -1916,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_nodejs">
 <a href="#state_directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
@@ -1926,8 +1817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directoryname_nodejs">
 <a href="#state_directoryname_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Name</a>
@@ -1936,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directorytype_nodejs">
 <a href="#state_directorytype_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Type</a>
@@ -1946,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsipaddresses_nodejs">
 <a href="#state_dnsipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ip<wbr>Addresses</a>
@@ -1956,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroleid_nodejs">
 <a href="#state_iamroleid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Id</a>
@@ -1966,8 +1853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipgroupids_nodejs">
 <a href="#state_ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
@@ -1976,8 +1862,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationcode_nodejs">
 <a href="#state_registrationcode_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Code</a>
@@ -1986,8 +1871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selfservicepermissions_nodejs">
 <a href="#state_selfservicepermissions_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Permissions</a>
@@ -1996,8 +1880,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -2006,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2016,8 +1898,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceaccessproperties_nodejs">
 <a href="#state_workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
@@ -2026,8 +1907,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacecreationproperties_nodejs">
 <a href="#state_workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
@@ -2036,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspacesecuritygroupid_nodejs">
 <a href="#state_workspacesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Security<wbr>Group<wbr>Id</a>
@@ -2046,14 +1925,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_python">
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -2062,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_user_name_python">
 <a href="#state_customer_user_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>user_<wbr>name</a>
@@ -2072,8 +1947,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name for the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directory_id_python">
 <a href="#state_directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
@@ -2082,8 +1956,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directory_name_python">
 <a href="#state_directory_name_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>name</a>
@@ -2092,8 +1965,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directory_type_python">
 <a href="#state_directory_type_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>type</a>
@@ -2102,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_ip_addresses_python">
 <a href="#state_dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip_<wbr>addresses</a>
@@ -2112,8 +1983,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_role_id_python">
 <a href="#state_iam_role_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>id</a>
@@ -2122,8 +1992,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_group_ids_python">
 <a href="#state_ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
@@ -2132,8 +2001,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_code_python">
 <a href="#state_registration_code_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>code</a>
@@ -2142,8 +2010,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_service_permissions_python">
 <a href="#state_self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
@@ -2152,8 +2019,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -2162,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2172,8 +2037,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspace_access_properties_python">
 <a href="#state_workspace_access_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>access_<wbr>properties</a>
@@ -2182,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspace_creation_properties_python">
 <a href="#state_workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
@@ -2192,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspace_security_group_id_python">
 <a href="#state_workspace_security_group_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>security_<wbr>group_<wbr>id</a>
@@ -2202,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2218,9 +2079,7 @@ The following state arguments are supported:
 <h4 id="directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changecomputetype_csharp">
 <a href="#changecomputetype_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Compute<wbr>Type</a>
@@ -2229,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="increasevolumesize_csharp">
 <a href="#increasevolumesize_csharp" style="color: inherit; text-decoration: inherit;">Increase<wbr>Volume<wbr>Size</a>
@@ -2239,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebuildworkspace_csharp">
 <a href="#rebuildworkspace_csharp" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Workspace</a>
@@ -2249,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartworkspace_csharp">
 <a href="#restartworkspace_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Workspace</a>
@@ -2259,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="switchrunningmode_csharp">
 <a href="#switchrunningmode_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Running<wbr>Mode</a>
@@ -2269,14 +2124,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changecomputetype_go">
 <a href="#changecomputetype_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Compute<wbr>Type</a>
@@ -2285,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="increasevolumesize_go">
 <a href="#increasevolumesize_go" style="color: inherit; text-decoration: inherit;">Increase<wbr>Volume<wbr>Size</a>
@@ -2295,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebuildworkspace_go">
 <a href="#rebuildworkspace_go" style="color: inherit; text-decoration: inherit;">Rebuild<wbr>Workspace</a>
@@ -2305,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartworkspace_go">
 <a href="#restartworkspace_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Workspace</a>
@@ -2315,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="switchrunningmode_go">
 <a href="#switchrunningmode_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Running<wbr>Mode</a>
@@ -2325,14 +2173,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changecomputetype_nodejs">
 <a href="#changecomputetype_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Compute<wbr>Type</a>
@@ -2341,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="increasevolumesize_nodejs">
 <a href="#increasevolumesize_nodejs" style="color: inherit; text-decoration: inherit;">increase<wbr>Volume<wbr>Size</a>
@@ -2351,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebuildworkspace_nodejs">
 <a href="#rebuildworkspace_nodejs" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Workspace</a>
@@ -2361,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartworkspace_nodejs">
 <a href="#restartworkspace_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Workspace</a>
@@ -2371,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="switchrunningmode_nodejs">
 <a href="#switchrunningmode_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Running<wbr>Mode</a>
@@ -2381,14 +2222,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="change_compute_type_python">
 <a href="#change_compute_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>compute_<wbr>type</a>
@@ -2397,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="increase_volume_size_python">
 <a href="#increase_volume_size_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>volume_<wbr>size</a>
@@ -2407,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebuild_workspace_python">
 <a href="#rebuild_workspace_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>workspace</a>
@@ -2417,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_workspace_python">
 <a href="#restart_workspace_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>workspace</a>
@@ -2427,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="switch_running_mode_python">
 <a href="#switch_running_mode_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>running_<wbr>mode</a>
@@ -2437,16 +2271,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetypeandroid_csharp">
 <a href="#devicetypeandroid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Android</a>
@@ -2455,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypechromeos_csharp">
 <a href="#devicetypechromeos_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Chromeos</a>
@@ -2465,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeios_csharp">
 <a href="#devicetypeios_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Ios</a>
@@ -2475,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeosx_csharp">
 <a href="#devicetypeosx_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
@@ -2485,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeweb_csharp">
 <a href="#devicetypeweb_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Web</a>
@@ -2495,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypewindows_csharp">
 <a href="#devicetypewindows_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Windows</a>
@@ -2505,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypezeroclient_csharp">
 <a href="#devicetypezeroclient_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Zeroclient</a>
@@ -2515,14 +2340,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetypeandroid_go">
 <a href="#devicetypeandroid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Android</a>
@@ -2531,8 +2353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypechromeos_go">
 <a href="#devicetypechromeos_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Chromeos</a>
@@ -2541,8 +2362,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeios_go">
 <a href="#devicetypeios_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Ios</a>
@@ -2551,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeosx_go">
 <a href="#devicetypeosx_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
@@ -2561,8 +2380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeweb_go">
 <a href="#devicetypeweb_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Web</a>
@@ -2571,8 +2389,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypewindows_go">
 <a href="#devicetypewindows_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Windows</a>
@@ -2581,8 +2398,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypezeroclient_go">
 <a href="#devicetypezeroclient_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Zeroclient</a>
@@ -2591,14 +2407,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetypeandroid_nodejs">
 <a href="#devicetypeandroid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Android</a>
@@ -2607,8 +2420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypechromeos_nodejs">
 <a href="#devicetypechromeos_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Chromeos</a>
@@ -2617,8 +2429,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeios_nodejs">
 <a href="#devicetypeios_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Ios</a>
@@ -2627,8 +2438,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeosx_nodejs">
 <a href="#devicetypeosx_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Osx</a>
@@ -2637,8 +2447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeweb_nodejs">
 <a href="#devicetypeweb_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Web</a>
@@ -2647,8 +2456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypewindows_nodejs">
 <a href="#devicetypewindows_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Windows</a>
@@ -2657,8 +2465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypezeroclient_nodejs">
 <a href="#devicetypezeroclient_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Zeroclient</a>
@@ -2667,14 +2474,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_type_android_python">
 <a href="#device_type_android_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>android</a>
@@ -2683,8 +2487,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Android devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_chromeos_python">
 <a href="#device_type_chromeos_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>chromeos</a>
@@ -2693,8 +2496,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Chromebooks to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_ios_python">
 <a href="#device_type_ios_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>ios</a>
@@ -2703,8 +2505,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_osx_python">
 <a href="#device_type_osx_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>osx</a>
@@ -2713,8 +2514,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use macOS clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_web_python">
 <a href="#device_type_web_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>web</a>
@@ -2723,8 +2523,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can access their WorkSpaces through a web browser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_windows_python">
 <a href="#device_type_windows_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>windows</a>
@@ -2733,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use Windows clients to access their WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_zeroclient_python">
 <a href="#device_type_zeroclient_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>zeroclient</a>
@@ -2743,16 +2541,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use zero client devices to access their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupid_csharp">
 <a href="#customsecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Id</a>
@@ -2761,8 +2556,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultou_csharp">
 <a href="#defaultou_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
@@ -2771,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinternetaccess_csharp">
 <a href="#enableinternetaccess_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
@@ -2781,8 +2574,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemaintenancemode_csharp">
 <a href="#enablemaintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
@@ -2791,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledaslocaladministrator_csharp">
 <a href="#userenabledaslocaladministrator_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
@@ -2801,14 +2592,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupid_go">
 <a href="#customsecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Id</a>
@@ -2817,8 +2605,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultou_go">
 <a href="#defaultou_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
@@ -2827,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinternetaccess_go">
 <a href="#enableinternetaccess_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
@@ -2837,8 +2623,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemaintenancemode_go">
 <a href="#enablemaintenancemode_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
@@ -2847,8 +2632,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledaslocaladministrator_go">
 <a href="#userenabledaslocaladministrator_go" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
@@ -2857,14 +2641,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customsecuritygroupid_nodejs">
 <a href="#customsecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Id</a>
@@ -2873,8 +2654,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultou_nodejs">
 <a href="#defaultou_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ou</a>
@@ -2883,8 +2663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinternetaccess_nodejs">
 <a href="#enableinternetaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Access</a>
@@ -2893,8 +2672,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemaintenancemode_nodejs">
 <a href="#enablemaintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Maintenance<wbr>Mode</a>
@@ -2903,8 +2681,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledaslocaladministrator_nodejs">
 <a href="#userenabledaslocaladministrator_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
@@ -2913,14 +2690,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_security_group_id_python">
 <a href="#custom_security_group_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>id</a>
@@ -2929,8 +2703,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ou_python">
 <a href="#default_ou_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ou</a>
@@ -2939,8 +2712,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_internet_access_python">
 <a href="#enable_internet_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>access</a>
@@ -2949,8 +2721,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_maintenance_mode_python">
 <a href="#enable_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>maintenance_<wbr>mode</a>
@@ -2959,8 +2730,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_enabled_as_local_administrator_python">
 <a href="#user_enabled_as_local_administrator_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>as_<wbr>local_<wbr>administrator</a>
@@ -2969,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2991,6 +2760,6 @@ Workspaces directory can be imported using the directory ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

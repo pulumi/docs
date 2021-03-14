@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mastersitepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Outputs.<wbr>Master<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mastersitepropertiesresponse">Master<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mastersitepropertiesresponse">Master<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mastersitepropertiesresponse">Master<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/MasterSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Master site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmultiplesites_csharp">
 <a href="#allowmultiplesites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multiple<wbr>Sites</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_csharp">
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -434,14 +382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmultiplesites_go">
 <a href="#allowmultiplesites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multiple<wbr>Sites</a>
@@ -449,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_go">
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -467,14 +410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmultiplesites_nodejs">
 <a href="#allowmultiplesites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multiple<wbr>Sites</a>
@@ -482,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -491,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_nodejs">
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -500,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_multiple_sites_python">
 <a href="#allow_multiple_sites_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multiple_<wbr>sites</a>
@@ -515,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -524,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_python">
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -533,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

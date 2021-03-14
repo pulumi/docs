@@ -16,11 +16,17 @@ This resource allows you to add/remove teams from your organization. When applie
 a new team will be created. When destroyed, that team will be removed.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Github = Pulumi.Github;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -65,9 +74,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_github as github
@@ -78,9 +90,12 @@ some_team = github.Team("someTeam",
     privacy="closed")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -93,9 +108,16 @@ const someTeam = new github.Team("some_team", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Team Resource {#create}
@@ -120,9 +142,7 @@ const someTeam = new github.Team("some_team", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +150,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +158,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,10 +166,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -179,9 +192,7 @@ const someTeam = new github.Team("some_team", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -189,9 +200,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -199,9 +208,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -209,9 +216,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -219,18 +224,13 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +238,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +246,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,10 +254,7 @@ const someTeam = new github.Team("some_team", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -276,9 +269,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdefaultmaintainer_csharp">
 <a href="#createdefaultmaintainer_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Default<wbr>Maintainer</a>
@@ -287,8 +278,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -297,8 +287,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ldapdn_csharp">
 <a href="#ldapdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
@@ -307,8 +296,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -317,8 +305,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentteamid_csharp">
 <a href="#parentteamid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
@@ -327,8 +314,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacy_csharp">
 <a href="#privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -338,14 +324,11 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdefaultmaintainer_go">
 <a href="#createdefaultmaintainer_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Default<wbr>Maintainer</a>
@@ -354,8 +337,7 @@ Defaults to `secret`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -364,8 +346,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ldapdn_go">
 <a href="#ldapdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
@@ -374,8 +355,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -384,8 +364,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentteamid_go">
 <a href="#parentteamid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
@@ -394,8 +373,7 @@ Defaults to `secret`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacy_go">
 <a href="#privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -405,14 +383,11 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdefaultmaintainer_nodejs">
 <a href="#createdefaultmaintainer_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Default<wbr>Maintainer</a>
@@ -421,8 +396,7 @@ Defaults to `secret`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -431,8 +405,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ldapdn_nodejs">
 <a href="#ldapdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Dn</a>
@@ -441,8 +414,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -451,8 +423,7 @@ Defaults to `secret`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentteamid_nodejs">
 <a href="#parentteamid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Team<wbr>Id</a>
@@ -461,8 +432,7 @@ Defaults to `secret`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacy_nodejs">
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -472,14 +442,11 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_default_maintainer_python">
 <a href="#create_default_maintainer_python" style="color: inherit; text-decoration: inherit;">create_<wbr>default_<wbr>maintainer</a>
@@ -488,8 +455,7 @@ Defaults to `secret`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -498,8 +464,7 @@ Defaults to `secret`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ldap_dn_python">
 <a href="#ldap_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>dn</a>
@@ -508,8 +473,7 @@ Defaults to `secret`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -518,8 +482,7 @@ Defaults to `secret`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_team_id_python">
 <a href="#parent_team_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>team_<wbr>id</a>
@@ -528,8 +491,7 @@ Defaults to `secret`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacy_python">
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -539,8 +501,7 @@ Defaults to `secret`.
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -551,9 +512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -561,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -570,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memberscount_csharp">
 <a href="#memberscount_csharp" style="color: inherit; text-decoration: inherit;">Members<wbr>Count</a>
@@ -579,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -589,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slug_csharp">
 <a href="#slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -601,14 +556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -616,8 +568,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,8 +576,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memberscount_go">
 <a href="#memberscount_go" style="color: inherit; text-decoration: inherit;">Members<wbr>Count</a>
@@ -634,8 +584,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -644,8 +593,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slug_go">
 <a href="#slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -656,14 +604,11 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -671,8 +616,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -680,8 +624,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memberscount_nodejs">
 <a href="#memberscount_nodejs" style="color: inherit; text-decoration: inherit;">members<wbr>Count</a>
@@ -689,8 +632,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -699,8 +641,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slug_nodejs">
 <a href="#slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -711,14 +652,11 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -726,8 +664,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -735,8 +672,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="members_count_python">
 <a href="#members_count_python" style="color: inherit; text-decoration: inherit;">members_<wbr>count</a>
@@ -744,8 +680,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -754,8 +689,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slug_python">
 <a href="#slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -766,8 +700,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -894,9 +827,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdefaultmaintainer_csharp">
 <a href="#state_createdefaultmaintainer_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Default<wbr>Maintainer</a>
@@ -905,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -915,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -924,8 +853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapdn_csharp">
 <a href="#state_ldapdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
@@ -934,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberscount_csharp">
 <a href="#state_memberscount_csharp" style="color: inherit; text-decoration: inherit;">Members<wbr>Count</a>
@@ -943,8 +870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -953,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_csharp">
 <a href="#state_nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -963,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentteamid_csharp">
 <a href="#state_parentteamid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
@@ -973,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privacy_csharp">
 <a href="#state_privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -984,8 +907,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slug_csharp">
 <a href="#state_slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -996,14 +918,11 @@ Defaults to `secret`.
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdefaultmaintainer_go">
 <a href="#state_createdefaultmaintainer_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Default<wbr>Maintainer</a>
@@ -1012,8 +931,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1022,8 +940,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1031,8 +948,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapdn_go">
 <a href="#state_ldapdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
@@ -1041,8 +957,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberscount_go">
 <a href="#state_memberscount_go" style="color: inherit; text-decoration: inherit;">Members<wbr>Count</a>
@@ -1050,8 +965,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1060,8 +974,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_go">
 <a href="#state_nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1070,8 +983,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentteamid_go">
 <a href="#state_parentteamid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
@@ -1080,8 +992,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privacy_go">
 <a href="#state_privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -1091,8 +1002,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slug_go">
 <a href="#state_slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -1103,14 +1013,11 @@ Defaults to `secret`.
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdefaultmaintainer_nodejs">
 <a href="#state_createdefaultmaintainer_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Default<wbr>Maintainer</a>
@@ -1119,8 +1026,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1129,8 +1035,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1138,8 +1043,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapdn_nodejs">
 <a href="#state_ldapdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Dn</a>
@@ -1148,8 +1052,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberscount_nodejs">
 <a href="#state_memberscount_nodejs" style="color: inherit; text-decoration: inherit;">members<wbr>Count</a>
@@ -1157,8 +1060,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1167,8 +1069,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_nodejs">
 <a href="#state_nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -1177,8 +1078,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentteamid_nodejs">
 <a href="#state_parentteamid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Team<wbr>Id</a>
@@ -1187,8 +1087,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privacy_nodejs">
 <a href="#state_privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -1198,8 +1097,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slug_nodejs">
 <a href="#state_slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -1210,14 +1108,11 @@ Defaults to `secret`.
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_default_maintainer_python">
 <a href="#state_create_default_maintainer_python" style="color: inherit; text-decoration: inherit;">create_<wbr>default_<wbr>maintainer</a>
@@ -1226,8 +1121,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds a default maintainer to the team. Defaults to `true` and removes the default maintaner when `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1236,8 +1130,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1245,8 +1138,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldap_dn_python">
 <a href="#state_ldap_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>dn</a>
@@ -1255,8 +1147,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_count_python">
 <a href="#state_members_count_python" style="color: inherit; text-decoration: inherit;">members_<wbr>count</a>
@@ -1264,8 +1155,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1274,8 +1164,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_id_python">
 <a href="#state_node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -1284,8 +1173,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Node ID of the created team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_team_id_python">
 <a href="#state_parent_team_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>team_<wbr>id</a>
@@ -1294,8 +1182,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the parent team, if this is a nested team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privacy_python">
 <a href="#state_privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -1305,8 +1192,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
     </dt>
     <dd>{{% md %}}The level of privacy for the team. Must be one of `secret` or `closed`.
 Defaults to `secret`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slug_python">
 <a href="#state_slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -1317,8 +1203,7 @@ Defaults to `secret`.
     <dd>{{% md %}}The slug of the created team, which may or may not differ from `name`,
 depending on whether `name` contains "URL-unsafe" characters.
 Useful when referencing the team in [`github.BranchProtection`](https://www.terraform.io/docs/providers/github/r/branch_protection.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1344,6 +1229,6 @@ GitHub Teams can be imported using the GitHub team ID e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 </dl>
 

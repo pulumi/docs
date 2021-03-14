@@ -14,11 +14,17 @@ Logger details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateAILogger
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -45,9 +51,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -78,9 +87,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -98,9 +110,12 @@ logger = azure_native.apimanagement.Logger("logger",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,10 +134,17 @@ const logger = new azure_native.apimanagement.Logger("logger", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### ApiManagementCreateEHLogger
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -150,9 +172,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -184,9 +209,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -205,9 +233,12 @@ logger = azure_native.apimanagement.Logger("logger",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -227,9 +258,16 @@ const logger = new azure_native.apimanagement.Logger("logger", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Logger Resource {#create}
@@ -254,9 +292,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +300,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +308,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,10 +316,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -313,9 +342,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -323,9 +350,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -333,9 +358,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -343,9 +366,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -353,18 +374,13 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -372,9 +388,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -382,9 +396,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -392,10 +404,7 @@ const logger = new azure_native.apimanagement.Logger("logger", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -410,9 +419,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -421,8 +428,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
-    <dt class="property-required"
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggertype_csharp">
 <a href="#loggertype_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Type</a>
@@ -430,8 +436,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loggertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Logger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Logger type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Logger type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -439,8 +444,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -448,8 +452,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -457,8 +460,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isbuffered_csharp">
 <a href="#isbuffered_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Buffered</a>
@@ -466,8 +468,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggerid_csharp">
 <a href="#loggerid_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -475,8 +476,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -484,14 +484,11 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -500,8 +497,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
-    <dt class="property-required"
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggertype_go">
 <a href="#loggertype_go" style="color: inherit; text-decoration: inherit;">Logger<wbr>Type</a>
@@ -509,8 +505,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loggertype">Logger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Logger type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Logger type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -518,8 +513,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -527,8 +521,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -536,8 +529,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isbuffered_go">
 <a href="#isbuffered_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Buffered</a>
@@ -545,8 +537,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggerid_go">
 <a href="#loggerid_go" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -554,8 +545,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -563,14 +553,11 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -579,8 +566,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
-    <dt class="property-required"
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggertype_nodejs">
 <a href="#loggertype_nodejs" style="color: inherit; text-decoration: inherit;">logger<wbr>Type</a>
@@ -588,8 +574,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loggertype">Logger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Logger type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Logger type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -597,8 +582,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -606,8 +590,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -615,8 +598,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isbuffered_nodejs">
 <a href="#isbuffered_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Buffered</a>
@@ -624,8 +606,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggerid_nodejs">
 <a href="#loggerid_nodejs" style="color: inherit; text-decoration: inherit;">logger<wbr>Id</a>
@@ -633,8 +614,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -642,14 +622,11 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -658,8 +635,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
-    <dt class="property-required"
+Instrumentation key for applicationInsights logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logger_type_python">
 <a href="#logger_type_python" style="color: inherit; text-decoration: inherit;">logger_<wbr>type</a>
@@ -667,8 +643,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#loggertype">Logger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Logger type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Logger type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -676,8 +651,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -685,8 +659,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -694,8 +667,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_buffered_python">
 <a href="#is_buffered_python" style="color: inherit; text-decoration: inherit;">is_<wbr>buffered</a>
@@ -703,8 +675,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether records are buffered in the logger before publishing. Default is assumed to be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logger_id_python">
 <a href="#logger_id_python" style="color: inherit; text-decoration: inherit;">logger_<wbr>id</a>
@@ -712,8 +683,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logger identifier. Must be unique in the API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -721,8 +691,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -733,9 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -752,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -761,14 +726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -776,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -785,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -794,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -818,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -827,14 +782,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -842,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -851,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -860,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -877,39 +826,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="loggertype">Logger<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Event<wbr>Hub</dt>
-    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd>
-    <dt>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Event<wbr>Hub</dt>
+    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Application<wbr>Insights</dt>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Logger<wbr>Type<wbr>Azure<wbr>Event<wbr>Hub</dt>
-    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd>
-    <dt>Logger<wbr>Type<wbr>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Logger<wbr>Type<wbr>Azure<wbr>Event<wbr>Hub</dt>
+    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Logger<wbr>Type<wbr>Application<wbr>Insights</dt>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Event<wbr>Hub</dt>
-    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd>
-    <dt>Application<wbr>Insights</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Event<wbr>Hub</dt>
+    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>Application<wbr>Insights</dt>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AZURE_EVENT_HUB</dt>
-    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd>
-    <dt>APPLICATION_INSIGHTS</dt>
-    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>AZURE_EVENT_HUB</dt>
+    <dd>azureEventHub{{% md %}}Azure Event Hub as log destination.{{% /md %}}</dd><dt>APPLICATION_INSIGHTS</dt>
+    <dd>applicationInsights{{% md %}}Azure Application Insights as log destination.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

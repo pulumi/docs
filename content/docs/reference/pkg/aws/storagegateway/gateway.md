@@ -15,11 +15,17 @@ Manages an AWS Storage Gateway file, tape, or volume gateway in the provider reg
 > NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### File Gateway
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -81,9 +93,12 @@ example = aws.storagegateway.Gateway("example",
     gateway_type="FILE_S3")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -97,10 +112,17 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Tape Gateway
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -123,9 +145,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -152,9 +177,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -168,9 +196,12 @@ example = aws.storagegateway.Gateway("example",
     tape_drive_type="IBM-ULT3580-TD5")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -186,10 +217,17 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Volume Gateway (Cached)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -210,9 +248,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -237,9 +278,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -251,9 +295,12 @@ example = aws.storagegateway.Gateway("example",
     gateway_type="CACHED")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -267,10 +314,17 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Volume Gateway (Stored)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -291,9 +345,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -318,9 +375,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -332,9 +392,12 @@ example = aws.storagegateway.Gateway("example",
     gateway_type="STORED")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -348,9 +411,16 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Gateway Resource {#create}
@@ -375,9 +445,7 @@ const example = new aws.storagegateway.Gateway("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -385,9 +453,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -395,9 +461,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -405,10 +469,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -434,9 +495,7 @@ const example = new aws.storagegateway.Gateway("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -444,9 +503,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -454,9 +511,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -464,9 +519,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -474,18 +527,13 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -493,9 +541,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -503,9 +549,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -513,10 +557,7 @@ const example = new aws.storagegateway.Gateway("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -531,9 +572,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_csharp">
 <a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -542,8 +581,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewaytimezone_csharp">
 <a href="#gatewaytimezone_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
@@ -552,8 +590,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationkey_csharp">
 <a href="#activationkey_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
@@ -562,8 +599,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagedownloadratelimitinbitspersec_csharp">
 <a href="#averagedownloadratelimitinbitspersec_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -572,8 +608,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averageuploadratelimitinbitspersec_csharp">
 <a href="#averageuploadratelimitinbitspersec_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -582,8 +617,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggrouparn_csharp">
 <a href="#cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -592,8 +626,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_csharp">
 <a href="#gatewayipaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -602,8 +635,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_csharp">
 <a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -612,8 +644,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_csharp">
 <a href="#gatewayvpcendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -622,8 +653,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_csharp">
 <a href="#mediumchangertype_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
@@ -632,8 +662,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbactivedirectorysettings_csharp">
 <a href="#smbactivedirectorysettings_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -642,8 +671,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbguestpassword_csharp">
 <a href="#smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
@@ -652,8 +680,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_csharp">
 <a href="#smbsecuritystrategy_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Security<wbr>Strategy</a>
@@ -662,8 +689,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -672,8 +698,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_csharp">
 <a href="#tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
@@ -682,14 +707,11 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_go">
 <a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -698,8 +720,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewaytimezone_go">
 <a href="#gatewaytimezone_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
@@ -708,8 +729,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationkey_go">
 <a href="#activationkey_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
@@ -718,8 +738,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagedownloadratelimitinbitspersec_go">
 <a href="#averagedownloadratelimitinbitspersec_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -728,8 +747,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averageuploadratelimitinbitspersec_go">
 <a href="#averageuploadratelimitinbitspersec_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -738,8 +756,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggrouparn_go">
 <a href="#cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -748,8 +765,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_go">
 <a href="#gatewayipaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -758,8 +774,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_go">
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -768,8 +783,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_go">
 <a href="#gatewayvpcendpoint_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -778,8 +792,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_go">
 <a href="#mediumchangertype_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
@@ -788,8 +801,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbactivedirectorysettings_go">
 <a href="#smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -798,8 +810,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbguestpassword_go">
 <a href="#smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
@@ -808,8 +819,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_go">
 <a href="#smbsecuritystrategy_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Security<wbr>Strategy</a>
@@ -818,8 +828,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -828,8 +837,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_go">
 <a href="#tapedrivetype_go" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
@@ -838,14 +846,11 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_nodejs">
 <a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
@@ -854,8 +859,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewaytimezone_nodejs">
 <a href="#gatewaytimezone_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Timezone</a>
@@ -864,8 +868,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationkey_nodejs">
 <a href="#activationkey_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Key</a>
@@ -874,8 +877,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagedownloadratelimitinbitspersec_nodejs">
 <a href="#averagedownloadratelimitinbitspersec_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -884,8 +886,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averageuploadratelimitinbitspersec_nodejs">
 <a href="#averageuploadratelimitinbitspersec_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -894,8 +895,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggrouparn_nodejs">
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -904,8 +904,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_nodejs">
 <a href="#gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
@@ -914,8 +913,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_nodejs">
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
@@ -924,8 +922,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_nodejs">
 <a href="#gatewayvpcendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -934,8 +931,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_nodejs">
 <a href="#mediumchangertype_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Changer<wbr>Type</a>
@@ -944,8 +940,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbactivedirectorysettings_nodejs">
 <a href="#smbactivedirectorysettings_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -954,8 +949,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbguestpassword_nodejs">
 <a href="#smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
@@ -964,8 +958,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_nodejs">
 <a href="#smbsecuritystrategy_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Security<wbr>Strategy</a>
@@ -974,8 +967,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -984,8 +976,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tapedrivetype_nodejs">
 <a href="#tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
@@ -994,14 +985,11 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gateway_name_python">
 <a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
@@ -1010,8 +998,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_timezone_python">
 <a href="#gateway_timezone_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>timezone</a>
@@ -1020,8 +1007,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activation_key_python">
 <a href="#activation_key_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>key</a>
@@ -1030,8 +1016,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="average_download_rate_limit_in_bits_per_sec_python">
 <a href="#average_download_rate_limit_in_bits_per_sec_python" style="color: inherit; text-decoration: inherit;">average_<wbr>download_<wbr>rate_<wbr>limit_<wbr>in_<wbr>bits_<wbr>per_<wbr>sec</a>
@@ -1040,8 +1025,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="average_upload_rate_limit_in_bits_per_sec_python">
 <a href="#average_upload_rate_limit_in_bits_per_sec_python" style="color: inherit; text-decoration: inherit;">average_<wbr>upload_<wbr>rate_<wbr>limit_<wbr>in_<wbr>bits_<wbr>per_<wbr>sec</a>
@@ -1050,8 +1034,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_log_group_arn_python">
 <a href="#cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
@@ -1060,8 +1043,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_ip_address_python">
 <a href="#gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
@@ -1070,8 +1052,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_type_python">
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
@@ -1080,8 +1061,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_vpc_endpoint_python">
 <a href="#gateway_vpc_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>vpc_<wbr>endpoint</a>
@@ -1090,8 +1070,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_changer_type_python">
 <a href="#medium_changer_type_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>changer_<wbr>type</a>
@@ -1100,8 +1079,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smb_active_directory_settings_python">
 <a href="#smb_active_directory_settings_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>active_<wbr>directory_<wbr>settings</a>
@@ -1110,8 +1088,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smb_guest_password_python">
 <a href="#smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
@@ -1120,8 +1097,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smb_security_strategy_python">
 <a href="#smb_security_strategy_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>security_<wbr>strategy</a>
@@ -1130,8 +1106,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1140,8 +1115,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tape_drive_type_python">
 <a href="#tape_drive_type_python" style="color: inherit; text-decoration: inherit;">tape_<wbr>drive_<wbr>type</a>
@@ -1150,8 +1124,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1162,9 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1173,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ec2instanceid_csharp">
 <a href="#ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
@@ -1183,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1193,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayid_csharp">
 <a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -1203,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewaynetworkinterfaces_csharp">
 <a href="#gatewaynetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
@@ -1213,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">List&lt;Gateway<wbr>Gateway<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostenvironment_csharp">
 <a href="#hostenvironment_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
@@ -1223,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1232,14 +1197,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1248,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ec2instanceid_go">
 <a href="#ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
@@ -1258,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1268,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayid_go">
 <a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -1278,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewaynetworkinterfaces_go">
 <a href="#gatewaynetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
@@ -1288,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostenvironment_go">
 <a href="#hostenvironment_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
@@ -1298,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1307,14 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1323,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ec2instanceid_nodejs">
 <a href="#ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
@@ -1333,8 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -1343,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayid_nodejs">
 <a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
@@ -1353,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewaynetworkinterfaces_nodejs">
 <a href="#gatewaynetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Network<wbr>Interfaces</a>
@@ -1363,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostenvironment_nodejs">
 <a href="#hostenvironment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Environment</a>
@@ -1373,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1382,14 +1329,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1398,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ec2_instance_id_python">
 <a href="#ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
@@ -1408,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -1418,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_id_python">
 <a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
@@ -1428,8 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_network_interfaces_python">
 <a href="#gateway_network_interfaces_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>network_<wbr>interfaces</a>
@@ -1438,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Sequence[Gateway<wbr>Gateway<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_environment_python">
 <a href="#host_environment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>environment</a>
@@ -1448,8 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1457,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1585,9 +1522,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationkey_csharp">
 <a href="#state_activationkey_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
@@ -1596,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1606,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averagedownloadratelimitinbitspersec_csharp">
 <a href="#state_averagedownloadratelimitinbitspersec_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -1616,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averageuploadratelimitinbitspersec_csharp">
 <a href="#state_averageuploadratelimitinbitspersec_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -1626,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggrouparn_csharp">
 <a href="#state_cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -1636,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2instanceid_csharp">
 <a href="#state_ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
@@ -1646,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_csharp">
 <a href="#state_endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1656,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayid_csharp">
 <a href="#state_gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -1666,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipaddress_csharp">
 <a href="#state_gatewayipaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -1676,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayname_csharp">
 <a href="#state_gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -1686,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaynetworkinterfaces_csharp">
 <a href="#state_gatewaynetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
@@ -1696,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">List&lt;Gateway<wbr>Gateway<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytimezone_csharp">
 <a href="#state_gatewaytimezone_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
@@ -1706,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytype_csharp">
 <a href="#state_gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -1716,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_csharp">
 <a href="#state_gatewayvpcendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -1726,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_csharp">
 <a href="#state_hostenvironment_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
@@ -1736,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediumchangertype_csharp">
 <a href="#state_mediumchangertype_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
@@ -1746,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbactivedirectorysettings_csharp">
 <a href="#state_smbactivedirectorysettings_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -1756,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbguestpassword_csharp">
 <a href="#state_smbguestpassword_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
@@ -1766,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_csharp">
 <a href="#state_smbsecuritystrategy_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Security<wbr>Strategy</a>
@@ -1776,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1786,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_csharp">
 <a href="#state_tapedrivetype_csharp" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
@@ -1796,14 +1711,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationkey_go">
 <a href="#state_activationkey_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Key</a>
@@ -1812,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1822,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averagedownloadratelimitinbitspersec_go">
 <a href="#state_averagedownloadratelimitinbitspersec_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -1832,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averageuploadratelimitinbitspersec_go">
 <a href="#state_averageuploadratelimitinbitspersec_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -1842,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggrouparn_go">
 <a href="#state_cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -1852,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2instanceid_go">
 <a href="#state_ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
@@ -1862,8 +1769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_go">
 <a href="#state_endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1872,8 +1778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayid_go">
 <a href="#state_gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -1882,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipaddress_go">
 <a href="#state_gatewayipaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -1892,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayname_go">
 <a href="#state_gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -1902,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaynetworkinterfaces_go">
 <a href="#state_gatewaynetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
@@ -1912,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytimezone_go">
 <a href="#state_gatewaytimezone_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Timezone</a>
@@ -1922,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytype_go">
 <a href="#state_gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -1932,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_go">
 <a href="#state_gatewayvpcendpoint_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -1942,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_go">
 <a href="#state_hostenvironment_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
@@ -1952,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediumchangertype_go">
 <a href="#state_mediumchangertype_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
@@ -1962,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbactivedirectorysettings_go">
 <a href="#state_smbactivedirectorysettings_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -1972,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbguestpassword_go">
 <a href="#state_smbguestpassword_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Guest<wbr>Password</a>
@@ -1982,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_go">
 <a href="#state_smbsecuritystrategy_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Security<wbr>Strategy</a>
@@ -1992,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2002,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_go">
 <a href="#state_tapedrivetype_go" style="color: inherit; text-decoration: inherit;">Tape<wbr>Drive<wbr>Type</a>
@@ -2012,14 +1904,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationkey_nodejs">
 <a href="#state_activationkey_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Key</a>
@@ -2028,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2038,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averagedownloadratelimitinbitspersec_nodejs">
 <a href="#state_averagedownloadratelimitinbitspersec_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Download<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -2048,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_averageuploadratelimitinbitspersec_nodejs">
 <a href="#state_averageuploadratelimitinbitspersec_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Upload<wbr>Rate<wbr>Limit<wbr>In<wbr>Bits<wbr>Per<wbr>Sec</a>
@@ -2058,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchloggrouparn_nodejs">
 <a href="#state_cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
@@ -2068,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2instanceid_nodejs">
 <a href="#state_ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
@@ -2078,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_nodejs">
 <a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -2088,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayid_nodejs">
 <a href="#state_gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
@@ -2098,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipaddress_nodejs">
 <a href="#state_gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
@@ -2108,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayname_nodejs">
 <a href="#state_gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
@@ -2118,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaynetworkinterfaces_nodejs">
 <a href="#state_gatewaynetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Network<wbr>Interfaces</a>
@@ -2128,8 +2007,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytimezone_nodejs">
 <a href="#state_gatewaytimezone_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Timezone</a>
@@ -2138,8 +2016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewaytype_nodejs">
 <a href="#state_gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
@@ -2148,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_nodejs">
 <a href="#state_gatewayvpcendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Vpc<wbr>Endpoint</a>
@@ -2158,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_nodejs">
 <a href="#state_hostenvironment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Environment</a>
@@ -2168,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediumchangertype_nodejs">
 <a href="#state_mediumchangertype_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Changer<wbr>Type</a>
@@ -2178,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbactivedirectorysettings_nodejs">
 <a href="#state_smbactivedirectorysettings_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Active<wbr>Directory<wbr>Settings</a>
@@ -2188,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbguestpassword_nodejs">
 <a href="#state_smbguestpassword_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Guest<wbr>Password</a>
@@ -2198,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_nodejs">
 <a href="#state_smbsecuritystrategy_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Security<wbr>Strategy</a>
@@ -2208,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2218,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tapedrivetype_nodejs">
 <a href="#state_tapedrivetype_nodejs" style="color: inherit; text-decoration: inherit;">tape<wbr>Drive<wbr>Type</a>
@@ -2228,14 +2097,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activation_key_python">
 <a href="#state_activation_key_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>key</a>
@@ -2244,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2254,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_average_download_rate_limit_in_bits_per_sec_python">
 <a href="#state_average_download_rate_limit_in_bits_per_sec_python" style="color: inherit; text-decoration: inherit;">average_<wbr>download_<wbr>rate_<wbr>limit_<wbr>in_<wbr>bits_<wbr>per_<wbr>sec</a>
@@ -2264,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_average_upload_rate_limit_in_bits_per_sec_python">
 <a href="#state_average_upload_rate_limit_in_bits_per_sec_python" style="color: inherit; text-decoration: inherit;">average_<wbr>upload_<wbr>rate_<wbr>limit_<wbr>in_<wbr>bits_<wbr>per_<wbr>sec</a>
@@ -2274,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatch_log_group_arn_python">
 <a href="#state_cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
@@ -2284,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2_instance_id_python">
 <a href="#state_ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
@@ -2294,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_type_python">
 <a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -2304,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of endpoint for your gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_id_python">
 <a href="#state_gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
@@ -2314,8 +2173,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_ip_address_python">
 <a href="#state_gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
@@ -2324,8 +2182,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_name_python">
 <a href="#state_gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
@@ -2334,8 +2191,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_network_interfaces_python">
 <a href="#state_gateway_network_interfaces_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>network_<wbr>interfaces</a>
@@ -2344,8 +2200,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Sequence[Gateway<wbr>Gateway<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_timezone_python">
 <a href="#state_gateway_timezone_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>timezone</a>
@@ -2354,8 +2209,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_type_python">
 <a href="#state_gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
@@ -2364,8 +2218,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_vpc_endpoint_python">
 <a href="#state_gateway_vpc_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>vpc_<wbr>endpoint</a>
@@ -2374,8 +2227,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_environment_python">
 <a href="#state_host_environment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>environment</a>
@@ -2384,8 +2236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of hypervisor environment used by the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_medium_changer_type_python">
 <a href="#state_medium_changer_type_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>changer_<wbr>type</a>
@@ -2394,8 +2245,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smb_active_directory_settings_python">
 <a href="#state_smb_active_directory_settings_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>active_<wbr>directory_<wbr>settings</a>
@@ -2404,8 +2254,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smb_guest_password_python">
 <a href="#state_smb_guest_password_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>guest_<wbr>password</a>
@@ -2414,8 +2263,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smb_security_strategy_python">
 <a href="#state_smb_security_strategy_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>security_<wbr>strategy</a>
@@ -2424,8 +2272,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2434,8 +2281,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tape_drive_type_python">
 <a href="#state_tape_drive_type_python" style="color: inherit; text-decoration: inherit;">tape_<wbr>drive_<wbr>type</a>
@@ -2444,8 +2290,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2460,9 +2305,7 @@ The following state arguments are supported:
 <h4 id="gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -2471,14 +2314,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -2487,14 +2327,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -2503,14 +2340,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -2519,16 +2353,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -2537,8 +2368,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that you want the gateway to join.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2547,8 +2377,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2557,8 +2386,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorystatus_csharp">
 <a href="#activedirectorystatus_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Status</a>
@@ -2566,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domaincontrollers_csharp">
 <a href="#domaincontrollers_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controllers</a>
@@ -2577,8 +2404,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
 If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -2588,8 +2414,7 @@ If you need to specify the port number include it after the colon (“:”). For
     </dt>
     <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
 computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_csharp">
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -2598,14 +2423,11 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -2614,8 +2436,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that you want the gateway to join.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2624,8 +2445,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2634,8 +2454,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorystatus_go">
 <a href="#activedirectorystatus_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Status</a>
@@ -2643,8 +2462,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domaincontrollers_go">
 <a href="#domaincontrollers_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controllers</a>
@@ -2654,8 +2472,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
     </dt>
     <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
 If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -2665,8 +2482,7 @@ If you need to specify the port number include it after the colon (“:”). For
     </dt>
     <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
 computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_go">
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -2675,14 +2491,11 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -2691,8 +2504,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that you want the gateway to join.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2701,8 +2513,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2711,8 +2522,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorystatus_nodejs">
 <a href="#activedirectorystatus_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Status</a>
@@ -2720,8 +2530,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domaincontrollers_nodejs">
 <a href="#domaincontrollers_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Controllers</a>
@@ -2731,8 +2540,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
     </dt>
     <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
 If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -2742,8 +2550,7 @@ If you need to specify the port number include it after the colon (“:”). For
     </dt>
     <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
 computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_nodejs">
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -2752,14 +2559,11 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -2768,8 +2572,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain that you want the gateway to join.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2778,8 +2581,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2788,8 +2590,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_status_python">
 <a href="#active_directory_status_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>status</a>
@@ -2797,8 +2598,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_controllers_python">
 <a href="#domain_controllers_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>controllers</a>
@@ -2808,8 +2608,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
     </dt>
     <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
 If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -2819,8 +2618,7 @@ If you need to specify the port number include it after the colon (“:”). For
     </dt>
     <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
 computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_seconds_python">
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -2829,8 +2627,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2853,6 +2650,6 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

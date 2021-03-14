@@ -45,9 +45,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:web:AppServiceEnvironment myresource1 /subscription
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -211,8 +180,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetwork_csharp">
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
@@ -220,8 +188,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerpools_csharp">
 <a href="#workerpools_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pools</a>
@@ -229,8 +196,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpool">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Worker<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apimanagementaccountid_csharp">
 <a href="#apimanagementaccountid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Account<wbr>Id</a>
@@ -238,8 +204,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersettings_csharp">
 <a href="#clustersettings_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
@@ -247,8 +212,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepair">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssuffix_csharp">
 <a href="#dnssuffix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
@@ -256,8 +220,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiccacheenabled_csharp">
 <a href="#dynamiccacheenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Cache<wbr>Enabled</a>
@@ -266,8 +229,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available
-(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendscalefactor_csharp">
 <a href="#frontendscalefactor_csharp" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -275,8 +237,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haslinuxworkers_csharp">
 <a href="#haslinuxworkers_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Linux<wbr>Workers</a>
@@ -284,8 +245,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalloadbalancingmode_csharp">
 <a href="#internalloadbalancingmode_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
@@ -293,8 +253,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loadbalancingmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Load<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipssladdresscount_csharp">
 <a href="#ipssladdresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipssl<wbr>Address<wbr>Count</a>
@@ -302,8 +261,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -311,8 +269,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -320,8 +277,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multirolecount_csharp">
 <a href="#multirolecount_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Role<wbr>Count</a>
@@ -329,8 +285,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multisize_csharp">
 <a href="#multisize_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Size</a>
@@ -338,8 +293,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -347,8 +301,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkaccesscontrollist_csharp">
 <a href="#networkaccesscontrollist_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Control<wbr>List</a>
@@ -356,8 +309,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaccesscontrolentry">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultid_csharp">
 <a href="#sslcertkeyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Id</a>
@@ -365,8 +317,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultsecretname_csharp">
 <a href="#sslcertkeyvaultsecretname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Secret<wbr>Name</a>
@@ -374,8 +325,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspended_csharp">
 <a href="#suspended_csharp" style="color: inherit; text-decoration: inherit;">Suspended</a>
@@ -384,8 +334,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
- (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+ (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -393,8 +342,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelistedipranges_csharp">
 <a href="#userwhitelistedipranges_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
@@ -402,8 +350,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetname_csharp">
 <a href="#vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
@@ -411,8 +358,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetresourcegroupname_csharp">
 <a href="#vnetresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -420,8 +366,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetname_csharp">
 <a href="#vnetsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Name</a>
@@ -429,14 +374,11 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -444,8 +386,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetwork_go">
 <a href="#virtualnetwork_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
@@ -453,8 +394,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerpools_go">
 <a href="#workerpools_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pools</a>
@@ -462,8 +402,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpool">[]Worker<wbr>Pool</a></span>
     </dt>
-    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apimanagementaccountid_go">
 <a href="#apimanagementaccountid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Account<wbr>Id</a>
@@ -471,8 +410,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersettings_go">
 <a href="#clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
@@ -480,8 +418,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepair">[]Name<wbr>Value<wbr>Pair</a></span>
     </dt>
-    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssuffix_go">
 <a href="#dnssuffix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
@@ -489,8 +426,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiccacheenabled_go">
 <a href="#dynamiccacheenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Cache<wbr>Enabled</a>
@@ -499,8 +435,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available
-(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendscalefactor_go">
 <a href="#frontendscalefactor_go" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -508,8 +443,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haslinuxworkers_go">
 <a href="#haslinuxworkers_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Linux<wbr>Workers</a>
@@ -517,8 +451,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalloadbalancingmode_go">
 <a href="#internalloadbalancingmode_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
@@ -526,8 +459,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loadbalancingmode">Load<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipssladdresscount_go">
 <a href="#ipssladdresscount_go" style="color: inherit; text-decoration: inherit;">Ipssl<wbr>Address<wbr>Count</a>
@@ -535,8 +467,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -544,8 +475,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -553,8 +483,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multirolecount_go">
 <a href="#multirolecount_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Role<wbr>Count</a>
@@ -562,8 +491,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multisize_go">
 <a href="#multisize_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Size</a>
@@ -571,8 +499,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -580,8 +507,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkaccesscontrollist_go">
 <a href="#networkaccesscontrollist_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Control<wbr>List</a>
@@ -589,8 +515,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaccesscontrolentry">[]Network<wbr>Access<wbr>Control<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultid_go">
 <a href="#sslcertkeyvaultid_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Id</a>
@@ -598,8 +523,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultsecretname_go">
 <a href="#sslcertkeyvaultsecretname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Secret<wbr>Name</a>
@@ -607,8 +531,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspended_go">
 <a href="#suspended_go" style="color: inherit; text-decoration: inherit;">Suspended</a>
@@ -617,8 +540,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
- (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+ (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -626,8 +548,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelistedipranges_go">
 <a href="#userwhitelistedipranges_go" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
@@ -635,8 +556,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetname_go">
 <a href="#vnetname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
@@ -644,8 +564,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetresourcegroupname_go">
 <a href="#vnetresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -653,8 +572,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetname_go">
 <a href="#vnetsubnetname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Name</a>
@@ -662,14 +580,11 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -677,8 +592,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetwork_nodejs">
 <a href="#virtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network</a>
@@ -686,8 +600,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workerpools_nodejs">
 <a href="#workerpools_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pools</a>
@@ -695,8 +608,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpool">Worker<wbr>Pool[]</a></span>
     </dt>
-    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apimanagementaccountid_nodejs">
 <a href="#apimanagementaccountid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Account<wbr>Id</a>
@@ -704,8 +616,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersettings_nodejs">
 <a href="#clustersettings_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Settings</a>
@@ -713,8 +624,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepair">Name<wbr>Value<wbr>Pair[]</a></span>
     </dt>
-    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssuffix_nodejs">
 <a href="#dnssuffix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix</a>
@@ -722,8 +632,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiccacheenabled_nodejs">
 <a href="#dynamiccacheenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Cache<wbr>Enabled</a>
@@ -732,8 +641,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available
-(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendscalefactor_nodejs">
 <a href="#frontendscalefactor_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -741,8 +649,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haslinuxworkers_nodejs">
 <a href="#haslinuxworkers_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Linux<wbr>Workers</a>
@@ -750,8 +657,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalloadbalancingmode_nodejs">
 <a href="#internalloadbalancingmode_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
@@ -759,8 +665,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#loadbalancingmode">Load<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipssladdresscount_nodejs">
 <a href="#ipssladdresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipssl<wbr>Address<wbr>Count</a>
@@ -768,8 +673,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -777,8 +681,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -786,8 +689,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multirolecount_nodejs">
 <a href="#multirolecount_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Role<wbr>Count</a>
@@ -795,8 +697,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multisize_nodejs">
 <a href="#multisize_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Size</a>
@@ -804,8 +705,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -813,8 +713,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkaccesscontrollist_nodejs">
 <a href="#networkaccesscontrollist_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Control<wbr>List</a>
@@ -822,8 +721,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaccesscontrolentry">Network<wbr>Access<wbr>Control<wbr>Entry[]</a></span>
     </dt>
-    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultid_nodejs">
 <a href="#sslcertkeyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Id</a>
@@ -831,8 +729,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertkeyvaultsecretname_nodejs">
 <a href="#sslcertkeyvaultsecretname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Key<wbr>Vault<wbr>Secret<wbr>Name</a>
@@ -840,8 +737,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspended_nodejs">
 <a href="#suspended_nodejs" style="color: inherit; text-decoration: inherit;">suspended</a>
@@ -850,8 +746,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
- (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+ (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -859,8 +754,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelistedipranges_nodejs">
 <a href="#userwhitelistedipranges_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
@@ -868,8 +762,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetname_nodejs">
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
@@ -877,8 +770,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetresourcegroupname_nodejs">
 <a href="#vnetresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -886,8 +778,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetname_nodejs">
 <a href="#vnetsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Name</a>
@@ -895,14 +786,11 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -910,8 +798,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_python">
 <a href="#virtual_network_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network</a>
@@ -919,8 +806,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="worker_pools_python">
 <a href="#worker_pools_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools</a>
@@ -928,8 +814,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpool">Sequence[Worker<wbr>Pool<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_management_account_id_python">
 <a href="#api_management_account_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>account_<wbr>id</a>
@@ -937,8 +822,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}API Management Account associated with the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_settings_python">
 <a href="#cluster_settings_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>settings</a>
@@ -946,8 +830,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepair">Sequence[Name<wbr>Value<wbr>Pair<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_suffix_python">
 <a href="#dns_suffix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>suffix</a>
@@ -955,8 +838,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS suffix of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_cache_enabled_python">
 <a href="#dynamic_cache_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>cache_<wbr>enabled</a>
@@ -965,8 +847,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available
-(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+(most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="front_end_scale_factor_python">
 <a href="#front_end_scale_factor_python" style="color: inherit; text-decoration: inherit;">front_<wbr>end_<wbr>scale_<wbr>factor</a>
@@ -974,8 +855,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale factor for front-ends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_linux_workers_python">
 <a href="#has_linux_workers_python" style="color: inherit; text-decoration: inherit;">has_<wbr>linux_<wbr>workers</a>
@@ -983,8 +863,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that displays whether an ASE has linux workers or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_load_balancing_mode_python">
 <a href="#internal_load_balancing_mode_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>load_<wbr>balancing_<wbr>mode</a>
@@ -992,8 +871,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#loadbalancingmode">Load<wbr>Balancing<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipssl_address_count_python">
 <a href="#ipssl_address_count_python" style="color: inherit; text-decoration: inherit;">ipssl_<wbr>address_<wbr>count</a>
@@ -1001,8 +879,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of IP SSL addresses reserved for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1010,8 +887,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1019,8 +895,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_role_count_python">
 <a href="#multi_role_count_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>role_<wbr>count</a>
@@ -1028,8 +903,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of front-end instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_size_python">
 <a href="#multi_size_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>size</a>
@@ -1037,8 +911,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Front-end VM size, e.g. "Medium", "Large".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1046,8 +919,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_access_control_list_python">
 <a href="#network_access_control_list_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>control_<wbr>list</a>
@@ -1055,8 +927,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaccesscontrolentry">Sequence[Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_key_vault_id_python">
 <a href="#ssl_cert_key_vault_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>key_<wbr>vault_<wbr>id</a>
@@ -1064,8 +935,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault ID for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_key_vault_secret_name_python">
 <a href="#ssl_cert_key_vault_secret_name_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>key_<wbr>vault_<wbr>secret_<wbr>name</a>
@@ -1073,8 +943,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Name for ILB App Service Environment default SSL certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspended_python">
 <a href="#suspended_python" style="color: inherit; text-decoration: inherit;">suspended</a>
@@ -1083,8 +952,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
- (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd>
-    <dt class="property-optional"
+ (most likely because NSG blocked the incoming traffic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1092,8 +960,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_whitelisted_ip_ranges_python">
 <a href="#user_whitelisted_ip_ranges_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelisted_<wbr>ip_<wbr>ranges</a>
@@ -1101,8 +968,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_name_python">
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
@@ -1110,8 +976,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Virtual Network for the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_resource_group_name_python">
 <a href="#vnet_resource_group_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>resource_<wbr>group_<wbr>name</a>
@@ -1119,8 +984,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group of the Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_subnet_name_python">
 <a href="#vnet_subnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>name</a>
@@ -1128,8 +992,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet of the Virtual Network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1140,9 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowedmultisizes_csharp">
 <a href="#allowedmultisizes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Multi<wbr>Sizes</a>
@@ -1150,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedworkersizes_csharp">
 <a href="#allowedworkersizes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Worker<wbr>Sizes</a>
@@ -1159,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseedition_csharp">
 <a href="#databaseedition_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Edition</a>
@@ -1168,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseserviceobjective_csharp">
 <a href="#databaseserviceobjective_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Service<wbr>Objective</a>
@@ -1177,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultfrontendscalefactor_csharp">
 <a href="#defaultfrontendscalefactor_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -1186,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentcapacities_csharp">
 <a href="#environmentcapacities_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Capacities</a>
@@ -1195,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stampcapacityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Stamp<wbr>Capacity<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentishealthy_csharp">
 <a href="#environmentishealthy_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Is<wbr>Healthy</a>
@@ -1204,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentstatus_csharp">
 <a href="#environmentstatus_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Status</a>
@@ -1213,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1222,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastaction_csharp">
 <a href="#lastaction_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Action</a>
@@ -1231,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactionresult_csharp">
 <a href="#lastactionresult_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Action<wbr>Result</a>
@@ -1240,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maximumnumberofmachines_csharp">
 <a href="#maximumnumberofmachines_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Number<wbr>Of<wbr>Machines</a>
@@ -1249,8 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1258,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1267,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1276,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1285,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1294,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1303,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradedomains_csharp">
 <a href="#upgradedomains_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domains</a>
@@ -1312,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vipmappings_csharp">
 <a href="#vipmappings_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Mappings</a>
@@ -1321,14 +1163,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualipmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Virtual<wbr>IPMapping<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowedmultisizes_go">
 <a href="#allowedmultisizes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Multi<wbr>Sizes</a>
@@ -1336,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedworkersizes_go">
 <a href="#allowedworkersizes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Worker<wbr>Sizes</a>
@@ -1345,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseedition_go">
 <a href="#databaseedition_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Edition</a>
@@ -1354,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseserviceobjective_go">
 <a href="#databaseserviceobjective_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Service<wbr>Objective</a>
@@ -1363,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultfrontendscalefactor_go">
 <a href="#defaultfrontendscalefactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -1372,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentcapacities_go">
 <a href="#environmentcapacities_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Capacities</a>
@@ -1381,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stampcapacityresponse">[]Stamp<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentishealthy_go">
 <a href="#environmentishealthy_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Is<wbr>Healthy</a>
@@ -1390,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentstatus_go">
 <a href="#environmentstatus_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Status</a>
@@ -1399,8 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1408,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastaction_go">
 <a href="#lastaction_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Action</a>
@@ -1417,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactionresult_go">
 <a href="#lastactionresult_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Action<wbr>Result</a>
@@ -1426,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maximumnumberofmachines_go">
 <a href="#maximumnumberofmachines_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Number<wbr>Of<wbr>Machines</a>
@@ -1435,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1444,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1453,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1462,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1471,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1480,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1489,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradedomains_go">
 <a href="#upgradedomains_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domains</a>
@@ -1498,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vipmappings_go">
 <a href="#vipmappings_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Mappings</a>
@@ -1507,14 +1327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualipmappingresponse">[]Virtual<wbr>IPMapping<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowedmultisizes_nodejs">
 <a href="#allowedmultisizes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Multi<wbr>Sizes</a>
@@ -1522,8 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedworkersizes_nodejs">
 <a href="#allowedworkersizes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Worker<wbr>Sizes</a>
@@ -1531,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseedition_nodejs">
 <a href="#databaseedition_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Edition</a>
@@ -1540,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseserviceobjective_nodejs">
 <a href="#databaseserviceobjective_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Service<wbr>Objective</a>
@@ -1549,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultfrontendscalefactor_nodejs">
 <a href="#defaultfrontendscalefactor_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Front<wbr>End<wbr>Scale<wbr>Factor</a>
@@ -1558,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentcapacities_nodejs">
 <a href="#environmentcapacities_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Capacities</a>
@@ -1567,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stampcapacityresponse">Stamp<wbr>Capacity<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentishealthy_nodejs">
 <a href="#environmentishealthy_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Is<wbr>Healthy</a>
@@ -1576,8 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentstatus_nodejs">
 <a href="#environmentstatus_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Status</a>
@@ -1585,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1594,8 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastaction_nodejs">
 <a href="#lastaction_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Action</a>
@@ -1603,8 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactionresult_nodejs">
 <a href="#lastactionresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Action<wbr>Result</a>
@@ -1612,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maximumnumberofmachines_nodejs">
 <a href="#maximumnumberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Number<wbr>Of<wbr>Machines</a>
@@ -1621,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1630,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -1639,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1648,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -1657,8 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1666,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1675,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradedomains_nodejs">
 <a href="#upgradedomains_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domains</a>
@@ -1684,8 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vipmappings_nodejs">
 <a href="#vipmappings_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Mappings</a>
@@ -1693,14 +1491,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualipmappingresponse">Virtual<wbr>IPMapping<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowed_multi_sizes_python">
 <a href="#allowed_multi_sizes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>multi_<wbr>sizes</a>
@@ -1708,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for front-ends.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowed_worker_sizes_python">
 <a href="#allowed_worker_sizes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>worker_<wbr>sizes</a>
@@ -1717,8 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of comma separated strings describing which VM sizes are allowed for workers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_edition_python">
 <a href="#database_edition_python" style="color: inherit; text-decoration: inherit;">database_<wbr>edition</a>
@@ -1726,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Edition of the metadata database for the App Service Environment, e.g. "Standard".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_service_objective_python">
 <a href="#database_service_objective_python" style="color: inherit; text-decoration: inherit;">database_<wbr>service_<wbr>objective</a>
@@ -1735,8 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service objective of the metadata database for the App Service Environment, e.g. "S0".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_front_end_scale_factor_python">
 <a href="#default_front_end_scale_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>front_<wbr>end_<wbr>scale_<wbr>factor</a>
@@ -1744,8 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Default Scale Factor for FrontEnds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_capacities_python">
 <a href="#environment_capacities_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>capacities</a>
@@ -1753,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stampcapacityresponse">Sequence[Stamp<wbr>Capacity<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_is_healthy_python">
 <a href="#environment_is_healthy_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>is_<wbr>healthy</a>
@@ -1762,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True/false indicating whether the App Service Environment is healthy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_status_python">
 <a href="#environment_status_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>status</a>
@@ -1771,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Detailed message about with results of the last check of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1780,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_action_python">
 <a href="#last_action_python" style="color: inherit; text-decoration: inherit;">last_<wbr>action</a>
@@ -1789,8 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_action_result_python">
 <a href="#last_action_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>action_<wbr>result</a>
@@ -1798,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Result of the last deployment action on the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maximum_number_of_machines_python">
 <a href="#maximum_number_of_machines_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>number_<wbr>of_<wbr>machines</a>
@@ -1807,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of VMs in the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1816,8 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -1825,8 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource group of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1834,8 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current status of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -1843,8 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Subscription of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1852,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1861,8 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgrade_domains_python">
 <a href="#upgrade_domains_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domains</a>
@@ -1870,8 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of upgrade domains of the App Service Environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vip_mappings_python">
 <a href="#vip_mappings_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>mappings</a>
@@ -1879,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualipmappingresponse">Sequence[Virtual<wbr>IPMapping<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1896,47 +1671,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="accesscontrolentryaction">Access<wbr>Control<wbr>Entry<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Permit</dt>
-    <dd>Permit</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Permit</dt>
+    <dd>Permit</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Access<wbr>Control<wbr>Entry<wbr>Action<wbr>Permit</dt>
-    <dd>Permit</dd>
-    <dt>Access<wbr>Control<wbr>Entry<wbr>Action<wbr>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Access<wbr>Control<wbr>Entry<wbr>Action<wbr>Permit</dt>
+    <dd>Permit</dd><dt>Access<wbr>Control<wbr>Entry<wbr>Action<wbr>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Permit</dt>
-    <dd>Permit</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Permit</dt>
+    <dd>Permit</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PERMIT</dt>
-    <dd>Permit</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>PERMIT</dt>
+    <dd>Permit</dd><dt>DENY</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 <h4 id="capability">Capability</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1944,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1953,8 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1962,14 +1721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1977,8 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1986,8 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1995,14 +1749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2010,8 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2019,8 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2028,14 +1777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2043,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2052,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2061,16 +1805,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="capabilityresponse">Capability<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2078,8 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -2087,8 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2096,14 +1835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2111,8 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -2120,8 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2129,14 +1863,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2144,8 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2153,8 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2162,14 +1891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2177,8 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2186,8 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2195,116 +1919,77 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computemodeoptions">Compute<wbr>Mode<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Shared</dt>
-    <dd>Shared</dd>
-    <dt>Dedicated</dt>
-    <dd>Dedicated</dd>
-    <dt>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>Shared</dt>
+    <dd>Shared</dd><dt>Dedicated</dt>
+    <dd>Dedicated</dd><dt>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Compute<wbr>Mode<wbr>Options<wbr>Shared</dt>
-    <dd>Shared</dd>
-    <dt>Compute<wbr>Mode<wbr>Options<wbr>Dedicated</dt>
-    <dd>Dedicated</dd>
-    <dt>Compute<wbr>Mode<wbr>Options<wbr>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>Compute<wbr>Mode<wbr>Options<wbr>Shared</dt>
+    <dd>Shared</dd><dt>Compute<wbr>Mode<wbr>Options<wbr>Dedicated</dt>
+    <dd>Dedicated</dd><dt>Compute<wbr>Mode<wbr>Options<wbr>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Shared</dt>
-    <dd>Shared</dd>
-    <dt>Dedicated</dt>
-    <dd>Dedicated</dd>
-    <dt>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>Shared</dt>
+    <dd>Shared</dd><dt>Dedicated</dt>
+    <dd>Dedicated</dd><dt>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SHARED</dt>
-    <dd>Shared</dd>
-    <dt>DEDICATED</dt>
-    <dd>Dedicated</dd>
-    <dt>DYNAMIC</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>SHARED</dt>
+    <dd>Shared</dd><dt>DEDICATED</dt>
+    <dd>Dedicated</dd><dt>DYNAMIC</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancingmode">Load<wbr>Balancing<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Web</dt>
-    <dd>Web</dd>
-    <dt>Publishing</dt>
-    <dd>Publishing</dd>
-    <dt>Web_Publishing</dt>
-    <dd>Web,Publishing</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Web</dt>
+    <dd>Web</dd><dt>Publishing</dt>
+    <dd>Publishing</dd><dt>Web_Publishing</dt>
+    <dd>Web,Publishing</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Load<wbr>Balancing<wbr>Mode<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Load<wbr>Balancing<wbr>Mode<wbr>Web</dt>
-    <dd>Web</dd>
-    <dt>Load<wbr>Balancing<wbr>Mode<wbr>Publishing</dt>
-    <dd>Publishing</dd>
-    <dt>Load<wbr>Balancing<wbr>Mode_Web_Publishing</dt>
-    <dd>Web,Publishing</dd>
-</dl>
+<dl class="tabular"><dt>Load<wbr>Balancing<wbr>Mode<wbr>None</dt>
+    <dd>None</dd><dt>Load<wbr>Balancing<wbr>Mode<wbr>Web</dt>
+    <dd>Web</dd><dt>Load<wbr>Balancing<wbr>Mode<wbr>Publishing</dt>
+    <dd>Publishing</dd><dt>Load<wbr>Balancing<wbr>Mode_Web_Publishing</dt>
+    <dd>Web,Publishing</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Web</dt>
-    <dd>Web</dd>
-    <dt>Publishing</dt>
-    <dd>Publishing</dd>
-    <dt>Web_Publishing</dt>
-    <dd>Web,Publishing</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Web</dt>
+    <dd>Web</dd><dt>Publishing</dt>
+    <dd>Publishing</dd><dt>Web_Publishing</dt>
+    <dd>Web,Publishing</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>WEB</dt>
-    <dd>Web</dd>
-    <dt>PUBLISHING</dt>
-    <dd>Publishing</dd>
-    <dt>WEB_PUBLISHING</dt>
-    <dd>Web,Publishing</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>WEB</dt>
+    <dd>Web</dd><dt>PUBLISHING</dt>
+    <dd>Publishing</dd><dt>WEB_PUBLISHING</dt>
+    <dd>Web,Publishing</dd></dl>
 {{% /choosable %}}
 
 <h4 id="namevaluepair">Name<wbr>Value<wbr>Pair</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2312,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2321,14 +2005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2336,8 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2345,14 +2025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2360,8 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2369,14 +2045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2384,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2393,16 +2065,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2410,8 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2419,14 +2087,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2434,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2443,14 +2107,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2458,8 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2467,14 +2127,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2482,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2491,16 +2147,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkaccesscontrolentry">Network<wbr>Access<wbr>Control<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2508,8 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesscontrolentryaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2517,8 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2526,8 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_csharp">
 <a href="#remotesubnet_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
@@ -2535,14 +2185,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2550,8 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesscontrolentryaction">Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2559,8 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2568,8 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_go">
 <a href="#remotesubnet_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
@@ -2577,14 +2221,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2592,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesscontrolentryaction">Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2601,8 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2610,8 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_nodejs">
 <a href="#remotesubnet_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
@@ -2619,14 +2257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2634,8 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesscontrolentryaction">Access<wbr>Control<wbr>Entry<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2643,8 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2652,8 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_subnet_python">
 <a href="#remote_subnet_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnet</a>
@@ -2661,16 +2293,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkaccesscontrolentryresponse">Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2678,8 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2687,8 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2696,8 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_csharp">
 <a href="#remotesubnet_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
@@ -2705,14 +2331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2720,8 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2729,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2738,8 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_go">
 <a href="#remotesubnet_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
@@ -2747,14 +2367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2762,8 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2771,8 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2780,8 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotesubnet_nodejs">
 <a href="#remotesubnet_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
@@ -2789,14 +2403,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2804,8 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2813,8 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2822,8 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_subnet_python">
 <a href="#remote_subnet_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnet</a>
@@ -2831,16 +2439,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skucapacity">Sku<wbr>Capacity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -2848,8 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
 <a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -2857,8 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
 <a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -2866,8 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_csharp">
 <a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -2875,14 +2477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -2890,8 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
 <a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -2899,8 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
 <a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -2908,8 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_go">
 <a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -2917,14 +2513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -2932,8 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -2941,8 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -2950,8 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_nodejs">
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
@@ -2959,14 +2549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -2974,8 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -2983,8 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -2992,8 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_type_python">
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
@@ -3001,16 +2585,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skucapacityresponse">Sku<wbr>Capacity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -3018,8 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
 <a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -3027,8 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
 <a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -3036,8 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_csharp">
 <a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -3045,14 +2623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -3060,8 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
 <a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -3069,8 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
 <a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -3078,8 +2651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_go">
 <a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -3087,14 +2659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -3102,8 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -3111,8 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -3120,8 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletype_nodejs">
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
@@ -3129,14 +2695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -3144,8 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -3153,8 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -3162,8 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_type_python">
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
@@ -3171,16 +2731,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skudescription">Sku<wbr>Description</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3188,8 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -3197,8 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3206,8 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3215,8 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3224,8 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3233,8 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_csharp">
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
@@ -3242,8 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3251,14 +2801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3266,8 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capability">[]Capability</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -3275,8 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3284,8 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3293,8 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3302,8 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3311,8 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_go">
 <a href="#skucapacity_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
@@ -3320,8 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3329,14 +2869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3344,8 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capability">Capability[]</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -3353,8 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3362,8 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3371,8 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3380,8 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3389,8 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_nodejs">
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
@@ -3398,8 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3407,14 +2937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3422,8 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -3431,8 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3440,8 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3449,8 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3458,8 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3467,8 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_capacity_python">
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
@@ -3476,8 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3485,16 +3005,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skudescriptionresponse">Sku<wbr>Description<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3502,8 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -3511,8 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3520,8 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3529,8 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3538,8 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3547,8 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_csharp">
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
@@ -3556,8 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3565,14 +3075,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3580,8 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capabilityresponse">[]Capability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -3589,8 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3598,8 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3607,8 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3616,8 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3625,8 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_go">
 <a href="#skucapacity_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
@@ -3634,8 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3643,14 +3143,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3658,8 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -3667,8 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3676,8 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3685,8 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3694,8 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3703,8 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skucapacity_nodejs">
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
@@ -3712,8 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3721,14 +3211,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3736,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -3745,8 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3754,8 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3763,8 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3772,8 +3255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3781,8 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_capacity_python">
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
@@ -3790,8 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3799,16 +3279,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stampcapacityresponse">Stamp<wbr>Capacity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_csharp">
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
@@ -3816,8 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_csharp">
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -3825,8 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromcapacityallocation_csharp">
 <a href="#excludefromcapacityallocation_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
@@ -3835,8 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true it includes basic sites
-            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
-    <dt class="property-optional"
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isapplicableforallcomputemodes_csharp">
 <a href="#isapplicableforallcomputemodes_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
@@ -3844,8 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3853,8 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitemode_csharp">
 <a href="#sitemode_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Mode</a>
@@ -3862,8 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalcapacity_csharp">
 <a href="#totalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
@@ -3871,8 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -3880,8 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_csharp">
 <a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -3889,8 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_csharp">
 <a href="#workersizeid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -3901,14 +3369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Size Id of machines: 
             0 - Small
             1 - Medium
-            2 - Large{{% /md %}}</dd>
-</dl>
+            2 - Large{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_go">
 <a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
@@ -3916,8 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_go">
 <a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -3925,8 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromcapacityallocation_go">
 <a href="#excludefromcapacityallocation_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
@@ -3935,8 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true it includes basic sites
-            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
-    <dt class="property-optional"
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isapplicableforallcomputemodes_go">
 <a href="#isapplicableforallcomputemodes_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
@@ -3944,8 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3953,8 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitemode_go">
 <a href="#sitemode_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Mode</a>
@@ -3962,8 +3422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalcapacity_go">
 <a href="#totalcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
@@ -3971,8 +3430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -3980,8 +3438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_go">
 <a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -3989,8 +3446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_go">
 <a href="#workersizeid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -4001,14 +3457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Size Id of machines: 
             0 - Small
             1 - Medium
-            2 - Large{{% /md %}}</dd>
-</dl>
+            2 - Large{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_nodejs">
 <a href="#availablecapacity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Capacity</a>
@@ -4016,8 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_nodejs">
 <a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
@@ -4025,8 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromcapacityallocation_nodejs">
 <a href="#excludefromcapacityallocation_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
@@ -4035,8 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true it includes basic sites
-            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
-    <dt class="property-optional"
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isapplicableforallcomputemodes_nodejs">
 <a href="#isapplicableforallcomputemodes_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
@@ -4044,8 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4053,8 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitemode_nodejs">
 <a href="#sitemode_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Mode</a>
@@ -4062,8 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalcapacity_nodejs">
 <a href="#totalcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Capacity</a>
@@ -4071,8 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -4080,8 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_nodejs">
 <a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
@@ -4089,8 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_nodejs">
 <a href="#workersizeid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
@@ -4101,14 +3545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Size Id of machines: 
             0 - Small
             1 - Medium
-            2 - Large{{% /md %}}</dd>
-</dl>
+            2 - Large{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="available_capacity_python">
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
@@ -4116,8 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_mode_python">
 <a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
@@ -4125,8 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_from_capacity_allocation_python">
 <a href="#exclude_from_capacity_allocation_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>capacity_<wbr>allocation</a>
@@ -4135,8 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true it includes basic sites
-            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
-    <dt class="property-optional"
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_applicable_for_all_compute_modes_python">
 <a href="#is_applicable_for_all_compute_modes_python" style="color: inherit; text-decoration: inherit;">is_<wbr>applicable_<wbr>for_<wbr>all_<wbr>compute_<wbr>modes</a>
@@ -4144,8 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4153,8 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_mode_python">
 <a href="#site_mode_python" style="color: inherit; text-decoration: inherit;">site_<wbr>mode</a>
@@ -4162,8 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_capacity_python">
 <a href="#total_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>capacity</a>
@@ -4171,8 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -4180,8 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_python">
 <a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
@@ -4189,8 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_id_python">
 <a href="#worker_size_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size_<wbr>id</a>
@@ -4201,16 +3633,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Size Id of machines: 
             0 - Small
             1 - Medium
-            2 - Large{{% /md %}}</dd>
-</dl>
+            2 - Large{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -4218,8 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -4227,8 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -4236,8 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -4245,8 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -4254,8 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4263,14 +3687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -4278,8 +3699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -4287,8 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -4296,8 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -4305,8 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -4314,8 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4323,14 +3739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -4338,8 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -4347,8 +3759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -4356,8 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -4365,8 +3775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -4374,8 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4383,14 +3791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -4398,8 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -4407,8 +3811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -4416,8 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -4425,8 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -4434,8 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -4443,16 +3843,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualipmappingresponse">Virtual<wbr>IPMapping<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inuse_csharp">
 <a href="#inuse_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Use</a>
@@ -4460,8 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpport_csharp">
 <a href="#internalhttpport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Http<wbr>Port</a>
@@ -4469,8 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpsport_csharp">
 <a href="#internalhttpsport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Https<wbr>Port</a>
@@ -4478,8 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualip_csharp">
 <a href="#virtualip_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>IP</a>
@@ -4487,14 +3881,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inuse_go">
 <a href="#inuse_go" style="color: inherit; text-decoration: inherit;">In<wbr>Use</a>
@@ -4502,8 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpport_go">
 <a href="#internalhttpport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Http<wbr>Port</a>
@@ -4511,8 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpsport_go">
 <a href="#internalhttpsport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Https<wbr>Port</a>
@@ -4520,8 +3909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualip_go">
 <a href="#virtualip_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>IP</a>
@@ -4529,14 +3917,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inuse_nodejs">
 <a href="#inuse_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use</a>
@@ -4544,8 +3929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpport_nodejs">
 <a href="#internalhttpport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Http<wbr>Port</a>
@@ -4553,8 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalhttpsport_nodejs">
 <a href="#internalhttpsport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Https<wbr>Port</a>
@@ -4562,8 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualip_nodejs">
 <a href="#virtualip_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>IP</a>
@@ -4571,14 +3953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="in_use_python">
 <a href="#in_use_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use</a>
@@ -4586,8 +3965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_http_port_python">
 <a href="#internal_http_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>http_<wbr>port</a>
@@ -4595,8 +3973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_https_port_python">
 <a href="#internal_https_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>https_<wbr>port</a>
@@ -4604,8 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_ip_python">
 <a href="#virtual_ip_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>ip</a>
@@ -4613,16 +3989,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4630,8 +4003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4639,8 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4648,8 +4019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4657,14 +4027,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4672,8 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4681,8 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4690,8 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4699,14 +4063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4714,8 +4075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4723,8 +4083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -4732,8 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4741,14 +4099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4756,8 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4765,8 +4119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -4774,8 +4127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4783,16 +4135,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4800,8 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4809,8 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4818,8 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4827,14 +4173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4842,8 +4185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4851,8 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4860,8 +4201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4869,14 +4209,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4884,8 +4221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4893,8 +4229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -4902,8 +4237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4911,14 +4245,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4926,8 +4257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4935,8 +4265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -4944,8 +4273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4953,16 +4281,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workerpool">Worker<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -4970,8 +4295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_csharp">
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -4979,8 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computemodeoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Compute<wbr>Mode<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4988,8 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_csharp">
 <a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
@@ -4997,8 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -5006,8 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5015,8 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -5024,8 +4343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescription">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5033,8 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5042,8 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_csharp">
 <a href="#workercount_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -5051,8 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_csharp">
 <a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -5060,8 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_csharp">
 <a href="#workersizeid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -5069,14 +4383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -5084,8 +4395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_go">
 <a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -5093,8 +4403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computemodeoptions">Compute<wbr>Mode<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5102,8 +4411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_go">
 <a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
@@ -5111,8 +4419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -5120,8 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5129,8 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -5138,8 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5147,8 +4451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5156,8 +4459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_go">
 <a href="#workercount_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -5165,8 +4467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_go">
 <a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -5174,8 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_go">
 <a href="#workersizeid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -5183,14 +4483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -5198,8 +4495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_nodejs">
 <a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
@@ -5207,8 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computemodeoptions">Compute<wbr>Mode<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5216,8 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_nodejs">
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
@@ -5225,8 +4519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -5234,8 +4527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5243,8 +4535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -5252,8 +4543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5261,8 +4551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5270,8 +4559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_nodejs">
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
@@ -5279,8 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_nodejs">
 <a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
@@ -5288,8 +4575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_nodejs">
 <a href="#workersizeid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
@@ -5297,14 +4583,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -5312,8 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_mode_python">
 <a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
@@ -5321,8 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computemodeoptions">Compute<wbr>Mode<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5330,8 +4611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_names_python">
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
@@ -5339,8 +4619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -5348,8 +4627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5357,8 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -5366,8 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5375,8 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5384,8 +4659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_count_python">
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
@@ -5393,8 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_python">
 <a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
@@ -5402,8 +4675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_id_python">
 <a href="#worker_size_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size_<wbr>id</a>
@@ -5411,16 +4683,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workerpoolresponse">Worker<wbr>Pool<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -5428,8 +4697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_csharp">
 <a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -5437,8 +4705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5446,8 +4713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_csharp">
 <a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
@@ -5455,8 +4721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -5464,8 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5473,8 +4737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -5482,8 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5491,8 +4753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5500,8 +4761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_csharp">
 <a href="#workercount_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -5509,8 +4769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_csharp">
 <a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -5518,8 +4777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_csharp">
 <a href="#workersizeid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -5527,14 +4785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -5542,8 +4797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_go">
 <a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
@@ -5551,8 +4805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5560,8 +4813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_go">
 <a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
@@ -5569,8 +4821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -5578,8 +4829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5587,8 +4837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -5596,8 +4845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5605,8 +4853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5614,8 +4861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_go">
 <a href="#workercount_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -5623,8 +4869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_go">
 <a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
@@ -5632,8 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_go">
 <a href="#workersizeid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
@@ -5641,14 +4885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -5656,8 +4897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computemode_nodejs">
 <a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
@@ -5665,8 +4905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5674,8 +4913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenames_nodejs">
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
@@ -5683,8 +4921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -5692,8 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5701,8 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -5710,8 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5719,8 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5728,8 +4961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_nodejs">
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
@@ -5737,8 +4969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersize_nodejs">
 <a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
@@ -5746,8 +4977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workersizeid_nodejs">
 <a href="#workersizeid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
@@ -5755,14 +4985,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -5770,8 +4997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_mode_python">
 <a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
@@ -5779,8 +5005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5788,8 +5013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_names_python">
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
@@ -5797,8 +5021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -5806,8 +5029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5815,8 +5037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -5824,8 +5045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5833,8 +5053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5842,8 +5061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_count_python">
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
@@ -5851,8 +5069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_python">
 <a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
@@ -5860,8 +5077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_size_id_python">
 <a href="#worker_size_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size_<wbr>id</a>
@@ -5869,8 +5085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

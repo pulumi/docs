@@ -14,11 +14,17 @@ The iSCSI server.
 API Version: 2016-10-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### IscsiServersCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -77,9 +86,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -97,9 +109,12 @@ iscsi_server = azure_native.storsimple.IscsiServer("iscsiServer",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IscsiServer Resource {#create}
@@ -145,9 +167,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const iscsiServer = new azure_native.storsimple.IscsiServer("iscsiServer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupschedulegroupid_csharp">
 <a href="#backupschedulegroupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -311,8 +302,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -320,8 +310,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -329,8 +318,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -338,8 +326,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedomainid_csharp">
 <a href="#storagedomainid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Domain<wbr>Id</a>
@@ -347,8 +334,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chapid_csharp">
 <a href="#chapid_csharp" style="color: inherit; text-decoration: inherit;">Chap<wbr>Id</a>
@@ -356,8 +342,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The chap id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The chap id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -365,8 +350,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsiservername_csharp">
 <a href="#iscsiservername_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Server<wbr>Name</a>
@@ -374,8 +358,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reversechapid_csharp">
 <a href="#reversechapid_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Chap<wbr>Id</a>
@@ -383,14 +366,11 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupschedulegroupid_go">
 <a href="#backupschedulegroupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -398,8 +378,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -407,8 +386,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -416,8 +394,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -425,8 +402,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedomainid_go">
 <a href="#storagedomainid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Domain<wbr>Id</a>
@@ -434,8 +410,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chapid_go">
 <a href="#chapid_go" style="color: inherit; text-decoration: inherit;">Chap<wbr>Id</a>
@@ -443,8 +418,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The chap id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The chap id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -452,8 +426,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsiservername_go">
 <a href="#iscsiservername_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Server<wbr>Name</a>
@@ -461,8 +434,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reversechapid_go">
 <a href="#reversechapid_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Chap<wbr>Id</a>
@@ -470,14 +442,11 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupschedulegroupid_nodejs">
 <a href="#backupschedulegroupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -485,8 +454,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -494,8 +462,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -503,8 +470,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -512,8 +478,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedomainid_nodejs">
 <a href="#storagedomainid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Domain<wbr>Id</a>
@@ -521,8 +486,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chapid_nodejs">
 <a href="#chapid_nodejs" style="color: inherit; text-decoration: inherit;">chap<wbr>Id</a>
@@ -530,8 +494,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The chap id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The chap id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -539,8 +502,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsiservername_nodejs">
 <a href="#iscsiservername_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Server<wbr>Name</a>
@@ -548,8 +510,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reversechapid_nodejs">
 <a href="#reversechapid_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Chap<wbr>Id</a>
@@ -557,14 +518,11 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_schedule_group_id_python">
 <a href="#backup_schedule_group_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>group_<wbr>id</a>
@@ -572,8 +530,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -581,8 +538,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -590,8 +546,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -599,8 +554,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_domain_id_python">
 <a href="#storage_domain_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>domain_<wbr>id</a>
@@ -608,8 +562,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chap_id_python">
 <a href="#chap_id_python" style="color: inherit; text-decoration: inherit;">chap_<wbr>id</a>
@@ -617,8 +570,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The chap id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The chap id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -626,8 +578,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsi_server_name_python">
 <a href="#iscsi_server_name_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>server_<wbr>name</a>
@@ -635,8 +586,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The iSCSI server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverse_chap_id_python">
 <a href="#reverse_chap_id_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>chap_<wbr>id</a>
@@ -644,8 +594,7 @@ The IscsiServer resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reverse chap id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -656,9 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -666,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -675,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -684,14 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -699,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -708,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -717,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -732,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -741,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -750,14 +685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -765,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -783,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

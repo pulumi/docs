@@ -19,11 +19,17 @@ To get more information about Device, see:
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Cloudiot Device Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -72,9 +81,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -83,9 +95,12 @@ registry = gcp.iot.Registry("registry")
 test_device = gcp.iot.Device("test-device", registry=registry.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -95,10 +110,17 @@ const registry = new gcp.iot.Registry("registry", {});
 const test_device = new gcp.iot.Device("test-device", {registry: registry.id});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Cloudiot Device Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -141,13 +163,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -171,9 +199,12 @@ test_device = gcp.iot.Device("test-device",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -200,9 +231,16 @@ const test_device = new gcp.iot.Device("test-device", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Device Resource {#create}
@@ -227,9 +265,7 @@ const test_device = new gcp.iot.Device("test-device", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +273,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +281,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +289,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +315,7 @@ const test_device = new gcp.iot.Device("test-device", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -296,9 +323,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +331,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +339,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,18 +347,13 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +361,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +369,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,10 +377,7 @@ const test_device = new gcp.iot.Device("test-device", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -383,9 +392,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_csharp">
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -394,8 +401,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocked_csharp">
 <a href="#blocked_csharp" style="color: inherit; text-decoration: inherit;">Blocked</a>
@@ -404,8 +410,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -415,8 +420,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_csharp">
 <a href="#gatewayconfig_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -426,8 +430,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -437,8 +440,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -447,8 +449,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -457,14 +458,11 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_go">
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -473,8 +471,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocked_go">
 <a href="#blocked_go" style="color: inherit; text-decoration: inherit;">Blocked</a>
@@ -483,8 +480,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -494,8 +490,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_go">
 <a href="#gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -505,8 +500,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -516,8 +510,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -526,8 +519,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -536,14 +528,11 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_nodejs">
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -552,8 +541,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocked_nodejs">
 <a href="#blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
@@ -562,8 +550,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -573,8 +560,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_nodejs">
 <a href="#gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
@@ -584,8 +570,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -595,8 +580,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -605,8 +589,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -615,14 +598,11 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_python">
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -631,8 +611,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocked_python">
 <a href="#blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
@@ -641,8 +620,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -652,8 +630,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_config_python">
 <a href="#gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
@@ -663,8 +640,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -674,8 +650,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -684,8 +659,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -694,8 +668,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -706,9 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configs_csharp">
 <a href="#configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
@@ -717,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#deviceconfig">List&lt;Device<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -726,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigacktime_csharp">
 <a href="#lastconfigacktime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -736,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigsendtime_csharp">
 <a href="#lastconfigsendtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -746,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrorstatuses_csharp">
 <a href="#lasterrorstatuses_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
@@ -756,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#devicelasterrorstatus">List&lt;Device<wbr>Last<wbr>Error<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrortime_csharp">
 <a href="#lasterrortime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Time</a>
@@ -766,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasteventtime_csharp">
 <a href="#lasteventtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Event<wbr>Time</a>
@@ -776,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastheartbeattime_csharp">
 <a href="#lastheartbeattime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Time</a>
@@ -786,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatetime_csharp">
 <a href="#laststatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>State<wbr>Time</a>
@@ -796,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numid_csharp">
 <a href="#numid_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Id</a>
@@ -807,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="states_csharp">
 <a href="#states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
@@ -817,14 +778,11 @@ unique.
         <span class="property-type"><a href="#devicestate">List&lt;Device<wbr>State&gt;</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configs_go">
 <a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
@@ -833,8 +791,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -842,8 +799,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigacktime_go">
 <a href="#lastconfigacktime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -852,8 +808,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigsendtime_go">
 <a href="#lastconfigsendtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -862,8 +817,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrorstatuses_go">
 <a href="#lasterrorstatuses_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
@@ -872,8 +826,7 @@ unique.
         <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrortime_go">
 <a href="#lasterrortime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Time</a>
@@ -882,8 +835,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasteventtime_go">
 <a href="#lasteventtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Event<wbr>Time</a>
@@ -892,8 +844,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastheartbeattime_go">
 <a href="#lastheartbeattime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Time</a>
@@ -902,8 +853,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatetime_go">
 <a href="#laststatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>State<wbr>Time</a>
@@ -912,8 +862,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numid_go">
 <a href="#numid_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Id</a>
@@ -923,8 +872,7 @@ unique.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="states_go">
 <a href="#states_go" style="color: inherit; text-decoration: inherit;">States</a>
@@ -933,14 +881,11 @@ unique.
         <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configs_nodejs">
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
@@ -949,8 +894,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">Device<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -958,8 +902,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigacktime_nodejs">
 <a href="#lastconfigacktime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -968,8 +911,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastconfigsendtime_nodejs">
 <a href="#lastconfigsendtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -978,8 +920,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrorstatuses_nodejs">
 <a href="#lasterrorstatuses_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Statuses</a>
@@ -988,8 +929,7 @@ unique.
         <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasterrortime_nodejs">
 <a href="#lasterrortime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Time</a>
@@ -998,8 +938,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lasteventtime_nodejs">
 <a href="#lasteventtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
@@ -1008,8 +947,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastheartbeattime_nodejs">
 <a href="#lastheartbeattime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Time</a>
@@ -1018,8 +956,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatetime_nodejs">
 <a href="#laststatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>State<wbr>Time</a>
@@ -1028,8 +965,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numid_nodejs">
 <a href="#numid_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Id</a>
@@ -1039,8 +975,7 @@ unique.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="states_nodejs">
 <a href="#states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
@@ -1049,14 +984,11 @@ unique.
         <span class="property-type"><a href="#devicestate">Device<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configs_python">
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
@@ -1065,8 +997,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">Sequence[Device<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1074,8 +1005,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_config_ack_time_python">
 <a href="#last_config_ack_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>ack_<wbr>time</a>
@@ -1084,8 +1014,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_config_send_time_python">
 <a href="#last_config_send_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>send_<wbr>time</a>
@@ -1094,8 +1023,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_error_statuses_python">
 <a href="#last_error_statuses_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>statuses</a>
@@ -1104,8 +1032,7 @@ unique.
         <span class="property-type"><a href="#devicelasterrorstatus">Sequence[Device<wbr>Last<wbr>Error<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_error_time_python">
 <a href="#last_error_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>time</a>
@@ -1114,8 +1041,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_event_time_python">
 <a href="#last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
@@ -1124,8 +1050,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_heartbeat_time_python">
 <a href="#last_heartbeat_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>time</a>
@@ -1134,8 +1059,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_state_time_python">
 <a href="#last_state_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>state_<wbr>time</a>
@@ -1144,8 +1068,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="num_id_python">
 <a href="#num_id_python" style="color: inherit; text-decoration: inherit;">num_<wbr>id</a>
@@ -1155,8 +1078,7 @@ unique.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="states_python">
 <a href="#states_python" style="color: inherit; text-decoration: inherit;">states</a>
@@ -1165,8 +1087,7 @@ unique.
         <span class="property-type"><a href="#devicestate">Sequence[Device<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1293,9 +1214,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocked_csharp">
 <a href="#state_blocked_csharp" style="color: inherit; text-decoration: inherit;">Blocked</a>
@@ -1304,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configs_csharp">
 <a href="#state_configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
@@ -1314,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deviceconfig">List&lt;Device<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_csharp">
 <a href="#state_credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1325,8 +1242,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_csharp">
 <a href="#state_gatewayconfig_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -1336,8 +1252,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigacktime_csharp">
 <a href="#state_lastconfigacktime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -1346,8 +1261,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigsendtime_csharp">
 <a href="#state_lastconfigsendtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -1356,8 +1270,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrorstatuses_csharp">
 <a href="#state_lasterrorstatuses_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
@@ -1366,8 +1279,7 @@ Structure is documented below.
         <span class="property-type"><a href="#devicelasterrorstatus">List&lt;Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrortime_csharp">
 <a href="#state_lasterrortime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Time</a>
@@ -1376,8 +1288,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasteventtime_csharp">
 <a href="#state_lasteventtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Event<wbr>Time</a>
@@ -1386,8 +1297,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastheartbeattime_csharp">
 <a href="#state_lastheartbeattime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Time</a>
@@ -1396,8 +1306,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_laststatetime_csharp">
 <a href="#state_laststatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>State<wbr>Time</a>
@@ -1406,8 +1315,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_csharp">
 <a href="#state_loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -1417,8 +1325,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1427,8 +1334,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1437,8 +1343,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numid_csharp">
 <a href="#state_numid_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Id</a>
@@ -1448,8 +1353,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_csharp">
 <a href="#state_registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -1458,8 +1362,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_states_csharp">
 <a href="#state_states_csharp" style="color: inherit; text-decoration: inherit;">States</a>
@@ -1468,14 +1371,11 @@ unique.
         <span class="property-type"><a href="#devicestate">List&lt;Device<wbr>State<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocked_go">
 <a href="#state_blocked_go" style="color: inherit; text-decoration: inherit;">Blocked</a>
@@ -1484,8 +1384,7 @@ unique.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configs_go">
 <a href="#state_configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
@@ -1494,8 +1393,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_go">
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1505,8 +1403,7 @@ unique.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_go">
 <a href="#state_gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -1516,8 +1413,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigacktime_go">
 <a href="#state_lastconfigacktime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -1526,8 +1422,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigsendtime_go">
 <a href="#state_lastconfigsendtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -1536,8 +1431,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrorstatuses_go">
 <a href="#state_lasterrorstatuses_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
@@ -1546,8 +1440,7 @@ Structure is documented below.
         <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrortime_go">
 <a href="#state_lasterrortime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Time</a>
@@ -1556,8 +1449,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasteventtime_go">
 <a href="#state_lasteventtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Event<wbr>Time</a>
@@ -1566,8 +1458,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastheartbeattime_go">
 <a href="#state_lastheartbeattime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Time</a>
@@ -1576,8 +1467,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_laststatetime_go">
 <a href="#state_laststatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>State<wbr>Time</a>
@@ -1586,8 +1476,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_go">
 <a href="#state_loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -1597,8 +1486,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1607,8 +1495,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1617,8 +1504,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numid_go">
 <a href="#state_numid_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Id</a>
@@ -1628,8 +1514,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_go">
 <a href="#state_registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -1638,8 +1523,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_states_go">
 <a href="#state_states_go" style="color: inherit; text-decoration: inherit;">States</a>
@@ -1648,14 +1532,11 @@ unique.
         <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocked_nodejs">
 <a href="#state_blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
@@ -1664,8 +1545,7 @@ unique.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configs_nodejs">
 <a href="#state_configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
@@ -1674,8 +1554,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">Device<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_nodejs">
 <a href="#state_credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1685,8 +1564,7 @@ unique.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_nodejs">
 <a href="#state_gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
@@ -1696,8 +1574,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigacktime_nodejs">
 <a href="#state_lastconfigacktime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Ack<wbr>Time</a>
@@ -1706,8 +1583,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastconfigsendtime_nodejs">
 <a href="#state_lastconfigsendtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Send<wbr>Time</a>
@@ -1716,8 +1592,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrorstatuses_nodejs">
 <a href="#state_lasterrorstatuses_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Statuses</a>
@@ -1726,8 +1601,7 @@ Structure is documented below.
         <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasterrortime_nodejs">
 <a href="#state_lasterrortime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Time</a>
@@ -1736,8 +1610,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lasteventtime_nodejs">
 <a href="#state_lasteventtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
@@ -1746,8 +1619,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastheartbeattime_nodejs">
 <a href="#state_lastheartbeattime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Time</a>
@@ -1756,8 +1628,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_laststatetime_nodejs">
 <a href="#state_laststatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>State<wbr>Time</a>
@@ -1766,8 +1637,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_nodejs">
 <a href="#state_loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -1777,8 +1647,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1787,8 +1656,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1797,8 +1665,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numid_nodejs">
 <a href="#state_numid_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Id</a>
@@ -1808,8 +1675,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_nodejs">
 <a href="#state_registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -1818,8 +1684,7 @@ unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_states_nodejs">
 <a href="#state_states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
@@ -1828,14 +1693,11 @@ unique.
         <span class="property-type"><a href="#devicestate">Device<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocked_python">
 <a href="#state_blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
@@ -1844,8 +1706,7 @@ unique.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configs_python">
 <a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
@@ -1854,8 +1715,7 @@ unique.
         <span class="property-type"><a href="#deviceconfig">Sequence[Device<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_python">
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1865,8 +1725,7 @@ unique.
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_config_python">
 <a href="#state_gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
@@ -1876,8 +1735,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_config_ack_time_python">
 <a href="#state_last_config_ack_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>ack_<wbr>time</a>
@@ -1886,8 +1744,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_config_send_time_python">
 <a href="#state_last_config_send_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>send_<wbr>time</a>
@@ -1896,8 +1753,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_error_statuses_python">
 <a href="#state_last_error_statuses_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>statuses</a>
@@ -1906,8 +1762,7 @@ Structure is documented below.
         <span class="property-type"><a href="#devicelasterrorstatus">Sequence[Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_error_time_python">
 <a href="#state_last_error_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>time</a>
@@ -1916,8 +1771,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_event_time_python">
 <a href="#state_last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
@@ -1926,8 +1780,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_heartbeat_time_python">
 <a href="#state_last_heartbeat_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>time</a>
@@ -1936,8 +1789,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_state_time_python">
 <a href="#state_last_state_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>state_<wbr>time</a>
@@ -1946,8 +1798,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_level_python">
 <a href="#state_log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -1957,8 +1808,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1967,8 +1817,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1977,8 +1826,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_num_id_python">
 <a href="#state_num_id_python" style="color: inherit; text-decoration: inherit;">num_<wbr>id</a>
@@ -1988,8 +1836,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_python">
 <a href="#state_registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -1998,8 +1845,7 @@ unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_states_python">
 <a href="#state_states_python" style="color: inherit; text-decoration: inherit;">states</a>
@@ -2008,8 +1854,7 @@ unique.
         <span class="property-type"><a href="#devicestate">Sequence[Device<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2024,9 +1869,7 @@ unique.
 <h4 id="deviceconfig">Device<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_csharp">
 <a href="#binarydata_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
@@ -2034,8 +1877,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudupdatetime_csharp">
 <a href="#cloudupdatetime_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Update<wbr>Time</a>
@@ -2043,8 +1885,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceacktime_csharp">
 <a href="#deviceacktime_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Ack<wbr>Time</a>
@@ -2052,8 +1893,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2061,14 +1901,11 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_go">
 <a href="#binarydata_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
@@ -2076,8 +1913,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudupdatetime_go">
 <a href="#cloudupdatetime_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Update<wbr>Time</a>
@@ -2085,8 +1921,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceacktime_go">
 <a href="#deviceacktime_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Ack<wbr>Time</a>
@@ -2094,8 +1929,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2103,14 +1937,11 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_nodejs">
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
@@ -2118,8 +1949,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudupdatetime_nodejs">
 <a href="#cloudupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Update<wbr>Time</a>
@@ -2127,8 +1957,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceacktime_nodejs">
 <a href="#deviceacktime_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ack<wbr>Time</a>
@@ -2136,8 +1965,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2145,14 +1973,11 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binary_data_python">
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
@@ -2160,8 +1985,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_update_time_python">
 <a href="#cloud_update_time_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>update_<wbr>time</a>
@@ -2169,8 +1993,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_ack_time_python">
 <a href="#device_ack_time_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ack_<wbr>time</a>
@@ -2178,8 +2001,7 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2187,16 +2009,13 @@ unique.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicecredential">Device<wbr>Credential</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -2206,8 +2025,7 @@ unique.
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -2216,14 +2034,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -2233,8 +2048,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -2243,14 +2057,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -2260,8 +2071,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -2270,14 +2080,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -2287,8 +2094,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -2297,16 +2103,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2316,8 +2119,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2326,14 +2128,11 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2343,8 +2142,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2353,14 +2151,11 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2370,8 +2165,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2380,14 +2174,11 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2397,8 +2188,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2407,16 +2197,13 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicegatewayconfig">Device<wbr>Gateway<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gatewayauthmethod_csharp">
 <a href="#gatewayauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Auth<wbr>Method</a>
@@ -2426,8 +2213,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_csharp">
 <a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -2438,8 +2224,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
 Possible values are `GATEWAY` and `NON_GATEWAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewayid_csharp">
 <a href="#lastaccessedgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
@@ -2449,8 +2234,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewaytime_csharp">
 <a href="#lastaccessedgatewaytime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
@@ -2460,14 +2244,11 @@ The ID of the gateway the device accessed most recently.
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gatewayauthmethod_go">
 <a href="#gatewayauthmethod_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Auth<wbr>Method</a>
@@ -2477,8 +2258,7 @@ The most recent time at which the device accessed the gateway specified in last_
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_go">
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -2489,8 +2269,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
 Possible values are `GATEWAY` and `NON_GATEWAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewayid_go">
 <a href="#lastaccessedgatewayid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
@@ -2500,8 +2279,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewaytime_go">
 <a href="#lastaccessedgatewaytime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
@@ -2511,14 +2289,11 @@ The ID of the gateway the device accessed most recently.
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gatewayauthmethod_nodejs">
 <a href="#gatewayauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Auth<wbr>Method</a>
@@ -2528,8 +2303,7 @@ The most recent time at which the device accessed the gateway specified in last_
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_nodejs">
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
@@ -2540,8 +2314,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
 Possible values are `GATEWAY` and `NON_GATEWAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewayid_nodejs">
 <a href="#lastaccessedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
@@ -2551,8 +2324,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastaccessedgatewaytime_nodejs">
 <a href="#lastaccessedgatewaytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
@@ -2562,14 +2334,11 @@ The ID of the gateway the device accessed most recently.
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gateway_auth_method_python">
 <a href="#gateway_auth_method_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>auth_<wbr>method</a>
@@ -2579,8 +2348,7 @@ The most recent time at which the device accessed the gateway specified in last_
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_type_python">
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
@@ -2591,8 +2359,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
 Possible values are `GATEWAY` and `NON_GATEWAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_accessed_gateway_id_python">
 <a href="#last_accessed_gateway_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>id</a>
@@ -2602,8 +2369,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_accessed_gateway_time_python">
 <a href="#last_accessed_gateway_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>time</a>
@@ -2613,16 +2379,13 @@ The ID of the gateway the device accessed most recently.
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2630,8 +2393,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2639,8 +2401,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -2648,14 +2409,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2663,8 +2421,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2672,8 +2429,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -2681,14 +2437,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2696,8 +2449,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2705,8 +2457,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -2714,14 +2465,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2729,8 +2477,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2738,8 +2485,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -2747,16 +2493,13 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicestate">Device<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_csharp">
 <a href="#binarydata_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
@@ -2764,8 +2507,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -2773,14 +2515,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_go">
 <a href="#binarydata_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
@@ -2788,8 +2527,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -2797,14 +2535,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarydata_nodejs">
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
@@ -2812,8 +2547,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -2821,14 +2555,11 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binary_data_python">
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
@@ -2836,8 +2567,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -2845,8 +2575,7 @@ The most recent time at which the device accessed the gateway specified in last_
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2867,6 +2596,6 @@ Device can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ Address Resource.
 API Version: 2020-12-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CreateAddress
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -56,9 +62,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -99,9 +108,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -129,9 +141,12 @@ address_by_name = azure_native.edgeorder.AddressByName("addressByName",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -160,9 +175,16 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AddressByName Resource {#create}
@@ -187,9 +209,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -197,9 +217,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -207,9 +225,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -217,10 +233,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -246,9 +259,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -256,9 +267,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -266,9 +275,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -276,9 +283,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -286,18 +291,13 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -305,9 +305,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -315,9 +313,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -325,10 +321,7 @@ const addressByName = new azure_native.edgeorder.AddressByName("addressByName", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -343,9 +336,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -353,8 +344,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -362,8 +352,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressname_csharp">
 <a href="#addressname_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Name</a>
@@ -371,8 +360,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -380,8 +368,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -389,8 +376,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -398,14 +384,11 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -413,8 +396,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -422,8 +404,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressname_go">
 <a href="#addressname_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Name</a>
@@ -431,8 +412,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -440,8 +420,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -449,8 +428,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -458,14 +436,11 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -473,8 +448,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -482,8 +456,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressname_nodejs">
 <a href="#addressname_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Name</a>
@@ -491,8 +464,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -500,8 +472,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -509,8 +480,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -518,14 +488,11 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -533,8 +500,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -542,8 +508,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_name_python">
 <a href="#address_name_python" style="color: inherit; text-decoration: inherit;">address_<wbr>name</a>
@@ -551,8 +516,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -560,8 +524,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -569,8 +532,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -578,8 +540,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -590,9 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -600,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -609,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -618,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -627,14 +583,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -651,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -660,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -669,14 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -684,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -702,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -711,14 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -726,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -735,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -744,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents resource creation and update time{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -753,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -770,55 +707,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="addresstype">Address<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Address<wbr>Type<wbr>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Address<wbr>Type<wbr>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Address<wbr>Type<wbr>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Address<wbr>Type<wbr>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Address<wbr>Type<wbr>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Address<wbr>Type<wbr>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>RESIDENTIAL</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>COMMERCIAL</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>RESIDENTIAL</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>COMMERCIAL</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactdetails">Contact<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_csharp">
 <a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -826,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -835,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -844,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_csharp">
 <a href="#phoneextension_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -853,14 +769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_go">
 <a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -868,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -877,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -886,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_go">
 <a href="#phoneextension_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -895,14 +805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_nodejs">
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -910,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -919,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -928,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_nodejs">
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
@@ -937,14 +841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_name_python">
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -952,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -961,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -970,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_extension_python">
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
@@ -979,16 +877,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactdetailsresponse">Contact<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_csharp">
 <a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -996,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -1005,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -1014,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_csharp">
 <a href="#phoneextension_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -1023,14 +915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_go">
 <a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -1038,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -1047,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -1056,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_go">
 <a href="#phoneextension_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -1065,14 +951,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_nodejs">
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -1080,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -1089,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -1098,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_nodejs">
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
@@ -1107,14 +987,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_name_python">
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -1122,8 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -1131,8 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -1140,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_extension_python">
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
@@ -1149,16 +1023,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddress">Shipping<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1166,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -1175,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1184,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1193,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_csharp">
 <a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1202,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1211,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -1220,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -1229,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_csharp">
 <a href="#streetaddress3_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -1238,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_csharp">
 <a href="#zipextendedcode_csharp" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -1247,14 +1109,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1262,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -1271,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1280,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1289,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_go">
 <a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1298,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1307,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -1316,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -1325,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_go">
 <a href="#streetaddress3_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -1334,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_go">
 <a href="#zipextendedcode_go" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -1343,14 +1193,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1358,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -1367,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -1376,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1385,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_nodejs">
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
@@ -1394,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1403,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -1412,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -1421,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_nodejs">
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
@@ -1430,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_nodejs">
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
@@ -1439,14 +1277,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1454,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -1463,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -1472,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1481,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="company_name_python">
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
@@ -1490,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1499,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -1508,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -1517,8 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address3_python">
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
@@ -1526,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zip_extended_code_python">
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
@@ -1535,16 +1361,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddressresponse">Shipping<wbr>Address<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1552,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -1561,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1570,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1579,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_csharp">
 <a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1588,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1597,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -1606,8 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -1615,8 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_csharp">
 <a href="#streetaddress3_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -1624,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_csharp">
 <a href="#zipextendedcode_csharp" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -1633,14 +1447,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1648,8 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -1657,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1666,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1675,8 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_go">
 <a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1684,8 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1693,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -1702,8 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -1711,8 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_go">
 <a href="#streetaddress3_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -1720,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_go">
 <a href="#zipextendedcode_go" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -1729,14 +1531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1744,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -1753,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -1762,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1771,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_nodejs">
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
@@ -1780,8 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1789,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -1798,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -1807,8 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_nodejs">
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
@@ -1816,8 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_nodejs">
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
@@ -1825,14 +1615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1840,8 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -1849,8 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -1858,8 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1867,8 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="company_name_python">
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
@@ -1876,8 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1885,8 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -1894,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -1903,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address3_python">
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
@@ -1912,8 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zip_extended_code_python">
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
@@ -1921,16 +1699,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1938,8 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1947,8 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1956,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1965,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1974,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1983,14 +1753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1998,8 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2007,8 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2016,8 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2025,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2034,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2043,14 +1805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2058,8 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2067,8 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2076,8 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2085,8 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2094,8 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2103,14 +1857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2118,8 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2127,8 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2136,8 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2145,8 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2154,8 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2163,8 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_csharp">
 <a href="#automationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchername_csharp">
 <a href="#watchername_csharp" style="color: inherit; text-decoration: inherit;">Watcher<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The watcher name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The watcher name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_go">
 <a href="#automationaccountname_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchername_go">
 <a href="#watchername_go" style="color: inherit; text-decoration: inherit;">Watcher<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The watcher name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The watcher name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_nodejs">
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchername_nodejs">
 <a href="#watchername_nodejs" style="color: inherit; text-decoration: inherit;">watcher<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The watcher name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The watcher name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automation_account_name_python">
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watcher_name_python">
 <a href="#watcher_name_python" style="color: inherit; text-decoration: inherit;">watcher_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The watcher name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The watcher name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionfrequencyinseconds_csharp">
 <a href="#executionfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptname_csharp">
 <a href="#scriptname_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Name</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptparameters_csharp">
 <a href="#scriptparameters_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Parameters</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptrunon_csharp">
 <a href="#scriptrunon_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Run<wbr>On</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -328,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionfrequencyinseconds_go">
 <a href="#executionfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptname_go">
 <a href="#scriptname_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Name</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptparameters_go">
 <a href="#scriptparameters_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Parameters</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptrunon_go">
 <a href="#scriptrunon_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Run<wbr>On</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionfrequencyinseconds_nodejs">
 <a href="#executionfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptname_nodejs">
 <a href="#scriptname_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Name</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptparameters_nodejs">
 <a href="#scriptparameters_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Parameters</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scriptrunon_nodejs">
 <a href="#scriptrunon_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run<wbr>On</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -610,14 +540,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details of the user who last modified the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the current status of the watcher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="execution_frequency_in_seconds_python">
 <a href="#execution_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>frequency_<wbr>in_<wbr>seconds</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="script_name_python">
 <a href="#script_name_python" style="color: inherit; text-decoration: inherit;">script_<wbr>name</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="script_parameters_python">
 <a href="#script_parameters_python" style="color: inherit; text-decoration: inherit;">script_<wbr>parameters</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the parameters of the script.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="script_run_on_python">
 <a href="#script_run_on_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run_<wbr>on</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name of the hybrid worker group the watcher will run on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

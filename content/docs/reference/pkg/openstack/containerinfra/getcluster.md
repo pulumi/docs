@@ -14,11 +14,17 @@ Use this data source to get the ID of an available OpenStack Magnum cluster.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -60,9 +69,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -70,9 +82,12 @@ import pulumi_openstack as openstack
 cluster1 = openstack.containerinfra.get_cluster(name="cluster_1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,9 +98,16 @@ const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getCluster {#using}
@@ -123,9 +145,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -134,8 +154,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -146,14 +165,11 @@ The following arguments are supported:
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -162,8 +178,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -174,14 +189,11 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -190,8 +202,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -202,14 +213,11 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -218,8 +226,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -230,8 +237,7 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -244,9 +250,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiaddress_csharp">
 <a href="#apiaddress_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Address</a>
@@ -255,8 +259,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE API address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertemplateid_csharp">
 <a href="#clustertemplateid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Template<wbr>Id</a>
@@ -265,8 +268,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the V1 Container Infra cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coeversion_csharp">
 <a href="#coeversion_csharp" style="color: inherit; text-decoration: inherit;">Coe<wbr>Version</a>
@@ -275,8 +277,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE software version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerversion_csharp">
 <a href="#containerversion_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Version</a>
@@ -284,8 +285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtimeout_csharp">
 <a href="#createtimeout_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -294,8 +294,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout (in minutes) for creating the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -304,8 +303,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryurl_csharp">
 <a href="#discoveryurl_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
@@ -314,8 +312,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL used for cluster node discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_csharp">
 <a href="#dockervolumesize_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
@@ -324,8 +321,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_csharp">
 <a href="#fixednetwork_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
@@ -334,8 +330,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_csharp">
 <a href="#fixedsubnet_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
@@ -344,8 +339,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed subnet that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_csharp">
 <a href="#flavor_csharp" style="color: inherit; text-decoration: inherit;">Flavor</a>
@@ -354,8 +348,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_csharp">
 <a href="#floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
@@ -363,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -373,8 +365,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypair_csharp">
 <a href="#keypair_csharp" style="color: inherit; text-decoration: inherit;">Keypair</a>
@@ -383,8 +374,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -394,8 +384,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties of
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masteraddresses_csharp">
 <a href="#masteraddresses_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Addresses</a>
@@ -404,8 +393,7 @@ the cluster.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mastercount_csharp">
 <a href="#mastercount_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Count</a>
@@ -414,8 +402,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of master nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_csharp">
 <a href="#masterflavor_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
@@ -424,8 +411,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -434,8 +420,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeaddresses_csharp">
 <a href="#nodeaddresses_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Addresses</a>
@@ -444,8 +429,7 @@ the cluster.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -454,8 +438,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -464,8 +447,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -474,8 +456,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -484,8 +465,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the Orchestration service stack.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -494,8 +474,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -504,14 +483,11 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiaddress_go">
 <a href="#apiaddress_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Address</a>
@@ -520,8 +496,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE API address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertemplateid_go">
 <a href="#clustertemplateid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Template<wbr>Id</a>
@@ -530,8 +505,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the V1 Container Infra cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coeversion_go">
 <a href="#coeversion_go" style="color: inherit; text-decoration: inherit;">Coe<wbr>Version</a>
@@ -540,8 +514,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE software version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerversion_go">
 <a href="#containerversion_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Version</a>
@@ -549,8 +522,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtimeout_go">
 <a href="#createtimeout_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -559,8 +531,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout (in minutes) for creating the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -569,8 +540,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryurl_go">
 <a href="#discoveryurl_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Url</a>
@@ -579,8 +549,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL used for cluster node discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_go">
 <a href="#dockervolumesize_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
@@ -589,8 +558,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_go">
 <a href="#fixednetwork_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
@@ -599,8 +567,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_go">
 <a href="#fixedsubnet_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
@@ -609,8 +576,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed subnet that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_go">
 <a href="#flavor_go" style="color: inherit; text-decoration: inherit;">Flavor</a>
@@ -619,8 +585,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_go">
 <a href="#floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
@@ -628,8 +593,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,8 +602,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypair_go">
 <a href="#keypair_go" style="color: inherit; text-decoration: inherit;">Keypair</a>
@@ -648,8 +611,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -659,8 +621,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties of
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masteraddresses_go">
 <a href="#masteraddresses_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Addresses</a>
@@ -669,8 +630,7 @@ the cluster.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mastercount_go">
 <a href="#mastercount_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Count</a>
@@ -679,8 +639,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of master nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_go">
 <a href="#masterflavor_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
@@ -689,8 +648,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -699,8 +657,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeaddresses_go">
 <a href="#nodeaddresses_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Addresses</a>
@@ -709,8 +666,7 @@ the cluster.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -719,8 +675,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -729,8 +684,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -739,8 +693,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -749,8 +702,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the Orchestration service stack.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -759,8 +711,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -769,14 +720,11 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiaddress_nodejs">
 <a href="#apiaddress_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Address</a>
@@ -785,8 +733,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE API address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertemplateid_nodejs">
 <a href="#clustertemplateid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Id</a>
@@ -795,8 +742,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the V1 Container Infra cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coeversion_nodejs">
 <a href="#coeversion_nodejs" style="color: inherit; text-decoration: inherit;">coe<wbr>Version</a>
@@ -805,8 +751,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}COE software version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerversion_nodejs">
 <a href="#containerversion_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Version</a>
@@ -814,8 +759,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtimeout_nodejs">
 <a href="#createtimeout_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timeout</a>
@@ -824,8 +768,7 @@ the cluster.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout (in minutes) for creating the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -834,8 +777,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryurl_nodejs">
 <a href="#discoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Url</a>
@@ -844,8 +786,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL used for cluster node discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_nodejs">
 <a href="#dockervolumesize_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Size</a>
@@ -854,8 +795,7 @@ the cluster.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_nodejs">
 <a href="#fixednetwork_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Network</a>
@@ -864,8 +804,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_nodejs">
 <a href="#fixedsubnet_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Subnet</a>
@@ -874,8 +813,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed subnet that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_nodejs">
 <a href="#flavor_nodejs" style="color: inherit; text-decoration: inherit;">flavor</a>
@@ -884,8 +822,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_nodejs">
 <a href="#floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
@@ -893,8 +830,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -903,8 +839,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypair_nodejs">
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">keypair</a>
@@ -913,8 +848,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -924,8 +858,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties of
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masteraddresses_nodejs">
 <a href="#masteraddresses_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Addresses</a>
@@ -934,8 +867,7 @@ the cluster.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mastercount_nodejs">
 <a href="#mastercount_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Count</a>
@@ -944,8 +876,7 @@ the cluster.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of master nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_nodejs">
 <a href="#masterflavor_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Flavor</a>
@@ -954,8 +885,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -964,8 +894,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeaddresses_nodejs">
 <a href="#nodeaddresses_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Addresses</a>
@@ -974,8 +903,7 @@ the cluster.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -984,8 +912,7 @@ the cluster.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -994,8 +921,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1004,8 +930,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -1014,8 +939,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the Orchestration service stack.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1024,8 +948,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -1034,14 +957,11 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="api_address_python">
 <a href="#api_address_python" style="color: inherit; text-decoration: inherit;">api_<wbr>address</a>
@@ -1050,8 +970,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}COE API address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_template_id_python">
 <a href="#cluster_template_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>template_<wbr>id</a>
@@ -1060,8 +979,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the V1 Container Infra cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coe_version_python">
 <a href="#coe_version_python" style="color: inherit; text-decoration: inherit;">coe_<wbr>version</a>
@@ -1070,8 +988,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}COE software version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_version_python">
 <a href="#container_version_python" style="color: inherit; text-decoration: inherit;">container_<wbr>version</a>
@@ -1079,8 +996,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_timeout_python">
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
@@ -1089,8 +1005,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout (in minutes) for creating the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1099,8 +1014,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discovery_url_python">
 <a href="#discovery_url_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>url</a>
@@ -1109,8 +1023,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL used for cluster node discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="docker_volume_size_python">
 <a href="#docker_volume_size_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>size</a>
@@ -1119,8 +1032,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_network_python">
 <a href="#fixed_network_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>network</a>
@@ -1129,8 +1041,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fixed network that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_subnet_python">
 <a href="#fixed_subnet_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>subnet</a>
@@ -1139,8 +1050,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fixed subnet that is attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_python">
 <a href="#flavor_python" style="color: inherit; text-decoration: inherit;">flavor</a>
@@ -1149,8 +1059,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floating_ip_enabled_python">
 <a href="#floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
@@ -1158,8 +1067,7 @@ the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1168,8 +1076,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypair_python">
 <a href="#keypair_python" style="color: inherit; text-decoration: inherit;">keypair</a>
@@ -1178,8 +1085,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1189,8 +1095,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties of
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_addresses_python">
 <a href="#master_addresses_python" style="color: inherit; text-decoration: inherit;">master_<wbr>addresses</a>
@@ -1199,8 +1104,7 @@ the cluster.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_count_python">
 <a href="#master_count_python" style="color: inherit; text-decoration: inherit;">master_<wbr>count</a>
@@ -1209,8 +1113,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of master nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_flavor_python">
 <a href="#master_flavor_python" style="color: inherit; text-decoration: inherit;">master_<wbr>flavor</a>
@@ -1219,8 +1122,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1229,8 +1131,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_addresses_python">
 <a href="#node_addresses_python" style="color: inherit; text-decoration: inherit;">node_<wbr>addresses</a>
@@ -1239,8 +1140,7 @@ the cluster.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1249,8 +1149,7 @@ the cluster.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1259,8 +1158,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1269,8 +1167,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -1279,8 +1176,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the Orchestration service stack.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1289,8 +1185,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which cluster was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -1299,8 +1194,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1314,6 +1208,6 @@ the cluster.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

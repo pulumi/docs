@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.servicebus.Namespace resource with examp
 Manages a ServiceBus Namespace.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -81,9 +90,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -98,9 +110,12 @@ example_namespace = azure.servicebus.Namespace("exampleNamespace",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -117,9 +132,16 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Namespace Resource {#create}
@@ -144,9 +166,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +174,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +182,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +190,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -203,9 +216,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -213,9 +224,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -223,9 +232,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -233,9 +240,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -243,18 +248,13 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +262,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +270,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,10 +278,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -300,9 +293,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -312,8 +303,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -322,8 +312,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -332,8 +321,7 @@ create the namespace.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -342,8 +330,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -353,8 +340,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -363,8 +349,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_csharp">
 <a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -373,14 +358,11 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -390,8 +372,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -400,8 +381,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -410,8 +390,7 @@ create the namespace.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -420,8 +399,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -431,8 +409,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -441,8 +418,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_go">
 <a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -451,14 +427,11 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -468,8 +441,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -478,8 +450,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -488,8 +459,7 @@ create the namespace.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -498,8 +468,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -509,8 +478,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -519,8 +487,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_nodejs">
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
@@ -529,14 +496,11 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -546,8 +510,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -556,8 +519,7 @@ create the namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -566,8 +528,7 @@ create the namespace.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -576,8 +537,7 @@ create the namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -587,8 +547,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -597,8 +556,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_redundant_python">
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
@@ -607,8 +565,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -619,9 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprimaryconnectionstring_csharp">
 <a href="#defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -631,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprimarykey_csharp">
 <a href="#defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -641,8 +595,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondaryconnectionstring_csharp">
 <a href="#defaultsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -652,8 +605,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarykey_csharp">
 <a href="#defaultsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
@@ -662,8 +614,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -671,14 +622,11 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprimaryconnectionstring_go">
 <a href="#defaultprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -688,8 +636,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprimarykey_go">
 <a href="#defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -698,8 +645,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondaryconnectionstring_go">
 <a href="#defaultsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -709,8 +655,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarykey_go">
 <a href="#defaultsecondarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
@@ -719,8 +664,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,14 +672,11 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprimaryconnectionstring_nodejs">
 <a href="#defaultprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -745,8 +686,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprimarykey_nodejs">
 <a href="#defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
@@ -755,8 +695,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondaryconnectionstring_nodejs">
 <a href="#defaultsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -766,8 +705,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarykey_nodejs">
 <a href="#defaultsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Key</a>
@@ -776,8 +714,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,14 +722,11 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="default_primary_connection_string_python">
 <a href="#default_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -802,8 +736,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_primary_key_python">
 <a href="#default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
@@ -812,8 +745,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_secondary_connection_string_python">
 <a href="#default_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -823,8 +755,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_secondary_key_python">
 <a href="#default_secondary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>key</a>
@@ -833,8 +764,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -842,8 +772,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -970,9 +899,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_csharp">
 <a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -981,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimaryconnectionstring_csharp">
 <a href="#state_defaultprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -992,8 +918,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimarykey_csharp">
 <a href="#state_defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -1002,8 +927,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondaryconnectionstring_csharp">
 <a href="#state_defaultsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -1013,8 +937,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarykey_csharp">
 <a href="#state_defaultsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
@@ -1023,8 +946,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1033,8 +955,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1044,8 +965,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1055,8 +975,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_csharp">
 <a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1065,8 +984,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1075,8 +993,7 @@ create the namespace.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_csharp">
 <a href="#state_zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -1085,14 +1002,11 @@ create the namespace.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_go">
 <a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1101,8 +1015,7 @@ create the namespace.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimaryconnectionstring_go">
 <a href="#state_defaultprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -1112,8 +1025,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimarykey_go">
 <a href="#state_defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -1122,8 +1034,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondaryconnectionstring_go">
 <a href="#state_defaultsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -1133,8 +1044,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarykey_go">
 <a href="#state_defaultsecondarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Key</a>
@@ -1143,8 +1053,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1153,8 +1062,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1164,8 +1072,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1175,8 +1082,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_go">
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1185,8 +1091,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1195,8 +1100,7 @@ create the namespace.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_go">
 <a href="#state_zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -1205,14 +1109,11 @@ create the namespace.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_nodejs">
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1221,8 +1122,7 @@ create the namespace.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimaryconnectionstring_nodejs">
 <a href="#state_defaultprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -1232,8 +1132,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimarykey_nodejs">
 <a href="#state_defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
@@ -1242,8 +1141,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondaryconnectionstring_nodejs">
 <a href="#state_defaultsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -1253,8 +1151,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarykey_nodejs">
 <a href="#state_defaultsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Key</a>
@@ -1263,8 +1160,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1273,8 +1169,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1284,8 +1179,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1295,8 +1189,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_nodejs">
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1305,8 +1198,7 @@ create the namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1315,8 +1207,7 @@ create the namespace.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_nodejs">
 <a href="#state_zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
@@ -1325,14 +1216,11 @@ create the namespace.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_python">
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1341,8 +1229,7 @@ create the namespace.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4`, `8` or `16`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_primary_connection_string_python">
 <a href="#state_default_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -1352,8 +1239,7 @@ create the namespace.
     </dt>
     <dd>{{% md %}}The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_primary_key_python">
 <a href="#state_default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
@@ -1362,8 +1248,7 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_secondary_connection_string_python">
 <a href="#state_default_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -1373,8 +1258,7 @@ rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_secondary_key_python">
 <a href="#state_default_secondary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>key</a>
@@ -1383,8 +1267,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1393,8 +1276,7 @@ authorization rule `RootManageSharedAccessKey`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1404,8 +1286,7 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1415,8 +1296,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_python">
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1425,8 +1305,7 @@ create the namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1435,8 +1314,7 @@ create the namespace.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_redundant_python">
 <a href="#state_zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
@@ -1445,8 +1323,7 @@ create the namespace.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1472,6 +1349,6 @@ Service Bus Namespace can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

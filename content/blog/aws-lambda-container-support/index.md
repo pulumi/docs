@@ -10,7 +10,7 @@ tags:
     - aws
     - containers
     - serverless
-    
+
 ---
 
 When AWS Lambda launched in 2014, it pioneered the concept of Function-as-a-Service. Developers could write a function in one of the supported programming languages, upload it to AWS, and Lambda executes the function on every invocation.
@@ -22,8 +22,8 @@ Today, AWS announced that AWS Lambda now supports packaging serverless functions
 <!--more-->
 
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
-{{% md %}}
-**AWS Lambda Containers QuickStart**
+
+#### AWS Lambda Containers QuickStart
 
 Ready to get up and running quickly right away?
 
@@ -33,7 +33,7 @@ Ready to get up and running quickly right away?
 4. Test with `$ curl $(pulumi stack output invokeUrl)`.
 
 For additional information on how Lambda Containers work, and more advanced options, please read on.
-{{% /md %}}
+
 </div>
 
 ## Why Use Container Images for AWS Lambda?

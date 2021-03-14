@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iotsensorname_csharp">
 <a href="#iotsensorname_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Sensor<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iotsensorname_go">
 <a href="#iotsensorname_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Sensor<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iotsensorname_nodejs">
 <a href="#iotsensorname_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Sensor<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iot_sensor_name_python">
 <a href="#iot_sensor_name_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>sensor_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IoT sensor{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivitytime_csharp">
 <a href="#connectivitytime_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Time</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_csharp">
 <a href="#dynamiclearning_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="learningmode_csharp">
 <a href="#learningmode_csharp" style="color: inherit; text-decoration: inherit;">Learning<wbr>Mode</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_csharp">
 <a href="#sensorstatus_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorversion_csharp">
 <a href="#sensorversion_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Version</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_csharp">
 <a href="#tistatus_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiversion_csharp">
 <a href="#tiversion_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Version</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenterprisesensor_csharp">
 <a href="#isenterprisesensor_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_csharp">
 <a href="#tiautomaticupdates_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivitytime_go">
 <a href="#connectivitytime_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Time</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_go">
 <a href="#dynamiclearning_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="learningmode_go">
 <a href="#learningmode_go" style="color: inherit; text-decoration: inherit;">Learning<wbr>Mode</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_go">
 <a href="#sensorstatus_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorversion_go">
 <a href="#sensorversion_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Version</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_go">
 <a href="#tistatus_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiversion_go">
 <a href="#tiversion_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Version</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenterprisesensor_go">
 <a href="#isenterprisesensor_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enterprise<wbr>Sensor</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_go">
 <a href="#tiautomaticupdates_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Automatic<wbr>Updates</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivitytime_nodejs">
 <a href="#connectivitytime_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Time</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_nodejs">
 <a href="#dynamiclearning_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Learning</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="learningmode_nodejs">
 <a href="#learningmode_nodejs" style="color: inherit; text-decoration: inherit;">learning<wbr>Mode</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_nodejs">
 <a href="#sensorstatus_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Status</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorversion_nodejs">
 <a href="#sensorversion_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Version</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_nodejs">
 <a href="#tistatus_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Status</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiversion_nodejs">
 <a href="#tiversion_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Version</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenterprisesensor_nodejs">
 <a href="#isenterprisesensor_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enterprise<wbr>Sensor</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tiautomaticupdates_nodejs">
 <a href="#tiautomaticupdates_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Automatic<wbr>Updates</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -547,14 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_time_python">
 <a href="#connectivity_time_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>time</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamic_learning_python">
 <a href="#dynamic_learning_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>learning</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dynamic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="learning_mode_python">
 <a href="#learning_mode_python" style="color: inherit; text-decoration: inherit;">learning_<wbr>mode</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Learning mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensor_status_python">
 <a href="#sensor_status_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>status</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensor_version_python">
 <a href="#sensor_version_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>version</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ti_status_python">
 <a href="#ti_status_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>status</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ti_version_python">
 <a href="#ti_version_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>version</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_enterprise_sensor_python">
 <a href="#is_enterprise_sensor_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enterprise_<wbr>sensor</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is type of sensor is enterprise IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ti_automatic_updates_python">
 <a href="#ti_automatic_updates_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>automatic_<wbr>updates</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}TI Automatic mode status of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Zone of the IoT sensor{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

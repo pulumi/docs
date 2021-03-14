@@ -21,11 +21,17 @@ To get more information about GlobalNetworkEndpoint, see:
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Global Network Endpoint
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -83,9 +92,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -99,9 +111,12 @@ default_endpoint = gcp.compute.GlobalNetworkEndpoint("default-endpoint",
     port=90)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GlobalNetworkEndpoint Resource {#create}
@@ -145,9 +167,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const default_endpoint = new gcp.compute.GlobalNetworkEndpoint("default-endpoint
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The GlobalNetworkEndpoint resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="globalnetworkendpointgroup_csharp">
 <a href="#globalnetworkendpointgroup_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -312,8 +303,7 @@ The GlobalNetworkEndpoint resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -322,8 +312,7 @@ The GlobalNetworkEndpoint resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -333,8 +322,7 @@ The GlobalNetworkEndpoint resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -343,8 +331,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -354,14 +341,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="globalnetworkendpointgroup_go">
 <a href="#globalnetworkendpointgroup_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -370,8 +354,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -380,8 +363,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -391,8 +373,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -401,8 +382,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -412,14 +392,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="globalnetworkendpointgroup_nodejs">
 <a href="#globalnetworkendpointgroup_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -428,8 +405,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -438,8 +414,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -449,8 +424,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -459,8 +433,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -470,14 +443,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="global_network_endpoint_group_python">
 <a href="#global_network_endpoint_group_python" style="color: inherit; text-decoration: inherit;">global_<wbr>network_<wbr>endpoint_<wbr>group</a>
@@ -486,8 +456,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -496,8 +465,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -507,8 +475,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -517,8 +484,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -528,8 +494,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -540,9 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -550,14 +513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -580,14 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -595,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -723,9 +676,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -735,8 +686,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalnetworkendpointgroup_csharp">
 <a href="#state_globalnetworkendpointgroup_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -745,8 +695,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -755,8 +704,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -765,8 +713,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -776,14 +723,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
 <a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -793,8 +737,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalnetworkendpointgroup_go">
 <a href="#state_globalnetworkendpointgroup_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -803,8 +746,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -813,8 +755,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -823,8 +764,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -834,14 +774,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -851,8 +788,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalnetworkendpointgroup_nodejs">
 <a href="#state_globalnetworkendpointgroup_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Network<wbr>Endpoint<wbr>Group</a>
@@ -861,8 +797,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -871,8 +806,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -881,8 +815,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -892,14 +825,11 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -909,8 +839,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_network_endpoint_group_python">
 <a href="#state_global_network_endpoint_group_python" style="color: inherit; text-decoration: inherit;">global_<wbr>network_<wbr>endpoint_<wbr>group</a>
@@ -919,8 +848,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -929,8 +857,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -939,8 +866,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the external endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -950,8 +876,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -985,6 +910,6 @@ GlobalNetworkEndpoint can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

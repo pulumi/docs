@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_csharp">
 <a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputblobsasurl_csharp">
 <a href="#outputblobsasurl_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Blob<wbr>Sas<wbr>Url</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnusernamesfilter_csharp">
 <a href="#vpnusernamesfilter_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>User<wbr>Names<wbr>Filter</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_go">
 <a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputblobsasurl_go">
 <a href="#outputblobsasurl_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Blob<wbr>Sas<wbr>Url</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnusernamesfilter_go">
 <a href="#vpnusernamesfilter_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>User<wbr>Names<wbr>Filter</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayname_nodejs">
 <a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputblobsasurl_nodejs">
 <a href="#outputblobsasurl_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Blob<wbr>Sas<wbr>Url</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnusernamesfilter_nodejs">
 <a href="#vpnusernamesfilter_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>User<wbr>Names<wbr>Filter</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gateway_name_python">
 <a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the P2SVpnGateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_blob_sas_url_python">
 <a href="#output_blob_sas_url_python" style="color: inherit; text-decoration: inherit;">output_<wbr>blob_<wbr>sas_<wbr>url</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sas-url to download the P2S Vpn connection health detail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_user_names_filter_python">
 <a href="#vpn_user_names_filter_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>user_<wbr>names_<wbr>filter</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -253,14 +224,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -268,14 +236,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returned sas url of the blob to which the p2s vpn connection detailed health will be written.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

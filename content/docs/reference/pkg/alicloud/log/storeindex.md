@@ -43,9 +43,7 @@ Log store index can be imported using the id, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Log store index can be imported using the id, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Log store index can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logstore_csharp">
 <a href="#logstore_csharp" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -210,8 +179,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -220,8 +188,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsearches_csharp">
 <a href="#fieldsearches_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Searches</a>
@@ -230,8 +197,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfieldsearch">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Store<wbr>Index<wbr>Field<wbr>Search<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fulltext_csharp">
 <a href="#fulltext_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Text</a>
@@ -240,14 +206,11 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfulltext">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Store<wbr>Index<wbr>Full<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logstore_go">
 <a href="#logstore_go" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -256,8 +219,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -266,8 +228,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsearches_go">
 <a href="#fieldsearches_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Searches</a>
@@ -276,8 +237,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfieldsearch">[]Store<wbr>Index<wbr>Field<wbr>Search</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fulltext_go">
 <a href="#fulltext_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Text</a>
@@ -286,14 +246,11 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logstore_nodejs">
 <a href="#logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -302,8 +259,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -312,8 +268,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsearches_nodejs">
 <a href="#fieldsearches_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Searches</a>
@@ -322,8 +277,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfieldsearch">Store<wbr>Index<wbr>Field<wbr>Search[]</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fulltext_nodejs">
 <a href="#fulltext_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Text</a>
@@ -332,14 +286,11 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logstore_python">
 <a href="#logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -348,8 +299,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -358,8 +308,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_searches_python">
 <a href="#field_searches_python" style="color: inherit; text-decoration: inherit;">field_<wbr>searches</a>
@@ -368,8 +317,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfieldsearch">Sequence[Store<wbr>Index<wbr>Field<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_text_python">
 <a href="#full_text_python" style="color: inherit; text-decoration: inherit;">full_<wbr>text</a>
@@ -378,8 +326,7 @@ The StoreIndex resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -390,9 +337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -400,14 +345,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,14 +357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,14 +369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -445,8 +381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -573,9 +508,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fieldsearches_csharp">
 <a href="#state_fieldsearches_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Searches</a>
@@ -584,8 +517,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearch">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Store<wbr>Index<wbr>Field<wbr>Search<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fulltext_csharp">
 <a href="#state_fulltext_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Text</a>
@@ -594,8 +526,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfulltext">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Store<wbr>Index<wbr>Full<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstore_csharp">
 <a href="#state_logstore_csharp" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -604,8 +535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -614,14 +544,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fieldsearches_go">
 <a href="#state_fieldsearches_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Searches</a>
@@ -630,8 +557,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearch">[]Store<wbr>Index<wbr>Field<wbr>Search</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fulltext_go">
 <a href="#state_fulltext_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Text</a>
@@ -640,8 +566,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstore_go">
 <a href="#state_logstore_go" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -650,8 +575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -660,14 +584,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fieldsearches_nodejs">
 <a href="#state_fieldsearches_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Searches</a>
@@ -676,8 +597,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearch">Store<wbr>Index<wbr>Field<wbr>Search[]</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fulltext_nodejs">
 <a href="#state_fulltext_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Text</a>
@@ -686,8 +606,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstore_nodejs">
 <a href="#state_logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -696,8 +615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -706,14 +624,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_field_searches_python">
 <a href="#state_field_searches_python" style="color: inherit; text-decoration: inherit;">field_<wbr>searches</a>
@@ -722,8 +637,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearch">Sequence[Store<wbr>Index<wbr>Field<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List configurations of field search index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_text_python">
 <a href="#state_full_text_python" style="color: inherit; text-decoration: inherit;">full_<wbr>text</a>
@@ -732,8 +646,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of full text index. Valid item as follows:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstore_python">
 <a href="#state_logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -742,8 +655,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log store name to the query index belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -752,8 +664,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name to the log store belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -768,9 +679,7 @@ The following state arguments are supported:
 <h4 id="storeindexfieldsearch">Store<wbr>Index<wbr>Field<wbr>Search</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -779,8 +688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -789,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_csharp">
 <a href="#casesensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -799,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableanalytics_csharp">
 <a href="#enableanalytics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Analytics</a>
@@ -809,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable field analytics. Default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_csharp">
 <a href="#includechinese_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Chinese</a>
@@ -819,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonkeys_csharp">
 <a href="#jsonkeys_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Keys</a>
@@ -829,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearchjsonkey">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Store<wbr>Index<wbr>Field<wbr>Search<wbr>Json<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Use nested index when type is json
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -839,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -849,14 +751,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -865,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -875,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_go">
 <a href="#casesensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -885,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableanalytics_go">
 <a href="#enableanalytics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Analytics</a>
@@ -895,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable field analytics. Default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_go">
 <a href="#includechinese_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Chinese</a>
@@ -905,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonkeys_go">
 <a href="#jsonkeys_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Keys</a>
@@ -915,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearchjsonkey">[]Store<wbr>Index<wbr>Field<wbr>Search<wbr>Json<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Use nested index when type is json
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -925,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -935,14 +827,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -951,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -961,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_nodejs">
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
@@ -971,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableanalytics_nodejs">
 <a href="#enableanalytics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Analytics</a>
@@ -981,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable field analytics. Default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_nodejs">
 <a href="#includechinese_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Chinese</a>
@@ -991,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonkeys_nodejs">
 <a href="#jsonkeys_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Keys</a>
@@ -1001,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearchjsonkey">Store<wbr>Index<wbr>Field<wbr>Search<wbr>Json<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Use nested index when type is json
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1011,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1021,14 +903,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1037,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1047,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="case_sensitive_python">
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
@@ -1057,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_analytics_python">
 <a href="#enable_analytics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>analytics</a>
@@ -1067,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable field analytics. Default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_chinese_python">
 <a href="#include_chinese_python" style="color: inherit; text-decoration: inherit;">include_<wbr>chinese</a>
@@ -1077,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="json_keys_python">
 <a href="#json_keys_python" style="color: inherit; text-decoration: inherit;">json_<wbr>keys</a>
@@ -1087,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#storeindexfieldsearchjsonkey">Sequence[Store<wbr>Index<wbr>Field<wbr>Search<wbr>Json<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Use nested index when type is json
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1097,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1107,16 +979,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storeindexfieldsearchjsonkey">Store<wbr>Index<wbr>Field<wbr>Search<wbr>Json<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1125,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1135,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docvalue_csharp">
 <a href="#docvalue_csharp" style="color: inherit; text-decoration: inherit;">Doc<wbr>Value</a>
@@ -1145,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable statistics. default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1155,14 +1021,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1171,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1181,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docvalue_go">
 <a href="#docvalue_go" style="color: inherit; text-decoration: inherit;">Doc<wbr>Value</a>
@@ -1191,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable statistics. default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1201,14 +1061,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1217,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1227,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docvalue_nodejs">
 <a href="#docvalue_nodejs" style="color: inherit; text-decoration: inherit;">doc<wbr>Value</a>
@@ -1237,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable statistics. default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1247,14 +1101,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1263,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using the json_keys field, this field is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1273,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias of one field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="doc_value_python">
 <a href="#doc_value_python" style="color: inherit; text-decoration: inherit;">doc_<wbr>value</a>
@@ -1283,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable statistics. default to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1293,16 +1141,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of one field. Valid values: ["long", "text", "double"]. Default to "long"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storeindexfulltext">Store<wbr>Index<wbr>Full<wbr>Text</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_csharp">
 <a href="#casesensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -1311,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_csharp">
 <a href="#includechinese_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Chinese</a>
@@ -1321,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1331,14 +1174,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_go">
 <a href="#casesensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -1347,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_go">
 <a href="#includechinese_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Chinese</a>
@@ -1357,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1367,14 +1205,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_nodejs">
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
@@ -1383,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechinese_nodejs">
 <a href="#includechinese_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Chinese</a>
@@ -1393,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1403,14 +1236,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="case_sensitive_python">
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
@@ -1419,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the case sensitive for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_chinese_python">
 <a href="#include_chinese_python" style="color: inherit; text-decoration: inherit;">include_<wbr>chinese</a>
@@ -1429,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether includes the chinese for the field. Default to false. It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1439,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string of several split words, like "\r", "#". It is valid when "type" is "text" or "json".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1451,6 +1278,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

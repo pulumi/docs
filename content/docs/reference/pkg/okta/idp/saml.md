@@ -15,11 +15,17 @@ Creates a SAML Identity Provider.
 This resource allows you to create and configure a SAML Identity Provider.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Okta = Pulumi.Okta;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -77,9 +86,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_okta as okta
@@ -96,9 +108,12 @@ example = okta.idp.Saml("example",
     username_template="idpuser.email")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -117,9 +132,16 @@ const example = new okta.idp.Saml("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Saml Resource {#create}
@@ -144,9 +166,7 @@ const example = new okta.idp.Saml("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +174,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +182,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +190,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -203,9 +216,7 @@ const example = new okta.idp.Saml("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -213,9 +224,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -223,9 +232,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -233,9 +240,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -243,18 +248,13 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +262,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +270,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,10 +278,7 @@ const example = new okta.idp.Saml("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -300,9 +293,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -311,8 +302,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kid_csharp">
 <a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -321,8 +311,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -331,8 +320,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkaction_csharp">
 <a href="#accountlinkaction_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -341,8 +329,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkgroupincludes_csharp">
 <a href="#accountlinkgroupincludes_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -351,8 +338,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="acsbinding_csharp">
 <a href="#acsbinding_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
@@ -360,8 +346,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="acstype_csharp">
 <a href="#acstype_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Type</a>
@@ -370,8 +355,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprovisionedaction_csharp">
 <a href="#deprovisionedaction_csharp" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -380,8 +364,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsaction_csharp">
 <a href="#groupsaction_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -390,8 +373,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsassignments_csharp">
 <a href="#groupsassignments_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -400,8 +382,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsattribute_csharp">
 <a href="#groupsattribute_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -410,8 +391,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsfilters_csharp">
 <a href="#groupsfilters_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -420,8 +400,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_csharp">
 <a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -430,8 +409,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclockskew_csharp">
 <a href="#maxclockskew_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -440,8 +418,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -450,8 +427,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_csharp">
 <a href="#nameformat_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Format</a>
@@ -460,8 +436,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_csharp">
 <a href="#profilemaster_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -470,8 +445,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningaction_csharp">
 <a href="#provisioningaction_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -480,8 +454,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturealgorithm_csharp">
 <a href="#requestsignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Algorithm</a>
@@ -490,8 +463,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturescope_csharp">
 <a href="#requestsignaturescope_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Scope</a>
@@ -500,8 +472,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturealgorithm_csharp">
 <a href="#responsesignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Algorithm</a>
@@ -510,8 +481,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturescope_csharp">
 <a href="#responsesignaturescope_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Scope</a>
@@ -520,8 +490,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssobinding_csharp">
 <a href="#ssobinding_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Binding</a>
@@ -530,8 +499,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodestination_csharp">
 <a href="#ssodestination_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Destination</a>
@@ -540,8 +508,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -550,8 +517,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_csharp">
 <a href="#subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -560,8 +526,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectformats_csharp">
 <a href="#subjectformats_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Formats</a>
@@ -570,8 +535,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchattribute_csharp">
 <a href="#subjectmatchattribute_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -580,8 +544,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchtype_csharp">
 <a href="#subjectmatchtype_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -590,8 +553,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspendedaction_csharp">
 <a href="#suspendedaction_csharp" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -600,8 +562,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_csharp">
 <a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -610,14 +571,11 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -626,8 +584,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kid_go">
 <a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -636,8 +593,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -646,8 +602,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkaction_go">
 <a href="#accountlinkaction_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -656,8 +611,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkgroupincludes_go">
 <a href="#accountlinkgroupincludes_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -666,8 +620,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="acsbinding_go">
 <a href="#acsbinding_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
@@ -675,8 +628,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="acstype_go">
 <a href="#acstype_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Type</a>
@@ -685,8 +637,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprovisionedaction_go">
 <a href="#deprovisionedaction_go" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -695,8 +646,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsaction_go">
 <a href="#groupsaction_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -705,8 +655,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsassignments_go">
 <a href="#groupsassignments_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -715,8 +664,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsattribute_go">
 <a href="#groupsattribute_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -725,8 +673,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsfilters_go">
 <a href="#groupsfilters_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -735,8 +682,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_go">
 <a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -745,8 +691,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclockskew_go">
 <a href="#maxclockskew_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -755,8 +700,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -765,8 +709,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_go">
 <a href="#nameformat_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Format</a>
@@ -775,8 +718,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_go">
 <a href="#profilemaster_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -785,8 +727,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningaction_go">
 <a href="#provisioningaction_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -795,8 +736,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturealgorithm_go">
 <a href="#requestsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Algorithm</a>
@@ -805,8 +745,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturescope_go">
 <a href="#requestsignaturescope_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Scope</a>
@@ -815,8 +754,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturealgorithm_go">
 <a href="#responsesignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Algorithm</a>
@@ -825,8 +763,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturescope_go">
 <a href="#responsesignaturescope_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Scope</a>
@@ -835,8 +772,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssobinding_go">
 <a href="#ssobinding_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Binding</a>
@@ -845,8 +781,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodestination_go">
 <a href="#ssodestination_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Destination</a>
@@ -855,8 +790,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -865,8 +799,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_go">
 <a href="#subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -875,8 +808,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectformats_go">
 <a href="#subjectformats_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Formats</a>
@@ -885,8 +817,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchattribute_go">
 <a href="#subjectmatchattribute_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -895,8 +826,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchtype_go">
 <a href="#subjectmatchtype_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -905,8 +835,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspendedaction_go">
 <a href="#suspendedaction_go" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -915,8 +844,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_go">
 <a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -925,14 +853,11 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -941,8 +866,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kid_nodejs">
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -951,8 +875,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -961,8 +884,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkaction_nodejs">
 <a href="#accountlinkaction_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Action</a>
@@ -971,8 +893,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountlinkgroupincludes_nodejs">
 <a href="#accountlinkgroupincludes_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -981,8 +902,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="acsbinding_nodejs">
 <a href="#acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
@@ -990,8 +910,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="acstype_nodejs">
 <a href="#acstype_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Type</a>
@@ -1000,8 +919,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprovisionedaction_nodejs">
 <a href="#deprovisionedaction_nodejs" style="color: inherit; text-decoration: inherit;">deprovisioned<wbr>Action</a>
@@ -1010,8 +928,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsaction_nodejs">
 <a href="#groupsaction_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Action</a>
@@ -1020,8 +937,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsassignments_nodejs">
 <a href="#groupsassignments_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Assignments</a>
@@ -1030,8 +946,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsattribute_nodejs">
 <a href="#groupsattribute_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Attribute</a>
@@ -1040,8 +955,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsfilters_nodejs">
 <a href="#groupsfilters_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Filters</a>
@@ -1050,8 +964,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_nodejs">
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
@@ -1060,8 +973,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclockskew_nodejs">
 <a href="#maxclockskew_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Clock<wbr>Skew</a>
@@ -1070,8 +982,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1080,8 +991,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_nodejs">
 <a href="#nameformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Format</a>
@@ -1090,8 +1000,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_nodejs">
 <a href="#profilemaster_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Master</a>
@@ -1100,8 +1009,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningaction_nodejs">
 <a href="#provisioningaction_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Action</a>
@@ -1110,8 +1018,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturealgorithm_nodejs">
 <a href="#requestsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Algorithm</a>
@@ -1120,8 +1027,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsignaturescope_nodejs">
 <a href="#requestsignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Scope</a>
@@ -1130,8 +1036,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturealgorithm_nodejs">
 <a href="#responsesignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Algorithm</a>
@@ -1140,8 +1045,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesignaturescope_nodejs">
 <a href="#responsesignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Scope</a>
@@ -1150,8 +1054,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssobinding_nodejs">
 <a href="#ssobinding_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Binding</a>
@@ -1160,8 +1063,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodestination_nodejs">
 <a href="#ssodestination_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Destination</a>
@@ -1170,8 +1072,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1180,8 +1081,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_nodejs">
 <a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
@@ -1190,8 +1090,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectformats_nodejs">
 <a href="#subjectformats_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Formats</a>
@@ -1200,8 +1099,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchattribute_nodejs">
 <a href="#subjectmatchattribute_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Attribute</a>
@@ -1210,8 +1108,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectmatchtype_nodejs">
 <a href="#subjectmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Type</a>
@@ -1220,8 +1117,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspendedaction_nodejs">
 <a href="#suspendedaction_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Action</a>
@@ -1230,8 +1126,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_nodejs">
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
@@ -1240,14 +1135,11 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -1256,8 +1148,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kid_python">
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -1266,8 +1157,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -1276,8 +1166,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_link_action_python">
 <a href="#account_link_action_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>action</a>
@@ -1286,8 +1175,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_link_group_includes_python">
 <a href="#account_link_group_includes_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>group_<wbr>includes</a>
@@ -1296,8 +1184,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="acs_binding_python">
 <a href="#acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
@@ -1305,8 +1192,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="acs_type_python">
 <a href="#acs_type_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>type</a>
@@ -1315,8 +1201,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprovisioned_action_python">
 <a href="#deprovisioned_action_python" style="color: inherit; text-decoration: inherit;">deprovisioned_<wbr>action</a>
@@ -1325,8 +1210,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_action_python">
 <a href="#groups_action_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>action</a>
@@ -1335,8 +1219,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_assignments_python">
 <a href="#groups_assignments_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>assignments</a>
@@ -1345,8 +1228,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_attribute_python">
 <a href="#groups_attribute_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>attribute</a>
@@ -1355,8 +1237,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_filters_python">
 <a href="#groups_filters_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>filters</a>
@@ -1365,8 +1246,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_mode_python">
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
@@ -1375,8 +1255,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_clock_skew_python">
 <a href="#max_clock_skew_python" style="color: inherit; text-decoration: inherit;">max_<wbr>clock_<wbr>skew</a>
@@ -1385,8 +1264,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1395,8 +1273,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_format_python">
 <a href="#name_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>format</a>
@@ -1405,8 +1282,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_master_python">
 <a href="#profile_master_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>master</a>
@@ -1415,8 +1291,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_action_python">
 <a href="#provisioning_action_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>action</a>
@@ -1425,8 +1300,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_signature_algorithm_python">
 <a href="#request_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>algorithm</a>
@@ -1435,8 +1309,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_signature_scope_python">
 <a href="#request_signature_scope_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>scope</a>
@@ -1445,8 +1318,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_signature_algorithm_python">
 <a href="#response_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>algorithm</a>
@@ -1455,8 +1327,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_signature_scope_python">
 <a href="#response_signature_scope_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>scope</a>
@@ -1465,8 +1336,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_binding_python">
 <a href="#sso_binding_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>binding</a>
@@ -1475,8 +1345,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_destination_python">
 <a href="#sso_destination_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>destination</a>
@@ -1485,8 +1354,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1495,8 +1363,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_filter_python">
 <a href="#subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
@@ -1505,8 +1372,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_formats_python">
 <a href="#subject_formats_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>formats</a>
@@ -1515,8 +1381,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_match_attribute_python">
 <a href="#subject_match_attribute_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>attribute</a>
@@ -1525,8 +1390,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_match_type_python">
 <a href="#subject_match_type_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>type</a>
@@ -1535,8 +1399,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suspended_action_python">
 <a href="#suspended_action_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>action</a>
@@ -1545,8 +1408,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_template_python">
 <a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
@@ -1555,8 +1417,7 @@ The Saml resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1567,9 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1578,8 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1587,8 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1597,14 +1454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1613,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1622,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1632,14 +1484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1648,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1657,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1667,14 +1514,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1683,8 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1692,8 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1702,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1830,9 +1671,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkaction_csharp">
 <a href="#state_accountlinkaction_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -1841,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkgroupincludes_csharp">
 <a href="#state_accountlinkgroupincludes_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -1851,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_acsbinding_csharp">
 <a href="#state_acsbinding_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
@@ -1860,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_acstype_csharp">
 <a href="#state_acstype_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Type</a>
@@ -1870,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_csharp">
 <a href="#state_audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1880,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprovisionedaction_csharp">
 <a href="#state_deprovisionedaction_csharp" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -1890,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsaction_csharp">
 <a href="#state_groupsaction_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -1900,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsassignments_csharp">
 <a href="#state_groupsassignments_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -1910,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsattribute_csharp">
 <a href="#state_groupsattribute_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -1920,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsfilters_csharp">
 <a href="#state_groupsfilters_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -1930,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_csharp">
 <a href="#state_issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -1940,8 +1769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_csharp">
 <a href="#state_issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -1950,8 +1778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_csharp">
 <a href="#state_kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -1960,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxclockskew_csharp">
 <a href="#state_maxclockskew_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -1970,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1980,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_csharp">
 <a href="#state_nameformat_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Format</a>
@@ -1990,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_csharp">
 <a href="#state_profilemaster_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -2000,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningaction_csharp">
 <a href="#state_provisioningaction_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -2010,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturealgorithm_csharp">
 <a href="#state_requestsignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Algorithm</a>
@@ -2020,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturescope_csharp">
 <a href="#state_requestsignaturescope_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Scope</a>
@@ -2030,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturealgorithm_csharp">
 <a href="#state_responsesignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Algorithm</a>
@@ -2040,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturescope_csharp">
 <a href="#state_responsesignaturescope_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Scope</a>
@@ -2050,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssobinding_csharp">
 <a href="#state_ssobinding_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Binding</a>
@@ -2060,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodestination_csharp">
 <a href="#state_ssodestination_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Destination</a>
@@ -2070,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_csharp">
 <a href="#state_ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -2080,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2090,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_csharp">
 <a href="#state_subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -2100,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectformats_csharp">
 <a href="#state_subjectformats_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Formats</a>
@@ -2110,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchattribute_csharp">
 <a href="#state_subjectmatchattribute_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -2120,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchtype_csharp">
 <a href="#state_subjectmatchtype_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -2130,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suspendedaction_csharp">
 <a href="#state_suspendedaction_csharp" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -2140,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2150,8 +1958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_csharp">
 <a href="#state_usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -2160,14 +1967,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkaction_go">
 <a href="#state_accountlinkaction_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -2176,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkgroupincludes_go">
 <a href="#state_accountlinkgroupincludes_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -2186,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_acsbinding_go">
 <a href="#state_acsbinding_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Binding</a>
@@ -2195,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_acstype_go">
 <a href="#state_acstype_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Type</a>
@@ -2205,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_go">
 <a href="#state_audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2215,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprovisionedaction_go">
 <a href="#state_deprovisionedaction_go" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -2225,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsaction_go">
 <a href="#state_groupsaction_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -2235,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsassignments_go">
 <a href="#state_groupsassignments_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -2245,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsattribute_go">
 <a href="#state_groupsattribute_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -2255,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsfilters_go">
 <a href="#state_groupsfilters_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -2265,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_go">
 <a href="#state_issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -2275,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_go">
 <a href="#state_issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -2285,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_go">
 <a href="#state_kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -2295,8 +2087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxclockskew_go">
 <a href="#state_maxclockskew_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -2305,8 +2096,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2315,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_go">
 <a href="#state_nameformat_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Format</a>
@@ -2325,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_go">
 <a href="#state_profilemaster_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -2335,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningaction_go">
 <a href="#state_provisioningaction_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -2345,8 +2132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturealgorithm_go">
 <a href="#state_requestsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Algorithm</a>
@@ -2355,8 +2141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturescope_go">
 <a href="#state_requestsignaturescope_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Signature<wbr>Scope</a>
@@ -2365,8 +2150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturealgorithm_go">
 <a href="#state_responsesignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Algorithm</a>
@@ -2375,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturescope_go">
 <a href="#state_responsesignaturescope_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signature<wbr>Scope</a>
@@ -2385,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssobinding_go">
 <a href="#state_ssobinding_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Binding</a>
@@ -2395,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodestination_go">
 <a href="#state_ssodestination_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Destination</a>
@@ -2405,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_go">
 <a href="#state_ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -2415,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2425,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_go">
 <a href="#state_subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -2435,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectformats_go">
 <a href="#state_subjectformats_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Formats</a>
@@ -2445,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchattribute_go">
 <a href="#state_subjectmatchattribute_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -2455,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchtype_go">
 <a href="#state_subjectmatchtype_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -2465,8 +2240,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suspendedaction_go">
 <a href="#state_suspendedaction_go" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -2475,8 +2249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2485,8 +2258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_go">
 <a href="#state_usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -2495,14 +2267,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkaction_nodejs">
 <a href="#state_accountlinkaction_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Action</a>
@@ -2511,8 +2280,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountlinkgroupincludes_nodejs">
 <a href="#state_accountlinkgroupincludes_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -2521,8 +2289,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_acsbinding_nodejs">
 <a href="#state_acsbinding_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Binding</a>
@@ -2530,8 +2297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_acstype_nodejs">
 <a href="#state_acstype_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Type</a>
@@ -2540,8 +2306,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_nodejs">
 <a href="#state_audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2550,8 +2315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprovisionedaction_nodejs">
 <a href="#state_deprovisionedaction_nodejs" style="color: inherit; text-decoration: inherit;">deprovisioned<wbr>Action</a>
@@ -2560,8 +2324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsaction_nodejs">
 <a href="#state_groupsaction_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Action</a>
@@ -2570,8 +2333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsassignments_nodejs">
 <a href="#state_groupsassignments_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Assignments</a>
@@ -2580,8 +2342,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsattribute_nodejs">
 <a href="#state_groupsattribute_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Attribute</a>
@@ -2590,8 +2351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsfilters_nodejs">
 <a href="#state_groupsfilters_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Filters</a>
@@ -2600,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_nodejs">
 <a href="#state_issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -2610,8 +2369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_nodejs">
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
@@ -2620,8 +2378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_nodejs">
 <a href="#state_kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -2630,8 +2387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxclockskew_nodejs">
 <a href="#state_maxclockskew_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Clock<wbr>Skew</a>
@@ -2640,8 +2396,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2650,8 +2405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_nodejs">
 <a href="#state_nameformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Format</a>
@@ -2660,8 +2414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_nodejs">
 <a href="#state_profilemaster_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Master</a>
@@ -2670,8 +2423,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningaction_nodejs">
 <a href="#state_provisioningaction_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Action</a>
@@ -2680,8 +2432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturealgorithm_nodejs">
 <a href="#state_requestsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Algorithm</a>
@@ -2690,8 +2441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsignaturescope_nodejs">
 <a href="#state_requestsignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Signature<wbr>Scope</a>
@@ -2700,8 +2450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturealgorithm_nodejs">
 <a href="#state_responsesignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Algorithm</a>
@@ -2710,8 +2459,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesignaturescope_nodejs">
 <a href="#state_responsesignaturescope_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signature<wbr>Scope</a>
@@ -2720,8 +2468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssobinding_nodejs">
 <a href="#state_ssobinding_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Binding</a>
@@ -2730,8 +2477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodestination_nodejs">
 <a href="#state_ssodestination_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Destination</a>
@@ -2740,8 +2486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_nodejs">
 <a href="#state_ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -2750,8 +2495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2760,8 +2504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_nodejs">
 <a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
@@ -2770,8 +2513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectformats_nodejs">
 <a href="#state_subjectformats_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Formats</a>
@@ -2780,8 +2522,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchattribute_nodejs">
 <a href="#state_subjectmatchattribute_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Attribute</a>
@@ -2790,8 +2531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectmatchtype_nodejs">
 <a href="#state_subjectmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Type</a>
@@ -2800,8 +2540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suspendedaction_nodejs">
 <a href="#state_suspendedaction_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Action</a>
@@ -2810,8 +2549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2820,8 +2558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_nodejs">
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
@@ -2830,14 +2567,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_link_action_python">
 <a href="#state_account_link_action_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>action</a>
@@ -2846,8 +2580,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_link_group_includes_python">
 <a href="#state_account_link_group_includes_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>group_<wbr>includes</a>
@@ -2856,8 +2589,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_acs_binding_python">
 <a href="#state_acs_binding_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>binding</a>
@@ -2865,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property will be removed in the future, as it can only be set to &#39;HTTP-POST&#39;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_acs_type_python">
 <a href="#state_acs_type_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>type</a>
@@ -2875,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of ACS. It can be `"INSTANCE"` or `"ORG"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_python">
 <a href="#state_audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2885,8 +2615,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience restriction for the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprovisioned_action_python">
 <a href="#state_deprovisioned_action_python" style="color: inherit; text-decoration: inherit;">deprovisioned_<wbr>action</a>
@@ -2895,8 +2624,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication. Can be `"NONE"` or `"REACTIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_action_python">
 <a href="#state_groups_action_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>action</a>
@@ -2905,8 +2633,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships. It can be `"NONE"`, `"SYNC"`, `"APPEND"`, or `"ASSIGN"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_assignments_python">
 <a href="#state_groups_assignments_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>assignments</a>
@@ -2915,8 +2642,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs to add an IdP user as a member with the `"ASSIGN"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_attribute_python">
 <a href="#state_groups_attribute_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>attribute</a>
@@ -2925,8 +2651,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_filters_python">
 <a href="#state_groups_filters_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>filters</a>
@@ -2935,8 +2660,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers that are allowed for the `"APPEND"` or `"SYNC"` `groups_action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_python">
 <a href="#state_issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -2945,8 +2669,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_mode_python">
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
@@ -2955,8 +2678,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be `"ORG_URL"` or `"CUSTOM_URL"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_python">
 <a href="#state_kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -2965,8 +2687,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the signing key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_clock_skew_python">
 <a href="#state_max_clock_skew_python" style="color: inherit; text-decoration: inherit;">max_<wbr>clock_<wbr>skew</a>
@@ -2975,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2985,8 +2705,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_format_python">
 <a href="#state_name_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>format</a>
@@ -2995,8 +2714,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name identifier format to use. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_master_python">
 <a href="#state_profile_master_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>master</a>
@@ -3005,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioning_action_python">
 <a href="#state_provisioning_action_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>action</a>
@@ -3015,8 +2732,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_signature_algorithm_python">
 <a href="#state_request_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>algorithm</a>
@@ -3025,8 +2741,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The XML digital signature algorithm used when signing an AuthnRequest message.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_signature_scope_python">
 <a href="#state_request_signature_scope_python" style="color: inherit; text-decoration: inherit;">request_<wbr>signature_<wbr>scope</a>
@@ -3035,8 +2750,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to digitally sign an AuthnRequest messages to the IdP. It can be `"REQUEST"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_signature_algorithm_python">
 <a href="#state_response_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>algorithm</a>
@@ -3045,8 +2759,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_signature_scope_python">
 <a href="#state_response_signature_scope_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signature_<wbr>scope</a>
@@ -3055,8 +2768,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be `"RESPONSE"`, `"ASSERTION"`, or `"ANY"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_binding_python">
 <a href="#state_sso_binding_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>binding</a>
@@ -3065,8 +2777,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method of making an SSO request. It can be set to `"HTTP-POST"` or `"HTTP-REDIRECT"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_destination_python">
 <a href="#state_sso_destination_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>destination</a>
@@ -3075,8 +2786,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI reference indicating the address to which the AuthnRequest message is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_url_python">
 <a href="#state_sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -3085,8 +2795,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of binding-specific endpoint to send an AuthnRequest message to IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3095,8 +2804,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_filter_python">
 <a href="#state_subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
@@ -3105,8 +2813,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional regular expression pattern used to filter untrusted IdP usernames.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_formats_python">
 <a href="#state_subject_formats_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>formats</a>
@@ -3115,8 +2822,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name format. By default `"urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_match_attribute_python">
 <a href="#state_subject_match_attribute_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>attribute</a>
@@ -3125,8 +2831,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username. Only for matchType `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_match_type_python">
 <a href="#state_subject_match_type_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>type</a>
@@ -3135,8 +2840,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default, it is set to `"USERNAME"`. It can be set to `"USERNAME"`, `"EMAIL"`, `"USERNAME_OR_EMAIL"` or `"CUSTOM_ATTRIBUTE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suspended_action_python">
 <a href="#state_suspended_action_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>action</a>
@@ -3145,8 +2849,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication. Can be set to `"NONE"` or `"UNSUSPEND"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3155,8 +2858,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_template_python">
 <a href="#state_username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
@@ -3165,8 +2867,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3192,6 +2893,6 @@ An SAML IdP can be imported via the Okta ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

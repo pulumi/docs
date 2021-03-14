@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.sharedfilesystem.Share resource with
 Use this resource to configure a share.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -104,9 +113,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -127,9 +139,12 @@ share1 = openstack.sharedfilesystem.Share("share1",
     size=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -156,9 +171,16 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Share Resource {#create}
@@ -183,9 +205,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +213,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +221,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,10 +229,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -242,9 +255,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -252,9 +263,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +271,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +279,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,18 +287,13 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +301,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +309,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +317,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -339,9 +332,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shareproto_csharp">
 <a href="#shareproto_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -351,8 +342,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -362,8 +352,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -373,8 +362,7 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -384,8 +372,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -396,8 +383,7 @@ Changing this updates the description of the existing share.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -407,8 +393,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -418,8 +403,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -430,8 +414,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_csharp">
 <a href="#sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -442,8 +425,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharetype_csharp">
 <a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
@@ -453,8 +435,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -464,14 +445,11 @@ share type is used.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shareproto_go">
 <a href="#shareproto_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -481,8 +459,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -492,8 +469,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -503,8 +479,7 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -514,8 +489,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -526,8 +500,7 @@ Changing this updates the description of the existing share.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -537,8 +510,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -548,8 +520,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -560,8 +531,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_go">
 <a href="#sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -572,8 +542,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharetype_go">
 <a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
@@ -583,8 +552,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -594,14 +562,11 @@ share type is used.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shareproto_nodejs">
 <a href="#shareproto_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Proto</a>
@@ -611,8 +576,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -622,8 +586,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -633,8 +596,7 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -644,8 +606,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -656,8 +617,7 @@ Changing this updates the description of the existing share.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -667,8 +627,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -678,8 +637,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -690,8 +648,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_nodejs">
 <a href="#sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
@@ -702,8 +659,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharetype_nodejs">
 <a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
@@ -713,8 +669,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -724,14 +679,11 @@ share type is used.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="share_proto_python">
 <a href="#share_proto_python" style="color: inherit; text-decoration: inherit;">share_<wbr>proto</a>
@@ -741,8 +693,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -752,8 +703,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -763,8 +713,7 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -774,8 +723,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -786,8 +734,7 @@ Changing this updates the description of the existing share.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -797,8 +744,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -808,8 +754,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -820,8 +765,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_network_id_python">
 <a href="#share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
@@ -832,8 +776,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_type_python">
 <a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
@@ -843,8 +786,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -854,8 +796,7 @@ share type is used.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -866,9 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_csharp">
 <a href="#allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -878,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_csharp">
 <a href="#exportlocations_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -889,8 +827,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasreplicas_csharp">
 <a href="#hasreplicas_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
@@ -899,8 +836,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -909,8 +845,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -918,8 +853,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -928,8 +862,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationtype_csharp">
 <a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -938,8 +871,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareserverid_csharp">
 <a href="#shareserverid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
@@ -948,14 +880,11 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_go">
 <a href="#allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -965,8 +894,7 @@ has more than one network interface, it can have multiple export locations.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_go">
 <a href="#exportlocations_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -976,8 +904,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasreplicas_go">
 <a href="#hasreplicas_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
@@ -986,8 +913,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -996,8 +922,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1005,8 +930,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1015,8 +939,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationtype_go">
 <a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -1025,8 +948,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareserverid_go">
 <a href="#shareserverid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
@@ -1035,14 +957,11 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_nodejs">
 <a href="#allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
@@ -1052,8 +971,7 @@ has more than one network interface, it can have multiple export locations.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_nodejs">
 <a href="#exportlocations_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Locations</a>
@@ -1063,8 +981,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasreplicas_nodejs">
 <a href="#hasreplicas_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Replicas</a>
@@ -1073,8 +990,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1083,8 +999,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1092,8 +1007,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1102,8 +1016,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationtype_nodejs">
 <a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
@@ -1112,8 +1025,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareserverid_nodejs">
 <a href="#shareserverid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Server<wbr>Id</a>
@@ -1122,14 +1034,11 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_metadata_python">
 <a href="#all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
@@ -1139,8 +1048,7 @@ has more than one network interface, it can have multiple export locations.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="export_locations_python">
 <a href="#export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
@@ -1150,8 +1058,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="has_replicas_python">
 <a href="#has_replicas_python" style="color: inherit; text-decoration: inherit;">has_<wbr>replicas</a>
@@ -1160,8 +1067,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1170,8 +1076,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1179,8 +1084,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1189,8 +1093,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_type_python">
 <a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
@@ -1199,8 +1102,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_server_id_python">
 <a href="#share_server_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>server_<wbr>id</a>
@@ -1209,8 +1111,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1337,9 +1238,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_csharp">
 <a href="#state_allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -1349,8 +1248,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1360,8 +1258,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1371,8 +1268,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportlocations_csharp">
 <a href="#state_exportlocations_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -1382,8 +1278,7 @@ Changing this updates the description of the existing share.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasreplicas_csharp">
 <a href="#state_hasreplicas_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
@@ -1392,8 +1287,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1402,8 +1296,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_csharp">
 <a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1414,8 +1307,7 @@ has more than one network interface, it can have multiple export locations.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1425,8 +1317,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1436,8 +1327,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1446,8 +1336,7 @@ of the existing share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1458,8 +1347,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationtype_csharp">
 <a href="#state_replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -1468,8 +1356,7 @@ creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharenetworkid_csharp">
 <a href="#state_sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -1480,8 +1367,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareproto_csharp">
 <a href="#state_shareproto_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -1491,8 +1377,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareserverid_csharp">
 <a href="#state_shareserverid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
@@ -1501,8 +1386,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharetype_csharp">
 <a href="#state_sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
@@ -1512,8 +1396,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1523,8 +1406,7 @@ share type is used.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_csharp">
 <a href="#state_snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -1534,14 +1416,11 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_go">
 <a href="#state_allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -1551,8 +1430,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1562,8 +1440,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1573,8 +1450,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportlocations_go">
 <a href="#state_exportlocations_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -1584,8 +1460,7 @@ Changing this updates the description of the existing share.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasreplicas_go">
 <a href="#state_hasreplicas_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
@@ -1594,8 +1469,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1604,8 +1478,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_go">
 <a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1616,8 +1489,7 @@ has more than one network interface, it can have multiple export locations.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1627,8 +1499,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1638,8 +1509,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1648,8 +1518,7 @@ of the existing share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1660,8 +1529,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationtype_go">
 <a href="#state_replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -1670,8 +1538,7 @@ creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharenetworkid_go">
 <a href="#state_sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -1682,8 +1549,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareproto_go">
 <a href="#state_shareproto_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -1693,8 +1559,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareserverid_go">
 <a href="#state_shareserverid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
@@ -1703,8 +1568,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharetype_go">
 <a href="#state_sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
@@ -1714,8 +1578,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1725,8 +1588,7 @@ share type is used.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_go">
 <a href="#state_snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -1736,14 +1598,11 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_nodejs">
 <a href="#state_allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
@@ -1753,8 +1612,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1764,8 +1622,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1775,8 +1632,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportlocations_nodejs">
 <a href="#state_exportlocations_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Locations</a>
@@ -1786,8 +1642,7 @@ Changing this updates the description of the existing share.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasreplicas_nodejs">
 <a href="#state_hasreplicas_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Replicas</a>
@@ -1796,8 +1651,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1806,8 +1660,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_nodejs">
 <a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -1818,8 +1671,7 @@ has more than one network interface, it can have multiple export locations.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1829,8 +1681,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1840,8 +1691,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1850,8 +1700,7 @@ of the existing share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1862,8 +1711,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationtype_nodejs">
 <a href="#state_replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
@@ -1872,8 +1720,7 @@ creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharenetworkid_nodejs">
 <a href="#state_sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
@@ -1884,8 +1731,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareproto_nodejs">
 <a href="#state_shareproto_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Proto</a>
@@ -1895,8 +1741,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareserverid_nodejs">
 <a href="#state_shareserverid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Server<wbr>Id</a>
@@ -1905,8 +1750,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharetype_nodejs">
 <a href="#state_sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
@@ -1916,8 +1760,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1927,8 +1770,7 @@ share type is used.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_nodejs">
 <a href="#state_snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -1938,14 +1780,11 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_metadata_python">
 <a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
@@ -1955,8 +1794,7 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1966,8 +1804,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1977,8 +1814,7 @@ new share.
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_export_locations_python">
 <a href="#state_export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
@@ -1988,8 +1824,7 @@ Changing this updates the description of the existing share.
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_has_replicas_python">
 <a href="#state_has_replicas_python" style="color: inherit; text-decoration: inherit;">has_<wbr>replicas</a>
@@ -1998,8 +1833,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2008,8 +1842,7 @@ has more than one network interface, it can have multiple export locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share host name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_public_python">
 <a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -2020,8 +1853,7 @@ has more than one network interface, it can have multiple export locations.
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
 updates the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2031,8 +1863,7 @@ updates the existing share.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2042,8 +1873,7 @@ strings.
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2052,8 +1882,7 @@ of the existing share.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2064,8 +1893,7 @@ of the existing share.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
 creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_type_python">
 <a href="#state_replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
@@ -2074,8 +1902,7 @@ creates a new share.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share replication type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_network_id_python">
 <a href="#state_share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
@@ -2086,8 +1913,7 @@ creates a new share.
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_proto_python">
 <a href="#state_share_proto_python" style="color: inherit; text-decoration: inherit;">share_<wbr>proto</a>
@@ -2097,8 +1923,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_server_id_python">
 <a href="#state_share_server_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>server_<wbr>id</a>
@@ -2107,8 +1932,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_type_python">
 <a href="#state_share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
@@ -2118,8 +1942,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2129,8 +1952,7 @@ share type is used.
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_id_python">
 <a href="#state_snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -2140,8 +1962,7 @@ than the allowed GB quota. Changing this resizes the existing share.
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2156,9 +1977,7 @@ a new share.
 <h4 id="shareexportlocation">Share<wbr>Export<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2166,8 +1985,7 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_csharp">
 <a href="#preferred_csharp" style="color: inherit; text-decoration: inherit;">Preferred</a>
@@ -2175,14 +1993,11 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2190,8 +2005,7 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_go">
 <a href="#preferred_go" style="color: inherit; text-decoration: inherit;">Preferred</a>
@@ -2199,14 +2013,11 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2214,8 +2025,7 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_nodejs">
 <a href="#preferred_nodejs" style="color: inherit; text-decoration: inherit;">preferred</a>
@@ -2223,14 +2033,11 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2238,8 +2045,7 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_python">
 <a href="#preferred_python" style="color: inherit; text-decoration: inherit;">preferred</a>
@@ -2247,8 +2053,7 @@ a new share.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2269,6 +2074,6 @@ This resource can be imported by specifying the ID of the share
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

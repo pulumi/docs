@@ -16,11 +16,17 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -68,9 +77,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -82,9 +94,12 @@ foobar = gcp.compute.RouterInterface("foobar",
     vpn_tunnel="tunnel-1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RouterInterface Resource {#create}
@@ -125,9 +147,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,9 +155,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,9 +163,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,10 +171,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -184,9 +197,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,9 +205,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +213,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +221,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,18 +229,13 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +243,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +251,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,10 +259,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -281,9 +274,7 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -293,8 +284,7 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnectattachment_csharp">
 <a href="#interconnectattachment_csharp" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
@@ -306,8 +296,7 @@ Changing this forces a new interface to be created.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_csharp">
 <a href="#iprange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -317,8 +306,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -328,8 +316,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -339,8 +326,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -351,8 +337,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntunnel_csharp">
 <a href="#vpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Tunnel</a>
@@ -363,14 +348,11 @@ created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -380,8 +362,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnectattachment_go">
 <a href="#interconnectattachment_go" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
@@ -393,8 +374,7 @@ Changing this forces a new interface to be created.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_go">
 <a href="#iprange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -404,8 +384,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +394,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -426,8 +404,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -438,8 +415,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntunnel_go">
 <a href="#vpntunnel_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Tunnel</a>
@@ -450,14 +426,11 @@ created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -467,8 +440,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnectattachment_nodejs">
 <a href="#interconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachment</a>
@@ -480,8 +452,7 @@ Changing this forces a new interface to be created.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_nodejs">
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
@@ -491,8 +462,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -502,8 +472,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -513,8 +482,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -525,8 +493,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntunnel_nodejs">
 <a href="#vpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Tunnel</a>
@@ -537,14 +504,11 @@ created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -554,8 +518,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interconnect_attachment_python">
 <a href="#interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachment</a>
@@ -567,8 +530,7 @@ Changing this forces a new interface to be created.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_range_python">
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
@@ -578,8 +540,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -589,8 +550,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -600,8 +560,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -612,8 +571,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_tunnel_python">
 <a href="#vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>tunnel</a>
@@ -624,8 +582,7 @@ created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -636,9 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -646,14 +601,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -661,14 +613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -676,14 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -691,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -819,9 +764,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interconnectattachment_csharp">
 <a href="#state_interconnectattachment_csharp" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
@@ -833,8 +776,7 @@ The following state arguments are supported:
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprange_csharp">
 <a href="#state_iprange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -844,8 +786,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -855,8 +796,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -866,8 +806,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -878,8 +817,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -889,8 +827,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpntunnel_csharp">
 <a href="#state_vpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Tunnel</a>
@@ -901,14 +838,11 @@ Changing this forces a new interface to be created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interconnectattachment_go">
 <a href="#state_interconnectattachment_go" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
@@ -920,8 +854,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprange_go">
 <a href="#state_iprange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -931,8 +864,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -942,8 +874,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -953,8 +884,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -965,8 +895,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -976,8 +905,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpntunnel_go">
 <a href="#state_vpntunnel_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Tunnel</a>
@@ -988,14 +916,11 @@ Changing this forces a new interface to be created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interconnectattachment_nodejs">
 <a href="#state_interconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachment</a>
@@ -1007,8 +932,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iprange_nodejs">
 <a href="#state_iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
@@ -1018,8 +942,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1029,8 +952,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1040,8 +962,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1052,8 +973,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1063,8 +983,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpntunnel_nodejs">
 <a href="#state_vpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Tunnel</a>
@@ -1075,14 +994,11 @@ Changing this forces a new interface to be created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interconnect_attachment_python">
 <a href="#state_interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachment</a>
@@ -1094,8 +1010,7 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 VLAN interconnect for this interface. Changing this forces a new interface to
 be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
 specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_range_python">
 <a href="#state_ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
@@ -1105,8 +1020,7 @@ specified.
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1116,8 +1030,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </dt>
     <dd>{{% md %}}A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1127,8 +1040,7 @@ this forces a new interface to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1139,8 +1051,7 @@ is not provided, the provider project is used. Changing this forces a new interf
     <dd>{{% md %}}The region this interface's router sits in. If not specified,
 the project region will be used. Changing this forces a new interface to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1150,8 +1061,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_tunnel_python">
 <a href="#state_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>tunnel</a>
@@ -1162,8 +1072,7 @@ Changing this forces a new interface to be created.
     <dd>{{% md %}}The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created. Only
 one of `vpn_tunnel` and `interconnect_attachment` can be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1189,6 +1098,6 @@ Router interfaces can be imported using the `region`, `router`, and `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

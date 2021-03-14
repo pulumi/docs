@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -207,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_csharp">
 <a href="#apiurl_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -219,8 +187,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appkey_csharp">
 <a href="#appkey_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Key</a>
@@ -229,8 +196,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_csharp">
 <a href="#validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -240,14 +206,11 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
 and app_key won't be checked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -256,8 +219,7 @@ and app_key won't be checked.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_go">
 <a href="#apiurl_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -268,8 +230,7 @@ and app_key won't be checked.
     <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appkey_go">
 <a href="#appkey_go" style="color: inherit; text-decoration: inherit;">App<wbr>Key</a>
@@ -278,8 +239,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_go">
 <a href="#validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -289,14 +249,11 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
 and app_key won't be checked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -305,8 +262,7 @@ and app_key won't be checked.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_nodejs">
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
@@ -317,8 +273,7 @@ and app_key won't be checked.
     <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appkey_nodejs">
 <a href="#appkey_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Key</a>
@@ -327,8 +282,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_nodejs">
 <a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -338,14 +292,11 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
 and app_key won't be checked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -354,8 +305,7 @@ and app_key won't be checked.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_url_python">
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
@@ -366,8 +316,7 @@ and app_key won't be checked.
     <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
 path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
 you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_key_python">
 <a href="#app_key_python" style="color: inherit; text-decoration: inherit;">app_<wbr>key</a>
@@ -376,8 +325,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_python">
 <a href="#validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -387,8 +335,7 @@ you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
 and app_key won't be checked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -399,9 +346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -409,14 +354,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,14 +366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -439,14 +378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -454,8 +390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -472,6 +407,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

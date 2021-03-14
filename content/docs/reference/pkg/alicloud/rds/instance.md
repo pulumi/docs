@@ -15,11 +15,17 @@ Provides an RDS instance resource. A DB instance is an isolated database environ
 For information about RDS and how to use it, see [What is ApsaraDB for RDS](https://www.alibabacloud.com/help/en/doc-detail/26092.htm).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a RDS MySQL instance
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -125,9 +134,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -156,9 +168,12 @@ example_instance = alicloud.rds.Instance("exampleInstance",
     monitoring_period=60)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -188,22 +203,38 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a RDS MySQL instance with specific parameters
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
+{{< example csharp >}}
 
-{{% example typescript %}}
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -240,9 +271,16 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -267,9 +305,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -277,9 +313,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -287,9 +321,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -297,10 +329,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -326,9 +355,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -336,9 +363,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -346,9 +371,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -356,9 +379,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -366,18 +387,13 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -385,9 +401,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -395,9 +409,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -405,10 +417,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -423,9 +432,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -434,8 +441,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -444,8 +450,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_csharp">
 <a href="#instancestorage_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage</a>
@@ -460,8 +465,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -470,8 +474,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_csharp">
 <a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -480,8 +483,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_csharp">
 <a href="#autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -490,8 +492,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -502,8 +503,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstancestoragetype_csharp">
 <a href="#dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -517,8 +517,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -527,8 +526,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_csharp">
 <a href="#forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
@@ -537,8 +535,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -547,8 +544,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancename_csharp">
 <a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -557,8 +553,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_csharp">
 <a href="#maintaintime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Time</a>
@@ -567,8 +562,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringperiod_csharp">
 <a href="#monitoringperiod_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Period</a>
@@ -577,8 +571,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -587,8 +580,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Instance<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -597,8 +589,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -607,8 +598,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -617,8 +607,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -627,8 +616,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityipmode_csharp">
 <a href="#securityipmode_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Mode</a>
@@ -637,8 +625,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityips_csharp">
 <a href="#securityips_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
@@ -647,8 +634,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorconfigvalue_csharp">
 <a href="#sqlcollectorconfigvalue_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -657,8 +643,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorstatus_csharp">
 <a href="#sqlcollectorstatus_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Status</a>
@@ -667,8 +652,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaction_csharp">
 <a href="#sslaction_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
@@ -677,8 +661,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -689,8 +672,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_csharp">
 <a href="#tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -699,8 +681,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -709,8 +690,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -721,8 +701,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslavea_csharp">
 <a href="#zoneidslavea_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -731,8 +710,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslaveb_csharp">
 <a href="#zoneidslaveb_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -741,14 +719,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -757,8 +732,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -767,8 +741,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_go">
 <a href="#instancestorage_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage</a>
@@ -783,8 +756,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -793,8 +765,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_go">
 <a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -803,8 +774,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_go">
 <a href="#autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -813,8 +783,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -825,8 +794,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstancestoragetype_go">
 <a href="#dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -840,8 +808,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -850,8 +817,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_go">
 <a href="#forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
@@ -860,8 +826,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -870,8 +835,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancename_go">
 <a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -880,8 +844,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_go">
 <a href="#maintaintime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Time</a>
@@ -890,8 +853,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringperiod_go">
 <a href="#monitoringperiod_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Period</a>
@@ -900,8 +862,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -910,8 +871,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">[]Instance<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -920,8 +880,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -930,8 +889,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -940,8 +898,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -950,8 +907,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityipmode_go">
 <a href="#securityipmode_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Mode</a>
@@ -960,8 +916,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityips_go">
 <a href="#securityips_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
@@ -970,8 +925,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorconfigvalue_go">
 <a href="#sqlcollectorconfigvalue_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -980,8 +934,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorstatus_go">
 <a href="#sqlcollectorstatus_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Status</a>
@@ -990,8 +943,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaction_go">
 <a href="#sslaction_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
@@ -1000,8 +952,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1012,8 +963,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_go">
 <a href="#tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -1022,8 +972,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1032,8 +981,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1044,8 +992,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslavea_go">
 <a href="#zoneidslavea_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -1054,8 +1001,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslaveb_go">
 <a href="#zoneidslaveb_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -1064,14 +1010,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1080,8 +1023,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1090,8 +1032,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancestorage_nodejs">
 <a href="#instancestorage_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Storage</a>
@@ -1106,8 +1047,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1116,8 +1056,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_nodejs">
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -1126,8 +1065,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_nodejs">
 <a href="#autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
@@ -1136,8 +1074,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1148,8 +1085,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbinstancestoragetype_nodejs">
 <a href="#dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -1163,8 +1099,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -1173,8 +1108,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcerestart_nodejs">
 <a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
@@ -1183,8 +1117,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -1193,8 +1126,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancename_nodejs">
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -1203,8 +1135,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_nodejs">
 <a href="#maintaintime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Time</a>
@@ -1213,8 +1144,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringperiod_nodejs">
 <a href="#monitoringperiod_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Period</a>
@@ -1223,8 +1153,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1233,8 +1162,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">Instance<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1243,8 +1171,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1253,8 +1180,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -1263,8 +1189,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -1273,8 +1198,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityipmode_nodejs">
 <a href="#securityipmode_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Mode</a>
@@ -1283,8 +1207,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityips_nodejs">
 <a href="#securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
@@ -1293,8 +1216,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorconfigvalue_nodejs">
 <a href="#sqlcollectorconfigvalue_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -1303,8 +1225,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcollectorstatus_nodejs">
 <a href="#sqlcollectorstatus_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Collector<wbr>Status</a>
@@ -1313,8 +1234,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaction_nodejs">
 <a href="#sslaction_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Action</a>
@@ -1323,8 +1243,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1335,8 +1254,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_nodejs">
 <a href="#tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
@@ -1345,8 +1263,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1355,8 +1272,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1367,8 +1283,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslavea_nodejs">
 <a href="#zoneidslavea_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -1377,8 +1292,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneidslaveb_nodejs">
 <a href="#zoneidslaveb_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -1387,14 +1301,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1403,8 +1314,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1413,8 +1323,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_storage_python">
 <a href="#instance_storage_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>storage</a>
@@ -1429,8 +1338,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1439,8 +1347,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_python">
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -1449,8 +1356,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_period_python">
 <a href="#auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
@@ -1459,8 +1365,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -1471,8 +1376,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_instance_storage_type_python">
 <a href="#db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
@@ -1486,8 +1390,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -1496,8 +1399,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_restart_python">
 <a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
@@ -1506,8 +1408,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -1516,8 +1417,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_name_python">
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -1526,8 +1426,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintain_time_python">
 <a href="#maintain_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>time</a>
@@ -1536,8 +1435,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_period_python">
 <a href="#monitoring_period_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>period</a>
@@ -1546,8 +1444,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1556,8 +1453,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">Sequence[Instance<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1566,8 +1462,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1576,8 +1471,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -1586,8 +1480,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -1596,8 +1489,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_ip_mode_python">
 <a href="#security_ip_mode_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>mode</a>
@@ -1606,8 +1498,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_ips_python">
 <a href="#security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
@@ -1616,8 +1507,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_collector_config_value_python">
 <a href="#sql_collector_config_value_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>collector_<wbr>config_<wbr>value</a>
@@ -1626,8 +1516,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_collector_status_python">
 <a href="#sql_collector_status_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>collector_<wbr>status</a>
@@ -1636,8 +1525,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_action_python">
 <a href="#ssl_action_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>action</a>
@@ -1646,8 +1534,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1658,8 +1545,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tde_status_python">
 <a href="#tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
@@ -1668,8 +1554,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1678,8 +1563,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1690,8 +1574,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_slave_a_python">
 <a href="#zone_id_slave_a_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>a</a>
@@ -1700,8 +1583,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_slave_b_python">
 <a href="#zone_id_slave_b_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>b</a>
@@ -1710,8 +1592,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1722,9 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1733,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1742,8 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1752,8 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslstatus_csharp">
 <a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -1762,14 +1638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1778,8 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1787,8 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1797,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslstatus_go">
 <a href="#sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -1807,14 +1677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1823,8 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1832,8 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1842,8 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslstatus_nodejs">
 <a href="#sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
@@ -1852,14 +1716,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1868,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1877,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1887,8 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_status_python">
 <a href="#ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
@@ -1897,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2025,9 +1882,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_csharp">
 <a href="#state_autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -2036,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenewperiod_csharp">
 <a href="#state_autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -2046,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_csharp">
 <a href="#state_autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -2058,8 +1911,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_csharp">
 <a href="#state_connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -2068,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbinstancestoragetype_csharp">
 <a href="#state_dbinstancestoragetype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -2083,8 +1934,7 @@ The following state arguments are supported:
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_csharp">
 <a href="#state_encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -2093,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -2103,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -2113,8 +1961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcerestart_csharp">
 <a href="#state_forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
@@ -2123,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -2133,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_csharp">
 <a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -2143,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_csharp">
 <a href="#state_instancestorage_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage</a>
@@ -2159,8 +2003,7 @@ The following state arguments are supported:
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2169,8 +2012,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_csharp">
 <a href="#state_maintaintime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Time</a>
@@ -2179,8 +2021,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringperiod_csharp">
 <a href="#state_monitoringperiod_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Period</a>
@@ -2189,8 +2030,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -2199,8 +2039,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Instance<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -2209,8 +2048,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2219,8 +2057,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -2229,8 +2066,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_securitygroupid_csharp">
 <a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -2239,8 +2075,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2249,8 +2084,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityipmode_csharp">
 <a href="#state_securityipmode_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Mode</a>
@@ -2259,8 +2093,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityips_csharp">
 <a href="#state_securityips_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
@@ -2269,8 +2102,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorconfigvalue_csharp">
 <a href="#state_sqlcollectorconfigvalue_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -2279,8 +2111,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorstatus_csharp">
 <a href="#state_sqlcollectorstatus_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Status</a>
@@ -2289,8 +2120,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaction_csharp">
 <a href="#state_sslaction_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
@@ -2299,8 +2129,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslstatus_csharp">
 <a href="#state_sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -2309,8 +2138,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2321,8 +2149,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_csharp">
 <a href="#state_tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -2331,8 +2158,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -2341,8 +2167,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -2353,8 +2178,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslavea_csharp">
 <a href="#state_zoneidslavea_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -2363,8 +2187,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslaveb_csharp">
 <a href="#state_zoneidslaveb_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -2373,14 +2196,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_go">
 <a href="#state_autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -2389,8 +2209,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenewperiod_go">
 <a href="#state_autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -2399,8 +2218,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_go">
 <a href="#state_autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -2411,8 +2229,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_go">
 <a href="#state_connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -2421,8 +2238,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbinstancestoragetype_go">
 <a href="#state_dbinstancestoragetype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -2436,8 +2252,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_go">
 <a href="#state_encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -2446,8 +2261,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -2456,8 +2270,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -2466,8 +2279,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcerestart_go">
 <a href="#state_forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
@@ -2476,8 +2288,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -2486,8 +2297,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_go">
 <a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -2496,8 +2306,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_go">
 <a href="#state_instancestorage_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Storage</a>
@@ -2512,8 +2321,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2522,8 +2330,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_go">
 <a href="#state_maintaintime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Time</a>
@@ -2532,8 +2339,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringperiod_go">
 <a href="#state_monitoringperiod_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Period</a>
@@ -2542,8 +2348,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -2552,8 +2357,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">[]Instance<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -2562,8 +2366,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2572,8 +2375,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -2582,8 +2384,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_securitygroupid_go">
 <a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -2592,8 +2393,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2602,8 +2402,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityipmode_go">
 <a href="#state_securityipmode_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Mode</a>
@@ -2612,8 +2411,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityips_go">
 <a href="#state_securityips_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
@@ -2622,8 +2420,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorconfigvalue_go">
 <a href="#state_sqlcollectorconfigvalue_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -2632,8 +2429,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorstatus_go">
 <a href="#state_sqlcollectorstatus_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Collector<wbr>Status</a>
@@ -2642,8 +2438,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaction_go">
 <a href="#state_sslaction_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Action</a>
@@ -2652,8 +2447,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslstatus_go">
 <a href="#state_sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -2662,8 +2456,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2674,8 +2467,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_go">
 <a href="#state_tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -2684,8 +2476,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -2694,8 +2485,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -2706,8 +2496,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslavea_go">
 <a href="#state_zoneidslavea_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -2716,8 +2505,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslaveb_go">
 <a href="#state_zoneidslaveb_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -2726,14 +2514,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_nodejs">
 <a href="#state_autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -2742,8 +2527,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenewperiod_nodejs">
 <a href="#state_autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
@@ -2752,8 +2536,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_nodejs">
 <a href="#state_autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -2764,8 +2547,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_nodejs">
 <a href="#state_connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -2774,8 +2556,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbinstancestoragetype_nodejs">
 <a href="#state_dbinstancestoragetype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Storage<wbr>Type</a>
@@ -2789,8 +2570,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_nodejs">
 <a href="#state_encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -2799,8 +2579,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2809,8 +2588,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2819,8 +2597,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcerestart_nodejs">
 <a href="#state_forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
@@ -2829,8 +2606,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -2839,8 +2615,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_nodejs">
 <a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -2849,8 +2624,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestorage_nodejs">
 <a href="#state_instancestorage_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Storage</a>
@@ -2865,8 +2639,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -2875,8 +2648,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_nodejs">
 <a href="#state_maintaintime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Time</a>
@@ -2885,8 +2657,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringperiod_nodejs">
 <a href="#state_monitoringperiod_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Period</a>
@@ -2895,8 +2666,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2905,8 +2675,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">Instance<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -2915,8 +2684,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2925,8 +2693,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -2935,8 +2702,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -2945,8 +2711,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -2955,8 +2720,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityipmode_nodejs">
 <a href="#state_securityipmode_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Mode</a>
@@ -2965,8 +2729,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityips_nodejs">
 <a href="#state_securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
@@ -2975,8 +2738,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorconfigvalue_nodejs">
 <a href="#state_sqlcollectorconfigvalue_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Collector<wbr>Config<wbr>Value</a>
@@ -2985,8 +2747,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlcollectorstatus_nodejs">
 <a href="#state_sqlcollectorstatus_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Collector<wbr>Status</a>
@@ -2995,8 +2756,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaction_nodejs">
 <a href="#state_sslaction_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Action</a>
@@ -3005,8 +2765,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslstatus_nodejs">
 <a href="#state_sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
@@ -3015,8 +2774,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3027,8 +2785,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_nodejs">
 <a href="#state_tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
@@ -3037,8 +2794,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -3047,8 +2803,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -3059,8 +2814,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslavea_nodejs">
 <a href="#state_zoneidslavea_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>A</a>
@@ -3069,8 +2823,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneidslaveb_nodejs">
 <a href="#state_zoneidslaveb_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id<wbr>Slave<wbr>B</a>
@@ -3079,14 +2832,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_renew_python">
 <a href="#state_auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -3095,8 +2845,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to renewal a DB instance automatically or not. It is valid when instance_charge_type is `PrePaid`. Default to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_renew_period_python">
 <a href="#state_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
@@ -3105,8 +2854,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an instance, in the unit of the month. It is valid when instance_charge_type is `PrePaid`. Valid value:[1~12], Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_upgrade_minor_version_python">
 <a href="#state_auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -3117,8 +2865,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}The upgrade method to use. Valid values:
 - Auto: Instances are automatically upgraded to a higher minor version.
 - Manual: Instances are forcibly upgraded to a higher minor version when the current version is unpublished.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_string_python">
 <a href="#state_connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -3127,8 +2874,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RDS database connection string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_instance_storage_type_python">
 <a href="#state_db_instance_storage_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>storage_<wbr>type</a>
@@ -3142,8 +2888,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - cloud_essd: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd2: specifies to use enhanced SSDs (ESSDs).
 - cloud_essd3: specifies to use enhanced SSDs (ESSDs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_key_python">
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -3152,8 +2897,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -3162,8 +2906,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -3172,8 +2915,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/doc-detail/26228.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_restart_python">
 <a href="#state_force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
@@ -3182,8 +2924,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -3192,8 +2933,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Prepaid`, `Postpaid`, Default to `Postpaid`. Currently, the resource only supports PostPaid to PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_name_python">
 <a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -3202,8 +2942,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_storage_python">
 <a href="#state_instance_storage_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>storage</a>
@@ -3218,8 +2957,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 - [20,2000] for SQL Server 2012 basic single node edition
 Increase progressively at a rate of 5 GB. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
 Note: There is extra 5 GB storage for SQL Server Instance and it is not in specified `instance_storage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -3228,8 +2966,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB Instance type. For details, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/26312.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintain_time_python">
 <a href="#state_maintain_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>time</a>
@@ -3238,8 +2975,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_period_python">
 <a href="#state_monitoring_period_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>period</a>
@@ -3248,8 +2984,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The monitoring frequency in seconds. Valid values are 5, 60, 300. Defaults to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3258,8 +2993,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="#instanceparameter">Sequence[Instance<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of parameters needs to be set after DB instance was launched. Available parameters can refer to the latest docs [View database parameter templates](https://www.alibabacloud.com/help/doc-detail/26284.htm) .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -3268,8 +3002,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3278,8 +3011,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -3288,8 +3020,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the DB instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_security_group_id_python">
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -3298,8 +3029,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from 1.69.0 and use `security_group_ids` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute `security_group_id` has been deprecated from 1.69.0 and use `security_group_ids` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -3308,8 +3038,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}, Available in 1.69.0+) The list IDs to join ECS Security Group. At most supports three security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_ip_mode_python">
 <a href="#state_security_ip_mode_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>mode</a>
@@ -3318,8 +3047,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `normal`, `safety`, Default to `normal`. support `safety` switch to high security access mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_ips_python">
 <a href="#state_security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
@@ -3328,8 +3056,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_collector_config_value_python">
 <a href="#state_sql_collector_config_value_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>collector_<wbr>config_<wbr>value</a>
@@ -3338,8 +3065,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sql collector keep time of the instance. Valid values are `30`, `180`, `365`, `1095`, `1825`, Default to `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_collector_status_python">
 <a href="#state_sql_collector_status_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>collector_<wbr>status</a>
@@ -3348,8 +3074,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sql collector status of the instance. Valid values are `Enabled`, `Disabled`, Default to `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_action_python">
 <a href="#state_ssl_action_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>action</a>
@@ -3358,8 +3083,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_status_python">
 <a href="#state_ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
@@ -3368,8 +3092,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3380,8 +3103,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tde_status_python">
 <a href="#state_tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
@@ -3390,8 +3112,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -3400,8 +3121,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -3412,8 +3132,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_slave_a_python">
 <a href="#state_zone_id_slave_a_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>a</a>
@@ -3422,8 +3141,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the secondary instance if you create a secondary instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_slave_b_python">
 <a href="#state_zone_id_slave_b_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id_<wbr>slave_<wbr>b</a>
@@ -3432,8 +3150,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the log instance if you create a log instance. If you set this parameter to the same value as the ZoneId parameter, the instance is deployed in a single zone. Otherwise, the instance is deployed in multiple zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3448,9 +3165,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 <h4 id="instanceparameter">Instance<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3458,8 +3173,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3467,14 +3181,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3482,8 +3193,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3491,14 +3201,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3506,8 +3213,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3515,14 +3221,11 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3530,8 +3233,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3539,8 +3241,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3561,6 +3262,6 @@ RDS instance can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

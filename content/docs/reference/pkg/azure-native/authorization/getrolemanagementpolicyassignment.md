@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolemanagementpolicyassignmentname_csharp">
 <a href="#rolemanagementpolicyassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Management<wbr>Policy<wbr>Assignment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolemanagementpolicyassignmentname_go">
 <a href="#rolemanagementpolicyassignmentname_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Management<wbr>Policy<wbr>Assignment<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolemanagementpolicyassignmentname_nodejs">
 <a href="#rolemanagementpolicyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Management<wbr>Policy<wbr>Assignment<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_management_policy_assignment_name_python">
 <a href="#role_management_policy_assignment_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>management_<wbr>policy_<wbr>assignment_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role management policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role management policy type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

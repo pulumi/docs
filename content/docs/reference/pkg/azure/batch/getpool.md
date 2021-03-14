@@ -14,11 +14,17 @@ Use this data source to access information about an existing Batch pool
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -76,9 +88,12 @@ example = azure.batch.get_pool(account_name="testbatchaccount",
     resource_group_name="test")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,9 +106,16 @@ const example = pulumi.output(azure.batch.getPool({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getPool {#using}
@@ -131,9 +153,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -142,8 +162,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -152,8 +171,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -161,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -171,8 +188,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_csharp">
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -180,8 +196,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_csharp">
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -190,14 +205,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -206,8 +218,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -216,8 +227,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -225,8 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -235,8 +244,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_go">
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -244,8 +252,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_go">
 <a href="#starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -254,14 +261,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -270,8 +274,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -280,8 +283,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -289,8 +291,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -299,8 +300,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_nodejs">
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
@@ -308,8 +308,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_nodejs">
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
@@ -318,14 +317,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -334,8 +330,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -344,8 +339,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -353,8 +347,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -363,8 +356,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_configuration_python">
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
@@ -372,8 +364,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_task_python">
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
@@ -382,8 +373,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -396,9 +386,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -407,8 +395,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscales_csharp">
 <a href="#autoscales_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scales</a>
@@ -417,8 +404,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolautoscale">List&lt;Get<wbr>Pool<wbr>Auto<wbr>Scale&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerconfigurations_csharp">
 <a href="#containerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configurations</a>
@@ -427,8 +413,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfiguration">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -436,8 +421,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedscales_csharp">
 <a href="#fixedscales_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scales</a>
@@ -446,8 +430,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolfixedscale">List&lt;Get<wbr>Pool<wbr>Fixed<wbr>Scale&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -456,8 +439,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtaskspernode_csharp">
 <a href="#maxtaskspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
@@ -466,8 +448,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -475,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -485,8 +465,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkconfiguration_csharp">
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -494,8 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeagentskuid_csharp">
 <a href="#nodeagentskuid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Agent<wbr>Sku<wbr>Id</a>
@@ -504,8 +482,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -513,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageimagereferences_csharp">
 <a href="#storageimagereferences_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>References</a>
@@ -523,8 +499,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstorageimagereference">List&lt;Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -533,8 +508,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -543,8 +517,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttask_csharp">
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -553,14 +526,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -569,8 +539,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscales_go">
 <a href="#autoscales_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scales</a>
@@ -579,8 +548,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolautoscale">[]Get<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerconfigurations_go">
 <a href="#containerconfigurations_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Configurations</a>
@@ -589,8 +557,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfiguration">[]Get<wbr>Pool<wbr>Container<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -598,8 +565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedscales_go">
 <a href="#fixedscales_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scales</a>
@@ -608,8 +574,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolfixedscale">[]Get<wbr>Pool<wbr>Fixed<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -618,8 +583,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtaskspernode_go">
 <a href="#maxtaskspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
@@ -628,8 +592,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -637,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -647,8 +609,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkconfiguration_go">
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -656,8 +617,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeagentskuid_go">
 <a href="#nodeagentskuid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Agent<wbr>Sku<wbr>Id</a>
@@ -666,8 +626,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -675,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageimagereferences_go">
 <a href="#storageimagereferences_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>References</a>
@@ -685,8 +643,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstorageimagereference">[]Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -695,8 +652,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -705,8 +661,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttask_go">
 <a href="#starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -715,14 +670,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -731,8 +683,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscales_nodejs">
 <a href="#autoscales_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scales</a>
@@ -741,8 +692,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolautoscale">Get<wbr>Pool<wbr>Auto<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerconfigurations_nodejs">
 <a href="#containerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configurations</a>
@@ -751,8 +701,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfiguration">Get<wbr>Pool<wbr>Container<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -760,8 +709,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedscales_nodejs">
 <a href="#fixedscales_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Scales</a>
@@ -770,8 +718,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolfixedscale">Get<wbr>Pool<wbr>Fixed<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -780,8 +727,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtaskspernode_nodejs">
 <a href="#maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
@@ -790,8 +736,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -799,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -809,8 +753,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkconfiguration_nodejs">
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
@@ -818,8 +761,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeagentskuid_nodejs">
 <a href="#nodeagentskuid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Agent<wbr>Sku<wbr>Id</a>
@@ -828,8 +770,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -837,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageimagereferences_nodejs">
 <a href="#storageimagereferences_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>References</a>
@@ -847,8 +787,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstorageimagereference">Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -857,8 +796,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -867,8 +805,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttask_nodejs">
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
@@ -877,14 +814,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -893,8 +827,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_scales_python">
 <a href="#auto_scales_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scales</a>
@@ -903,8 +836,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolautoscale">Sequence[Get<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_configurations_python">
 <a href="#container_configurations_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configurations</a>
@@ -913,8 +845,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfiguration">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -922,8 +853,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_scales_python">
 <a href="#fixed_scales_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scales</a>
@@ -932,8 +862,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolfixedscale">Sequence[Get<wbr>Pool<wbr>Fixed<wbr>Scale]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -942,8 +871,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_tasks_per_node_python">
 <a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
@@ -952,8 +880,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -961,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -971,8 +897,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_configuration_python">
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
@@ -980,8 +905,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_agent_sku_id_python">
 <a href="#node_agent_sku_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>agent_<wbr>sku_<wbr>id</a>
@@ -990,8 +914,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -999,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_image_references_python">
 <a href="#storage_image_references_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>references</a>
@@ -1009,8 +931,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstorageimagereference">Sequence[Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -1019,8 +940,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1029,8 +949,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_task_python">
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
@@ -1039,8 +958,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1054,9 +972,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluationinterval_csharp">
 <a href="#evaluationinterval_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -1065,8 +981,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="formula_csharp">
 <a href="#formula_csharp" style="color: inherit; text-decoration: inherit;">Formula</a>
@@ -1075,14 +990,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluationinterval_go">
 <a href="#evaluationinterval_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -1091,8 +1003,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="formula_go">
 <a href="#formula_go" style="color: inherit; text-decoration: inherit;">Formula</a>
@@ -1101,14 +1012,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluationinterval_nodejs">
 <a href="#evaluationinterval_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
@@ -1117,8 +1025,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="formula_nodejs">
 <a href="#formula_nodejs" style="color: inherit; text-decoration: inherit;">formula</a>
@@ -1127,14 +1034,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluation_interval_python">
 <a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
@@ -1143,8 +1047,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="formula_python">
 <a href="#formula_python" style="color: inherit; text-decoration: inherit;">formula</a>
@@ -1153,8 +1056,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolcertificate">Get<wbr>Pool<wbr>Certificate</h4>
@@ -1162,9 +1064,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1173,8 +1073,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storelocation_csharp">
 <a href="#storelocation_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Location</a>
@@ -1183,8 +1082,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storename_csharp">
 <a href="#storename_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Name</a>
@@ -1193,8 +1091,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilities_csharp">
 <a href="#visibilities_csharp" style="color: inherit; text-decoration: inherit;">Visibilities</a>
@@ -1203,14 +1100,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1219,8 +1113,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storelocation_go">
 <a href="#storelocation_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Location</a>
@@ -1229,8 +1122,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storename_go">
 <a href="#storename_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Name</a>
@@ -1239,8 +1131,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilities_go">
 <a href="#visibilities_go" style="color: inherit; text-decoration: inherit;">Visibilities</a>
@@ -1249,14 +1140,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1265,8 +1153,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storelocation_nodejs">
 <a href="#storelocation_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
@@ -1275,8 +1162,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storename_nodejs">
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
@@ -1285,8 +1171,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilities_nodejs">
 <a href="#visibilities_nodejs" style="color: inherit; text-decoration: inherit;">visibilities</a>
@@ -1295,14 +1180,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1311,8 +1193,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="store_location_python">
 <a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
@@ -1321,8 +1202,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="store_name_python">
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
@@ -1331,8 +1211,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilities_python">
 <a href="#visibilities_python" style="color: inherit; text-decoration: inherit;">visibilities</a>
@@ -1341,8 +1220,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolcontainerconfiguration">Get<wbr>Pool<wbr>Container<wbr>Configuration</h4>
@@ -1350,9 +1228,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerimagenames_csharp">
 <a href="#containerimagenames_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image<wbr>Names</a>
@@ -1361,8 +1237,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistries_csharp">
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
@@ -1371,8 +1246,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1381,14 +1255,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerimagenames_go">
 <a href="#containerimagenames_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image<wbr>Names</a>
@@ -1397,8 +1268,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistries_go">
 <a href="#containerregistries_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
@@ -1407,8 +1277,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">[]Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1417,14 +1286,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerimagenames_nodejs">
 <a href="#containerimagenames_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
@@ -1433,8 +1299,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistries_nodejs">
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
@@ -1443,8 +1308,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry[]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1453,14 +1317,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_image_names_python">
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
@@ -1469,8 +1330,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_registries_python">
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
@@ -1479,8 +1339,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1489,8 +1348,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolcontainerconfigurationcontainerregistry">Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry</h4>
@@ -1498,9 +1356,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1509,8 +1365,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryserver_csharp">
 <a href="#registryserver_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Server</a>
@@ -1519,8 +1374,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1529,14 +1383,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1545,8 +1396,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryserver_go">
 <a href="#registryserver_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Server</a>
@@ -1555,8 +1405,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1565,14 +1414,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1581,8 +1427,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryserver_nodejs">
 <a href="#registryserver_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Server</a>
@@ -1591,8 +1436,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1601,14 +1445,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1617,8 +1458,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_server_python">
 <a href="#registry_server_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>server</a>
@@ -1627,8 +1467,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1637,8 +1476,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolfixedscale">Get<wbr>Pool<wbr>Fixed<wbr>Scale</h4>
@@ -1646,9 +1484,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resizetimeout_csharp">
 <a href="#resizetimeout_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Timeout</a>
@@ -1657,8 +1493,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdedicatednodes_csharp">
 <a href="#targetdedicatednodes_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Dedicated<wbr>Nodes</a>
@@ -1667,8 +1502,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetlowprioritynodes_csharp">
 <a href="#targetlowprioritynodes_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Low<wbr>Priority<wbr>Nodes</a>
@@ -1677,14 +1511,11 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resizetimeout_go">
 <a href="#resizetimeout_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Timeout</a>
@@ -1693,8 +1524,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdedicatednodes_go">
 <a href="#targetdedicatednodes_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Dedicated<wbr>Nodes</a>
@@ -1703,8 +1533,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetlowprioritynodes_go">
 <a href="#targetlowprioritynodes_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Low<wbr>Priority<wbr>Nodes</a>
@@ -1713,14 +1542,11 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resizetimeout_nodejs">
 <a href="#resizetimeout_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Timeout</a>
@@ -1729,8 +1555,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdedicatednodes_nodejs">
 <a href="#targetdedicatednodes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dedicated<wbr>Nodes</a>
@@ -1739,8 +1564,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetlowprioritynodes_nodejs">
 <a href="#targetlowprioritynodes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Low<wbr>Priority<wbr>Nodes</a>
@@ -1749,14 +1573,11 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resize_timeout_python">
 <a href="#resize_timeout_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>timeout</a>
@@ -1765,8 +1586,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_dedicated_nodes_python">
 <a href="#target_dedicated_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dedicated_<wbr>nodes</a>
@@ -1775,8 +1595,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_low_priority_nodes_python">
 <a href="#target_low_priority_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>low_<wbr>priority_<wbr>nodes</a>
@@ -1785,8 +1604,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</h4>
@@ -1794,9 +1612,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointconfiguration_csharp">
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -1805,8 +1621,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1815,14 +1630,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointconfiguration_go">
 <a href="#endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -1831,8 +1643,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1841,14 +1652,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointconfiguration_nodejs">
 <a href="#endpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
@@ -1857,8 +1665,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1867,14 +1674,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_configuration_python">
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
@@ -1883,8 +1687,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1893,8 +1696,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</h4>
@@ -1902,9 +1704,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendport_csharp">
 <a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1913,8 +1713,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendportrange_csharp">
 <a href="#frontendportrange_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port<wbr>Range</a>
@@ -1923,8 +1722,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1933,8 +1731,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksecuritygrouprules_csharp">
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
@@ -1943,8 +1740,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1953,14 +1749,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendport_go">
 <a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1969,8 +1762,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendportrange_go">
 <a href="#frontendportrange_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port<wbr>Range</a>
@@ -1979,8 +1771,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1989,8 +1780,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksecuritygrouprules_go">
 <a href="#networksecuritygrouprules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
@@ -1999,8 +1789,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">[]Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2009,14 +1798,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendport_nodejs">
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
@@ -2025,8 +1811,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendportrange_nodejs">
 <a href="#frontendportrange_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range</a>
@@ -2035,8 +1820,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2045,8 +1829,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksecuritygrouprules_nodejs">
 <a href="#networksecuritygrouprules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
@@ -2055,8 +1838,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2065,14 +1847,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_port_python">
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
@@ -2081,8 +1860,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontend_port_range_python">
 <a href="#frontend_port_range_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range</a>
@@ -2091,8 +1869,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2101,8 +1878,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_security_group_rules_python">
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
@@ -2111,8 +1887,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2121,8 +1896,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule</h4>
@@ -2130,9 +1904,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_csharp">
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -2141,8 +1913,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2151,8 +1922,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceaddressprefix_csharp">
 <a href="#sourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
@@ -2161,14 +1931,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_go">
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -2177,8 +1944,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2187,8 +1953,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceaddressprefix_go">
 <a href="#sourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
@@ -2197,14 +1962,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_nodejs">
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
@@ -2213,8 +1975,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2223,8 +1984,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceaddressprefix_nodejs">
 <a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
@@ -2233,14 +1993,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_python">
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
@@ -2249,8 +2006,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2259,8 +2015,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_address_prefix_python">
 <a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
@@ -2269,8 +2024,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</h4>
@@ -2278,9 +2032,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_csharp">
 <a href="#commandline_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
@@ -2289,8 +2041,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcefiles_csharp">
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
@@ -2299,8 +2050,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskresourcefile">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useridentities_csharp">
 <a href="#useridentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identities</a>
@@ -2309,8 +2059,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentity">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -2319,8 +2068,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtaskretrycount_csharp">
 <a href="#maxtaskretrycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Task<wbr>Retry<wbr>Count</a>
@@ -2329,8 +2077,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of retry count.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsuccess_csharp">
 <a href="#waitforsuccess_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Success</a>
@@ -2339,14 +2086,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_go">
 <a href="#commandline_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
@@ -2355,8 +2099,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcefiles_go">
 <a href="#resourcefiles_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
@@ -2365,8 +2108,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskresourcefile">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useridentities_go">
 <a href="#useridentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identities</a>
@@ -2375,8 +2117,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentity">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -2385,8 +2126,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtaskretrycount_go">
 <a href="#maxtaskretrycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Task<wbr>Retry<wbr>Count</a>
@@ -2395,8 +2135,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of retry count.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsuccess_go">
 <a href="#waitforsuccess_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Success</a>
@@ -2405,14 +2144,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_nodejs">
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
@@ -2421,8 +2157,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcefiles_nodejs">
 <a href="#resourcefiles_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
@@ -2431,8 +2166,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskresourcefile">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useridentities_nodejs">
 <a href="#useridentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identities</a>
@@ -2441,8 +2175,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentity">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -2451,8 +2184,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtaskretrycount_nodejs">
 <a href="#maxtaskretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Task<wbr>Retry<wbr>Count</a>
@@ -2461,8 +2193,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of retry count.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsuccess_nodejs">
 <a href="#waitforsuccess_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Success</a>
@@ -2471,14 +2202,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="command_line_python">
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
@@ -2487,8 +2215,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_files_python">
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
@@ -2497,8 +2224,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskresourcefile">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_identities_python">
 <a href="#user_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identities</a>
@@ -2507,8 +2233,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentity">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -2517,8 +2242,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_task_retry_count_python">
 <a href="#max_task_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>task_<wbr>retry_<wbr>count</a>
@@ -2527,8 +2251,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of retry count.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_success_python">
 <a href="#wait_for_success_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>success</a>
@@ -2537,8 +2260,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolstarttaskresourcefile">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File</h4>
@@ -2546,9 +2268,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autostoragecontainername_csharp">
 <a href="#autostoragecontainername_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Storage<wbr>Container<wbr>Name</a>
@@ -2557,8 +2277,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="blobprefix_csharp">
 <a href="#blobprefix_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix</a>
@@ -2567,8 +2286,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filemode_csharp">
 <a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -2577,8 +2295,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filepath_csharp">
 <a href="#filepath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -2587,8 +2304,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_csharp">
 <a href="#httpurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -2597,8 +2313,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagecontainerurl_csharp">
 <a href="#storagecontainerurl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Url</a>
@@ -2607,14 +2322,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autostoragecontainername_go">
 <a href="#autostoragecontainername_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Storage<wbr>Container<wbr>Name</a>
@@ -2623,8 +2335,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="blobprefix_go">
 <a href="#blobprefix_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix</a>
@@ -2633,8 +2344,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filemode_go">
 <a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -2643,8 +2353,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filepath_go">
 <a href="#filepath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -2653,8 +2362,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_go">
 <a href="#httpurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -2663,8 +2371,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagecontainerurl_go">
 <a href="#storagecontainerurl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Url</a>
@@ -2673,14 +2380,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autostoragecontainername_nodejs">
 <a href="#autostoragecontainername_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
@@ -2689,8 +2393,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="blobprefix_nodejs">
 <a href="#blobprefix_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
@@ -2699,8 +2402,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filemode_nodejs">
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
@@ -2709,8 +2411,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filepath_nodejs">
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
@@ -2719,8 +2420,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_nodejs">
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
@@ -2729,8 +2429,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagecontainerurl_nodejs">
 <a href="#storagecontainerurl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
@@ -2739,14 +2438,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_storage_container_name_python">
 <a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
@@ -2755,8 +2451,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="blob_prefix_python">
 <a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
@@ -2765,8 +2460,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_mode_python">
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
@@ -2775,8 +2469,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_path_python">
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
@@ -2785,8 +2478,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_url_python">
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
@@ -2795,8 +2487,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_container_url_python">
 <a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
@@ -2805,8 +2496,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolstarttaskuseridentity">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</h4>
@@ -2814,9 +2504,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autousers_csharp">
 <a href="#autousers_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Users</a>
@@ -2825,8 +2513,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2835,14 +2522,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autousers_go">
 <a href="#autousers_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Users</a>
@@ -2851,8 +2535,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2861,14 +2544,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autousers_nodejs">
 <a href="#autousers_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Users</a>
@@ -2877,8 +2557,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -2887,14 +2566,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_users_python">
 <a href="#auto_users_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>users</a>
@@ -2903,8 +2579,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -2913,8 +2588,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolstarttaskuseridentityautouser">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</h4>
@@ -2922,9 +2596,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="elevationlevel_csharp">
 <a href="#elevationlevel_csharp" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
@@ -2933,8 +2605,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2943,14 +2614,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="elevationlevel_go">
 <a href="#elevationlevel_go" style="color: inherit; text-decoration: inherit;">Elevation<wbr>Level</a>
@@ -2959,8 +2627,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2969,14 +2636,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="elevationlevel_nodejs">
 <a href="#elevationlevel_nodejs" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
@@ -2985,8 +2649,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2995,14 +2658,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="elevation_level_python">
 <a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
@@ -3011,8 +2671,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -3021,8 +2680,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpoolstorageimagereference">Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference</h4>
@@ -3030,9 +2688,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3041,8 +2697,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -3050,8 +2705,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -3059,8 +2713,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -3068,8 +2721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3077,14 +2729,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3093,8 +2742,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -3102,8 +2750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -3111,8 +2758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -3120,8 +2766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3129,14 +2774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3145,8 +2787,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -3154,8 +2795,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -3163,8 +2803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -3172,8 +2811,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3181,14 +2819,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3197,8 +2832,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -3206,8 +2840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -3215,8 +2848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -3224,8 +2856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3233,8 +2864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3248,6 +2878,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

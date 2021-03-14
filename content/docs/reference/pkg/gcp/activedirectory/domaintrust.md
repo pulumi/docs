@@ -22,11 +22,17 @@ To get more information about DomainTrust, see:
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Active Directory Domain Trust Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -52,9 +58,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -83,9 +92,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -99,9 +111,12 @@ ad_domain_trust = gcp.activedirectory.DomainTrust("ad-domain-trust",
     trust_type="FOREST")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -117,9 +132,16 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DomainTrust Resource {#create}
@@ -144,9 +166,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +174,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +182,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +190,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -203,9 +216,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -213,9 +224,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -223,9 +232,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -233,9 +240,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -243,18 +248,13 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +262,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +270,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,10 +278,7 @@ const ad_domain_trust = new gcp.activedirectory.DomainTrust("ad-domain-trust", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -300,9 +293,7 @@ The DomainTrust resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -312,8 +303,7 @@ The DomainTrust resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdnsipaddresses_csharp">
 <a href="#targetdnsipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -322,8 +312,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdomainname_csharp">
 <a href="#targetdomainname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -332,8 +321,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trustdirection_csharp">
 <a href="#trustdirection_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
@@ -343,8 +331,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusthandshakesecret_csharp">
 <a href="#trusthandshakesecret_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Handshake<wbr>Secret</a>
@@ -354,8 +341,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusttype_csharp">
 <a href="#trusttype_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
@@ -365,8 +351,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -376,8 +361,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectiveauthentication_csharp">
 <a href="#selectiveauthentication_csharp" style="color: inherit; text-decoration: inherit;">Selective<wbr>Authentication</a>
@@ -386,14 +370,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -403,8 +384,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdnsipaddresses_go">
 <a href="#targetdnsipaddresses_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -413,8 +393,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdomainname_go">
 <a href="#targetdomainname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -423,8 +402,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trustdirection_go">
 <a href="#trustdirection_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
@@ -434,8 +412,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusthandshakesecret_go">
 <a href="#trusthandshakesecret_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Handshake<wbr>Secret</a>
@@ -445,8 +422,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusttype_go">
 <a href="#trusttype_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
@@ -456,8 +432,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -467,8 +442,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectiveauthentication_go">
 <a href="#selectiveauthentication_go" style="color: inherit; text-decoration: inherit;">Selective<wbr>Authentication</a>
@@ -477,14 +451,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -494,8 +465,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdnsipaddresses_nodejs">
 <a href="#targetdnsipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -504,8 +474,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdomainname_nodejs">
 <a href="#targetdomainname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Domain<wbr>Name</a>
@@ -514,8 +483,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trustdirection_nodejs">
 <a href="#trustdirection_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Direction</a>
@@ -525,8 +493,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusthandshakesecret_nodejs">
 <a href="#trusthandshakesecret_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Handshake<wbr>Secret</a>
@@ -536,8 +503,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trusttype_nodejs">
 <a href="#trusttype_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Type</a>
@@ -547,8 +513,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -558,8 +523,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectiveauthentication_nodejs">
 <a href="#selectiveauthentication_nodejs" style="color: inherit; text-decoration: inherit;">selective<wbr>Authentication</a>
@@ -568,14 +532,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -585,8 +546,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_dns_ip_addresses_python">
 <a href="#target_dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dns_<wbr>ip_<wbr>addresses</a>
@@ -595,8 +555,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_domain_name_python">
 <a href="#target_domain_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>domain_<wbr>name</a>
@@ -605,8 +564,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trust_direction_python">
 <a href="#trust_direction_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>direction</a>
@@ -616,8 +574,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trust_handshake_secret_python">
 <a href="#trust_handshake_secret_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>handshake_<wbr>secret</a>
@@ -627,8 +584,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trust_type_python">
 <a href="#trust_type_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>type</a>
@@ -638,8 +594,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -649,8 +604,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selective_authentication_python">
 <a href="#selective_authentication_python" style="color: inherit; text-decoration: inherit;">selective_<wbr>authentication</a>
@@ -659,8 +613,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -671,9 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -681,14 +632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -696,14 +644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -711,14 +656,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -726,8 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -854,9 +795,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -866,8 +805,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -877,8 +815,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectiveauthentication_csharp">
 <a href="#state_selectiveauthentication_csharp" style="color: inherit; text-decoration: inherit;">Selective<wbr>Authentication</a>
@@ -887,8 +824,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdnsipaddresses_csharp">
 <a href="#state_targetdnsipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -897,8 +833,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdomainname_csharp">
 <a href="#state_targetdomainname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -907,8 +842,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustdirection_csharp">
 <a href="#state_trustdirection_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
@@ -918,8 +852,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusthandshakesecret_csharp">
 <a href="#state_trusthandshakesecret_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Handshake<wbr>Secret</a>
@@ -929,8 +862,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusttype_csharp">
 <a href="#state_trusttype_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
@@ -940,14 +872,11 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -957,8 +886,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -968,8 +896,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectiveauthentication_go">
 <a href="#state_selectiveauthentication_go" style="color: inherit; text-decoration: inherit;">Selective<wbr>Authentication</a>
@@ -978,8 +905,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdnsipaddresses_go">
 <a href="#state_targetdnsipaddresses_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -988,8 +914,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdomainname_go">
 <a href="#state_targetdomainname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -998,8 +923,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustdirection_go">
 <a href="#state_trustdirection_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
@@ -1009,8 +933,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusthandshakesecret_go">
 <a href="#state_trusthandshakesecret_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Handshake<wbr>Secret</a>
@@ -1020,8 +943,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusttype_go">
 <a href="#state_trusttype_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Type</a>
@@ -1031,14 +953,11 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1048,8 +967,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1059,8 +977,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectiveauthentication_nodejs">
 <a href="#state_selectiveauthentication_nodejs" style="color: inherit; text-decoration: inherit;">selective<wbr>Authentication</a>
@@ -1069,8 +986,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdnsipaddresses_nodejs">
 <a href="#state_targetdnsipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dns<wbr>Ip<wbr>Addresses</a>
@@ -1079,8 +995,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetdomainname_nodejs">
 <a href="#state_targetdomainname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Domain<wbr>Name</a>
@@ -1089,8 +1004,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustdirection_nodejs">
 <a href="#state_trustdirection_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Direction</a>
@@ -1100,8 +1014,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusthandshakesecret_nodejs">
 <a href="#state_trusthandshakesecret_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Handshake<wbr>Secret</a>
@@ -1111,8 +1024,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusttype_nodejs">
 <a href="#state_trusttype_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Type</a>
@@ -1122,14 +1034,11 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1139,8 +1048,7 @@ Possible values are `FOREST` and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1150,8 +1058,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selective_authentication_python">
 <a href="#state_selective_authentication_python" style="color: inherit; text-decoration: inherit;">selective_<wbr>authentication</a>
@@ -1160,8 +1067,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_dns_ip_addresses_python">
 <a href="#state_target_dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dns_<wbr>ip_<wbr>addresses</a>
@@ -1170,8 +1076,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_domain_name_python">
 <a href="#state_target_domain_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>domain_<wbr>name</a>
@@ -1180,8 +1085,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified target domain name which will be in trust with the current domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_direction_python">
 <a href="#state_trust_direction_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>direction</a>
@@ -1191,8 +1095,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The trust direction, which decides if the current domain is trusted, trusting, or both.
 Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_handshake_secret_python">
 <a href="#state_trust_handshake_secret_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>handshake_<wbr>secret</a>
@@ -1202,8 +1105,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The trust secret used for the handshake with the target domain. This will not be stored.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_type_python">
 <a href="#state_trust_type_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>type</a>
@@ -1213,8 +1115,7 @@ Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
     </dt>
     <dd>{{% md %}}The type of trust represented by the trust resource.
 Possible values are `FOREST` and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1248,6 +1149,6 @@ DomainTrust can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

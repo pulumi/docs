@@ -31,11 +31,17 @@ To get more information about DefaultObjectAccessControl, see:
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Storage Default Object Access Control Public
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -58,9 +64,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -102,9 +114,12 @@ public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
     entity="allUsers")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DefaultObjectAccessControl Resource {#create}
@@ -145,9 +167,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The DefaultObjectAccessControl resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -312,8 +303,7 @@ The DefaultObjectAccessControl resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_csharp">
 <a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -330,8 +320,7 @@ The DefaultObjectAccessControl resource accepts the following [input]({{< relref
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -341,8 +330,7 @@ The DefaultObjectAccessControl resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -351,14 +339,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -367,8 +352,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_go">
 <a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -385,8 +369,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -396,8 +379,7 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -406,14 +388,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -422,8 +401,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_nodejs">
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -440,8 +418,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -451,8 +428,7 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -461,14 +437,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -477,8 +450,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_python">
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -495,8 +467,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -506,8 +477,7 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -516,8 +486,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -528,9 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -539,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -549,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -559,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -569,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -578,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectteams_csharp">
 <a href="#projectteams_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
@@ -588,14 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">List&lt;Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team&gt;</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -604,8 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -614,8 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -624,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -634,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -643,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectteams_go">
 <a href="#projectteams_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
@@ -653,14 +607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">[]Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -669,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -679,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -689,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -699,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectteams_nodejs">
 <a href="#projectteams_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Teams</a>
@@ -718,14 +664,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team[]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -734,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -744,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -754,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -764,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_teams_python">
 <a href="#project_teams_python" style="color: inherit; text-decoration: inherit;">project_<wbr>teams</a>
@@ -783,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Sequence[Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -911,9 +848,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -922,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -932,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -942,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_csharp">
 <a href="#state_entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -960,8 +892,7 @@ The following state arguments are supported:
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_csharp">
 <a href="#state_entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -970,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generation_csharp">
 <a href="#state_generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -980,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_csharp">
 <a href="#state_object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -990,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectteams_csharp">
 <a href="#state_projectteams_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
@@ -1000,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">List&lt;Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1011,14 +938,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1027,8 +951,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1037,8 +960,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1047,8 +969,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_go">
 <a href="#state_entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -1065,8 +986,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_go">
 <a href="#state_entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -1075,8 +995,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generation_go">
 <a href="#state_generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -1085,8 +1004,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_go">
 <a href="#state_object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -1095,8 +1013,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectteams_go">
 <a href="#state_projectteams_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Teams</a>
@@ -1105,8 +1022,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">[]Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1116,14 +1032,11 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1132,8 +1045,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1142,8 +1054,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1152,8 +1063,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_nodejs">
 <a href="#state_entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -1170,8 +1080,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_nodejs">
 <a href="#state_entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -1180,8 +1089,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generation_nodejs">
 <a href="#state_generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -1190,8 +1098,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_nodejs">
 <a href="#state_object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -1200,8 +1107,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectteams_nodejs">
 <a href="#state_projectteams_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Teams</a>
@@ -1210,8 +1116,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team[]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1221,14 +1126,11 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1237,8 +1139,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1247,8 +1148,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1257,8 +1157,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_python">
 <a href="#state_entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -1275,8 +1174,7 @@ Possible values are `OWNER` and `READER`.
 * project-team-{{projectId}}
 * allUsers
 * allAuthenticatedUsers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_id_python">
 <a href="#state_entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -1285,8 +1183,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_generation_python">
 <a href="#state_generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -1295,8 +1192,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_python">
 <a href="#state_object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -1305,8 +1201,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_teams_python">
 <a href="#state_project_teams_python" style="color: inherit; text-decoration: inherit;">project_<wbr>teams</a>
@@ -1315,8 +1210,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Sequence[Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1326,8 +1220,7 @@ Possible values are `OWNER` and `READER`.
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 Possible values are `OWNER` and `READER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1342,9 +1235,7 @@ Possible values are `OWNER` and `READER`.
 <h4 id="defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectnumber_csharp">
 <a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
@@ -1352,8 +1243,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_csharp">
 <a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
@@ -1361,14 +1251,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectnumber_go">
 <a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
@@ -1376,8 +1263,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_go">
 <a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
@@ -1385,14 +1271,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectnumber_nodejs">
 <a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
@@ -1400,8 +1283,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_nodejs">
 <a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
@@ -1409,14 +1291,11 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="project_number_python">
 <a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
@@ -1424,8 +1303,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_python">
 <a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
@@ -1433,8 +1311,7 @@ Possible values are `OWNER` and `READER`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1455,6 +1332,6 @@ DefaultObjectAccessControl can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

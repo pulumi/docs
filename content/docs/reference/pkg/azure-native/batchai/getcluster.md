@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster within the specified resource group. Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationstate_csharp">
 <a href="#allocationstate_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allocationstatetransitiontime_csharp">
 <a href="#allocationstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentnodecount_csharp">
 <a href="#currentnodecount_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Node<wbr>Count</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Batch<wbr>AIError<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatecounts_csharp">
 <a href="#nodestatecounts_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_csharp">
 <a href="#provisioningstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesetup_csharp">
 <a href="#nodesetup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Setup</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodesetupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Node<wbr>Setup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesettings_csharp">
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccountsettings_csharp">
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineconfiguration_csharp">
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmpriority_csharp">
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -355,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationstate_go">
 <a href="#allocationstate_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allocationstatetransitiontime_go">
 <a href="#allocationstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentnodecount_go">
 <a href="#currentnodecount_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Node<wbr>Count</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">[]Batch<wbr>AIError<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatecounts_go">
 <a href="#nodestatecounts_go" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_go">
 <a href="#provisioningstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesetup_go">
 <a href="#nodesetup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Setup</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodesetupresponse">Node<wbr>Setup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesettings_go">
 <a href="#scalesettings_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccountsettings_go">
 <a href="#useraccountsettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineconfiguration_go">
 <a href="#virtualmachineconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmpriority_go">
 <a href="#vmpriority_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationstate_nodejs">
 <a href="#allocationstate_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>State</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allocationstatetransitiontime_nodejs">
 <a href="#allocationstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentnodecount_nodejs">
 <a href="#currentnodecount_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Node<wbr>Count</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">Batch<wbr>AIError<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatecounts_nodejs">
 <a href="#nodestatecounts_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>State<wbr>Counts</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_nodejs">
 <a href="#provisioningstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesetup_nodejs">
 <a href="#nodesetup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Setup</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodesetupresponse">Node<wbr>Setup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesettings_nodejs">
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccountsettings_nodejs">
 <a href="#useraccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Settings</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineconfiguration_nodejs">
 <a href="#virtualmachineconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Configuration</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmpriority_nodejs">
 <a href="#vmpriority_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Priority</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -691,14 +612,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocation_state_python">
 <a href="#allocation_state_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>state</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allocation_state_transition_time_python">
 <a href="#allocation_state_transition_time_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>state_<wbr>transition_<wbr>time</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the cluster entered its current allocation state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the cluster was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_node_count_python">
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_state_counts_python">
 <a href="#node_state_counts_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state_<wbr>counts</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_transition_time_python">
 <a href="#provisioning_state_transition_time_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state_<wbr>transition_<wbr>time</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_setup_python">
 <a href="#node_setup_python" style="color: inherit; text-decoration: inherit;">node_<wbr>setup</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodesetupresponse">Node<wbr>Setup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Setup (mount file systems, performance counters settings and custom setup task) to be performed on each compute node in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scale_settings_python">
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale settings of the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual network subnet resource ID the cluster nodes belong to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_account_settings_python">
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrator user account settings which can be used to SSH to compute nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machine_configuration_python">
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual machine configuration (OS image) of the compute nodes. All nodes in a cluster have the same OS image configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_priority_python">
 <a href="#vm_priority_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>priority</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VM priority of cluster nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -884,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -893,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkeysecretreference_csharp">
 <a href="#instrumentationkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -902,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -917,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -926,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkeysecretreference_go">
 <a href="#instrumentationkeysecretreference_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -935,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -950,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
@@ -959,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentationkeysecretreference_nodejs">
 <a href="#instrumentationkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -968,14 +854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -983,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of the Azure Application Insights instrumentation key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instrumentation_key_secret_reference_python">
 <a href="#instrumentation_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key_<wbr>secret_<wbr>reference</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</h4>
@@ -1010,9 +890,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumnodecount_csharp">
 <a href="#maximumnodecount_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Node<wbr>Count</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumnodecount_csharp">
 <a href="#minimumnodecount_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Node<wbr>Count</a>
@@ -1029,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialnodecount_csharp">
 <a href="#initialnodecount_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
@@ -1038,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumnodecount_go">
 <a href="#maximumnodecount_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Node<wbr>Count</a>
@@ -1053,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumnodecount_go">
 <a href="#minimumnodecount_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Node<wbr>Count</a>
@@ -1062,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialnodecount_go">
 <a href="#initialnodecount_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
@@ -1071,14 +942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumnodecount_nodejs">
 <a href="#maximumnodecount_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Node<wbr>Count</a>
@@ -1086,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumnodecount_nodejs">
 <a href="#minimumnodecount_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Node<wbr>Count</a>
@@ -1095,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialnodecount_nodejs">
 <a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
@@ -1104,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximum_node_count_python">
 <a href="#maximum_node_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>node_<wbr>count</a>
@@ -1119,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of compute nodes the cluster can have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimum_node_count_python">
 <a href="#minimum_node_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>node_<wbr>count</a>
@@ -1128,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of compute nodes the Batch AI service will try to allocate for the cluster. Note, the actual number of nodes can be less than the specified value if the subscription has not enough quota to fulfill the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_node_count_python">
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
@@ -1137,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of compute nodes to allocate on cluster creation. Note that this value is used only during cluster creation. Default: 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response</h4>
@@ -1146,9 +1006,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1156,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1165,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1174,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -1183,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_csharp">
 <a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -1192,14 +1046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1207,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1216,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1225,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -1234,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_go">
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -1243,14 +1090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -1258,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -1267,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1276,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
@@ -1285,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_nodejs">
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
@@ -1294,14 +1134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -1309,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -1318,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1327,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
@@ -1336,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_options_python">
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
@@ -1345,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response</h4>
@@ -1354,9 +1186,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1364,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurefileurl_csharp">
 <a href="#azurefileurl_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Url</a>
@@ -1373,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1382,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -1391,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directorymode_csharp">
 <a href="#directorymode_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
@@ -1400,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_csharp">
 <a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -1409,14 +1234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1424,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurefileurl_go">
 <a href="#azurefileurl_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Url</a>
@@ -1433,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1442,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -1451,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directorymode_go">
 <a href="#directorymode_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
@@ -1460,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_go">
 <a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
@@ -1469,14 +1286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -1484,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurefileurl_nodejs">
 <a href="#azurefileurl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
@@ -1493,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1502,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
@@ -1511,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directorymode_nodejs">
 <a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
@@ -1520,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filemode_nodejs">
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
@@ -1529,14 +1338,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -1544,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azure_file_url_python">
 <a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
@@ -1553,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1562,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
@@ -1571,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directory_mode_python">
 <a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
@@ -1580,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_mode_python">
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
@@ -1589,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</h4>
@@ -1598,9 +1398,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountkey_csharp">
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
@@ -1608,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_csharp">
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -1617,14 +1414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountkey_go">
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
@@ -1632,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_go">
 <a href="#accountkeysecretreference_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -1641,14 +1434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountkey_nodejs">
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
@@ -1656,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_nodejs">
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
@@ -1665,14 +1454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
@@ -1680,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_key_secret_reference_python">
 <a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
@@ -1689,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="batchaierrorresponse">Batch<wbr>AIError<wbr>Response</h4>
@@ -1698,9 +1482,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1708,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1717,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1726,14 +1506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1741,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1750,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">[]Name<wbr>Value<wbr>Pair<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1759,14 +1534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1774,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1783,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1792,14 +1562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1807,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1816,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1825,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentvariableresponse">Environment<wbr>Variable<wbr>Response</h4>
@@ -1834,9 +1598,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1844,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1853,14 +1614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1868,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1877,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1892,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1901,14 +1654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1916,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1925,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response</h4>
@@ -1934,9 +1682,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1944,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1953,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_csharp">
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
@@ -1962,14 +1706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1977,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1986,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_go">
 <a href="#valuesecretreference_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
@@ -1995,14 +1734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2010,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2019,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_nodejs">
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
@@ -2028,14 +1762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2043,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2052,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_secret_reference_python">
 <a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
@@ -2061,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response</h4>
@@ -2070,9 +1798,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileserver_csharp">
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
@@ -2080,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -2089,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_csharp">
 <a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -2098,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_csharp">
 <a href="#sourcedirectory_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Directory</a>
@@ -2107,14 +1830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileserver_go">
 <a href="#fileserver_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
@@ -2122,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -2131,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_go">
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -2140,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_go">
 <a href="#sourcedirectory_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Directory</a>
@@ -2149,14 +1866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileserver_nodejs">
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
@@ -2164,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
@@ -2173,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_nodejs">
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
@@ -2182,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_nodejs">
 <a href="#sourcedirectory_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
@@ -2191,14 +1902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_server_python">
 <a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
@@ -2206,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
@@ -2215,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_options_python">
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
@@ -2224,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_directory_python">
 <a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
@@ -2233,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagereferenceresponse">Image<wbr>Reference<wbr>Response</h4>
@@ -2242,9 +1946,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2252,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2261,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -2270,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2279,8 +1978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimageid_csharp">
 <a href="#virtualmachineimageid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image<wbr>Id</a>
@@ -2288,14 +1986,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2303,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2312,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -2321,8 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2330,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimageid_go">
 <a href="#virtualmachineimageid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image<wbr>Id</a>
@@ -2339,14 +2030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -2354,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2363,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -2372,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2381,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimageid_nodejs">
 <a href="#virtualmachineimageid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image<wbr>Id</a>
@@ -2390,14 +2074,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -2405,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offer of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2414,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Publisher of the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -2423,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2432,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_image_id_python">
 <a href="#virtual_machine_image_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image_<wbr>id</a>
@@ -2441,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource identifier of the virtual machine image for the compute nodes. This is of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}. The virtual machine image must be in the same region and subscription as the cluster. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration. Note, you need to provide publisher, offer and sku of the base OS image of which the custom image has been derived from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</h4>
@@ -2450,9 +2126,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_csharp">
 <a href="#secreturl_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
@@ -2460,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -2469,14 +2142,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_go">
 <a href="#secreturl_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
@@ -2484,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -2493,14 +2162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_nodejs">
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
@@ -2508,8 +2174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
@@ -2517,14 +2182,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secret_url_python">
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
@@ -2532,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
@@ -2541,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</h4>
@@ -2550,9 +2210,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnodecount_csharp">
 <a href="#targetnodecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Node<wbr>Count</a>
@@ -2560,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodedeallocationoption_csharp">
 <a href="#nodedeallocationoption_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
@@ -2569,14 +2226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnodecount_go">
 <a href="#targetnodecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Node<wbr>Count</a>
@@ -2584,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodedeallocationoption_go">
 <a href="#nodedeallocationoption_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Deallocation<wbr>Option</a>
@@ -2593,14 +2246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnodecount_nodejs">
 <a href="#targetnodecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Node<wbr>Count</a>
@@ -2608,8 +2258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodedeallocationoption_nodejs">
 <a href="#nodedeallocationoption_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Deallocation<wbr>Option</a>
@@ -2617,14 +2266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_node_count_python">
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
@@ -2632,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The desired number of compute nodes in the Cluster. Default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_deallocation_option_python">
 <a href="#node_deallocation_option_python" style="color: inherit; text-decoration: inherit;">node_<wbr>deallocation_<wbr>option</a>
@@ -2641,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An action to be performed when the cluster size is decreasing. The default value is requeue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</h4>
@@ -2650,9 +2294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobfilesystems_csharp">
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
@@ -2660,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_csharp">
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
@@ -2669,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileservers_csharp">
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
@@ -2678,8 +2318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_csharp">
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
@@ -2687,14 +2326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobfilesystems_go">
 <a href="#azureblobfilesystems_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
@@ -2702,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">[]Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_go">
 <a href="#azurefileshares_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
@@ -2711,8 +2346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">[]Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileservers_go">
 <a href="#fileservers_go" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
@@ -2720,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">[]File<wbr>Server<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_go">
 <a href="#unmanagedfilesystems_go" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
@@ -2729,14 +2362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">[]Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobfilesystems_nodejs">
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
@@ -2744,8 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_nodejs">
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
@@ -2753,8 +2382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileservers_nodejs">
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
@@ -2762,8 +2390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_nodejs">
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
@@ -2771,14 +2398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_file_systems_python">
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
@@ -2786,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_file_shares_python">
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
@@ -2795,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_servers_python">
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
@@ -2804,8 +2426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unmanaged_file_systems_python">
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
@@ -2813,8 +2434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response</h4>
@@ -2822,9 +2442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2832,8 +2450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2841,14 +2458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2856,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2865,14 +2478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2880,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2889,14 +2498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2904,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2913,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodesetupresponse">Node<wbr>Setup<wbr>Response</h4>
@@ -2922,9 +2526,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountvolumes_csharp">
 <a href="#mountvolumes_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
@@ -2932,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancecounterssettings_csharp">
 <a href="#performancecounterssettings_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters<wbr>Settings</a>
@@ -2941,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#performancecounterssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setuptask_csharp">
 <a href="#setuptask_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Task</a>
@@ -2950,14 +2550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setuptaskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountvolumes_go">
 <a href="#mountvolumes_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
@@ -2965,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancecounterssettings_go">
 <a href="#performancecounterssettings_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters<wbr>Settings</a>
@@ -2974,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setuptask_go">
 <a href="#setuptask_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Task</a>
@@ -2983,14 +2578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountvolumes_nodejs">
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
@@ -2998,8 +2590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancecounterssettings_nodejs">
 <a href="#performancecounterssettings_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters<wbr>Settings</a>
@@ -3007,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setuptask_nodejs">
 <a href="#setuptask_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Task</a>
@@ -3016,14 +2606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mount_volumes_python">
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
@@ -3031,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_counters_settings_python">
 <a href="#performance_counters_settings_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters_<wbr>settings</a>
@@ -3040,8 +2626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setup_task_python">
 <a href="#setup_task_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>task</a>
@@ -3049,8 +2634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</h4>
@@ -3058,9 +2642,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_csharp">
 <a href="#idlenodecount_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Node<wbr>Count</a>
@@ -3068,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_csharp">
 <a href="#leavingnodecount_csharp" style="color: inherit; text-decoration: inherit;">Leaving<wbr>Node<wbr>Count</a>
@@ -3077,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_csharp">
 <a href="#preparingnodecount_csharp" style="color: inherit; text-decoration: inherit;">Preparing<wbr>Node<wbr>Count</a>
@@ -3086,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_csharp">
 <a href="#runningnodecount_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Node<wbr>Count</a>
@@ -3095,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_csharp">
 <a href="#unusablenodecount_csharp" style="color: inherit; text-decoration: inherit;">Unusable<wbr>Node<wbr>Count</a>
@@ -3104,14 +2682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_go">
 <a href="#idlenodecount_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Node<wbr>Count</a>
@@ -3119,8 +2694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_go">
 <a href="#leavingnodecount_go" style="color: inherit; text-decoration: inherit;">Leaving<wbr>Node<wbr>Count</a>
@@ -3128,8 +2702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_go">
 <a href="#preparingnodecount_go" style="color: inherit; text-decoration: inherit;">Preparing<wbr>Node<wbr>Count</a>
@@ -3137,8 +2710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_go">
 <a href="#runningnodecount_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Node<wbr>Count</a>
@@ -3146,8 +2718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_go">
 <a href="#unusablenodecount_go" style="color: inherit; text-decoration: inherit;">Unusable<wbr>Node<wbr>Count</a>
@@ -3155,14 +2726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_nodejs">
 <a href="#idlenodecount_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Node<wbr>Count</a>
@@ -3170,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_nodejs">
 <a href="#leavingnodecount_nodejs" style="color: inherit; text-decoration: inherit;">leaving<wbr>Node<wbr>Count</a>
@@ -3179,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_nodejs">
 <a href="#preparingnodecount_nodejs" style="color: inherit; text-decoration: inherit;">preparing<wbr>Node<wbr>Count</a>
@@ -3188,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_nodejs">
 <a href="#runningnodecount_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Node<wbr>Count</a>
@@ -3197,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_nodejs">
 <a href="#unusablenodecount_nodejs" style="color: inherit; text-decoration: inherit;">unusable<wbr>Node<wbr>Count</a>
@@ -3206,14 +2770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idle_node_count_python">
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
@@ -3221,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leaving_node_count_python">
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
@@ -3230,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparing_node_count_python">
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
@@ -3239,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="running_node_count_python">
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
@@ -3248,8 +2806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusable_node_count_python">
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
@@ -3257,8 +2814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response</h4>
@@ -3266,9 +2822,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appinsightsreference_csharp">
 <a href="#appinsightsreference_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Reference</a>
@@ -3276,14 +2830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appinsightsreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appinsightsreference_go">
 <a href="#appinsightsreference_go" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Reference</a>
@@ -3291,14 +2842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appinsightsreference_nodejs">
 <a href="#appinsightsreference_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Reference</a>
@@ -3306,14 +2854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_insights_reference_python">
 <a href="#app_insights_reference_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights_<wbr>reference</a>
@@ -3321,8 +2866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
@@ -3330,9 +2874,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3340,14 +2882,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3355,14 +2894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3370,14 +2906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3385,8 +2918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalesettingsresponse">Scale<wbr>Settings<wbr>Response</h4>
@@ -3394,9 +2926,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_csharp">
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -3404,8 +2934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_csharp">
 <a href="#manual_csharp" style="color: inherit; text-decoration: inherit;">Manual</a>
@@ -3413,14 +2942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_go">
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -3428,8 +2954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_go">
 <a href="#manual_go" style="color: inherit; text-decoration: inherit;">Manual</a>
@@ -3437,14 +2962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_nodejs">
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -3452,8 +2974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_nodejs">
 <a href="#manual_nodejs" style="color: inherit; text-decoration: inherit;">manual</a>
@@ -3461,14 +2982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_scale_python">
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -3476,8 +2994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_python">
 <a href="#manual_python" style="color: inherit; text-decoration: inherit;">manual</a>
@@ -3485,8 +3002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="setuptaskresponse">Setup<wbr>Task<wbr>Response</h4>
@@ -3494,9 +3010,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_csharp">
 <a href="#commandline_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
@@ -3504,8 +3018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathprefix_csharp">
 <a href="#stdouterrpathprefix_csharp" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
@@ -3513,8 +3026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathsuffix_csharp">
 <a href="#stdouterrpathsuffix_csharp" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Suffix</a>
@@ -3522,8 +3034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -3531,8 +3042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
@@ -3540,14 +3050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_go">
 <a href="#commandline_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
@@ -3555,8 +3062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathprefix_go">
 <a href="#stdouterrpathprefix_go" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
@@ -3564,8 +3070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathsuffix_go">
 <a href="#stdouterrpathsuffix_go" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Suffix</a>
@@ -3573,8 +3078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -3582,8 +3086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">[]Environment<wbr>Variable<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
@@ -3591,14 +3094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">[]Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commandline_nodejs">
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
@@ -3606,8 +3106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathprefix_nodejs">
 <a href="#stdouterrpathprefix_nodejs" style="color: inherit; text-decoration: inherit;">std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
@@ -3615,8 +3114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stdouterrpathsuffix_nodejs">
 <a href="#stdouterrpathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">std<wbr>Out<wbr>Err<wbr>Path<wbr>Suffix</a>
@@ -3624,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -3633,8 +3130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
@@ -3642,14 +3138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="command_line_python">
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
@@ -3657,8 +3150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The command line to be executed on each cluster's node after it being allocated or rebooted. The command is executed in a bash subshell as a root.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="std_out_err_path_prefix_python">
 <a href="#std_out_err_path_prefix_python" style="color: inherit; text-decoration: inherit;">std_<wbr>out_<wbr>err_<wbr>path_<wbr>prefix</a>
@@ -3666,8 +3158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The prefix of a path where the Batch AI service will upload the stdout, stderr and execution log of the setup task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="std_out_err_path_suffix_python">
 <a href="#std_out_err_path_suffix_python" style="color: inherit; text-decoration: inherit;">std_<wbr>out_<wbr>err_<wbr>path_<wbr>suffix</a>
@@ -3675,8 +3166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A path segment appended by Batch AI to stdOutErrPathPrefix to form a path where stdout, stderr and execution log of the setup task will be uploaded. Batch AI creates the setup task output directories under an unique path to avoid conflicts between different clusters. The full path can be obtained by concatenation of stdOutErrPathPrefix and stdOutErrPathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -3684,8 +3174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
@@ -3693,8 +3182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response</h4>
@@ -3702,9 +3190,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountcommand_csharp">
 <a href="#mountcommand_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Command</a>
@@ -3712,8 +3198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -3721,14 +3206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountcommand_go">
 <a href="#mountcommand_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Command</a>
@@ -3736,8 +3218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
@@ -3745,14 +3226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountcommand_nodejs">
 <a href="#mountcommand_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
@@ -3760,8 +3238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
@@ -3769,14 +3246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mount_command_python">
 <a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
@@ -3784,8 +3258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
@@ -3793,8 +3266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</h4>
@@ -3802,9 +3274,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -3812,8 +3282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_csharp">
 <a href="#adminuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -3821,8 +3290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_csharp">
 <a href="#adminusersshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -3830,14 +3298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -3845,8 +3310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_go">
 <a href="#adminuserpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -3854,8 +3318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_go">
 <a href="#adminusersshpublickey_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -3863,14 +3326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
@@ -3878,8 +3338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_nodejs">
 <a href="#adminuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Password</a>
@@ -3887,8 +3346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_nodejs">
 <a href="#adminusersshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -3896,14 +3354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_user_name_python">
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
@@ -3911,8 +3366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_password_python">
 <a href="#admin_user_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>password</a>
@@ -3920,8 +3374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_ssh_public_key_python">
 <a href="#admin_user_ssh_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>ssh_<wbr>public_<wbr>key</a>
@@ -3929,8 +3382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</h4>
@@ -3938,9 +3390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagereference_csharp">
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -3948,14 +3398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -3963,14 +3410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
@@ -3978,14 +3422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
@@ -3993,8 +3434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

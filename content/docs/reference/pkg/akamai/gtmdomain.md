@@ -1,8 +1,8 @@
 
 ---
 title: "GtmDomain"
-title_tag: "Resource GtmDomain | Package Akamai"
-meta_desc: "Explore the GtmDomain resource of the Akamai package, including examples, input properties, output properties, lookup functions, and supporting types. `akamai.GtmDomain` provides the resource for creating, configuring and importing a gtm domain to integrate easily with your existing GTM infrastructure to provide a secure, high performance, highly available and scalable solution for Global Traffic Management. Note: Import requires an ID of the format: `existing_domain_name`"
+title_tag: "akamai.GtmDomain"
+meta_desc: "Documentation for the akamai.GtmDomain resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,11 +14,17 @@ meta_desc: "Explore the GtmDomain resource of the Akamai package, including exam
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Akamai = Pulumi.Akamai;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_akamai as akamai
@@ -80,9 +92,12 @@ demodomain = akamai.GtmDomain("demodomain",
     type="basic")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -96,9 +111,16 @@ const demodomain = new akamai.GtmDomain("demodomain", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GtmDomain Resource {#create}
@@ -123,9 +145,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -133,9 +153,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -143,9 +161,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -153,10 +169,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -182,9 +195,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -192,9 +203,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,9 +211,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -212,9 +219,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,18 +227,13 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -241,9 +241,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -251,9 +249,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -261,10 +257,7 @@ const demodomain = new akamai.GtmDomain("demodomain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -279,9 +272,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -290,8 +281,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamecoalescingenabled_csharp">
 <a href="#cnamecoalescingenabled_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Coalescing<wbr>Enabled</a>
@@ -299,8 +289,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -309,8 +298,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contract_csharp">
 <a href="#contract_csharp" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -319,8 +307,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulterrorpenalty_csharp">
 <a href="#defaulterrorpenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Error<wbr>Penalty</a>
@@ -328,8 +315,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientcertificate_csharp">
 <a href="#defaultsslclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -337,8 +323,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientprivatekey_csharp">
 <a href="#defaultsslclientprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -346,8 +331,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimeoutpenalty_csharp">
 <a href="#defaulttimeoutpenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Timeout<wbr>Penalty</a>
@@ -357,8 +341,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailnotificationlists_csharp">
 <a href="#emailnotificationlists_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Notification<wbr>Lists</a>
@@ -366,8 +349,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endusermappingenabled_csharp">
 <a href="#endusermappingenabled_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -375,8 +357,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -385,8 +366,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadfeedback_csharp">
 <a href="#loadfeedback_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Feedback</a>
@@ -395,8 +375,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_csharp">
 <a href="#loadimbalancepercentage_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -404,8 +383,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -414,8 +392,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_csharp">
 <a href="#waitoncomplete_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -424,14 +401,11 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -440,8 +414,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamecoalescingenabled_go">
 <a href="#cnamecoalescingenabled_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Coalescing<wbr>Enabled</a>
@@ -449,8 +422,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -459,8 +431,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contract_go">
 <a href="#contract_go" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -469,8 +440,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulterrorpenalty_go">
 <a href="#defaulterrorpenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Error<wbr>Penalty</a>
@@ -478,8 +448,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientcertificate_go">
 <a href="#defaultsslclientcertificate_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -487,8 +456,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientprivatekey_go">
 <a href="#defaultsslclientprivatekey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -496,8 +464,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimeoutpenalty_go">
 <a href="#defaulttimeoutpenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Timeout<wbr>Penalty</a>
@@ -507,8 +474,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailnotificationlists_go">
 <a href="#emailnotificationlists_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Notification<wbr>Lists</a>
@@ -516,8 +482,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endusermappingenabled_go">
 <a href="#endusermappingenabled_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -525,8 +490,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_go">
 <a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -535,8 +499,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadfeedback_go">
 <a href="#loadfeedback_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Feedback</a>
@@ -545,8 +508,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_go">
 <a href="#loadimbalancepercentage_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -554,8 +516,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -564,8 +525,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_go">
 <a href="#waitoncomplete_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -574,14 +534,11 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -590,8 +547,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamecoalescingenabled_nodejs">
 <a href="#cnamecoalescingenabled_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Coalescing<wbr>Enabled</a>
@@ -599,8 +555,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -609,8 +564,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contract_nodejs">
 <a href="#contract_nodejs" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -619,8 +573,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulterrorpenalty_nodejs">
 <a href="#defaulterrorpenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Error<wbr>Penalty</a>
@@ -628,8 +581,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientcertificate_nodejs">
 <a href="#defaultsslclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -637,8 +589,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslclientprivatekey_nodejs">
 <a href="#defaultsslclientprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -646,8 +597,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimeoutpenalty_nodejs">
 <a href="#defaulttimeoutpenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Timeout<wbr>Penalty</a>
@@ -657,8 +607,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailnotificationlists_nodejs">
 <a href="#emailnotificationlists_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Notification<wbr>Lists</a>
@@ -666,8 +615,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endusermappingenabled_nodejs">
 <a href="#endusermappingenabled_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -675,8 +623,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_nodejs">
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -685,8 +632,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadfeedback_nodejs">
 <a href="#loadfeedback_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Feedback</a>
@@ -695,8 +641,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_nodejs">
 <a href="#loadimbalancepercentage_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Imbalance<wbr>Percentage</a>
@@ -704,8 +649,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -714,8 +658,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_nodejs">
 <a href="#waitoncomplete_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>On<wbr>Complete</a>
@@ -724,14 +667,11 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -740,8 +680,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_coalescing_enabled_python">
 <a href="#cname_coalescing_enabled_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>coalescing_<wbr>enabled</a>
@@ -749,8 +688,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -759,8 +697,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contract_python">
 <a href="#contract_python" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -769,8 +706,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_error_penalty_python">
 <a href="#default_error_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>error_<wbr>penalty</a>
@@ -778,8 +714,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ssl_client_certificate_python">
 <a href="#default_ssl_client_certificate_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>client_<wbr>certificate</a>
@@ -787,8 +722,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ssl_client_private_key_python">
 <a href="#default_ssl_client_private_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>client_<wbr>private_<wbr>key</a>
@@ -796,8 +730,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_timeout_penalty_python">
 <a href="#default_timeout_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>timeout_<wbr>penalty</a>
@@ -807,8 +740,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_notification_lists_python">
 <a href="#email_notification_lists_python" style="color: inherit; text-decoration: inherit;">email_<wbr>notification_<wbr>lists</a>
@@ -816,8 +748,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_user_mapping_enabled_python">
 <a href="#end_user_mapping_enabled_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>mapping_<wbr>enabled</a>
@@ -825,8 +756,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_python">
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -835,8 +765,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_feedback_python">
 <a href="#load_feedback_python" style="color: inherit; text-decoration: inherit;">load_<wbr>feedback</a>
@@ -845,8 +774,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_imbalance_percentage_python">
 <a href="#load_imbalance_percentage_python" style="color: inherit; text-decoration: inherit;">load_<wbr>imbalance_<wbr>percentage</a>
@@ -854,8 +782,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -864,8 +791,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_on_complete_python">
 <a href="#wait_on_complete_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>on_<wbr>complete</a>
@@ -874,8 +800,7 @@ The GtmDomain resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -886,9 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaulthealthmax_csharp">
 <a href="#defaulthealthmax_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Max</a>
@@ -896,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealthmultiplier_csharp">
 <a href="#defaulthealthmultiplier_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Multiplier</a>
@@ -905,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealththreshold_csharp">
 <a href="#defaulthealththreshold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Threshold</a>
@@ -914,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmaxunreachablepenalty_csharp">
 <a href="#defaultmaxunreachablepenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -923,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultunreachablethreshold_csharp">
 <a href="#defaultunreachablethreshold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Unreachable<wbr>Threshold</a>
@@ -951,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -960,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapupdateinterval_csharp">
 <a href="#mapupdateinterval_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Update<wbr>Interval</a>
@@ -969,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxproperties_csharp">
 <a href="#maxproperties_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
@@ -978,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxresources_csharp">
 <a href="#maxresources_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Resources</a>
@@ -987,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtesttimeout_csharp">
 <a href="#maxtesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Test<wbr>Timeout</a>
@@ -996,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1005,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpingableregionfraction_csharp">
 <a href="#minpingableregionfraction_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -1014,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintestinterval_csharp">
 <a href="#mintestinterval_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Test<wbr>Interval</a>
@@ -1023,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minttl_csharp">
 <a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -1032,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pinginterval_csharp">
 <a href="#pinginterval_csharp" style="color: inherit; text-decoration: inherit;">Ping<wbr>Interval</a>
@@ -1041,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pingpacketsize_csharp">
 <a href="#pingpacketsize_csharp" style="color: inherit; text-decoration: inherit;">Ping<wbr>Packet<wbr>Size</a>
@@ -1050,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roundrobinprefix_csharp">
 <a href="#roundrobinprefix_csharp" style="color: inherit; text-decoration: inherit;">Round<wbr>Robin<wbr>Prefix</a>
@@ -1059,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorlivenesscount_csharp">
 <a href="#servermonitorlivenesscount_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Liveness<wbr>Count</a>
@@ -1068,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorloadcount_csharp">
 <a href="#servermonitorloadcount_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Load<wbr>Count</a>
@@ -1077,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorpool_csharp">
 <a href="#servermonitorpool_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Pool</a>
@@ -1086,14 +990,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaulthealthmax_go">
 <a href="#defaulthealthmax_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Max</a>
@@ -1101,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealthmultiplier_go">
 <a href="#defaulthealthmultiplier_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Multiplier</a>
@@ -1110,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealththreshold_go">
 <a href="#defaulthealththreshold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Threshold</a>
@@ -1119,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmaxunreachablepenalty_go">
 <a href="#defaultmaxunreachablepenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -1128,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultunreachablethreshold_go">
 <a href="#defaultunreachablethreshold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Unreachable<wbr>Threshold</a>
@@ -1156,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1165,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapupdateinterval_go">
 <a href="#mapupdateinterval_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Update<wbr>Interval</a>
@@ -1174,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxproperties_go">
 <a href="#maxproperties_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
@@ -1183,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxresources_go">
 <a href="#maxresources_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Resources</a>
@@ -1192,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtesttimeout_go">
 <a href="#maxtesttimeout_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Test<wbr>Timeout</a>
@@ -1201,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1210,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpingableregionfraction_go">
 <a href="#minpingableregionfraction_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -1219,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintestinterval_go">
 <a href="#mintestinterval_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Test<wbr>Interval</a>
@@ -1228,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minttl_go">
 <a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -1237,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pinginterval_go">
 <a href="#pinginterval_go" style="color: inherit; text-decoration: inherit;">Ping<wbr>Interval</a>
@@ -1246,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pingpacketsize_go">
 <a href="#pingpacketsize_go" style="color: inherit; text-decoration: inherit;">Ping<wbr>Packet<wbr>Size</a>
@@ -1255,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roundrobinprefix_go">
 <a href="#roundrobinprefix_go" style="color: inherit; text-decoration: inherit;">Round<wbr>Robin<wbr>Prefix</a>
@@ -1264,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorlivenesscount_go">
 <a href="#servermonitorlivenesscount_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Liveness<wbr>Count</a>
@@ -1273,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorloadcount_go">
 <a href="#servermonitorloadcount_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Load<wbr>Count</a>
@@ -1282,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorpool_go">
 <a href="#servermonitorpool_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Pool</a>
@@ -1291,14 +1173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaulthealthmax_nodejs">
 <a href="#defaulthealthmax_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Max</a>
@@ -1306,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealthmultiplier_nodejs">
 <a href="#defaulthealthmultiplier_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Multiplier</a>
@@ -1315,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthealththreshold_nodejs">
 <a href="#defaulthealththreshold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Threshold</a>
@@ -1324,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmaxunreachablepenalty_nodejs">
 <a href="#defaultmaxunreachablepenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -1333,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultunreachablethreshold_nodejs">
 <a href="#defaultunreachablethreshold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Unreachable<wbr>Threshold</a>
@@ -1361,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1370,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapupdateinterval_nodejs">
 <a href="#mapupdateinterval_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Update<wbr>Interval</a>
@@ -1379,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxproperties_nodejs">
 <a href="#maxproperties_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Properties</a>
@@ -1388,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxresources_nodejs">
 <a href="#maxresources_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resources</a>
@@ -1397,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxtesttimeout_nodejs">
 <a href="#maxtesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Test<wbr>Timeout</a>
@@ -1406,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1415,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpingableregionfraction_nodejs">
 <a href="#minpingableregionfraction_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -1424,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintestinterval_nodejs">
 <a href="#mintestinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Test<wbr>Interval</a>
@@ -1433,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minttl_nodejs">
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
@@ -1442,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pinginterval_nodejs">
 <a href="#pinginterval_nodejs" style="color: inherit; text-decoration: inherit;">ping<wbr>Interval</a>
@@ -1451,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pingpacketsize_nodejs">
 <a href="#pingpacketsize_nodejs" style="color: inherit; text-decoration: inherit;">ping<wbr>Packet<wbr>Size</a>
@@ -1460,8 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roundrobinprefix_nodejs">
 <a href="#roundrobinprefix_nodejs" style="color: inherit; text-decoration: inherit;">round<wbr>Robin<wbr>Prefix</a>
@@ -1469,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorlivenesscount_nodejs">
 <a href="#servermonitorlivenesscount_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Liveness<wbr>Count</a>
@@ -1478,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorloadcount_nodejs">
 <a href="#servermonitorloadcount_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Load<wbr>Count</a>
@@ -1487,8 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitorpool_nodejs">
 <a href="#servermonitorpool_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Pool</a>
@@ -1496,14 +1356,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="default_health_max_python">
 <a href="#default_health_max_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>max</a>
@@ -1511,8 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_health_multiplier_python">
 <a href="#default_health_multiplier_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>multiplier</a>
@@ -1520,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_health_threshold_python">
 <a href="#default_health_threshold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>threshold</a>
@@ -1529,8 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_max_unreachable_penalty_python">
 <a href="#default_max_unreachable_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>unreachable_<wbr>penalty</a>
@@ -1538,8 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_unreachable_threshold_python">
 <a href="#default_unreachable_threshold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>unreachable_<wbr>threshold</a>
@@ -1566,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1575,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="map_update_interval_python">
 <a href="#map_update_interval_python" style="color: inherit; text-decoration: inherit;">map_<wbr>update_<wbr>interval</a>
@@ -1584,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_properties_python">
 <a href="#max_properties_python" style="color: inherit; text-decoration: inherit;">max_<wbr>properties</a>
@@ -1593,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_resources_python">
 <a href="#max_resources_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resources</a>
@@ -1602,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_test_timeout_python">
 <a href="#max_test_timeout_python" style="color: inherit; text-decoration: inherit;">max_<wbr>test_<wbr>timeout</a>
@@ -1611,8 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1620,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_pingable_region_fraction_python">
 <a href="#min_pingable_region_fraction_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pingable_<wbr>region_<wbr>fraction</a>
@@ -1629,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_test_interval_python">
 <a href="#min_test_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>test_<wbr>interval</a>
@@ -1638,8 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_ttl_python">
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
@@ -1647,8 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ping_interval_python">
 <a href="#ping_interval_python" style="color: inherit; text-decoration: inherit;">ping_<wbr>interval</a>
@@ -1656,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ping_packet_size_python">
 <a href="#ping_packet_size_python" style="color: inherit; text-decoration: inherit;">ping_<wbr>packet_<wbr>size</a>
@@ -1665,8 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="round_robin_prefix_python">
 <a href="#round_robin_prefix_python" style="color: inherit; text-decoration: inherit;">round_<wbr>robin_<wbr>prefix</a>
@@ -1674,8 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitor_liveness_count_python">
 <a href="#servermonitor_liveness_count_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>liveness_<wbr>count</a>
@@ -1683,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitor_load_count_python">
 <a href="#servermonitor_load_count_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>load_<wbr>count</a>
@@ -1692,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermonitor_pool_python">
 <a href="#servermonitor_pool_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>pool</a>
@@ -1701,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1829,9 +1666,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cnamecoalescingenabled_csharp">
 <a href="#state_cnamecoalescingenabled_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Coalescing<wbr>Enabled</a>
@@ -1839,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -1849,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contract_csharp">
 <a href="#state_contract_csharp" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -1859,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulterrorpenalty_csharp">
 <a href="#state_defaulterrorpenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Error<wbr>Penalty</a>
@@ -1868,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmax_csharp">
 <a href="#state_defaulthealthmax_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Max</a>
@@ -1877,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmultiplier_csharp">
 <a href="#state_defaulthealthmultiplier_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Multiplier</a>
@@ -1886,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealththreshold_csharp">
 <a href="#state_defaulthealththreshold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Threshold</a>
@@ -1895,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultmaxunreachablepenalty_csharp">
 <a href="#state_defaultmaxunreachablepenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -1904,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientcertificate_csharp">
 <a href="#state_defaultsslclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -1913,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientprivatekey_csharp">
 <a href="#state_defaultsslclientprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -1922,8 +1748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttimeoutpenalty_csharp">
 <a href="#state_defaulttimeoutpenalty_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Timeout<wbr>Penalty</a>
@@ -1933,8 +1758,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultunreachablethreshold_csharp">
 <a href="#state_defaultunreachablethreshold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Unreachable<wbr>Threshold</a>
@@ -1961,8 +1785,7 @@ The following state arguments are supported:
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailnotificationlists_csharp">
 <a href="#state_emailnotificationlists_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Notification<wbr>Lists</a>
@@ -1970,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endusermappingenabled_csharp">
 <a href="#state_endusermappingenabled_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -1979,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_csharp">
 <a href="#state_group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -1989,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadfeedback_csharp">
 <a href="#state_loadfeedback_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Feedback</a>
@@ -1999,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_csharp">
 <a href="#state_loadimbalancepercentage_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -2008,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapupdateinterval_csharp">
 <a href="#state_mapupdateinterval_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Update<wbr>Interval</a>
@@ -2017,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxproperties_csharp">
 <a href="#state_maxproperties_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
@@ -2026,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxresources_csharp">
 <a href="#state_maxresources_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Resources</a>
@@ -2035,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtesttimeout_csharp">
 <a href="#state_maxtesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Test<wbr>Timeout</a>
@@ -2044,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2053,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minpingableregionfraction_csharp">
 <a href="#state_minpingableregionfraction_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -2062,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintestinterval_csharp">
 <a href="#state_mintestinterval_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Test<wbr>Interval</a>
@@ -2071,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minttl_csharp">
 <a href="#state_minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -2080,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2090,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pinginterval_csharp">
 <a href="#state_pinginterval_csharp" style="color: inherit; text-decoration: inherit;">Ping<wbr>Interval</a>
@@ -2099,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pingpacketsize_csharp">
 <a href="#state_pingpacketsize_csharp" style="color: inherit; text-decoration: inherit;">Ping<wbr>Packet<wbr>Size</a>
@@ -2108,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roundrobinprefix_csharp">
 <a href="#state_roundrobinprefix_csharp" style="color: inherit; text-decoration: inherit;">Round<wbr>Robin<wbr>Prefix</a>
@@ -2117,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorlivenesscount_csharp">
 <a href="#state_servermonitorlivenesscount_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Liveness<wbr>Count</a>
@@ -2126,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorloadcount_csharp">
 <a href="#state_servermonitorloadcount_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Load<wbr>Count</a>
@@ -2135,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorpool_csharp">
 <a href="#state_servermonitorpool_csharp" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Pool</a>
@@ -2144,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2154,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_csharp">
 <a href="#state_waitoncomplete_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -2164,14 +1966,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cnamecoalescingenabled_go">
 <a href="#state_cnamecoalescingenabled_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Coalescing<wbr>Enabled</a>
@@ -2179,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -2189,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contract_go">
 <a href="#state_contract_go" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -2199,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulterrorpenalty_go">
 <a href="#state_defaulterrorpenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Error<wbr>Penalty</a>
@@ -2208,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmax_go">
 <a href="#state_defaulthealthmax_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Max</a>
@@ -2217,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmultiplier_go">
 <a href="#state_defaulthealthmultiplier_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Multiplier</a>
@@ -2226,8 +2020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealththreshold_go">
 <a href="#state_defaulthealththreshold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Health<wbr>Threshold</a>
@@ -2235,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultmaxunreachablepenalty_go">
 <a href="#state_defaultmaxunreachablepenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -2244,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientcertificate_go">
 <a href="#state_defaultsslclientcertificate_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -2253,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientprivatekey_go">
 <a href="#state_defaultsslclientprivatekey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -2262,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttimeoutpenalty_go">
 <a href="#state_defaulttimeoutpenalty_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Timeout<wbr>Penalty</a>
@@ -2273,8 +2062,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultunreachablethreshold_go">
 <a href="#state_defaultunreachablethreshold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Unreachable<wbr>Threshold</a>
@@ -2301,8 +2089,7 @@ The following state arguments are supported:
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailnotificationlists_go">
 <a href="#state_emailnotificationlists_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Notification<wbr>Lists</a>
@@ -2310,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endusermappingenabled_go">
 <a href="#state_endusermappingenabled_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -2319,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_go">
 <a href="#state_group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -2329,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadfeedback_go">
 <a href="#state_loadfeedback_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Feedback</a>
@@ -2339,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_go">
 <a href="#state_loadimbalancepercentage_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -2348,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapupdateinterval_go">
 <a href="#state_mapupdateinterval_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Update<wbr>Interval</a>
@@ -2357,8 +2139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxproperties_go">
 <a href="#state_maxproperties_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Properties</a>
@@ -2366,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxresources_go">
 <a href="#state_maxresources_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Resources</a>
@@ -2375,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtesttimeout_go">
 <a href="#state_maxtesttimeout_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Test<wbr>Timeout</a>
@@ -2384,8 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2393,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minpingableregionfraction_go">
 <a href="#state_minpingableregionfraction_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -2402,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintestinterval_go">
 <a href="#state_mintestinterval_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Test<wbr>Interval</a>
@@ -2411,8 +2187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minttl_go">
 <a href="#state_minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -2420,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2430,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pinginterval_go">
 <a href="#state_pinginterval_go" style="color: inherit; text-decoration: inherit;">Ping<wbr>Interval</a>
@@ -2439,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pingpacketsize_go">
 <a href="#state_pingpacketsize_go" style="color: inherit; text-decoration: inherit;">Ping<wbr>Packet<wbr>Size</a>
@@ -2448,8 +2220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roundrobinprefix_go">
 <a href="#state_roundrobinprefix_go" style="color: inherit; text-decoration: inherit;">Round<wbr>Robin<wbr>Prefix</a>
@@ -2457,8 +2228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorlivenesscount_go">
 <a href="#state_servermonitorlivenesscount_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Liveness<wbr>Count</a>
@@ -2466,8 +2236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorloadcount_go">
 <a href="#state_servermonitorloadcount_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Load<wbr>Count</a>
@@ -2475,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorpool_go">
 <a href="#state_servermonitorpool_go" style="color: inherit; text-decoration: inherit;">Servermonitor<wbr>Pool</a>
@@ -2484,8 +2252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2494,8 +2261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_go">
 <a href="#state_waitoncomplete_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -2504,14 +2270,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cnamecoalescingenabled_nodejs">
 <a href="#state_cnamecoalescingenabled_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Coalescing<wbr>Enabled</a>
@@ -2519,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -2529,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contract_nodejs">
 <a href="#state_contract_nodejs" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -2539,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulterrorpenalty_nodejs">
 <a href="#state_defaulterrorpenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Error<wbr>Penalty</a>
@@ -2548,8 +2308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmax_nodejs">
 <a href="#state_defaulthealthmax_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Max</a>
@@ -2557,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealthmultiplier_nodejs">
 <a href="#state_defaulthealthmultiplier_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Multiplier</a>
@@ -2566,8 +2324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthealththreshold_nodejs">
 <a href="#state_defaulthealththreshold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Health<wbr>Threshold</a>
@@ -2575,8 +2332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultmaxunreachablepenalty_nodejs">
 <a href="#state_defaultmaxunreachablepenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Max<wbr>Unreachable<wbr>Penalty</a>
@@ -2584,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientcertificate_nodejs">
 <a href="#state_defaultsslclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Client<wbr>Certificate</a>
@@ -2593,8 +2348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsslclientprivatekey_nodejs">
 <a href="#state_defaultsslclientprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Client<wbr>Private<wbr>Key</a>
@@ -2602,8 +2356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttimeoutpenalty_nodejs">
 <a href="#state_defaulttimeoutpenalty_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Timeout<wbr>Penalty</a>
@@ -2613,8 +2366,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultunreachablethreshold_nodejs">
 <a href="#state_defaultunreachablethreshold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Unreachable<wbr>Threshold</a>
@@ -2641,8 +2393,7 @@ The following state arguments are supported:
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailnotificationlists_nodejs">
 <a href="#state_emailnotificationlists_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Notification<wbr>Lists</a>
@@ -2650,8 +2401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endusermappingenabled_nodejs">
 <a href="#state_endusermappingenabled_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Mapping<wbr>Enabled</a>
@@ -2659,8 +2409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_nodejs">
 <a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -2669,8 +2418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadfeedback_nodejs">
 <a href="#state_loadfeedback_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Feedback</a>
@@ -2679,8 +2427,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_nodejs">
 <a href="#state_loadimbalancepercentage_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Imbalance<wbr>Percentage</a>
@@ -2688,8 +2435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapupdateinterval_nodejs">
 <a href="#state_mapupdateinterval_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Update<wbr>Interval</a>
@@ -2697,8 +2443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxproperties_nodejs">
 <a href="#state_maxproperties_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Properties</a>
@@ -2706,8 +2451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxresources_nodejs">
 <a href="#state_maxresources_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resources</a>
@@ -2715,8 +2459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtesttimeout_nodejs">
 <a href="#state_maxtesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Test<wbr>Timeout</a>
@@ -2724,8 +2467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -2733,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minpingableregionfraction_nodejs">
 <a href="#state_minpingableregionfraction_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pingable<wbr>Region<wbr>Fraction</a>
@@ -2742,8 +2483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintestinterval_nodejs">
 <a href="#state_mintestinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Test<wbr>Interval</a>
@@ -2751,8 +2491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minttl_nodejs">
 <a href="#state_minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
@@ -2760,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2770,8 +2508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pinginterval_nodejs">
 <a href="#state_pinginterval_nodejs" style="color: inherit; text-decoration: inherit;">ping<wbr>Interval</a>
@@ -2779,8 +2516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pingpacketsize_nodejs">
 <a href="#state_pingpacketsize_nodejs" style="color: inherit; text-decoration: inherit;">ping<wbr>Packet<wbr>Size</a>
@@ -2788,8 +2524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roundrobinprefix_nodejs">
 <a href="#state_roundrobinprefix_nodejs" style="color: inherit; text-decoration: inherit;">round<wbr>Robin<wbr>Prefix</a>
@@ -2797,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorlivenesscount_nodejs">
 <a href="#state_servermonitorlivenesscount_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Liveness<wbr>Count</a>
@@ -2806,8 +2540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorloadcount_nodejs">
 <a href="#state_servermonitorloadcount_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Load<wbr>Count</a>
@@ -2815,8 +2548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitorpool_nodejs">
 <a href="#state_servermonitorpool_nodejs" style="color: inherit; text-decoration: inherit;">servermonitor<wbr>Pool</a>
@@ -2824,8 +2556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2834,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_nodejs">
 <a href="#state_waitoncomplete_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>On<wbr>Complete</a>
@@ -2844,14 +2574,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cname_coalescing_enabled_python">
 <a href="#state_cname_coalescing_enabled_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>coalescing_<wbr>enabled</a>
@@ -2859,8 +2586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -2869,8 +2595,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contract_python">
 <a href="#state_contract_python" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -2879,8 +2604,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contract ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_error_penalty_python">
 <a href="#state_default_error_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>error_<wbr>penalty</a>
@@ -2888,8 +2612,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_health_max_python">
 <a href="#state_default_health_max_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>max</a>
@@ -2897,8 +2620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_health_multiplier_python">
 <a href="#state_default_health_multiplier_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>multiplier</a>
@@ -2906,8 +2628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_health_threshold_python">
 <a href="#state_default_health_threshold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>health_<wbr>threshold</a>
@@ -2915,8 +2636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_max_unreachable_penalty_python">
 <a href="#state_default_max_unreachable_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>unreachable_<wbr>penalty</a>
@@ -2924,8 +2644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_ssl_client_certificate_python">
 <a href="#state_default_ssl_client_certificate_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>client_<wbr>certificate</a>
@@ -2933,8 +2652,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_ssl_client_private_key_python">
 <a href="#state_default_ssl_client_private_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>client_<wbr>private_<wbr>key</a>
@@ -2942,8 +2660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_timeout_penalty_python">
 <a href="#state_default_timeout_penalty_python" style="color: inherit; text-decoration: inherit;">default_<wbr>timeout_<wbr>penalty</a>
@@ -2953,8 +2670,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}* `load_imbalance_percentage`
 * `default_ssl_client_private_key`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_unreachable_threshold_python">
 <a href="#state_default_unreachable_threshold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>unreachable_<wbr>threshold</a>
@@ -2981,8 +2697,7 @@ The following state arguments are supported:
 * `default_health_threshold`
 * `min_test_interval`
 * `ping_packet_size`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_notification_lists_python">
 <a href="#state_email_notification_lists_python" style="color: inherit; text-decoration: inherit;">email_<wbr>notification_<wbr>lists</a>
@@ -2990,8 +2705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_end_user_mapping_enabled_python">
 <a href="#state_end_user_mapping_enabled_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>mapping_<wbr>enabled</a>
@@ -2999,8 +2713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_python">
 <a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -3009,8 +2722,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The currently selected group ID (if creating domain)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_feedback_python">
 <a href="#state_load_feedback_python" style="color: inherit; text-decoration: inherit;">load_<wbr>feedback</a>
@@ -3019,8 +2731,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}* `default_ssl_client_certificate`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_imbalance_percentage_python">
 <a href="#state_load_imbalance_percentage_python" style="color: inherit; text-decoration: inherit;">load_<wbr>imbalance_<wbr>percentage</a>
@@ -3028,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_map_update_interval_python">
 <a href="#state_map_update_interval_python" style="color: inherit; text-decoration: inherit;">map_<wbr>update_<wbr>interval</a>
@@ -3037,8 +2747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_properties_python">
 <a href="#state_max_properties_python" style="color: inherit; text-decoration: inherit;">max_<wbr>properties</a>
@@ -3046,8 +2755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_resources_python">
 <a href="#state_max_resources_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resources</a>
@@ -3055,8 +2763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_test_timeout_python">
 <a href="#state_max_test_timeout_python" style="color: inherit; text-decoration: inherit;">max_<wbr>test_<wbr>timeout</a>
@@ -3064,8 +2771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -3073,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_pingable_region_fraction_python">
 <a href="#state_min_pingable_region_fraction_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pingable_<wbr>region_<wbr>fraction</a>
@@ -3082,8 +2787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_test_interval_python">
 <a href="#state_min_test_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>test_<wbr>interval</a>
@@ -3091,8 +2795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_ttl_python">
 <a href="#state_min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
@@ -3100,8 +2803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3110,8 +2812,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ping_interval_python">
 <a href="#state_ping_interval_python" style="color: inherit; text-decoration: inherit;">ping_<wbr>interval</a>
@@ -3119,8 +2820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ping_packet_size_python">
 <a href="#state_ping_packet_size_python" style="color: inherit; text-decoration: inherit;">ping_<wbr>packet_<wbr>size</a>
@@ -3128,8 +2828,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_round_robin_prefix_python">
 <a href="#state_round_robin_prefix_python" style="color: inherit; text-decoration: inherit;">round_<wbr>robin_<wbr>prefix</a>
@@ -3137,8 +2836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitor_liveness_count_python">
 <a href="#state_servermonitor_liveness_count_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>liveness_<wbr>count</a>
@@ -3146,8 +2844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitor_load_count_python">
 <a href="#state_servermonitor_load_count_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>load_<wbr>count</a>
@@ -3155,8 +2852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servermonitor_pool_python">
 <a href="#state_servermonitor_pool_python" style="color: inherit; text-decoration: inherit;">servermonitor_<wbr>pool</a>
@@ -3164,8 +2860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3174,8 +2869,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_on_complete_python">
 <a href="#state_wait_on_complete_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>on_<wbr>complete</a>
@@ -3184,8 +2878,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3201,6 +2894,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 </dl>
 

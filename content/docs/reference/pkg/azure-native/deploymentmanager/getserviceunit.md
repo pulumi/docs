@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetopologyname_csharp">
 <a href="#servicetopologyname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Topology<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceunitname_csharp">
 <a href="#serviceunitname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Unit<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetopologyname_go">
 <a href="#servicetopologyname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Topology<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceunitname_go">
 <a href="#serviceunitname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Unit<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetopologyname_nodejs">
 <a href="#servicetopologyname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Topology<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceunitname_nodejs">
 <a href="#serviceunitname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Unit<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_topology_name_python">
 <a href="#service_topology_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>topology_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_unit_name_python">
 <a href="#service_unit_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>unit_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentmode_csharp">
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourcegroup_csharp">
 <a href="#targetresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -301,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentmode_go">
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourcegroup_go">
 <a href="#targetresourcegroup_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentmode_nodejs">
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourcegroup_nodejs">
 <a href="#targetresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -457,14 +404,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deployment_mode_python">
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_resource_group_python">
 <a href="#target_resource_group_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_csharp">
 <a href="#parametersartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_csharp">
 <a href="#parametersuri_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_csharp">
 <a href="#templateartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -578,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_csharp">
 <a href="#templateuri_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
@@ -587,14 +518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_go">
 <a href="#parametersartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_go">
 <a href="#parametersuri_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_go">
 <a href="#templateartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_go">
 <a href="#templateuri_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
@@ -629,14 +554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_nodejs">
 <a href="#parametersartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_nodejs">
 <a href="#parametersuri_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Uri</a>
@@ -653,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_nodejs">
 <a href="#templateartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_nodejs">
 <a href="#templateuri_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uri</a>
@@ -671,14 +590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_artifact_source_relative_path_python">
 <a href="#parameters_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
@@ -686,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_uri_python">
 <a href="#parameters_uri_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>uri</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_artifact_source_relative_path_python">
 <a href="#template_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_uri_python">
 <a href="#template_uri_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uri</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

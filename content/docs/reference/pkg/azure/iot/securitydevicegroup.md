@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.iot.SecurityDeviceGroup resource with ex
 Manages a Iot Security Device Group.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -82,9 +88,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -150,9 +159,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -184,9 +196,12 @@ example_security_device_group = azure.iot.SecurityDeviceGroup("exampleSecurityDe
     opts=pulumi.ResourceOptions(depends_on=[example_security_solution]))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -223,9 +238,16 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecurityDeviceGroup Resource {#create}
@@ -250,9 +272,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +280,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +288,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +296,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -309,9 +322,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -319,9 +330,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -329,9 +338,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -339,9 +346,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -349,18 +354,13 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -368,9 +368,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -378,9 +376,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -388,10 +384,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -406,9 +399,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubid_csharp">
 <a href="#iothubid_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Id</a>
@@ -417,8 +408,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrule_csharp">
 <a href="#allowrule_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
@@ -427,8 +417,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -437,8 +426,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangerules_csharp">
 <a href="#rangerules_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
@@ -447,14 +435,11 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegrouprangerule">List&lt;Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubid_go">
 <a href="#iothubid_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Id</a>
@@ -463,8 +448,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrule_go">
 <a href="#allowrule_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
@@ -473,8 +457,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -483,8 +466,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangerules_go">
 <a href="#rangerules_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
@@ -493,14 +475,11 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubid_nodejs">
 <a href="#iothubid_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Id</a>
@@ -509,8 +488,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrule_nodejs">
 <a href="#allowrule_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rule</a>
@@ -519,8 +497,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +506,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangerules_nodejs">
 <a href="#rangerules_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Rules</a>
@@ -539,14 +515,11 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegrouprangerule">Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothub_id_python">
 <a href="#iothub_id_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>id</a>
@@ -555,8 +528,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_rule_python">
 <a href="#allow_rule_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rule</a>
@@ -565,8 +537,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -575,8 +546,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="range_rules_python">
 <a href="#range_rules_python" style="color: inherit; text-decoration: inherit;">range_<wbr>rules</a>
@@ -585,8 +555,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#securitydevicegrouprangerule">Sequence[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -597,9 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -607,14 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,14 +586,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,14 +598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -780,9 +737,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowrule_csharp">
 <a href="#state_allowrule_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
@@ -791,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubid_csharp">
 <a href="#state_iothubid_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Id</a>
@@ -801,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -811,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangerules_csharp">
 <a href="#state_rangerules_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
@@ -821,14 +773,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegrouprangerule">List&lt;Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowrule_go">
 <a href="#state_allowrule_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
@@ -837,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubid_go">
 <a href="#state_iothubid_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Id</a>
@@ -847,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -857,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangerules_go">
 <a href="#state_rangerules_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
@@ -867,14 +813,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowrule_nodejs">
 <a href="#state_allowrule_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rule</a>
@@ -883,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubid_nodejs">
 <a href="#state_iothubid_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Id</a>
@@ -893,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -903,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangerules_nodejs">
 <a href="#state_rangerules_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Rules</a>
@@ -913,14 +853,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegrouprangerule">Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_rule_python">
 <a href="#state_allow_rule_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rule</a>
@@ -929,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothub_id_python">
 <a href="#state_iothub_id_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>id</a>
@@ -939,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -949,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_range_rules_python">
 <a href="#state_range_rules_python" style="color: inherit; text-decoration: inherit;">range_<wbr>rules</a>
@@ -959,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitydevicegrouprangerule">Sequence[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -975,9 +908,7 @@ The following state arguments are supported:
 <h4 id="securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectiontoipnotalloweds_csharp">
 <a href="#connectiontoipnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
@@ -986,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localusernotalloweds_csharp">
 <a href="#localusernotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>User<wbr>Not<wbr>Alloweds</a>
@@ -996,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processnotalloweds_csharp">
 <a href="#processnotalloweds_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Not<wbr>Alloweds</a>
@@ -1006,14 +935,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectiontoipnotalloweds_go">
 <a href="#connectiontoipnotalloweds_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
@@ -1022,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localusernotalloweds_go">
 <a href="#localusernotalloweds_go" style="color: inherit; text-decoration: inherit;">Local<wbr>User<wbr>Not<wbr>Alloweds</a>
@@ -1032,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processnotalloweds_go">
 <a href="#processnotalloweds_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Not<wbr>Alloweds</a>
@@ -1042,14 +966,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectiontoipnotalloweds_nodejs">
 <a href="#connectiontoipnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
@@ -1058,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localusernotalloweds_nodejs">
 <a href="#localusernotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>User<wbr>Not<wbr>Alloweds</a>
@@ -1068,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processnotalloweds_nodejs">
 <a href="#processnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Not<wbr>Alloweds</a>
@@ -1078,14 +997,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_to_ip_not_alloweds_python">
 <a href="#connection_to_ip_not_alloweds_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>to_<wbr>ip_<wbr>not_<wbr>alloweds</a>
@@ -1094,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_user_not_alloweds_python">
 <a href="#local_user_not_alloweds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>user_<wbr>not_<wbr>alloweds</a>
@@ -1104,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="process_not_alloweds_python">
 <a href="#process_not_alloweds_python" style="color: inherit; text-decoration: inherit;">process_<wbr>not_<wbr>alloweds</a>
@@ -1114,16 +1028,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitydevicegrouprangerule">Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1132,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -1142,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -1152,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1162,14 +1070,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1178,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -1188,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -1198,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1208,14 +1110,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1224,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -1234,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -1244,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1254,14 +1150,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1270,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -1280,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -1290,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1300,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1322,6 +1211,6 @@ Iot Security Device Group can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

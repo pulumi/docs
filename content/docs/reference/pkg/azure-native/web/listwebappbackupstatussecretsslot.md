@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupid_csharp">
 <a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of backup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_csharp">
 <a href="#slot_csharp" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupname_csharp">
 <a href="#backupname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Name</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedule_csharp">
 <a href="#backupschedule_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule</a>
@@ -115,8 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_csharp">
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -124,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -133,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -142,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupid_go">
 <a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of backup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_go">
 <a href="#slot_go" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -184,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -193,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupname_go">
 <a href="#backupname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Name</a>
@@ -202,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedule_go">
 <a href="#backupschedule_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule</a>
@@ -211,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_go">
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -220,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsetting">[]Database<wbr>Backup<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -229,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -238,14 +215,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupid_nodejs">
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
@@ -253,8 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of backup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -262,8 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -271,8 +243,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_nodejs">
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -280,8 +251,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -289,8 +259,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupname_nodejs">
 <a href="#backupname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Name</a>
@@ -298,8 +267,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedule_nodejs">
 <a href="#backupschedule_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule</a>
@@ -307,8 +275,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_nodejs">
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -316,8 +283,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsetting">Database<wbr>Backup<wbr>Setting[]</a></span>
     </dt>
-    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -325,8 +291,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -334,14 +299,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_id_python">
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
@@ -349,8 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of backup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -358,8 +319,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -367,8 +327,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_python">
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -376,8 +335,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of web app slot. If not specified then will default to production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -385,8 +343,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_name_python">
 <a href="#backup_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>name</a>
@@ -394,8 +351,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_schedule_python">
 <a href="#backup_schedule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule</a>
@@ -403,8 +359,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -412,8 +367,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsetting">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -421,8 +375,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -430,8 +383,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -444,9 +396,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupid_csharp">
 <a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -454,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blobname_csharp">
 <a href="#blobname_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Name</a>
@@ -463,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationid_csharp">
 <a href="#correlationid_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -472,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -481,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databases_csharp">
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -490,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finishedtimestamp_csharp">
 <a href="#finishedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Finished<wbr>Time<wbr>Stamp</a>
@@ -499,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -508,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrestoretimestamp_csharp">
 <a href="#lastrestoretimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Restore<wbr>Time<wbr>Stamp</a>
@@ -517,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_csharp">
 <a href="#log_csharp" style="color: inherit; text-decoration: inherit;">Log</a>
@@ -526,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -535,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scheduled_csharp">
 <a href="#scheduled_csharp" style="color: inherit; text-decoration: inherit;">Scheduled</a>
@@ -544,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_csharp">
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -553,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -562,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -571,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -580,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -589,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websitesizeinbytes_csharp">
 <a href="#websitesizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -598,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -607,14 +540,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupid_go">
 <a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blobname_go">
 <a href="#blobname_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Name</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationid_go">
 <a href="#correlationid_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -649,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databases_go">
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -658,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsettingresponse">[]Database<wbr>Backup<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finishedtimestamp_go">
 <a href="#finishedtimestamp_go" style="color: inherit; text-decoration: inherit;">Finished<wbr>Time<wbr>Stamp</a>
@@ -667,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrestoretimestamp_go">
 <a href="#lastrestoretimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Restore<wbr>Time<wbr>Stamp</a>
@@ -685,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_go">
 <a href="#log_go" style="color: inherit; text-decoration: inherit;">Log</a>
@@ -694,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -703,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scheduled_go">
 <a href="#scheduled_go" style="color: inherit; text-decoration: inherit;">Scheduled</a>
@@ -712,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_go">
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -721,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -730,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -739,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -748,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -757,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websitesizeinbytes_go">
 <a href="#websitesizeinbytes_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -766,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -775,14 +688,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupid_nodejs">
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blobname_nodejs">
 <a href="#blobname_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Name</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationid_nodejs">
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databases_nodejs">
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsettingresponse">Database<wbr>Backup<wbr>Setting<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finishedtimestamp_nodejs">
 <a href="#finishedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">finished<wbr>Time<wbr>Stamp</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrestoretimestamp_nodejs">
 <a href="#lastrestoretimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Restore<wbr>Time<wbr>Stamp</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_nodejs">
 <a href="#log_nodejs" style="color: inherit; text-decoration: inherit;">log</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scheduled_nodejs">
 <a href="#scheduled_nodejs" style="color: inherit; text-decoration: inherit;">scheduled</a>
@@ -880,8 +780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_nodejs">
 <a href="#sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
@@ -889,8 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -898,8 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -907,8 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -916,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -925,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="websitesizeinbytes_nodejs">
 <a href="#websitesizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -934,8 +828,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -943,14 +836,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backup_id_python">
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blob_name_python">
 <a href="#blob_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>name</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the blob which contains data for this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlation_id_python">
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of the backup creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databasebackupsettingresponse">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finished_time_stamp_python">
 <a href="#finished_time_stamp_python" style="color: inherit; text-decoration: inherit;">finished_<wbr>time_<wbr>stamp</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when this backup finished.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_restore_time_stamp_python">
 <a href="#last_restore_time_stamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>restore_<wbr>time_<wbr>stamp</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp of a last restore operation which used this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_python">
 <a href="#log_python" style="color: inherit; text-decoration: inherit;">log</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details regarding this backup. Might contain an error message.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scheduled_python">
 <a href="#scheduled_python" style="color: inherit; text-decoration: inherit;">scheduled</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if this backup has been created due to a schedule being triggered.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_in_bytes_python">
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the backup in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SAS URL for the storage account container which contains this backup.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="website_size_in_bytes_python">
 <a href="#website_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">website_<wbr>size_<wbr>in_<wbr>bytes</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of the original web app which has been backed up.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,9 +998,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_csharp">
 <a href="#frequencyinterval_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -1136,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencyunit_csharp">
 <a href="#frequencyunit_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Unit</a>
@@ -1145,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencyunit">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Frequency<wbr>Unit</a></span>
     </dt>
-    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepatleastonebackup_csharp">
 <a href="#keepatleastonebackup_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
@@ -1154,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_csharp">
 <a href="#retentionperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1163,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1172,14 +1038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_go">
 <a href="#frequencyinterval_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -1187,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencyunit_go">
 <a href="#frequencyunit_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Unit</a>
@@ -1196,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencyunit">Frequency<wbr>Unit</a></span>
     </dt>
-    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepatleastonebackup_go">
 <a href="#keepatleastonebackup_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
@@ -1205,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_go">
 <a href="#retentionperiodindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1214,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1223,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_nodejs">
 <a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
@@ -1238,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencyunit_nodejs">
 <a href="#frequencyunit_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
@@ -1247,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencyunit">Frequency<wbr>Unit</a></span>
     </dt>
-    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keepatleastonebackup_nodejs">
 <a href="#keepatleastonebackup_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
@@ -1256,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_nodejs">
 <a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1265,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1274,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_interval_python">
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
@@ -1289,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_unit_python">
 <a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
@@ -1298,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencyunit">Frequency<wbr>Unit</a></span>
     </dt>
-    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keep_at_least_one_backup_python">
 <a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
@@ -1307,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_period_in_days_python">
 <a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
@@ -1316,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1325,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasebackupsetting">Database<wbr>Backup<wbr>Setting</h4>
@@ -1334,9 +1178,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_csharp">
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1344,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#databasetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Database<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1353,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_csharp">
 <a href="#connectionstringname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Name</a>
@@ -1363,8 +1203,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1372,14 +1211,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_go">
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1387,8 +1223,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#databasetype">Database<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1396,8 +1231,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_go">
 <a href="#connectionstringname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Name</a>
@@ -1406,8 +1240,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1415,14 +1248,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_nodejs">
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
@@ -1430,8 +1260,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#databasetype">Database<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1439,8 +1268,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_nodejs">
 <a href="#connectionstringname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
@@ -1449,8 +1277,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1458,14 +1285,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_type_python">
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
@@ -1473,8 +1297,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#databasetype">Database<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1482,8 +1305,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_name_python">
 <a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
@@ -1492,8 +1314,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1501,8 +1322,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasebackupsettingresponse">Database<wbr>Backup<wbr>Setting<wbr>Response</h4>
@@ -1510,9 +1330,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_csharp">
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1520,8 +1338,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1529,8 +1346,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_csharp">
 <a href="#connectionstringname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Name</a>
@@ -1539,8 +1355,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1548,14 +1363,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_go">
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1563,8 +1375,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1572,8 +1383,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_go">
 <a href="#connectionstringname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Name</a>
@@ -1582,8 +1392,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1591,14 +1400,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasetype_nodejs">
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
@@ -1606,8 +1412,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1615,8 +1420,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringname_nodejs">
 <a href="#connectionstringname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
@@ -1625,8 +1429,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1634,14 +1437,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_type_python">
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
@@ -1649,8 +1449,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1658,8 +1457,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_name_python">
 <a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
@@ -1668,8 +1466,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-    <dt class="property-optional"
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1677,8 +1474,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasetype">Database<wbr>Type</h4>
@@ -1694,9 +1490,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1704,8 +1498,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1713,8 +1506,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1722,8 +1514,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1731,8 +1522,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1740,8 +1530,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1749,14 +1538,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1764,8 +1550,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1773,8 +1558,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1782,8 +1566,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1791,8 +1574,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1800,8 +1582,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1809,14 +1590,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1824,8 +1602,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1833,8 +1610,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1842,8 +1618,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1851,8 +1626,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1860,8 +1634,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1869,14 +1642,11 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1884,8 +1654,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1893,8 +1662,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1902,8 +1670,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1911,8 +1678,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1920,8 +1686,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1929,8 +1694,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

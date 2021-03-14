@@ -51,27 +51,19 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 
@@ -84,9 +76,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -94,8 +84,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -103,14 +92,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#violationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Outputs.<wbr>Violation<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The array of violations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The array of violations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -118,8 +104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -127,14 +112,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#violationresponse">[]Violation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The array of violations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The array of violations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -142,8 +124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -151,14 +132,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#violationresponse">Violation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The array of violations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The array of violations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -166,8 +144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to use for getting the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -175,8 +152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#violationresponse">Sequence[Violation<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The array of violations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The array of violations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -190,9 +166,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -200,8 +174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -209,8 +182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -218,14 +190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -233,8 +202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -242,8 +210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -251,14 +218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -266,8 +230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -275,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -284,14 +246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -299,8 +258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -308,8 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the item that violates tenant configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -317,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the user who owns violated item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

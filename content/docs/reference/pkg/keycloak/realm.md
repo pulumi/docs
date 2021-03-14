@@ -20,11 +20,17 @@ from multiple sources.
 - `default_optional_client_scopes` - (Optional) A list of default optional client scopes to be used for client definitions. Defaults to `[]` or keycloak's built-in default optional client-scopes.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Keycloak = Pulumi.Keycloak;
@@ -106,9 +112,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -184,9 +193,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_keycloak as keycloak
@@ -249,9 +261,12 @@ realm = keycloak.Realm("realm",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -316,9 +331,16 @@ const realm = new keycloak.Realm("realm", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Realm Resource {#create}
@@ -343,9 +365,7 @@ const realm = new keycloak.Realm("realm", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -353,9 +373,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -363,9 +381,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -373,10 +389,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -402,9 +415,7 @@ const realm = new keycloak.Realm("realm", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -412,9 +423,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -422,9 +431,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -432,9 +439,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -442,18 +447,13 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -461,9 +461,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -471,9 +469,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -481,10 +477,7 @@ const realm = new keycloak.Realm("realm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -499,9 +492,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realmname_csharp">
 <a href="#realmname_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Name</a>
@@ -510,8 +501,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespan_csharp">
 <a href="#accesscodelifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan</a>
@@ -520,8 +510,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanlogin_csharp">
 <a href="#accesscodelifespanlogin_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -530,8 +519,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanuseraction_csharp">
 <a href="#accesscodelifespanuseraction_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -540,8 +528,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_csharp">
 <a href="#accesstokenlifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
@@ -550,8 +537,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespanforimplicitflow_csharp">
 <a href="#accesstokenlifespanforimplicitflow_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -560,8 +546,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accounttheme_csharp">
 <a href="#accounttheme_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Theme</a>
@@ -570,8 +555,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyadminlifespan_csharp">
 <a href="#actiontokengeneratedbyadminlifespan_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -580,8 +564,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyuserlifespan_csharp">
 <a href="#actiontokengeneratedbyuserlifespan_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -590,8 +573,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admintheme_csharp">
 <a href="#admintheme_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Theme</a>
@@ -600,8 +582,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -610,8 +591,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browserflow_csharp">
 <a href="#browserflow_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Flow</a>
@@ -620,8 +600,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientauthenticationflow_csharp">
 <a href="#clientauthenticationflow_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Flow</a>
@@ -630,8 +609,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdefaultclientscopes_csharp">
 <a href="#defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -639,8 +617,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultoptionalclientscopes_csharp">
 <a href="#defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -648,8 +625,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsignaturealgorithm_csharp">
 <a href="#defaultsignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
@@ -658,8 +634,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directgrantflow_csharp">
 <a href="#directgrantflow_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Flow</a>
@@ -668,8 +643,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -678,8 +652,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamehtml_csharp">
 <a href="#displaynamehtml_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
@@ -688,8 +661,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerauthenticationflow_csharp">
 <a href="#dockerauthenticationflow_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Authentication<wbr>Flow</a>
@@ -698,8 +670,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicateemailsallowed_csharp">
 <a href="#duplicateemailsallowed_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Emails<wbr>Allowed</a>
@@ -708,8 +679,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editusernameallowed_csharp">
 <a href="#editusernameallowed_csharp" style="color: inherit; text-decoration: inherit;">Edit<wbr>Username<wbr>Allowed</a>
@@ -718,8 +688,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailtheme_csharp">
 <a href="#emailtheme_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Theme</a>
@@ -728,8 +697,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -738,8 +706,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internationalization_csharp">
 <a href="#internationalization_csharp" style="color: inherit; text-decoration: inherit;">Internationalization</a>
@@ -747,8 +714,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logintheme_csharp">
 <a href="#logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
@@ -757,8 +723,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginwithemailallowed_csharp">
 <a href="#loginwithemailallowed_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -767,8 +732,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionidletimeout_csharp">
 <a href="#offlinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -777,8 +741,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespan_csharp">
 <a href="#offlinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -787,8 +750,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespanenabled_csharp">
 <a href="#offlinesessionmaxlifespanenabled_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -797,8 +759,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_csharp">
 <a href="#passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -807,8 +768,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenmaxreuse_csharp">
 <a href="#refreshtokenmaxreuse_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -817,8 +777,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationallowed_csharp">
 <a href="#registrationallowed_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Allowed</a>
@@ -827,8 +786,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationemailasusername_csharp">
 <a href="#registrationemailasusername_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -837,8 +795,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationflow_csharp">
 <a href="#registrationflow_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Flow</a>
@@ -847,8 +804,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rememberme_csharp">
 <a href="#rememberme_csharp" style="color: inherit; text-decoration: inherit;">Remember<wbr>Me</a>
@@ -857,8 +813,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcredentialsflow_csharp">
 <a href="#resetcredentialsflow_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Credentials<wbr>Flow</a>
@@ -867,8 +822,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpasswordallowed_csharp">
 <a href="#resetpasswordallowed_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password<wbr>Allowed</a>
@@ -877,8 +831,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerefreshtoken_csharp">
 <a href="#revokerefreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Revoke<wbr>Refresh<wbr>Token</a>
@@ -887,8 +840,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitydefenses_csharp">
 <a href="#securitydefenses_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Defenses</a>
@@ -896,8 +848,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_csharp">
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -905,8 +856,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrequired_csharp">
 <a href="#sslrequired_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Required</a>
@@ -915,8 +865,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeout_csharp">
 <a href="#ssosessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -925,8 +874,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeoutrememberme_csharp">
 <a href="#ssosessionidletimeoutrememberme_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -934,8 +882,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespan_csharp">
 <a href="#ssosessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -944,8 +891,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespanrememberme_csharp">
 <a href="#ssosessionmaxlifespanrememberme_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -953,8 +899,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermanagedaccess_csharp">
 <a href="#usermanagedaccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
@@ -963,8 +908,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyemail_csharp">
 <a href="#verifyemail_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Email</a>
@@ -973,8 +917,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpasswordlesspolicy_csharp">
 <a href="#webauthnpasswordlesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -983,8 +926,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpolicy_csharp">
 <a href="#webauthnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Policy</a>
@@ -993,14 +935,11 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realm_go">
 <a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -1009,8 +948,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespan_go">
 <a href="#accesscodelifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan</a>
@@ -1019,8 +957,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanlogin_go">
 <a href="#accesscodelifespanlogin_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -1029,8 +966,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanuseraction_go">
 <a href="#accesscodelifespanuseraction_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -1039,8 +975,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_go">
 <a href="#accesstokenlifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
@@ -1049,8 +984,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespanforimplicitflow_go">
 <a href="#accesstokenlifespanforimplicitflow_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -1059,8 +993,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accounttheme_go">
 <a href="#accounttheme_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Theme</a>
@@ -1069,8 +1002,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyadminlifespan_go">
 <a href="#actiontokengeneratedbyadminlifespan_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -1079,8 +1011,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyuserlifespan_go">
 <a href="#actiontokengeneratedbyuserlifespan_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -1089,8 +1020,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admintheme_go">
 <a href="#admintheme_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Theme</a>
@@ -1099,8 +1029,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1109,8 +1038,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browserflow_go">
 <a href="#browserflow_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Flow</a>
@@ -1119,8 +1047,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientauthenticationflow_go">
 <a href="#clientauthenticationflow_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Flow</a>
@@ -1129,8 +1056,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdefaultclientscopes_go">
 <a href="#defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -1138,8 +1064,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultoptionalclientscopes_go">
 <a href="#defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -1147,8 +1072,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsignaturealgorithm_go">
 <a href="#defaultsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
@@ -1157,8 +1081,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directgrantflow_go">
 <a href="#directgrantflow_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Flow</a>
@@ -1167,8 +1090,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1177,8 +1099,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamehtml_go">
 <a href="#displaynamehtml_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
@@ -1187,8 +1108,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerauthenticationflow_go">
 <a href="#dockerauthenticationflow_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Authentication<wbr>Flow</a>
@@ -1197,8 +1117,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicateemailsallowed_go">
 <a href="#duplicateemailsallowed_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Emails<wbr>Allowed</a>
@@ -1207,8 +1126,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editusernameallowed_go">
 <a href="#editusernameallowed_go" style="color: inherit; text-decoration: inherit;">Edit<wbr>Username<wbr>Allowed</a>
@@ -1217,8 +1135,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailtheme_go">
 <a href="#emailtheme_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Theme</a>
@@ -1227,8 +1144,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1237,8 +1153,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internationalization_go">
 <a href="#internationalization_go" style="color: inherit; text-decoration: inherit;">Internationalization</a>
@@ -1246,8 +1161,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logintheme_go">
 <a href="#logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
@@ -1256,8 +1170,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginwithemailallowed_go">
 <a href="#loginwithemailallowed_go" style="color: inherit; text-decoration: inherit;">Login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -1266,8 +1179,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionidletimeout_go">
 <a href="#offlinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -1276,8 +1188,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespan_go">
 <a href="#offlinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -1286,8 +1197,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespanenabled_go">
 <a href="#offlinesessionmaxlifespanenabled_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -1296,8 +1206,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_go">
 <a href="#passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -1306,8 +1215,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenmaxreuse_go">
 <a href="#refreshtokenmaxreuse_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -1316,8 +1224,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationallowed_go">
 <a href="#registrationallowed_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Allowed</a>
@@ -1326,8 +1233,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationemailasusername_go">
 <a href="#registrationemailasusername_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -1336,8 +1242,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationflow_go">
 <a href="#registrationflow_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Flow</a>
@@ -1346,8 +1251,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rememberme_go">
 <a href="#rememberme_go" style="color: inherit; text-decoration: inherit;">Remember<wbr>Me</a>
@@ -1356,8 +1260,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcredentialsflow_go">
 <a href="#resetcredentialsflow_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Credentials<wbr>Flow</a>
@@ -1366,8 +1269,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpasswordallowed_go">
 <a href="#resetpasswordallowed_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password<wbr>Allowed</a>
@@ -1376,8 +1278,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerefreshtoken_go">
 <a href="#revokerefreshtoken_go" style="color: inherit; text-decoration: inherit;">Revoke<wbr>Refresh<wbr>Token</a>
@@ -1386,8 +1287,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitydefenses_go">
 <a href="#securitydefenses_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Defenses</a>
@@ -1395,8 +1295,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_go">
 <a href="#smtpserver_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -1404,8 +1303,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrequired_go">
 <a href="#sslrequired_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Required</a>
@@ -1414,8 +1312,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeout_go">
 <a href="#ssosessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -1424,8 +1321,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeoutrememberme_go">
 <a href="#ssosessionidletimeoutrememberme_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -1433,8 +1329,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespan_go">
 <a href="#ssosessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -1443,8 +1338,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespanrememberme_go">
 <a href="#ssosessionmaxlifespanrememberme_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -1452,8 +1346,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermanagedaccess_go">
 <a href="#usermanagedaccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
@@ -1462,8 +1355,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyemail_go">
 <a href="#verifyemail_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Email</a>
@@ -1472,8 +1364,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpasswordlesspolicy_go">
 <a href="#webauthnpasswordlesspolicy_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -1482,8 +1373,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpolicy_go">
 <a href="#webauthnpolicy_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Policy</a>
@@ -1492,14 +1382,11 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realm_nodejs">
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -1508,8 +1395,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespan_nodejs">
 <a href="#accesscodelifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan</a>
@@ -1518,8 +1404,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanlogin_nodejs">
 <a href="#accesscodelifespanlogin_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -1528,8 +1413,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscodelifespanuseraction_nodejs">
 <a href="#accesscodelifespanuseraction_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -1538,8 +1422,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_nodejs">
 <a href="#accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
@@ -1548,8 +1431,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespanforimplicitflow_nodejs">
 <a href="#accesstokenlifespanforimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -1558,8 +1440,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accounttheme_nodejs">
 <a href="#accounttheme_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Theme</a>
@@ -1568,8 +1449,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyadminlifespan_nodejs">
 <a href="#actiontokengeneratedbyadminlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -1578,8 +1458,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontokengeneratedbyuserlifespan_nodejs">
 <a href="#actiontokengeneratedbyuserlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -1588,8 +1467,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admintheme_nodejs">
 <a href="#admintheme_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Theme</a>
@@ -1598,8 +1476,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1608,8 +1485,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browserflow_nodejs">
 <a href="#browserflow_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Flow</a>
@@ -1618,8 +1494,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientauthenticationflow_nodejs">
 <a href="#clientauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Flow</a>
@@ -1628,8 +1503,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdefaultclientscopes_nodejs">
 <a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -1637,8 +1511,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultoptionalclientscopes_nodejs">
 <a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -1646,8 +1519,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsignaturealgorithm_nodejs">
 <a href="#defaultsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Signature<wbr>Algorithm</a>
@@ -1656,8 +1528,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directgrantflow_nodejs">
 <a href="#directgrantflow_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Flow</a>
@@ -1666,8 +1537,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1676,8 +1546,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamehtml_nodejs">
 <a href="#displaynamehtml_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Html</a>
@@ -1686,8 +1555,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerauthenticationflow_nodejs">
 <a href="#dockerauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Authentication<wbr>Flow</a>
@@ -1696,8 +1564,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicateemailsallowed_nodejs">
 <a href="#duplicateemailsallowed_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Emails<wbr>Allowed</a>
@@ -1706,8 +1573,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editusernameallowed_nodejs">
 <a href="#editusernameallowed_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Username<wbr>Allowed</a>
@@ -1716,8 +1582,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailtheme_nodejs">
 <a href="#emailtheme_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Theme</a>
@@ -1726,8 +1591,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1736,8 +1600,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internationalization_nodejs">
 <a href="#internationalization_nodejs" style="color: inherit; text-decoration: inherit;">internationalization</a>
@@ -1745,8 +1608,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logintheme_nodejs">
 <a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
@@ -1755,8 +1617,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginwithemailallowed_nodejs">
 <a href="#loginwithemailallowed_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -1765,8 +1626,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionidletimeout_nodejs">
 <a href="#offlinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -1775,8 +1635,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespan_nodejs">
 <a href="#offlinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -1785,8 +1644,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinesessionmaxlifespanenabled_nodejs">
 <a href="#offlinesessionmaxlifespanenabled_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -1795,8 +1653,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_nodejs">
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -1805,8 +1662,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenmaxreuse_nodejs">
 <a href="#refreshtokenmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -1815,8 +1671,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationallowed_nodejs">
 <a href="#registrationallowed_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Allowed</a>
@@ -1825,8 +1680,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationemailasusername_nodejs">
 <a href="#registrationemailasusername_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -1835,8 +1689,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationflow_nodejs">
 <a href="#registrationflow_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Flow</a>
@@ -1845,8 +1698,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rememberme_nodejs">
 <a href="#rememberme_nodejs" style="color: inherit; text-decoration: inherit;">remember<wbr>Me</a>
@@ -1855,8 +1707,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcredentialsflow_nodejs">
 <a href="#resetcredentialsflow_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Credentials<wbr>Flow</a>
@@ -1865,8 +1716,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpasswordallowed_nodejs">
 <a href="#resetpasswordallowed_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password<wbr>Allowed</a>
@@ -1875,8 +1725,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerefreshtoken_nodejs">
 <a href="#revokerefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">revoke<wbr>Refresh<wbr>Token</a>
@@ -1885,8 +1734,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitydefenses_nodejs">
 <a href="#securitydefenses_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Defenses</a>
@@ -1894,8 +1742,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_nodejs">
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
@@ -1903,8 +1750,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrequired_nodejs">
 <a href="#sslrequired_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Required</a>
@@ -1913,8 +1759,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeout_nodejs">
 <a href="#ssosessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -1923,8 +1768,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionidletimeoutrememberme_nodejs">
 <a href="#ssosessionidletimeoutrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -1932,8 +1776,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespan_nodejs">
 <a href="#ssosessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -1942,8 +1785,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssosessionmaxlifespanrememberme_nodejs">
 <a href="#ssosessionmaxlifespanrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -1951,8 +1793,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermanagedaccess_nodejs">
 <a href="#usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
@@ -1961,8 +1802,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyemail_nodejs">
 <a href="#verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
@@ -1971,8 +1811,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpasswordlesspolicy_nodejs">
 <a href="#webauthnpasswordlesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -1981,8 +1820,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webauthnpolicy_nodejs">
 <a href="#webauthnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Policy</a>
@@ -1991,14 +1829,11 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realm_python">
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -2007,8 +1842,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_code_lifespan_python">
 <a href="#access_code_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan</a>
@@ -2017,8 +1851,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_code_lifespan_login_python">
 <a href="#access_code_lifespan_login_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>login</a>
@@ -2027,8 +1860,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_code_lifespan_user_action_python">
 <a href="#access_code_lifespan_user_action_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>user_<wbr>action</a>
@@ -2037,8 +1869,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_lifespan_python">
 <a href="#access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
@@ -2047,8 +1878,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_lifespan_for_implicit_flow_python">
 <a href="#access_token_lifespan_for_implicit_flow_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan_<wbr>for_<wbr>implicit_<wbr>flow</a>
@@ -2057,8 +1887,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_theme_python">
 <a href="#account_theme_python" style="color: inherit; text-decoration: inherit;">account_<wbr>theme</a>
@@ -2067,8 +1896,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_token_generated_by_admin_lifespan_python">
 <a href="#action_token_generated_by_admin_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>admin_<wbr>lifespan</a>
@@ -2077,8 +1905,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_token_generated_by_user_lifespan_python">
 <a href="#action_token_generated_by_user_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>user_<wbr>lifespan</a>
@@ -2087,8 +1914,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_theme_python">
 <a href="#admin_theme_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>theme</a>
@@ -2097,8 +1923,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -2107,8 +1932,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browser_flow_python">
 <a href="#browser_flow_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>flow</a>
@@ -2117,8 +1941,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_authentication_flow_python">
 <a href="#client_authentication_flow_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>flow</a>
@@ -2127,8 +1950,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_default_client_scopes_python">
 <a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
@@ -2136,8 +1958,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_optional_client_scopes_python">
 <a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
@@ -2145,8 +1966,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_signature_algorithm_python">
 <a href="#default_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">default_<wbr>signature_<wbr>algorithm</a>
@@ -2155,8 +1975,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direct_grant_flow_python">
 <a href="#direct_grant_flow_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>flow</a>
@@ -2165,8 +1984,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2175,8 +1993,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_html_python">
 <a href="#display_name_html_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>html</a>
@@ -2185,8 +2002,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_authentication_flow_python">
 <a href="#docker_authentication_flow_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>authentication_<wbr>flow</a>
@@ -2195,8 +2011,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicate_emails_allowed_python">
 <a href="#duplicate_emails_allowed_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>emails_<wbr>allowed</a>
@@ -2205,8 +2020,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edit_username_allowed_python">
 <a href="#edit_username_allowed_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>username_<wbr>allowed</a>
@@ -2215,8 +2029,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_theme_python">
 <a href="#email_theme_python" style="color: inherit; text-decoration: inherit;">email_<wbr>theme</a>
@@ -2225,8 +2038,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2235,8 +2047,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internationalization_python">
 <a href="#internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
@@ -2244,8 +2055,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_theme_python">
 <a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
@@ -2254,8 +2064,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_with_email_allowed_python">
 <a href="#login_with_email_allowed_python" style="color: inherit; text-decoration: inherit;">login_<wbr>with_<wbr>email_<wbr>allowed</a>
@@ -2264,8 +2073,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_session_idle_timeout_python">
 <a href="#offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
@@ -2274,8 +2082,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_session_max_lifespan_python">
 <a href="#offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
@@ -2284,8 +2091,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_session_max_lifespan_enabled_python">
 <a href="#offline_session_max_lifespan_enabled_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>enabled</a>
@@ -2294,8 +2100,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_policy_python">
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -2304,8 +2109,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_max_reuse_python">
 <a href="#refresh_token_max_reuse_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>max_<wbr>reuse</a>
@@ -2314,8 +2118,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_allowed_python">
 <a href="#registration_allowed_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>allowed</a>
@@ -2324,8 +2127,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_email_as_username_python">
 <a href="#registration_email_as_username_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>email_<wbr>as_<wbr>username</a>
@@ -2334,8 +2136,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_flow_python">
 <a href="#registration_flow_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>flow</a>
@@ -2344,8 +2145,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remember_me_python">
 <a href="#remember_me_python" style="color: inherit; text-decoration: inherit;">remember_<wbr>me</a>
@@ -2354,8 +2154,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_credentials_flow_python">
 <a href="#reset_credentials_flow_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>credentials_<wbr>flow</a>
@@ -2364,8 +2163,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_password_allowed_python">
 <a href="#reset_password_allowed_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password_<wbr>allowed</a>
@@ -2374,8 +2172,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoke_refresh_token_python">
 <a href="#revoke_refresh_token_python" style="color: inherit; text-decoration: inherit;">revoke_<wbr>refresh_<wbr>token</a>
@@ -2384,8 +2181,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_defenses_python">
 <a href="#security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
@@ -2393,8 +2189,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtp_server_python">
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
@@ -2402,8 +2197,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_required_python">
 <a href="#ssl_required_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>required</a>
@@ -2412,8 +2206,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_session_idle_timeout_python">
 <a href="#sso_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout</a>
@@ -2422,8 +2215,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_session_idle_timeout_remember_me_python">
 <a href="#sso_session_idle_timeout_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout_<wbr>remember_<wbr>me</a>
@@ -2431,8 +2223,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_session_max_lifespan_python">
 <a href="#sso_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan</a>
@@ -2441,8 +2232,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_session_max_lifespan_remember_me_python">
 <a href="#sso_session_max_lifespan_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>remember_<wbr>me</a>
@@ -2450,8 +2240,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_managed_access_python">
 <a href="#user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
@@ -2460,8 +2249,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_email_python">
 <a href="#verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
@@ -2470,8 +2258,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_authn_passwordless_policy_python">
 <a href="#web_authn_passwordless_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>passwordless_<wbr>policy</a>
@@ -2480,8 +2267,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_authn_policy_python">
 <a href="#web_authn_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>policy</a>
@@ -2490,8 +2276,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2502,9 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2512,8 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -2521,14 +2303,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2536,8 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -2545,14 +2323,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2560,8 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -2569,14 +2343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2584,8 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -2593,8 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2721,9 +2490,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespan_csharp">
 <a href="#state_accesscodelifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan</a>
@@ -2732,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanlogin_csharp">
 <a href="#state_accesscodelifespanlogin_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -2742,8 +2508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanuseraction_csharp">
 <a href="#state_accesscodelifespanuseraction_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -2752,8 +2517,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespan_csharp">
 <a href="#state_accesstokenlifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
@@ -2762,8 +2526,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespanforimplicitflow_csharp">
 <a href="#state_accesstokenlifespanforimplicitflow_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -2772,8 +2535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttheme_csharp">
 <a href="#state_accounttheme_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Theme</a>
@@ -2782,8 +2544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyadminlifespan_csharp">
 <a href="#state_actiontokengeneratedbyadminlifespan_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -2792,8 +2553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyuserlifespan_csharp">
 <a href="#state_actiontokengeneratedbyuserlifespan_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -2802,8 +2562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admintheme_csharp">
 <a href="#state_admintheme_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Theme</a>
@@ -2812,8 +2571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_csharp">
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -2822,8 +2580,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browserflow_csharp">
 <a href="#state_browserflow_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Flow</a>
@@ -2832,8 +2589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientauthenticationflow_csharp">
 <a href="#state_clientauthenticationflow_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Flow</a>
@@ -2842,8 +2598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdefaultclientscopes_csharp">
 <a href="#state_defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -2851,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultoptionalclientscopes_csharp">
 <a href="#state_defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -2860,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsignaturealgorithm_csharp">
 <a href="#state_defaultsignaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
@@ -2870,8 +2623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directgrantflow_csharp">
 <a href="#state_directgrantflow_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Flow</a>
@@ -2880,8 +2632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2890,8 +2641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamehtml_csharp">
 <a href="#state_displaynamehtml_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
@@ -2900,8 +2650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerauthenticationflow_csharp">
 <a href="#state_dockerauthenticationflow_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Authentication<wbr>Flow</a>
@@ -2910,8 +2659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duplicateemailsallowed_csharp">
 <a href="#state_duplicateemailsallowed_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Emails<wbr>Allowed</a>
@@ -2920,8 +2668,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editusernameallowed_csharp">
 <a href="#state_editusernameallowed_csharp" style="color: inherit; text-decoration: inherit;">Edit<wbr>Username<wbr>Allowed</a>
@@ -2930,8 +2677,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailtheme_csharp">
 <a href="#state_emailtheme_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Theme</a>
@@ -2940,8 +2686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2950,8 +2695,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_csharp">
 <a href="#state_internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -2959,8 +2703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internationalization_csharp">
 <a href="#state_internationalization_csharp" style="color: inherit; text-decoration: inherit;">Internationalization</a>
@@ -2968,8 +2711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_csharp">
 <a href="#state_logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
@@ -2978,8 +2720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginwithemailallowed_csharp">
 <a href="#state_loginwithemailallowed_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -2988,8 +2729,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionidletimeout_csharp">
 <a href="#state_offlinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -2998,8 +2738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespan_csharp">
 <a href="#state_offlinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -3008,8 +2747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespanenabled_csharp">
 <a href="#state_offlinesessionmaxlifespanenabled_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -3018,8 +2756,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_csharp">
 <a href="#state_passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -3028,8 +2765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmname_csharp">
 <a href="#state_realmname_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Name</a>
@@ -3038,8 +2774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenmaxreuse_csharp">
 <a href="#state_refreshtokenmaxreuse_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -3048,8 +2783,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationallowed_csharp">
 <a href="#state_registrationallowed_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Allowed</a>
@@ -3058,8 +2792,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationemailasusername_csharp">
 <a href="#state_registrationemailasusername_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -3068,8 +2801,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationflow_csharp">
 <a href="#state_registrationflow_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Flow</a>
@@ -3078,8 +2810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rememberme_csharp">
 <a href="#state_rememberme_csharp" style="color: inherit; text-decoration: inherit;">Remember<wbr>Me</a>
@@ -3088,8 +2819,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcredentialsflow_csharp">
 <a href="#state_resetcredentialsflow_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Credentials<wbr>Flow</a>
@@ -3098,8 +2828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpasswordallowed_csharp">
 <a href="#state_resetpasswordallowed_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password<wbr>Allowed</a>
@@ -3108,8 +2837,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerefreshtoken_csharp">
 <a href="#state_revokerefreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Revoke<wbr>Refresh<wbr>Token</a>
@@ -3118,8 +2846,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitydefenses_csharp">
 <a href="#state_securitydefenses_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Defenses</a>
@@ -3127,8 +2854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtpserver_csharp">
 <a href="#state_smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -3136,8 +2862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrequired_csharp">
 <a href="#state_sslrequired_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Required</a>
@@ -3146,8 +2871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeout_csharp">
 <a href="#state_ssosessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -3156,8 +2880,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeoutrememberme_csharp">
 <a href="#state_ssosessionidletimeoutrememberme_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -3165,8 +2888,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespan_csharp">
 <a href="#state_ssosessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -3175,8 +2897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespanrememberme_csharp">
 <a href="#state_ssosessionmaxlifespanrememberme_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -3184,8 +2905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usermanagedaccess_csharp">
 <a href="#state_usermanagedaccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
@@ -3194,8 +2914,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyemail_csharp">
 <a href="#state_verifyemail_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Email</a>
@@ -3204,8 +2923,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpasswordlesspolicy_csharp">
 <a href="#state_webauthnpasswordlesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -3214,8 +2932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpolicy_csharp">
 <a href="#state_webauthnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Policy</a>
@@ -3224,14 +2941,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespan_go">
 <a href="#state_accesscodelifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan</a>
@@ -3240,8 +2954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanlogin_go">
 <a href="#state_accesscodelifespanlogin_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -3250,8 +2963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanuseraction_go">
 <a href="#state_accesscodelifespanuseraction_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -3260,8 +2972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespan_go">
 <a href="#state_accesstokenlifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
@@ -3270,8 +2981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespanforimplicitflow_go">
 <a href="#state_accesstokenlifespanforimplicitflow_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -3280,8 +2990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttheme_go">
 <a href="#state_accounttheme_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Theme</a>
@@ -3290,8 +2999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyadminlifespan_go">
 <a href="#state_actiontokengeneratedbyadminlifespan_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -3300,8 +3008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyuserlifespan_go">
 <a href="#state_actiontokengeneratedbyuserlifespan_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -3310,8 +3017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admintheme_go">
 <a href="#state_admintheme_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Theme</a>
@@ -3320,8 +3026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_go">
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -3330,8 +3035,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browserflow_go">
 <a href="#state_browserflow_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Flow</a>
@@ -3340,8 +3044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientauthenticationflow_go">
 <a href="#state_clientauthenticationflow_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Flow</a>
@@ -3350,8 +3053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdefaultclientscopes_go">
 <a href="#state_defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -3359,8 +3061,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultoptionalclientscopes_go">
 <a href="#state_defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -3368,8 +3069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsignaturealgorithm_go">
 <a href="#state_defaultsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
@@ -3378,8 +3078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directgrantflow_go">
 <a href="#state_directgrantflow_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Flow</a>
@@ -3388,8 +3087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3398,8 +3096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamehtml_go">
 <a href="#state_displaynamehtml_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
@@ -3408,8 +3105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerauthenticationflow_go">
 <a href="#state_dockerauthenticationflow_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Authentication<wbr>Flow</a>
@@ -3418,8 +3114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duplicateemailsallowed_go">
 <a href="#state_duplicateemailsallowed_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Emails<wbr>Allowed</a>
@@ -3428,8 +3123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editusernameallowed_go">
 <a href="#state_editusernameallowed_go" style="color: inherit; text-decoration: inherit;">Edit<wbr>Username<wbr>Allowed</a>
@@ -3438,8 +3132,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailtheme_go">
 <a href="#state_emailtheme_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Theme</a>
@@ -3448,8 +3141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3458,8 +3150,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_go">
 <a href="#state_internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -3467,8 +3158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internationalization_go">
 <a href="#state_internationalization_go" style="color: inherit; text-decoration: inherit;">Internationalization</a>
@@ -3476,8 +3166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_go">
 <a href="#state_logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
@@ -3486,8 +3175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginwithemailallowed_go">
 <a href="#state_loginwithemailallowed_go" style="color: inherit; text-decoration: inherit;">Login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -3496,8 +3184,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionidletimeout_go">
 <a href="#state_offlinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -3506,8 +3193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespan_go">
 <a href="#state_offlinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -3516,8 +3202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespanenabled_go">
 <a href="#state_offlinesessionmaxlifespanenabled_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -3526,8 +3211,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_go">
 <a href="#state_passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -3536,8 +3220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_go">
 <a href="#state_realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -3546,8 +3229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenmaxreuse_go">
 <a href="#state_refreshtokenmaxreuse_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -3556,8 +3238,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationallowed_go">
 <a href="#state_registrationallowed_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Allowed</a>
@@ -3566,8 +3247,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationemailasusername_go">
 <a href="#state_registrationemailasusername_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -3576,8 +3256,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationflow_go">
 <a href="#state_registrationflow_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Flow</a>
@@ -3586,8 +3265,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rememberme_go">
 <a href="#state_rememberme_go" style="color: inherit; text-decoration: inherit;">Remember<wbr>Me</a>
@@ -3596,8 +3274,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcredentialsflow_go">
 <a href="#state_resetcredentialsflow_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Credentials<wbr>Flow</a>
@@ -3606,8 +3283,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpasswordallowed_go">
 <a href="#state_resetpasswordallowed_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password<wbr>Allowed</a>
@@ -3616,8 +3292,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerefreshtoken_go">
 <a href="#state_revokerefreshtoken_go" style="color: inherit; text-decoration: inherit;">Revoke<wbr>Refresh<wbr>Token</a>
@@ -3626,8 +3301,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitydefenses_go">
 <a href="#state_securitydefenses_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Defenses</a>
@@ -3635,8 +3309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtpserver_go">
 <a href="#state_smtpserver_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -3644,8 +3317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrequired_go">
 <a href="#state_sslrequired_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Required</a>
@@ -3654,8 +3326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeout_go">
 <a href="#state_ssosessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -3664,8 +3335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeoutrememberme_go">
 <a href="#state_ssosessionidletimeoutrememberme_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -3673,8 +3343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespan_go">
 <a href="#state_ssosessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -3683,8 +3352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespanrememberme_go">
 <a href="#state_ssosessionmaxlifespanrememberme_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -3692,8 +3360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usermanagedaccess_go">
 <a href="#state_usermanagedaccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
@@ -3702,8 +3369,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyemail_go">
 <a href="#state_verifyemail_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Email</a>
@@ -3712,8 +3378,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpasswordlesspolicy_go">
 <a href="#state_webauthnpasswordlesspolicy_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -3722,8 +3387,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpolicy_go">
 <a href="#state_webauthnpolicy_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Policy</a>
@@ -3732,14 +3396,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespan_nodejs">
 <a href="#state_accesscodelifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan</a>
@@ -3748,8 +3409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanlogin_nodejs">
 <a href="#state_accesscodelifespanlogin_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>Login</a>
@@ -3758,8 +3418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesscodelifespanuseraction_nodejs">
 <a href="#state_accesscodelifespanuseraction_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
@@ -3768,8 +3427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespan_nodejs">
 <a href="#state_accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
@@ -3778,8 +3436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifespanforimplicitflow_nodejs">
 <a href="#state_accesstokenlifespanforimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
@@ -3788,8 +3445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttheme_nodejs">
 <a href="#state_accounttheme_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Theme</a>
@@ -3798,8 +3454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyadminlifespan_nodejs">
 <a href="#state_actiontokengeneratedbyadminlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
@@ -3808,8 +3463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actiontokengeneratedbyuserlifespan_nodejs">
 <a href="#state_actiontokengeneratedbyuserlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
@@ -3818,8 +3472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admintheme_nodejs">
 <a href="#state_admintheme_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Theme</a>
@@ -3828,8 +3481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_nodejs">
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -3838,8 +3490,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browserflow_nodejs">
 <a href="#state_browserflow_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Flow</a>
@@ -3848,8 +3499,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientauthenticationflow_nodejs">
 <a href="#state_clientauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Flow</a>
@@ -3858,8 +3508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdefaultclientscopes_nodejs">
 <a href="#state_defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
@@ -3867,8 +3516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultoptionalclientscopes_nodejs">
 <a href="#state_defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
@@ -3876,8 +3524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsignaturealgorithm_nodejs">
 <a href="#state_defaultsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Signature<wbr>Algorithm</a>
@@ -3886,8 +3533,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directgrantflow_nodejs">
 <a href="#state_directgrantflow_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Flow</a>
@@ -3896,8 +3542,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -3906,8 +3551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamehtml_nodejs">
 <a href="#state_displaynamehtml_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Html</a>
@@ -3916,8 +3560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerauthenticationflow_nodejs">
 <a href="#state_dockerauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Authentication<wbr>Flow</a>
@@ -3926,8 +3569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duplicateemailsallowed_nodejs">
 <a href="#state_duplicateemailsallowed_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Emails<wbr>Allowed</a>
@@ -3936,8 +3578,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editusernameallowed_nodejs">
 <a href="#state_editusernameallowed_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Username<wbr>Allowed</a>
@@ -3946,8 +3587,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailtheme_nodejs">
 <a href="#state_emailtheme_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Theme</a>
@@ -3956,8 +3596,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3966,8 +3605,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_nodejs">
 <a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -3975,8 +3613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internationalization_nodejs">
 <a href="#state_internationalization_nodejs" style="color: inherit; text-decoration: inherit;">internationalization</a>
@@ -3984,8 +3621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_nodejs">
 <a href="#state_logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
@@ -3994,8 +3630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginwithemailallowed_nodejs">
 <a href="#state_loginwithemailallowed_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>With<wbr>Email<wbr>Allowed</a>
@@ -4004,8 +3639,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionidletimeout_nodejs">
 <a href="#state_offlinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -4014,8 +3648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespan_nodejs">
 <a href="#state_offlinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -4024,8 +3657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinesessionmaxlifespanenabled_nodejs">
 <a href="#state_offlinesessionmaxlifespanenabled_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
@@ -4034,8 +3666,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_nodejs">
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -4044,8 +3675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_nodejs">
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -4054,8 +3684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenmaxreuse_nodejs">
 <a href="#state_refreshtokenmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
@@ -4064,8 +3693,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationallowed_nodejs">
 <a href="#state_registrationallowed_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Allowed</a>
@@ -4074,8 +3702,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationemailasusername_nodejs">
 <a href="#state_registrationemailasusername_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Email<wbr>As<wbr>Username</a>
@@ -4084,8 +3711,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationflow_nodejs">
 <a href="#state_registrationflow_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Flow</a>
@@ -4094,8 +3720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rememberme_nodejs">
 <a href="#state_rememberme_nodejs" style="color: inherit; text-decoration: inherit;">remember<wbr>Me</a>
@@ -4104,8 +3729,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcredentialsflow_nodejs">
 <a href="#state_resetcredentialsflow_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Credentials<wbr>Flow</a>
@@ -4114,8 +3738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpasswordallowed_nodejs">
 <a href="#state_resetpasswordallowed_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password<wbr>Allowed</a>
@@ -4124,8 +3747,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerefreshtoken_nodejs">
 <a href="#state_revokerefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">revoke<wbr>Refresh<wbr>Token</a>
@@ -4134,8 +3756,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitydefenses_nodejs">
 <a href="#state_securitydefenses_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Defenses</a>
@@ -4143,8 +3764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtpserver_nodejs">
 <a href="#state_smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
@@ -4152,8 +3772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrequired_nodejs">
 <a href="#state_sslrequired_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Required</a>
@@ -4162,8 +3781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeout_nodejs">
 <a href="#state_ssosessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
@@ -4172,8 +3790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionidletimeoutrememberme_nodejs">
 <a href="#state_ssosessionidletimeoutrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
@@ -4181,8 +3798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespan_nodejs">
 <a href="#state_ssosessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
@@ -4191,8 +3807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssosessionmaxlifespanrememberme_nodejs">
 <a href="#state_ssosessionmaxlifespanrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
@@ -4200,8 +3815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usermanagedaccess_nodejs">
 <a href="#state_usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
@@ -4210,8 +3824,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyemail_nodejs">
 <a href="#state_verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
@@ -4220,8 +3833,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpasswordlesspolicy_nodejs">
 <a href="#state_webauthnpasswordlesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
@@ -4230,8 +3842,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webauthnpolicy_nodejs">
 <a href="#state_webauthnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Policy</a>
@@ -4240,14 +3851,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_code_lifespan_python">
 <a href="#state_access_code_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan</a>
@@ -4256,8 +3864,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_code_lifespan_login_python">
 <a href="#state_access_code_lifespan_login_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>login</a>
@@ -4266,8 +3873,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_code_lifespan_user_action_python">
 <a href="#state_access_code_lifespan_user_action_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>user_<wbr>action</a>
@@ -4276,8 +3882,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_token_lifespan_python">
 <a href="#state_access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
@@ -4286,8 +3891,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_token_lifespan_for_implicit_flow_python">
 <a href="#state_access_token_lifespan_for_implicit_flow_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan_<wbr>for_<wbr>implicit_<wbr>flow</a>
@@ -4296,8 +3900,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_theme_python">
 <a href="#state_account_theme_python" style="color: inherit; text-decoration: inherit;">account_<wbr>theme</a>
@@ -4306,8 +3909,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_token_generated_by_admin_lifespan_python">
 <a href="#state_action_token_generated_by_admin_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>admin_<wbr>lifespan</a>
@@ -4316,8 +3918,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_token_generated_by_user_lifespan_python">
 <a href="#state_action_token_generated_by_user_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>user_<wbr>lifespan</a>
@@ -4326,8 +3927,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_theme_python">
 <a href="#state_admin_theme_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>theme</a>
@@ -4336,8 +3936,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_python">
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -4346,8 +3945,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browser_flow_python">
 <a href="#state_browser_flow_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>flow</a>
@@ -4356,8 +3954,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_authentication_flow_python">
 <a href="#state_client_authentication_flow_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>flow</a>
@@ -4366,8 +3963,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_default_client_scopes_python">
 <a href="#state_default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
@@ -4375,8 +3971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_optional_client_scopes_python">
 <a href="#state_default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
@@ -4384,8 +3979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_signature_algorithm_python">
 <a href="#state_default_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">default_<wbr>signature_<wbr>algorithm</a>
@@ -4394,8 +3988,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direct_grant_flow_python">
 <a href="#state_direct_grant_flow_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>flow</a>
@@ -4404,8 +3997,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -4414,8 +4006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_html_python">
 <a href="#state_display_name_html_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>html</a>
@@ -4424,8 +4015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_authentication_flow_python">
 <a href="#state_docker_authentication_flow_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>authentication_<wbr>flow</a>
@@ -4434,8 +4024,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duplicate_emails_allowed_python">
 <a href="#state_duplicate_emails_allowed_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>emails_<wbr>allowed</a>
@@ -4444,8 +4033,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edit_username_allowed_python">
 <a href="#state_edit_username_allowed_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>username_<wbr>allowed</a>
@@ -4454,8 +4042,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_theme_python">
 <a href="#state_email_theme_python" style="color: inherit; text-decoration: inherit;">email_<wbr>theme</a>
@@ -4464,8 +4051,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4474,8 +4060,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_id_python">
 <a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -4483,8 +4068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internationalization_python">
 <a href="#state_internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
@@ -4492,8 +4076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_theme_python">
 <a href="#state_login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
@@ -4502,8 +4085,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_with_email_allowed_python">
 <a href="#state_login_with_email_allowed_python" style="color: inherit; text-decoration: inherit;">login_<wbr>with_<wbr>email_<wbr>allowed</a>
@@ -4512,8 +4094,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offline_session_idle_timeout_python">
 <a href="#state_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
@@ -4522,8 +4103,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offline_session_max_lifespan_python">
 <a href="#state_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
@@ -4532,8 +4112,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offline_session_max_lifespan_enabled_python">
 <a href="#state_offline_session_max_lifespan_enabled_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>enabled</a>
@@ -4542,8 +4121,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_policy_python">
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -4552,8 +4130,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_python">
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -4562,8 +4139,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_token_max_reuse_python">
 <a href="#state_refresh_token_max_reuse_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>max_<wbr>reuse</a>
@@ -4572,8 +4148,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_allowed_python">
 <a href="#state_registration_allowed_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>allowed</a>
@@ -4582,8 +4157,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_email_as_username_python">
 <a href="#state_registration_email_as_username_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>email_<wbr>as_<wbr>username</a>
@@ -4592,8 +4166,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_flow_python">
 <a href="#state_registration_flow_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>flow</a>
@@ -4602,8 +4175,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remember_me_python">
 <a href="#state_remember_me_python" style="color: inherit; text-decoration: inherit;">remember_<wbr>me</a>
@@ -4612,8 +4184,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reset_credentials_flow_python">
 <a href="#state_reset_credentials_flow_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>credentials_<wbr>flow</a>
@@ -4622,8 +4193,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reset_password_allowed_python">
 <a href="#state_reset_password_allowed_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password_<wbr>allowed</a>
@@ -4632,8 +4202,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revoke_refresh_token_python">
 <a href="#state_revoke_refresh_token_python" style="color: inherit; text-decoration: inherit;">revoke_<wbr>refresh_<wbr>token</a>
@@ -4642,8 +4211,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_defenses_python">
 <a href="#state_security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
@@ -4651,8 +4219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtp_server_python">
 <a href="#state_smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
@@ -4660,8 +4227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_required_python">
 <a href="#state_ssl_required_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>required</a>
@@ -4670,8 +4236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_session_idle_timeout_python">
 <a href="#state_sso_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout</a>
@@ -4680,8 +4245,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_session_idle_timeout_remember_me_python">
 <a href="#state_sso_session_idle_timeout_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout_<wbr>remember_<wbr>me</a>
@@ -4689,8 +4253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_session_max_lifespan_python">
 <a href="#state_sso_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan</a>
@@ -4699,8 +4262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_session_max_lifespan_remember_me_python">
 <a href="#state_sso_session_max_lifespan_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>remember_<wbr>me</a>
@@ -4708,8 +4270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_managed_access_python">
 <a href="#state_user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
@@ -4718,8 +4279,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verify_email_python">
 <a href="#state_verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
@@ -4728,8 +4288,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_authn_passwordless_policy_python">
 <a href="#state_web_authn_passwordless_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>passwordless_<wbr>policy</a>
@@ -4738,8 +4297,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_authn_policy_python">
 <a href="#state_web_authn_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>policy</a>
@@ -4748,8 +4306,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4764,9 +4321,7 @@ The following state arguments are supported:
 <h4 id="realminternationalization">Realm<wbr>Internationalization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlocale_csharp">
 <a href="#defaultlocale_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Locale</a>
@@ -4775,8 +4330,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportedlocales_csharp">
 <a href="#supportedlocales_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Locales</a>
@@ -4785,14 +4339,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlocale_go">
 <a href="#defaultlocale_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Locale</a>
@@ -4801,8 +4352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportedlocales_go">
 <a href="#supportedlocales_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Locales</a>
@@ -4811,14 +4361,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlocale_nodejs">
 <a href="#defaultlocale_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Locale</a>
@@ -4827,8 +4374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportedlocales_nodejs">
 <a href="#supportedlocales_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Locales</a>
@@ -4837,14 +4383,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_locale_python">
 <a href="#default_locale_python" style="color: inherit; text-decoration: inherit;">default_<wbr>locale</a>
@@ -4853,8 +4396,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supported_locales_python">
 <a href="#supported_locales_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>locales</a>
@@ -4863,16 +4405,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bruteforcedetection_csharp">
 <a href="#bruteforcedetection_csharp" style="color: inherit; text-decoration: inherit;">Brute<wbr>Force<wbr>Detection</a>
@@ -4880,8 +4419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -4889,14 +4427,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bruteforcedetection_go">
 <a href="#bruteforcedetection_go" style="color: inherit; text-decoration: inherit;">Brute<wbr>Force<wbr>Detection</a>
@@ -4904,8 +4439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -4913,14 +4447,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bruteforcedetection_nodejs">
 <a href="#bruteforcedetection_nodejs" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Detection</a>
@@ -4928,8 +4459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -4937,14 +4467,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="brute_force_detection_python">
 <a href="#brute_force_detection_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>detection</a>
@@ -4952,8 +4479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -4961,16 +4487,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failureresettimeseconds_csharp">
 <a href="#failureresettimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
@@ -4979,8 +4502,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailurewaitseconds_csharp">
 <a href="#maxfailurewaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
@@ -4988,8 +4510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxloginfailures_csharp">
 <a href="#maxloginfailures_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Login<wbr>Failures</a>
@@ -4998,8 +4519,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumquickloginwaitseconds_csharp">
 <a href="#minimumquickloginwaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
@@ -5009,8 +4529,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permanentlockout_csharp">
 <a href="#permanentlockout_csharp" style="color: inherit; text-decoration: inherit;">Permanent<wbr>Lockout</a>
@@ -5019,8 +4538,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicklogincheckmilliseconds_csharp">
 <a href="#quicklogincheckmilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
@@ -5029,8 +4547,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitincrementseconds_csharp">
 <a href="#waitincrementseconds_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Increment<wbr>Seconds</a>
@@ -5039,14 +4556,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failureresettimeseconds_go">
 <a href="#failureresettimeseconds_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
@@ -5055,8 +4569,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailurewaitseconds_go">
 <a href="#maxfailurewaitseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
@@ -5064,8 +4577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxloginfailures_go">
 <a href="#maxloginfailures_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Login<wbr>Failures</a>
@@ -5074,8 +4586,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumquickloginwaitseconds_go">
 <a href="#minimumquickloginwaitseconds_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
@@ -5085,8 +4596,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permanentlockout_go">
 <a href="#permanentlockout_go" style="color: inherit; text-decoration: inherit;">Permanent<wbr>Lockout</a>
@@ -5095,8 +4605,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicklogincheckmilliseconds_go">
 <a href="#quicklogincheckmilliseconds_go" style="color: inherit; text-decoration: inherit;">Quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
@@ -5105,8 +4614,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitincrementseconds_go">
 <a href="#waitincrementseconds_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Increment<wbr>Seconds</a>
@@ -5115,14 +4623,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failureresettimeseconds_nodejs">
 <a href="#failureresettimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
@@ -5131,8 +4636,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfailurewaitseconds_nodejs">
 <a href="#maxfailurewaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
@@ -5140,8 +4644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxloginfailures_nodejs">
 <a href="#maxloginfailures_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Login<wbr>Failures</a>
@@ -5150,8 +4653,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumquickloginwaitseconds_nodejs">
 <a href="#minimumquickloginwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
@@ -5161,8 +4663,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permanentlockout_nodejs">
 <a href="#permanentlockout_nodejs" style="color: inherit; text-decoration: inherit;">permanent<wbr>Lockout</a>
@@ -5171,8 +4672,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quicklogincheckmilliseconds_nodejs">
 <a href="#quicklogincheckmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
@@ -5181,8 +4681,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitincrementseconds_nodejs">
 <a href="#waitincrementseconds_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Increment<wbr>Seconds</a>
@@ -5191,14 +4690,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failure_reset_time_seconds_python">
 <a href="#failure_reset_time_seconds_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reset_<wbr>time_<wbr>seconds</a>
@@ -5207,8 +4703,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_failure_wait_seconds_python">
 <a href="#max_failure_wait_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>wait_<wbr>seconds</a>
@@ -5216,8 +4711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_login_failures_python">
 <a href="#max_login_failures_python" style="color: inherit; text-decoration: inherit;">max_<wbr>login_<wbr>failures</a>
@@ -5226,8 +4720,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_quick_login_wait_seconds_python">
 <a href="#minimum_quick_login_wait_seconds_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>quick_<wbr>login_<wbr>wait_<wbr>seconds</a>
@@ -5237,8 +4730,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permanent_lockout_python">
 <a href="#permanent_lockout_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>lockout</a>
@@ -5247,8 +4739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quick_login_check_milli_seconds_python">
 <a href="#quick_login_check_milli_seconds_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>login_<wbr>check_<wbr>milli_<wbr>seconds</a>
@@ -5257,8 +4748,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_increment_seconds_python">
 <a href="#wait_increment_seconds_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>increment_<wbr>seconds</a>
@@ -5267,16 +4757,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicy_csharp">
 <a href="#contentsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Security<wbr>Policy</a>
@@ -5285,8 +4772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicyreportonly_csharp">
 <a href="#contentsecuritypolicyreportonly_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
@@ -5295,8 +4781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricttransportsecurity_csharp">
 <a href="#stricttransportsecurity_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Transport<wbr>Security</a>
@@ -5305,8 +4790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xcontenttypeoptions_csharp">
 <a href="#xcontenttypeoptions_csharp" style="color: inherit; text-decoration: inherit;">XContent<wbr>Type<wbr>Options</a>
@@ -5315,8 +4799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xframeoptions_csharp">
 <a href="#xframeoptions_csharp" style="color: inherit; text-decoration: inherit;">XFrame<wbr>Options</a>
@@ -5325,8 +4808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xrobotstag_csharp">
 <a href="#xrobotstag_csharp" style="color: inherit; text-decoration: inherit;">XRobots<wbr>Tag</a>
@@ -5335,8 +4817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xxssprotection_csharp">
 <a href="#xxssprotection_csharp" style="color: inherit; text-decoration: inherit;">XXss<wbr>Protection</a>
@@ -5345,14 +4826,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicy_go">
 <a href="#contentsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Security<wbr>Policy</a>
@@ -5361,8 +4839,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicyreportonly_go">
 <a href="#contentsecuritypolicyreportonly_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
@@ -5371,8 +4848,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricttransportsecurity_go">
 <a href="#stricttransportsecurity_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Transport<wbr>Security</a>
@@ -5381,8 +4857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xcontenttypeoptions_go">
 <a href="#xcontenttypeoptions_go" style="color: inherit; text-decoration: inherit;">XContent<wbr>Type<wbr>Options</a>
@@ -5391,8 +4866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xframeoptions_go">
 <a href="#xframeoptions_go" style="color: inherit; text-decoration: inherit;">XFrame<wbr>Options</a>
@@ -5401,8 +4875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xrobotstag_go">
 <a href="#xrobotstag_go" style="color: inherit; text-decoration: inherit;">XRobots<wbr>Tag</a>
@@ -5411,8 +4884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xxssprotection_go">
 <a href="#xxssprotection_go" style="color: inherit; text-decoration: inherit;">XXss<wbr>Protection</a>
@@ -5421,14 +4893,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicy_nodejs">
 <a href="#contentsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy</a>
@@ -5437,8 +4906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentsecuritypolicyreportonly_nodejs">
 <a href="#contentsecuritypolicyreportonly_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
@@ -5447,8 +4915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricttransportsecurity_nodejs">
 <a href="#stricttransportsecurity_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Transport<wbr>Security</a>
@@ -5457,8 +4924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xcontenttypeoptions_nodejs">
 <a href="#xcontenttypeoptions_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Content<wbr>Type<wbr>Options</a>
@@ -5467,8 +4933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xframeoptions_nodejs">
 <a href="#xframeoptions_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Frame<wbr>Options</a>
@@ -5477,8 +4942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xrobotstag_nodejs">
 <a href="#xrobotstag_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Robots<wbr>Tag</a>
@@ -5487,8 +4951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xxssprotection_nodejs">
 <a href="#xxssprotection_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Xss<wbr>Protection</a>
@@ -5497,14 +4960,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_security_policy_python">
 <a href="#content_security_policy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy</a>
@@ -5513,8 +4973,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_security_policy_report_only_python">
 <a href="#content_security_policy_report_only_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy_<wbr>report_<wbr>only</a>
@@ -5523,8 +4982,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strict_transport_security_python">
 <a href="#strict_transport_security_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>transport_<wbr>security</a>
@@ -5533,8 +4991,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_content_type_options_python">
 <a href="#x_content_type_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>content_<wbr>type_<wbr>options</a>
@@ -5543,8 +5000,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_frame_options_python">
 <a href="#x_frame_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>frame_<wbr>options</a>
@@ -5553,8 +5009,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_robots_tag_python">
 <a href="#x_robots_tag_python" style="color: inherit; text-decoration: inherit;">x_<wbr>robots_<wbr>tag</a>
@@ -5563,8 +5018,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_xss_protection_python">
 <a href="#x_xss_protection_python" style="color: inherit; text-decoration: inherit;">x_<wbr>xss_<wbr>protection</a>
@@ -5573,16 +5027,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmsmtpserver">Realm<wbr>Smtp<wbr>Server</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
@@ -5591,8 +5042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5601,8 +5051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_csharp">
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -5611,8 +5060,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopefrom_csharp">
 <a href="#envelopefrom_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>From</a>
@@ -5621,8 +5069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromdisplayname_csharp">
 <a href="#fromdisplayname_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Display<wbr>Name</a>
@@ -5631,8 +5078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5641,8 +5087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replyto_csharp">
 <a href="#replyto_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>To</a>
@@ -5651,8 +5096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytodisplayname_csharp">
 <a href="#replytodisplayname_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>To<wbr>Display<wbr>Name</a>
@@ -5661,8 +5105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -5671,8 +5114,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_csharp">
 <a href="#starttls_csharp" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -5681,14 +5123,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
@@ -5697,8 +5136,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5707,8 +5145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_go">
 <a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -5717,8 +5154,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopefrom_go">
 <a href="#envelopefrom_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>From</a>
@@ -5727,8 +5163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromdisplayname_go">
 <a href="#fromdisplayname_go" style="color: inherit; text-decoration: inherit;">From<wbr>Display<wbr>Name</a>
@@ -5737,8 +5172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5747,8 +5181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replyto_go">
 <a href="#replyto_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>To</a>
@@ -5757,8 +5190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytodisplayname_go">
 <a href="#replytodisplayname_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>To<wbr>Display<wbr>Name</a>
@@ -5767,8 +5199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -5777,8 +5208,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_go">
 <a href="#starttls_go" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -5787,14 +5217,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
@@ -5803,8 +5230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -5813,8 +5239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_nodejs">
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -5823,8 +5248,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopefrom_nodejs">
 <a href="#envelopefrom_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>From</a>
@@ -5833,8 +5257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromdisplayname_nodejs">
 <a href="#fromdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Display<wbr>Name</a>
@@ -5843,8 +5266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5853,8 +5275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replyto_nodejs">
 <a href="#replyto_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
@@ -5863,8 +5284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytodisplayname_nodejs">
 <a href="#replytodisplayname_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Display<wbr>Name</a>
@@ -5873,8 +5293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -5883,8 +5302,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_nodejs">
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -5893,14 +5311,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
@@ -5909,8 +5324,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -5919,8 +5333,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_python">
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -5929,8 +5342,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelope_from_python">
 <a href="#envelope_from_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>from</a>
@@ -5939,8 +5351,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="from_display_name_python">
 <a href="#from_display_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>display_<wbr>name</a>
@@ -5949,8 +5360,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5959,8 +5369,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reply_to_python">
 <a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
@@ -5969,8 +5378,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reply_to_display_name_python">
 <a href="#reply_to_display_name_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>display_<wbr>name</a>
@@ -5979,8 +5387,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -5989,8 +5396,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_python">
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -5999,16 +5405,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -6017,8 +5420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -6027,14 +5429,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -6043,8 +5442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -6053,14 +5451,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -6069,8 +5464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -6079,14 +5473,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -6095,8 +5486,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -6105,16 +5495,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_csharp">
 <a href="#acceptableaaguids_csharp" style="color: inherit; text-decoration: inherit;">Acceptable<wbr>Aaguids</a>
@@ -6123,8 +5510,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_csharp">
 <a href="#attestationconveyancepreference_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6133,8 +5519,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_csharp">
 <a href="#authenticatorattachment_csharp" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Attachment</a>
@@ -6143,8 +5528,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_csharp">
 <a href="#avoidsameauthenticatorregister_csharp" style="color: inherit; text-decoration: inherit;">Avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6153,8 +5537,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_csharp">
 <a href="#createtimeout_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -6163,8 +5546,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_csharp">
 <a href="#relyingpartyentityname_csharp" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6173,8 +5555,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_csharp">
 <a href="#relyingpartyid_csharp" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Id</a>
@@ -6183,8 +5564,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_csharp">
 <a href="#requireresidentkey_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Resident<wbr>Key</a>
@@ -6193,8 +5573,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_csharp">
 <a href="#signaturealgorithms_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithms</a>
@@ -6203,8 +5582,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_csharp">
 <a href="#userverificationrequirement_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Verification<wbr>Requirement</a>
@@ -6213,14 +5591,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_go">
 <a href="#acceptableaaguids_go" style="color: inherit; text-decoration: inherit;">Acceptable<wbr>Aaguids</a>
@@ -6229,8 +5604,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_go">
 <a href="#attestationconveyancepreference_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6239,8 +5613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_go">
 <a href="#authenticatorattachment_go" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Attachment</a>
@@ -6249,8 +5622,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_go">
 <a href="#avoidsameauthenticatorregister_go" style="color: inherit; text-decoration: inherit;">Avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6259,8 +5631,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_go">
 <a href="#createtimeout_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -6269,8 +5640,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_go">
 <a href="#relyingpartyentityname_go" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6279,8 +5649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_go">
 <a href="#relyingpartyid_go" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Id</a>
@@ -6289,8 +5658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_go">
 <a href="#requireresidentkey_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Resident<wbr>Key</a>
@@ -6299,8 +5667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_go">
 <a href="#signaturealgorithms_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithms</a>
@@ -6309,8 +5676,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_go">
 <a href="#userverificationrequirement_go" style="color: inherit; text-decoration: inherit;">User<wbr>Verification<wbr>Requirement</a>
@@ -6319,14 +5685,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_nodejs">
 <a href="#acceptableaaguids_nodejs" style="color: inherit; text-decoration: inherit;">acceptable<wbr>Aaguids</a>
@@ -6335,8 +5698,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_nodejs">
 <a href="#attestationconveyancepreference_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6345,8 +5707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_nodejs">
 <a href="#authenticatorattachment_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Attachment</a>
@@ -6355,8 +5716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_nodejs">
 <a href="#avoidsameauthenticatorregister_nodejs" style="color: inherit; text-decoration: inherit;">avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6365,8 +5725,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_nodejs">
 <a href="#createtimeout_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timeout</a>
@@ -6375,8 +5734,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_nodejs">
 <a href="#relyingpartyentityname_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6385,8 +5743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_nodejs">
 <a href="#relyingpartyid_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Id</a>
@@ -6395,8 +5752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_nodejs">
 <a href="#requireresidentkey_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Resident<wbr>Key</a>
@@ -6405,8 +5761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_nodejs">
 <a href="#signaturealgorithms_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithms</a>
@@ -6415,8 +5770,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_nodejs">
 <a href="#userverificationrequirement_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Verification<wbr>Requirement</a>
@@ -6425,14 +5779,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptable_aaguids_python">
 <a href="#acceptable_aaguids_python" style="color: inherit; text-decoration: inherit;">acceptable_<wbr>aaguids</a>
@@ -6441,8 +5792,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestation_conveyance_preference_python">
 <a href="#attestation_conveyance_preference_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>conveyance_<wbr>preference</a>
@@ -6451,8 +5801,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticator_attachment_python">
 <a href="#authenticator_attachment_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>attachment</a>
@@ -6461,8 +5810,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoid_same_authenticator_register_python">
 <a href="#avoid_same_authenticator_register_python" style="color: inherit; text-decoration: inherit;">avoid_<wbr>same_<wbr>authenticator_<wbr>register</a>
@@ -6471,8 +5819,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_timeout_python">
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
@@ -6481,8 +5828,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relying_party_entity_name_python">
 <a href="#relying_party_entity_name_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>entity_<wbr>name</a>
@@ -6491,8 +5837,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relying_party_id_python">
 <a href="#relying_party_id_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>id</a>
@@ -6501,8 +5846,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_resident_key_python">
 <a href="#require_resident_key_python" style="color: inherit; text-decoration: inherit;">require_<wbr>resident_<wbr>key</a>
@@ -6511,8 +5855,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithms_python">
 <a href="#signature_algorithms_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithms</a>
@@ -6521,8 +5864,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_verification_requirement_python">
 <a href="#user_verification_requirement_python" style="color: inherit; text-decoration: inherit;">user_<wbr>verification_<wbr>requirement</a>
@@ -6531,16 +5873,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_csharp">
 <a href="#acceptableaaguids_csharp" style="color: inherit; text-decoration: inherit;">Acceptable<wbr>Aaguids</a>
@@ -6549,8 +5888,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_csharp">
 <a href="#attestationconveyancepreference_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6559,8 +5897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_csharp">
 <a href="#authenticatorattachment_csharp" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Attachment</a>
@@ -6569,8 +5906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_csharp">
 <a href="#avoidsameauthenticatorregister_csharp" style="color: inherit; text-decoration: inherit;">Avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6579,8 +5915,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_csharp">
 <a href="#createtimeout_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -6589,8 +5924,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_csharp">
 <a href="#relyingpartyentityname_csharp" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6599,8 +5933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_csharp">
 <a href="#relyingpartyid_csharp" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Id</a>
@@ -6609,8 +5942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_csharp">
 <a href="#requireresidentkey_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Resident<wbr>Key</a>
@@ -6619,8 +5951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_csharp">
 <a href="#signaturealgorithms_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithms</a>
@@ -6629,8 +5960,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_csharp">
 <a href="#userverificationrequirement_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Verification<wbr>Requirement</a>
@@ -6639,14 +5969,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_go">
 <a href="#acceptableaaguids_go" style="color: inherit; text-decoration: inherit;">Acceptable<wbr>Aaguids</a>
@@ -6655,8 +5982,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_go">
 <a href="#attestationconveyancepreference_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6665,8 +5991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_go">
 <a href="#authenticatorattachment_go" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Attachment</a>
@@ -6675,8 +6000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_go">
 <a href="#avoidsameauthenticatorregister_go" style="color: inherit; text-decoration: inherit;">Avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6685,8 +6009,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_go">
 <a href="#createtimeout_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Timeout</a>
@@ -6695,8 +6018,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_go">
 <a href="#relyingpartyentityname_go" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6705,8 +6027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_go">
 <a href="#relyingpartyid_go" style="color: inherit; text-decoration: inherit;">Relying<wbr>Party<wbr>Id</a>
@@ -6715,8 +6036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_go">
 <a href="#requireresidentkey_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Resident<wbr>Key</a>
@@ -6725,8 +6045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_go">
 <a href="#signaturealgorithms_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithms</a>
@@ -6735,8 +6054,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_go">
 <a href="#userverificationrequirement_go" style="color: inherit; text-decoration: inherit;">User<wbr>Verification<wbr>Requirement</a>
@@ -6745,14 +6063,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptableaaguids_nodejs">
 <a href="#acceptableaaguids_nodejs" style="color: inherit; text-decoration: inherit;">acceptable<wbr>Aaguids</a>
@@ -6761,8 +6076,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationconveyancepreference_nodejs">
 <a href="#attestationconveyancepreference_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Conveyance<wbr>Preference</a>
@@ -6771,8 +6085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatorattachment_nodejs">
 <a href="#authenticatorattachment_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Attachment</a>
@@ -6781,8 +6094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoidsameauthenticatorregister_nodejs">
 <a href="#avoidsameauthenticatorregister_nodejs" style="color: inherit; text-decoration: inherit;">avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
@@ -6791,8 +6103,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtimeout_nodejs">
 <a href="#createtimeout_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timeout</a>
@@ -6801,8 +6112,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyentityname_nodejs">
 <a href="#relyingpartyentityname_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Entity<wbr>Name</a>
@@ -6811,8 +6121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relyingpartyid_nodejs">
 <a href="#relyingpartyid_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Id</a>
@@ -6821,8 +6130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireresidentkey_nodejs">
 <a href="#requireresidentkey_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Resident<wbr>Key</a>
@@ -6831,8 +6139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithms_nodejs">
 <a href="#signaturealgorithms_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithms</a>
@@ -6841,8 +6148,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userverificationrequirement_nodejs">
 <a href="#userverificationrequirement_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Verification<wbr>Requirement</a>
@@ -6851,14 +6157,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceptable_aaguids_python">
 <a href="#acceptable_aaguids_python" style="color: inherit; text-decoration: inherit;">acceptable_<wbr>aaguids</a>
@@ -6867,8 +6170,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestation_conveyance_preference_python">
 <a href="#attestation_conveyance_preference_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>conveyance_<wbr>preference</a>
@@ -6877,8 +6179,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticator_attachment_python">
 <a href="#authenticator_attachment_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>attachment</a>
@@ -6887,8 +6188,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avoid_same_authenticator_register_python">
 <a href="#avoid_same_authenticator_register_python" style="color: inherit; text-decoration: inherit;">avoid_<wbr>same_<wbr>authenticator_<wbr>register</a>
@@ -6897,8 +6197,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_timeout_python">
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
@@ -6907,8 +6206,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relying_party_entity_name_python">
 <a href="#relying_party_entity_name_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>entity_<wbr>name</a>
@@ -6917,8 +6215,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relying_party_id_python">
 <a href="#relying_party_id_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>id</a>
@@ -6927,8 +6224,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_resident_key_python">
 <a href="#require_resident_key_python" style="color: inherit; text-decoration: inherit;">require_<wbr>resident_<wbr>key</a>
@@ -6937,8 +6233,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithms_python">
 <a href="#signature_algorithms_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithms</a>
@@ -6947,8 +6242,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_verification_requirement_python">
 <a href="#user_verification_requirement_python" style="color: inherit; text-decoration: inherit;">user_<wbr>verification_<wbr>requirement</a>
@@ -6957,8 +6251,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -6979,6 +6272,6 @@ Realms can be imported using their name. Examplebash
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 </dl>
 

@@ -20,11 +20,17 @@ If you just want to share an existing AMI with another AWS account,
 it's better to use `aws.ec2.AmiLaunchPermission` instead.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -87,9 +96,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -107,9 +119,12 @@ example = aws.ec2.Ami("example",
     virtualization_type="hvm")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -129,9 +144,16 @@ const example = new aws.ec2.Ami("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Ami Resource {#create}
@@ -156,9 +178,7 @@ const example = new aws.ec2.Ami("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -166,9 +186,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -176,9 +194,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -186,10 +202,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -215,9 +228,7 @@ const example = new aws.ec2.Ami("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -225,9 +236,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -235,9 +244,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -245,9 +252,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -255,18 +260,13 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +274,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +282,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,10 +290,7 @@ const example = new aws.ec2.Ami("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -312,9 +305,7 @@ The Ami resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -323,8 +314,7 @@ The Ami resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -333,8 +323,7 @@ The Ami resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -344,8 +333,7 @@ The Ami resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enasupport_csharp">
 <a href="#enasupport_csharp" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -354,8 +342,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -365,8 +352,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagelocation_csharp">
 <a href="#imagelocation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
@@ -376,8 +362,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelid_csharp">
 <a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -387,8 +372,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +381,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramdiskid_csharp">
 <a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
@@ -408,8 +391,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdevicename_csharp">
 <a href="#rootdevicename_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
@@ -418,8 +400,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sriovnetsupport_csharp">
 <a href="#sriovnetsupport_csharp" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
@@ -429,8 +410,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -439,8 +419,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualizationtype_csharp">
 <a href="#virtualizationtype_csharp" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
@@ -451,14 +430,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -467,8 +443,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -477,8 +452,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_go">
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -488,8 +462,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enasupport_go">
 <a href="#enasupport_go" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -498,8 +471,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -509,8 +481,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagelocation_go">
 <a href="#imagelocation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
@@ -520,8 +491,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelid_go">
 <a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -531,8 +501,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -541,8 +510,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramdiskid_go">
 <a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
@@ -552,8 +520,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdevicename_go">
 <a href="#rootdevicename_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
@@ -562,8 +529,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sriovnetsupport_go">
 <a href="#sriovnetsupport_go" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
@@ -573,8 +539,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -583,8 +548,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualizationtype_go">
 <a href="#virtualizationtype_go" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
@@ -595,14 +559,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -611,8 +572,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -621,8 +581,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -632,8 +591,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enasupport_nodejs">
 <a href="#enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
@@ -642,8 +600,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -653,8 +610,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagelocation_nodejs">
 <a href="#imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
@@ -664,8 +620,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelid_nodejs">
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
@@ -675,8 +630,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -685,8 +639,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramdiskid_nodejs">
 <a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
@@ -696,8 +649,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdevicename_nodejs">
 <a href="#rootdevicename_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Name</a>
@@ -706,8 +658,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sriovnetsupport_nodejs">
 <a href="#sriovnetsupport_nodejs" style="color: inherit; text-decoration: inherit;">sriov<wbr>Net<wbr>Support</a>
@@ -717,8 +668,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -727,8 +677,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualizationtype_nodejs">
 <a href="#virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
@@ -739,14 +688,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -755,8 +701,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -765,8 +710,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_block_devices_python">
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -776,8 +720,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ena_support_python">
 <a href="#ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
@@ -786,8 +729,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_block_devices_python">
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -797,8 +739,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_location_python">
 <a href="#image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
@@ -808,8 +749,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_id_python">
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
@@ -819,8 +759,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -829,8 +768,7 @@ kernel in created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramdisk_id_python">
 <a href="#ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
@@ -840,8 +778,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_device_name_python">
 <a href="#root_device_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>name</a>
@@ -850,8 +787,7 @@ created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sriov_net_support_python">
 <a href="#sriov_net_support_python" style="color: inherit; text-decoration: inherit;">sriov_<wbr>net_<wbr>support</a>
@@ -861,8 +797,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -871,8 +806,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualization_type_python">
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
@@ -883,8 +817,7 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -895,9 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -906,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervisor_csharp">
 <a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -916,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -925,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageowneralias_csharp">
 <a href="#imageowneralias_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
@@ -935,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagetype_csharp">
 <a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -945,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageebssnapshots_csharp">
 <a href="#manageebssnapshots_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
@@ -954,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -964,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -974,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdetails_csharp">
 <a href="#platformdetails_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
@@ -984,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -994,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsnapshotid_csharp">
 <a href="#rootsnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
@@ -1004,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usageoperation_csharp">
 <a href="#usageoperation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
@@ -1014,14 +934,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1030,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -1040,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1049,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageowneralias_go">
 <a href="#imageowneralias_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
@@ -1059,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagetype_go">
 <a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -1069,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageebssnapshots_go">
 <a href="#manageebssnapshots_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
@@ -1078,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -1088,8 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1098,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdetails_go">
 <a href="#platformdetails_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
@@ -1108,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1118,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsnapshotid_go">
 <a href="#rootsnapshotid_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
@@ -1128,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usageoperation_go">
 <a href="#usageoperation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
@@ -1138,14 +1044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1154,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -1164,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1173,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageowneralias_nodejs">
 <a href="#imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
@@ -1183,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagetype_nodejs">
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
@@ -1193,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageebssnapshots_nodejs">
 <a href="#manageebssnapshots_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Ebs<wbr>Snapshots</a>
@@ -1202,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -1212,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1222,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdetails_nodejs">
 <a href="#platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
@@ -1232,8 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1242,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsnapshotid_nodejs">
 <a href="#rootsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Snapshot<wbr>Id</a>
@@ -1252,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usageoperation_nodejs">
 <a href="#usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
@@ -1262,14 +1154,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1278,8 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -1288,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1297,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_owner_alias_python">
 <a href="#image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
@@ -1307,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_type_python">
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
@@ -1317,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manage_ebs_snapshots_python">
 <a href="#manage_ebs_snapshots_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>ebs_<wbr>snapshots</a>
@@ -1326,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -1336,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1346,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_details_python">
 <a href="#platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
@@ -1356,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1366,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_snapshot_id_python">
 <a href="#root_snapshot_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>snapshot_<wbr>id</a>
@@ -1376,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_operation_python">
 <a href="#usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
@@ -1386,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1514,9 +1391,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_architecture_csharp">
 <a href="#state_architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1525,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1535,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1545,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_csharp">
 <a href="#state_ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -1556,8 +1428,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enasupport_csharp">
 <a href="#state_enasupport_csharp" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -1566,8 +1437,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_csharp">
 <a href="#state_ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -1577,8 +1447,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_csharp">
 <a href="#state_hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -1587,8 +1456,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagelocation_csharp">
 <a href="#state_imagelocation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
@@ -1598,8 +1466,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageowneralias_csharp">
 <a href="#state_imageowneralias_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
@@ -1608,8 +1475,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetype_csharp">
 <a href="#state_imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -1618,8 +1484,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_csharp">
 <a href="#state_kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -1629,8 +1494,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageebssnapshots_csharp">
 <a href="#state_manageebssnapshots_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
@@ -1638,8 +1502,7 @@ kernel in created instances.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1648,8 +1511,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_csharp">
 <a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -1658,8 +1520,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_csharp">
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1668,8 +1529,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdetails_csharp">
 <a href="#state_platformdetails_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
@@ -1678,8 +1538,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_csharp">
 <a href="#state_public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1688,8 +1547,7 @@ kernel in created instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_csharp">
 <a href="#state_ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
@@ -1699,8 +1557,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdevicename_csharp">
 <a href="#state_rootdevicename_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
@@ -1709,8 +1566,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootsnapshotid_csharp">
 <a href="#state_rootsnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
@@ -1719,8 +1575,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sriovnetsupport_csharp">
 <a href="#state_sriovnetsupport_csharp" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
@@ -1730,8 +1585,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1740,8 +1594,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usageoperation_csharp">
 <a href="#state_usageoperation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
@@ -1750,8 +1603,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_csharp">
 <a href="#state_virtualizationtype_csharp" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
@@ -1762,14 +1614,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_architecture_go">
 <a href="#state_architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1778,8 +1627,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1788,8 +1636,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1798,8 +1645,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_go">
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -1809,8 +1655,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enasupport_go">
 <a href="#state_enasupport_go" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
@@ -1819,8 +1664,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_go">
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -1830,8 +1674,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_go">
 <a href="#state_hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
@@ -1840,8 +1683,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagelocation_go">
 <a href="#state_imagelocation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
@@ -1851,8 +1693,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageowneralias_go">
 <a href="#state_imageowneralias_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
@@ -1861,8 +1702,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetype_go">
 <a href="#state_imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -1871,8 +1711,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_go">
 <a href="#state_kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -1882,8 +1721,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageebssnapshots_go">
 <a href="#state_manageebssnapshots_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Ebs<wbr>Snapshots</a>
@@ -1891,8 +1729,7 @@ kernel in created instances.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1901,8 +1738,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
 <a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -1911,8 +1747,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_go">
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1921,8 +1756,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdetails_go">
 <a href="#state_platformdetails_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
@@ -1931,8 +1765,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_go">
 <a href="#state_public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1941,8 +1774,7 @@ kernel in created instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_go">
 <a href="#state_ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
@@ -1952,8 +1784,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdevicename_go">
 <a href="#state_rootdevicename_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
@@ -1962,8 +1793,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootsnapshotid_go">
 <a href="#state_rootsnapshotid_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
@@ -1972,8 +1802,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sriovnetsupport_go">
 <a href="#state_sriovnetsupport_go" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
@@ -1983,8 +1812,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1993,8 +1821,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usageoperation_go">
 <a href="#state_usageoperation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
@@ -2003,8 +1830,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_go">
 <a href="#state_virtualizationtype_go" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
@@ -2015,14 +1841,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_architecture_nodejs">
 <a href="#state_architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -2031,8 +1854,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2041,8 +1863,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2051,8 +1872,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_nodejs">
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -2062,8 +1882,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enasupport_nodejs">
 <a href="#state_enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
@@ -2072,8 +1891,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_nodejs">
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -2083,8 +1901,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_nodejs">
 <a href="#state_hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -2093,8 +1910,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagelocation_nodejs">
 <a href="#state_imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
@@ -2104,8 +1920,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageowneralias_nodejs">
 <a href="#state_imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
@@ -2114,8 +1929,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetype_nodejs">
 <a href="#state_imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
@@ -2124,8 +1938,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kernelid_nodejs">
 <a href="#state_kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
@@ -2135,8 +1948,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageebssnapshots_nodejs">
 <a href="#state_manageebssnapshots_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Ebs<wbr>Snapshots</a>
@@ -2144,8 +1956,7 @@ kernel in created instances.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2154,8 +1965,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -2164,8 +1974,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_nodejs">
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -2174,8 +1983,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdetails_nodejs">
 <a href="#state_platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
@@ -2184,8 +1992,7 @@ kernel in created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_nodejs">
 <a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -2194,8 +2001,7 @@ kernel in created instances.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ramdiskid_nodejs">
 <a href="#state_ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
@@ -2205,8 +2011,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootdevicename_nodejs">
 <a href="#state_rootdevicename_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Name</a>
@@ -2215,8 +2020,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootsnapshotid_nodejs">
 <a href="#state_rootsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Snapshot<wbr>Id</a>
@@ -2225,8 +2029,7 @@ created instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sriovnetsupport_nodejs">
 <a href="#state_sriovnetsupport_nodejs" style="color: inherit; text-decoration: inherit;">sriov<wbr>Net<wbr>Support</a>
@@ -2236,8 +2039,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2246,8 +2048,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usageoperation_nodejs">
 <a href="#state_usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
@@ -2256,8 +2057,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualizationtype_nodejs">
 <a href="#state_virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
@@ -2268,14 +2068,11 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_architecture_python">
 <a href="#state_architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -2284,8 +2081,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2294,8 +2090,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2304,8 +2099,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_block_devices_python">
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -2315,8 +2109,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ena_support_python">
 <a href="#state_ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
@@ -2325,8 +2118,7 @@ attached to created instances. The structure of this block is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_block_devices_python">
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -2336,8 +2128,7 @@ attached to created instances. The structure of this block is described below.
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_python">
 <a href="#state_hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
@@ -2346,8 +2137,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_location_python">
 <a href="#state_image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
@@ -2357,8 +2147,7 @@ should be attached to created instances. The structure of this block is describe
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_owner_alias_python">
 <a href="#state_image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
@@ -2367,8 +2156,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_type_python">
 <a href="#state_image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
@@ -2377,8 +2165,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kernel_id_python">
 <a href="#state_kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
@@ -2388,8 +2175,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manage_ebs_snapshots_python">
 <a href="#state_manage_ebs_snapshots_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>ebs_<wbr>snapshots</a>
@@ -2397,8 +2183,7 @@ kernel in created instances.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2407,8 +2192,7 @@ kernel in created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -2417,8 +2201,7 @@ kernel in created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_python">
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -2427,8 +2210,7 @@ kernel in created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_details_python">
 <a href="#state_platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
@@ -2437,8 +2219,7 @@ kernel in created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_python">
 <a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -2447,8 +2228,7 @@ kernel in created instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ramdisk_id_python">
 <a href="#state_ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
@@ -2458,8 +2238,7 @@ kernel in created instances.
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_device_name_python">
 <a href="#state_root_device_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>name</a>
@@ -2468,8 +2247,7 @@ created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_snapshot_id_python">
 <a href="#state_root_snapshot_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>snapshot_<wbr>id</a>
@@ -2478,8 +2256,7 @@ created instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sriov_net_support_python">
 <a href="#state_sriov_net_support_python" style="color: inherit; text-decoration: inherit;">sriov_<wbr>net_<wbr>support</a>
@@ -2489,8 +2266,7 @@ created instances.
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2499,8 +2275,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_operation_python">
 <a href="#state_usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
@@ -2509,8 +2284,7 @@ for created instances. No other value is supported at this time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualization_type_python">
 <a href="#state_virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
@@ -2521,8 +2295,7 @@ for created instances. No other value is supported at this time.
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
 changes the set of further arguments that are required, as described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2537,9 +2310,7 @@ changes the set of further arguments that are required, as described below.
 <h4 id="amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2548,8 +2319,7 @@ changes the set of further arguments that are required, as described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2559,8 +2329,7 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2569,8 +2338,7 @@ support each created instance will be deleted once that instance is terminated.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2580,8 +2348,7 @@ support each created instance will be deleted once that instance is terminated.
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2592,8 +2359,7 @@ created volumes will support.
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
 snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -2602,8 +2368,7 @@ snapshot.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2614,8 +2379,7 @@ snapshot.
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2624,14 +2388,11 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2640,8 +2401,7 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2651,8 +2411,7 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2661,8 +2420,7 @@ support each created instance will be deleted once that instance is terminated.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2672,8 +2430,7 @@ support each created instance will be deleted once that instance is terminated.
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2684,8 +2441,7 @@ created volumes will support.
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
 snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -2694,8 +2450,7 @@ snapshot.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2706,8 +2461,7 @@ snapshot.
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2716,14 +2470,11 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2732,8 +2483,7 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -2743,8 +2493,7 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2753,8 +2502,7 @@ support each created instance will be deleted once that instance is terminated.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2764,8 +2512,7 @@ support each created instance will be deleted once that instance is terminated.
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -2776,8 +2523,7 @@ created volumes will support.
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
 snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2786,8 +2532,7 @@ snapshot.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -2798,8 +2543,7 @@ snapshot.
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -2808,14 +2552,11 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2824,8 +2565,7 @@ as the selected snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -2835,8 +2575,7 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2845,8 +2584,7 @@ support each created instance will be deleted once that instance is terminated.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2856,8 +2594,7 @@ support each created instance will be deleted once that instance is terminated.
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -2868,8 +2605,7 @@ created volumes will support.
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
 snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2878,8 +2614,7 @@ snapshot.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -2890,8 +2625,7 @@ snapshot.
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -2900,16 +2634,13 @@ as the selected snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2918,8 +2649,7 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2929,14 +2659,11 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2945,8 +2672,7 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2956,14 +2682,11 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2972,8 +2695,7 @@ as the selected snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -2983,14 +2705,11 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2999,8 +2718,7 @@ as the selected snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -3010,8 +2728,7 @@ as the selected snapshot.
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3032,6 +2749,6 @@ as the selected snapshot.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

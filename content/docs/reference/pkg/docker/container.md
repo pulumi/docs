@@ -13,11 +13,17 @@ meta_desc: "Documentation for the docker.Container resource with examples, input
 Manages the lifecycle of a Docker container.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Docker = Pulumi.Docker;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_docker as docker
@@ -84,9 +96,12 @@ ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage", name="ubuntu:preci
 ubuntu_container = docker.Container("ubuntuContainer", image=ubuntu_remote_image.latest)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {name: "ub
 const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRemoteImage.latest});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Container Resource {#create}
@@ -125,9 +147,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,9 +155,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,9 +163,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,10 +171,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -184,9 +197,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,9 +205,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +213,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +221,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,18 +229,13 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +243,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +251,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,10 +259,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -281,9 +274,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -294,8 +285,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_csharp">
 <a href="#attach_csharp" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -304,8 +294,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -314,8 +303,7 @@ as is shown in the example above.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -326,8 +314,7 @@ as is shown in the example above.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuset_csharp">
 <a href="#cpuset_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set</a>
@@ -336,8 +323,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_csharp">
 <a href="#cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -346,8 +332,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destroygraceseconds_csharp">
 <a href="#destroygraceseconds_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Grace<wbr>Seconds</a>
@@ -356,8 +341,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_csharp">
 <a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -366,8 +350,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">List&lt;Container<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -376,8 +359,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsopts_csharp">
 <a href="#dnsopts_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Opts</a>
@@ -386,8 +368,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssearches_csharp">
 <a href="#dnssearches_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Searches</a>
@@ -396,8 +377,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domainname</a>
@@ -406,8 +386,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoints_csharp">
 <a href="#entrypoints_csharp" style="color: inherit; text-decoration: inherit;">Entrypoints</a>
@@ -420,8 +399,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_csharp">
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -430,8 +408,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupadds_csharp">
 <a href="#groupadds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Adds</a>
@@ -440,8 +417,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -450,8 +426,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -460,8 +435,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -470,8 +444,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhost">List&lt;Container<wbr>Host<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="init_csharp">
 <a href="#init_csharp" style="color: inherit; text-decoration: inherit;">Init</a>
@@ -480,8 +453,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipcmode_csharp">
 <a href="#ipcmode_csharp" style="color: inherit; text-decoration: inherit;">Ipc<wbr>Mode</a>
@@ -490,8 +462,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -500,8 +471,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerlabel">List&lt;Container<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -511,8 +481,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_csharp">
 <a href="#logdriver_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
@@ -522,8 +491,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logopts_csharp">
 <a href="#logopts_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Opts</a>
@@ -533,8 +501,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_csharp">
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -543,8 +510,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretrycount_csharp">
 <a href="#maxretrycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Count</a>
@@ -554,8 +520,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -564,8 +529,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryswap_csharp">
 <a href="#memoryswap_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
@@ -573,8 +537,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_csharp">
 <a href="#mounts_csharp" style="color: inherit; text-decoration: inherit;">Mounts</a>
@@ -583,8 +546,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">List&lt;Container<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mustrun_csharp">
 <a href="#mustrun_csharp" style="color: inherit; text-decoration: inherit;">Must<wbr>Run</a>
@@ -592,8 +554,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -601,8 +562,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networkaliases_csharp">
 <a href="#networkaliases_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Aliases</a>
@@ -611,8 +571,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_csharp">
 <a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -621,8 +580,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -632,8 +590,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networksadvanced_csharp">
 <a href="#networksadvanced_csharp" style="color: inherit; text-decoration: inherit;">Networks<wbr>Advanced</a>
@@ -642,8 +599,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">List&lt;Container<wbr>Networks<wbr>Advanced<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidmode_csharp">
 <a href="#pidmode_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Mode</a>
@@ -652,8 +608,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -662,8 +617,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">List&lt;Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileged_csharp">
 <a href="#privileged_csharp" style="color: inherit; text-decoration: inherit;">Privileged</a>
@@ -672,8 +626,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishallports_csharp">
 <a href="#publishallports_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>All<wbr>Ports</a>
@@ -682,8 +635,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -693,8 +645,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removevolumes_csharp">
 <a href="#removevolumes_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Volumes</a>
@@ -702,8 +653,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_csharp">
 <a href="#restart_csharp" style="color: inherit; text-decoration: inherit;">Restart</a>
@@ -713,8 +663,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rm_csharp">
 <a href="#rm_csharp" style="color: inherit; text-decoration: inherit;">Rm</a>
@@ -722,8 +671,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityopts_csharp">
 <a href="#securityopts_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
@@ -732,8 +680,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shmsize_csharp">
 <a href="#shmsize_csharp" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
@@ -742,8 +689,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -753,8 +699,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stdinopen_csharp">
 <a href="#stdinopen_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
@@ -763,8 +708,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_csharp">
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -773,8 +717,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_csharp">
 <a href="#tmpfs_csharp" style="color: inherit; text-decoration: inherit;">Tmpfs</a>
@@ -783,8 +726,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tty_csharp">
 <a href="#tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
@@ -793,8 +735,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ulimits_csharp">
 <a href="#ulimits_csharp" style="color: inherit; text-decoration: inherit;">Ulimits</a>
@@ -804,8 +745,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploads_csharp">
 <a href="#uploads_csharp" style="color: inherit; text-decoration: inherit;">Uploads</a>
@@ -814,8 +754,7 @@ details.
         <span class="property-type"><a href="#containerupload">List&lt;Container<wbr>Upload<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -826,8 +765,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernsmode_csharp">
 <a href="#usernsmode_csharp" style="color: inherit; text-decoration: inherit;">Userns<wbr>Mode</a>
@@ -836,8 +774,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -846,8 +783,7 @@ by name.
         <span class="property-type"><a href="#containervolume">List&lt;Container<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -856,14 +792,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -874,8 +807,7 @@ by name.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_go">
 <a href="#attach_go" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -884,8 +816,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -894,8 +825,7 @@ as is shown in the example above.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -906,8 +836,7 @@ as is shown in the example above.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuset_go">
 <a href="#cpuset_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set</a>
@@ -916,8 +845,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_go">
 <a href="#cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -926,8 +854,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destroygraceseconds_go">
 <a href="#destroygraceseconds_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Grace<wbr>Seconds</a>
@@ -936,8 +863,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_go">
 <a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -946,8 +872,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">[]Container<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -956,8 +881,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsopts_go">
 <a href="#dnsopts_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Opts</a>
@@ -966,8 +890,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssearches_go">
 <a href="#dnssearches_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Searches</a>
@@ -976,8 +899,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domainname</a>
@@ -986,8 +908,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoints_go">
 <a href="#entrypoints_go" style="color: inherit; text-decoration: inherit;">Entrypoints</a>
@@ -1000,8 +921,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_go">
 <a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -1010,8 +930,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupadds_go">
 <a href="#groupadds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Adds</a>
@@ -1020,8 +939,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -1030,8 +948,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1040,8 +957,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -1050,8 +966,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhost">[]Container<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="init_go">
 <a href="#init_go" style="color: inherit; text-decoration: inherit;">Init</a>
@@ -1060,8 +975,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipcmode_go">
 <a href="#ipcmode_go" style="color: inherit; text-decoration: inherit;">Ipc<wbr>Mode</a>
@@ -1070,8 +984,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1080,8 +993,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerlabel">[]Container<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -1091,8 +1003,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_go">
 <a href="#logdriver_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
@@ -1102,8 +1013,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logopts_go">
 <a href="#logopts_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Opts</a>
@@ -1113,8 +1023,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_go">
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -1123,8 +1032,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretrycount_go">
 <a href="#maxretrycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Count</a>
@@ -1134,8 +1042,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1144,8 +1051,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryswap_go">
 <a href="#memoryswap_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
@@ -1153,8 +1059,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_go">
 <a href="#mounts_go" style="color: inherit; text-decoration: inherit;">Mounts</a>
@@ -1163,8 +1068,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">[]Container<wbr>Mount</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mustrun_go">
 <a href="#mustrun_go" style="color: inherit; text-decoration: inherit;">Must<wbr>Run</a>
@@ -1172,8 +1076,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1181,8 +1084,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networkaliases_go">
 <a href="#networkaliases_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Aliases</a>
@@ -1191,8 +1093,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_go">
 <a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -1201,8 +1102,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1212,8 +1112,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networksadvanced_go">
 <a href="#networksadvanced_go" style="color: inherit; text-decoration: inherit;">Networks<wbr>Advanced</a>
@@ -1222,8 +1121,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">[]Container<wbr>Networks<wbr>Advanced</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidmode_go">
 <a href="#pidmode_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Mode</a>
@@ -1232,8 +1130,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1242,8 +1139,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">[]Container<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileged_go">
 <a href="#privileged_go" style="color: inherit; text-decoration: inherit;">Privileged</a>
@@ -1252,8 +1148,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishallports_go">
 <a href="#publishallports_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>All<wbr>Ports</a>
@@ -1262,8 +1157,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -1273,8 +1167,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removevolumes_go">
 <a href="#removevolumes_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Volumes</a>
@@ -1282,8 +1175,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_go">
 <a href="#restart_go" style="color: inherit; text-decoration: inherit;">Restart</a>
@@ -1293,8 +1185,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rm_go">
 <a href="#rm_go" style="color: inherit; text-decoration: inherit;">Rm</a>
@@ -1302,8 +1193,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityopts_go">
 <a href="#securityopts_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
@@ -1312,8 +1202,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shmsize_go">
 <a href="#shmsize_go" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
@@ -1322,8 +1211,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -1333,8 +1221,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stdinopen_go">
 <a href="#stdinopen_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
@@ -1343,8 +1230,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_go">
 <a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -1353,8 +1239,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_go">
 <a href="#tmpfs_go" style="color: inherit; text-decoration: inherit;">Tmpfs</a>
@@ -1363,8 +1248,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tty_go">
 <a href="#tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
@@ -1373,8 +1257,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ulimits_go">
 <a href="#ulimits_go" style="color: inherit; text-decoration: inherit;">Ulimits</a>
@@ -1384,8 +1267,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploads_go">
 <a href="#uploads_go" style="color: inherit; text-decoration: inherit;">Uploads</a>
@@ -1394,8 +1276,7 @@ details.
         <span class="property-type"><a href="#containerupload">[]Container<wbr>Upload</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -1406,8 +1287,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernsmode_go">
 <a href="#usernsmode_go" style="color: inherit; text-decoration: inherit;">Userns<wbr>Mode</a>
@@ -1416,8 +1296,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -1426,8 +1305,7 @@ by name.
         <span class="property-type"><a href="#containervolume">[]Container<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -1436,14 +1314,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1454,8 +1329,7 @@ by name.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_nodejs">
 <a href="#attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -1464,8 +1338,7 @@ as is shown in the example above.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1474,8 +1347,7 @@ as is shown in the example above.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -1486,8 +1358,7 @@ as is shown in the example above.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuset_nodejs">
 <a href="#cpuset_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set</a>
@@ -1496,8 +1367,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_nodejs">
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
@@ -1506,8 +1376,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destroygraceseconds_nodejs">
 <a href="#destroygraceseconds_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Grace<wbr>Seconds</a>
@@ -1516,8 +1385,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_nodejs">
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -1526,8 +1394,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -1536,8 +1403,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsopts_nodejs">
 <a href="#dnsopts_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Opts</a>
@@ -1546,8 +1412,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssearches_nodejs">
 <a href="#dnssearches_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Searches</a>
@@ -1556,8 +1421,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domainname</a>
@@ -1566,8 +1430,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoints_nodejs">
 <a href="#entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entrypoints</a>
@@ -1580,8 +1443,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_nodejs">
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -1590,8 +1452,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupadds_nodejs">
 <a href="#groupadds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Adds</a>
@@ -1600,8 +1461,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -1610,8 +1470,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1620,8 +1479,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -1630,8 +1488,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="init_nodejs">
 <a href="#init_nodejs" style="color: inherit; text-decoration: inherit;">init</a>
@@ -1640,8 +1497,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipcmode_nodejs">
 <a href="#ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
@@ -1650,8 +1506,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1660,8 +1515,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -1671,8 +1525,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logdriver_nodejs">
 <a href="#logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
@@ -1682,8 +1535,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logopts_nodejs">
 <a href="#logopts_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Opts</a>
@@ -1693,8 +1545,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_nodejs">
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -1703,8 +1554,7 @@ the logging driver.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretrycount_nodejs">
 <a href="#maxretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Count</a>
@@ -1714,8 +1564,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -1724,8 +1573,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryswap_nodejs">
 <a href="#memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
@@ -1733,8 +1581,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_nodejs">
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
@@ -1743,8 +1590,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mustrun_nodejs">
 <a href="#mustrun_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Run</a>
@@ -1752,8 +1598,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1761,8 +1606,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networkaliases_nodejs">
 <a href="#networkaliases_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Aliases</a>
@@ -1771,8 +1615,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_nodejs">
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
@@ -1781,8 +1624,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1792,8 +1634,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networksadvanced_nodejs">
 <a href="#networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
@@ -1802,8 +1643,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidmode_nodejs">
 <a href="#pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
@@ -1812,8 +1652,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1822,8 +1661,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileged_nodejs">
 <a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
@@ -1832,8 +1670,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishallports_nodejs">
 <a href="#publishallports_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>All<wbr>Ports</a>
@@ -1842,8 +1679,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -1853,8 +1689,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removevolumes_nodejs">
 <a href="#removevolumes_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Volumes</a>
@@ -1862,8 +1697,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_nodejs">
 <a href="#restart_nodejs" style="color: inherit; text-decoration: inherit;">restart</a>
@@ -1873,8 +1707,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rm_nodejs">
 <a href="#rm_nodejs" style="color: inherit; text-decoration: inherit;">rm</a>
@@ -1882,8 +1715,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityopts_nodejs">
 <a href="#securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
@@ -1892,8 +1724,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shmsize_nodejs">
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
@@ -1902,8 +1733,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -1913,8 +1743,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stdinopen_nodejs">
 <a href="#stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
@@ -1923,8 +1752,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_nodejs">
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -1933,8 +1761,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_nodejs">
 <a href="#tmpfs_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs</a>
@@ -1943,8 +1770,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tty_nodejs">
 <a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
@@ -1953,8 +1779,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ulimits_nodejs">
 <a href="#ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
@@ -1964,8 +1789,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploads_nodejs">
 <a href="#uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
@@ -1974,8 +1798,7 @@ details.
         <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -1986,8 +1809,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernsmode_nodejs">
 <a href="#usernsmode_nodejs" style="color: inherit; text-decoration: inherit;">userns<wbr>Mode</a>
@@ -1996,8 +1818,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -2006,8 +1827,7 @@ by name.
         <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -2016,14 +1836,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2034,8 +1851,7 @@ by name.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_python">
 <a href="#attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -2044,8 +1860,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -2054,8 +1869,7 @@ as is shown in the example above.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2066,8 +1880,7 @@ as is shown in the example above.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_set_python">
 <a href="#cpu_set_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set</a>
@@ -2076,8 +1889,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_shares_python">
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
@@ -2086,8 +1898,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destroy_grace_seconds_python">
 <a href="#destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
@@ -2096,8 +1907,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_python">
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -2106,8 +1916,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -2116,8 +1925,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_opts_python">
 <a href="#dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
@@ -2126,8 +1934,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_searches_python">
 <a href="#dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
@@ -2136,8 +1943,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_python">
 <a href="#domainname_python" style="color: inherit; text-decoration: inherit;">domainname</a>
@@ -2146,8 +1952,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoints_python">
 <a href="#entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
@@ -2160,8 +1965,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_python">
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -2170,8 +1974,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_adds_python">
 <a href="#group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
@@ -2180,8 +1983,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_python">
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -2190,8 +1992,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2200,8 +2001,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2210,8 +2010,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="init_python">
 <a href="#init_python" style="color: inherit; text-decoration: inherit;">init</a>
@@ -2220,8 +2019,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipc_mode_python">
 <a href="#ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
@@ -2230,8 +2028,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2240,8 +2037,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -2251,8 +2047,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="log_driver_python">
 <a href="#log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
@@ -2262,8 +2057,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_opts_python">
 <a href="#log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
@@ -2273,8 +2067,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_python">
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -2283,8 +2076,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retry_count_python">
 <a href="#max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
@@ -2294,8 +2086,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2304,8 +2095,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_swap_python">
 <a href="#memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
@@ -2313,8 +2103,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mounts_python">
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
@@ -2323,8 +2112,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="must_run_python">
 <a href="#must_run_python" style="color: inherit; text-decoration: inherit;">must_<wbr>run</a>
@@ -2332,8 +2120,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2341,8 +2128,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="network_aliases_python">
 <a href="#network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
@@ -2351,8 +2137,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="network_mode_python">
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
@@ -2361,8 +2146,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -2372,8 +2156,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="networks_advanced_python">
 <a href="#networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
@@ -2382,8 +2165,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pid_mode_python">
 <a href="#pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
@@ -2392,8 +2174,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2402,8 +2183,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileged_python">
 <a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
@@ -2412,8 +2192,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publish_all_ports_python">
 <a href="#publish_all_ports_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>all_<wbr>ports</a>
@@ -2422,8 +2201,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -2433,8 +2211,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remove_volumes_python">
 <a href="#remove_volumes_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>volumes</a>
@@ -2442,8 +2219,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_python">
 <a href="#restart_python" style="color: inherit; text-decoration: inherit;">restart</a>
@@ -2453,8 +2229,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rm_python">
 <a href="#rm_python" style="color: inherit; text-decoration: inherit;">rm</a>
@@ -2462,8 +2237,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_opts_python">
 <a href="#security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
@@ -2472,8 +2246,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shm_size_python">
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
@@ -2482,8 +2255,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2493,8 +2265,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stdin_open_python">
 <a href="#stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
@@ -2503,8 +2274,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_python">
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -2513,8 +2283,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_python">
 <a href="#tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
@@ -2523,8 +2292,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tty_python">
 <a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
@@ -2533,8 +2301,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ulimits_python">
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
@@ -2544,8 +2311,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploads_python">
 <a href="#uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
@@ -2554,8 +2320,7 @@ details.
         <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2566,8 +2331,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userns_mode_python">
 <a href="#userns_mode_python" style="color: inherit; text-decoration: inherit;">userns_<wbr>mode</a>
@@ -2576,8 +2340,7 @@ by name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -2586,8 +2349,7 @@ by name.
         <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -2596,8 +2358,7 @@ by name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2608,9 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bridge_csharp">
 <a href="#bridge_csharp" style="color: inherit; text-decoration: inherit;">Bridge</a>
@@ -2619,8 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerlogs_csharp">
 <a href="#containerlogs_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Logs</a>
@@ -2629,8 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exitcode_csharp">
 <a href="#exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -2639,8 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -2650,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2659,8 +2414,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2669,8 +2423,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipprefixlength_csharp">
 <a href="#ipprefixlength_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -2680,8 +2433,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networkdatas_csharp">
 <a href="#networkdatas_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Datas</a>
@@ -2691,14 +2443,11 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bridge_go">
 <a href="#bridge_go" style="color: inherit; text-decoration: inherit;">Bridge</a>
@@ -2707,8 +2456,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerlogs_go">
 <a href="#containerlogs_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Logs</a>
@@ -2717,8 +2465,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exitcode_go">
 <a href="#exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -2727,8 +2474,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -2738,8 +2484,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2747,8 +2492,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2757,8 +2501,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipprefixlength_go">
 <a href="#ipprefixlength_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -2768,8 +2511,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networkdatas_go">
 <a href="#networkdatas_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Datas</a>
@@ -2779,14 +2521,11 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bridge_nodejs">
 <a href="#bridge_nodejs" style="color: inherit; text-decoration: inherit;">bridge</a>
@@ -2795,8 +2534,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerlogs_nodejs">
 <a href="#containerlogs_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Logs</a>
@@ -2805,8 +2543,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exitcode_nodejs">
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
@@ -2815,8 +2552,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2826,8 +2562,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2835,8 +2570,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2845,8 +2579,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ipprefixlength_nodejs">
 <a href="#ipprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Prefix<wbr>Length</a>
@@ -2856,8 +2589,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networkdatas_nodejs">
 <a href="#networkdatas_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Datas</a>
@@ -2867,14 +2599,11 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bridge_python">
 <a href="#bridge_python" style="color: inherit; text-decoration: inherit;">bridge</a>
@@ -2883,8 +2612,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_logs_python">
 <a href="#container_logs_python" style="color: inherit; text-decoration: inherit;">container_<wbr>logs</a>
@@ -2893,8 +2621,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exit_code_python">
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
@@ -2903,8 +2630,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2914,8 +2640,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2923,8 +2648,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2933,8 +2657,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="ip_prefix_length_python">
 <a href="#ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
@@ -2944,8 +2667,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="network_datas_python">
 <a href="#network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
@@ -2955,8 +2677,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3083,9 +2804,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attach_csharp">
 <a href="#state_attach_csharp" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -3094,8 +2813,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bridge_csharp">
 <a href="#state_bridge_csharp" style="color: inherit; text-decoration: inherit;">Bridge</a>
@@ -3104,8 +2822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_csharp">
 <a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3114,8 +2831,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_csharp">
 <a href="#state_command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -3126,8 +2842,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerlogs_csharp">
 <a href="#state_containerlogs_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Logs</a>
@@ -3136,8 +2851,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuset_csharp">
 <a href="#state_cpuset_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set</a>
@@ -3146,8 +2860,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_csharp">
 <a href="#state_cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -3156,8 +2869,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destroygraceseconds_csharp">
 <a href="#state_destroygraceseconds_csharp" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Grace<wbr>Seconds</a>
@@ -3166,8 +2878,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_csharp">
 <a href="#state_devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -3176,8 +2887,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">List&lt;Container<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_csharp">
 <a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -3186,8 +2896,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsopts_csharp">
 <a href="#state_dnsopts_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Opts</a>
@@ -3196,8 +2905,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnssearches_csharp">
 <a href="#state_dnssearches_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Searches</a>
@@ -3206,8 +2914,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_csharp">
 <a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domainname</a>
@@ -3216,8 +2923,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoints_csharp">
 <a href="#state_entrypoints_csharp" style="color: inherit; text-decoration: inherit;">Entrypoints</a>
@@ -3230,8 +2936,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_csharp">
 <a href="#state_envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -3240,8 +2945,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exitcode_csharp">
 <a href="#state_exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -3250,8 +2954,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gateway_csharp">
 <a href="#state_gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3261,8 +2964,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupadds_csharp">
 <a href="#state_groupadds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Adds</a>
@@ -3271,8 +2973,7 @@ NetworkSettings.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_csharp">
 <a href="#state_healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -3281,8 +2982,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -3291,8 +2991,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -3301,8 +3000,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhost">List&lt;Container<wbr>Host<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_csharp">
 <a href="#state_image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -3313,8 +3011,7 @@ NetworkSettings.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_init_csharp">
 <a href="#state_init_csharp" style="color: inherit; text-decoration: inherit;">Init</a>
@@ -3323,8 +3020,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3333,8 +3029,7 @@ as is shown in the example above.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipprefixlength_csharp">
 <a href="#state_ipprefixlength_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -3344,8 +3039,7 @@ as is shown in the example above.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcmode_csharp">
 <a href="#state_ipcmode_csharp" style="color: inherit; text-decoration: inherit;">Ipc<wbr>Mode</a>
@@ -3354,8 +3048,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3364,8 +3057,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerlabel">List&lt;Container<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_links_csharp">
 <a href="#state_links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -3375,8 +3067,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdriver_csharp">
 <a href="#state_logdriver_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
@@ -3386,8 +3077,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logopts_csharp">
 <a href="#state_logopts_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Opts</a>
@@ -3397,8 +3087,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_csharp">
 <a href="#state_logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -3407,8 +3096,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretrycount_csharp">
 <a href="#state_maxretrycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Count</a>
@@ -3418,8 +3106,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_csharp">
 <a href="#state_memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -3428,8 +3115,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryswap_csharp">
 <a href="#state_memoryswap_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
@@ -3437,8 +3123,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mounts_csharp">
 <a href="#state_mounts_csharp" style="color: inherit; text-decoration: inherit;">Mounts</a>
@@ -3447,8 +3132,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">List&lt;Container<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mustrun_csharp">
 <a href="#state_mustrun_csharp" style="color: inherit; text-decoration: inherit;">Must<wbr>Run</a>
@@ -3456,8 +3140,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3465,8 +3148,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networkaliases_csharp">
 <a href="#state_networkaliases_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Aliases</a>
@@ -3475,8 +3157,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkdatas_csharp">
 <a href="#state_networkdatas_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Datas</a>
@@ -3486,8 +3167,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkmode_csharp">
 <a href="#state_networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -3496,8 +3176,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networks_csharp">
 <a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -3507,8 +3186,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksadvanced_csharp">
 <a href="#state_networksadvanced_csharp" style="color: inherit; text-decoration: inherit;">Networks<wbr>Advanced</a>
@@ -3517,8 +3195,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">List&lt;Container<wbr>Networks<wbr>Advanced<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidmode_csharp">
 <a href="#state_pidmode_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Mode</a>
@@ -3527,8 +3204,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_csharp">
 <a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -3537,8 +3213,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">List&lt;Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileged_csharp">
 <a href="#state_privileged_csharp" style="color: inherit; text-decoration: inherit;">Privileged</a>
@@ -3547,8 +3222,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishallports_csharp">
 <a href="#state_publishallports_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>All<wbr>Ports</a>
@@ -3557,8 +3231,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonly_csharp">
 <a href="#state_readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -3568,8 +3241,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_removevolumes_csharp">
 <a href="#state_removevolumes_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Volumes</a>
@@ -3577,8 +3249,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restart_csharp">
 <a href="#state_restart_csharp" style="color: inherit; text-decoration: inherit;">Restart</a>
@@ -3588,8 +3259,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rm_csharp">
 <a href="#state_rm_csharp" style="color: inherit; text-decoration: inherit;">Rm</a>
@@ -3597,8 +3267,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityopts_csharp">
 <a href="#state_securityopts_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
@@ -3607,8 +3276,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shmsize_csharp">
 <a href="#state_shmsize_csharp" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
@@ -3617,8 +3285,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_csharp">
 <a href="#state_start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -3628,8 +3295,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stdinopen_csharp">
 <a href="#state_stdinopen_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
@@ -3638,8 +3304,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sysctls_csharp">
 <a href="#state_sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -3648,8 +3313,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpfs_csharp">
 <a href="#state_tmpfs_csharp" style="color: inherit; text-decoration: inherit;">Tmpfs</a>
@@ -3658,8 +3322,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tty_csharp">
 <a href="#state_tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
@@ -3668,8 +3331,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ulimits_csharp">
 <a href="#state_ulimits_csharp" style="color: inherit; text-decoration: inherit;">Ulimits</a>
@@ -3679,8 +3341,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uploads_csharp">
 <a href="#state_uploads_csharp" style="color: inherit; text-decoration: inherit;">Uploads</a>
@@ -3689,8 +3350,7 @@ details.
         <span class="property-type"><a href="#containerupload">List&lt;Container<wbr>Upload<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_csharp">
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -3701,8 +3361,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernsmode_csharp">
 <a href="#state_usernsmode_csharp" style="color: inherit; text-decoration: inherit;">Userns<wbr>Mode</a>
@@ -3711,8 +3370,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_csharp">
 <a href="#state_volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -3721,8 +3379,7 @@ by name.
         <span class="property-type"><a href="#containervolume">List&lt;Container<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workingdir_csharp">
 <a href="#state_workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -3731,14 +3388,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attach_go">
 <a href="#state_attach_go" style="color: inherit; text-decoration: inherit;">Attach</a>
@@ -3747,8 +3401,7 @@ by name.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bridge_go">
 <a href="#state_bridge_go" style="color: inherit; text-decoration: inherit;">Bridge</a>
@@ -3757,8 +3410,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_go">
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -3767,8 +3419,7 @@ by name.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_go">
 <a href="#state_command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -3779,8 +3430,7 @@ by name.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerlogs_go">
 <a href="#state_containerlogs_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Logs</a>
@@ -3789,8 +3439,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuset_go">
 <a href="#state_cpuset_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set</a>
@@ -3799,8 +3448,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_go">
 <a href="#state_cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -3809,8 +3457,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destroygraceseconds_go">
 <a href="#state_destroygraceseconds_go" style="color: inherit; text-decoration: inherit;">Destroy<wbr>Grace<wbr>Seconds</a>
@@ -3819,8 +3466,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_go">
 <a href="#state_devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -3829,8 +3475,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">[]Container<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_go">
 <a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -3839,8 +3484,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsopts_go">
 <a href="#state_dnsopts_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Opts</a>
@@ -3849,8 +3493,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnssearches_go">
 <a href="#state_dnssearches_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Searches</a>
@@ -3859,8 +3502,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domainname</a>
@@ -3869,8 +3511,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoints_go">
 <a href="#state_entrypoints_go" style="color: inherit; text-decoration: inherit;">Entrypoints</a>
@@ -3883,8 +3524,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_go">
 <a href="#state_envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -3893,8 +3533,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exitcode_go">
 <a href="#state_exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -3903,8 +3542,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gateway_go">
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3914,8 +3552,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupadds_go">
 <a href="#state_groupadds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Adds</a>
@@ -3924,8 +3561,7 @@ NetworkSettings.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_go">
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -3934,8 +3570,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -3944,8 +3579,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_go">
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -3954,8 +3588,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhost">[]Container<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_go">
 <a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -3966,8 +3599,7 @@ NetworkSettings.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_init_go">
 <a href="#state_init_go" style="color: inherit; text-decoration: inherit;">Init</a>
@@ -3976,8 +3608,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3986,8 +3617,7 @@ as is shown in the example above.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipprefixlength_go">
 <a href="#state_ipprefixlength_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -3997,8 +3627,7 @@ as is shown in the example above.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcmode_go">
 <a href="#state_ipcmode_go" style="color: inherit; text-decoration: inherit;">Ipc<wbr>Mode</a>
@@ -4007,8 +3636,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -4017,8 +3645,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerlabel">[]Container<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_links_go">
 <a href="#state_links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -4028,8 +3655,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdriver_go">
 <a href="#state_logdriver_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Driver</a>
@@ -4039,8 +3665,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logopts_go">
 <a href="#state_logopts_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Opts</a>
@@ -4050,8 +3675,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_go">
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -4060,8 +3684,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretrycount_go">
 <a href="#state_maxretrycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Count</a>
@@ -4071,8 +3694,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_go">
 <a href="#state_memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -4081,8 +3703,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryswap_go">
 <a href="#state_memoryswap_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
@@ -4090,8 +3711,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mounts_go">
 <a href="#state_mounts_go" style="color: inherit; text-decoration: inherit;">Mounts</a>
@@ -4100,8 +3720,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">[]Container<wbr>Mount</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mustrun_go">
 <a href="#state_mustrun_go" style="color: inherit; text-decoration: inherit;">Must<wbr>Run</a>
@@ -4109,8 +3728,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4118,8 +3736,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networkaliases_go">
 <a href="#state_networkaliases_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Aliases</a>
@@ -4128,8 +3745,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkdatas_go">
 <a href="#state_networkdatas_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Datas</a>
@@ -4139,8 +3755,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkmode_go">
 <a href="#state_networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -4149,8 +3764,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -4160,8 +3774,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksadvanced_go">
 <a href="#state_networksadvanced_go" style="color: inherit; text-decoration: inherit;">Networks<wbr>Advanced</a>
@@ -4170,8 +3783,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">[]Container<wbr>Networks<wbr>Advanced</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidmode_go">
 <a href="#state_pidmode_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Mode</a>
@@ -4180,8 +3792,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_go">
 <a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -4190,8 +3801,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">[]Container<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileged_go">
 <a href="#state_privileged_go" style="color: inherit; text-decoration: inherit;">Privileged</a>
@@ -4200,8 +3810,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishallports_go">
 <a href="#state_publishallports_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>All<wbr>Ports</a>
@@ -4210,8 +3819,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonly_go">
 <a href="#state_readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -4221,8 +3829,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_removevolumes_go">
 <a href="#state_removevolumes_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Volumes</a>
@@ -4230,8 +3837,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restart_go">
 <a href="#state_restart_go" style="color: inherit; text-decoration: inherit;">Restart</a>
@@ -4241,8 +3847,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rm_go">
 <a href="#state_rm_go" style="color: inherit; text-decoration: inherit;">Rm</a>
@@ -4250,8 +3855,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityopts_go">
 <a href="#state_securityopts_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
@@ -4260,8 +3864,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shmsize_go">
 <a href="#state_shmsize_go" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
@@ -4270,8 +3873,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_go">
 <a href="#state_start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -4281,8 +3883,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stdinopen_go">
 <a href="#state_stdinopen_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
@@ -4291,8 +3892,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sysctls_go">
 <a href="#state_sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -4301,8 +3901,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpfs_go">
 <a href="#state_tmpfs_go" style="color: inherit; text-decoration: inherit;">Tmpfs</a>
@@ -4311,8 +3910,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tty_go">
 <a href="#state_tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
@@ -4321,8 +3919,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ulimits_go">
 <a href="#state_ulimits_go" style="color: inherit; text-decoration: inherit;">Ulimits</a>
@@ -4332,8 +3929,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uploads_go">
 <a href="#state_uploads_go" style="color: inherit; text-decoration: inherit;">Uploads</a>
@@ -4342,8 +3938,7 @@ details.
         <span class="property-type"><a href="#containerupload">[]Container<wbr>Upload</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -4354,8 +3949,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernsmode_go">
 <a href="#state_usernsmode_go" style="color: inherit; text-decoration: inherit;">Userns<wbr>Mode</a>
@@ -4364,8 +3958,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_go">
 <a href="#state_volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -4374,8 +3967,7 @@ by name.
         <span class="property-type"><a href="#containervolume">[]Container<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workingdir_go">
 <a href="#state_workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -4384,14 +3976,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attach_nodejs">
 <a href="#state_attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -4400,8 +3989,7 @@ by name.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bridge_nodejs">
 <a href="#state_bridge_nodejs" style="color: inherit; text-decoration: inherit;">bridge</a>
@@ -4410,8 +3998,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_nodejs">
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -4420,8 +4007,7 @@ by name.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_nodejs">
 <a href="#state_command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -4432,8 +4018,7 @@ by name.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerlogs_nodejs">
 <a href="#state_containerlogs_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Logs</a>
@@ -4442,8 +4027,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuset_nodejs">
 <a href="#state_cpuset_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set</a>
@@ -4452,8 +4036,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_nodejs">
 <a href="#state_cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
@@ -4462,8 +4045,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destroygraceseconds_nodejs">
 <a href="#state_destroygraceseconds_nodejs" style="color: inherit; text-decoration: inherit;">destroy<wbr>Grace<wbr>Seconds</a>
@@ -4472,8 +4054,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_nodejs">
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -4482,8 +4063,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_nodejs">
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -4492,8 +4072,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsopts_nodejs">
 <a href="#state_dnsopts_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Opts</a>
@@ -4502,8 +4081,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnssearches_nodejs">
 <a href="#state_dnssearches_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Searches</a>
@@ -4512,8 +4090,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domainname</a>
@@ -4522,8 +4099,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoints_nodejs">
 <a href="#state_entrypoints_nodejs" style="color: inherit; text-decoration: inherit;">entrypoints</a>
@@ -4536,8 +4112,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_nodejs">
 <a href="#state_envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -4546,8 +4121,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exitcode_nodejs">
 <a href="#state_exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
@@ -4556,8 +4130,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -4567,8 +4140,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupadds_nodejs">
 <a href="#state_groupadds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Adds</a>
@@ -4577,8 +4149,7 @@ NetworkSettings.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_nodejs">
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -4587,8 +4158,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -4597,8 +4167,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -4607,8 +4176,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_nodejs">
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -4619,8 +4187,7 @@ NetworkSettings.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_init_nodejs">
 <a href="#state_init_nodejs" style="color: inherit; text-decoration: inherit;">init</a>
@@ -4629,8 +4196,7 @@ as is shown in the example above.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -4639,8 +4205,7 @@ as is shown in the example above.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ipprefixlength_nodejs">
 <a href="#state_ipprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Prefix<wbr>Length</a>
@@ -4650,8 +4215,7 @@ as is shown in the example above.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcmode_nodejs">
 <a href="#state_ipcmode_nodejs" style="color: inherit; text-decoration: inherit;">ipc<wbr>Mode</a>
@@ -4660,8 +4224,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -4670,8 +4233,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_links_nodejs">
 <a href="#state_links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -4681,8 +4243,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdriver_nodejs">
 <a href="#state_logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
@@ -4692,8 +4253,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logopts_nodejs">
 <a href="#state_logopts_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Opts</a>
@@ -4703,8 +4263,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_nodejs">
 <a href="#state_logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -4713,8 +4272,7 @@ the logging driver.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretrycount_nodejs">
 <a href="#state_maxretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Count</a>
@@ -4724,8 +4282,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_nodejs">
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -4734,8 +4291,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryswap_nodejs">
 <a href="#state_memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
@@ -4743,8 +4299,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mounts_nodejs">
 <a href="#state_mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
@@ -4753,8 +4308,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mustrun_nodejs">
 <a href="#state_mustrun_nodejs" style="color: inherit; text-decoration: inherit;">must<wbr>Run</a>
@@ -4762,8 +4316,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4771,8 +4324,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networkaliases_nodejs">
 <a href="#state_networkaliases_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Aliases</a>
@@ -4781,8 +4333,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkdatas_nodejs">
 <a href="#state_networkdatas_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Datas</a>
@@ -4792,8 +4343,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkmode_nodejs">
 <a href="#state_networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
@@ -4802,8 +4352,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -4813,8 +4362,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksadvanced_nodejs">
 <a href="#state_networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
@@ -4823,8 +4371,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidmode_nodejs">
 <a href="#state_pidmode_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Mode</a>
@@ -4833,8 +4380,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_nodejs">
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -4843,8 +4389,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileged_nodejs">
 <a href="#state_privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
@@ -4853,8 +4398,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishallports_nodejs">
 <a href="#state_publishallports_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>All<wbr>Ports</a>
@@ -4863,8 +4407,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonly_nodejs">
 <a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -4874,8 +4417,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_removevolumes_nodejs">
 <a href="#state_removevolumes_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Volumes</a>
@@ -4883,8 +4425,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restart_nodejs">
 <a href="#state_restart_nodejs" style="color: inherit; text-decoration: inherit;">restart</a>
@@ -4894,8 +4435,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rm_nodejs">
 <a href="#state_rm_nodejs" style="color: inherit; text-decoration: inherit;">rm</a>
@@ -4903,8 +4443,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityopts_nodejs">
 <a href="#state_securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
@@ -4913,8 +4452,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shmsize_nodejs">
 <a href="#state_shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
@@ -4923,8 +4461,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_nodejs">
 <a href="#state_start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -4934,8 +4471,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stdinopen_nodejs">
 <a href="#state_stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
@@ -4944,8 +4480,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sysctls_nodejs">
 <a href="#state_sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -4954,8 +4489,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpfs_nodejs">
 <a href="#state_tmpfs_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs</a>
@@ -4964,8 +4498,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tty_nodejs">
 <a href="#state_tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
@@ -4974,8 +4507,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ulimits_nodejs">
 <a href="#state_ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
@@ -4985,8 +4517,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uploads_nodejs">
 <a href="#state_uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
@@ -4995,8 +4526,7 @@ details.
         <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -5007,8 +4537,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernsmode_nodejs">
 <a href="#state_usernsmode_nodejs" style="color: inherit; text-decoration: inherit;">userns<wbr>Mode</a>
@@ -5017,8 +4546,7 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_nodejs">
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -5027,8 +4555,7 @@ by name.
         <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workingdir_nodejs">
 <a href="#state_workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -5037,14 +4564,11 @@ by name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attach_python">
 <a href="#state_attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
@@ -5053,8 +4577,7 @@ by name.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true attach to the container after its creation and waits the end of his execution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bridge_python">
 <a href="#state_bridge_python" style="color: inherit; text-decoration: inherit;">bridge</a>
@@ -5063,8 +4586,7 @@ by name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network bridge of the container as read from its NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_python">
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -5073,8 +4595,7 @@ by name.
         <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_python">
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -5085,8 +4606,7 @@ by name.
     <dd>{{% md %}}The command to use to start the
 container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
 command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_logs_python">
 <a href="#state_container_logs_python" style="color: inherit; text-decoration: inherit;">container_<wbr>logs</a>
@@ -5095,8 +4615,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logs of the container if its execution is done (`attach` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_set_python">
 <a href="#state_cpu_set_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set</a>
@@ -5105,8 +4624,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_shares_python">
 <a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
@@ -5115,8 +4633,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CPU shares (relative weight) for the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destroy_grace_seconds_python">
 <a href="#state_destroy_grace_seconds_python" style="color: inherit; text-decoration: inherit;">destroy_<wbr>grace_<wbr>seconds</a>
@@ -5125,8 +4642,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on successful stop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_python">
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -5135,8 +4651,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type"><a href="#containerdevice">Sequence[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_python">
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -5145,8 +4660,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS servers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_opts_python">
 <a href="#state_dns_opts_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>opts</a>
@@ -5155,8 +4669,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_searches_python">
 <a href="#state_dns_searches_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>searches</a>
@@ -5165,8 +4678,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of DNS search domains that are used when bare unqualified hostnames are used inside of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_python">
 <a href="#state_domainname_python" style="color: inherit; text-decoration: inherit;">domainname</a>
@@ -5175,8 +4687,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoints_python">
 <a href="#state_entrypoints_python" style="color: inherit; text-decoration: inherit;">entrypoints</a>
@@ -5189,8 +4700,7 @@ Entrypoint for the container. The Entrypoint allows you to configure a
 container to run as an executable. For example, to run `/usr/bin/myprogram`
 when starting a container, set the entrypoint to be
 `["/usr/bin/myprogram"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_python">
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -5199,8 +4709,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Environment variables to set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exit_code_python">
 <a href="#state_exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
@@ -5209,8 +4718,7 @@ when starting a container, set the entrypoint to be
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the container if its execution is done (`must_run` must be disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gateway_python">
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -5220,8 +4728,7 @@ when starting a container, set the entrypoint to be
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_adds_python">
 <a href="#state_group_adds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>adds</a>
@@ -5230,8 +4737,7 @@ NetworkSettings.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Add additional groups to run as.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_python">
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -5240,8 +4746,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -5250,8 +4755,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_python">
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -5260,8 +4764,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerhost">Sequence[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_python">
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -5272,8 +4775,7 @@ NetworkSettings.
     <dd>{{% md %}}The ID of the image to back this container.
 The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_init_python">
 <a href="#state_init_python" style="color: inherit; text-decoration: inherit;">init</a>
@@ -5282,8 +4784,7 @@ as is shown in the example above.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configured whether an init process should be injected for this container. If unset this will default to the `dockerd` defaults.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -5292,8 +4793,7 @@ as is shown in the example above.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ip_prefix_length_python">
 <a href="#state_ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
@@ -5303,8 +4803,7 @@ as is shown in the example above.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ip_prefix_length from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipc_mode_python">
 <a href="#state_ipc_mode_python" style="color: inherit; text-decoration: inherit;">ipc_<wbr>mode</a>
@@ -5313,8 +4812,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -5323,8 +4821,7 @@ NetworkSettings.
         <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_links_python">
 <a href="#state_links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -5334,8 +4831,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}Set of links for link based
 connectivity between containers that are running on the same host.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The --link flag is a legacy feature of Docker. It may eventually be removed.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_driver_python">
 <a href="#state_log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
@@ -5345,8 +4841,7 @@ connectivity between containers that are running on the same host.
     </dt>
     <dd>{{% md %}}The logging driver to use for the container.
 Defaults to "json-file".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_opts_python">
 <a href="#state_log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
@@ -5356,8 +4851,7 @@ Defaults to "json-file".
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_python">
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -5366,8 +4860,7 @@ the logging driver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Save the container logs (`attach` must be enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_retry_count_python">
 <a href="#state_max_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>count</a>
@@ -5377,8 +4870,7 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_python">
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -5387,8 +4879,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit for the container in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_swap_python">
 <a href="#state_memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
@@ -5396,8 +4887,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mounts_python">
 <a href="#state_mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
@@ -5406,8 +4896,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type"><a href="#containermount">Sequence[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_must_run_python">
 <a href="#state_must_run_python" style="color: inherit; text-decoration: inherit;">must_<wbr>run</a>
@@ -5415,8 +4904,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5424,8 +4912,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_network_aliases_python">
 <a href="#state_network_aliases_python" style="color: inherit; text-decoration: inherit;">network_<wbr>aliases</a>
@@ -5434,8 +4921,7 @@ a restart when `restart` is set to "on-failure"
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Network aliases of the container for user-defined networks only. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_datas_python">
 <a href="#state_network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
@@ -5445,8 +4931,7 @@ a restart when `restart` is set to "on-failure"
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_mode_python">
 <a href="#state_network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
@@ -5455,8 +4940,7 @@ network. Key are the network names, values are the IP addresses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network mode of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -5466,8 +4950,7 @@ network. Key are the network names, values are the IP addresses.
     </dt>
     <dd>{{% md %}}Id of the networks in which the
 container is. *Deprecated:* use `networks_advanced` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use networks_advanced instead. Will be removed in v2.0.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_advanced_python">
 <a href="#state_networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
@@ -5476,8 +4959,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containernetworksadvanced">Sequence[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_mode_python">
 <a href="#state_pid_mode_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>mode</a>
@@ -5486,8 +4968,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_python">
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -5496,8 +4977,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privileged_python">
 <a href="#state_privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
@@ -5506,8 +4986,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publish_all_ports_python">
 <a href="#state_publish_all_ports_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>all_<wbr>ports</a>
@@ -5516,8 +4995,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Publish all ports of the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_read_only_python">
 <a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -5527,8 +5005,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remove_volumes_python">
 <a href="#state_remove_volumes_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>volumes</a>
@@ -5536,8 +5013,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restart_python">
 <a href="#state_restart_python" style="color: inherit; text-decoration: inherit;">restart</a>
@@ -5547,8 +5023,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The restart policy for the container. Must be
 one of "no", "on-failure", "always", "unless-stopped".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rm_python">
 <a href="#state_rm_python" style="color: inherit; text-decoration: inherit;">rm</a>
@@ -5556,8 +5031,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_opts_python">
 <a href="#state_security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
@@ -5566,8 +5040,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of string values to customize labels for MLS systems, such as SELinux. See https://docs.docker.com/engine/reference/run/#security-configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shm_size_python">
 <a href="#state_shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
@@ -5576,8 +5049,7 @@ one of "no", "on-failure", "always", "unless-stopped".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of `/dev/shm` in MBs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_python">
 <a href="#state_start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -5587,8 +5059,7 @@ one of "no", "on-failure", "always", "unless-stopped".
     </dt>
     <dd>{{% md %}}If true, then the Docker container will be
 started after creation. If false, then the container is only created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stdin_open_python">
 <a href="#state_stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
@@ -5597,8 +5068,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sysctls_python">
 <a href="#state_sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -5607,8 +5077,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpfs_python">
 <a href="#state_tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
@@ -5617,8 +5086,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tty_python">
 <a href="#state_tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
@@ -5627,8 +5095,7 @@ started after creation. If false, then the container is only created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ulimits_python">
 <a href="#state_ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
@@ -5638,8 +5105,7 @@ started after creation. If false, then the container is only created.
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uploads_python">
 <a href="#state_uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
@@ -5648,8 +5114,7 @@ details.
         <span class="property-type"><a href="#containerupload">Sequence[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -5660,8 +5125,7 @@ details.
     <dd>{{% md %}}User used for run the first process. Format is
 `user` or `user:group` which user and group can be passed literraly or
 by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userns_mode_python">
 <a href="#state_userns_mode_python" style="color: inherit; text-decoration: inherit;">userns_<wbr>mode</a>
@@ -5670,8 +5134,7 @@ by name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_python">
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -5680,8 +5143,7 @@ by name.
         <span class="property-type"><a href="#containervolume">Sequence[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_working_dir_python">
 <a href="#state_working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -5690,8 +5152,7 @@ by name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -5706,9 +5167,7 @@ by name.
 <h4 id="containercapabilities">Container<wbr>Capabilities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adds_csharp">
 <a href="#adds_csharp" style="color: inherit; text-decoration: inherit;">Adds</a>
@@ -5717,8 +5176,7 @@ by name.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drops_csharp">
 <a href="#drops_csharp" style="color: inherit; text-decoration: inherit;">Drops</a>
@@ -5727,14 +5185,11 @@ by name.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adds_go">
 <a href="#adds_go" style="color: inherit; text-decoration: inherit;">Adds</a>
@@ -5743,8 +5198,7 @@ by name.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drops_go">
 <a href="#drops_go" style="color: inherit; text-decoration: inherit;">Drops</a>
@@ -5753,14 +5207,11 @@ by name.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adds_nodejs">
 <a href="#adds_nodejs" style="color: inherit; text-decoration: inherit;">adds</a>
@@ -5769,8 +5220,7 @@ by name.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drops_nodejs">
 <a href="#drops_nodejs" style="color: inherit; text-decoration: inherit;">drops</a>
@@ -5779,14 +5229,11 @@ by name.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adds_python">
 <a href="#adds_python" style="color: inherit; text-decoration: inherit;">adds</a>
@@ -5795,8 +5242,7 @@ by name.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drops_python">
 <a href="#drops_python" style="color: inherit; text-decoration: inherit;">drops</a>
@@ -5805,16 +5251,13 @@ by name.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of linux capabilities to drop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerdevice">Container<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpath_csharp">
 <a href="#hostpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
@@ -5824,8 +5267,7 @@ by name.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerpath_csharp">
 <a href="#containerpath_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Path</a>
@@ -5835,8 +5277,7 @@ is located.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -5847,14 +5288,11 @@ device will be binded.
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
 Defaults to `rwm`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpath_go">
 <a href="#hostpath_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
@@ -5864,8 +5302,7 @@ Defaults to `rwm`.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerpath_go">
 <a href="#containerpath_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Path</a>
@@ -5875,8 +5312,7 @@ is located.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -5887,14 +5323,11 @@ device will be binded.
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
 Defaults to `rwm`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpath_nodejs">
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
@@ -5904,8 +5337,7 @@ Defaults to `rwm`.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerpath_nodejs">
 <a href="#containerpath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
@@ -5915,8 +5347,7 @@ is located.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -5927,14 +5358,11 @@ device will be binded.
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
 Defaults to `rwm`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_path_python">
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
@@ -5944,8 +5372,7 @@ Defaults to `rwm`.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_path_python">
 <a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
@@ -5955,8 +5382,7 @@ is located.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -5967,16 +5393,13 @@ device will be binded.
     <dd>{{% md %}}The cgroup permissions given to the
 container to access the device.
 Defaults to `rwm`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerhealthcheck">Container<wbr>Healthcheck</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tests_csharp">
 <a href="#tests_csharp" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -5986,8 +5409,7 @@ Defaults to `rwm`.
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -5996,8 +5418,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -6006,8 +5427,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_csharp">
 <a href="#startperiod_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Period</a>
@@ -6016,8 +5436,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -6026,14 +5445,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tests_go">
 <a href="#tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -6043,8 +5459,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -6053,8 +5468,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -6063,8 +5477,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_go">
 <a href="#startperiod_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Period</a>
@@ -6073,8 +5486,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -6083,14 +5495,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tests_nodejs">
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -6100,8 +5509,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -6110,8 +5518,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -6120,8 +5527,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startperiod_nodejs">
 <a href="#startperiod_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
@@ -6130,8 +5536,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6140,14 +5545,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tests_python">
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -6157,8 +5559,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -6167,8 +5568,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -6177,8 +5577,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_period_python">
 <a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
@@ -6187,8 +5586,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6197,16 +5595,13 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerhost">Container<wbr>Host</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -6215,8 +5610,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -6225,14 +5619,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -6241,8 +5632,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -6251,14 +5641,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -6267,8 +5654,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -6277,14 +5663,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -6293,8 +5676,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -6303,16 +5685,13 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerlabel">Container<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -6321,8 +5700,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6331,14 +5709,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -6347,8 +5722,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6357,14 +5731,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -6373,8 +5744,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6383,14 +5753,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -6399,8 +5766,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6409,16 +5775,13 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containermount">Container<wbr>Mount</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -6427,8 +5790,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -6437,8 +5799,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_csharp">
 <a href="#bindoptions_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Options</a>
@@ -6447,8 +5808,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -6458,8 +5818,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6468,8 +5827,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_csharp">
 <a href="#tmpfsoptions_csharp" style="color: inherit; text-decoration: inherit;">Tmpfs<wbr>Options</a>
@@ -6478,8 +5836,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_csharp">
 <a href="#volumeoptions_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Options</a>
@@ -6488,14 +5845,11 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -6504,8 +5858,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -6514,8 +5867,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_go">
 <a href="#bindoptions_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Options</a>
@@ -6524,8 +5876,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -6535,8 +5886,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6545,8 +5895,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_go">
 <a href="#tmpfsoptions_go" style="color: inherit; text-decoration: inherit;">Tmpfs<wbr>Options</a>
@@ -6555,8 +5904,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_go">
 <a href="#volumeoptions_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Options</a>
@@ -6565,14 +5913,11 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -6581,8 +5926,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -6591,8 +5935,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bindoptions_nodejs">
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
@@ -6601,8 +5944,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -6612,8 +5954,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6622,8 +5963,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfsoptions_nodejs">
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
@@ -6632,8 +5972,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeoptions_nodejs">
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
@@ -6642,14 +5981,11 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -6658,8 +5994,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -6668,8 +6003,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount type: valid values are `bind|volume|tmpfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bind_options_python">
 <a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
@@ -6678,8 +6012,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -6689,8 +6022,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6699,8 +6031,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpfs_options_python">
 <a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
@@ -6709,8 +6040,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_options_python">
 <a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
@@ -6719,16 +6049,13 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propagation_csharp">
 <a href="#propagation_csharp" style="color: inherit; text-decoration: inherit;">Propagation</a>
@@ -6737,14 +6064,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propagation_go">
 <a href="#propagation_go" style="color: inherit; text-decoration: inherit;">Propagation</a>
@@ -6753,14 +6077,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propagation_nodejs">
 <a href="#propagation_nodejs" style="color: inherit; text-decoration: inherit;">propagation</a>
@@ -6769,14 +6090,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propagation_python">
 <a href="#propagation_python" style="color: inherit; text-decoration: inherit;">propagation</a>
@@ -6785,16 +6103,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -6803,8 +6118,7 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_csharp">
 <a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -6813,14 +6127,11 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -6829,8 +6140,7 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_go">
 <a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -6839,14 +6149,11 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -6855,8 +6162,7 @@ Defaults to false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_nodejs">
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
@@ -6865,14 +6171,11 @@ Defaults to false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -6881,8 +6184,7 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The permission mode for the tmpfs mount in an integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_bytes_python">
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
@@ -6891,16 +6193,13 @@ Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="drivername_csharp">
 <a href="#drivername_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Name</a>
@@ -6908,8 +6207,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveroptions_csharp">
 <a href="#driveroptions_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Options</a>
@@ -6918,8 +6216,7 @@ Defaults to false.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -6928,8 +6225,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptionslabel">List&lt;Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_csharp">
 <a href="#nocopy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Copy</a>
@@ -6938,14 +6234,11 @@ Defaults to false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="drivername_go">
 <a href="#drivername_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Name</a>
@@ -6953,8 +6246,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveroptions_go">
 <a href="#driveroptions_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Options</a>
@@ -6963,8 +6255,7 @@ Defaults to false.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -6973,8 +6264,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptionslabel">[]Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_go">
 <a href="#nocopy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Copy</a>
@@ -6983,14 +6273,11 @@ Defaults to false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="drivername_nodejs">
 <a href="#drivername_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Name</a>
@@ -6998,8 +6285,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveroptions_nodejs">
 <a href="#driveroptions_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Options</a>
@@ -7008,8 +6294,7 @@ Defaults to false.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -7018,8 +6303,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocopy_nodejs">
 <a href="#nocopy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
@@ -7028,14 +6312,11 @@ Defaults to false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="driver_name_python">
 <a href="#driver_name_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>name</a>
@@ -7043,8 +6324,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_options_python">
 <a href="#driver_options_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>options</a>
@@ -7053,8 +6333,7 @@ Defaults to false.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -7063,8 +6342,7 @@ Defaults to false.
         <span class="property-type"><a href="#containermountvolumeoptionslabel">Sequence[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_copy_python">
 <a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
@@ -7073,16 +6351,13 @@ Defaults to false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -7091,8 +6366,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7101,14 +6375,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -7117,8 +6388,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7127,14 +6397,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -7143,8 +6410,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7153,14 +6419,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -7169,8 +6432,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7179,16 +6441,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containernetworkdata">Container<wbr>Network<wbr>Data</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -7198,8 +6457,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6address_csharp">
 <a href="#globalipv6address_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv6Address</a>
@@ -7207,8 +6465,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6prefixlength_csharp">
 <a href="#globalipv6prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv6Prefix<wbr>Length</a>
@@ -7216,8 +6473,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -7226,8 +6482,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprefixlength_csharp">
 <a href="#ipprefixlength_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -7237,8 +6492,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_csharp">
 <a href="#ipv6gateway_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Gateway</a>
@@ -7246,8 +6500,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_csharp">
 <a href="#networkname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -7255,14 +6508,11 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -7272,8 +6522,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6address_go">
 <a href="#globalipv6address_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv6Address</a>
@@ -7281,8 +6530,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6prefixlength_go">
 <a href="#globalipv6prefixlength_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Ipv6Prefix<wbr>Length</a>
@@ -7290,8 +6538,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -7300,8 +6547,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprefixlength_go">
 <a href="#ipprefixlength_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Prefix<wbr>Length</a>
@@ -7311,8 +6557,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_go">
 <a href="#ipv6gateway_go" style="color: inherit; text-decoration: inherit;">Ipv6Gateway</a>
@@ -7320,8 +6565,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_go">
 <a href="#networkname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -7329,14 +6573,11 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -7346,8 +6587,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6address_nodejs">
 <a href="#globalipv6address_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Ipv6Address</a>
@@ -7355,8 +6595,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalipv6prefixlength_nodejs">
 <a href="#globalipv6prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Ipv6Prefix<wbr>Length</a>
@@ -7364,8 +6603,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -7374,8 +6612,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprefixlength_nodejs">
 <a href="#ipprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Prefix<wbr>Length</a>
@@ -7385,8 +6622,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_nodejs">
 <a href="#ipv6gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Gateway</a>
@@ -7394,8 +6630,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_nodejs">
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
@@ -7403,14 +6638,11 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -7420,8 +6652,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="global_ipv6_address_python">
 <a href="#global_ipv6_address_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv6_<wbr>address</a>
@@ -7429,8 +6660,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="global_ipv6_prefix_length_python">
 <a href="#global_ipv6_prefix_length_python" style="color: inherit; text-decoration: inherit;">global_<wbr>ipv6_<wbr>prefix_<wbr>length</a>
@@ -7438,8 +6668,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -7448,8 +6677,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP address of the container's first network it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_prefix_length_python">
 <a href="#ip_prefix_length_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>prefix_<wbr>length</a>
@@ -7459,8 +6687,7 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The IP prefix length of the container as read from its
 NetworkSettings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_gateway_python">
 <a href="#ipv6_gateway_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>gateway</a>
@@ -7468,8 +6695,7 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_name_python">
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
@@ -7477,16 +6703,13 @@ NetworkSettings.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containernetworksadvanced">Container<wbr>Networks<wbr>Advanced</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7495,8 +6718,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -7505,8 +6727,7 @@ NetworkSettings.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -7515,8 +6736,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -7525,14 +6745,11 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7541,8 +6758,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -7551,8 +6767,7 @@ NetworkSettings.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -7561,8 +6776,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -7571,14 +6785,11 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7587,8 +6798,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -7597,8 +6807,7 @@ NetworkSettings.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -7607,8 +6816,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -7617,14 +6825,11 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7633,8 +6838,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -7643,8 +6847,7 @@ NetworkSettings.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The network aliases of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -7653,8 +6856,7 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPV4 address of the container in the specific network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -7663,16 +6865,13 @@ NetworkSettings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPV6 address of the container in the specific network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerport">Container<wbr>Port</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="internal_csharp">
 <a href="#internal_csharp" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -7681,8 +6880,7 @@ NetworkSettings.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port within the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -7691,8 +6889,7 @@ NetworkSettings.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -7701,8 +6898,7 @@ NetworkSettings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -7712,14 +6908,11 @@ NetworkSettings.
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="internal_go">
 <a href="#internal_go" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -7728,8 +6921,7 @@ defaults to `tcp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port within the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -7738,8 +6930,7 @@ defaults to `tcp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -7748,8 +6939,7 @@ defaults to `tcp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -7759,14 +6949,11 @@ defaults to `tcp`.
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="internal_nodejs">
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -7775,8 +6962,7 @@ defaults to `tcp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port within the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -7785,8 +6971,7 @@ defaults to `tcp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -7795,8 +6980,7 @@ defaults to `tcp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -7806,14 +6990,11 @@ defaults to `tcp`.
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="internal_python">
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -7822,8 +7003,7 @@ defaults to `tcp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port within the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -7832,8 +7012,7 @@ defaults to `tcp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port exposed out of the container. If not given a free random port `>= 32768` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -7842,8 +7021,7 @@ defaults to `tcp`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address this hostname should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -7853,16 +7031,13 @@ defaults to `tcp`.
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port,
 defaults to `tcp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerulimit">Container<wbr>Ulimit</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hard_csharp">
 <a href="#hard_csharp" style="color: inherit; text-decoration: inherit;">Hard</a>
@@ -7870,8 +7045,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7879,8 +7053,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="soft_csharp">
 <a href="#soft_csharp" style="color: inherit; text-decoration: inherit;">Soft</a>
@@ -7888,14 +7061,11 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hard_go">
 <a href="#hard_go" style="color: inherit; text-decoration: inherit;">Hard</a>
@@ -7903,8 +7073,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7912,8 +7081,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="soft_go">
 <a href="#soft_go" style="color: inherit; text-decoration: inherit;">Soft</a>
@@ -7921,14 +7089,11 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hard_nodejs">
 <a href="#hard_nodejs" style="color: inherit; text-decoration: inherit;">hard</a>
@@ -7936,8 +7101,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7945,8 +7109,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="soft_nodejs">
 <a href="#soft_nodejs" style="color: inherit; text-decoration: inherit;">soft</a>
@@ -7954,14 +7117,11 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hard_python">
 <a href="#hard_python" style="color: inherit; text-decoration: inherit;">hard</a>
@@ -7969,8 +7129,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7978,8 +7137,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="soft_python">
 <a href="#soft_python" style="color: inherit; text-decoration: inherit;">soft</a>
@@ -7987,16 +7145,13 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerupload">Container<wbr>Upload</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_csharp">
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -8005,8 +7160,7 @@ defaults to `tcp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -8015,8 +7169,7 @@ defaults to `tcp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_csharp">
 <a href="#contentbase64_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -8024,8 +7177,7 @@ defaults to `tcp`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_csharp">
 <a href="#executable_csharp" style="color: inherit; text-decoration: inherit;">Executable</a>
@@ -8036,8 +7188,7 @@ defaults to `tcp`.
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -8046,8 +7197,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcehash_csharp">
 <a href="#sourcehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
@@ -8056,14 +7206,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_go">
 <a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -8072,8 +7219,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -8082,8 +7228,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_go">
 <a href="#contentbase64_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -8091,8 +7236,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_go">
 <a href="#executable_go" style="color: inherit; text-decoration: inherit;">Executable</a>
@@ -8103,8 +7247,7 @@ Defaults to false.
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -8113,8 +7256,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcehash_go">
 <a href="#sourcehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
@@ -8123,14 +7265,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_nodejs">
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -8139,8 +7278,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -8149,8 +7287,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_nodejs">
 <a href="#contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
@@ -8158,8 +7295,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_nodejs">
 <a href="#executable_nodejs" style="color: inherit; text-decoration: inherit;">executable</a>
@@ -8170,8 +7306,7 @@ Defaults to false.
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -8180,8 +7315,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcehash_nodejs">
 <a href="#sourcehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Hash</a>
@@ -8190,14 +7324,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_python">
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -8206,8 +7337,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}path to a file in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -8216,8 +7346,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_base64_python">
 <a href="#content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
@@ -8225,8 +7354,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_python">
 <a href="#executable_python" style="color: inherit; text-decoration: inherit;">executable</a>
@@ -8237,8 +7365,7 @@ Defaults to false.
     <dd>{{% md %}}If true, the file will be uploaded with user
 executable permission.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -8247,8 +7374,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filename that references a file which will be uploaded as the object content. This allows for large file uploads that do not get stored in state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_hash_python">
 <a href="#source_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>hash</a>
@@ -8257,16 +7383,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containervolume">Container<wbr>Volume</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerpath_csharp">
 <a href="#containerpath_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Path</a>
@@ -8276,8 +7399,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromcontainer_csharp">
 <a href="#fromcontainer_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Container</a>
@@ -8287,8 +7409,7 @@ device will be binded.
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpath_csharp">
 <a href="#hostpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
@@ -8298,8 +7419,7 @@ coming from.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -8309,8 +7429,7 @@ is located.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -8320,14 +7439,11 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerpath_go">
 <a href="#containerpath_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Path</a>
@@ -8337,8 +7453,7 @@ should be mounted.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromcontainer_go">
 <a href="#fromcontainer_go" style="color: inherit; text-decoration: inherit;">From<wbr>Container</a>
@@ -8348,8 +7463,7 @@ device will be binded.
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpath_go">
 <a href="#hostpath_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
@@ -8359,8 +7473,7 @@ coming from.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -8370,8 +7483,7 @@ is located.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -8381,14 +7493,11 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerpath_nodejs">
 <a href="#containerpath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
@@ -8398,8 +7507,7 @@ should be mounted.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromcontainer_nodejs">
 <a href="#fromcontainer_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Container</a>
@@ -8409,8 +7517,7 @@ device will be binded.
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpath_nodejs">
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
@@ -8420,8 +7527,7 @@ coming from.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -8431,8 +7537,7 @@ is located.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
@@ -8442,14 +7547,11 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="container_path_python">
 <a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
@@ -8459,8 +7561,7 @@ should be mounted.
     </dt>
     <dd>{{% md %}}The path in the container where the
 device will be binded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="from_container_python">
 <a href="#from_container_python" style="color: inherit; text-decoration: inherit;">from_<wbr>container</a>
@@ -8470,8 +7571,7 @@ device will be binded.
     </dt>
     <dd>{{% md %}}The container where the volume is
 coming from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_path_python">
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
@@ -8481,8 +7581,7 @@ coming from.
     </dt>
     <dd>{{% md %}}The path on the host where the device
 is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -8492,8 +7591,7 @@ is located.
     </dt>
     <dd>{{% md %}}If true, this volume will be readonly.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
@@ -8503,8 +7601,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The name of the docker volume which
 should be mounted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -8525,6 +7622,6 @@ Docker containers can be imported using the long id, e.g. for a container named 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 </dl>
 

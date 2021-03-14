@@ -18,11 +18,17 @@ See [Vault's Documentation](https://www.vaultproject.io/docs/concepts/resource-q
 information.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -78,9 +90,12 @@ global_ = vault.QuotaRateLimit("global",
     rate=100)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const global = new vault.QuotaRateLimit("global", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a QuotaRateLimit Resource {#create}
@@ -119,9 +141,7 @@ const global = new vault.QuotaRateLimit("global", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -129,9 +149,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -139,9 +157,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -149,10 +165,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -178,9 +191,7 @@ const global = new vault.QuotaRateLimit("global", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -188,9 +199,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -198,9 +207,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -208,9 +215,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,18 +223,13 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +237,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +245,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +253,7 @@ const global = new vault.QuotaRateLimit("global", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -275,9 +268,7 @@ The QuotaRateLimit resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rate_csharp">
 <a href="#rate_csharp" style="color: inherit; text-decoration: inherit;">Rate</a>
@@ -287,8 +278,7 @@ The QuotaRateLimit resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -297,8 +287,7 @@ rule. The `rate` must be positive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -312,14 +301,11 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rate_go">
 <a href="#rate_go" style="color: inherit; text-decoration: inherit;">Rate</a>
@@ -329,8 +315,7 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -339,8 +324,7 @@ rule. The `rate` must be positive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -354,14 +338,11 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rate_nodejs">
 <a href="#rate_nodejs" style="color: inherit; text-decoration: inherit;">rate</a>
@@ -371,8 +352,7 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -381,8 +361,7 @@ rule. The `rate` must be positive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -396,14 +375,11 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rate_python">
 <a href="#rate_python" style="color: inherit; text-decoration: inherit;">rate</a>
@@ -413,8 +389,7 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -423,8 +398,7 @@ rule. The `rate` must be positive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -438,8 +412,7 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -450,9 +423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,14 +431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -475,14 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,14 +455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -505,8 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -633,9 +594,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -644,8 +603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -659,8 +617,7 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rate_csharp">
 <a href="#state_rate_csharp" style="color: inherit; text-decoration: inherit;">Rate</a>
@@ -670,14 +627,11 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -686,8 +640,7 @@ rule. The `rate` must be positive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -701,8 +654,7 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rate_go">
 <a href="#state_rate_go" style="color: inherit; text-decoration: inherit;">Rate</a>
@@ -712,14 +664,11 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -728,8 +677,7 @@ rule. The `rate` must be positive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -743,8 +691,7 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rate_nodejs">
 <a href="#state_rate_nodejs" style="color: inherit; text-decoration: inherit;">rate</a>
@@ -754,14 +701,11 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -770,8 +714,7 @@ rule. The `rate` must be positive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rate limit quota
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -785,8 +728,7 @@ global rate limit quota. For example `namespace1/` adds a quota to a full namesp
 Updating this field on an existing quota can have "moving" effects. For example, updating
 `auth/userpass` to `namespace1/auth/userpass` moves this quota from being a global mount quota to
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rate_python">
 <a href="#state_rate_python" style="color: inherit; text-decoration: inherit;">rate</a>
@@ -796,8 +738,7 @@ a namespace specific mount quota. **Note, namespaces are supported in Enterprise
     </dt>
     <dd>{{% md %}}The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -823,6 +764,6 @@ Rate limit quotas can be imported using their names
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

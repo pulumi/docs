@@ -16,11 +16,17 @@ information.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -59,9 +65,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -106,9 +115,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -132,9 +144,12 @@ id = vault.app_role.AuthBackendRoleSecretID("id",
     role_name=example.role_name)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -162,9 +177,16 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AuthBackendRoleSecretID Resource {#create}
@@ -189,9 +211,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -199,9 +219,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -209,9 +227,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -219,10 +235,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -248,9 +261,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -258,9 +269,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +277,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +285,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,18 +293,13 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -307,9 +307,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -317,9 +315,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -327,10 +323,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -345,9 +338,7 @@ The AuthBackendRoleSecretID resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -356,8 +347,7 @@ The AuthBackendRoleSecretID resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -366,8 +356,7 @@ The AuthBackendRoleSecretID resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlists_csharp">
 <a href="#cidrlists_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Lists</a>
@@ -377,8 +366,7 @@ The AuthBackendRoleSecretID resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -388,8 +376,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -399,8 +386,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wrappingttl_csharp">
 <a href="#wrappingttl_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Ttl</a>
@@ -412,14 +398,11 @@ mode.  Defaults to Vault auto-generating SecretIDs.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -428,8 +411,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -438,8 +420,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlists_go">
 <a href="#cidrlists_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Lists</a>
@@ -449,8 +430,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -460,8 +440,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -471,8 +450,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wrappingttl_go">
 <a href="#wrappingttl_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Ttl</a>
@@ -484,14 +462,11 @@ mode.  Defaults to Vault auto-generating SecretIDs.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -500,8 +475,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -510,8 +484,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlists_nodejs">
 <a href="#cidrlists_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Lists</a>
@@ -521,8 +494,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -532,8 +504,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -543,8 +514,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wrappingttl_nodejs">
 <a href="#wrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Ttl</a>
@@ -556,14 +526,11 @@ mode.  Defaults to Vault auto-generating SecretIDs.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -572,8 +539,7 @@ token is allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -582,8 +548,7 @@ token is allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_lists_python">
 <a href="#cidr_lists_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>lists</a>
@@ -593,8 +558,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -604,8 +568,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -615,8 +578,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wrapping_ttl_python">
 <a href="#wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>ttl</a>
@@ -628,8 +590,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -640,9 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -651,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -660,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingaccessor_csharp">
 <a href="#wrappingaccessor_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Accessor</a>
@@ -671,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingtoken_csharp">
 <a href="#wrappingtoken_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Token</a>
@@ -681,14 +637,11 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -697,8 +650,7 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -706,8 +658,7 @@ be safely logged.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingaccessor_go">
 <a href="#wrappingaccessor_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Accessor</a>
@@ -717,8 +668,7 @@ be safely logged.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingtoken_go">
 <a href="#wrappingtoken_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Token</a>
@@ -727,14 +677,11 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -743,8 +690,7 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -752,8 +698,7 @@ be safely logged.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingaccessor_nodejs">
 <a href="#wrappingaccessor_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Accessor</a>
@@ -763,8 +708,7 @@ be safely logged.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrappingtoken_nodejs">
 <a href="#wrappingtoken_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Token</a>
@@ -773,14 +717,11 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -789,8 +730,7 @@ be safely logged.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -798,8 +738,7 @@ be safely logged.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrapping_accessor_python">
 <a href="#wrapping_accessor_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>accessor</a>
@@ -809,8 +748,7 @@ be safely logged.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wrapping_token_python">
 <a href="#wrapping_token_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>token</a>
@@ -819,8 +757,7 @@ be safely logged.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -947,9 +884,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_csharp">
 <a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -958,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -968,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlists_csharp">
 <a href="#state_cidrlists_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Lists</a>
@@ -979,8 +912,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -990,8 +922,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1000,8 +931,7 @@ key-value pairs to be set on tokens issued with this SecretID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_csharp">
 <a href="#state_secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1011,8 +941,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingaccessor_csharp">
 <a href="#state_wrappingaccessor_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Accessor</a>
@@ -1022,8 +951,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingtoken_csharp">
 <a href="#state_wrappingtoken_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Token</a>
@@ -1032,8 +960,7 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingttl_csharp">
 <a href="#state_wrappingttl_csharp" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Ttl</a>
@@ -1045,14 +972,11 @@ be safely logged.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_go">
 <a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -1061,8 +985,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1071,8 +994,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlists_go">
 <a href="#state_cidrlists_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Lists</a>
@@ -1082,8 +1004,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1093,8 +1014,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1103,8 +1023,7 @@ key-value pairs to be set on tokens issued with this SecretID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_go">
 <a href="#state_secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1114,8 +1033,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingaccessor_go">
 <a href="#state_wrappingaccessor_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Accessor</a>
@@ -1125,8 +1043,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingtoken_go">
 <a href="#state_wrappingtoken_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Token</a>
@@ -1135,8 +1052,7 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingttl_go">
 <a href="#state_wrappingttl_go" style="color: inherit; text-decoration: inherit;">Wrapping<wbr>Ttl</a>
@@ -1148,14 +1064,11 @@ be safely logged.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_nodejs">
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1164,8 +1077,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1174,8 +1086,7 @@ token is allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlists_nodejs">
 <a href="#state_cidrlists_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Lists</a>
@@ -1185,8 +1096,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1196,8 +1106,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1206,8 +1115,7 @@ key-value pairs to be set on tokens issued with this SecretID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_nodejs">
 <a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -1217,8 +1125,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingaccessor_nodejs">
 <a href="#state_wrappingaccessor_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Accessor</a>
@@ -1228,8 +1135,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingtoken_nodejs">
 <a href="#state_wrappingtoken_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Token</a>
@@ -1238,8 +1144,7 @@ be safely logged.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrappingttl_nodejs">
 <a href="#state_wrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Ttl</a>
@@ -1251,14 +1156,11 @@ be safely logged.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_python">
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1267,8 +1169,7 @@ token is allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for this SecretID that can be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1277,8 +1178,7 @@ token is allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_lists_python">
 <a href="#state_cidr_lists_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>lists</a>
@@ -1288,8 +1188,7 @@ token is allowed.
     </dt>
     <dd>{{% md %}}If set, specifies blocks of IP addresses which can
 perform the login operation using this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1299,8 +1198,7 @@ perform the login operation using this SecretID.
     </dt>
     <dd>{{% md %}}A JSON-encoded string containing metadata in
 key-value pairs to be set on tokens issued with this SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -1309,8 +1207,7 @@ key-value pairs to be set on tokens issued with this SecretID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role to create the SecretID for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_id_python">
 <a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -1320,8 +1217,7 @@ key-value pairs to be set on tokens issued with this SecretID.
     </dt>
     <dd>{{% md %}}The SecretID to be created. If set, uses "Push"
 mode.  Defaults to Vault auto-generating SecretIDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrapping_accessor_python">
 <a href="#state_wrapping_accessor_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>accessor</a>
@@ -1331,8 +1227,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.
     </dt>
     <dd>{{% md %}}The unique ID for the response-wrapped SecretID that can
 be safely logged.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrapping_token_python">
 <a href="#state_wrapping_token_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>token</a>
@@ -1341,8 +1236,7 @@ be safely logged.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token used to retrieve a response-wrapped SecretID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wrapping_ttl_python">
 <a href="#state_wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>ttl</a>
@@ -1354,8 +1248,7 @@ be safely logged.
 [response-wrapped](https://www.vaultproject.io/docs/concepts/response-wrapping)
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1371,6 +1264,6 @@ token is allowed.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

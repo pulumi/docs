@@ -37,9 +37,7 @@ The provider type for the kubernetes package.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ The provider type for the kubernetes package.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ The provider type for the kubernetes package.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +164,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -203,8 +172,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -212,8 +180,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_csharp">
 <a href="#enabledryrun_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
@@ -222,8 +189,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
@@ -231,8 +197,7 @@ This feature is in developer preview, and is disabled by default. It can also be
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -245,8 +210,7 @@ This feature is in developer preview, and is disabled by default. It can also be
 A namespace can be specified in multiple places, and the precedence is as follows:
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
-3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-    <dt class="property-optional"
+3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_csharp">
 <a href="#renderyamltodirectory_csharp" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
@@ -261,8 +225,7 @@ to the Pulumi program. This feature is in developer preview, and is disabled by 
 Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-    <dt class="property-optional"
+used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_csharp">
 <a href="#suppressdeprecationwarnings_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
@@ -270,14 +233,11 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -285,8 +245,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -294,8 +253,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_go">
 <a href="#enabledryrun_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
@@ -304,8 +262,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -313,8 +270,7 @@ This feature is in developer preview, and is disabled by default. It can also be
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -327,8 +283,7 @@ This feature is in developer preview, and is disabled by default. It can also be
 A namespace can be specified in multiple places, and the precedence is as follows:
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
-3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-    <dt class="property-optional"
+3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_go">
 <a href="#renderyamltodirectory_go" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
@@ -343,8 +298,7 @@ to the Pulumi program. This feature is in developer preview, and is disabled by 
 Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-    <dt class="property-optional"
+used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_go">
 <a href="#suppressdeprecationwarnings_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
@@ -352,14 +306,11 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -367,8 +318,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -376,8 +326,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledryrun_nodejs">
 <a href="#enabledryrun_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dry<wbr>Run</a>
@@ -386,8 +335,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -395,8 +343,7 @@ This feature is in developer preview, and is disabled by default. It can also be
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -409,8 +356,7 @@ This feature is in developer preview, and is disabled by default. It can also be
 A namespace can be specified in multiple places, and the precedence is as follows:
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
-3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-    <dt class="property-optional"
+3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renderyamltodirectory_nodejs">
 <a href="#renderyamltodirectory_nodejs" style="color: inherit; text-decoration: inherit;">render<wbr>Yaml<wbr>To<wbr>Directory</a>
@@ -425,8 +371,7 @@ to the Pulumi program. This feature is in developer preview, and is disabled by 
 Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-    <dt class="property-optional"
+used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressdeprecationwarnings_nodejs">
 <a href="#suppressdeprecationwarnings_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Deprecation<wbr>Warnings</a>
@@ -434,14 +379,11 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -449,8 +391,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig cluster to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -458,8 +399,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If present, the name of the kubeconfig context to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_dry_run_python">
 <a href="#enable_dry_run_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dry_<wbr>run</a>
@@ -468,8 +408,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -477,8 +416,7 @@ This feature is in developer preview, and is disabled by default. It can also be
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -491,8 +429,7 @@ This feature is in developer preview, and is disabled by default. It can also be
 A namespace can be specified in multiple places, and the precedence is as follows:
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
-3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-    <dt class="property-optional"
+3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="render_yaml_to_directory_python">
 <a href="#render_yaml_to_directory_python" style="color: inherit; text-decoration: inherit;">render_<wbr>yaml_<wbr>to_<wbr>directory</a>
@@ -507,8 +444,7 @@ to the Pulumi program. This feature is in developer preview, and is disabled by 
 Note that some computed Outputs such as status fields will not be populated
 since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
 and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-    <dt class="property-optional"
+used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppress_deprecation_warnings_python">
 <a href="#suppress_deprecation_warnings_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>deprecation_<wbr>warnings</a>
@@ -516,8 +452,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -528,9 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -538,14 +471,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -553,14 +483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -568,14 +495,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -583,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

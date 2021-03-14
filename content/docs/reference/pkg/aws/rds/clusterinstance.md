@@ -26,11 +26,17 @@ For more information on Amazon Aurora, see [Aurora on Amazon RDS](https://docs.a
 > **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
@@ -71,9 +77,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -119,9 +128,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -146,9 +158,12 @@ for range in [{"value": i} for i in range(0, 2)]:
         engine_version=default.engine_version))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -177,9 +192,16 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
 }
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ClusterInstance Resource {#create}
@@ -204,9 +226,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +234,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +242,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,10 +250,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -263,9 +276,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -273,9 +284,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -283,9 +292,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -293,9 +300,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -303,18 +308,13 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -322,9 +322,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -332,9 +330,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -342,10 +338,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -360,9 +353,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -371,8 +362,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -382,8 +372,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -393,8 +382,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_csharp">
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -403,8 +391,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -413,8 +400,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_csharp">
 <a href="#cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -423,8 +409,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstosnapshot_csharp">
 <a href="#copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -433,8 +418,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbparametergroupname_csharp">
 <a href="#dbparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -443,8 +427,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_csharp">
 <a href="#dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -453,8 +436,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -466,8 +448,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -476,8 +457,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -486,8 +466,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_csharp">
 <a href="#identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -496,8 +475,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringinterval_csharp">
 <a href="#monitoringinterval_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
@@ -506,8 +484,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringrolearn_csharp">
 <a href="#monitoringrolearn_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
@@ -518,8 +495,7 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightsenabled_csharp">
 <a href="#performanceinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
@@ -528,8 +504,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightskmskeyid_csharp">
 <a href="#performanceinsightskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -538,8 +513,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_csharp">
 <a href="#preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -549,8 +523,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -560,8 +533,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_csharp">
 <a href="#promotiontier_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -570,8 +542,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_csharp">
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -582,8 +553,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -592,14 +562,11 @@ details on controlling this property.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -608,8 +575,7 @@ details on controlling this property.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -619,8 +585,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -630,8 +595,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_go">
 <a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -640,8 +604,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -650,8 +613,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_go">
 <a href="#cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -660,8 +622,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstosnapshot_go">
 <a href="#copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -670,8 +631,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbparametergroupname_go">
 <a href="#dbparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -680,8 +640,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_go">
 <a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -690,8 +649,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -703,8 +661,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -713,8 +670,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -723,8 +679,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_go">
 <a href="#identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -733,8 +688,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringinterval_go">
 <a href="#monitoringinterval_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
@@ -743,8 +697,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringrolearn_go">
 <a href="#monitoringrolearn_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
@@ -755,8 +708,7 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightsenabled_go">
 <a href="#performanceinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
@@ -765,8 +717,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightskmskeyid_go">
 <a href="#performanceinsightskmskeyid_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -775,8 +726,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_go">
 <a href="#preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -786,8 +736,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -797,8 +746,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_go">
 <a href="#promotiontier_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -807,8 +755,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_go">
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -819,8 +766,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -829,14 +775,11 @@ details on controlling this property.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -845,8 +788,7 @@ details on controlling this property.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -856,8 +798,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -867,8 +808,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_nodejs">
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -877,8 +817,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -887,8 +826,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_nodejs">
 <a href="#cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
@@ -897,8 +835,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstosnapshot_nodejs">
 <a href="#copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -907,8 +844,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbparametergroupname_nodejs">
 <a href="#dbparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -917,8 +853,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_nodejs">
 <a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -927,8 +862,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -940,8 +874,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -950,8 +883,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -960,8 +892,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_nodejs">
 <a href="#identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -970,8 +901,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringinterval_nodejs">
 <a href="#monitoringinterval_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval</a>
@@ -980,8 +910,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringrolearn_nodejs">
 <a href="#monitoringrolearn_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Role<wbr>Arn</a>
@@ -992,8 +921,7 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightsenabled_nodejs">
 <a href="#performanceinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Enabled</a>
@@ -1002,8 +930,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performanceinsightskmskeyid_nodejs">
 <a href="#performanceinsightskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -1012,8 +939,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupwindow_nodejs">
 <a href="#preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -1023,8 +949,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -1034,8 +959,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_nodejs">
 <a href="#promotiontier_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Tier</a>
@@ -1044,8 +968,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_nodejs">
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -1056,8 +979,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1066,14 +988,11 @@ details on controlling this property.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -1082,8 +1001,7 @@ details on controlling this property.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -1093,8 +1011,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -1104,8 +1021,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_minor_version_upgrade_python">
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -1114,8 +1030,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1124,8 +1039,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_identifier_python">
 <a href="#ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
@@ -1134,8 +1048,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_tags_to_snapshot_python">
 <a href="#copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
@@ -1144,8 +1057,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_parameter_group_name_python">
 <a href="#db_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>parameter_<wbr>group_<wbr>name</a>
@@ -1154,8 +1066,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_subnet_group_name_python">
 <a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -1164,8 +1075,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1177,8 +1087,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1187,8 +1096,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -1197,8 +1105,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_prefix_python">
 <a href="#identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -1207,8 +1114,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_interval_python">
 <a href="#monitoring_interval_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval</a>
@@ -1217,8 +1123,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_role_arn_python">
 <a href="#monitoring_role_arn_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>role_<wbr>arn</a>
@@ -1229,8 +1134,7 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_insights_enabled_python">
 <a href="#performance_insights_enabled_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>enabled</a>
@@ -1239,8 +1143,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_insights_kms_key_id_python">
 <a href="#performance_insights_kms_key_id_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -1249,8 +1152,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_window_python">
 <a href="#preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -1260,8 +1162,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -1271,8 +1172,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotion_tier_python">
 <a href="#promotion_tier_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>tier</a>
@@ -1281,8 +1181,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicly_accessible_python">
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -1293,8 +1192,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1303,8 +1201,7 @@ details on controlling this property.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1315,9 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1326,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_csharp">
 <a href="#dbiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1336,8 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1346,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1355,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1365,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1375,8 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_csharp">
 <a href="#storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1385,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_csharp">
 <a href="#writer_csharp" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -1395,14 +1283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1411,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_go">
 <a href="#dbiresourceid_go" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1421,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1431,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1440,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1450,8 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1460,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_go">
 <a href="#storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1470,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_go">
 <a href="#writer_go" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -1480,14 +1358,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1496,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_nodejs">
 <a href="#dbiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">dbi<wbr>Resource<wbr>Id</a>
@@ -1506,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1516,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1525,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1535,8 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1545,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_nodejs">
 <a href="#storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -1555,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_nodejs">
 <a href="#writer_nodejs" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -1565,14 +1433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1581,8 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbi_resource_id_python">
 <a href="#dbi_resource_id_python" style="color: inherit; text-decoration: inherit;">dbi_<wbr>resource_<wbr>id</a>
@@ -1591,8 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1601,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1610,8 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1620,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1630,8 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_encrypted_python">
 <a href="#storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -1640,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_python">
 <a href="#writer_python" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -1650,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1778,9 +1635,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1790,8 +1645,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1800,8 +1654,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_csharp">
 <a href="#state_autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1810,8 +1663,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1820,8 +1672,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_csharp">
 <a href="#state_cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -1830,8 +1681,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_csharp">
 <a href="#state_clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -1840,8 +1690,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copytagstosnapshot_csharp">
 <a href="#state_copytagstosnapshot_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -1850,8 +1699,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbparametergroupname_csharp">
 <a href="#state_dbparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -1860,8 +1708,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_csharp">
 <a href="#state_dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1870,8 +1717,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_csharp">
 <a href="#state_dbiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1880,8 +1726,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1890,8 +1735,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1903,8 +1747,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1913,8 +1756,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
 <a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -1923,8 +1765,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_csharp">
 <a href="#state_identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -1933,8 +1774,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_csharp">
 <a href="#state_instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -1944,8 +1784,7 @@ in the Amazon RDS User Guide.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1954,8 +1793,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringinterval_csharp">
 <a href="#state_monitoringinterval_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
@@ -1964,8 +1802,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringrolearn_csharp">
 <a href="#state_monitoringrolearn_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
@@ -1976,8 +1813,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightsenabled_csharp">
 <a href="#state_performanceinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
@@ -1986,8 +1822,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightskmskeyid_csharp">
 <a href="#state_performanceinsightskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -1996,8 +1831,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2006,8 +1840,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_csharp">
 <a href="#state_preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -2017,8 +1850,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
 <a href="#state_preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -2028,8 +1860,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_csharp">
 <a href="#state_promotiontier_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -2038,8 +1869,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_csharp">
 <a href="#state_publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -2050,8 +1880,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_csharp">
 <a href="#state_storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -2060,8 +1889,7 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2070,8 +1898,7 @@ details on controlling this property.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_csharp">
 <a href="#state_writer_csharp" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -2080,14 +1907,11 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -2097,8 +1921,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2107,8 +1930,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_go">
 <a href="#state_autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -2117,8 +1939,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -2127,8 +1948,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_go">
 <a href="#state_cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -2137,8 +1957,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_go">
 <a href="#state_clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -2147,8 +1966,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copytagstosnapshot_go">
 <a href="#state_copytagstosnapshot_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -2157,8 +1975,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbparametergroupname_go">
 <a href="#state_dbparametergroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -2167,8 +1984,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_go">
 <a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -2177,8 +1993,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_go">
 <a href="#state_dbiresourceid_go" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -2187,8 +2002,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -2197,8 +2011,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -2210,8 +2023,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -2220,8 +2032,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -2230,8 +2041,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_go">
 <a href="#state_identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -2240,8 +2050,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_go">
 <a href="#state_instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -2251,8 +2060,7 @@ in the Amazon RDS User Guide.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2261,8 +2069,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringinterval_go">
 <a href="#state_monitoringinterval_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
@@ -2271,8 +2078,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringrolearn_go">
 <a href="#state_monitoringrolearn_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
@@ -2283,8 +2089,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightsenabled_go">
 <a href="#state_performanceinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Enabled</a>
@@ -2293,8 +2098,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightskmskeyid_go">
 <a href="#state_performanceinsightskmskeyid_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -2303,8 +2107,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2313,8 +2116,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_go">
 <a href="#state_preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -2324,8 +2126,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
 <a href="#state_preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -2335,8 +2136,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_go">
 <a href="#state_promotiontier_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -2345,8 +2145,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_go">
 <a href="#state_publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -2357,8 +2156,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_go">
 <a href="#state_storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -2367,8 +2165,7 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2377,8 +2174,7 @@ details on controlling this property.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_go">
 <a href="#state_writer_go" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -2387,14 +2183,11 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -2404,8 +2197,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2414,8 +2206,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_nodejs">
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -2424,8 +2215,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -2434,8 +2224,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_nodejs">
 <a href="#state_cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
@@ -2444,8 +2233,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_nodejs">
 <a href="#state_clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -2454,8 +2242,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copytagstosnapshot_nodejs">
 <a href="#state_copytagstosnapshot_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Tags<wbr>To<wbr>Snapshot</a>
@@ -2464,8 +2251,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbparametergroupname_nodejs">
 <a href="#state_dbparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -2474,8 +2260,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_nodejs">
 <a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -2484,8 +2269,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_nodejs">
 <a href="#state_dbiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">dbi<wbr>Resource<wbr>Id</a>
@@ -2494,8 +2278,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2504,8 +2287,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2517,8 +2299,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2527,8 +2308,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2537,8 +2317,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_nodejs">
 <a href="#state_identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -2547,8 +2326,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_nodejs">
 <a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -2558,8 +2336,7 @@ in the Amazon RDS User Guide.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2568,8 +2345,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringinterval_nodejs">
 <a href="#state_monitoringinterval_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval</a>
@@ -2578,8 +2354,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringrolearn_nodejs">
 <a href="#state_monitoringrolearn_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Role<wbr>Arn</a>
@@ -2590,8 +2365,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightsenabled_nodejs">
 <a href="#state_performanceinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Enabled</a>
@@ -2600,8 +2374,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performanceinsightskmskeyid_nodejs">
 <a href="#state_performanceinsightskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -2610,8 +2383,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2620,8 +2392,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_nodejs">
 <a href="#state_preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -2631,8 +2402,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
 <a href="#state_preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -2642,8 +2412,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_nodejs">
 <a href="#state_promotiontier_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Tier</a>
@@ -2652,8 +2421,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_nodejs">
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -2664,8 +2432,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_nodejs">
 <a href="#state_storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -2674,8 +2441,7 @@ details on controlling this property.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2684,8 +2450,7 @@ details on controlling this property.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_nodejs">
 <a href="#state_writer_nodejs" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -2694,14 +2459,11 @@ details on controlling this property.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -2711,8 +2473,7 @@ details on controlling this property.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2721,8 +2482,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_minor_version_upgrade_python">
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -2731,8 +2491,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2741,8 +2500,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_cert_identifier_python">
 <a href="#state_ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
@@ -2751,8 +2509,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_identifier_python">
 <a href="#state_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -2761,8 +2518,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.rds.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copy_tags_to_snapshot_python">
 <a href="#state_copy_tags_to_snapshot_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>tags_<wbr>to_<wbr>snapshot</a>
@@ -2771,8 +2527,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_parameter_group_name_python">
 <a href="#state_db_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>parameter_<wbr>group_<wbr>name</a>
@@ -2781,8 +2536,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter group to associate with this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_subnet_group_name_python">
 <a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -2791,8 +2545,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbi_resource_id_python">
 <a href="#state_dbi_resource_id_python" style="color: inherit; text-decoration: inherit;">dbi_<wbr>resource_<wbr>id</a>
@@ -2801,8 +2554,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2811,8 +2563,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2824,8 +2575,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2834,8 +2584,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2844,8 +2593,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_prefix_python">
 <a href="#state_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -2854,8 +2602,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_class_python">
 <a href="#state_instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -2865,8 +2612,7 @@ in the Amazon RDS User Guide.
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2875,8 +2621,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_interval_python">
 <a href="#state_monitoring_interval_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval</a>
@@ -2885,8 +2630,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_role_arn_python">
 <a href="#state_monitoring_role_arn_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>role_<wbr>arn</a>
@@ -2897,8 +2641,7 @@ and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/Amazon
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html)
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performance_insights_enabled_python">
 <a href="#state_performance_insights_enabled_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>enabled</a>
@@ -2907,8 +2650,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Performance Insights is enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performance_insights_kms_key_id_python">
 <a href="#state_performance_insights_kms_key_id_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>insights_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -2917,8 +2659,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2927,8 +2668,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_window_python">
 <a href="#state_preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -2938,8 +2678,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 Eg: "04:00-09:00"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
 <a href="#state_preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -2949,8 +2688,7 @@ Eg: "04:00-09:00"
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotion_tier_python">
 <a href="#state_promotion_tier_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>tier</a>
@@ -2959,8 +2697,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicly_accessible_python">
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -2971,8 +2708,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
 Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_encrypted_python">
 <a href="#state_storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -2981,8 +2717,7 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2991,8 +2726,7 @@ details on controlling this property.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_python">
 <a href="#state_writer_python" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -3001,8 +2735,7 @@ details on controlling this property.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3017,495 +2750,255 @@ details on controlling this property.
 <h4 id="instancetype">Instance<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>T3_Micro</dt>
-    <dd>db.t3.micro</dd>
-    <dt>T3_Small</dt>
-    <dd>db.t3.small</dd>
-    <dt>T3_Medium</dt>
-    <dd>db.t3.medium</dd>
-    <dt>T3_Large</dt>
-    <dd>db.t3.large</dd>
-    <dt>T3_XLarge</dt>
-    <dd>db.t3.xlarge</dd>
-    <dt>T3_2XLarge</dt>
-    <dd>db.t3.2xlarge</dd>
-    <dt>T2_Micro</dt>
-    <dd>db.t2.micro</dd>
-    <dt>T2_Small</dt>
-    <dd>db.t2.small</dd>
-    <dt>T2_Medium</dt>
-    <dd>db.t2.medium</dd>
-    <dt>T2_Large</dt>
-    <dd>db.t2.large</dd>
-    <dt>T2_XLarge</dt>
-    <dd>db.t2.xlarge</dd>
-    <dt>T2_2XLarge</dt>
-    <dd>db.t2.2xlarge</dd>
-    <dt>M1_Small</dt>
-    <dd>db.m1.small</dd>
-    <dt>M1_Medium</dt>
-    <dd>db.m1.medium</dd>
-    <dt>M1_Large</dt>
-    <dd>db.m1.large</dd>
-    <dt>M1_XLarge</dt>
-    <dd>db.m1.xlarge</dd>
-    <dt>M2_XLarge</dt>
-    <dd>db.m2.xlarge</dd>
-    <dt>M2_2XLarge</dt>
-    <dd>db.m2.2xlarge</dd>
-    <dt>M2_4XLarge</dt>
-    <dd>db.m2.4xlarge</dd>
-    <dt>M3_Medium</dt>
-    <dd>db.m3.medium</dd>
-    <dt>M3_Large</dt>
-    <dd>db.m3.large</dd>
-    <dt>M3_XLarge</dt>
-    <dd>db.m3.xlarge</dd>
-    <dt>M3_2XLarge</dt>
-    <dd>db.m3.2xlarge</dd>
-    <dt>M4_Large</dt>
-    <dd>db.m4.large</dd>
-    <dt>M4_XLarge</dt>
-    <dd>db.m4.xlarge</dd>
-    <dt>M4_2XLarge</dt>
-    <dd>db.m4.2xlarge</dd>
-    <dt>M4_4XLarge</dt>
-    <dd>db.m4.4xlarge</dd>
-    <dt>M4_10XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M4_16XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M5_Large</dt>
-    <dd>db.m5.large</dd>
-    <dt>M5_XLarge</dt>
-    <dd>db.m5.xlarge</dd>
-    <dt>M5_2XLarge</dt>
-    <dd>db.m5.2xlarge</dd>
-    <dt>M5_4XLarge</dt>
-    <dd>db.m5.4xlarge</dd>
-    <dt>M5_12XLarge</dt>
-    <dd>db.m5.12xlarge</dd>
-    <dt>M5_24XLarge</dt>
-    <dd>db.m5.24xlarge</dd>
-    <dt>R3_Large</dt>
-    <dd>db.r3.large</dd>
-    <dt>R3_XLarge</dt>
-    <dd>db.r3.xlarge</dd>
-    <dt>R3_2XLarge</dt>
-    <dd>db.r3.2xlarge</dd>
-    <dt>R3_4XLarge</dt>
-    <dd>db.r3.4xlarge</dd>
-    <dt>R3_8XLarge</dt>
-    <dd>db.r3.8xlarge</dd>
-    <dt>R4_Large</dt>
-    <dd>db.r4.large</dd>
-    <dt>R4_XLarge</dt>
-    <dd>db.r4.xlarge</dd>
-    <dt>R4_2XLarge</dt>
-    <dd>db.r4.2xlarge</dd>
-    <dt>R4_4XLarge</dt>
-    <dd>db.r4.4xlarge</dd>
-    <dt>R4_8XLarge</dt>
-    <dd>db.r4.8xlarge</dd>
-    <dt>R4_16XLarge</dt>
-    <dd>db.r4.16xlarge</dd>
-    <dt>R5_Large</dt>
-    <dd>db.r5.large</dd>
-    <dt>R5_XLarge</dt>
-    <dd>db.r5.xlarge</dd>
-    <dt>R5_2XLarge</dt>
-    <dd>db.r5.2xlarge</dd>
-    <dt>R5_4XLarge</dt>
-    <dd>db.r5.4xlarge</dd>
-    <dt>R5_12XLarge</dt>
-    <dd>db.r5.12xlarge</dd>
-    <dt>R5_24XLarge</dt>
-    <dd>db.r5.24xlarge</dd>
-    <dt>X1_16XLarge</dt>
-    <dd>db.x1.16xlarge</dd>
-    <dt>X1_32XLarge</dt>
-    <dd>db.x1.32xlarge</dd>
-    <dt>X1E_XLarge</dt>
-    <dd>db.x1e.xlarge</dd>
-    <dt>X1E_2XLarge</dt>
-    <dd>db.x1e.2xlarge</dd>
-    <dt>X1E_4XLarge</dt>
-    <dd>db.x1e.4xlarge</dd>
-    <dt>X1E_8XLarge</dt>
-    <dd>db.x1e.8xlarge</dd>
-    <dt>X1E_32XLarge</dt>
-    <dd>db.x1e.32xlarge</dd>
-</dl>
+<dl class="tabular"><dt>T3_Micro</dt>
+    <dd>db.t3.micro</dd><dt>T3_Small</dt>
+    <dd>db.t3.small</dd><dt>T3_Medium</dt>
+    <dd>db.t3.medium</dd><dt>T3_Large</dt>
+    <dd>db.t3.large</dd><dt>T3_XLarge</dt>
+    <dd>db.t3.xlarge</dd><dt>T3_2XLarge</dt>
+    <dd>db.t3.2xlarge</dd><dt>T2_Micro</dt>
+    <dd>db.t2.micro</dd><dt>T2_Small</dt>
+    <dd>db.t2.small</dd><dt>T2_Medium</dt>
+    <dd>db.t2.medium</dd><dt>T2_Large</dt>
+    <dd>db.t2.large</dd><dt>T2_XLarge</dt>
+    <dd>db.t2.xlarge</dd><dt>T2_2XLarge</dt>
+    <dd>db.t2.2xlarge</dd><dt>M1_Small</dt>
+    <dd>db.m1.small</dd><dt>M1_Medium</dt>
+    <dd>db.m1.medium</dd><dt>M1_Large</dt>
+    <dd>db.m1.large</dd><dt>M1_XLarge</dt>
+    <dd>db.m1.xlarge</dd><dt>M2_XLarge</dt>
+    <dd>db.m2.xlarge</dd><dt>M2_2XLarge</dt>
+    <dd>db.m2.2xlarge</dd><dt>M2_4XLarge</dt>
+    <dd>db.m2.4xlarge</dd><dt>M3_Medium</dt>
+    <dd>db.m3.medium</dd><dt>M3_Large</dt>
+    <dd>db.m3.large</dd><dt>M3_XLarge</dt>
+    <dd>db.m3.xlarge</dd><dt>M3_2XLarge</dt>
+    <dd>db.m3.2xlarge</dd><dt>M4_Large</dt>
+    <dd>db.m4.large</dd><dt>M4_XLarge</dt>
+    <dd>db.m4.xlarge</dd><dt>M4_2XLarge</dt>
+    <dd>db.m4.2xlarge</dd><dt>M4_4XLarge</dt>
+    <dd>db.m4.4xlarge</dd><dt>M4_10XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>M4_16XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>M5_Large</dt>
+    <dd>db.m5.large</dd><dt>M5_XLarge</dt>
+    <dd>db.m5.xlarge</dd><dt>M5_2XLarge</dt>
+    <dd>db.m5.2xlarge</dd><dt>M5_4XLarge</dt>
+    <dd>db.m5.4xlarge</dd><dt>M5_12XLarge</dt>
+    <dd>db.m5.12xlarge</dd><dt>M5_24XLarge</dt>
+    <dd>db.m5.24xlarge</dd><dt>R3_Large</dt>
+    <dd>db.r3.large</dd><dt>R3_XLarge</dt>
+    <dd>db.r3.xlarge</dd><dt>R3_2XLarge</dt>
+    <dd>db.r3.2xlarge</dd><dt>R3_4XLarge</dt>
+    <dd>db.r3.4xlarge</dd><dt>R3_8XLarge</dt>
+    <dd>db.r3.8xlarge</dd><dt>R4_Large</dt>
+    <dd>db.r4.large</dd><dt>R4_XLarge</dt>
+    <dd>db.r4.xlarge</dd><dt>R4_2XLarge</dt>
+    <dd>db.r4.2xlarge</dd><dt>R4_4XLarge</dt>
+    <dd>db.r4.4xlarge</dd><dt>R4_8XLarge</dt>
+    <dd>db.r4.8xlarge</dd><dt>R4_16XLarge</dt>
+    <dd>db.r4.16xlarge</dd><dt>R5_Large</dt>
+    <dd>db.r5.large</dd><dt>R5_XLarge</dt>
+    <dd>db.r5.xlarge</dd><dt>R5_2XLarge</dt>
+    <dd>db.r5.2xlarge</dd><dt>R5_4XLarge</dt>
+    <dd>db.r5.4xlarge</dd><dt>R5_12XLarge</dt>
+    <dd>db.r5.12xlarge</dd><dt>R5_24XLarge</dt>
+    <dd>db.r5.24xlarge</dd><dt>X1_16XLarge</dt>
+    <dd>db.x1.16xlarge</dd><dt>X1_32XLarge</dt>
+    <dd>db.x1.32xlarge</dd><dt>X1E_XLarge</dt>
+    <dd>db.x1e.xlarge</dd><dt>X1E_2XLarge</dt>
+    <dd>db.x1e.2xlarge</dd><dt>X1E_4XLarge</dt>
+    <dd>db.x1e.4xlarge</dd><dt>X1E_8XLarge</dt>
+    <dd>db.x1e.8xlarge</dd><dt>X1E_32XLarge</dt>
+    <dd>db.x1e.32xlarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Instance<wbr>Type_T3_Micro</dt>
-    <dd>db.t3.micro</dd>
-    <dt>Instance<wbr>Type_T3_Small</dt>
-    <dd>db.t3.small</dd>
-    <dt>Instance<wbr>Type_T3_Medium</dt>
-    <dd>db.t3.medium</dd>
-    <dt>Instance<wbr>Type_T3_Large</dt>
-    <dd>db.t3.large</dd>
-    <dt>Instance<wbr>Type_T3_XLarge</dt>
-    <dd>db.t3.xlarge</dd>
-    <dt>Instance<wbr>Type_T3_2XLarge</dt>
-    <dd>db.t3.2xlarge</dd>
-    <dt>Instance<wbr>Type_T2_Micro</dt>
-    <dd>db.t2.micro</dd>
-    <dt>Instance<wbr>Type_T2_Small</dt>
-    <dd>db.t2.small</dd>
-    <dt>Instance<wbr>Type_T2_Medium</dt>
-    <dd>db.t2.medium</dd>
-    <dt>Instance<wbr>Type_T2_Large</dt>
-    <dd>db.t2.large</dd>
-    <dt>Instance<wbr>Type_T2_XLarge</dt>
-    <dd>db.t2.xlarge</dd>
-    <dt>Instance<wbr>Type_T2_2XLarge</dt>
-    <dd>db.t2.2xlarge</dd>
-    <dt>Instance<wbr>Type_M1_Small</dt>
-    <dd>db.m1.small</dd>
-    <dt>Instance<wbr>Type_M1_Medium</dt>
-    <dd>db.m1.medium</dd>
-    <dt>Instance<wbr>Type_M1_Large</dt>
-    <dd>db.m1.large</dd>
-    <dt>Instance<wbr>Type_M1_XLarge</dt>
-    <dd>db.m1.xlarge</dd>
-    <dt>Instance<wbr>Type_M2_XLarge</dt>
-    <dd>db.m2.xlarge</dd>
-    <dt>Instance<wbr>Type_M2_2XLarge</dt>
-    <dd>db.m2.2xlarge</dd>
-    <dt>Instance<wbr>Type_M2_4XLarge</dt>
-    <dd>db.m2.4xlarge</dd>
-    <dt>Instance<wbr>Type_M3_Medium</dt>
-    <dd>db.m3.medium</dd>
-    <dt>Instance<wbr>Type_M3_Large</dt>
-    <dd>db.m3.large</dd>
-    <dt>Instance<wbr>Type_M3_XLarge</dt>
-    <dd>db.m3.xlarge</dd>
-    <dt>Instance<wbr>Type_M3_2XLarge</dt>
-    <dd>db.m3.2xlarge</dd>
-    <dt>Instance<wbr>Type_M4_Large</dt>
-    <dd>db.m4.large</dd>
-    <dt>Instance<wbr>Type_M4_XLarge</dt>
-    <dd>db.m4.xlarge</dd>
-    <dt>Instance<wbr>Type_M4_2XLarge</dt>
-    <dd>db.m4.2xlarge</dd>
-    <dt>Instance<wbr>Type_M4_4XLarge</dt>
-    <dd>db.m4.4xlarge</dd>
-    <dt>Instance<wbr>Type_M4_10XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>Instance<wbr>Type_M4_16XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>Instance<wbr>Type_M5_Large</dt>
-    <dd>db.m5.large</dd>
-    <dt>Instance<wbr>Type_M5_XLarge</dt>
-    <dd>db.m5.xlarge</dd>
-    <dt>Instance<wbr>Type_M5_2XLarge</dt>
-    <dd>db.m5.2xlarge</dd>
-    <dt>Instance<wbr>Type_M5_4XLarge</dt>
-    <dd>db.m5.4xlarge</dd>
-    <dt>Instance<wbr>Type_M5_12XLarge</dt>
-    <dd>db.m5.12xlarge</dd>
-    <dt>Instance<wbr>Type_M5_24XLarge</dt>
-    <dd>db.m5.24xlarge</dd>
-    <dt>Instance<wbr>Type_R3_Large</dt>
-    <dd>db.r3.large</dd>
-    <dt>Instance<wbr>Type_R3_XLarge</dt>
-    <dd>db.r3.xlarge</dd>
-    <dt>Instance<wbr>Type_R3_2XLarge</dt>
-    <dd>db.r3.2xlarge</dd>
-    <dt>Instance<wbr>Type_R3_4XLarge</dt>
-    <dd>db.r3.4xlarge</dd>
-    <dt>Instance<wbr>Type_R3_8XLarge</dt>
-    <dd>db.r3.8xlarge</dd>
-    <dt>Instance<wbr>Type_R4_Large</dt>
-    <dd>db.r4.large</dd>
-    <dt>Instance<wbr>Type_R4_XLarge</dt>
-    <dd>db.r4.xlarge</dd>
-    <dt>Instance<wbr>Type_R4_2XLarge</dt>
-    <dd>db.r4.2xlarge</dd>
-    <dt>Instance<wbr>Type_R4_4XLarge</dt>
-    <dd>db.r4.4xlarge</dd>
-    <dt>Instance<wbr>Type_R4_8XLarge</dt>
-    <dd>db.r4.8xlarge</dd>
-    <dt>Instance<wbr>Type_R4_16XLarge</dt>
-    <dd>db.r4.16xlarge</dd>
-    <dt>Instance<wbr>Type_R5_Large</dt>
-    <dd>db.r5.large</dd>
-    <dt>Instance<wbr>Type_R5_XLarge</dt>
-    <dd>db.r5.xlarge</dd>
-    <dt>Instance<wbr>Type_R5_2XLarge</dt>
-    <dd>db.r5.2xlarge</dd>
-    <dt>Instance<wbr>Type_R5_4XLarge</dt>
-    <dd>db.r5.4xlarge</dd>
-    <dt>Instance<wbr>Type_R5_12XLarge</dt>
-    <dd>db.r5.12xlarge</dd>
-    <dt>Instance<wbr>Type_R5_24XLarge</dt>
-    <dd>db.r5.24xlarge</dd>
-    <dt>Instance<wbr>Type_X1_16XLarge</dt>
-    <dd>db.x1.16xlarge</dd>
-    <dt>Instance<wbr>Type_X1_32XLarge</dt>
-    <dd>db.x1.32xlarge</dd>
-    <dt>Instance<wbr>Type_X1E_XLarge</dt>
-    <dd>db.x1e.xlarge</dd>
-    <dt>Instance<wbr>Type_X1E_2XLarge</dt>
-    <dd>db.x1e.2xlarge</dd>
-    <dt>Instance<wbr>Type_X1E_4XLarge</dt>
-    <dd>db.x1e.4xlarge</dd>
-    <dt>Instance<wbr>Type_X1E_8XLarge</dt>
-    <dd>db.x1e.8xlarge</dd>
-    <dt>Instance<wbr>Type_X1E_32XLarge</dt>
-    <dd>db.x1e.32xlarge</dd>
-</dl>
+<dl class="tabular"><dt>Instance<wbr>Type_T3_Micro</dt>
+    <dd>db.t3.micro</dd><dt>Instance<wbr>Type_T3_Small</dt>
+    <dd>db.t3.small</dd><dt>Instance<wbr>Type_T3_Medium</dt>
+    <dd>db.t3.medium</dd><dt>Instance<wbr>Type_T3_Large</dt>
+    <dd>db.t3.large</dd><dt>Instance<wbr>Type_T3_XLarge</dt>
+    <dd>db.t3.xlarge</dd><dt>Instance<wbr>Type_T3_2XLarge</dt>
+    <dd>db.t3.2xlarge</dd><dt>Instance<wbr>Type_T2_Micro</dt>
+    <dd>db.t2.micro</dd><dt>Instance<wbr>Type_T2_Small</dt>
+    <dd>db.t2.small</dd><dt>Instance<wbr>Type_T2_Medium</dt>
+    <dd>db.t2.medium</dd><dt>Instance<wbr>Type_T2_Large</dt>
+    <dd>db.t2.large</dd><dt>Instance<wbr>Type_T2_XLarge</dt>
+    <dd>db.t2.xlarge</dd><dt>Instance<wbr>Type_T2_2XLarge</dt>
+    <dd>db.t2.2xlarge</dd><dt>Instance<wbr>Type_M1_Small</dt>
+    <dd>db.m1.small</dd><dt>Instance<wbr>Type_M1_Medium</dt>
+    <dd>db.m1.medium</dd><dt>Instance<wbr>Type_M1_Large</dt>
+    <dd>db.m1.large</dd><dt>Instance<wbr>Type_M1_XLarge</dt>
+    <dd>db.m1.xlarge</dd><dt>Instance<wbr>Type_M2_XLarge</dt>
+    <dd>db.m2.xlarge</dd><dt>Instance<wbr>Type_M2_2XLarge</dt>
+    <dd>db.m2.2xlarge</dd><dt>Instance<wbr>Type_M2_4XLarge</dt>
+    <dd>db.m2.4xlarge</dd><dt>Instance<wbr>Type_M3_Medium</dt>
+    <dd>db.m3.medium</dd><dt>Instance<wbr>Type_M3_Large</dt>
+    <dd>db.m3.large</dd><dt>Instance<wbr>Type_M3_XLarge</dt>
+    <dd>db.m3.xlarge</dd><dt>Instance<wbr>Type_M3_2XLarge</dt>
+    <dd>db.m3.2xlarge</dd><dt>Instance<wbr>Type_M4_Large</dt>
+    <dd>db.m4.large</dd><dt>Instance<wbr>Type_M4_XLarge</dt>
+    <dd>db.m4.xlarge</dd><dt>Instance<wbr>Type_M4_2XLarge</dt>
+    <dd>db.m4.2xlarge</dd><dt>Instance<wbr>Type_M4_4XLarge</dt>
+    <dd>db.m4.4xlarge</dd><dt>Instance<wbr>Type_M4_10XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>Instance<wbr>Type_M4_16XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>Instance<wbr>Type_M5_Large</dt>
+    <dd>db.m5.large</dd><dt>Instance<wbr>Type_M5_XLarge</dt>
+    <dd>db.m5.xlarge</dd><dt>Instance<wbr>Type_M5_2XLarge</dt>
+    <dd>db.m5.2xlarge</dd><dt>Instance<wbr>Type_M5_4XLarge</dt>
+    <dd>db.m5.4xlarge</dd><dt>Instance<wbr>Type_M5_12XLarge</dt>
+    <dd>db.m5.12xlarge</dd><dt>Instance<wbr>Type_M5_24XLarge</dt>
+    <dd>db.m5.24xlarge</dd><dt>Instance<wbr>Type_R3_Large</dt>
+    <dd>db.r3.large</dd><dt>Instance<wbr>Type_R3_XLarge</dt>
+    <dd>db.r3.xlarge</dd><dt>Instance<wbr>Type_R3_2XLarge</dt>
+    <dd>db.r3.2xlarge</dd><dt>Instance<wbr>Type_R3_4XLarge</dt>
+    <dd>db.r3.4xlarge</dd><dt>Instance<wbr>Type_R3_8XLarge</dt>
+    <dd>db.r3.8xlarge</dd><dt>Instance<wbr>Type_R4_Large</dt>
+    <dd>db.r4.large</dd><dt>Instance<wbr>Type_R4_XLarge</dt>
+    <dd>db.r4.xlarge</dd><dt>Instance<wbr>Type_R4_2XLarge</dt>
+    <dd>db.r4.2xlarge</dd><dt>Instance<wbr>Type_R4_4XLarge</dt>
+    <dd>db.r4.4xlarge</dd><dt>Instance<wbr>Type_R4_8XLarge</dt>
+    <dd>db.r4.8xlarge</dd><dt>Instance<wbr>Type_R4_16XLarge</dt>
+    <dd>db.r4.16xlarge</dd><dt>Instance<wbr>Type_R5_Large</dt>
+    <dd>db.r5.large</dd><dt>Instance<wbr>Type_R5_XLarge</dt>
+    <dd>db.r5.xlarge</dd><dt>Instance<wbr>Type_R5_2XLarge</dt>
+    <dd>db.r5.2xlarge</dd><dt>Instance<wbr>Type_R5_4XLarge</dt>
+    <dd>db.r5.4xlarge</dd><dt>Instance<wbr>Type_R5_12XLarge</dt>
+    <dd>db.r5.12xlarge</dd><dt>Instance<wbr>Type_R5_24XLarge</dt>
+    <dd>db.r5.24xlarge</dd><dt>Instance<wbr>Type_X1_16XLarge</dt>
+    <dd>db.x1.16xlarge</dd><dt>Instance<wbr>Type_X1_32XLarge</dt>
+    <dd>db.x1.32xlarge</dd><dt>Instance<wbr>Type_X1E_XLarge</dt>
+    <dd>db.x1e.xlarge</dd><dt>Instance<wbr>Type_X1E_2XLarge</dt>
+    <dd>db.x1e.2xlarge</dd><dt>Instance<wbr>Type_X1E_4XLarge</dt>
+    <dd>db.x1e.4xlarge</dd><dt>Instance<wbr>Type_X1E_8XLarge</dt>
+    <dd>db.x1e.8xlarge</dd><dt>Instance<wbr>Type_X1E_32XLarge</dt>
+    <dd>db.x1e.32xlarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>T3_Micro</dt>
-    <dd>db.t3.micro</dd>
-    <dt>T3_Small</dt>
-    <dd>db.t3.small</dd>
-    <dt>T3_Medium</dt>
-    <dd>db.t3.medium</dd>
-    <dt>T3_Large</dt>
-    <dd>db.t3.large</dd>
-    <dt>T3_XLarge</dt>
-    <dd>db.t3.xlarge</dd>
-    <dt>T3_2XLarge</dt>
-    <dd>db.t3.2xlarge</dd>
-    <dt>T2_Micro</dt>
-    <dd>db.t2.micro</dd>
-    <dt>T2_Small</dt>
-    <dd>db.t2.small</dd>
-    <dt>T2_Medium</dt>
-    <dd>db.t2.medium</dd>
-    <dt>T2_Large</dt>
-    <dd>db.t2.large</dd>
-    <dt>T2_XLarge</dt>
-    <dd>db.t2.xlarge</dd>
-    <dt>T2_2XLarge</dt>
-    <dd>db.t2.2xlarge</dd>
-    <dt>M1_Small</dt>
-    <dd>db.m1.small</dd>
-    <dt>M1_Medium</dt>
-    <dd>db.m1.medium</dd>
-    <dt>M1_Large</dt>
-    <dd>db.m1.large</dd>
-    <dt>M1_XLarge</dt>
-    <dd>db.m1.xlarge</dd>
-    <dt>M2_XLarge</dt>
-    <dd>db.m2.xlarge</dd>
-    <dt>M2_2XLarge</dt>
-    <dd>db.m2.2xlarge</dd>
-    <dt>M2_4XLarge</dt>
-    <dd>db.m2.4xlarge</dd>
-    <dt>M3_Medium</dt>
-    <dd>db.m3.medium</dd>
-    <dt>M3_Large</dt>
-    <dd>db.m3.large</dd>
-    <dt>M3_XLarge</dt>
-    <dd>db.m3.xlarge</dd>
-    <dt>M3_2XLarge</dt>
-    <dd>db.m3.2xlarge</dd>
-    <dt>M4_Large</dt>
-    <dd>db.m4.large</dd>
-    <dt>M4_XLarge</dt>
-    <dd>db.m4.xlarge</dd>
-    <dt>M4_2XLarge</dt>
-    <dd>db.m4.2xlarge</dd>
-    <dt>M4_4XLarge</dt>
-    <dd>db.m4.4xlarge</dd>
-    <dt>M4_10XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M4_16XLarge</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M5_Large</dt>
-    <dd>db.m5.large</dd>
-    <dt>M5_XLarge</dt>
-    <dd>db.m5.xlarge</dd>
-    <dt>M5_2XLarge</dt>
-    <dd>db.m5.2xlarge</dd>
-    <dt>M5_4XLarge</dt>
-    <dd>db.m5.4xlarge</dd>
-    <dt>M5_12XLarge</dt>
-    <dd>db.m5.12xlarge</dd>
-    <dt>M5_24XLarge</dt>
-    <dd>db.m5.24xlarge</dd>
-    <dt>R3_Large</dt>
-    <dd>db.r3.large</dd>
-    <dt>R3_XLarge</dt>
-    <dd>db.r3.xlarge</dd>
-    <dt>R3_2XLarge</dt>
-    <dd>db.r3.2xlarge</dd>
-    <dt>R3_4XLarge</dt>
-    <dd>db.r3.4xlarge</dd>
-    <dt>R3_8XLarge</dt>
-    <dd>db.r3.8xlarge</dd>
-    <dt>R4_Large</dt>
-    <dd>db.r4.large</dd>
-    <dt>R4_XLarge</dt>
-    <dd>db.r4.xlarge</dd>
-    <dt>R4_2XLarge</dt>
-    <dd>db.r4.2xlarge</dd>
-    <dt>R4_4XLarge</dt>
-    <dd>db.r4.4xlarge</dd>
-    <dt>R4_8XLarge</dt>
-    <dd>db.r4.8xlarge</dd>
-    <dt>R4_16XLarge</dt>
-    <dd>db.r4.16xlarge</dd>
-    <dt>R5_Large</dt>
-    <dd>db.r5.large</dd>
-    <dt>R5_XLarge</dt>
-    <dd>db.r5.xlarge</dd>
-    <dt>R5_2XLarge</dt>
-    <dd>db.r5.2xlarge</dd>
-    <dt>R5_4XLarge</dt>
-    <dd>db.r5.4xlarge</dd>
-    <dt>R5_12XLarge</dt>
-    <dd>db.r5.12xlarge</dd>
-    <dt>R5_24XLarge</dt>
-    <dd>db.r5.24xlarge</dd>
-    <dt>X1_16XLarge</dt>
-    <dd>db.x1.16xlarge</dd>
-    <dt>X1_32XLarge</dt>
-    <dd>db.x1.32xlarge</dd>
-    <dt>X1E_XLarge</dt>
-    <dd>db.x1e.xlarge</dd>
-    <dt>X1E_2XLarge</dt>
-    <dd>db.x1e.2xlarge</dd>
-    <dt>X1E_4XLarge</dt>
-    <dd>db.x1e.4xlarge</dd>
-    <dt>X1E_8XLarge</dt>
-    <dd>db.x1e.8xlarge</dd>
-    <dt>X1E_32XLarge</dt>
-    <dd>db.x1e.32xlarge</dd>
-</dl>
+<dl class="tabular"><dt>T3_Micro</dt>
+    <dd>db.t3.micro</dd><dt>T3_Small</dt>
+    <dd>db.t3.small</dd><dt>T3_Medium</dt>
+    <dd>db.t3.medium</dd><dt>T3_Large</dt>
+    <dd>db.t3.large</dd><dt>T3_XLarge</dt>
+    <dd>db.t3.xlarge</dd><dt>T3_2XLarge</dt>
+    <dd>db.t3.2xlarge</dd><dt>T2_Micro</dt>
+    <dd>db.t2.micro</dd><dt>T2_Small</dt>
+    <dd>db.t2.small</dd><dt>T2_Medium</dt>
+    <dd>db.t2.medium</dd><dt>T2_Large</dt>
+    <dd>db.t2.large</dd><dt>T2_XLarge</dt>
+    <dd>db.t2.xlarge</dd><dt>T2_2XLarge</dt>
+    <dd>db.t2.2xlarge</dd><dt>M1_Small</dt>
+    <dd>db.m1.small</dd><dt>M1_Medium</dt>
+    <dd>db.m1.medium</dd><dt>M1_Large</dt>
+    <dd>db.m1.large</dd><dt>M1_XLarge</dt>
+    <dd>db.m1.xlarge</dd><dt>M2_XLarge</dt>
+    <dd>db.m2.xlarge</dd><dt>M2_2XLarge</dt>
+    <dd>db.m2.2xlarge</dd><dt>M2_4XLarge</dt>
+    <dd>db.m2.4xlarge</dd><dt>M3_Medium</dt>
+    <dd>db.m3.medium</dd><dt>M3_Large</dt>
+    <dd>db.m3.large</dd><dt>M3_XLarge</dt>
+    <dd>db.m3.xlarge</dd><dt>M3_2XLarge</dt>
+    <dd>db.m3.2xlarge</dd><dt>M4_Large</dt>
+    <dd>db.m4.large</dd><dt>M4_XLarge</dt>
+    <dd>db.m4.xlarge</dd><dt>M4_2XLarge</dt>
+    <dd>db.m4.2xlarge</dd><dt>M4_4XLarge</dt>
+    <dd>db.m4.4xlarge</dd><dt>M4_10XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>M4_16XLarge</dt>
+    <dd>db.m4.10xlarge</dd><dt>M5_Large</dt>
+    <dd>db.m5.large</dd><dt>M5_XLarge</dt>
+    <dd>db.m5.xlarge</dd><dt>M5_2XLarge</dt>
+    <dd>db.m5.2xlarge</dd><dt>M5_4XLarge</dt>
+    <dd>db.m5.4xlarge</dd><dt>M5_12XLarge</dt>
+    <dd>db.m5.12xlarge</dd><dt>M5_24XLarge</dt>
+    <dd>db.m5.24xlarge</dd><dt>R3_Large</dt>
+    <dd>db.r3.large</dd><dt>R3_XLarge</dt>
+    <dd>db.r3.xlarge</dd><dt>R3_2XLarge</dt>
+    <dd>db.r3.2xlarge</dd><dt>R3_4XLarge</dt>
+    <dd>db.r3.4xlarge</dd><dt>R3_8XLarge</dt>
+    <dd>db.r3.8xlarge</dd><dt>R4_Large</dt>
+    <dd>db.r4.large</dd><dt>R4_XLarge</dt>
+    <dd>db.r4.xlarge</dd><dt>R4_2XLarge</dt>
+    <dd>db.r4.2xlarge</dd><dt>R4_4XLarge</dt>
+    <dd>db.r4.4xlarge</dd><dt>R4_8XLarge</dt>
+    <dd>db.r4.8xlarge</dd><dt>R4_16XLarge</dt>
+    <dd>db.r4.16xlarge</dd><dt>R5_Large</dt>
+    <dd>db.r5.large</dd><dt>R5_XLarge</dt>
+    <dd>db.r5.xlarge</dd><dt>R5_2XLarge</dt>
+    <dd>db.r5.2xlarge</dd><dt>R5_4XLarge</dt>
+    <dd>db.r5.4xlarge</dd><dt>R5_12XLarge</dt>
+    <dd>db.r5.12xlarge</dd><dt>R5_24XLarge</dt>
+    <dd>db.r5.24xlarge</dd><dt>X1_16XLarge</dt>
+    <dd>db.x1.16xlarge</dd><dt>X1_32XLarge</dt>
+    <dd>db.x1.32xlarge</dd><dt>X1E_XLarge</dt>
+    <dd>db.x1e.xlarge</dd><dt>X1E_2XLarge</dt>
+    <dd>db.x1e.2xlarge</dd><dt>X1E_4XLarge</dt>
+    <dd>db.x1e.4xlarge</dd><dt>X1E_8XLarge</dt>
+    <dd>db.x1e.8xlarge</dd><dt>X1E_32XLarge</dt>
+    <dd>db.x1e.32xlarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>T3_MICRO</dt>
-    <dd>db.t3.micro</dd>
-    <dt>T3_SMALL</dt>
-    <dd>db.t3.small</dd>
-    <dt>T3_MEDIUM</dt>
-    <dd>db.t3.medium</dd>
-    <dt>T3_LARGE</dt>
-    <dd>db.t3.large</dd>
-    <dt>T3_X_LARGE</dt>
-    <dd>db.t3.xlarge</dd>
-    <dt>T3_2_X_LARGE</dt>
-    <dd>db.t3.2xlarge</dd>
-    <dt>T2_MICRO</dt>
-    <dd>db.t2.micro</dd>
-    <dt>T2_SMALL</dt>
-    <dd>db.t2.small</dd>
-    <dt>T2_MEDIUM</dt>
-    <dd>db.t2.medium</dd>
-    <dt>T2_LARGE</dt>
-    <dd>db.t2.large</dd>
-    <dt>T2_X_LARGE</dt>
-    <dd>db.t2.xlarge</dd>
-    <dt>T2_2_X_LARGE</dt>
-    <dd>db.t2.2xlarge</dd>
-    <dt>M1_SMALL</dt>
-    <dd>db.m1.small</dd>
-    <dt>M1_MEDIUM</dt>
-    <dd>db.m1.medium</dd>
-    <dt>M1_LARGE</dt>
-    <dd>db.m1.large</dd>
-    <dt>M1_X_LARGE</dt>
-    <dd>db.m1.xlarge</dd>
-    <dt>M2_X_LARGE</dt>
-    <dd>db.m2.xlarge</dd>
-    <dt>M2_2_X_LARGE</dt>
-    <dd>db.m2.2xlarge</dd>
-    <dt>M2_4_X_LARGE</dt>
-    <dd>db.m2.4xlarge</dd>
-    <dt>M3_MEDIUM</dt>
-    <dd>db.m3.medium</dd>
-    <dt>M3_LARGE</dt>
-    <dd>db.m3.large</dd>
-    <dt>M3_X_LARGE</dt>
-    <dd>db.m3.xlarge</dd>
-    <dt>M3_2_X_LARGE</dt>
-    <dd>db.m3.2xlarge</dd>
-    <dt>M4_LARGE</dt>
-    <dd>db.m4.large</dd>
-    <dt>M4_X_LARGE</dt>
-    <dd>db.m4.xlarge</dd>
-    <dt>M4_2_X_LARGE</dt>
-    <dd>db.m4.2xlarge</dd>
-    <dt>M4_4_X_LARGE</dt>
-    <dd>db.m4.4xlarge</dd>
-    <dt>M4_10_X_LARGE</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M4_16_X_LARGE</dt>
-    <dd>db.m4.10xlarge</dd>
-    <dt>M5_LARGE</dt>
-    <dd>db.m5.large</dd>
-    <dt>M5_X_LARGE</dt>
-    <dd>db.m5.xlarge</dd>
-    <dt>M5_2_X_LARGE</dt>
-    <dd>db.m5.2xlarge</dd>
-    <dt>M5_4_X_LARGE</dt>
-    <dd>db.m5.4xlarge</dd>
-    <dt>M5_12_X_LARGE</dt>
-    <dd>db.m5.12xlarge</dd>
-    <dt>M5_24_X_LARGE</dt>
-    <dd>db.m5.24xlarge</dd>
-    <dt>R3_LARGE</dt>
-    <dd>db.r3.large</dd>
-    <dt>R3_X_LARGE</dt>
-    <dd>db.r3.xlarge</dd>
-    <dt>R3_2_X_LARGE</dt>
-    <dd>db.r3.2xlarge</dd>
-    <dt>R3_4_X_LARGE</dt>
-    <dd>db.r3.4xlarge</dd>
-    <dt>R3_8_X_LARGE</dt>
-    <dd>db.r3.8xlarge</dd>
-    <dt>R4_LARGE</dt>
-    <dd>db.r4.large</dd>
-    <dt>R4_X_LARGE</dt>
-    <dd>db.r4.xlarge</dd>
-    <dt>R4_2_X_LARGE</dt>
-    <dd>db.r4.2xlarge</dd>
-    <dt>R4_4_X_LARGE</dt>
-    <dd>db.r4.4xlarge</dd>
-    <dt>R4_8_X_LARGE</dt>
-    <dd>db.r4.8xlarge</dd>
-    <dt>R4_16_X_LARGE</dt>
-    <dd>db.r4.16xlarge</dd>
-    <dt>R5_LARGE</dt>
-    <dd>db.r5.large</dd>
-    <dt>R5_X_LARGE</dt>
-    <dd>db.r5.xlarge</dd>
-    <dt>R5_2_X_LARGE</dt>
-    <dd>db.r5.2xlarge</dd>
-    <dt>R5_4_X_LARGE</dt>
-    <dd>db.r5.4xlarge</dd>
-    <dt>R5_12_X_LARGE</dt>
-    <dd>db.r5.12xlarge</dd>
-    <dt>R5_24_X_LARGE</dt>
-    <dd>db.r5.24xlarge</dd>
-    <dt>X1_16_X_LARGE</dt>
-    <dd>db.x1.16xlarge</dd>
-    <dt>X1_32_X_LARGE</dt>
-    <dd>db.x1.32xlarge</dd>
-    <dt>X1_E_X_LARGE</dt>
-    <dd>db.x1e.xlarge</dd>
-    <dt>X1_E_2_X_LARGE</dt>
-    <dd>db.x1e.2xlarge</dd>
-    <dt>X1_E_4_X_LARGE</dt>
-    <dd>db.x1e.4xlarge</dd>
-    <dt>X1_E_8_X_LARGE</dt>
-    <dd>db.x1e.8xlarge</dd>
-    <dt>X1_E_32_X_LARGE</dt>
-    <dd>db.x1e.32xlarge</dd>
-</dl>
+<dl class="tabular"><dt>T3_MICRO</dt>
+    <dd>db.t3.micro</dd><dt>T3_SMALL</dt>
+    <dd>db.t3.small</dd><dt>T3_MEDIUM</dt>
+    <dd>db.t3.medium</dd><dt>T3_LARGE</dt>
+    <dd>db.t3.large</dd><dt>T3_X_LARGE</dt>
+    <dd>db.t3.xlarge</dd><dt>T3_2_X_LARGE</dt>
+    <dd>db.t3.2xlarge</dd><dt>T2_MICRO</dt>
+    <dd>db.t2.micro</dd><dt>T2_SMALL</dt>
+    <dd>db.t2.small</dd><dt>T2_MEDIUM</dt>
+    <dd>db.t2.medium</dd><dt>T2_LARGE</dt>
+    <dd>db.t2.large</dd><dt>T2_X_LARGE</dt>
+    <dd>db.t2.xlarge</dd><dt>T2_2_X_LARGE</dt>
+    <dd>db.t2.2xlarge</dd><dt>M1_SMALL</dt>
+    <dd>db.m1.small</dd><dt>M1_MEDIUM</dt>
+    <dd>db.m1.medium</dd><dt>M1_LARGE</dt>
+    <dd>db.m1.large</dd><dt>M1_X_LARGE</dt>
+    <dd>db.m1.xlarge</dd><dt>M2_X_LARGE</dt>
+    <dd>db.m2.xlarge</dd><dt>M2_2_X_LARGE</dt>
+    <dd>db.m2.2xlarge</dd><dt>M2_4_X_LARGE</dt>
+    <dd>db.m2.4xlarge</dd><dt>M3_MEDIUM</dt>
+    <dd>db.m3.medium</dd><dt>M3_LARGE</dt>
+    <dd>db.m3.large</dd><dt>M3_X_LARGE</dt>
+    <dd>db.m3.xlarge</dd><dt>M3_2_X_LARGE</dt>
+    <dd>db.m3.2xlarge</dd><dt>M4_LARGE</dt>
+    <dd>db.m4.large</dd><dt>M4_X_LARGE</dt>
+    <dd>db.m4.xlarge</dd><dt>M4_2_X_LARGE</dt>
+    <dd>db.m4.2xlarge</dd><dt>M4_4_X_LARGE</dt>
+    <dd>db.m4.4xlarge</dd><dt>M4_10_X_LARGE</dt>
+    <dd>db.m4.10xlarge</dd><dt>M4_16_X_LARGE</dt>
+    <dd>db.m4.10xlarge</dd><dt>M5_LARGE</dt>
+    <dd>db.m5.large</dd><dt>M5_X_LARGE</dt>
+    <dd>db.m5.xlarge</dd><dt>M5_2_X_LARGE</dt>
+    <dd>db.m5.2xlarge</dd><dt>M5_4_X_LARGE</dt>
+    <dd>db.m5.4xlarge</dd><dt>M5_12_X_LARGE</dt>
+    <dd>db.m5.12xlarge</dd><dt>M5_24_X_LARGE</dt>
+    <dd>db.m5.24xlarge</dd><dt>R3_LARGE</dt>
+    <dd>db.r3.large</dd><dt>R3_X_LARGE</dt>
+    <dd>db.r3.xlarge</dd><dt>R3_2_X_LARGE</dt>
+    <dd>db.r3.2xlarge</dd><dt>R3_4_X_LARGE</dt>
+    <dd>db.r3.4xlarge</dd><dt>R3_8_X_LARGE</dt>
+    <dd>db.r3.8xlarge</dd><dt>R4_LARGE</dt>
+    <dd>db.r4.large</dd><dt>R4_X_LARGE</dt>
+    <dd>db.r4.xlarge</dd><dt>R4_2_X_LARGE</dt>
+    <dd>db.r4.2xlarge</dd><dt>R4_4_X_LARGE</dt>
+    <dd>db.r4.4xlarge</dd><dt>R4_8_X_LARGE</dt>
+    <dd>db.r4.8xlarge</dd><dt>R4_16_X_LARGE</dt>
+    <dd>db.r4.16xlarge</dd><dt>R5_LARGE</dt>
+    <dd>db.r5.large</dd><dt>R5_X_LARGE</dt>
+    <dd>db.r5.xlarge</dd><dt>R5_2_X_LARGE</dt>
+    <dd>db.r5.2xlarge</dd><dt>R5_4_X_LARGE</dt>
+    <dd>db.r5.4xlarge</dd><dt>R5_12_X_LARGE</dt>
+    <dd>db.r5.12xlarge</dd><dt>R5_24_X_LARGE</dt>
+    <dd>db.r5.24xlarge</dd><dt>X1_16_X_LARGE</dt>
+    <dd>db.x1.16xlarge</dd><dt>X1_32_X_LARGE</dt>
+    <dd>db.x1.32xlarge</dd><dt>X1_E_X_LARGE</dt>
+    <dd>db.x1e.xlarge</dd><dt>X1_E_2_X_LARGE</dt>
+    <dd>db.x1e.2xlarge</dd><dt>X1_E_4_X_LARGE</dt>
+    <dd>db.x1e.4xlarge</dd><dt>X1_E_8_X_LARGE</dt>
+    <dd>db.x1e.8xlarge</dd><dt>X1_E_32_X_LARGE</dt>
+    <dd>db.x1e.32xlarge</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3526,6 +3019,6 @@ RDS Cluster Instances can be imported using the `identifier`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

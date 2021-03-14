@@ -14,11 +14,17 @@ Gateway hostname configuration details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateGatewayHostnameConfiguration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -43,9 +49,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -75,9 +84,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ gateway_hostname_configuration = azure_native.apimanagement.GatewayHostnameConfi
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,9 +129,16 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GatewayHostnameConfiguration Resource {#create}
@@ -141,9 +163,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -151,9 +171,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -161,9 +179,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -171,10 +187,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,9 +213,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -210,9 +221,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,9 +229,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -230,9 +237,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -240,18 +245,13 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -259,9 +259,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -269,9 +267,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -279,10 +275,7 @@ const gatewayHostnameConfiguration = new azure_native.apimanagement.GatewayHostn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -297,9 +290,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayid_csharp">
 <a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -307,8 +298,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -316,8 +306,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -325,8 +314,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_csharp">
 <a href="#certificateid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -334,8 +322,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcid_csharp">
 <a href="#hcid_csharp" style="color: inherit; text-decoration: inherit;">Hc<wbr>Id</a>
@@ -343,8 +330,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -352,8 +338,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -361,14 +346,11 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayid_go">
 <a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
@@ -376,8 +358,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -385,8 +366,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -394,8 +374,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_go">
 <a href="#certificateid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -403,8 +382,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcid_go">
 <a href="#hcid_go" style="color: inherit; text-decoration: inherit;">Hc<wbr>Id</a>
@@ -412,8 +390,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -421,8 +398,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -430,14 +406,11 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayid_nodejs">
 <a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
@@ -445,8 +418,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -454,8 +426,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -463,8 +434,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_nodejs">
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
@@ -472,8 +442,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcid_nodejs">
 <a href="#hcid_nodejs" style="color: inherit; text-decoration: inherit;">hc<wbr>Id</a>
@@ -481,8 +450,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -490,8 +458,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -499,14 +466,11 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gateway_id_python">
 <a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
@@ -514,8 +478,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -523,8 +486,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -532,8 +494,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_id_python">
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
@@ -541,8 +502,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of Certificate entity that will be used for TLS connection establishment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hc_id_python">
 <a href="#hc_id_python" style="color: inherit; text-decoration: inherit;">hc_<wbr>id</a>
@@ -550,8 +510,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -559,8 +518,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hostname value. Supports valid domain name, partial or full wildcard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -568,8 +526,7 @@ The GatewayHostnameConfiguration resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Determines whether gateway requests client certificate{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -580,9 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -599,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -608,14 +561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -623,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -632,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -641,14 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -665,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -674,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -689,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -707,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

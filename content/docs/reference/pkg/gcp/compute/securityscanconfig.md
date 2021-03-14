@@ -22,11 +22,17 @@ To get more information about ScanConfig, see:
 state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Scan Config Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -99,9 +108,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -114,9 +126,12 @@ scan_config = gcp.compute.SecurityScanConfig("scan-config",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -134,9 +149,16 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecurityScanConfig Resource {#create}
@@ -161,9 +183,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -171,9 +191,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -181,9 +199,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -191,10 +207,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -220,9 +233,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -230,9 +241,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +249,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +257,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,18 +265,13 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -279,9 +279,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -289,9 +287,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -299,10 +295,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -317,9 +310,7 @@ The SecurityScanConfig resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -328,8 +319,7 @@ The SecurityScanConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startingurls_csharp">
 <a href="#startingurls_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Urls</a>
@@ -338,8 +328,7 @@ The SecurityScanConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -350,8 +339,7 @@ The SecurityScanConfig resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklistpatterns_csharp">
 <a href="#blacklistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Blacklist<wbr>Patterns</a>
@@ -361,8 +349,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exporttosecuritycommandcenter_csharp">
 <a href="#exporttosecuritycommandcenter_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -373,8 +360,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqps_csharp">
 <a href="#maxqps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Qps</a>
@@ -384,8 +370,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -395,8 +380,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -406,8 +390,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetplatforms_csharp">
 <a href="#targetplatforms_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
@@ -417,8 +400,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useragent_csharp">
 <a href="#useragent_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
@@ -429,14 +411,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -445,8 +424,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startingurls_go">
 <a href="#startingurls_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Urls</a>
@@ -455,8 +433,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -467,8 +444,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklistpatterns_go">
 <a href="#blacklistpatterns_go" style="color: inherit; text-decoration: inherit;">Blacklist<wbr>Patterns</a>
@@ -478,8 +454,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exporttosecuritycommandcenter_go">
 <a href="#exporttosecuritycommandcenter_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -490,8 +465,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqps_go">
 <a href="#maxqps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Qps</a>
@@ -501,8 +475,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -512,8 +485,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -523,8 +495,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetplatforms_go">
 <a href="#targetplatforms_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
@@ -534,8 +505,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useragent_go">
 <a href="#useragent_go" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
@@ -546,14 +516,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -562,8 +529,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startingurls_nodejs">
 <a href="#startingurls_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Urls</a>
@@ -572,8 +538,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -584,8 +549,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklistpatterns_nodejs">
 <a href="#blacklistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">blacklist<wbr>Patterns</a>
@@ -595,8 +559,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exporttosecuritycommandcenter_nodejs">
 <a href="#exporttosecuritycommandcenter_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -607,8 +570,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqps_nodejs">
 <a href="#maxqps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Qps</a>
@@ -618,8 +580,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -629,8 +590,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -640,8 +600,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetplatforms_nodejs">
 <a href="#targetplatforms_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Platforms</a>
@@ -651,8 +610,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useragent_nodejs">
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
@@ -663,14 +621,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -679,8 +634,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starting_urls_python">
 <a href="#starting_urls_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>urls</a>
@@ -689,8 +643,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -701,8 +654,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklist_patterns_python">
 <a href="#blacklist_patterns_python" style="color: inherit; text-decoration: inherit;">blacklist_<wbr>patterns</a>
@@ -712,8 +664,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_to_security_command_center_python">
 <a href="#export_to_security_command_center_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</a>
@@ -724,8 +675,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_qps_python">
 <a href="#max_qps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>qps</a>
@@ -735,8 +685,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -746,8 +695,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -757,8 +705,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_platforms_python">
 <a href="#target_platforms_python" style="color: inherit; text-decoration: inherit;">target_<wbr>platforms</a>
@@ -768,8 +715,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_agent_python">
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
@@ -780,8 +726,7 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -792,9 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -802,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -812,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -827,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,14 +775,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -852,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -862,14 +796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -877,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -887,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1015,9 +944,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_csharp">
 <a href="#state_authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -1028,8 +955,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklistpatterns_csharp">
 <a href="#state_blacklistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Blacklist<wbr>Patterns</a>
@@ -1039,8 +965,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1049,8 +974,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exporttosecuritycommandcenter_csharp">
 <a href="#state_exporttosecuritycommandcenter_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -1061,8 +985,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqps_csharp">
 <a href="#state_maxqps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Qps</a>
@@ -1072,8 +995,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1082,8 +1004,7 @@ Defaults to 15.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1093,8 +1014,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_csharp">
 <a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1104,8 +1024,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startingurls_csharp">
 <a href="#state_startingurls_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Urls</a>
@@ -1114,8 +1033,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetplatforms_csharp">
 <a href="#state_targetplatforms_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
@@ -1125,8 +1043,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useragent_csharp">
 <a href="#state_useragent_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
@@ -1137,14 +1054,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_go">
 <a href="#state_authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -1155,8 +1069,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklistpatterns_go">
 <a href="#state_blacklistpatterns_go" style="color: inherit; text-decoration: inherit;">Blacklist<wbr>Patterns</a>
@@ -1166,8 +1079,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1176,8 +1088,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exporttosecuritycommandcenter_go">
 <a href="#state_exporttosecuritycommandcenter_go" style="color: inherit; text-decoration: inherit;">Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -1188,8 +1099,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqps_go">
 <a href="#state_maxqps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Qps</a>
@@ -1199,8 +1109,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1209,8 +1118,7 @@ Defaults to 15.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1220,8 +1128,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_go">
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1231,8 +1138,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startingurls_go">
 <a href="#state_startingurls_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Urls</a>
@@ -1241,8 +1147,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetplatforms_go">
 <a href="#state_targetplatforms_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Platforms</a>
@@ -1252,8 +1157,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useragent_go">
 <a href="#state_useragent_go" style="color: inherit; text-decoration: inherit;">User<wbr>Agent</a>
@@ -1264,14 +1168,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_nodejs">
 <a href="#state_authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -1282,8 +1183,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklistpatterns_nodejs">
 <a href="#state_blacklistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">blacklist<wbr>Patterns</a>
@@ -1293,8 +1193,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1303,8 +1202,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exporttosecuritycommandcenter_nodejs">
 <a href="#state_exporttosecuritycommandcenter_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
@@ -1315,8 +1213,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqps_nodejs">
 <a href="#state_maxqps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Qps</a>
@@ -1326,8 +1223,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1336,8 +1232,7 @@ Defaults to 15.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1347,8 +1242,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_nodejs">
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1358,8 +1252,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startingurls_nodejs">
 <a href="#state_startingurls_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Urls</a>
@@ -1368,8 +1261,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetplatforms_nodejs">
 <a href="#state_targetplatforms_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Platforms</a>
@@ -1379,8 +1271,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useragent_nodejs">
 <a href="#state_useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
@@ -1391,14 +1282,11 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_python">
 <a href="#state_authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -1409,8 +1297,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     <dd>{{% md %}}The authentication configuration.
 If specified, service will use the authentication configuration during scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklist_patterns_python">
 <a href="#state_blacklist_patterns_python" style="color: inherit; text-decoration: inherit;">blacklist_<wbr>patterns</a>
@@ -1420,8 +1307,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in
 https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1430,8 +1316,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_export_to_security_command_center_python">
 <a href="#state_export_to_security_command_center_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</a>
@@ -1442,8 +1327,7 @@ https://cloud.google.com/security-scanner/docs/excluded-urls
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 Default value is `ENABLED`.
 Possible values are `ENABLED` and `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_qps_python">
 <a href="#state_max_qps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>qps</a>
@@ -1453,8 +1337,7 @@ Possible values are `ENABLED` and `DISABLED`.
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
 Defaults to 15.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1463,8 +1346,7 @@ Defaults to 15.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1474,8 +1356,7 @@ Defaults to 15.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_python">
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1485,8 +1366,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starting_urls_python">
 <a href="#state_starting_urls_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>urls</a>
@@ -1495,8 +1375,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_platforms_python">
 <a href="#state_target_platforms_python" style="color: inherit; text-decoration: inherit;">target_<wbr>platforms</a>
@@ -1506,8 +1385,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 Each value may be one of `APP_ENGINE` and `COMPUTE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_agent_python">
 <a href="#state_user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
@@ -1518,8 +1396,7 @@ Each value may be one of `APP_ENGINE` and `COMPUTE`.
     <dd>{{% md %}}Type of the user agents used for scanning
 Default value is `CHROME_LINUX`.
 Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1534,9 +1411,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
 <h4 id="securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customaccount_csharp">
 <a href="#customaccount_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Account</a>
@@ -1546,8 +1421,7 @@ Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, 
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleaccount_csharp">
 <a href="#googleaccount_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Account</a>
@@ -1557,14 +1431,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customaccount_go">
 <a href="#customaccount_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Account</a>
@@ -1574,8 +1445,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleaccount_go">
 <a href="#googleaccount_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Account</a>
@@ -1585,14 +1455,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customaccount_nodejs">
 <a href="#customaccount_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Account</a>
@@ -1602,8 +1469,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleaccount_nodejs">
 <a href="#googleaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Account</a>
@@ -1613,14 +1479,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_account_python">
 <a href="#custom_account_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>account</a>
@@ -1630,8 +1493,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a custom account.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="google_account_python">
 <a href="#google_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>account</a>
@@ -1641,16 +1503,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes authentication configuration that uses a Google account.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loginurl_csharp">
 <a href="#loginurl_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Url</a>
@@ -1659,8 +1518,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login form URL of the website.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1671,8 +1529,7 @@ Structure is documented below.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1681,14 +1538,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loginurl_go">
 <a href="#loginurl_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Url</a>
@@ -1697,8 +1551,7 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login form URL of the website.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1709,8 +1562,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1719,14 +1571,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loginurl_nodejs">
 <a href="#loginurl_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Url</a>
@@ -1735,8 +1584,7 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login form URL of the website.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1747,8 +1595,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1757,14 +1604,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="login_url_python">
 <a href="#login_url_python" style="color: inherit; text-decoration: inherit;">login_<wbr>url</a>
@@ -1773,8 +1617,7 @@ in GCP.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The login form URL of the website.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1785,8 +1628,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1795,16 +1637,13 @@ in GCP.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1815,8 +1654,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1825,14 +1663,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1843,8 +1678,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1853,14 +1687,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1871,8 +1702,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1881,14 +1711,11 @@ in GCP.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1899,8 +1726,7 @@ in GCP.
     <dd>{{% md %}}The password of the custom account. The credential is stored encrypted
 in GCP.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1909,16 +1735,13 @@ in GCP.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of the custom account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="intervaldurationdays_csharp">
 <a href="#intervaldurationdays_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Duration<wbr>Days</a>
@@ -1927,8 +1750,7 @@ in GCP.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time between executions in days
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletime_csharp">
 <a href="#scheduletime_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Time</a>
@@ -1939,14 +1761,11 @@ in GCP.
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed
 by the server after each run. If unspecified, it will default to current server time,
 which means the scan will be scheduled to start immediately.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="intervaldurationdays_go">
 <a href="#intervaldurationdays_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Duration<wbr>Days</a>
@@ -1955,8 +1774,7 @@ which means the scan will be scheduled to start immediately.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time between executions in days
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletime_go">
 <a href="#scheduletime_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Time</a>
@@ -1967,14 +1785,11 @@ which means the scan will be scheduled to start immediately.
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed
 by the server after each run. If unspecified, it will default to current server time,
 which means the scan will be scheduled to start immediately.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="intervaldurationdays_nodejs">
 <a href="#intervaldurationdays_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Duration<wbr>Days</a>
@@ -1983,8 +1798,7 @@ which means the scan will be scheduled to start immediately.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration of time between executions in days
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletime_nodejs">
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
@@ -1995,14 +1809,11 @@ which means the scan will be scheduled to start immediately.
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed
 by the server after each run. If unspecified, it will default to current server time,
 which means the scan will be scheduled to start immediately.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_duration_days_python">
 <a href="#interval_duration_days_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>duration_<wbr>days</a>
@@ -2011,8 +1822,7 @@ which means the scan will be scheduled to start immediately.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time between executions in days
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_time_python">
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
@@ -2023,8 +1833,7 @@ which means the scan will be scheduled to start immediately.
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed
 by the server after each run. If unspecified, it will default to current server time,
 which means the scan will be scheduled to start immediately.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2053,6 +1862,6 @@ ScanConfig can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

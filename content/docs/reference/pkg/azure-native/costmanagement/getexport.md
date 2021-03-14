@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportname_csharp">
 <a href="#exportname_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Export Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Export Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportname_go">
 <a href="#exportname_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Export Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Export Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportname_nodejs">
 <a href="#exportname_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Export Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Export Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="export_name_python">
 <a href="#export_name_python" style="color: inherit; text-decoration: inherit;">export_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Export Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Export Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deliveryinfo_csharp">
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntimeestimate_csharp">
 <a href="#nextruntimeestimate_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runhistory_csharp">
 <a href="#runhistory_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Export<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deliveryinfo_go">
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntimeestimate_go">
 <a href="#nextruntimeestimate_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runhistory_go">
 <a href="#runhistory_go" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportscheduleresponse">Export<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deliveryinfo_nodejs">
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntimeestimate_nodejs">
 <a href="#nextruntimeestimate_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runhistory_nodejs">
 <a href="#runhistory_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>History</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportscheduleresponse">Export<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delivery_info_python">
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_run_time_estimate_python">
 <a href="#next_run_time_estimate_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>time_<wbr>estimate</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="run_history_python">
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportscheduleresponse">Export<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliveryinfo_csharp">
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextruntimeestimate_csharp">
 <a href="#nextruntimeestimate_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -623,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runhistory_csharp">
 <a href="#runhistory_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
@@ -632,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliveryinfo_go">
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextruntimeestimate_go">
 <a href="#nextruntimeestimate_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runhistory_go">
 <a href="#runhistory_go" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliveryinfo_nodejs">
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextruntimeestimate_nodejs">
 <a href="#nextruntimeestimate_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Time<wbr>Estimate</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runhistory_nodejs">
 <a href="#runhistory_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>History</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delivery_info_python">
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
@@ -758,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="next_run_time_estimate_python">
 <a href="#next_run_time_estimate_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>time_<wbr>estimate</a>
@@ -767,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the export has an active schedule, provides an estimate of the next execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The format of the export being delivered. Currently only 'Csv' is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_history_python">
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errordetailsresponse">Error<wbr>Details<wbr>Response</h4>
@@ -794,9 +698,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -813,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -837,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -852,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -861,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -876,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -885,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</h4>
@@ -894,9 +782,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -904,14 +790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -919,14 +802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -934,14 +814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -949,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportdatasetresponse">Export<wbr>Dataset<wbr>Response</h4>
@@ -958,9 +834,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -968,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_csharp">
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
@@ -977,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -992,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_go">
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
@@ -1001,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1016,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_nodejs">
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
@@ -1025,14 +890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1040,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_python">
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
@@ -1049,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The granularity of rows in the export. Currently only 'Daily' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportdefinitionresponse">Export<wbr>Definition<wbr>Response</h4>
@@ -1058,9 +918,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1068,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1077,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
@@ -1086,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeperiod_csharp">
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -1095,14 +950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1110,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1119,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
@@ -1128,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeperiod_go">
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -1137,14 +986,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1152,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1161,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set</a>
@@ -1170,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeperiod_nodejs">
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
@@ -1179,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1194,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time frame for pulling data for the export. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1203,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_set_python">
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
@@ -1212,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_period_python">
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
@@ -1221,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</h4>
@@ -1230,9 +1066,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1240,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1249,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_csharp">
 <a href="#rootfolderpath_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
@@ -1258,14 +1090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1273,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1282,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_go">
 <a href="#rootfolderpath_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
@@ -1291,14 +1118,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1306,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1315,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_nodejs">
 <a href="#rootfolderpath_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder<wbr>Path</a>
@@ -1324,14 +1146,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1339,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container where exports will be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1348,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the storage account where exports will be delivered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_folder_path_python">
 <a href="#root_folder_path_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder_<wbr>path</a>
@@ -1357,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the directory where exports will be uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</h4>
@@ -1366,9 +1182,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1376,14 +1190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1391,14 +1202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1406,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1421,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</h4>
@@ -1430,9 +1234,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1440,14 +1242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1455,14 +1254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionresponse">[]Export<wbr>Execution<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1470,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionresponse">Export<wbr>Execution<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1485,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportexecutionresponse">Export<wbr>Execution<wbr>Response</h4>
@@ -1494,9 +1286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1504,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1513,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1522,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -1531,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1540,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executiontype_csharp">
 <a href="#executiontype_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Type</a>
@@ -1549,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
@@ -1558,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingendtime_csharp">
 <a href="#processingendtime_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>End<wbr>Time</a>
@@ -1567,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingstarttime_csharp">
 <a href="#processingstarttime_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Start<wbr>Time</a>
@@ -1576,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsettings_csharp">
 <a href="#runsettings_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Settings</a>
@@ -1585,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonexportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1594,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedby_csharp">
 <a href="#submittedby_csharp" style="color: inherit; text-decoration: inherit;">Submitted<wbr>By</a>
@@ -1603,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedtime_csharp">
 <a href="#submittedtime_csharp" style="color: inherit; text-decoration: inherit;">Submitted<wbr>Time</a>
@@ -1612,14 +1390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1627,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1636,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1645,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -1654,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1663,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executiontype_go">
 <a href="#executiontype_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Type</a>
@@ -1672,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name</a>
@@ -1681,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingendtime_go">
 <a href="#processingendtime_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>End<wbr>Time</a>
@@ -1690,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingstarttime_go">
 <a href="#processingstarttime_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Start<wbr>Time</a>
@@ -1699,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsettings_go">
 <a href="#runsettings_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Settings</a>
@@ -1708,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1717,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedby_go">
 <a href="#submittedby_go" style="color: inherit; text-decoration: inherit;">Submitted<wbr>By</a>
@@ -1726,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedtime_go">
 <a href="#submittedtime_go" style="color: inherit; text-decoration: inherit;">Submitted<wbr>Time</a>
@@ -1735,14 +1498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1750,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1759,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1768,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -1777,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1786,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executiontype_nodejs">
 <a href="#executiontype_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Type</a>
@@ -1795,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
@@ -1804,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingendtime_nodejs">
 <a href="#processingendtime_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>End<wbr>Time</a>
@@ -1813,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingstarttime_nodejs">
 <a href="#processingstarttime_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Start<wbr>Time</a>
@@ -1822,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsettings_nodejs">
 <a href="#runsettings_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Settings</a>
@@ -1831,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1840,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedby_nodejs">
 <a href="#submittedby_nodejs" style="color: inherit; text-decoration: inherit;">submitted<wbr>By</a>
@@ -1849,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittedtime_nodejs">
 <a href="#submittedtime_nodejs" style="color: inherit; text-decoration: inherit;">submitted<wbr>Time</a>
@@ -1858,14 +1606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1873,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1882,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1891,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -1900,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1909,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The details of any error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="execution_type_python">
 <a href="#execution_type_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>type</a>
@@ -1918,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_name_python">
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
@@ -1927,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the exported file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processing_end_time_python">
 <a href="#processing_end_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>end_<wbr>time</a>
@@ -1936,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the export execution finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processing_start_time_python">
 <a href="#processing_start_time_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>start_<wbr>time</a>
@@ -1945,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when export was picked up to be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_settings_python">
 <a href="#run_settings_python" style="color: inherit; text-decoration: inherit;">run_<wbr>settings</a>
@@ -1954,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1963,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last known status of the export execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submitted_by_python">
 <a href="#submitted_by_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>by</a>
@@ -1972,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submitted_time_python">
 <a href="#submitted_time_python" style="color: inherit; text-decoration: inherit;">submitted_<wbr>time</a>
@@ -1981,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time when export was queued to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</h4>
@@ -1990,9 +1722,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2000,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2009,14 +1738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2024,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2033,14 +1758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
@@ -2048,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2057,14 +1778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
@@ -2072,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2081,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportscheduleresponse">Export<wbr>Schedule<wbr>Response</h4>
@@ -2090,9 +1806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -2100,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_csharp">
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
@@ -2109,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2118,14 +1830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -2133,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_go">
 <a href="#recurrenceperiod_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
@@ -2142,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2151,14 +1858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -2166,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_nodejs">
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
@@ -2175,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2184,14 +1886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -2199,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_period_python">
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
@@ -2208,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2217,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the export's schedule. If 'Inactive', the export's schedule is paused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</h4>
@@ -2226,9 +1922,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2236,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2245,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2260,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2269,14 +1958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
@@ -2284,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2293,14 +1978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
@@ -2308,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date for export data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2317,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for export data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

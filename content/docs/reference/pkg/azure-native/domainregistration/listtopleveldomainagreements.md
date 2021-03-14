@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fortransfer_csharp">
 <a href="#fortransfer_csharp" style="color: inherit; text-decoration: inherit;">For<wbr>Transfer</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprivacy_csharp">
 <a href="#includeprivacy_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Privacy</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fortransfer_go">
 <a href="#fortransfer_go" style="color: inherit; text-decoration: inherit;">For<wbr>Transfer</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprivacy_go">
 <a href="#includeprivacy_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Privacy</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fortransfer_nodejs">
 <a href="#fortransfer_nodejs" style="color: inherit; text-decoration: inherit;">for<wbr>Transfer</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprivacy_nodejs">
 <a href="#includeprivacy_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Privacy</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the top-level domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="for_transfer_python">
 <a href="#for_transfer_python" style="color: inherit; text-decoration: inherit;">for_<wbr>transfer</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_privacy_python">
 <a href="#include_privacy_python" style="color: inherit; text-decoration: inherit;">include_<wbr>privacy</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tldlegalagreementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Tld<wbr>Legal<wbr>Agreement<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tldlegalagreementresponse">[]Tld<wbr>Legal<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tldlegalagreementresponse">Tld<wbr>Legal<wbr>Agreement<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tldlegalagreementresponse">Sequence[Tld<wbr>Legal<wbr>Agreement<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementkey_csharp">
 <a href="#agreementkey_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Key</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Agreement details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -335,14 +294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementkey_go">
 <a href="#agreementkey_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Key</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -359,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Agreement details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -377,14 +330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementkey_nodejs">
 <a href="#agreementkey_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Key</a>
@@ -392,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -401,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Agreement details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -410,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -419,14 +366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreement_key_python">
 <a href="#agreement_key_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>key</a>
@@ -434,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier for the agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -443,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Agreement details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Agreement details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Agreement title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL where a copy of the agreement details is hosted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

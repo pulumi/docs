@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Outputs.<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -220,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectpropertiesresponse">Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectpropertiesresponse">Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -358,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectpropertiesresponse">Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects].{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,9 +390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_csharp">
 <a href="#createdtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastassessmenttimestamp_csharp">
 <a href="#lastassessmenttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Assessment<wbr>Timestamp</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofassessments_csharp">
 <a href="#numberofassessments_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Assessments</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofgroups_csharp">
 <a href="#numberofgroups_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Groups</a>
@@ -479,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofmachines_csharp">
 <a href="#numberofmachines_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Machines</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_csharp">
 <a href="#serviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_csharp">
 <a href="#updatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentsolutionid_csharp">
 <a href="#assessmentsolutionid_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Solution<wbr>Id</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_csharp">
 <a href="#customerworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspacelocation_csharp">
 <a href="#customerworkspacelocation_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Location</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectstatus_csharp">
 <a href="#projectstatus_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
@@ -551,14 +486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_go">
 <a href="#createdtimestamp_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastassessmenttimestamp_go">
 <a href="#lastassessmenttimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Assessment<wbr>Timestamp</a>
@@ -575,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofassessments_go">
 <a href="#numberofassessments_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Assessments</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofgroups_go">
 <a href="#numberofgroups_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Groups</a>
@@ -593,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofmachines_go">
 <a href="#numberofmachines_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Machines</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_go">
 <a href="#serviceendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_go">
 <a href="#updatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentsolutionid_go">
 <a href="#assessmentsolutionid_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Solution<wbr>Id</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_go">
 <a href="#customerworkspaceid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Id</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspacelocation_go">
 <a href="#customerworkspacelocation_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Workspace<wbr>Location</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectstatus_go">
 <a href="#projectstatus_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Status</a>
@@ -665,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_nodejs">
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
@@ -680,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastassessmenttimestamp_nodejs">
 <a href="#lastassessmenttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Assessment<wbr>Timestamp</a>
@@ -689,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofassessments_nodejs">
 <a href="#numberofassessments_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Assessments</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofgroups_nodejs">
 <a href="#numberofgroups_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Groups</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofmachines_nodejs">
 <a href="#numberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Machines</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_nodejs">
 <a href="#serviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_nodejs">
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
@@ -743,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentsolutionid_nodejs">
 <a href="#assessmentsolutionid_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Solution<wbr>Id</a>
@@ -752,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspaceid_nodejs">
 <a href="#customerworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Id</a>
@@ -761,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerworkspacelocation_nodejs">
 <a href="#customerworkspacelocation_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Workspace<wbr>Location</a>
@@ -770,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectstatus_nodejs">
 <a href="#projectstatus_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Status</a>
@@ -779,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_timestamp_python">
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
@@ -794,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_assessment_timestamp_python">
 <a href="#last_assessment_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>assessment_<wbr>timestamp</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_of_assessments_python">
 <a href="#number_of_assessments_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>assessments</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of assessments created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_of_groups_python">
 <a href="#number_of_groups_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>groups</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of groups created in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_of_machines_python">
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
@@ -830,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of machines in the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -839,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_python">
 <a href="#service_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint at which the collector agent can call agent REST API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_timestamp_python">
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessment_solution_id_python">
 <a href="#assessment_solution_id_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>solution_<wbr>id</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_workspace_id_python">
 <a href="#customer_workspace_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>id</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_workspace_location_python">
 <a href="#customer_workspace_location_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>workspace_<wbr>location</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of service map workspace created by customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_status_python">
 <a href="#project_status_python" style="color: inherit; text-decoration: inherit;">project_<wbr>status</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Assessment project status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

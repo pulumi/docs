@@ -14,11 +14,17 @@ Represents a disaster recovery configuration.
 API Version: 2014-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Update a disaster recovery configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -39,9 +45,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -67,9 +76,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -82,9 +94,12 @@ disaster_recovery_configuration = azure_native.sql.DisasterRecoveryConfiguration
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DisasterRecoveryConfiguration Resource {#create}
@@ -125,9 +147,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,9 +155,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,9 +163,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,10 +171,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -184,9 +197,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,9 +205,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +213,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +221,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,18 +229,13 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +243,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +251,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,10 +259,7 @@ const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -281,9 +274,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -291,8 +282,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -300,8 +290,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disasterrecoveryconfigurationname_csharp">
 <a href="#disasterrecoveryconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Recovery<wbr>Configuration<wbr>Name</a>
@@ -309,14 +298,11 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -324,8 +310,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -333,8 +318,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disasterrecoveryconfigurationname_go">
 <a href="#disasterrecoveryconfigurationname_go" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Recovery<wbr>Configuration<wbr>Name</a>
@@ -342,14 +326,11 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -357,8 +338,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -366,8 +346,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disasterrecoveryconfigurationname_nodejs">
 <a href="#disasterrecoveryconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">disaster<wbr>Recovery<wbr>Configuration<wbr>Name</a>
@@ -375,14 +354,11 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -390,8 +366,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -399,8 +374,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disaster_recovery_configuration_name_python">
 <a href="#disaster_recovery_configuration_name_python" style="color: inherit; text-decoration: inherit;">disaster_<wbr>recovery_<wbr>configuration_<wbr>name</a>
@@ -408,8 +382,7 @@ The DisasterRecoveryConfiguration resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the disaster recovery configuration to be created/updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -420,9 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="autofailover_csharp">
 <a href="#autofailover_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Failover</a>
@@ -430,8 +401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failoverpolicy_csharp">
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
@@ -439,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -448,8 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -457,8 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logicalservername_csharp">
 <a href="#logicalservername_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Server<wbr>Name</a>
@@ -466,8 +433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -475,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerlogicalservername_csharp">
 <a href="#partnerlogicalservername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Logical<wbr>Server<wbr>Name</a>
@@ -484,8 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerserverid_csharp">
 <a href="#partnerserverid_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Server<wbr>Id</a>
@@ -493,8 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -502,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -511,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -520,14 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="autofailover_go">
 <a href="#autofailover_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Failover</a>
@@ -535,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failoverpolicy_go">
 <a href="#failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
@@ -544,8 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -553,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -562,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logicalservername_go">
 <a href="#logicalservername_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Server<wbr>Name</a>
@@ -571,8 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -580,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerlogicalservername_go">
 <a href="#partnerlogicalservername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Logical<wbr>Server<wbr>Name</a>
@@ -589,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerserverid_go">
 <a href="#partnerserverid_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Server<wbr>Id</a>
@@ -598,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -607,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -616,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -625,14 +573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="autofailover_nodejs">
 <a href="#autofailover_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Failover</a>
@@ -640,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failoverpolicy_nodejs">
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
@@ -649,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -658,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -667,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logicalservername_nodejs">
 <a href="#logicalservername_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Server<wbr>Name</a>
@@ -676,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -685,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerlogicalservername_nodejs">
 <a href="#partnerlogicalservername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Logical<wbr>Server<wbr>Name</a>
@@ -694,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerserverid_nodejs">
 <a href="#partnerserverid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Server<wbr>Id</a>
@@ -703,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -712,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -721,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -730,14 +665,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="auto_failover_python">
 <a href="#auto_failover_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>failover</a>
@@ -745,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not failover can be done automatically.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failover_policy_python">
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
@@ -754,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How aggressive the automatic failover should be.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -763,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -772,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the server that contains this disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logical_server_name_python">
 <a href="#logical_server_name_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>server_<wbr>name</a>
@@ -781,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -790,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_logical_server_name_python">
 <a href="#partner_logical_server_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>logical_<wbr>server_<wbr>name</a>
@@ -799,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Logical name of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_server_id_python">
 <a href="#partner_server_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>server_<wbr>id</a>
@@ -808,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the partner server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -817,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role of the current server in the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -826,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the disaster recovery configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -835,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

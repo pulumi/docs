@@ -13,11 +13,17 @@ meta_desc: "Documentation for the datadog.azure.Integration resource with exampl
 Provides a Datadog - Microsoft Azure integration resource. This can be used to create and manage the integrations.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -81,9 +93,12 @@ sandbox = datadog.azure.Integration("sandbox",
     tenant_name="<azure_tenant_name>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const sandbox = new datadog.azure.Integration("sandbox", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Integration Resource {#create}
@@ -125,9 +147,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,9 +155,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,9 +163,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,10 +171,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -184,9 +197,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,9 +205,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +213,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +221,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,18 +229,13 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +243,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +251,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,10 +259,7 @@ const sandbox = new datadog.azure.Integration("sandbox", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -281,9 +274,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -292,8 +283,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -302,8 +292,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantname_csharp">
 <a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -312,8 +301,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_csharp">
 <a href="#hostfilters_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -324,14 +312,11 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -340,8 +325,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -350,8 +334,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantname_go">
 <a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -360,8 +343,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_go">
 <a href="#hostfilters_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -372,14 +354,11 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -388,8 +367,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -398,8 +376,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantname_nodejs">
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -408,8 +385,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_nodejs">
 <a href="#hostfilters_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Filters</a>
@@ -420,14 +396,11 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -436,8 +409,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -446,8 +418,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_name_python">
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -456,8 +427,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_filters_python">
 <a href="#host_filters_python" style="color: inherit; text-decoration: inherit;">host_<wbr>filters</a>
@@ -468,8 +438,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -480,9 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -490,14 +457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -505,14 +469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -520,14 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -535,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -663,9 +620,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -674,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_csharp">
 <a href="#state_clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -684,8 +638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_csharp">
 <a href="#state_hostfilters_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -696,8 +649,7 @@ The following state arguments are supported:
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_csharp">
 <a href="#state_tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -706,14 +658,11 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -722,8 +671,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_go">
 <a href="#state_clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -732,8 +680,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_go">
 <a href="#state_hostfilters_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -744,8 +691,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_go">
 <a href="#state_tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -754,14 +700,11 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -770,8 +713,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_nodejs">
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -780,8 +722,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_nodejs">
 <a href="#state_hostfilters_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Filters</a>
@@ -792,8 +733,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantname_nodejs">
 <a href="#state_tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -802,14 +742,11 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -818,8 +755,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Azure web application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_python">
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -828,8 +764,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required for Initial Creation) Your Azure web application secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_filters_python">
 <a href="#state_host_filters_python" style="color: inherit; text-decoration: inherit;">host_<wbr>filters</a>
@@ -840,8 +775,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
     <dd>{{% md %}}String of host tag(s) (in the form `key:value,key:value`) defines a filter that Datadog will use when collecting metrics
 from Azure. Limit the Azure instances that are pulled into Datadog by using tags. Only hosts that match one of the
 defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_name_python">
 <a href="#state_tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -850,8 +784,7 @@ defined tags are imported into Datadog. e.x. `env:production,deploymentgroup:red
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Azure Active Directory ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -877,6 +810,6 @@ Microsoft Azure integrations can be imported using their `tenant name` and `clie
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

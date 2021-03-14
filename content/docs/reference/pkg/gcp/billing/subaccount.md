@@ -43,9 +43,7 @@ Billing Subaccounts can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Billing Subaccounts can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Billing Subaccounts can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SubAccount resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -210,8 +179,7 @@ The SubAccount resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterbillingaccount_csharp">
 <a href="#masterbillingaccount_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Billing<wbr>Account</a>
@@ -221,8 +189,7 @@ The SubAccount resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_csharp">
 <a href="#deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -230,14 +197,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -246,8 +210,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterbillingaccount_go">
 <a href="#masterbillingaccount_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Billing<wbr>Account</a>
@@ -257,8 +220,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_go">
 <a href="#deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -266,14 +228,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -282,8 +241,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterbillingaccount_nodejs">
 <a href="#masterbillingaccount_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Billing<wbr>Account</a>
@@ -293,8 +251,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_nodejs">
 <a href="#deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
@@ -302,14 +259,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -318,8 +272,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_billing_account_python">
 <a href="#master_billing_account_python" style="color: inherit; text-decoration: inherit;">master_<wbr>billing_<wbr>account</a>
@@ -329,8 +282,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_policy_python">
 <a href="#deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
@@ -338,8 +290,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -350,9 +301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountid_csharp">
 <a href="#billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -361,8 +310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -380,8 +327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="open_csharp">
 <a href="#open_csharp" style="color: inherit; text-decoration: inherit;">Open</a>
@@ -390,14 +336,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountid_go">
 <a href="#billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -406,8 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,8 +357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -425,8 +366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="open_go">
 <a href="#open_go" style="color: inherit; text-decoration: inherit;">Open</a>
@@ -435,14 +375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountid_nodejs">
 <a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
@@ -451,8 +388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -460,8 +396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -470,8 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="open_nodejs">
 <a href="#open_nodejs" style="color: inherit; text-decoration: inherit;">open</a>
@@ -480,14 +414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billing_account_id_python">
 <a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
@@ -496,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -505,8 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -515,8 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="open_python">
 <a href="#open_python" style="color: inherit; text-decoration: inherit;">open</a>
@@ -525,8 +453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -653,9 +580,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccountid_csharp">
 <a href="#state_billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -664,8 +589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_csharp">
 <a href="#state_deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -673,8 +597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -683,8 +606,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterbillingaccount_csharp">
 <a href="#state_masterbillingaccount_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Billing<wbr>Account</a>
@@ -694,8 +616,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -704,8 +625,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_csharp">
 <a href="#state_open_csharp" style="color: inherit; text-decoration: inherit;">Open</a>
@@ -714,14 +634,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccountid_go">
 <a href="#state_billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -730,8 +647,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_go">
 <a href="#state_deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -739,8 +655,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -749,8 +664,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterbillingaccount_go">
 <a href="#state_masterbillingaccount_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Billing<wbr>Account</a>
@@ -760,8 +674,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -770,8 +683,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_go">
 <a href="#state_open_go" style="color: inherit; text-decoration: inherit;">Open</a>
@@ -780,14 +692,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccountid_nodejs">
 <a href="#state_billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
@@ -796,8 +705,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_nodejs">
 <a href="#state_deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
@@ -805,8 +713,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -815,8 +722,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterbillingaccount_nodejs">
 <a href="#state_masterbillingaccount_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Billing<wbr>Account</a>
@@ -826,8 +732,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -836,8 +741,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_nodejs">
 <a href="#state_open_nodejs" style="color: inherit; text-decoration: inherit;">open</a>
@@ -846,14 +750,11 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_id_python">
 <a href="#state_billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
@@ -862,8 +763,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_policy_python">
 <a href="#state_deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
@@ -871,8 +771,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -881,8 +780,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the billing account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_billing_account_python">
 <a href="#state_master_billing_account_python" style="color: inherit; text-decoration: inherit;">master_<wbr>billing_<wbr>account</a>
@@ -892,8 +790,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
     </dt>
     <dd>{{% md %}}The name of the master billing account that the subaccount
 will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -902,8 +799,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_python">
 <a href="#state_open_python" style="color: inherit; text-decoration: inherit;">open</a>
@@ -912,8 +808,7 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the billing account is open, `false` if the billing account is closed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -929,6 +824,6 @@ will be created under in the form `{billing_account_id}` or `billingAccounts/{bi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

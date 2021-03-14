@@ -43,9 +43,7 @@ To get more information about Occurrence, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ To get more information about Occurrence, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ To get more information about Occurrence, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The Occurence resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_csharp">
 <a href="#attestation_csharp" style="color: inherit; text-decoration: inherit;">Attestation</a>
@@ -218,8 +187,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notename_csharp">
 <a href="#notename_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Name</a>
@@ -230,8 +198,7 @@ Structure is documented below.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -242,8 +209,7 @@ filter in list requests.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -253,8 +219,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_csharp">
 <a href="#remediation_csharp" style="color: inherit; text-decoration: inherit;">Remediation</a>
@@ -263,14 +228,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_go">
 <a href="#attestation_go" style="color: inherit; text-decoration: inherit;">Attestation</a>
@@ -287,8 +249,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notename_go">
 <a href="#notename_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Name</a>
@@ -299,8 +260,7 @@ Structure is documented below.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -311,8 +271,7 @@ filter in list requests.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -322,8 +281,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_go">
 <a href="#remediation_go" style="color: inherit; text-decoration: inherit;">Remediation</a>
@@ -332,14 +290,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_nodejs">
 <a href="#attestation_nodejs" style="color: inherit; text-decoration: inherit;">attestation</a>
@@ -356,8 +311,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notename_nodejs">
 <a href="#notename_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Name</a>
@@ -368,8 +322,7 @@ Structure is documented below.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -380,8 +333,7 @@ filter in list requests.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -391,8 +343,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_nodejs">
 <a href="#remediation_nodejs" style="color: inherit; text-decoration: inherit;">remediation</a>
@@ -401,14 +352,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_python">
 <a href="#attestation_python" style="color: inherit; text-decoration: inherit;">attestation</a>
@@ -425,8 +373,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="note_name_python">
 <a href="#note_name_python" style="color: inherit; text-decoration: inherit;">note_<wbr>name</a>
@@ -437,8 +384,7 @@ Structure is documented below.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -449,8 +395,7 @@ filter in list requests.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -460,8 +405,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_python">
 <a href="#remediation_python" style="color: inherit; text-decoration: inherit;">remediation</a>
@@ -470,8 +414,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -482,9 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -493,8 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -502,8 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -513,8 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -523,8 +461,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -533,14 +470,11 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -549,8 +483,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -558,8 +491,7 @@ in list requests.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -569,8 +501,7 @@ in list requests.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -579,8 +510,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -589,14 +519,11 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -605,8 +532,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -614,8 +540,7 @@ in list requests.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -625,8 +550,7 @@ in list requests.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -635,8 +559,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -645,14 +568,11 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -661,8 +581,7 @@ in list requests.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +589,7 @@ in list requests.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -681,8 +599,7 @@ in list requests.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -691,8 +608,7 @@ in list requests.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -701,8 +617,7 @@ in list requests.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -829,9 +744,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_csharp">
 <a href="#state_attestation_csharp" style="color: inherit; text-decoration: inherit;">Attestation</a>
@@ -848,8 +761,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -858,8 +770,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -869,8 +780,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -879,8 +789,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notename_csharp">
 <a href="#state_notename_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Name</a>
@@ -891,8 +800,7 @@ in list requests.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -902,8 +810,7 @@ filter in list requests.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remediation_csharp">
 <a href="#state_remediation_csharp" style="color: inherit; text-decoration: inherit;">Remediation</a>
@@ -912,8 +819,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceuri_csharp">
 <a href="#state_resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -924,8 +830,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -934,14 +839,11 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_go">
 <a href="#state_attestation_go" style="color: inherit; text-decoration: inherit;">Attestation</a>
@@ -958,8 +860,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -968,8 +869,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -979,8 +879,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -989,8 +888,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notename_go">
 <a href="#state_notename_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Name</a>
@@ -1001,8 +899,7 @@ in list requests.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1012,8 +909,7 @@ filter in list requests.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remediation_go">
 <a href="#state_remediation_go" style="color: inherit; text-decoration: inherit;">Remediation</a>
@@ -1022,8 +918,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceuri_go">
 <a href="#state_resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -1034,8 +929,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1044,14 +938,11 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_nodejs">
 <a href="#state_attestation_nodejs" style="color: inherit; text-decoration: inherit;">attestation</a>
@@ -1068,8 +959,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1078,8 +968,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1089,8 +978,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1099,8 +987,7 @@ in list requests.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notename_nodejs">
 <a href="#state_notename_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Name</a>
@@ -1111,8 +998,7 @@ in list requests.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1122,8 +1008,7 @@ filter in list requests.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remediation_nodejs">
 <a href="#state_remediation_nodejs" style="color: inherit; text-decoration: inherit;">remediation</a>
@@ -1132,8 +1017,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceuri_nodejs">
 <a href="#state_resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -1144,8 +1028,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1154,14 +1037,11 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_python">
 <a href="#state_attestation_python" style="color: inherit; text-decoration: inherit;">attestation</a>
@@ -1178,8 +1058,7 @@ useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1188,8 +1067,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the repository was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1199,8 +1077,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
 in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1209,8 +1086,7 @@ in list requests.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the occurrence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_note_name_python">
 <a href="#state_note_name_python" style="color: inherit; text-decoration: inherit;">note_<wbr>name</a>
@@ -1221,8 +1097,7 @@ in list requests.
     <dd>{{% md %}}The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1232,8 +1107,7 @@ filter in list requests.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remediation_python">
 <a href="#state_remediation_python" style="color: inherit; text-decoration: inherit;">remediation</a>
@@ -1242,8 +1116,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of actions that can be taken to remedy the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_uri_python">
 <a href="#state_resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -1254,8 +1127,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1264,8 +1136,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the repository was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1280,9 +1151,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 <h4 id="occurenceattestation">Occurence<wbr>Attestation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serializedpayload_csharp">
 <a href="#serializedpayload_csharp" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Payload</a>
@@ -1292,8 +1161,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
     </dt>
     <dd>{{% md %}}The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signatures_csharp">
 <a href="#signatures_csharp" style="color: inherit; text-decoration: inherit;">Signatures</a>
@@ -1307,14 +1175,11 @@ message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
 details on signature structure and verification.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serializedpayload_go">
 <a href="#serializedpayload_go" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Payload</a>
@@ -1324,8 +1189,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signatures_go">
 <a href="#signatures_go" style="color: inherit; text-decoration: inherit;">Signatures</a>
@@ -1339,14 +1203,11 @@ message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
 details on signature structure and verification.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serializedpayload_nodejs">
 <a href="#serializedpayload_nodejs" style="color: inherit; text-decoration: inherit;">serialized<wbr>Payload</a>
@@ -1356,8 +1217,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signatures_nodejs">
 <a href="#signatures_nodejs" style="color: inherit; text-decoration: inherit;">signatures</a>
@@ -1371,14 +1231,11 @@ message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
 details on signature structure and verification.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serialized_payload_python">
 <a href="#serialized_payload_python" style="color: inherit; text-decoration: inherit;">serialized_<wbr>payload</a>
@@ -1388,8 +1245,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signatures_python">
 <a href="#signatures_python" style="color: inherit; text-decoration: inherit;">signatures</a>
@@ -1403,16 +1259,13 @@ message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
 details on signature structure and verification.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="occurenceattestationsignature">Occurence<wbr>Attestation<wbr>Signature</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeyid_csharp">
 <a href="#publickeyid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Id</a>
@@ -1430,8 +1283,7 @@ for more details on this scheme.
 * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
 * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_csharp">
 <a href="#signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -1446,14 +1298,11 @@ verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeyid_go">
 <a href="#publickeyid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Id</a>
@@ -1471,8 +1320,7 @@ for more details on this scheme.
 * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
 * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_go">
 <a href="#signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -1487,14 +1335,11 @@ verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeyid_nodejs">
 <a href="#publickeyid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Id</a>
@@ -1512,8 +1357,7 @@ for more details on this scheme.
 * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
 * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_nodejs">
 <a href="#signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -1528,14 +1372,11 @@ verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_key_id_python">
 <a href="#public_key_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>id</a>
@@ -1553,8 +1394,7 @@ for more details on this scheme.
 * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
 * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_python">
 <a href="#signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -1569,8 +1409,7 @@ verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1599,6 +1438,6 @@ Occurrence can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockchainmembername_csharp">
 <a href="#blockchainmembername_csharp" style="color: inherit; text-decoration: inherit;">Blockchain<wbr>Member<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionnodename_csharp">
 <a href="#transactionnodename_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Node<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockchainmembername_go">
 <a href="#blockchainmembername_go" style="color: inherit; text-decoration: inherit;">Blockchain<wbr>Member<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionnodename_go">
 <a href="#transactionnodename_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Node<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockchainmembername_nodejs">
 <a href="#blockchainmembername_nodejs" style="color: inherit; text-decoration: inherit;">blockchain<wbr>Member<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionnodename_nodejs">
 <a href="#transactionnodename_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Node<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockchain_member_name_python">
 <a href="#blockchain_member_name_python" style="color: inherit; text-decoration: inherit;">blockchain_<wbr>member_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Blockchain member name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_node_name_python">
 <a href="#transaction_node_name_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>node_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transaction node name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_csharp">
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Blockchain.<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_go">
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">[]Firewall<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_nodejs">
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">Firewall<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the blockchain member provision state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node public key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the service - e.g. "Microsoft.Blockchain"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node dns endpoint basic auth user name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_rules_python">
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the transaction node location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the transaction node dns endpoint basic auth password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endipaddress_csharp">
 <a href="#endipaddress_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startipaddress_csharp">
 <a href="#startipaddress_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -614,14 +542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endipaddress_go">
 <a href="#endipaddress_go" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startipaddress_go">
 <a href="#startipaddress_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endipaddress_nodejs">
 <a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -671,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startipaddress_nodejs">
 <a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
@@ -680,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_ip_address_python">
 <a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_ip_address_python">
 <a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -61,14 +59,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -76,14 +71,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -91,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -106,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -120,9 +108,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="labs_csharp">
 <a href="#labs_csharp" style="color: inherit; text-decoration: inherit;">Labs</a>
@@ -130,14 +116,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Lab<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the labs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="labs_go">
 <a href="#labs_go" style="color: inherit; text-decoration: inherit;">Labs</a>
@@ -145,14 +128,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labdetailsresponse">[]Lab<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the labs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="labs_nodejs">
 <a href="#labs_nodejs" style="color: inherit; text-decoration: inherit;">labs</a>
@@ -160,14 +140,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labdetailsresponse">Lab<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the labs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="labs_python">
 <a href="#labs_python" style="color: inherit; text-decoration: inherit;">labs</a>
@@ -175,8 +152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labdetailsresponse">Sequence[Lab<wbr>Details<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of all the labs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the labs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -190,9 +166,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usagequota_csharp">
 <a href="#usagequota_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Quota</a>
@@ -200,8 +174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -209,8 +182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -218,8 +190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -227,14 +198,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usagequota_go">
 <a href="#usagequota_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Quota</a>
@@ -242,8 +210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -251,8 +218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -260,8 +226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -269,14 +234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usagequota_nodejs">
 <a href="#usagequota_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Quota</a>
@@ -284,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -293,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -302,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -311,14 +270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usage_quota_python">
 <a href="#usage_quota_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>quota</a>
@@ -326,8 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum duration a user can use a VM in this lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -335,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -344,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -353,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the lab.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

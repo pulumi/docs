@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.networking.QosDscpMarkingRule resour
 Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a QoS Policy with some DSCP marking rule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -84,9 +96,12 @@ dscp_marking_rule1 = openstack.networking.QosDscpMarkingRule("dscpMarkingRule1",
     qos_policy_id=qos_policy1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -101,9 +116,16 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a QosDscpMarkingRule Resource {#create}
@@ -128,9 +150,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -138,9 +158,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -148,9 +166,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -158,10 +174,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -187,9 +200,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -197,9 +208,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -207,9 +216,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -217,9 +224,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -227,18 +232,13 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -246,9 +246,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -256,9 +254,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -266,10 +262,7 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscp_marki
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -284,9 +277,7 @@ The QosDscpMarkingRule resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dscpmark_csharp">
 <a href="#dscpmark_csharp" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Mark</a>
@@ -296,8 +287,7 @@ The QosDscpMarkingRule resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -306,8 +296,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -318,14 +307,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dscpmark_go">
 <a href="#dscpmark_go" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Mark</a>
@@ -335,8 +321,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -345,8 +330,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -357,14 +341,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dscpmark_nodejs">
 <a href="#dscpmark_nodejs" style="color: inherit; text-decoration: inherit;">dscp<wbr>Mark</a>
@@ -374,8 +355,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -384,8 +364,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -396,14 +375,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dscp_mark_python">
 <a href="#dscp_mark_python" style="color: inherit; text-decoration: inherit;">dscp_<wbr>mark</a>
@@ -413,8 +389,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -423,8 +398,7 @@ QoS DSCP marking rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -435,8 +409,7 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -447,9 +420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -457,14 +428,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -472,14 +440,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -487,14 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,8 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -630,9 +591,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dscpmark_csharp">
 <a href="#state_dscpmark_csharp" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Mark</a>
@@ -642,8 +601,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_csharp">
 <a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -652,8 +610,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -664,14 +621,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dscpmark_go">
 <a href="#state_dscpmark_go" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Mark</a>
@@ -681,8 +635,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_go">
 <a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -691,8 +644,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -703,14 +655,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dscpmark_nodejs">
 <a href="#state_dscpmark_nodejs" style="color: inherit; text-decoration: inherit;">dscp<wbr>Mark</a>
@@ -720,8 +669,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_nodejs">
 <a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -730,8 +678,7 @@ QoS DSCP marking rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -742,14 +689,11 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dscp_mark_python">
 <a href="#state_dscp_mark_python" style="color: inherit; text-decoration: inherit;">dscp_<wbr>mark</a>
@@ -759,8 +703,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
     </dt>
     <dd>{{% md %}}The value of DSCP mark. Changing this updates the DSCP mark value existing
 QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qos_policy_id_python">
 <a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -769,8 +712,7 @@ QoS DSCP marking rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -781,8 +723,7 @@ QoS DSCP marking rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS DSCP marking rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -808,6 +749,6 @@ QoS DSCP marking rules can be imported using the `qos_policy_id/dscp_marking_rul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

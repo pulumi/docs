@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofilepreferencename_csharp">
 <a href="#configurationprofilepreferencename_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofilepreferencename_go">
 <a href="#configurationprofilepreferencename_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofilepreferencename_nodejs">
 <a href="#configurationprofilepreferencename_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_profile_preference_name_python">
 <a href="#configuration_profile_preference_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile preference name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablerealtimeprotection_csharp">
 <a href="#enablerealtimeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_csharp">
 <a href="#runscheduledscan_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scanday_csharp">
 <a href="#scanday_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
@@ -443,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_csharp">
 <a href="#scantimeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantype_csharp">
 <a href="#scantype_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
@@ -461,14 +406,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablerealtimeprotection_go">
 <a href="#enablerealtimeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
@@ -476,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -485,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_go">
 <a href="#runscheduledscan_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scanday_go">
 <a href="#scanday_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_go">
 <a href="#scantimeinminutes_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantype_go">
 <a href="#scantype_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablerealtimeprotection_nodejs">
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_nodejs">
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scanday_nodejs">
 <a href="#scanday_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Day</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_nodejs">
 <a href="#scantimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scantype_nodejs">
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
@@ -581,14 +510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_real_time_protection_python">
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_scheduled_scan_python">
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scan_day_python">
 <a href="#scan_day_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>day</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scan_time_in_minutes_python">
 <a href="#scan_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>time_<wbr>in_<wbr>minutes</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scan_type_python">
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</h4>
@@ -650,9 +570,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="antimalware_csharp">
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
@@ -660,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmbackup_csharp">
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
@@ -669,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="antimalware_go">
 <a href="#antimalware_go" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
@@ -684,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmbackup_go">
 <a href="#vmbackup_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
@@ -693,14 +606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="antimalware_nodejs">
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
@@ -708,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmbackup_nodejs">
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
@@ -717,14 +626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anti_malware_python">
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
@@ -732,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_backup_python">
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</h4>
@@ -750,9 +654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_csharp">
 <a href="#instantrpretentionrangeindays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
@@ -760,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -769,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
@@ -778,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -787,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_go">
 <a href="#instantrpretentionrangeindays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
@@ -802,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -811,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
@@ -820,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -829,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_nodejs">
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
@@ -844,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -853,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
@@ -862,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -871,14 +758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instant_rp_retention_range_in_days_python">
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
@@ -886,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -895,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
@@ -904,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -913,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

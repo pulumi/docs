@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="criteria_csharp">
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="criteria_go">
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertactionresponse">[]Health<wbr>Alert<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="criteria_nodejs">
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertactionresponse">Health<wbr>Alert<wbr>Action<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -466,14 +412,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="criteria_python">
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertactionresponse">Sequence[Health<wbr>Alert<wbr>Action<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_csharp">
 <a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_csharp">
 <a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -605,14 +534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_go">
 <a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_go">
 <a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -629,14 +554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_nodejs">
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_nodejs">
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
@@ -653,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_group_id_python">
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_hook_properties_python">
 <a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -696,14 +610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -711,14 +622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">[]Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -726,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthstateresponse">Health<wbr>State<wbr>Response</h4>
@@ -750,9 +654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_csharp">
 <a href="#healthstatename_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -760,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -769,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_go">
 <a href="#healthstatename_go" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -784,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -793,14 +690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_nodejs">
 <a href="#healthstatename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
@@ -808,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -817,14 +710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_state_name_python">
 <a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
@@ -832,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response</h4>
@@ -850,9 +738,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_csharp">
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -860,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_csharp">
 <a href="#monitornames_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -869,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_csharp">
 <a href="#monitortypes_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -878,14 +762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_go">
 <a href="#healthstates_go" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -893,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">[]Health<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_go">
 <a href="#monitornames_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -902,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_go">
 <a href="#monitortypes_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -911,14 +790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_nodejs">
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
@@ -926,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">Health<wbr>State<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_nodejs">
 <a href="#monitornames_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Names</a>
@@ -935,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_nodejs">
 <a href="#monitortypes_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Types</a>
@@ -944,14 +818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_states_python">
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
@@ -959,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_names_python">
 <a href="#monitor_names_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>names</a>
@@ -968,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_types_python">
 <a href="#monitor_types_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>types</a>
@@ -977,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -21,11 +21,17 @@ removed during the next [anti-entropy synchronisation](https://www.consul.io/doc
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Consul = Pulumi.Consul;
@@ -52,9 +58,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -86,9 +95,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_consul as consul
@@ -100,9 +112,12 @@ google = consul.Service("google",
     tags=["tag0"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const google = new consul.Service("google", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Service Resource {#create}
@@ -145,9 +167,7 @@ const google = new consul.Service("google", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const google = new consul.Service("google", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const google = new consul.Service("google", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_csharp">
 <a href="#node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -312,8 +303,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -323,8 +313,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checks_csharp">
 <a href="#checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -332,8 +321,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -343,8 +331,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletagoverride_csharp">
 <a href="#enabletagoverride_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -354,8 +341,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -363,8 +349,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -374,8 +359,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -384,8 +368,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -394,8 +377,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -404,8 +386,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceid_csharp">
 <a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -415,8 +396,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -426,14 +406,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_go">
 <a href="#node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -442,8 +419,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -453,8 +429,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checks_go">
 <a href="#checks_go" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -462,8 +437,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">[]Service<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -473,8 +447,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletagoverride_go">
 <a href="#enabletagoverride_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -484,8 +457,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -493,8 +465,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -504,8 +475,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -514,8 +484,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -524,8 +493,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -534,8 +502,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceid_go">
 <a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -545,8 +512,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -556,14 +522,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_nodejs">
 <a href="#node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -572,8 +535,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -583,8 +545,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checks_nodejs">
 <a href="#checks_nodejs" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -592,8 +553,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -603,8 +563,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletagoverride_nodejs">
 <a href="#enabletagoverride_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tag<wbr>Override</a>
@@ -614,8 +573,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -623,8 +581,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -634,8 +591,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -644,8 +600,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -654,8 +609,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -664,8 +618,7 @@ instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceid_nodejs">
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -675,8 +628,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -686,14 +638,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_python">
 <a href="#node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -702,8 +651,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -713,8 +661,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checks_python">
 <a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -722,8 +669,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Sequence[Service<wbr>Check<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -733,8 +679,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_tag_override_python">
 <a href="#enable_tag_override_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tag_<wbr>override</a>
@@ -744,8 +689,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -753,8 +697,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -764,8 +707,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +716,7 @@ instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -784,8 +725,7 @@ instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -794,8 +734,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_id_python">
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -805,8 +744,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -816,8 +754,7 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -828,9 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -838,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,14 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -868,14 +797,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -883,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1011,9 +936,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1023,8 +946,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checks_csharp">
 <a href="#state_checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -1032,8 +954,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1043,8 +964,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletagoverride_csharp">
 <a href="#state_enabletagoverride_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -1054,8 +974,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_csharp">
 <a href="#state_external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1063,8 +982,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1074,8 +992,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1084,8 +1001,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1094,8 +1010,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_csharp">
 <a href="#state_node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -1104,8 +1019,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1114,8 +1028,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_csharp">
 <a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -1125,8 +1038,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1136,14 +1048,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1153,8 +1062,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checks_go">
 <a href="#state_checks_go" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -1162,8 +1070,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">[]Service<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1173,8 +1080,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletagoverride_go">
 <a href="#state_enabletagoverride_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -1184,8 +1090,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_go">
 <a href="#state_external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1193,8 +1098,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1204,8 +1108,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1214,8 +1117,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1224,8 +1126,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_go">
 <a href="#state_node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -1234,8 +1135,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1244,8 +1144,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_go">
 <a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -1255,8 +1154,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1266,14 +1164,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1283,8 +1178,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checks_nodejs">
 <a href="#state_checks_nodejs" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -1292,8 +1186,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1303,8 +1196,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletagoverride_nodejs">
 <a href="#state_enabletagoverride_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tag<wbr>Override</a>
@@ -1314,8 +1206,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_nodejs">
 <a href="#state_external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1323,8 +1214,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1334,8 +1224,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1344,8 +1233,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1354,8 +1242,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_nodejs">
 <a href="#state_node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1364,8 +1251,7 @@ instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1374,8 +1260,7 @@ instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_nodejs">
 <a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -1385,8 +1270,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1396,14 +1280,11 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1413,8 +1294,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checks_python">
 <a href="#state_checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -1422,8 +1302,7 @@ address of the node.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecheck">Sequence[Service<wbr>Check<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1433,8 +1312,7 @@ address of the node.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_tag_override_python">
 <a href="#state_enable_tag_override_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tag_<wbr>override</a>
@@ -1444,8 +1322,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies to disable the
 anti-entropy feature for this service's tags. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_python">
 <a href="#state_external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1453,8 +1330,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1464,8 +1340,7 @@ anti-entropy feature for this service's tags. Defaults to `false`.
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1474,8 +1349,7 @@ instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1484,8 +1358,7 @@ instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_python">
 <a href="#state_node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1494,8 +1367,7 @@ instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1504,8 +1376,7 @@ instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_id_python">
 <a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -1515,8 +1386,7 @@ instance.
     </dt>
     <dd>{{% md %}}- If the service ID is not provided, it will be defaulted to the value
 of the `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1526,8 +1396,7 @@ of the `name` attribute.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1542,9 +1411,7 @@ but can be used to distinguish between services or nodes.
 <h4 id="servicecheck">Service<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkid_csharp">
 <a href="#checkid_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Id</a>
@@ -1554,8 +1421,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}An ID, *unique per agent*. Will default to *name*
 if not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1565,8 +1431,7 @@ if not set.
     </dt>
     <dd>{{% md %}}The interval to wait between each health-check
 invocation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1575,8 +1440,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1585,8 +1449,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout value for HTTP checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deregistercriticalserviceafter_csharp">
 <a href="#deregistercriticalserviceafter_csharp" style="color: inherit; text-decoration: inherit;">Deregister<wbr>Critical<wbr>Service<wbr>After</a>
@@ -1597,8 +1460,7 @@ invocation.
     <dd>{{% md %}}The time after which
 the service is automatically deregistered when in the `critical` state.
 Defaults to `30s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1608,8 +1470,7 @@ Defaults to `30s`.
     </dt>
     <dd>{{% md %}}The headers to send for an HTTP check.
 The attributes of each header is given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -1618,8 +1479,7 @@ The attributes of each header is given below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1629,8 +1489,7 @@ The attributes of each header is given below.
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1639,8 +1498,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1649,8 +1507,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_csharp">
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
@@ -1659,8 +1516,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_csharp">
 <a href="#tlsskipverify_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
@@ -1670,14 +1526,11 @@ to `GET`.
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkid_go">
 <a href="#checkid_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Id</a>
@@ -1687,8 +1540,7 @@ verification for HTTP health-checks. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An ID, *unique per agent*. Will default to *name*
 if not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1698,8 +1550,7 @@ if not set.
     </dt>
     <dd>{{% md %}}The interval to wait between each health-check
 invocation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1708,8 +1559,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1718,8 +1568,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout value for HTTP checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deregistercriticalserviceafter_go">
 <a href="#deregistercriticalserviceafter_go" style="color: inherit; text-decoration: inherit;">Deregister<wbr>Critical<wbr>Service<wbr>After</a>
@@ -1730,8 +1579,7 @@ invocation.
     <dd>{{% md %}}The time after which
 the service is automatically deregistered when in the `critical` state.
 Defaults to `30s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1741,8 +1589,7 @@ Defaults to `30s`.
     </dt>
     <dd>{{% md %}}The headers to send for an HTTP check.
 The attributes of each header is given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -1751,8 +1598,7 @@ The attributes of each header is given below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1762,8 +1608,7 @@ The attributes of each header is given below.
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1772,8 +1617,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1782,8 +1626,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_go">
 <a href="#tcp_go" style="color: inherit; text-decoration: inherit;">Tcp</a>
@@ -1792,8 +1635,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_go">
 <a href="#tlsskipverify_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
@@ -1803,14 +1645,11 @@ to `GET`.
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkid_nodejs">
 <a href="#checkid_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Id</a>
@@ -1820,8 +1659,7 @@ verification for HTTP health-checks. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An ID, *unique per agent*. Will default to *name*
 if not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1831,8 +1669,7 @@ if not set.
     </dt>
     <dd>{{% md %}}The interval to wait between each health-check
 invocation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1841,8 +1678,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1851,8 +1687,7 @@ invocation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timeout value for HTTP checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deregistercriticalserviceafter_nodejs">
 <a href="#deregistercriticalserviceafter_nodejs" style="color: inherit; text-decoration: inherit;">deregister<wbr>Critical<wbr>Service<wbr>After</a>
@@ -1863,8 +1698,7 @@ invocation.
     <dd>{{% md %}}The time after which
 the service is automatically deregistered when in the `critical` state.
 Defaults to `30s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1874,8 +1708,7 @@ Defaults to `30s`.
     </dt>
     <dd>{{% md %}}The headers to send for an HTTP check.
 The attributes of each header is given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1884,8 +1717,7 @@ The attributes of each header is given below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1895,8 +1727,7 @@ The attributes of each header is given below.
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1905,8 +1736,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1915,8 +1745,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_nodejs">
 <a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
@@ -1925,8 +1754,7 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_nodejs">
 <a href="#tlsskipverify_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Skip<wbr>Verify</a>
@@ -1936,14 +1764,11 @@ to `GET`.
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="check_id_python">
 <a href="#check_id_python" style="color: inherit; text-decoration: inherit;">check_<wbr>id</a>
@@ -1953,8 +1778,7 @@ verification for HTTP health-checks. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An ID, *unique per agent*. Will default to *name*
 if not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1964,8 +1788,7 @@ if not set.
     </dt>
     <dd>{{% md %}}The interval to wait between each health-check
 invocation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1974,8 +1797,7 @@ invocation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1984,8 +1806,7 @@ invocation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timeout value for HTTP checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deregister_critical_service_after_python">
 <a href="#deregister_critical_service_after_python" style="color: inherit; text-decoration: inherit;">deregister_<wbr>critical_<wbr>service_<wbr>after</a>
@@ -1996,8 +1817,7 @@ invocation.
     <dd>{{% md %}}The time after which
 the service is automatically deregistered when in the `critical` state.
 Defaults to `30s`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2007,8 +1827,7 @@ Defaults to `30s`.
     </dt>
     <dd>{{% md %}}The headers to send for an HTTP check.
 The attributes of each header is given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -2017,8 +1836,7 @@ The attributes of each header is given below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -2028,8 +1846,7 @@ The attributes of each header is given below.
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -2038,8 +1855,7 @@ to `GET`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2048,8 +1864,7 @@ to `GET`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_python">
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
@@ -2058,8 +1873,7 @@ to `GET`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_skip_verify_python">
 <a href="#tls_skip_verify_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>skip_<wbr>verify</a>
@@ -2069,16 +1883,13 @@ to `GET`.
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecheckheader">Service<wbr>Check<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2087,8 +1898,7 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2097,14 +1907,11 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The header's list of values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2113,8 +1920,7 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2123,14 +1929,11 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The header's list of values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2139,8 +1942,7 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2149,14 +1951,11 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The header's list of values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2165,8 +1964,7 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2175,8 +1973,7 @@ verification for HTTP health-checks. Defaults to `false`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The header's list of values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2187,6 +1984,6 @@ verification for HTTP health-checks. Defaults to `false`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 </dl>
 

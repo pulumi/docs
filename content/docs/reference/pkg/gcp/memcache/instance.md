@@ -42,9 +42,7 @@ To get more information about Instance, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -52,9 +50,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -62,9 +58,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -72,10 +66,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -101,9 +92,7 @@ To get more information about Instance, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -111,9 +100,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -121,9 +108,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -131,9 +116,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -141,18 +124,13 @@ To get more information about Instance, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +138,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +146,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +154,7 @@ To get more information about Instance, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -198,9 +169,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeconfig_csharp">
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -210,8 +179,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -220,8 +188,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_csharp">
 <a href="#authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -231,8 +198,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -241,8 +207,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -251,8 +216,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheparameters_csharp">
 <a href="#memcacheparameters_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
@@ -262,8 +226,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheversion_csharp">
 <a href="#memcacheversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
@@ -276,8 +239,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -286,8 +248,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -297,8 +258,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -307,8 +267,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -318,14 +277,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeconfig_go">
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -335,8 +291,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -345,8 +300,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_go">
 <a href="#authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -356,8 +310,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -366,8 +319,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -376,8 +328,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheparameters_go">
 <a href="#memcacheparameters_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
@@ -387,8 +338,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheversion_go">
 <a href="#memcacheversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
@@ -401,8 +351,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -411,8 +360,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -422,8 +370,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -432,8 +379,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -443,14 +389,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeconfig_nodejs">
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
@@ -460,8 +403,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -470,8 +412,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_nodejs">
 <a href="#authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -481,8 +422,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -491,8 +431,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -501,8 +440,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheparameters_nodejs">
 <a href="#memcacheparameters_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Parameters</a>
@@ -512,8 +450,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcacheversion_nodejs">
 <a href="#memcacheversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Version</a>
@@ -526,8 +463,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -536,8 +472,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -547,8 +482,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -557,8 +491,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -568,14 +501,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_config_python">
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
@@ -585,8 +515,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -595,8 +524,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_network_python">
 <a href="#authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -606,8 +534,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -616,8 +543,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -626,8 +552,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcache_parameters_python">
 <a href="#memcache_parameters_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>parameters</a>
@@ -637,8 +562,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcache_version_python">
 <a href="#memcache_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>version</a>
@@ -651,8 +575,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -661,8 +584,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -672,8 +594,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -682,8 +603,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -693,8 +613,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -705,9 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -716,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpoint_csharp">
 <a href="#discoveryendpoint_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint</a>
@@ -726,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -735,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachefullversion_csharp">
 <a href="#memcachefullversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
@@ -745,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachenodes_csharp">
 <a href="#memcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
@@ -755,14 +668,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancememcachenode">List&lt;Instance<wbr>Memcache<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -771,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpoint_go">
 <a href="#discoveryendpoint_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint</a>
@@ -781,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -790,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachefullversion_go">
 <a href="#memcachefullversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
@@ -800,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachenodes_go">
 <a href="#memcachenodes_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
@@ -810,14 +716,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -826,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpoint_nodejs">
 <a href="#discoveryendpoint_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Endpoint</a>
@@ -836,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -845,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachefullversion_nodejs">
 <a href="#memcachefullversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Full<wbr>Version</a>
@@ -855,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcachenodes_nodejs">
 <a href="#memcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Nodes</a>
@@ -865,14 +764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancememcachenode">Instance<wbr>Memcache<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -881,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discovery_endpoint_python">
 <a href="#discovery_endpoint_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>endpoint</a>
@@ -891,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcache_full_version_python">
 <a href="#memcache_full_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>full_<wbr>version</a>
@@ -910,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memcache_nodes_python">
 <a href="#memcache_nodes_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>nodes</a>
@@ -920,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancememcachenode">Sequence[Instance<wbr>Memcache<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1048,9 +939,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_csharp">
 <a href="#state_authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1060,8 +949,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1070,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryendpoint_csharp">
 <a href="#state_discoveryendpoint_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint</a>
@@ -1080,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1090,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1100,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachefullversion_csharp">
 <a href="#state_memcachefullversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
@@ -1110,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachenodes_csharp">
 <a href="#state_memcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
@@ -1120,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancememcachenode">List&lt;Instance<wbr>Memcache<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheparameters_csharp">
 <a href="#state_memcacheparameters_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
@@ -1131,8 +1013,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheversion_csharp">
 <a href="#state_memcacheversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
@@ -1145,8 +1026,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1155,8 +1035,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeconfig_csharp">
 <a href="#state_nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1166,8 +1045,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_csharp">
 <a href="#state_nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1176,8 +1054,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1187,8 +1064,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1197,8 +1073,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_csharp">
 <a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -1208,14 +1083,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_go">
 <a href="#state_authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1225,8 +1097,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1235,8 +1106,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryendpoint_go">
 <a href="#state_discoveryendpoint_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint</a>
@@ -1245,8 +1115,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1255,8 +1124,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1265,8 +1133,7 @@ provided, all zones will be used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachefullversion_go">
 <a href="#state_memcachefullversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
@@ -1275,8 +1142,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachenodes_go">
 <a href="#state_memcachenodes_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
@@ -1285,8 +1151,7 @@ provided, all zones will be used.
         <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheparameters_go">
 <a href="#state_memcacheparameters_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
@@ -1296,8 +1161,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheversion_go">
 <a href="#state_memcacheversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
@@ -1310,8 +1174,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1320,8 +1183,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeconfig_go">
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1331,8 +1193,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_go">
 <a href="#state_nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1341,8 +1202,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1352,8 +1212,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1362,8 +1221,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_go">
 <a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -1373,14 +1231,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_nodejs">
 <a href="#state_authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -1390,8 +1245,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1400,8 +1254,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryendpoint_nodejs">
 <a href="#state_discoveryendpoint_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Endpoint</a>
@@ -1410,8 +1263,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1420,8 +1272,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1430,8 +1281,7 @@ provided, all zones will be used.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachefullversion_nodejs">
 <a href="#state_memcachefullversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Full<wbr>Version</a>
@@ -1440,8 +1290,7 @@ provided, all zones will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcachenodes_nodejs">
 <a href="#state_memcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Nodes</a>
@@ -1450,8 +1299,7 @@ provided, all zones will be used.
         <span class="property-type"><a href="#instancememcachenode">Instance<wbr>Memcache<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheparameters_nodejs">
 <a href="#state_memcacheparameters_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Parameters</a>
@@ -1461,8 +1309,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcacheversion_nodejs">
 <a href="#state_memcacheversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Version</a>
@@ -1475,8 +1322,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1485,8 +1331,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeconfig_nodejs">
 <a href="#state_nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
@@ -1496,8 +1341,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_nodejs">
 <a href="#state_nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -1506,8 +1350,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1517,8 +1360,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1527,8 +1369,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_nodejs">
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -1538,14 +1379,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_network_python">
 <a href="#state_authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -1555,8 +1393,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1565,8 +1402,7 @@ provided, all zones will be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discovery_endpoint_python">
 <a href="#state_discovery_endpoint_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>endpoint</a>
@@ -1575,8 +1411,7 @@ provided, all zones will be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for Discovery API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1585,8 +1420,7 @@ provided, all zones will be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1595,8 +1429,7 @@ provided, all zones will be used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcache_full_version_python">
 <a href="#state_memcache_full_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>full_<wbr>version</a>
@@ -1605,8 +1438,7 @@ provided, all zones will be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full version of memcached server running on this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcache_nodes_python">
 <a href="#state_memcache_nodes_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>nodes</a>
@@ -1615,8 +1447,7 @@ provided, all zones will be used.
         <span class="property-type"><a href="#instancememcachenode">Sequence[Instance<wbr>Memcache<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcache_parameters_python">
 <a href="#state_memcache_parameters_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>parameters</a>
@@ -1626,8 +1457,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memcache_version_python">
 <a href="#state_memcache_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>version</a>
@@ -1640,8 +1470,7 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version.
 Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1650,8 +1479,7 @@ Possible values are `MEMCACHE_1_5`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_config_python">
 <a href="#state_node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
@@ -1661,8 +1489,7 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_count_python">
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1671,8 +1498,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1682,8 +1508,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1692,8 +1517,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_python">
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -1703,8 +1527,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1719,9 +1542,7 @@ provided, all zones will be used.
 <h4 id="instancememcachenode">Instance<wbr>Memcache<wbr>Node</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1729,8 +1550,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1738,8 +1558,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1747,8 +1566,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1756,8 +1574,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1765,14 +1582,11 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1780,8 +1594,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1789,8 +1602,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1798,8 +1610,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1807,8 +1618,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1816,14 +1626,11 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1831,8 +1638,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -1840,8 +1646,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1849,8 +1654,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1858,8 +1662,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1867,14 +1670,11 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1882,8 +1682,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -1891,8 +1690,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1900,8 +1698,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1909,8 +1706,7 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1918,16 +1714,13 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1937,8 +1730,7 @@ provided, all zones will be used.
     </dt>
     <dd>{{% md %}}-
 This is a unique ID associated with this set of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_csharp">
 <a href="#params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -1947,14 +1739,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}User-defined set of parameters to use in the memcache process.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1964,8 +1753,7 @@ This is a unique ID associated with this set of parameters.
     </dt>
     <dd>{{% md %}}-
 This is a unique ID associated with this set of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_go">
 <a href="#params_go" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -1974,14 +1762,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}User-defined set of parameters to use in the memcache process.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1991,8 +1776,7 @@ This is a unique ID associated with this set of parameters.
     </dt>
     <dd>{{% md %}}-
 This is a unique ID associated with this set of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_nodejs">
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
@@ -2001,14 +1785,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-defined set of parameters to use in the memcache process.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2018,8 +1799,7 @@ This is a unique ID associated with this set of parameters.
     </dt>
     <dd>{{% md %}}-
 This is a unique ID associated with this set of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="params_python">
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
@@ -2028,16 +1808,13 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined set of parameters to use in the memcache process.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancenodeconfig">Instance<wbr>Node<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucount_csharp">
 <a href="#cpucount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Count</a>
@@ -2046,8 +1823,7 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPUs per node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memorysizemb_csharp">
 <a href="#memorysizemb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Mb</a>
@@ -2056,14 +1832,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory size in Mebibytes for each memcache node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucount_go">
 <a href="#cpucount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Count</a>
@@ -2072,8 +1845,7 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPUs per node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memorysizemb_go">
 <a href="#memorysizemb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Mb</a>
@@ -2082,14 +1854,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory size in Mebibytes for each memcache node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucount_nodejs">
 <a href="#cpucount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Count</a>
@@ -2098,8 +1867,7 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of CPUs per node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memorysizemb_nodejs">
 <a href="#memorysizemb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Mb</a>
@@ -2108,14 +1876,11 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory size in Mebibytes for each memcache node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpu_count_python">
 <a href="#cpu_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>count</a>
@@ -2124,8 +1889,7 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPUs per node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_size_mb_python">
 <a href="#memory_size_mb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>mb</a>
@@ -2134,8 +1898,7 @@ This is a unique ID associated with this set of parameters.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory size in Mebibytes for each memcache node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2168,6 +1931,6 @@ Instance can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

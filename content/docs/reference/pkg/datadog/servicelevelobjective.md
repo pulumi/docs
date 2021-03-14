@@ -13,11 +13,17 @@ meta_desc: "Documentation for the datadog.ServiceLevelObjective resource with ex
 Provides a Datadog service level objective resource. This can be used to create and manage Datadog service level objectives.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Metric-Based SLO
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -117,9 +126,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -155,9 +167,12 @@ foo = datadog.ServiceLevelObjective("foo",
     type="metric")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -195,10 +210,17 @@ const foo = new datadog.ServiceLevelObjective("foo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Monitor-Based SLO
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -245,13 +267,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -284,9 +312,12 @@ bar = datadog.ServiceLevelObjective("bar",
     type="monitor")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -321,9 +352,16 @@ const bar = new datadog.ServiceLevelObjective("bar", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceLevelObjective Resource {#create}
@@ -348,9 +386,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -358,9 +394,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -368,9 +402,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -378,10 +410,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -407,9 +436,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -417,9 +444,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -427,9 +452,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -437,9 +460,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -447,18 +468,13 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -466,9 +482,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -476,9 +490,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -486,10 +498,7 @@ const bar = new datadog.ServiceLevelObjective("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -504,9 +513,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -515,8 +522,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholds_csharp">
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -525,8 +531,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -538,8 +543,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -548,8 +552,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_csharp">
 <a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -559,8 +562,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -569,8 +571,7 @@ are: `metric` and `monitor`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_csharp">
 <a href="#monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -579,8 +580,7 @@ are: `metric` and `monitor`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -589,8 +589,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -599,8 +598,7 @@ are: `metric` and `monitor`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_csharp">
 <a href="#validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -609,14 +607,11 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -625,8 +620,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholds_go">
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -635,8 +629,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -648,8 +641,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -658,8 +650,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -669,8 +660,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -679,8 +669,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_go">
 <a href="#monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -689,8 +678,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -699,8 +687,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -709,8 +696,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_go">
 <a href="#validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -719,14 +705,11 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -735,8 +718,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholds_nodejs">
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -745,8 +727,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -758,8 +739,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -768,8 +748,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_nodejs">
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -779,8 +758,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -789,8 +767,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_nodejs">
 <a href="#monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -799,8 +776,7 @@ are: `metric` and `monitor`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -809,8 +785,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -819,8 +794,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_nodejs">
 <a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -829,14 +803,11 @@ are: `metric` and `monitor`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -845,8 +816,7 @@ are: `metric` and `monitor`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholds_python">
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -855,8 +825,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Sequence[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -868,8 +837,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -878,8 +846,7 @@ are: `metric` and `monitor`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -889,8 +856,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -899,8 +865,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_ids_python">
 <a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
@@ -909,8 +874,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -919,8 +883,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -929,8 +892,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_python">
 <a href="#validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -939,8 +901,7 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -951,9 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -961,14 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -976,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -991,14 +944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1006,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1134,9 +1083,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1145,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_csharp">
 <a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1156,8 +1102,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1166,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_csharp">
 <a href="#state_monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1176,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1186,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_csharp">
 <a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1196,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1206,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholds_csharp">
 <a href="#state_thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -1216,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1229,8 +1168,7 @@ The following state arguments are supported:
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_csharp">
 <a href="#state_validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -1239,14 +1177,11 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1255,8 +1190,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_go">
 <a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1266,8 +1200,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1276,8 +1209,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_go">
 <a href="#state_monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1286,8 +1218,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1296,8 +1227,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_go">
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1306,8 +1236,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1316,8 +1245,7 @@ are: `metric` and `monitor`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholds_go">
 <a href="#state_thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -1326,8 +1254,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1339,8 +1266,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_go">
 <a href="#state_validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -1349,14 +1275,11 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1365,8 +1288,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_nodejs">
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -1376,8 +1298,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1386,8 +1307,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_nodejs">
 <a href="#state_monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -1396,8 +1316,7 @@ are: `metric` and `monitor`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1406,8 +1325,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_nodejs">
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1416,8 +1334,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1426,8 +1343,7 @@ are: `metric` and `monitor`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholds_nodejs">
 <a href="#state_thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -1436,8 +1352,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1449,8 +1364,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_nodejs">
 <a href="#state_validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -1459,14 +1373,11 @@ are: `metric` and `monitor`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1475,8 +1386,7 @@ are: `metric` and `monitor`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_delete_python">
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -1486,8 +1396,7 @@ are: `metric` and `monitor`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).
 -   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1496,8 +1405,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_ids_python">
 <a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
@@ -1506,8 +1414,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1516,8 +1423,7 @@ are: `metric` and `monitor`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_python">
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1526,8 +1432,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query of good / total events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1536,8 +1441,7 @@ are: `metric` and `monitor`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholds_python">
 <a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -1546,8 +1450,7 @@ are: `metric` and `monitor`.
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Sequence[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1559,8 +1462,7 @@ are: `metric` and `monitor`.
 found in the Datadog API [documentation
 page](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object). Available options to choose from
 are: `metric` and `monitor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_python">
 <a href="#state_validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -1569,8 +1471,7 @@ are: `metric` and `monitor`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to validate the SLO.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1585,9 +1486,7 @@ are: `metric` and `monitor`.
 <h4 id="servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denominator_csharp">
 <a href="#denominator_csharp" style="color: inherit; text-decoration: inherit;">Denominator</a>
@@ -1595,8 +1494,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_csharp">
 <a href="#numerator_csharp" style="color: inherit; text-decoration: inherit;">Numerator</a>
@@ -1604,14 +1502,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denominator_go">
 <a href="#denominator_go" style="color: inherit; text-decoration: inherit;">Denominator</a>
@@ -1619,8 +1514,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_go">
 <a href="#numerator_go" style="color: inherit; text-decoration: inherit;">Numerator</a>
@@ -1628,14 +1522,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denominator_nodejs">
 <a href="#denominator_nodejs" style="color: inherit; text-decoration: inherit;">denominator</a>
@@ -1643,8 +1534,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_nodejs">
 <a href="#numerator_nodejs" style="color: inherit; text-decoration: inherit;">numerator</a>
@@ -1652,14 +1542,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denominator_python">
 <a href="#denominator_python" style="color: inherit; text-decoration: inherit;">denominator</a>
@@ -1667,8 +1554,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numerator_python">
 <a href="#numerator_python" style="color: inherit; text-decoration: inherit;">numerator</a>
@@ -1676,16 +1562,13 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1693,8 +1576,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1710,8 +1592,7 @@ are: `metric` and `monitor`.
 -   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 -   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
 -   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_csharp">
 <a href="#targetdisplay_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Display</a>
@@ -1719,8 +1600,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1728,8 +1608,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_csharp">
 <a href="#warningdisplay_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
@@ -1737,14 +1616,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1752,8 +1628,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -1769,8 +1644,7 @@ are: `metric` and `monitor`.
 -   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 -   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
 -   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_go">
 <a href="#targetdisplay_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Display</a>
@@ -1778,8 +1652,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1787,8 +1660,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_go">
 <a href="#warningdisplay_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
@@ -1796,14 +1668,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1811,8 +1680,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1828,8 +1696,7 @@ are: `metric` and `monitor`.
 -   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 -   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
 -   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdisplay_nodejs">
 <a href="#targetdisplay_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Display</a>
@@ -1837,8 +1704,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1846,8 +1712,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningdisplay_nodejs">
 <a href="#warningdisplay_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Display</a>
@@ -1855,14 +1720,11 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1870,8 +1732,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -1887,8 +1748,7 @@ are: `metric` and `monitor`.
 -   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 -   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
 -   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_display_python">
 <a href="#target_display_python" style="color: inherit; text-decoration: inherit;">target_<wbr>display</a>
@@ -1896,8 +1756,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1905,8 +1764,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_display_python">
 <a href="#warning_display_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>display</a>
@@ -1914,8 +1772,7 @@ are: `metric` and `monitor`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1936,6 +1793,6 @@ Service Level Objectives can be imported using their string ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

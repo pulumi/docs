@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diagnosticid_csharp">
 <a href="#diagnosticid_csharp" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diagnosticid_go">
 <a href="#diagnosticid_go" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Id</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diagnosticid_nodejs">
 <a href="#diagnosticid_nodejs" style="color: inherit; text-decoration: inherit;">diagnostic<wbr>Id</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diagnostic_id_python">
 <a href="#diagnostic_id_python" style="color: inherit; text-decoration: inherit;">diagnostic_<wbr>id</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggerid_csharp">
 <a href="#loggerid_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayslog_csharp">
 <a href="#alwayslog_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frontend_csharp">
 <a href="#frontend_csharp" style="color: inherit; text-decoration: inherit;">Frontend</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcorrelationprotocol_csharp">
 <a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logclientip_csharp">
 <a href="#logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_csharp">
 <a href="#sampling_csharp" style="color: inherit; text-decoration: inherit;">Sampling</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Sampling<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verbosity_csharp">
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggerid_go">
 <a href="#loggerid_go" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayslog_go">
 <a href="#alwayslog_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frontend_go">
 <a href="#frontend_go" style="color: inherit; text-decoration: inherit;">Frontend</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcorrelationprotocol_go">
 <a href="#httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logclientip_go">
 <a href="#logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_go">
 <a href="#sampling_go" style="color: inherit; text-decoration: inherit;">Sampling</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verbosity_go">
 <a href="#verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loggerid_nodejs">
 <a href="#loggerid_nodejs" style="color: inherit; text-decoration: inherit;">logger<wbr>Id</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayslog_nodejs">
 <a href="#alwayslog_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frontend_nodejs">
 <a href="#frontend_nodejs" style="color: inherit; text-decoration: inherit;">frontend</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcorrelationprotocol_nodejs">
 <a href="#httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logclientip_nodejs">
 <a href="#logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_nodejs">
 <a href="#sampling_nodejs" style="color: inherit; text-decoration: inherit;">sampling</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verbosity_nodejs">
 <a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -502,14 +444,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logger_id_python">
 <a href="#logger_id_python" style="color: inherit; text-decoration: inherit;">logger_<wbr>id</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="always_log_python">
 <a href="#always_log_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frontend_python">
 <a href="#frontend_python" style="color: inherit; text-decoration: inherit;">frontend</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_correlation_protocol_python">
 <a href="#http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_client_ip_python">
 <a href="#log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_python">
 <a href="#sampling_python" style="color: inherit; text-decoration: inherit;">sampling</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verbosity_python">
 <a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_csharp">
 <a href="#bytes_csharp" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -632,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_go">
 <a href="#bytes_go" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_nodejs">
 <a href="#bytes_nodejs" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -662,14 +582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_python">
 <a href="#bytes_python" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -696,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -705,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -729,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
@@ -744,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -753,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -768,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -777,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</h4>
@@ -786,9 +686,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -796,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -805,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -820,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -829,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -844,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -853,14 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -868,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -877,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</h4>
@@ -886,9 +770,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -896,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_csharp">
 <a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -905,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -920,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_go">
 <a href="#samplingtype_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -929,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -944,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_nodejs">
 <a href="#samplingtype_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Type</a>
@@ -953,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -968,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_type_python">
 <a href="#sampling_type_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>type</a>
@@ -977,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

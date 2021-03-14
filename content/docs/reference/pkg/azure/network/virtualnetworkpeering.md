@@ -17,11 +17,17 @@ resources in the linked virtual network.
 Virtual Network peerings cannot be created, updated or deleted concurrently.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -69,9 +75,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -130,9 +139,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -156,9 +168,12 @@ example_2_virtual_network_peering = azure.network.VirtualNetworkPeering("example
     remote_virtual_network_id=example_1_virtual_network.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -187,9 +202,16 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualNetworkPeering Resource {#create}
@@ -214,9 +236,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +244,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +252,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,10 +260,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -273,9 +286,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -283,9 +294,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -293,9 +302,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -303,9 +310,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -313,18 +318,13 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -332,9 +332,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -342,9 +340,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -352,10 +348,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -370,9 +363,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_csharp">
 <a href="#remotevirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -382,8 +373,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -394,8 +384,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_csharp">
 <a href="#virtualnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -405,8 +394,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_csharp">
 <a href="#allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -416,8 +404,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_csharp">
 <a href="#allowgatewaytransit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -427,8 +414,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_csharp">
 <a href="#allowvirtualnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -439,8 +425,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -450,8 +435,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -465,14 +449,11 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_go">
 <a href="#remotevirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -482,8 +463,7 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -494,8 +474,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_go">
 <a href="#virtualnetworkname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -505,8 +484,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_go">
 <a href="#allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -516,8 +494,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_go">
 <a href="#allowgatewaytransit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -527,8 +504,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_go">
 <a href="#allowvirtualnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -539,8 +515,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -550,8 +525,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -565,14 +539,11 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_nodejs">
 <a href="#remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -582,8 +553,7 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -594,8 +564,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_nodejs">
 <a href="#virtualnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Name</a>
@@ -605,8 +574,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_nodejs">
 <a href="#allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
@@ -616,8 +584,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_nodejs">
 <a href="#allowgatewaytransit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Gateway<wbr>Transit</a>
@@ -627,8 +594,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_nodejs">
 <a href="#allowvirtualnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -639,8 +605,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -650,8 +615,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
@@ -665,14 +629,11 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remote_virtual_network_id_python">
 <a href="#remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
@@ -682,8 +643,7 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -694,8 +654,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_name_python">
 <a href="#virtual_network_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>name</a>
@@ -705,8 +664,7 @@ created.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_forwarded_traffic_python">
 <a href="#allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
@@ -716,8 +674,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_gateway_transit_python">
 <a href="#allow_gateway_transit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>gateway_<wbr>transit</a>
@@ -727,8 +684,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_virtual_network_access_python">
 <a href="#allow_virtual_network_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>virtual_<wbr>network_<wbr>access</a>
@@ -739,8 +695,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -750,8 +705,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
@@ -765,8 +719,7 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -777,9 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -787,14 +738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -802,14 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -817,14 +762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -832,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -960,9 +901,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowforwardedtraffic_csharp">
 <a href="#state_allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -972,8 +911,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowgatewaytransit_csharp">
 <a href="#state_allowgatewaytransit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -983,8 +921,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowvirtualnetworkaccess_csharp">
 <a href="#state_allowvirtualnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -995,8 +932,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1006,8 +942,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_csharp">
 <a href="#state_remotevirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -1017,8 +952,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1029,8 +963,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremotegateways_csharp">
 <a href="#state_useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -1044,8 +977,7 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkname_csharp">
 <a href="#state_virtualnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -1055,14 +987,11 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowforwardedtraffic_go">
 <a href="#state_allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -1072,8 +1001,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowgatewaytransit_go">
 <a href="#state_allowgatewaytransit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -1083,8 +1011,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowvirtualnetworkaccess_go">
 <a href="#state_allowvirtualnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -1095,8 +1022,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1106,8 +1032,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_go">
 <a href="#state_remotevirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -1117,8 +1042,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1129,8 +1053,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremotegateways_go">
 <a href="#state_useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -1144,8 +1067,7 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkname_go">
 <a href="#state_virtualnetworkname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -1155,14 +1077,11 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowforwardedtraffic_nodejs">
 <a href="#state_allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
@@ -1172,8 +1091,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowgatewaytransit_nodejs">
 <a href="#state_allowgatewaytransit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Gateway<wbr>Transit</a>
@@ -1183,8 +1101,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowvirtualnetworkaccess_nodejs">
 <a href="#state_allowvirtualnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -1195,8 +1112,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1206,8 +1122,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_nodejs">
 <a href="#state_remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -1217,8 +1132,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1229,8 +1143,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremotegateways_nodejs">
 <a href="#state_useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
@@ -1244,8 +1157,7 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkname_nodejs">
 <a href="#state_virtualnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Name</a>
@@ -1255,14 +1167,11 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_forwarded_traffic_python">
 <a href="#state_allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
@@ -1272,8 +1181,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_gateway_transit_python">
 <a href="#state_allow_gateway_transit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>gateway_<wbr>transit</a>
@@ -1283,8 +1191,7 @@ in the remote virtual network is allowed. Defaults to false.
     </dt>
     <dd>{{% md %}}Controls gatewayLinks can be used in the
 remote virtual network’s link to the local virtual network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_virtual_network_access_python">
 <a href="#state_allow_virtual_network_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>virtual_<wbr>network_<wbr>access</a>
@@ -1295,8 +1202,7 @@ remote virtual network’s link to the local virtual network.
     <dd>{{% md %}}Controls if the VMs in the remote
 virtual network can access VMs in the local virtual network. Defaults to
 true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1306,8 +1212,7 @@ true.
     </dt>
     <dd>{{% md %}}The name of the virtual network peering. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_virtual_network_id_python">
 <a href="#state_remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
@@ -1317,8 +1222,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1329,8 +1233,7 @@ remote virtual network.  Changing this forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network peering. Changing this forces a new resource to be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_remote_gateways_python">
 <a href="#state_use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
@@ -1344,8 +1247,7 @@ the local virtual network. If the flag is set to `true`, and
 use gateways of remote virtual network for transit. Only one peering can
 have this flag set to `true`. This flag cannot be set if virtual network
 already has a gateway. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_name_python">
 <a href="#state_virtual_network_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>name</a>
@@ -1355,8 +1257,7 @@ already has a gateway. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1382,6 +1283,6 @@ Virtual Network Peerings can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

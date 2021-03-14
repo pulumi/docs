@@ -40,9 +40,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -208,8 +177,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -218,8 +186,7 @@ dots - see the example above and `FQDN formatting` below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -229,8 +196,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_csharp">
 <a href="#answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -240,8 +206,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -251,8 +216,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_csharp">
 <a href="#link_csharp" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -262,8 +226,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -271,8 +234,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -284,8 +246,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_csharp">
 <a href="#shortanswers_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
@@ -293,8 +254,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -303,8 +263,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_csharp">
 <a href="#useclientsubnet_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
@@ -316,14 +275,11 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -333,8 +289,7 @@ is documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +298,7 @@ dots - see the example above and `FQDN formatting` below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -354,8 +308,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_go">
 <a href="#answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -365,8 +318,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -376,8 +328,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_go">
 <a href="#link_go" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -387,8 +338,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -396,8 +346,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -409,8 +358,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_go">
 <a href="#shortanswers_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
@@ -418,8 +366,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -428,8 +375,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_go">
 <a href="#useclientsubnet_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
@@ -441,14 +387,11 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -458,8 +401,7 @@ is documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -468,8 +410,7 @@ dots - see the example above and `FQDN formatting` below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -479,8 +420,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_nodejs">
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -490,8 +430,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -501,8 +440,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_nodejs">
 <a href="#link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
@@ -512,8 +450,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -521,8 +458,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -534,8 +470,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_nodejs">
 <a href="#shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
@@ -543,8 +478,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -553,8 +487,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_nodejs">
 <a href="#useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
@@ -566,14 +499,11 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -583,8 +513,7 @@ is documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -593,8 +522,7 @@ dots - see the example above and `FQDN formatting` below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -604,8 +532,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_python">
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -615,8 +542,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -626,8 +552,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_python">
 <a href="#link_python" style="color: inherit; text-decoration: inherit;">link</a>
@@ -637,8 +562,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -646,8 +570,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -659,8 +582,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="short_answers_python">
 <a href="#short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
@@ -668,8 +590,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -678,8 +599,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_client_subnet_python">
 <a href="#use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
@@ -691,8 +611,7 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -703,9 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -713,14 +630,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,14 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -743,14 +654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -758,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -886,9 +793,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_answers_csharp">
 <a href="#state_answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -898,8 +803,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -909,8 +813,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -920,8 +823,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_csharp">
 <a href="#state_link_csharp" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -931,8 +833,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -940,8 +841,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -953,8 +853,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_csharp">
 <a href="#state_shortanswers_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
@@ -962,8 +861,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -972,8 +870,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -982,8 +879,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_csharp">
 <a href="#state_useclientsubnet_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
@@ -995,8 +891,7 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1006,14 +901,11 @@ is documented below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_answers_go">
 <a href="#state_answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -1023,8 +915,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1034,8 +925,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1045,8 +935,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_go">
 <a href="#state_link_go" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -1056,8 +945,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1065,8 +953,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -1078,8 +965,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_go">
 <a href="#state_shortanswers_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
@@ -1087,8 +973,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1097,8 +982,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1107,8 +991,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_go">
 <a href="#state_useclientsubnet_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
@@ -1120,8 +1003,7 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1131,14 +1013,11 @@ is documented below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_answers_nodejs">
 <a href="#state_answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -1148,8 +1027,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1159,8 +1037,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1170,8 +1047,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_nodejs">
 <a href="#state_link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
@@ -1181,8 +1057,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1190,8 +1065,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1203,8 +1077,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_nodejs">
 <a href="#state_shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
@@ -1212,8 +1085,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1222,8 +1094,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1232,8 +1103,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_nodejs">
 <a href="#state_useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
@@ -1245,8 +1115,7 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1256,14 +1125,11 @@ is documented below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_answers_python">
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -1273,8 +1139,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1284,8 +1149,7 @@ Answers are documented below.
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1295,8 +1159,7 @@ dots - see the example above and `FQDN formatting` below.
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_python">
 <a href="#state_link_python" style="color: inherit; text-decoration: inherit;">link</a>
@@ -1306,8 +1169,7 @@ Filters are documented below.
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1315,8 +1177,7 @@ Filters are documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1328,8 +1189,7 @@ Filters are documented below.
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_short_answers_python">
 <a href="#state_short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
@@ -1337,8 +1197,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1347,8 +1206,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1357,8 +1215,7 @@ documented below. Please note the ordering requirement!
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_client_subnet_python">
 <a href="#state_use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
@@ -1370,8 +1227,7 @@ documented below. Please note the ordering requirement!
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1381,8 +1237,7 @@ is documented below.
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1397,9 +1252,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <h4 id="recordanswer">Record<wbr>Answer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="answer_csharp">
 <a href="#answer_csharp" style="color: inherit; text-decoration: inherit;">Answer</a>
@@ -1408,8 +1261,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1417,8 +1269,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1433,14 +1284,11 @@ multiple regions, duplicating the answer (including metadata) is the correct
 approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="answer_go">
 <a href="#answer_go" style="color: inherit; text-decoration: inherit;">Answer</a>
@@ -1449,8 +1297,7 @@ is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1458,8 +1305,7 @@ is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1474,14 +1320,11 @@ multiple regions, duplicating the answer (including metadata) is the correct
 approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="answer_nodejs">
 <a href="#answer_nodejs" style="color: inherit; text-decoration: inherit;">answer</a>
@@ -1490,8 +1333,7 @@ is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1499,8 +1341,7 @@ is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1515,14 +1356,11 @@ multiple regions, duplicating the answer (including metadata) is the correct
 approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="answer_python">
 <a href="#answer_python" style="color: inherit; text-decoration: inherit;">answer</a>
@@ -1531,8 +1369,7 @@ is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1540,8 +1377,7 @@ is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1556,16 +1392,13 @@ multiple regions, duplicating the answer (including metadata) is the correct
 approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordfilter">Record<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1574,8 +1407,7 @@ is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1585,8 +1417,7 @@ is documented below.
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1596,14 +1427,11 @@ determined by the filter type.
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1612,8 +1440,7 @@ filter chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1623,8 +1450,7 @@ filter chain.
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1634,14 +1460,11 @@ determined by the filter type.
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1650,8 +1473,7 @@ filter chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1661,8 +1483,7 @@ filter chain.
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1672,14 +1493,11 @@ determined by the filter type.
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1688,8 +1506,7 @@ filter chain.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1699,8 +1516,7 @@ filter chain.
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1710,16 +1526,13 @@ determined by the filter type.
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordregion">Record<wbr>Region</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1728,8 +1541,7 @@ filter chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1737,14 +1549,11 @@ filter chain.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1753,8 +1562,7 @@ filter chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1762,14 +1570,11 @@ filter chain.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1778,8 +1583,7 @@ filter chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1787,14 +1591,11 @@ filter chain.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1803,8 +1604,7 @@ filter chain.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1812,8 +1612,7 @@ filter chain.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1838,6 +1637,6 @@ filter chain.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).{{% /md %}}</dd>
 </dl>
 

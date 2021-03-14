@@ -14,11 +14,17 @@ Use this data source to get information about a Cloud SQL instance
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -60,9 +69,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -70,9 +82,12 @@ import pulumi_gcp as gcp
 qa = gcp.sql.get_database_instance(name="test-sql-instance")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,9 +98,16 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getDatabaseInstance {#using}
@@ -123,9 +145,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -134,8 +154,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -144,14 +163,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -160,8 +176,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -170,14 +185,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -186,8 +198,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -196,14 +207,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -212,8 +220,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -222,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -236,9 +242,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clones_csharp">
 <a href="#clones_csharp" style="color: inherit; text-decoration: inherit;">Clones</a>
@@ -246,8 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceclone">List&lt;Get<wbr>Database<wbr>Instance<wbr>Clone&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionname_csharp">
 <a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -256,8 +259,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in connection strings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseversion_csharp">
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -266,8 +268,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -275,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeyname_csharp">
 <a href="#encryptionkeyname_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -285,8 +285,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_csharp">
 <a href="#firstipaddress_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -295,8 +294,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -305,8 +303,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -314,8 +311,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceipaddress">List&lt;Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancename_csharp">
 <a href="#masterinstancename_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -325,8 +321,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,8 +330,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -345,8 +339,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -355,8 +348,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -364,8 +356,7 @@ the master in the replication setup.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicaconfigurations_csharp">
 <a href="#replicaconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configurations</a>
@@ -375,8 +366,7 @@ the master in the replication setup.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorebackupcontexts_csharp">
 <a href="#restorebackupcontexts_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Contexts</a>
@@ -384,8 +374,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">List&lt;Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_csharp">
 <a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -394,8 +383,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -404,8 +392,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_csharp">
 <a href="#servercacerts_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -413,8 +400,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceservercacert">List&lt;Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_csharp">
 <a href="#serviceaccountemailaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -423,8 +409,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -434,8 +419,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -443,14 +427,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clones_go">
 <a href="#clones_go" style="color: inherit; text-decoration: inherit;">Clones</a>
@@ -458,8 +439,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceclone">[]Get<wbr>Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionname_go">
 <a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -468,8 +448,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in connection strings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseversion_go">
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -478,8 +457,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -487,8 +465,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeyname_go">
 <a href="#encryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -497,8 +474,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_go">
 <a href="#firstipaddress_go" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -507,8 +483,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,8 +492,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -526,8 +500,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceipaddress">[]Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancename_go">
 <a href="#masterinstancename_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -537,8 +510,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +519,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -557,8 +528,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -567,8 +537,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -576,8 +545,7 @@ the master in the replication setup.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicaconfigurations_go">
 <a href="#replicaconfigurations_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configurations</a>
@@ -587,8 +555,7 @@ the master in the replication setup.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorebackupcontexts_go">
 <a href="#restorebackupcontexts_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Contexts</a>
@@ -596,8 +563,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">[]Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_go">
 <a href="#rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -606,8 +572,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -616,8 +581,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_go">
 <a href="#servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -625,8 +589,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceservercacert">[]Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_go">
 <a href="#serviceaccountemailaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -635,8 +598,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -646,8 +608,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -655,14 +616,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clones_nodejs">
 <a href="#clones_nodejs" style="color: inherit; text-decoration: inherit;">clones</a>
@@ -670,8 +628,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceclone">Get<wbr>Database<wbr>Instance<wbr>Clone[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionname_nodejs">
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
@@ -680,8 +637,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in connection strings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseversion_nodejs">
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -690,8 +646,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -699,8 +654,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeyname_nodejs">
 <a href="#encryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Name</a>
@@ -709,8 +663,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_nodejs">
 <a href="#firstipaddress_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Ip<wbr>Address</a>
@@ -719,8 +672,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,8 +681,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -738,8 +689,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceipaddress">Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancename_nodejs">
 <a href="#masterinstancename_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Name</a>
@@ -749,8 +699,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -759,8 +708,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -769,8 +717,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -779,8 +726,7 @@ the master in the replication setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -788,8 +734,7 @@ the master in the replication setup.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicaconfigurations_nodejs">
 <a href="#replicaconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configurations</a>
@@ -799,8 +744,7 @@ the master in the replication setup.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorebackupcontexts_nodejs">
 <a href="#restorebackupcontexts_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Contexts</a>
@@ -808,8 +752,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_nodejs">
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -818,8 +761,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -828,8 +770,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_nodejs">
 <a href="#servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
@@ -837,8 +778,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceservercacert">Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_nodejs">
 <a href="#serviceaccountemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -847,8 +787,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -858,8 +797,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -867,14 +805,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clones_python">
 <a href="#clones_python" style="color: inherit; text-decoration: inherit;">clones</a>
@@ -882,8 +817,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceclone">Sequence[Get<wbr>Database<wbr>Instance<wbr>Clone]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_name_python">
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
@@ -892,8 +826,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in connection strings.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_version_python">
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -902,8 +835,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or SQL Server (beta) version to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -911,8 +843,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_key_name_python">
 <a href="#encryption_key_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>name</a>
@@ -921,8 +852,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="first_ip_address_python">
 <a href="#first_ip_address_python" style="color: inherit; text-decoration: inherit;">first_<wbr>ip_<wbr>address</a>
@@ -931,8 +861,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -941,8 +870,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -950,8 +878,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceipaddress">Sequence[Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_instance_name_python">
 <a href="#master_instance_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>name</a>
@@ -961,8 +888,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -971,8 +897,7 @@ the master in the replication setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -981,8 +906,7 @@ the master in the replication setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -991,8 +915,7 @@ the master in the replication setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1000,8 +923,7 @@ the master in the replication setup.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replica_configurations_python">
 <a href="#replica_configurations_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configurations</a>
@@ -1011,8 +933,7 @@ the master in the replication setup.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restore_backup_contexts_python">
 <a href="#restore_backup_contexts_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>contexts</a>
@@ -1020,8 +941,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">Sequence[Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_password_python">
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -1030,8 +950,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1040,8 +959,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_ca_certs_python">
 <a href="#server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
@@ -1049,8 +967,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstanceservercacert">Sequence[Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_email_address_python">
 <a href="#service_account_email_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email_<wbr>address</a>
@@ -1059,8 +976,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1070,8 +986,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1079,8 +994,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1094,9 +1008,7 @@ configuration is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_csharp">
 <a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
@@ -1104,8 +1016,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_csharp">
 <a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -1113,14 +1024,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_go">
 <a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
@@ -1128,8 +1036,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_go">
 <a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -1137,14 +1044,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_nodejs">
 <a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
@@ -1152,8 +1056,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_nodejs">
 <a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
@@ -1161,14 +1064,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="point_in_time_python">
 <a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
@@ -1176,8 +1076,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_name_python">
 <a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
@@ -1185,8 +1084,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstanceipaddress">Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
@@ -1194,9 +1092,7 @@ configuration is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1204,8 +1100,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoretire_csharp">
 <a href="#timetoretire_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Retire</a>
@@ -1213,8 +1108,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1222,14 +1116,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1237,8 +1128,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoretire_go">
 <a href="#timetoretire_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Retire</a>
@@ -1246,8 +1136,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1255,14 +1144,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1270,8 +1156,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoretire_nodejs">
 <a href="#timetoretire_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Retire</a>
@@ -1279,8 +1164,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1288,14 +1172,11 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1303,8 +1184,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_to_retire_python">
 <a href="#time_to_retire_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>retire</a>
@@ -1312,8 +1192,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1321,8 +1200,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancereplicaconfiguration">Get<wbr>Database<wbr>Instance<wbr>Replica<wbr>Configuration</h4>
@@ -1330,9 +1208,7 @@ configuration is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacertificate_csharp">
 <a href="#cacertificate_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -1341,8 +1217,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcertificate_csharp">
 <a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -1351,8 +1226,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -1361,8 +1235,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectretryinterval_csharp">
 <a href="#connectretryinterval_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Retry<wbr>Interval</a>
@@ -1371,8 +1244,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dumpfilepath_csharp">
 <a href="#dumpfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dump<wbr>File<wbr>Path</a>
@@ -1381,8 +1253,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failovertarget_csharp">
 <a href="#failovertarget_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Target</a>
@@ -1391,8 +1262,7 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_csharp">
 <a href="#masterheartbeatperiod_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -1401,8 +1271,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in ms between replication heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1411,8 +1280,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcipher_csharp">
 <a href="#sslcipher_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -1420,8 +1288,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1430,8 +1297,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifyservercertificate_csharp">
 <a href="#verifyservercertificate_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Server<wbr>Certificate</a>
@@ -1440,14 +1306,11 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the master's common name value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacertificate_go">
 <a href="#cacertificate_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -1456,8 +1319,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcertificate_go">
 <a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -1466,8 +1328,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -1476,8 +1337,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectretryinterval_go">
 <a href="#connectretryinterval_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Retry<wbr>Interval</a>
@@ -1486,8 +1346,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dumpfilepath_go">
 <a href="#dumpfilepath_go" style="color: inherit; text-decoration: inherit;">Dump<wbr>File<wbr>Path</a>
@@ -1496,8 +1355,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failovertarget_go">
 <a href="#failovertarget_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Target</a>
@@ -1506,8 +1364,7 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_go">
 <a href="#masterheartbeatperiod_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -1516,8 +1373,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in ms between replication heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1526,8 +1382,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcipher_go">
 <a href="#sslcipher_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -1535,8 +1390,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1545,8 +1399,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifyservercertificate_go">
 <a href="#verifyservercertificate_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Server<wbr>Certificate</a>
@@ -1555,14 +1408,11 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the master's common name value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacertificate_nodejs">
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
@@ -1571,8 +1421,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcertificate_nodejs">
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
@@ -1581,8 +1430,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -1591,8 +1439,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectretryinterval_nodejs">
 <a href="#connectretryinterval_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Retry<wbr>Interval</a>
@@ -1601,8 +1448,7 @@ configuration is detailed below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dumpfilepath_nodejs">
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
@@ -1611,8 +1457,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failovertarget_nodejs">
 <a href="#failovertarget_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Target</a>
@@ -1621,8 +1466,7 @@ configuration is detailed below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterheartbeatperiod_nodejs">
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
@@ -1631,8 +1475,7 @@ configuration is detailed below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in ms between replication heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1641,8 +1484,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcipher_nodejs">
 <a href="#sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
@@ -1650,8 +1492,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1660,8 +1501,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifyservercertificate_nodejs">
 <a href="#verifyservercertificate_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Server<wbr>Certificate</a>
@@ -1670,14 +1510,11 @@ configuration is detailed below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the master's common name value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ca_certificate_python">
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
@@ -1686,8 +1523,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_certificate_python">
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
@@ -1696,8 +1532,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -1706,8 +1541,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connect_retry_interval_python">
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
@@ -1716,8 +1550,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dump_file_path_python">
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
@@ -1726,8 +1559,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failover_target_python">
 <a href="#failover_target_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>target</a>
@@ -1736,8 +1568,7 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_heartbeat_period_python">
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
@@ -1746,8 +1577,7 @@ configuration is detailed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in ms between replication heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1756,8 +1586,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_cipher_python">
 <a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
@@ -1765,8 +1594,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1775,8 +1603,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verify_server_certificate_python">
 <a href="#verify_server_certificate_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>server_<wbr>certificate</a>
@@ -1785,8 +1612,7 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the master's common name value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancerestorebackupcontext">Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</h4>
@@ -1794,9 +1620,7 @@ configuration is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_csharp">
 <a href="#backuprunid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
@@ -1804,8 +1628,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1813,8 +1636,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1823,14 +1645,11 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_go">
 <a href="#backuprunid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
@@ -1838,8 +1657,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1847,8 +1665,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1857,14 +1674,11 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_nodejs">
 <a href="#backuprunid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Run<wbr>Id</a>
@@ -1872,8 +1686,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1881,8 +1694,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1891,14 +1703,11 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_run_id_python">
 <a href="#backup_run_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>run_<wbr>id</a>
@@ -1906,8 +1715,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1915,8 +1723,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1925,8 +1732,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstanceservercacert">Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
@@ -1934,9 +1740,7 @@ configuration is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -1944,8 +1748,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1953,8 +1756,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1962,8 +1764,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1973,8 +1774,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha1fingerprint_csharp">
 <a href="#sha1fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -1982,14 +1782,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -1997,8 +1794,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -2006,8 +1802,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2015,8 +1810,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -2026,8 +1820,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha1fingerprint_go">
 <a href="#sha1fingerprint_go" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -2035,14 +1828,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -2050,8 +1840,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -2059,8 +1848,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -2068,8 +1856,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -2079,8 +1866,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha1fingerprint_nodejs">
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
@@ -2088,14 +1874,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -2103,8 +1886,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -2112,8 +1894,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -2121,8 +1902,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -2132,8 +1912,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sha1_fingerprint_python">
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
@@ -2141,8 +1920,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesetting">Get<wbr>Database<wbr>Instance<wbr>Setting</h4>
@@ -2150,9 +1928,7 @@ formatted date time string indicating when this whitelist expires.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activationpolicy_csharp">
 <a href="#activationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
@@ -2162,8 +1938,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_csharp">
 <a href="#authorizedgaeapplications_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
@@ -2175,8 +1950,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_csharp">
 <a href="#availabilitytype_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -2186,8 +1960,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
     </dt>
     <dd>{{% md %}}The availability type of the Cloud SQL
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfigurations_csharp">
 <a href="#backupconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configurations</a>
@@ -2195,8 +1968,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashsafereplication_csharp">
 <a href="#crashsafereplication_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
@@ -2206,8 +1978,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}(Deprecated) This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_csharp">
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -2215,8 +1986,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskautoresize_csharp">
 <a href="#diskautoresize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize</a>
@@ -2225,8 +1995,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -2235,8 +2004,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -2245,8 +2013,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="insightsconfigs_csharp">
 <a href="#insightsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Configs</a>
@@ -2254,8 +2021,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -2263,8 +2029,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreferences_csharp">
 <a href="#locationpreferences_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preferences</a>
@@ -2272,8 +2037,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindows_csharp">
 <a href="#maintenancewindows_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Windows</a>
@@ -2281,8 +2045,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricingplan_csharp">
 <a href="#pricingplan_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
@@ -2291,8 +2054,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationtype_csharp">
 <a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -2302,8 +2064,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2312,8 +2073,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_csharp">
 <a href="#userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -2322,8 +2082,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2331,14 +2090,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activationpolicy_go">
 <a href="#activationpolicy_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
@@ -2348,8 +2104,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_go">
 <a href="#authorizedgaeapplications_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
@@ -2361,8 +2116,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_go">
 <a href="#availabilitytype_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -2372,8 +2126,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
     </dt>
     <dd>{{% md %}}The availability type of the Cloud SQL
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfigurations_go">
 <a href="#backupconfigurations_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configurations</a>
@@ -2381,8 +2134,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashsafereplication_go">
 <a href="#crashsafereplication_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
@@ -2392,8 +2144,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}(Deprecated) This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_go">
 <a href="#databaseflags_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -2401,8 +2152,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskautoresize_go">
 <a href="#diskautoresize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize</a>
@@ -2411,8 +2161,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -2421,8 +2170,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -2431,8 +2179,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="insightsconfigs_go">
 <a href="#insightsconfigs_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Configs</a>
@@ -2440,8 +2187,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -2449,8 +2195,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreferences_go">
 <a href="#locationpreferences_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Preferences</a>
@@ -2458,8 +2203,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindows_go">
 <a href="#maintenancewindows_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Windows</a>
@@ -2467,8 +2211,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricingplan_go">
 <a href="#pricingplan_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
@@ -2477,8 +2220,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationtype_go">
 <a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -2488,8 +2230,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2498,8 +2239,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_go">
 <a href="#userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -2508,8 +2248,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2517,14 +2256,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activationpolicy_nodejs">
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
@@ -2534,8 +2270,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_nodejs">
 <a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
@@ -2547,8 +2282,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_nodejs">
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
@@ -2558,8 +2292,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
     </dt>
     <dd>{{% md %}}The availability type of the Cloud SQL
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupconfigurations_nodejs">
 <a href="#backupconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configurations</a>
@@ -2567,8 +2300,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashsafereplication_nodejs">
 <a href="#crashsafereplication_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication</a>
@@ -2578,8 +2310,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}(Deprecated) This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databaseflags_nodejs">
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
@@ -2587,8 +2318,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskautoresize_nodejs">
 <a href="#diskautoresize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize</a>
@@ -2597,8 +2327,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
@@ -2607,8 +2336,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -2617,8 +2345,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="insightsconfigs_nodejs">
 <a href="#insightsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Configs</a>
@@ -2626,8 +2353,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
@@ -2635,8 +2361,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locationpreferences_nodejs">
 <a href="#locationpreferences_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preferences</a>
@@ -2644,8 +2369,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindows_nodejs">
 <a href="#maintenancewindows_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Windows</a>
@@ -2653,8 +2377,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricingplan_nodejs">
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
@@ -2663,8 +2386,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationtype_nodejs">
 <a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
@@ -2674,8 +2396,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2684,8 +2405,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userlabels_nodejs">
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
@@ -2694,8 +2414,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2703,14 +2422,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activation_policy_python">
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
@@ -2720,8 +2436,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorized_gae_applications_python">
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
@@ -2733,8 +2448,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availability_type_python">
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
@@ -2744,8 +2458,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
     </dt>
     <dd>{{% md %}}The availability type of the Cloud SQL
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_configurations_python">
 <a href="#backup_configurations_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configurations</a>
@@ -2753,8 +2466,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crash_safe_replication_python">
 <a href="#crash_safe_replication_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication</a>
@@ -2764,8 +2476,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}(Deprecated) This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_flags_python">
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
@@ -2773,8 +2484,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_autoresize_python">
 <a href="#disk_autoresize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize</a>
@@ -2783,8 +2493,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
@@ -2793,8 +2502,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -2803,8 +2511,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="insights_configs_python">
 <a href="#insights_configs_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>configs</a>
@@ -2812,8 +2519,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
@@ -2821,8 +2527,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_preferences_python">
 <a href="#location_preferences_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preferences</a>
@@ -2830,8 +2535,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenance_windows_python">
 <a href="#maintenance_windows_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>windows</a>
@@ -2839,8 +2543,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricing_plan_python">
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
@@ -2849,8 +2552,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_type_python">
 <a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
@@ -2860,8 +2562,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2870,8 +2571,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_labels_python">
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
@@ -2880,8 +2580,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2889,8 +2588,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingbackupconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration</h4>
@@ -2898,9 +2596,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binarylogenabled_csharp">
 <a href="#binarylogenabled_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
@@ -2909,8 +2605,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if binary logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2919,8 +2614,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2928,8 +2622,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pointintimerecoveryenabled_csharp">
 <a href="#pointintimerecoveryenabled_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -2937,8 +2630,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2947,14 +2639,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binarylogenabled_go">
 <a href="#binarylogenabled_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
@@ -2963,8 +2652,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if binary logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2973,8 +2661,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2982,8 +2669,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pointintimerecoveryenabled_go">
 <a href="#pointintimerecoveryenabled_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -2991,8 +2677,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3001,14 +2686,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binarylogenabled_nodejs">
 <a href="#binarylogenabled_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
@@ -3017,8 +2699,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if binary logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3027,8 +2708,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3036,8 +2716,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pointintimerecoveryenabled_nodejs">
 <a href="#pointintimerecoveryenabled_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -3045,8 +2724,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -3055,14 +2733,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binary_log_enabled_python">
 <a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
@@ -3071,8 +2746,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if binary logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3081,8 +2755,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3090,8 +2763,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="point_in_time_recovery_enabled_python">
 <a href="#point_in_time_recovery_enabled_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery_<wbr>enabled</a>
@@ -3099,8 +2771,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -3109,8 +2780,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingdatabaseflag">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag</h4>
@@ -3118,9 +2788,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3129,8 +2797,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3139,14 +2806,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3155,8 +2819,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3165,14 +2828,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3181,8 +2841,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3191,14 +2850,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3207,8 +2863,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3217,8 +2872,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettinginsightsconfig">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config</h4>
@@ -3226,9 +2880,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_csharp">
 <a href="#queryinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
@@ -3237,8 +2889,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_csharp">
 <a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3247,8 +2898,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordapplicationtags_csharp">
 <a href="#recordapplicationtags_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -3257,8 +2907,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordclientaddress_csharp">
 <a href="#recordclientaddress_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -3267,14 +2916,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record client address when enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_go">
 <a href="#queryinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
@@ -3283,8 +2929,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_go">
 <a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -3293,8 +2938,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordapplicationtags_go">
 <a href="#recordapplicationtags_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -3303,8 +2947,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordclientaddress_go">
 <a href="#recordclientaddress_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -3313,14 +2956,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record client address when enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_nodejs">
 <a href="#queryinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Insights<wbr>Enabled</a>
@@ -3329,8 +2969,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if Query Insights feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringlength_nodejs">
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
@@ -3339,8 +2978,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordapplicationtags_nodejs">
 <a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
@@ -3349,8 +2987,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordclientaddress_nodejs">
 <a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
@@ -3359,14 +2996,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record client address when enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_insights_enabled_python">
 <a href="#query_insights_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>insights_<wbr>enabled</a>
@@ -3375,8 +3009,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_length_python">
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
@@ -3385,8 +3018,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="record_application_tags_python">
 <a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
@@ -3395,8 +3027,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="record_client_address_python">
 <a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
@@ -3405,8 +3036,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Query Insights will record client address when enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingipconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration</h4>
@@ -3414,9 +3044,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -3424,8 +3052,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_csharp">
 <a href="#ipv4enabled_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -3434,8 +3061,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned a public IPV4 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetwork_csharp">
 <a href="#privatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Network</a>
@@ -3444,8 +3070,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC network from which the Cloud SQL instance is accessible for private IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_csharp">
 <a href="#requiressl_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -3454,14 +3079,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if mysqld default to `REQUIRE X509` for users connecting over IP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -3469,8 +3091,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_go">
 <a href="#ipv4enabled_go" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -3479,8 +3100,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned a public IPV4 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetwork_go">
 <a href="#privatenetwork_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Network</a>
@@ -3489,8 +3109,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC network from which the Cloud SQL instance is accessible for private IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_go">
 <a href="#requiressl_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -3499,14 +3118,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if mysqld default to `REQUIRE X509` for users connecting over IP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
@@ -3514,8 +3130,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4enabled_nodejs">
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
@@ -3524,8 +3139,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned a public IPV4 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetwork_nodejs">
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
@@ -3534,8 +3148,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC network from which the Cloud SQL instance is accessible for private IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiressl_nodejs">
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
@@ -3544,14 +3157,11 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if mysqld default to `REQUIRE X509` for users connecting over IP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
@@ -3559,8 +3169,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_enabled_python">
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
@@ -3569,8 +3178,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned a public IPV4 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_network_python">
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
@@ -3579,8 +3187,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC network from which the Cloud SQL instance is accessible for private IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="require_ssl_python">
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
@@ -3589,8 +3196,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if mysqld default to `REQUIRE X509` for users connecting over IP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingipconfigurationauthorizednetwork">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</h4>
@@ -3598,9 +3204,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -3610,8 +3214,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3620,8 +3223,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3630,14 +3232,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -3647,8 +3246,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3657,8 +3255,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3667,14 +3264,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -3684,8 +3278,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3694,8 +3287,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3704,14 +3296,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -3721,8 +3310,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3731,8 +3319,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3741,8 +3328,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettinglocationpreference">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference</h4>
@@ -3750,9 +3336,7 @@ formatted date time string indicating when this whitelist expires.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="followgaeapplication_csharp">
 <a href="#followgaeapplication_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Gae<wbr>Application</a>
@@ -3761,8 +3345,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -3771,14 +3354,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred compute engine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="followgaeapplication_go">
 <a href="#followgaeapplication_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Gae<wbr>Application</a>
@@ -3787,8 +3367,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -3797,14 +3376,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred compute engine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="followgaeapplication_nodejs">
 <a href="#followgaeapplication_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Gae<wbr>Application</a>
@@ -3813,8 +3389,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -3823,14 +3398,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred compute engine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="follow_gae_application_python">
 <a href="#follow_gae_application_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>gae_<wbr>application</a>
@@ -3839,8 +3411,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -3849,8 +3420,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred compute engine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingmaintenancewindow">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window</h4>
@@ -3858,9 +3428,7 @@ formatted date time string indicating when this whitelist expires.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -3869,8 +3437,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -3879,8 +3446,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_csharp">
 <a href="#updatetrack_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -3889,14 +3455,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later (`stable`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -3905,8 +3468,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -3915,8 +3477,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_go">
 <a href="#updatetrack_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -3925,14 +3486,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later (`stable`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -3941,8 +3499,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -3951,8 +3508,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatetrack_nodejs">
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
@@ -3961,14 +3517,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later (`stable`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -3977,8 +3530,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -3987,8 +3539,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_track_python">
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
@@ -3997,8 +3548,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later (`stable`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4012,6 +3562,6 @@ formatted date time string indicating when this whitelist expires.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

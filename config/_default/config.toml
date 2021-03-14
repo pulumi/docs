@@ -30,7 +30,6 @@ timeout = 300000
 [outputs]
     home = ["HTML"]
     section = ["HTML"]
-    taxonomy = ["HTML"]
 
 [taxonomies]
     author = "authors"
@@ -40,8 +39,25 @@ timeout = 300000
     authors = "/blog/author/:slug/"
     tags = "/blog/tag/:slug/"
 
-[blackfriday]
-    fractions = false
+[markup.goldmark]
+    [markup.goldmark.extensions]
+        definitionList = true
+        footnote = true
+        linkify = true
+        strikethrough = true
+        table = true
+        taskList = true
+        typographer = true
+        [markup.goldmark.parser]
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+    [markup.goldmark.parser.attribute]
+        block = false
+        title = true
+    [markup.goldmark.renderer]
+        hardWraps = false
+        unsafe = true
+        xhtml = false
 
 [params]
     canonicalURL = "https://www.pulumi.com"

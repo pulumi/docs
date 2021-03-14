@@ -14,11 +14,17 @@ Access Review Schedule Definition.
 API Version: 2021-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### PutAccessReview
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -37,9 +43,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -63,9 +72,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -75,9 +87,12 @@ access_review_schedule_definition_by_id = azure_native.authorization.AccessRevie
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -87,9 +102,16 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessReviewScheduleDefinitionById Resource {#create}
@@ -114,9 +136,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +144,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +152,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,10 +160,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -173,9 +186,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -183,9 +194,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +202,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +210,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,18 +218,13 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +232,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +240,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,10 +248,7 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -270,9 +263,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoapplydecisionsenabled_csharp">
 <a href="#autoapplydecisionsenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Apply<wbr>Decisions<wbr>Enabled</a>
@@ -280,8 +271,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupreviewers_csharp">
 <a href="#backupreviewers_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Reviewers</a>
@@ -289,8 +279,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecision_csharp">
 <a href="#defaultdecision_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Decision</a>
@@ -298,8 +287,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultdecisiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Default<wbr>Decision<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecisionenabled_csharp">
 <a href="#defaultdecisionenabled_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Decision<wbr>Enabled</a>
@@ -307,8 +295,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforadmins_csharp">
 <a href="#descriptionforadmins_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>For<wbr>Admins</a>
@@ -316,8 +303,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforreviewers_csharp">
 <a href="#descriptionforreviewers_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>For<wbr>Reviewers</a>
@@ -325,8 +311,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -334,8 +319,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -343,8 +327,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancedurationindays_csharp">
 <a href="#instancedurationindays_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
@@ -352,8 +335,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -361,8 +343,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewinstance">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -370,8 +351,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justificationrequiredonapproval_csharp">
 <a href="#justificationrequiredonapproval_csharp" style="color: inherit; text-decoration: inherit;">Justification<wbr>Required<wbr>On<wbr>Approval</a>
@@ -379,8 +359,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnotificationsenabled_csharp">
 <a href="#mailnotificationsenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Notifications<wbr>Enabled</a>
@@ -388,8 +367,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofoccurrences_csharp">
 <a href="#numberofoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Occurrences</a>
@@ -397,8 +375,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_csharp">
 <a href="#recommendationsenabled_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -406,8 +383,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remindernotificationsenabled_csharp">
 <a href="#remindernotificationsenabled_csharp" style="color: inherit; text-decoration: inherit;">Reminder<wbr>Notifications<wbr>Enabled</a>
@@ -415,8 +391,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewers_csharp">
 <a href="#reviewers_csharp" style="color: inherit; text-decoration: inherit;">Reviewers</a>
@@ -424,8 +399,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Access<wbr>Review<wbr>Reviewer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledefinitionid_csharp">
 <a href="#scheduledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Definition<wbr>Id</a>
@@ -433,8 +407,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_csharp">
 <a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -442,8 +415,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -451,14 +423,11 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoapplydecisionsenabled_go">
 <a href="#autoapplydecisionsenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Apply<wbr>Decisions<wbr>Enabled</a>
@@ -466,8 +435,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupreviewers_go">
 <a href="#backupreviewers_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Reviewers</a>
@@ -475,8 +443,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">[]Access<wbr>Review<wbr>Reviewer</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecision_go">
 <a href="#defaultdecision_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Decision</a>
@@ -484,8 +451,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultdecisiontype">Default<wbr>Decision<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecisionenabled_go">
 <a href="#defaultdecisionenabled_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Decision<wbr>Enabled</a>
@@ -493,8 +459,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforadmins_go">
 <a href="#descriptionforadmins_go" style="color: inherit; text-decoration: inherit;">Description<wbr>For<wbr>Admins</a>
@@ -502,8 +467,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforreviewers_go">
 <a href="#descriptionforreviewers_go" style="color: inherit; text-decoration: inherit;">Description<wbr>For<wbr>Reviewers</a>
@@ -511,8 +475,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -520,8 +483,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -529,8 +491,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancedurationindays_go">
 <a href="#instancedurationindays_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
@@ -538,8 +499,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -547,8 +507,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewinstance">[]Access<wbr>Review<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -556,8 +515,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justificationrequiredonapproval_go">
 <a href="#justificationrequiredonapproval_go" style="color: inherit; text-decoration: inherit;">Justification<wbr>Required<wbr>On<wbr>Approval</a>
@@ -565,8 +523,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnotificationsenabled_go">
 <a href="#mailnotificationsenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Notifications<wbr>Enabled</a>
@@ -574,8 +531,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofoccurrences_go">
 <a href="#numberofoccurrences_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Occurrences</a>
@@ -583,8 +539,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_go">
 <a href="#recommendationsenabled_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -592,8 +547,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remindernotificationsenabled_go">
 <a href="#remindernotificationsenabled_go" style="color: inherit; text-decoration: inherit;">Reminder<wbr>Notifications<wbr>Enabled</a>
@@ -601,8 +555,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewers_go">
 <a href="#reviewers_go" style="color: inherit; text-decoration: inherit;">Reviewers</a>
@@ -610,8 +563,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">[]Access<wbr>Review<wbr>Reviewer</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledefinitionid_go">
 <a href="#scheduledefinitionid_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Definition<wbr>Id</a>
@@ -619,8 +571,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_go">
 <a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -628,8 +579,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -637,14 +587,11 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoapplydecisionsenabled_nodejs">
 <a href="#autoapplydecisionsenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Apply<wbr>Decisions<wbr>Enabled</a>
@@ -652,8 +599,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupreviewers_nodejs">
 <a href="#backupreviewers_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Reviewers</a>
@@ -661,8 +607,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecision_nodejs">
 <a href="#defaultdecision_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Decision</a>
@@ -670,8 +615,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultdecisiontype">Default<wbr>Decision<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdecisionenabled_nodejs">
 <a href="#defaultdecisionenabled_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Decision<wbr>Enabled</a>
@@ -679,8 +623,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforadmins_nodejs">
 <a href="#descriptionforadmins_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>For<wbr>Admins</a>
@@ -688,8 +631,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionforreviewers_nodejs">
 <a href="#descriptionforreviewers_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>For<wbr>Reviewers</a>
@@ -697,8 +639,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -706,8 +647,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
@@ -715,8 +655,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancedurationindays_nodejs">
 <a href="#instancedurationindays_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Duration<wbr>In<wbr>Days</a>
@@ -724,8 +663,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -733,8 +671,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewinstance">Access<wbr>Review<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -742,8 +679,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justificationrequiredonapproval_nodejs">
 <a href="#justificationrequiredonapproval_nodejs" style="color: inherit; text-decoration: inherit;">justification<wbr>Required<wbr>On<wbr>Approval</a>
@@ -751,8 +687,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnotificationsenabled_nodejs">
 <a href="#mailnotificationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Notifications<wbr>Enabled</a>
@@ -760,8 +695,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofoccurrences_nodejs">
 <a href="#numberofoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Occurrences</a>
@@ -769,8 +703,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_nodejs">
 <a href="#recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
@@ -778,8 +711,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remindernotificationsenabled_nodejs">
 <a href="#remindernotificationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">reminder<wbr>Notifications<wbr>Enabled</a>
@@ -787,8 +719,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewers_nodejs">
 <a href="#reviewers_nodejs" style="color: inherit; text-decoration: inherit;">reviewers</a>
@@ -796,8 +727,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledefinitionid_nodejs">
 <a href="#scheduledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Definition<wbr>Id</a>
@@ -805,8 +735,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_nodejs">
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
@@ -814,8 +743,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -823,14 +751,11 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_apply_decisions_enabled_python">
 <a href="#auto_apply_decisions_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>apply_<wbr>decisions_<wbr>enabled</a>
@@ -838,8 +763,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_reviewers_python">
 <a href="#backup_reviewers_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>reviewers</a>
@@ -847,8 +771,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">Sequence[Access<wbr>Review<wbr>Reviewer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_decision_python">
 <a href="#default_decision_python" style="color: inherit; text-decoration: inherit;">default_<wbr>decision</a>
@@ -856,8 +779,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#defaultdecisiontype">Default<wbr>Decision<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This specifies the behavior for the autoReview feature when an access review completes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_decision_enabled_python">
 <a href="#default_decision_enabled_python" style="color: inherit; text-decoration: inherit;">default_<wbr>decision_<wbr>enabled</a>
@@ -865,8 +787,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether reviewers are required to provide a justification when reviewing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_for_admins_python">
 <a href="#description_for_admins_python" style="color: inherit; text-decoration: inherit;">description_<wbr>for_<wbr>admins</a>
@@ -874,8 +795,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator and visible to admins.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_for_reviewers_python">
 <a href="#description_for_reviewers_python" style="color: inherit; text-decoration: inherit;">description_<wbr>for_<wbr>reviewers</a>
@@ -883,8 +803,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description provided by the access review creator to be shown to reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -892,8 +811,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
@@ -901,8 +819,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_duration_in_days_python">
 <a href="#instance_duration_in_days_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>duration_<wbr>in_<wbr>days</a>
@@ -910,8 +827,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in days for an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -919,8 +835,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewinstance">Sequence[Access<wbr>Review<wbr>Instance<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -928,8 +843,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justification_required_on_approval_python">
 <a href="#justification_required_on_approval_python" style="color: inherit; text-decoration: inherit;">justification_<wbr>required_<wbr>on_<wbr>approval</a>
@@ -937,8 +851,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether the reviewer is required to pass justification when recording a decision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mail_notifications_enabled_python">
 <a href="#mail_notifications_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>notifications_<wbr>enabled</a>
@@ -946,8 +859,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending mails to reviewers and the review creator is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_occurrences_python">
 <a href="#number_of_occurrences_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>occurrences</a>
@@ -955,8 +867,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times to repeat the access review. Required and must be positive if type is numbered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendations_enabled_python">
 <a href="#recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
@@ -964,8 +875,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether showing recommendations to reviewers is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reminder_notifications_enabled_python">
 <a href="#reminder_notifications_enabled_python" style="color: inherit; text-decoration: inherit;">reminder_<wbr>notifications_<wbr>enabled</a>
@@ -973,8 +883,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to indicate whether sending reminder emails to reviewers are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewers_python">
 <a href="#reviewers_python" style="color: inherit; text-decoration: inherit;">reviewers</a>
@@ -982,8 +891,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessreviewreviewer">Sequence[Access<wbr>Review<wbr>Reviewer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_definition_id_python">
 <a href="#schedule_definition_id_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>definition_<wbr>id</a>
@@ -991,8 +899,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the access review schedule definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_python">
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
@@ -1000,8 +907,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1009,8 +915,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recurrence range type. The possible values are: endDate, noEnd, numbered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1021,9 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1031,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1040,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1049,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalname_csharp">
 <a href="#principalname_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Name</a>
@@ -1058,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity display name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity display name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1067,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1076,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reviewerstype_csharp">
 <a href="#reviewerstype_csharp" style="color: inherit; text-decoration: inherit;">Reviewers<wbr>Type</a>
@@ -1085,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -1094,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1103,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -1112,14 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1127,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1136,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1145,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalname_go">
 <a href="#principalname_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Name</a>
@@ -1154,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity display name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity display name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1163,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1172,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reviewerstype_go">
 <a href="#reviewerstype_go" style="color: inherit; text-decoration: inherit;">Reviewers<wbr>Type</a>
@@ -1181,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -1190,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1199,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -1208,14 +1090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1223,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1232,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1241,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalname_nodejs">
 <a href="#principalname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Name</a>
@@ -1250,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity display name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity display name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
@@ -1259,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1268,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reviewerstype_nodejs">
 <a href="#reviewerstype_nodejs" style="color: inherit; text-decoration: inherit;">reviewers<wbr>Type</a>
@@ -1277,8 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -1286,8 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1295,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
@@ -1304,14 +1174,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1319,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1328,8 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The access review schedule definition unique id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1337,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_name_python">
 <a href="#principal_name_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>name</a>
@@ -1346,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity display name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity display name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
@@ -1355,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity type user/servicePrincipal to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1364,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId in which this review is getting created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reviewers_type_python">
 <a href="#reviewers_type_python" style="color: inherit; text-decoration: inherit;">reviewers_<wbr>type</a>
@@ -1373,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -1382,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is used to indicate the role being reviewed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1391,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This read-only field specifies the status of an accessReview.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
@@ -1400,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name(if valid){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1417,9 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="accessreviewinstance">Access<wbr>Review<wbr>Instance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_csharp">
 <a href="#enddatetime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Time</a>
@@ -1427,8 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_csharp">
 <a href="#startdatetime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
@@ -1436,14 +1290,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_go">
 <a href="#enddatetime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Time</a>
@@ -1451,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_go">
 <a href="#startdatetime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
@@ -1460,14 +1310,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_nodejs">
 <a href="#enddatetime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Time</a>
@@ -1475,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_nodejs">
 <a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
@@ -1484,14 +1330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_date_time_python">
 <a href="#end_date_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>time</a>
@@ -1499,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_time_python">
 <a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
@@ -1508,16 +1350,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accessreviewinstanceresponse">Access<wbr>Review<wbr>Instance<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1525,8 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1534,8 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1543,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1552,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_csharp">
 <a href="#enddatetime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Time</a>
@@ -1561,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_csharp">
 <a href="#startdatetime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
@@ -1570,14 +1404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1585,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1594,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1603,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1612,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_go">
 <a href="#enddatetime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date<wbr>Time</a>
@@ -1621,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_go">
 <a href="#startdatetime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
@@ -1630,14 +1456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1645,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1654,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1663,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1672,8 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddatetime_nodejs">
 <a href="#enddatetime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date<wbr>Time</a>
@@ -1681,8 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdatetime_nodejs">
 <a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
@@ -1690,14 +1508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1705,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1714,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access review instance name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1723,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This read-only field specifies the status of an access review instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1732,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_date_time_python">
 <a href="#end_date_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date_<wbr>time</a>
@@ -1741,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_time_python">
 <a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
@@ -1750,62 +1560,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DateTime when the review instance is scheduled to be start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accessreviewrecurrencerangetype">Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>End<wbr>Date</dt>
-    <dd>endDate</dd>
-    <dt>No<wbr>End</dt>
-    <dd>noEnd</dd>
-    <dt>Numbered</dt>
-    <dd>numbered</dd>
-</dl>
+<dl class="tabular"><dt>End<wbr>Date</dt>
+    <dd>endDate</dd><dt>No<wbr>End</dt>
+    <dd>noEnd</dd><dt>Numbered</dt>
+    <dd>numbered</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>End<wbr>Date</dt>
-    <dd>endDate</dd>
-    <dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>No<wbr>End</dt>
-    <dd>noEnd</dd>
-    <dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>Numbered</dt>
-    <dd>numbered</dd>
-</dl>
+<dl class="tabular"><dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>End<wbr>Date</dt>
+    <dd>endDate</dd><dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>No<wbr>End</dt>
+    <dd>noEnd</dd><dt>Access<wbr>Review<wbr>Recurrence<wbr>Range<wbr>Type<wbr>Numbered</dt>
+    <dd>numbered</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>End<wbr>Date</dt>
-    <dd>endDate</dd>
-    <dt>No<wbr>End</dt>
-    <dd>noEnd</dd>
-    <dt>Numbered</dt>
-    <dd>numbered</dd>
-</dl>
+<dl class="tabular"><dt>End<wbr>Date</dt>
+    <dd>endDate</dd><dt>No<wbr>End</dt>
+    <dd>noEnd</dd><dt>Numbered</dt>
+    <dd>numbered</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>END_DATE</dt>
-    <dd>endDate</dd>
-    <dt>NO_END</dt>
-    <dd>noEnd</dd>
-    <dt>NUMBERED</dt>
-    <dd>numbered</dd>
-</dl>
+<dl class="tabular"><dt>END_DATE</dt>
+    <dd>endDate</dd><dt>NO_END</dt>
+    <dd>noEnd</dd><dt>NUMBERED</dt>
+    <dd>numbered</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accessreviewreviewer">Access<wbr>Review<wbr>Reviewer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1813,14 +1604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1828,14 +1616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1843,14 +1628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1858,16 +1640,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accessreviewreviewerresponse">Access<wbr>Review<wbr>Reviewer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1875,8 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1884,14 +1662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1899,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1908,14 +1682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
@@ -1923,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1932,14 +1702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
@@ -1947,8 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type : user/servicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1956,54 +1722,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The id of the reviewer(user/servicePrincipal){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="defaultdecisiontype">Default<wbr>Decision<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Approve</dt>
-    <dd>Approve</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Recommendation</dt>
-    <dd>Recommendation</dd>
-</dl>
+<dl class="tabular"><dt>Approve</dt>
+    <dd>Approve</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Recommendation</dt>
+    <dd>Recommendation</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Default<wbr>Decision<wbr>Type<wbr>Approve</dt>
-    <dd>Approve</dd>
-    <dt>Default<wbr>Decision<wbr>Type<wbr>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Default<wbr>Decision<wbr>Type<wbr>Recommendation</dt>
-    <dd>Recommendation</dd>
-</dl>
+<dl class="tabular"><dt>Default<wbr>Decision<wbr>Type<wbr>Approve</dt>
+    <dd>Approve</dd><dt>Default<wbr>Decision<wbr>Type<wbr>Deny</dt>
+    <dd>Deny</dd><dt>Default<wbr>Decision<wbr>Type<wbr>Recommendation</dt>
+    <dd>Recommendation</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Approve</dt>
-    <dd>Approve</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Recommendation</dt>
-    <dd>Recommendation</dd>
-</dl>
+<dl class="tabular"><dt>Approve</dt>
+    <dd>Approve</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Recommendation</dt>
+    <dd>Recommendation</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>APPROVE</dt>
-    <dd>Approve</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-    <dt>RECOMMENDATION</dt>
-    <dd>Recommendation</dd>
-</dl>
+<dl class="tabular"><dt>APPROVE</dt>
+    <dd>Approve</dd><dt>DENY</dt>
+    <dd>Deny</dd><dt>RECOMMENDATION</dt>
+    <dd>Recommendation</dd></dl>
 {{% /choosable %}}
 ## Import
 

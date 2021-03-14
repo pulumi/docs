@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bastionhostname_csharp">
 <a href="#bastionhostname_csharp" style="color: inherit; text-decoration: inherit;">Bastion<wbr>Host<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bastionhostname_go">
 <a href="#bastionhostname_go" style="color: inherit; text-decoration: inherit;">Bastion<wbr>Host<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bastionhostname_nodejs">
 <a href="#bastionhostname_nodejs" style="color: inherit; text-decoration: inherit;">bastion<wbr>Host<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bastion_host_name_python">
 <a href="#bastion_host_name_python" style="color: inherit; text-decoration: inherit;">bastion_<wbr>host_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bastion Host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bastionactivesessionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Bastion<wbr>Active<wbr>Session<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bastionactivesessionresponse">[]Bastion<wbr>Active<wbr>Session<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bastionactivesessionresponse">Bastion<wbr>Active<wbr>Session<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bastionactivesessionresponse">Sequence[Bastion<wbr>Active<wbr>Session<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of active sessions on the bastion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessiondurationinmins_csharp">
 <a href="#sessiondurationinmins_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration<wbr>In<wbr>Mins</a>
@@ -290,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessionid_csharp">
 <a href="#sessionid_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Id</a>
@@ -299,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_csharp">
 <a href="#targethostname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetipaddress_csharp">
 <a href="#targetipaddress_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Ip<wbr>Address</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_csharp">
 <a href="#targetresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -335,8 +294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_csharp">
 <a href="#targetsubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Subscription<wbr>Id</a>
@@ -353,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -362,14 +318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessiondurationinmins_go">
 <a href="#sessiondurationinmins_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration<wbr>In<wbr>Mins</a>
@@ -395,8 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessionid_go">
 <a href="#sessionid_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Id</a>
@@ -404,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -413,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_go">
 <a href="#targethostname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -422,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetipaddress_go">
 <a href="#targetipaddress_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Ip<wbr>Address</a>
@@ -431,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_go">
 <a href="#targetresourcegroup_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -440,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -449,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_go">
 <a href="#targetsubscriptionid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Subscription<wbr>Id</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -467,14 +410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -482,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -491,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessiondurationinmins_nodejs">
 <a href="#sessiondurationinmins_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration<wbr>In<wbr>Mins</a>
@@ -500,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sessionid_nodejs">
 <a href="#sessionid_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
@@ -509,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -518,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_nodejs">
 <a href="#targethostname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Host<wbr>Name</a>
@@ -527,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetipaddress_nodejs">
 <a href="#targetipaddress_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Ip<wbr>Address</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_nodejs">
 <a href="#targetresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_nodejs">
 <a href="#targetsubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subscription<wbr>Id</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -572,14 +502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol used to connect to the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="session_duration_in_mins_python">
 <a href="#session_duration_in_mins_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration_<wbr>in_<wbr>mins</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Duration in mins the session has been active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="session_id_python">
 <a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique id for the session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time when the session started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_host_name_python">
 <a href="#target_host_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>host_<wbr>name</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host name of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_ip_address_python">
 <a href="#target_ip_address_python" style="color: inherit; text-decoration: inherit;">target_<wbr>ip_<wbr>address</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP Address of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_group_python">
 <a href="#target_resource_group_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource id of the target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_subscription_id_python">
 <a href="#target_subscription_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subscription_<wbr>id</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription id for the target virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name who is active on this session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

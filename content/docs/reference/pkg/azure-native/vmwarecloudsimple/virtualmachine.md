@@ -14,11 +14,17 @@ Virtual machine model
 API Version: 2019-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CreateVirtualMachine
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -70,9 +76,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -123,9 +132,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -159,9 +171,12 @@ virtual_machine = azure_native.vmwarecloudsimple.VirtualMachine("virtualMachine"
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -196,9 +211,16 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualMachine Resource {#create}
@@ -223,9 +245,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +253,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +261,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,10 +269,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,9 +295,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -292,9 +303,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -302,9 +311,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -312,9 +319,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -322,18 +327,13 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -341,9 +341,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -351,9 +349,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -361,10 +357,7 @@ const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -379,9 +372,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amountofram_csharp">
 <a href="#amountofram_csharp" style="color: inherit; text-decoration: inherit;">Amount<wbr>Of<wbr>Ram</a>
@@ -389,8 +380,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The amount of memory{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofcores_csharp">
 <a href="#numberofcores_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Cores</a>
@@ -398,8 +388,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_csharp">
 <a href="#privatecloudid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -407,8 +396,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -416,8 +404,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_csharp">
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -425,8 +412,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestoscustomization">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSCustomization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -434,8 +420,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposetoguestvm_csharp">
 <a href="#exposetoguestvm_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>To<wbr>Guest<wbr>VM</a>
@@ -443,8 +428,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -452,8 +436,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nics_csharp">
 <a href="#nics_csharp" style="color: inherit; text-decoration: inherit;">Nics</a>
@@ -461,8 +444,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnic">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Nic<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -470,8 +452,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepool_csharp">
 <a href="#resourcepool_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool</a>
@@ -479,8 +460,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepool">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Resource<wbr>Pool<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -488,8 +468,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_csharp">
 <a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -497,8 +476,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -506,8 +484,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vspherenetworks_csharp">
 <a href="#vspherenetworks_csharp" style="color: inherit; text-decoration: inherit;">VSphere<wbr>Networks</a>
@@ -515,8 +492,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinename_csharp">
 <a href="#virtualmachinename_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Name</a>
@@ -524,14 +500,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual machine name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual machine name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amountofram_go">
 <a href="#amountofram_go" style="color: inherit; text-decoration: inherit;">Amount<wbr>Of<wbr>Ram</a>
@@ -539,8 +512,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The amount of memory{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofcores_go">
 <a href="#numberofcores_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Cores</a>
@@ -548,8 +520,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_go">
 <a href="#privatecloudid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -557,8 +528,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -566,8 +536,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_go">
 <a href="#customization_go" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -575,8 +544,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -584,8 +552,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdisk">[]Virtual<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposetoguestvm_go">
 <a href="#exposetoguestvm_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>To<wbr>Guest<wbr>VM</a>
@@ -593,8 +560,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -602,8 +568,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nics_go">
 <a href="#nics_go" style="color: inherit; text-decoration: inherit;">Nics</a>
@@ -611,8 +576,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnic">[]Virtual<wbr>Nic</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -620,8 +584,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepool_go">
 <a href="#resourcepool_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool</a>
@@ -629,8 +592,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -638,8 +600,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_go">
 <a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -647,8 +608,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -656,8 +616,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vspherenetworks_go">
 <a href="#vspherenetworks_go" style="color: inherit; text-decoration: inherit;">VSphere<wbr>Networks</a>
@@ -665,8 +624,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinename_go">
 <a href="#virtualmachinename_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Name</a>
@@ -674,14 +632,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual machine name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual machine name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amountofram_nodejs">
 <a href="#amountofram_nodejs" style="color: inherit; text-decoration: inherit;">amount<wbr>Of<wbr>Ram</a>
@@ -689,8 +644,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The amount of memory{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofcores_nodejs">
 <a href="#numberofcores_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Cores</a>
@@ -698,8 +652,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_nodejs">
 <a href="#privatecloudid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Id</a>
@@ -707,8 +660,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -716,8 +668,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_nodejs">
 <a href="#customization_nodejs" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -725,8 +676,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -734,8 +684,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdisk">Virtual<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposetoguestvm_nodejs">
 <a href="#exposetoguestvm_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>To<wbr>Guest<wbr>VM</a>
@@ -743,8 +692,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -752,8 +700,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nics_nodejs">
 <a href="#nics_nodejs" style="color: inherit; text-decoration: inherit;">nics</a>
@@ -761,8 +708,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnic">Virtual<wbr>Nic[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -770,8 +716,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepool_nodejs">
 <a href="#resourcepool_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool</a>
@@ -779,8 +724,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -788,8 +732,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_nodejs">
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
@@ -797,8 +740,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -806,8 +748,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vspherenetworks_nodejs">
 <a href="#vspherenetworks_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Sphere<wbr>Networks</a>
@@ -815,8 +756,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinename_nodejs">
 <a href="#virtualmachinename_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Name</a>
@@ -824,14 +764,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual machine name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual machine name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_of_ram_python">
 <a href="#amount_of_ram_python" style="color: inherit; text-decoration: inherit;">amount_<wbr>of_<wbr>ram</a>
@@ -839,8 +776,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The amount of memory{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_of_cores_python">
 <a href="#number_of_cores_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>cores</a>
@@ -848,8 +784,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of CPU cores{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_cloud_id_python">
 <a href="#private_cloud_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>id</a>
@@ -857,8 +792,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -866,8 +800,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_python">
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -875,8 +808,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -884,8 +816,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdisk">Sequence[Virtual<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expose_to_guest_vm_python">
 <a href="#expose_to_guest_vm_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>to_<wbr>guest_<wbr>vm</a>
@@ -893,8 +824,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -902,8 +832,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nics_python">
 <a href="#nics_python" style="color: inherit; text-decoration: inherit;">nics</a>
@@ -911,8 +840,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnic">Sequence[Virtual<wbr>Nic<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -920,8 +848,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_pool_python">
 <a href="#resource_pool_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool</a>
@@ -929,8 +856,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -938,8 +864,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_id_python">
 <a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
@@ -947,8 +872,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine Template Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -956,8 +880,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Username for login. Deprecated - use customization property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_sphere_networks_python">
 <a href="#v_sphere_networks_python" style="color: inherit; text-decoration: inherit;">v_<wbr>sphere_<wbr>networks</a>
@@ -965,8 +888,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Virtual VSphere Networks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_name_python">
 <a href="#virtual_machine_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>name</a>
@@ -974,8 +896,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}virtual machine name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual machine name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -986,9 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="controllers_csharp">
 <a href="#controllers_csharp" style="color: inherit; text-decoration: inherit;">Controllers</a>
@@ -996,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdiskcontrollerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Outputs.<wbr>Virtual<wbr>Disk<wbr>Controller<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dnsname</a>
@@ -1005,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1014,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestos_csharp">
 <a href="#guestos_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>OS</a>
@@ -1023,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestostype_csharp">
 <a href="#guestostype_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>OSType</a>
@@ -1032,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1041,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1050,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1059,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_csharp">
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IP</a>
@@ -1068,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1077,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1086,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_csharp">
 <a href="#vmid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
@@ -1095,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmwaretools_csharp">
 <a href="#vmwaretools_csharp" style="color: inherit; text-decoration: inherit;">Vmwaretools</a>
@@ -1104,14 +1011,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VMware tools version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VMware tools version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="controllers_go">
 <a href="#controllers_go" style="color: inherit; text-decoration: inherit;">Controllers</a>
@@ -1119,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdiskcontrollerresponse">[]Virtual<wbr>Disk<wbr>Controller<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dnsname</a>
@@ -1128,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1137,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestos_go">
 <a href="#guestos_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>OS</a>
@@ -1146,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestostype_go">
 <a href="#guestostype_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>OSType</a>
@@ -1155,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1164,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1173,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1182,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_go">
 <a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IP</a>
@@ -1191,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1200,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1209,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_go">
 <a href="#vmid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
@@ -1218,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmwaretools_go">
 <a href="#vmwaretools_go" style="color: inherit; text-decoration: inherit;">Vmwaretools</a>
@@ -1227,14 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VMware tools version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VMware tools version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="controllers_nodejs">
 <a href="#controllers_nodejs" style="color: inherit; text-decoration: inherit;">controllers</a>
@@ -1242,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdiskcontrollerresponse">Virtual<wbr>Disk<wbr>Controller<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dnsname</a>
@@ -1251,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1260,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestos_nodejs">
 <a href="#guestos_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>OS</a>
@@ -1269,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestostype_nodejs">
 <a href="#guestostype_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>OSType</a>
@@ -1278,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1287,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1296,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1305,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_nodejs">
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IP</a>
@@ -1314,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1323,8 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1332,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_nodejs">
 <a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
@@ -1341,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmwaretools_nodejs">
 <a href="#vmwaretools_nodejs" style="color: inherit; text-decoration: inherit;">vmwaretools</a>
@@ -1350,14 +1227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VMware tools version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VMware tools version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="controllers_python">
 <a href="#controllers_python" style="color: inherit; text-decoration: inherit;">controllers</a>
@@ -1365,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualdiskcontrollerresponse">Sequence[Virtual<wbr>Disk<wbr>Controller<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Virtual Disks' Controllers{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_python">
 <a href="#dnsname_python" style="color: inherit; text-decoration: inherit;">dnsname</a>
@@ -1374,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DNS name of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1383,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path to virtual machine folder in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_os_python">
 <a href="#guest_os_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os</a>
@@ -1392,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Guest OS{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_os_type_python">
 <a href="#guest_os_type_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>type</a>
@@ -1401,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Guest OS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1410,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1419,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{virtualMachineName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1428,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_python">
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
@@ -1437,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public ip of Virtual Machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1446,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of Virtual machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1455,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_id_python">
 <a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
@@ -1464,8 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The internal id of Virtual Machine in VCenter{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmwaretools_python">
 <a href="#vmwaretools_python" style="color: inherit; text-decoration: inherit;">vmwaretools</a>
@@ -1473,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VMware tools version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VMware tools version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1490,55 +1351,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="diskindependencemode">Disk<wbr>Independence<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Persistent</dt>
-    <dd>persistent</dd>
-    <dt>Independent_<wbr>persistent</dt>
-    <dd>independent_persistent</dd>
-    <dt>Independent_<wbr>nonpersistent</dt>
-    <dd>independent_nonpersistent</dd>
-</dl>
+<dl class="tabular"><dt>Persistent</dt>
+    <dd>persistent</dd><dt>Independent_<wbr>persistent</dt>
+    <dd>independent_persistent</dd><dt>Independent_<wbr>nonpersistent</dt>
+    <dd>independent_nonpersistent</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Disk<wbr>Independence<wbr>Mode<wbr>Persistent</dt>
-    <dd>persistent</dd>
-    <dt>Disk<wbr>Independence<wbr>Mode_Independent_<wbr>persistent</dt>
-    <dd>independent_persistent</dd>
-    <dt>Disk<wbr>Independence<wbr>Mode_Independent_<wbr>nonpersistent</dt>
-    <dd>independent_nonpersistent</dd>
-</dl>
+<dl class="tabular"><dt>Disk<wbr>Independence<wbr>Mode<wbr>Persistent</dt>
+    <dd>persistent</dd><dt>Disk<wbr>Independence<wbr>Mode_Independent_<wbr>persistent</dt>
+    <dd>independent_persistent</dd><dt>Disk<wbr>Independence<wbr>Mode_Independent_<wbr>nonpersistent</dt>
+    <dd>independent_nonpersistent</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Persistent</dt>
-    <dd>persistent</dd>
-    <dt>Independent_<wbr>persistent</dt>
-    <dd>independent_persistent</dd>
-    <dt>Independent_<wbr>nonpersistent</dt>
-    <dd>independent_nonpersistent</dd>
-</dl>
+<dl class="tabular"><dt>Persistent</dt>
+    <dd>persistent</dd><dt>Independent_<wbr>persistent</dt>
+    <dd>independent_persistent</dd><dt>Independent_<wbr>nonpersistent</dt>
+    <dd>independent_nonpersistent</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PERSISTENT</dt>
-    <dd>persistent</dd>
-    <dt>INDEPENDENT_PERSISTENT</dt>
-    <dd>independent_persistent</dd>
-    <dt>INDEPENDENT_NONPERSISTENT</dt>
-    <dd>independent_nonpersistent</dd>
-</dl>
+<dl class="tabular"><dt>PERSISTENT</dt>
+    <dd>persistent</dd><dt>INDEPENDENT_PERSISTENT</dt>
+    <dd>independent_persistent</dd><dt>INDEPENDENT_NONPERSISTENT</dt>
+    <dd>independent_nonpersistent</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestoscustomization">Guest<wbr>OSCustomization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1546,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1555,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1564,8 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1573,8 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1582,14 +1421,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1597,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1606,8 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1615,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1624,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1633,14 +1465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -1648,8 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1657,8 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1666,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1675,8 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1684,14 +1509,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -1699,8 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1708,8 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1717,8 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1726,8 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1735,16 +1553,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestoscustomizationresponse">Guest<wbr>OSCustomization<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1752,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1761,8 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1770,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1779,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1788,14 +1599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1803,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1812,8 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1821,8 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1830,8 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1839,14 +1643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -1854,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1863,8 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1872,8 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1881,8 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1890,14 +1687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -1905,8 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1914,8 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine hostname{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1923,8 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for login{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1932,8 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}id of customization policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}id of customization policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1941,16 +1731,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for login{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestosniccustomization">Guest<wbr>OSNICCustomization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_csharp">
 <a href="#allocation_csharp" style="color: inherit; text-decoration: inherit;">Allocation</a>
@@ -1958,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1967,8 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1976,8 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1985,8 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_csharp">
 <a href="#mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -1994,8 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_csharp">
 <a href="#primarywinsserver_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Wins<wbr>Server</a>
@@ -2003,8 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_csharp">
 <a href="#secondarywinsserver_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Wins<wbr>Server</a>
@@ -2012,14 +1793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_go">
 <a href="#allocation_go" style="color: inherit; text-decoration: inherit;">Allocation</a>
@@ -2027,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -2036,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -2045,8 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2054,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_go">
 <a href="#mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -2063,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_go">
 <a href="#primarywinsserver_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Wins<wbr>Server</a>
@@ -2072,8 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_go">
 <a href="#secondarywinsserver_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Wins<wbr>Server</a>
@@ -2081,14 +1853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_nodejs">
 <a href="#allocation_nodejs" style="color: inherit; text-decoration: inherit;">allocation</a>
@@ -2096,8 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -2105,8 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2114,8 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2123,8 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_nodejs">
 <a href="#mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2132,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_nodejs">
 <a href="#primarywinsserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Wins<wbr>Server</a>
@@ -2141,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_nodejs">
 <a href="#secondarywinsserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Wins<wbr>Server</a>
@@ -2150,14 +1913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_python">
 <a href="#allocation_python" style="color: inherit; text-decoration: inherit;">allocation</a>
@@ -2165,8 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -2174,8 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2183,8 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2192,8 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_python">
 <a href="#mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2201,8 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_wins_server_python">
 <a href="#primary_wins_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>wins_<wbr>server</a>
@@ -2210,8 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_wins_server_python">
 <a href="#secondary_wins_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>wins_<wbr>server</a>
@@ -2219,16 +1973,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_csharp">
 <a href="#allocation_csharp" style="color: inherit; text-decoration: inherit;">Allocation</a>
@@ -2236,8 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -2245,8 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -2254,8 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2263,8 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_csharp">
 <a href="#mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -2272,8 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_csharp">
 <a href="#primarywinsserver_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Wins<wbr>Server</a>
@@ -2281,8 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_csharp">
 <a href="#secondarywinsserver_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Wins<wbr>Server</a>
@@ -2290,14 +2035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_go">
 <a href="#allocation_go" style="color: inherit; text-decoration: inherit;">Allocation</a>
@@ -2305,8 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -2314,8 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -2323,8 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2332,8 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_go">
 <a href="#mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -2341,8 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_go">
 <a href="#primarywinsserver_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Wins<wbr>Server</a>
@@ -2350,8 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_go">
 <a href="#secondarywinsserver_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Wins<wbr>Server</a>
@@ -2359,14 +2095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_nodejs">
 <a href="#allocation_nodejs" style="color: inherit; text-decoration: inherit;">allocation</a>
@@ -2374,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -2383,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2392,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2401,8 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_nodejs">
 <a href="#mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2410,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarywinsserver_nodejs">
 <a href="#primarywinsserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Wins<wbr>Server</a>
@@ -2419,8 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarywinsserver_nodejs">
 <a href="#secondarywinsserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Wins<wbr>Server</a>
@@ -2428,14 +2155,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocation_python">
 <a href="#allocation_python" style="color: inherit; text-decoration: inherit;">allocation</a>
@@ -2443,8 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -2452,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of dns servers to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -2461,8 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway addresses assigned to nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2470,8 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Static ip address for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_python">
 <a href="#mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2479,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mask for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_wins_server_python">
 <a href="#primary_wins_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>wins_<wbr>server</a>
@@ -2488,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}primary WINS server for Windows{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_wins_server_python">
 <a href="#secondary_wins_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>wins_<wbr>server</a>
@@ -2497,86 +2215,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secondary WINS server for Windows{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nictype">NICType</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>E1000</dt>
-    <dd>E1000</dd>
-    <dt>E1000E</dt>
-    <dd>E1000E</dd>
-    <dt>PCNET32</dt>
-    <dd>PCNET32</dd>
-    <dt>VMXNET</dt>
-    <dd>VMXNET</dd>
-    <dt>VMXNET2</dt>
-    <dd>VMXNET2</dd>
-    <dt>VMXNET3</dt>
-    <dd>VMXNET3</dd>
-</dl>
+<dl class="tabular"><dt>E1000</dt>
+    <dd>E1000</dd><dt>E1000E</dt>
+    <dd>E1000E</dd><dt>PCNET32</dt>
+    <dd>PCNET32</dd><dt>VMXNET</dt>
+    <dd>VMXNET</dd><dt>VMXNET2</dt>
+    <dd>VMXNET2</dd><dt>VMXNET3</dt>
+    <dd>VMXNET3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>NICType<wbr>E1000</dt>
-    <dd>E1000</dd>
-    <dt>NICType<wbr>E1000E</dt>
-    <dd>E1000E</dd>
-    <dt>NICType<wbr>PCNET32</dt>
-    <dd>PCNET32</dd>
-    <dt>NICType<wbr>VMXNET</dt>
-    <dd>VMXNET</dd>
-    <dt>NICType<wbr>VMXNET2</dt>
-    <dd>VMXNET2</dd>
-    <dt>NICType<wbr>VMXNET3</dt>
-    <dd>VMXNET3</dd>
-</dl>
+<dl class="tabular"><dt>NICType<wbr>E1000</dt>
+    <dd>E1000</dd><dt>NICType<wbr>E1000E</dt>
+    <dd>E1000E</dd><dt>NICType<wbr>PCNET32</dt>
+    <dd>PCNET32</dd><dt>NICType<wbr>VMXNET</dt>
+    <dd>VMXNET</dd><dt>NICType<wbr>VMXNET2</dt>
+    <dd>VMXNET2</dd><dt>NICType<wbr>VMXNET3</dt>
+    <dd>VMXNET3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>E1000</dt>
-    <dd>E1000</dd>
-    <dt>E1000E</dt>
-    <dd>E1000E</dd>
-    <dt>PCNET32</dt>
-    <dd>PCNET32</dd>
-    <dt>VMXNET</dt>
-    <dd>VMXNET</dd>
-    <dt>VMXNET2</dt>
-    <dd>VMXNET2</dd>
-    <dt>VMXNET3</dt>
-    <dd>VMXNET3</dd>
-</dl>
+<dl class="tabular"><dt>E1000</dt>
+    <dd>E1000</dd><dt>E1000E</dt>
+    <dd>E1000E</dd><dt>PCNET32</dt>
+    <dd>PCNET32</dd><dt>VMXNET</dt>
+    <dd>VMXNET</dd><dt>VMXNET2</dt>
+    <dd>VMXNET2</dd><dt>VMXNET3</dt>
+    <dd>VMXNET3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>E1000</dt>
-    <dd>E1000</dd>
-    <dt>E1000_E</dt>
-    <dd>E1000E</dd>
-    <dt>PCNET32</dt>
-    <dd>PCNET32</dd>
-    <dt>VMXNET</dt>
-    <dd>VMXNET</dd>
-    <dt>VMXNET2</dt>
-    <dd>VMXNET2</dd>
-    <dt>VMXNET3</dt>
-    <dd>VMXNET3</dd>
-</dl>
+<dl class="tabular"><dt>E1000</dt>
+    <dd>E1000</dd><dt>E1000_E</dt>
+    <dd>E1000E</dd><dt>PCNET32</dt>
+    <dd>PCNET32</dd><dt>VMXNET</dt>
+    <dd>VMXNET</dd><dt>VMXNET2</dt>
+    <dd>VMXNET2</dd><dt>VMXNET3</dt>
+    <dd>VMXNET3</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepool">Resource<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2584,14 +2271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2599,14 +2283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2614,14 +2295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2629,16 +2307,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepoolresponse">Resource<wbr>Pool<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -2646,8 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2655,8 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2664,8 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2673,8 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_csharp">
 <a href="#privatecloudid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -2682,8 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2691,14 +2361,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -2706,8 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2715,8 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2724,8 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2733,8 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_go">
 <a href="#privatecloudid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -2742,8 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2751,14 +2413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
@@ -2766,8 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2775,8 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2784,8 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2793,8 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_nodejs">
 <a href="#privatecloudid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Id</a>
@@ -2802,8 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2811,14 +2465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="full_name_python">
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
@@ -2826,8 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchical resource pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2835,8 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}resource pool id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2844,8 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2853,8 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{ResourcePoolName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_cloud_id_python">
 <a href="#private_cloud_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>id</a>
@@ -2862,8 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2871,16 +2517,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualdisk">Virtual<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_csharp">
 <a href="#controllerid_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -2888,8 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_csharp">
 <a href="#independencemode_csharp" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
@@ -2897,8 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskindependencemode">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Disk<wbr>Independence<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_csharp">
 <a href="#totalsize_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Size</a>
@@ -2906,8 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_csharp">
 <a href="#virtualdiskid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Id</a>
@@ -2915,14 +2555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_go">
 <a href="#controllerid_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -2930,8 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_go">
 <a href="#independencemode_go" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
@@ -2939,8 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskindependencemode">Disk<wbr>Independence<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_go">
 <a href="#totalsize_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Size</a>
@@ -2948,8 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_go">
 <a href="#virtualdiskid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Id</a>
@@ -2957,14 +2591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_nodejs">
 <a href="#controllerid_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
@@ -2972,8 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_nodejs">
 <a href="#independencemode_nodejs" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
@@ -2981,8 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskindependencemode">Disk<wbr>Independence<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_nodejs">
 <a href="#totalsize_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
@@ -2990,8 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_nodejs">
 <a href="#virtualdiskid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Id</a>
@@ -2999,14 +2627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controller_id_python">
 <a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
@@ -3014,8 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independence_mode_python">
 <a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
@@ -3023,8 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskindependencemode">Disk<wbr>Independence<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_size_python">
 <a href="#total_size_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size</a>
@@ -3032,8 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_disk_id_python">
 <a href="#virtual_disk_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>id</a>
@@ -3041,16 +2663,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualdiskcontrollerresponse">Virtual<wbr>Disk<wbr>Controller<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3058,8 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controller's id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Controller's id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3067,8 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subtype_csharp">
 <a href="#subtype_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Type</a>
@@ -3076,8 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3085,14 +2701,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3100,8 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controller's id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Controller's id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3109,8 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subtype_go">
 <a href="#subtype_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Type</a>
@@ -3118,8 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3127,14 +2737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3142,8 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Controller's id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Controller's id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3151,8 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subtype_nodejs">
 <a href="#subtype_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Type</a>
@@ -3160,8 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3169,14 +2773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3184,8 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Controller's id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Controller's id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3193,8 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of Controller{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sub_type_python">
 <a href="#sub_type_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>type</a>
@@ -3202,8 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3211,16 +2809,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}disk controller type (SCSI){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualdiskresponse">Virtual<wbr>Disk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_csharp">
 <a href="#controllerid_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -3228,8 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_csharp">
 <a href="#independencemode_csharp" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
@@ -3237,8 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_csharp">
 <a href="#totalsize_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Size</a>
@@ -3246,8 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualdiskname_csharp">
 <a href="#virtualdiskname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Name</a>
@@ -3255,8 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_csharp">
 <a href="#virtualdiskid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Id</a>
@@ -3264,14 +2855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_go">
 <a href="#controllerid_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -3279,8 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_go">
 <a href="#independencemode_go" style="color: inherit; text-decoration: inherit;">Independence<wbr>Mode</a>
@@ -3288,8 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_go">
 <a href="#totalsize_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Size</a>
@@ -3297,8 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualdiskname_go">
 <a href="#virtualdiskname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Name</a>
@@ -3306,8 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_go">
 <a href="#virtualdiskid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Disk<wbr>Id</a>
@@ -3315,14 +2899,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllerid_nodejs">
 <a href="#controllerid_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
@@ -3330,8 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independencemode_nodejs">
 <a href="#independencemode_nodejs" style="color: inherit; text-decoration: inherit;">independence<wbr>Mode</a>
@@ -3339,8 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsize_nodejs">
 <a href="#totalsize_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Size</a>
@@ -3348,8 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualdiskname_nodejs">
 <a href="#virtualdiskname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Name</a>
@@ -3357,8 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualdiskid_nodejs">
 <a href="#virtualdiskid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Disk<wbr>Id</a>
@@ -3366,14 +2943,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controller_id_python">
 <a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
@@ -3381,8 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's Controller id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="independence_mode_python">
 <a href="#independence_mode_python" style="color: inherit; text-decoration: inherit;">independence_<wbr>mode</a>
@@ -3390,8 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's independence mode type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_size_python">
 <a href="#total_size_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size</a>
@@ -3399,8 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk's total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk's total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_disk_name_python">
 <a href="#virtual_disk_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>name</a>
@@ -3408,8 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_disk_id_python">
 <a href="#virtual_disk_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>disk_<wbr>id</a>
@@ -3417,16 +2987,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk's id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk's id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetwork">Virtual<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3434,14 +3001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3449,14 +3013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3464,14 +3025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3479,16 +3037,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignable_csharp">
 <a href="#assignable_csharp" style="color: inherit; text-decoration: inherit;">Assignable</a>
@@ -3496,8 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3505,8 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -3514,8 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3523,8 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_csharp">
 <a href="#privatecloudid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -3532,8 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3541,14 +3091,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignable_go">
 <a href="#assignable_go" style="color: inherit; text-decoration: inherit;">Assignable</a>
@@ -3556,8 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3565,8 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -3574,8 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3583,8 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_go">
 <a href="#privatecloudid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Id</a>
@@ -3592,8 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3601,14 +3143,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignable_nodejs">
 <a href="#assignable_nodejs" style="color: inherit; text-decoration: inherit;">assignable</a>
@@ -3616,8 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3625,8 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3634,8 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3643,8 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudid_nodejs">
 <a href="#privatecloudid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Id</a>
@@ -3652,8 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3661,14 +3195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignable_python">
 <a href="#assignable_python" style="color: inherit; text-decoration: inherit;">assignable</a>
@@ -3676,8 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}can be used in vm creation/deletion{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3685,8 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}virtual network id (privateCloudId:vsphereId){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3694,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3703,8 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{VirtualNetworkName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_cloud_id_python">
 <a href="#private_cloud_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>id</a>
@@ -3712,8 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Private Cloud id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3721,16 +3247,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnic">Virtual<wbr>Nic</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -3738,8 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -3747,8 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nictype">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>NICType</a></span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_csharp">
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -3756,8 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomization">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3765,8 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3774,8 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_csharp">
 <a href="#poweronboot_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>On<wbr>Boot</a>
@@ -3783,8 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_csharp">
 <a href="#virtualnicid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Id</a>
@@ -3792,14 +3309,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -3807,8 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -3816,8 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nictype">NICType</a></span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_go">
 <a href="#customization_go" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -3825,8 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3834,8 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3843,8 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_go">
 <a href="#poweronboot_go" style="color: inherit; text-decoration: inherit;">Power<wbr>On<wbr>Boot</a>
@@ -3852,8 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_go">
 <a href="#virtualnicid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Id</a>
@@ -3861,14 +3369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -3876,8 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
@@ -3885,8 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nictype">NICType</a></span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_nodejs">
 <a href="#customization_nodejs" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -3894,8 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -3903,8 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -3912,8 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_nodejs">
 <a href="#poweronboot_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>On<wbr>Boot</a>
@@ -3921,8 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_nodejs">
 <a href="#virtualnicid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Id</a>
@@ -3930,14 +3429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -3945,8 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
@@ -3954,8 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nictype">NICType</a></span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_python">
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -3963,8 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -3972,8 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -3981,8 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="power_on_boot_python">
 <a href="#power_on_boot_python" style="color: inherit; text-decoration: inherit;">power_<wbr>on_<wbr>boot</a>
@@ -3990,8 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_nic_id_python">
 <a href="#virtual_nic_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>id</a>
@@ -3999,16 +3489,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnicresponse">Virtual<wbr>Nic<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -4016,8 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -4025,8 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnicname_csharp">
 <a href="#virtualnicname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Name</a>
@@ -4034,8 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_csharp">
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -4043,8 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -4052,8 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -4061,8 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_csharp">
 <a href="#poweronboot_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>On<wbr>Boot</a>
@@ -4070,8 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_csharp">
 <a href="#virtualnicid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Id</a>
@@ -4079,14 +3559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -4094,8 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -4103,8 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnicname_go">
 <a href="#virtualnicname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Name</a>
@@ -4112,8 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_go">
 <a href="#customization_go" style="color: inherit; text-decoration: inherit;">Customization</a>
@@ -4121,8 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -4130,8 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -4139,8 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_go">
 <a href="#poweronboot_go" style="color: inherit; text-decoration: inherit;">Power<wbr>On<wbr>Boot</a>
@@ -4148,8 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_go">
 <a href="#virtualnicid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Nic<wbr>Id</a>
@@ -4157,14 +3627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -4172,8 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
@@ -4181,8 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnicname_nodejs">
 <a href="#virtualnicname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Name</a>
@@ -4190,8 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_nodejs">
 <a href="#customization_nodejs" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -4199,8 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -4208,8 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -4217,8 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poweronboot_nodejs">
 <a href="#poweronboot_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>On<wbr>Boot</a>
@@ -4226,8 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnicid_nodejs">
 <a href="#virtualnicid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Nic<wbr>Id</a>
@@ -4235,14 +3695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -4250,8 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
@@ -4259,8 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}NIC type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_nic_name_python">
 <a href="#virtual_nic_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>name</a>
@@ -4268,8 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customization_python">
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
@@ -4277,8 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -4286,8 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}NIC ip address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC ip address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -4295,8 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NIC MAC address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="power_on_boot_python">
 <a href="#power_on_boot_python" style="color: inherit; text-decoration: inherit;">power_<wbr>on_<wbr>boot</a>
@@ -4304,8 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is NIC powered on/off on boot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_nic_id_python">
 <a href="#virtual_nic_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>nic_<wbr>id</a>
@@ -4313,8 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NIC id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NIC id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

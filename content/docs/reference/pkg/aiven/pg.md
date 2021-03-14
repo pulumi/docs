@@ -35,9 +35,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The Pg resource accepts the following [input]({{< relref "/docs/intro/concepts/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -204,8 +173,7 @@ The Pg resource accepts the following [input]({{< relref "/docs/intro/concepts/i
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -216,8 +184,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -232,8 +199,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -243,8 +209,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -254,8 +219,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgserver_csharp">
 <a href="#pgserver_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Server</a>
@@ -264,8 +228,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pguserconfig_csharp">
 <a href="#pguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
@@ -275,8 +238,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -292,8 +254,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -307,8 +268,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -317,8 +277,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">List&lt;Pg<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -331,14 +290,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -349,8 +305,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -361,8 +316,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -377,8 +331,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -388,8 +341,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -399,8 +351,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_go">
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -409,8 +360,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pguserconfig_go">
 <a href="#pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
@@ -420,8 +370,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -437,8 +386,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -452,8 +400,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -462,8 +409,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -476,14 +422,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -494,8 +437,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -506,8 +448,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -522,8 +463,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -533,8 +473,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -544,8 +483,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -554,8 +492,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pguserconfig_nodejs">
 <a href="#pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
@@ -565,8 +502,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -582,8 +518,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -597,8 +532,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -607,8 +541,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">Pg<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -621,14 +554,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -639,8 +569,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -651,8 +580,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -667,8 +595,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -678,8 +605,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -689,8 +615,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -699,8 +624,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_user_config_python">
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
@@ -710,8 +634,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -727,8 +650,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -742,8 +664,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -752,8 +673,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">Sequence[Pg<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -766,8 +686,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -778,9 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -789,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#pgcomponent">List&lt;Pg<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -798,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -808,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -818,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -828,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -838,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -848,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -858,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -868,14 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -884,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#pgcomponent">[]Pg<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -893,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -903,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -913,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -923,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -933,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -943,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -953,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -963,14 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -979,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#pgcomponent">Pg<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -988,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -998,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1008,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1018,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1028,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1038,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1048,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1058,14 +945,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1074,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#pgcomponent">Sequence[Pg<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1083,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1093,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1103,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1113,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1123,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1133,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1143,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1153,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1281,9 +1156,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
 <a href="#state_cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1298,8 +1171,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_csharp">
 <a href="#state_components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1308,8 +1180,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#pgcomponent">List&lt;Pg<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_csharp">
 <a href="#state_maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1319,8 +1190,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_csharp">
 <a href="#state_maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1330,8 +1200,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgserver_csharp">
 <a href="#state_pgserver_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Server</a>
@@ -1340,8 +1209,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pguserconfig_csharp">
 <a href="#state_pguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
@@ -1351,8 +1219,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1368,8 +1235,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1380,8 +1246,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_csharp">
 <a href="#state_projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1395,8 +1260,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_csharp">
 <a href="#state_servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1405,8 +1269,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_csharp">
 <a href="#state_serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1415,8 +1278,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">List&lt;Pg<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1427,8 +1289,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_csharp">
 <a href="#state_servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1437,8 +1298,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_csharp">
 <a href="#state_serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1447,8 +1307,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1457,8 +1316,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_csharp">
 <a href="#state_serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1467,8 +1325,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_csharp">
 <a href="#state_serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1477,8 +1334,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1487,8 +1343,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1501,14 +1356,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
 <a href="#state_cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1523,8 +1375,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_go">
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1533,8 +1384,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#pgcomponent">[]Pg<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_go">
 <a href="#state_maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1544,8 +1394,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_go">
 <a href="#state_maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1555,8 +1404,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pg_go">
 <a href="#state_pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -1565,8 +1413,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pguserconfig_go">
 <a href="#state_pguserconfig_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
@@ -1576,8 +1423,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1593,8 +1439,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1605,8 +1450,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_go">
 <a href="#state_projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1620,8 +1464,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_go">
 <a href="#state_servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1630,8 +1473,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_go">
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1640,8 +1482,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">[]Pg<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1652,8 +1493,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_go">
 <a href="#state_servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1662,8 +1502,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_go">
 <a href="#state_serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1672,8 +1511,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1682,8 +1520,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_go">
 <a href="#state_serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1692,8 +1529,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_go">
 <a href="#state_serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1702,8 +1538,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1712,8 +1547,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1726,14 +1560,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1748,8 +1579,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_nodejs">
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1758,8 +1588,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#pgcomponent">Pg<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_nodejs">
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1769,8 +1598,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_nodejs">
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1780,8 +1608,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pg_nodejs">
 <a href="#state_pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -1790,8 +1617,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pguserconfig_nodejs">
 <a href="#state_pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
@@ -1801,8 +1627,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1818,8 +1643,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1830,8 +1654,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_nodejs">
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1845,8 +1668,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_nodejs">
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1855,8 +1677,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_nodejs">
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -1865,8 +1686,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">Pg<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1877,8 +1697,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_nodejs">
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1887,8 +1706,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_nodejs">
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1897,8 +1715,7 @@ intended service usage rather than current attributes.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1907,8 +1724,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_nodejs">
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1917,8 +1733,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_nodejs">
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1927,8 +1742,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1937,8 +1751,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -1951,14 +1764,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -1973,8 +1783,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_python">
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1983,8 +1792,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#pgcomponent">Sequence[Pg<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_dow_python">
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -1994,8 +1802,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_time_python">
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -2005,8 +1812,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pg_python">
 <a href="#state_pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -2015,8 +1821,7 @@ UTC time in HH:mm:ss format.
         <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pg_user_config_python">
 <a href="#state_pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
@@ -2026,8 +1831,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2043,8 +1847,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2055,8 +1858,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_vpc_id_python">
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -2070,8 +1872,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_host_python">
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -2080,8 +1881,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_integrations_python">
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -2090,8 +1890,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#pgserviceintegration">Sequence[Pg<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2102,8 +1901,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_password_python">
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -2112,8 +1910,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_port_python">
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -2122,8 +1919,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -2132,8 +1928,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_uri_python">
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2142,8 +1937,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_username_python">
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -2152,8 +1946,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2162,8 +1955,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -2176,8 +1968,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2192,9 +1983,7 @@ deletion is done.
 <h4 id="pgcomponent">Pg<wbr>Component</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2202,8 +1991,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2212,8 +2000,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2221,8 +2008,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2231,8 +2017,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2240,8 +2025,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2250,8 +2034,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2259,14 +2042,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2274,8 +2054,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2284,8 +2063,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2293,8 +2071,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2303,8 +2080,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2312,8 +2088,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2322,8 +2097,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2331,14 +2105,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2346,8 +2117,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2356,8 +2126,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2365,8 +2134,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2375,8 +2143,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2384,8 +2151,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2394,8 +2160,7 @@ deletion is done.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2403,14 +2168,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2418,8 +2180,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2428,8 +2189,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2437,8 +2197,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2447,8 +2206,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2456,8 +2214,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2466,8 +2223,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2475,16 +2231,13 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpg">Pg<wbr>Pg</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -2493,8 +2246,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2503,8 +2255,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2513,8 +2264,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2523,8 +2273,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicauri_csharp">
 <a href="#replicauri_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Uri</a>
@@ -2533,8 +2282,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_csharp">
 <a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Sslmode</a>
@@ -2543,8 +2291,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2553,8 +2300,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2563,14 +2309,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -2579,8 +2322,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2589,8 +2331,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2599,8 +2340,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2609,8 +2349,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicauri_go">
 <a href="#replicauri_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Uri</a>
@@ -2619,8 +2358,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_go">
 <a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Sslmode</a>
@@ -2629,8 +2367,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2639,8 +2376,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2649,14 +2385,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -2665,8 +2398,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2675,8 +2407,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2685,8 +2416,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2695,8 +2425,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicauri_nodejs">
 <a href="#replicauri_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Uri</a>
@@ -2705,8 +2434,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_nodejs">
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">sslmode</a>
@@ -2715,8 +2443,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2725,8 +2452,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2735,14 +2461,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_python">
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -2751,8 +2474,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2761,8 +2483,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2771,8 +2492,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2781,8 +2501,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_uri_python">
 <a href="#replica_uri_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>uri</a>
@@ -2791,8 +2510,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_python">
 <a href="#sslmode_python" style="color: inherit; text-decoration: inherit;">sslmode</a>
@@ -2801,8 +2519,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2811,8 +2528,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2821,16 +2537,13 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -2840,8 +2553,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -2851,8 +2563,7 @@ be set only when a new service is being created.*
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_csharp">
 <a href="#backuphour_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Hour</a>
@@ -2862,8 +2573,7 @@ is being created.*
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_csharp">
 <a href="#backupminute_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
@@ -2873,8 +2583,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2883,8 +2592,7 @@ is only started if previous backup has already completed.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_csharp">
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -2893,8 +2601,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -2903,8 +2610,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgreadreplica_csharp">
 <a href="#pgreadreplica_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Read<wbr>Replica</a>
@@ -2913,8 +2619,7 @@ is only started if previous backup has already completed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgservicetoforkfrom_csharp">
 <a href="#pgservicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2924,8 +2629,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgversion_csharp">
 <a href="#pgversion_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Version</a>
@@ -2934,8 +2638,7 @@ This has effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_csharp">
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -2944,8 +2647,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pglookout_csharp">
 <a href="#pglookout_csharp" style="color: inherit; text-decoration: inherit;">Pglookout</a>
@@ -2954,8 +2656,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2964,8 +2665,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2974,8 +2674,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2985,8 +2684,7 @@ This has effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2995,8 +2693,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_csharp">
 <a href="#recoverytargettime_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Time</a>
@@ -3006,8 +2703,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3017,8 +2713,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedbufferspercentage_csharp">
 <a href="#sharedbufferspercentage_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Buffers<wbr>Percentage</a>
@@ -3029,8 +2724,7 @@ when a new service is being created.
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronousreplication_csharp">
 <a href="#synchronousreplication_csharp" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
@@ -3040,8 +2734,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timescaledb_csharp">
 <a href="#timescaledb_csharp" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
@@ -3050,8 +2743,7 @@ also needs to support synchronous replication.
         <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -3061,8 +2753,7 @@ also needs to support synchronous replication.
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workmem_csharp">
 <a href="#workmem_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Mem</a>
@@ -3073,14 +2764,11 @@ exposed by default. Options: `aiven` or `timescale`.
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
 total RAM (up to 32MB).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -3090,8 +2778,7 @@ total RAM (up to 32MB).
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -3101,8 +2788,7 @@ be set only when a new service is being created.*
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_go">
 <a href="#backuphour_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Hour</a>
@@ -3112,8 +2798,7 @@ is being created.*
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_go">
 <a href="#backupminute_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
@@ -3123,8 +2808,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -3133,8 +2817,7 @@ is only started if previous backup has already completed.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_go">
 <a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -3143,8 +2826,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_go">
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -3153,8 +2835,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgreadreplica_go">
 <a href="#pgreadreplica_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Read<wbr>Replica</a>
@@ -3163,8 +2844,7 @@ is only started if previous backup has already completed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgservicetoforkfrom_go">
 <a href="#pgservicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3174,8 +2854,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgversion_go">
 <a href="#pgversion_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Version</a>
@@ -3184,8 +2863,7 @@ This has effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_go">
 <a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -3194,8 +2872,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pglookout_go">
 <a href="#pglookout_go" style="color: inherit; text-decoration: inherit;">Pglookout</a>
@@ -3204,8 +2881,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -3214,8 +2890,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -3224,8 +2899,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -3235,8 +2909,7 @@ This has effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -3245,8 +2918,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_go">
 <a href="#recoverytargettime_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Time</a>
@@ -3256,8 +2928,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3267,8 +2938,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedbufferspercentage_go">
 <a href="#sharedbufferspercentage_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Buffers<wbr>Percentage</a>
@@ -3279,8 +2949,7 @@ when a new service is being created.
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronousreplication_go">
 <a href="#synchronousreplication_go" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
@@ -3290,8 +2959,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timescaledb_go">
 <a href="#timescaledb_go" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
@@ -3300,8 +2968,7 @@ also needs to support synchronous replication.
         <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -3311,8 +2978,7 @@ also needs to support synchronous replication.
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workmem_go">
 <a href="#workmem_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Mem</a>
@@ -3323,14 +2989,11 @@ exposed by default. Options: `aiven` or `timescale`.
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
 total RAM (up to 32MB).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -3340,8 +3003,7 @@ total RAM (up to 32MB).
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -3351,8 +3013,7 @@ be set only when a new service is being created.*
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_nodejs">
 <a href="#backuphour_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
@@ -3362,8 +3023,7 @@ is being created.*
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_nodejs">
 <a href="#backupminute_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
@@ -3373,8 +3033,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -3383,8 +3042,7 @@ is only started if previous backup has already completed.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_nodejs">
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -3393,8 +3051,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -3403,8 +3060,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgreadreplica_nodejs">
 <a href="#pgreadreplica_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Read<wbr>Replica</a>
@@ -3413,8 +3069,7 @@ is only started if previous backup has already completed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgservicetoforkfrom_nodejs">
 <a href="#pgservicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3424,8 +3079,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgversion_nodejs">
 <a href="#pgversion_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Version</a>
@@ -3434,8 +3088,7 @@ This has effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_nodejs">
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -3444,8 +3097,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pglookout_nodejs">
 <a href="#pglookout_nodejs" style="color: inherit; text-decoration: inherit;">pglookout</a>
@@ -3454,8 +3106,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -3464,8 +3115,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -3474,8 +3124,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
@@ -3485,8 +3134,7 @@ This has effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -3495,8 +3143,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_nodejs">
 <a href="#recoverytargettime_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
@@ -3506,8 +3153,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3517,8 +3163,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedbufferspercentage_nodejs">
 <a href="#sharedbufferspercentage_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Buffers<wbr>Percentage</a>
@@ -3529,8 +3174,7 @@ when a new service is being created.
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronousreplication_nodejs">
 <a href="#synchronousreplication_nodejs" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
@@ -3540,8 +3184,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timescaledb_nodejs">
 <a href="#timescaledb_nodejs" style="color: inherit; text-decoration: inherit;">timescaledb</a>
@@ -3550,8 +3193,7 @@ also needs to support synchronous replication.
         <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -3561,8 +3203,7 @@ also needs to support synchronous replication.
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workmem_nodejs">
 <a href="#workmem_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Mem</a>
@@ -3573,14 +3214,11 @@ exposed by default. Options: `aiven` or `timescale`.
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
 total RAM (up to 32MB).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -3590,8 +3228,7 @@ total RAM (up to 32MB).
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -3601,8 +3238,7 @@ be set only when a new service is being created.*
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_hour_python">
 <a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
@@ -3612,8 +3248,7 @@ is being created.*
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_minute_python">
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
@@ -3623,8 +3258,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -3633,8 +3267,7 @@ is only started if previous backup has already completed.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_python">
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -3643,8 +3276,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -3653,8 +3285,7 @@ is only started if previous backup has already completed.
         <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_read_replica_python">
 <a href="#pg_read_replica_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>read_<wbr>replica</a>
@@ -3663,8 +3294,7 @@ is only started if previous backup has already completed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_service_to_fork_from_python">
 <a href="#pg_service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3674,8 +3304,7 @@ is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_version_python">
 <a href="#pg_version_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>version</a>
@@ -3684,8 +3313,7 @@ This has effect only when a new service is being created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_python">
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -3694,8 +3322,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pglookout_python">
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
@@ -3704,8 +3331,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -3714,8 +3340,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -3724,8 +3349,7 @@ This has effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3735,8 +3359,7 @@ This has effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -3745,8 +3368,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_target_time_python">
 <a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
@@ -3756,8 +3378,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3767,8 +3388,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_buffers_percentage_python">
 <a href="#shared_buffers_percentage_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>buffers_<wbr>percentage</a>
@@ -3779,8 +3399,7 @@ when a new service is being created.
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
 the shared_buffers configuration value. The absolute maximum is 12 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronous_replication_python">
 <a href="#synchronous_replication_python" style="color: inherit; text-decoration: inherit;">synchronous_<wbr>replication</a>
@@ -3790,8 +3409,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timescaledb_python">
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
@@ -3800,8 +3418,7 @@ also needs to support synchronous replication.
         <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_python">
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -3811,8 +3428,7 @@ also needs to support synchronous replication.
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="work_mem_python">
 <a href="#work_mem_python" style="color: inherit; text-decoration: inherit;">work_<wbr>mem</a>
@@ -3823,16 +3439,13 @@ exposed by default. Options: `aiven` or `timescale`.
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
 total RAM (up to 32MB).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -3841,8 +3454,7 @@ total RAM (up to 32MB).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3851,8 +3463,7 @@ total RAM (up to 32MB).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_csharp">
 <a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -3862,8 +3473,7 @@ total RAM (up to 32MB).
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3872,8 +3482,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3882,8 +3491,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -3892,8 +3500,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3902,14 +3509,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -3918,8 +3522,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3928,8 +3531,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_go">
 <a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -3939,8 +3541,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3949,8 +3550,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3959,8 +3559,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -3969,8 +3568,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3979,14 +3577,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -3995,8 +3590,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4005,8 +3599,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_nodejs">
 <a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
@@ -4016,8 +3609,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -4026,8 +3618,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4036,8 +3627,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -4046,8 +3636,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4056,14 +3645,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_python">
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -4072,8 +3658,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4082,8 +3667,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_dbs_python">
 <a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
@@ -4093,8 +3677,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -4103,8 +3686,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4113,8 +3695,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -4123,8 +3704,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4133,16 +3713,13 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzescalefactor_csharp">
 <a href="#autovacuumanalyzescalefactor_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Analyze<wbr>Scale<wbr>Factor</a>
@@ -4153,8 +3730,7 @@ migration (supported by MySQL only at the moment)
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzethreshold_csharp">
 <a href="#autovacuumanalyzethreshold_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Analyze<wbr>Threshold</a>
@@ -4164,8 +3740,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumfreezemaxage_csharp">
 <a href="#autovacuumfreezemaxage_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Freeze<wbr>Max<wbr>Age</a>
@@ -4177,8 +3752,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
 wraparound within the table. Note that the system will launch autovacuum processes to prevent wraparound
 even when autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuummaxworkers_csharp">
 <a href="#autovacuummaxworkers_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Max<wbr>Workers</a>
@@ -4189,8 +3763,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
 can only be set at server start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumnaptime_csharp">
 <a href="#autovacuumnaptime_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Naptime</a>
@@ -4200,8 +3773,7 @@ can only be set at server start.
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostdelay_csharp">
 <a href="#autovacuumvacuumcostdelay_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Cost<wbr>Delay</a>
@@ -4212,8 +3784,7 @@ given database. The delay is measured in seconds, and the default is one minute.
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
 used. The default value is 20 milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostlimit_csharp">
 <a href="#autovacuumvacuumcostlimit_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Cost<wbr>Limit</a>
@@ -4224,8 +3795,7 @@ used. The default value is 20 milliseconds.
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
 value will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumscalefactor_csharp">
 <a href="#autovacuumvacuumscalefactor_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Scale<wbr>Factor</a>
@@ -4235,8 +3805,7 @@ value will be used.
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumthreshold_csharp">
 <a href="#autovacuumvacuumthreshold_csharp" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Threshold</a>
@@ -4246,8 +3815,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlocktimeout_csharp">
 <a href="#deadlocktimeout_csharp" style="color: inherit; text-decoration: inherit;">Deadlock<wbr>Timeout</a>
@@ -4257,8 +3825,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idleintransactionsessiontimeout_csharp">
 <a href="#idleintransactionsessiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
@@ -4268,8 +3835,7 @@ checking to see if there is a deadlock condition.
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jit_csharp">
 <a href="#jit_csharp" style="color: inherit; text-decoration: inherit;">Jit</a>
@@ -4278,8 +3844,7 @@ this number of milliseconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logautovacuumminduration_csharp">
 <a href="#logautovacuumminduration_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Autovacuum<wbr>Min<wbr>Duration</a>
@@ -4290,8 +3855,7 @@ this number of milliseconds.
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
 actions. Minus-one (the default) disables logging autovacuum actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logerrorverbosity_csharp">
 <a href="#logerrorverbosity_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Error<wbr>Verbosity</a>
@@ -4301,8 +3865,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmindurationstatement_csharp">
 <a href="#logmindurationstatement_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
@@ -4312,8 +3875,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of 
 milliseconds to run, -1 disables
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_csharp">
 <a href="#maxfilesperprocess_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
@@ -4322,8 +3884,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlockspertransaction_csharp">
 <a href="#maxlockspertransaction_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -4332,8 +3893,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlogicalreplicationworkers_csharp">
 <a href="#maxlogicalreplicationworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
@@ -4343,8 +3903,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkers_csharp">
 <a href="#maxparallelworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Workers</a>
@@ -4354,8 +3913,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkerspergather_csharp">
 <a href="#maxparallelworkerspergather_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Workers<wbr>Per<wbr>Gather</a>
@@ -4365,8 +3923,7 @@ support for parallel queries.
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpredlockspertransaction_csharp">
 <a href="#maxpredlockspertransaction_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pred<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -4375,8 +3932,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpreparedtransactions_csharp">
 <a href="#maxpreparedtransactions_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prepared<wbr>Transactions</a>
@@ -4385,8 +3941,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicationslots_csharp">
 <a href="#maxreplicationslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
@@ -4395,8 +3950,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstackdepth_csharp">
 <a href="#maxstackdepth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
@@ -4405,8 +3959,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbyarchivedelay_csharp">
 <a href="#maxstandbyarchivedelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Archive<wbr>Delay</a>
@@ -4415,8 +3968,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbystreamingdelay_csharp">
 <a href="#maxstandbystreamingdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
@@ -4425,8 +3977,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwalsenders_csharp">
 <a href="#maxwalsenders_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
@@ -4435,8 +3986,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkerprocesses_csharp">
 <a href="#maxworkerprocesses_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Worker<wbr>Processes</a>
@@ -4453,8 +4003,7 @@ background tasks.
 to track top-level statements (those issued directly by clients), all to also track nested
 statements (such as statements invoked within functions), or none to disable statement statistics
 collection. The default value is top.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotinterval_csharp">
 <a href="#pgpartmanbgwdotinterval_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
@@ -4462,8 +4011,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotrole_csharp">
 <a href="#pgpartmanbgwdotrole_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
@@ -4471,8 +4019,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgstatstatementsdottrack_csharp">
 <a href="#pgstatstatementsdottrack_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
@@ -4480,8 +4027,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempfilelimit_csharp">
 <a href="#tempfilelimit_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>File<wbr>Limit</a>
@@ -4490,8 +4036,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -4500,8 +4045,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackactivityquerysize_csharp">
 <a href="#trackactivityquerysize_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Activity<wbr>Query<wbr>Size</a>
@@ -4511,8 +4055,7 @@ collection. The default value is top.
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackcommittimestamp_csharp">
 <a href="#trackcommittimestamp_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Commit<wbr>Timestamp</a>
@@ -4521,8 +4064,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackfunctions_csharp">
 <a href="#trackfunctions_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Functions</a>
@@ -4531,8 +4073,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
@@ -4542,8 +4083,7 @@ executing command for each active session.
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walwriterdelay_csharp">
 <a href="#walwriterdelay_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Writer<wbr>Delay</a>
@@ -4553,14 +4093,11 @@ this amount of time, in milliseconds.
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzescalefactor_go">
 <a href="#autovacuumanalyzescalefactor_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Analyze<wbr>Scale<wbr>Factor</a>
@@ -4571,8 +4108,7 @@ to lower than the default 200ms may negatively impact performance
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzethreshold_go">
 <a href="#autovacuumanalyzethreshold_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Analyze<wbr>Threshold</a>
@@ -4582,8 +4118,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumfreezemaxage_go">
 <a href="#autovacuumfreezemaxage_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Freeze<wbr>Max<wbr>Age</a>
@@ -4595,8 +4130,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
 wraparound within the table. Note that the system will launch autovacuum processes to prevent wraparound
 even when autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuummaxworkers_go">
 <a href="#autovacuummaxworkers_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Max<wbr>Workers</a>
@@ -4607,8 +4141,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
 can only be set at server start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumnaptime_go">
 <a href="#autovacuumnaptime_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Naptime</a>
@@ -4618,8 +4151,7 @@ can only be set at server start.
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostdelay_go">
 <a href="#autovacuumvacuumcostdelay_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Cost<wbr>Delay</a>
@@ -4630,8 +4162,7 @@ given database. The delay is measured in seconds, and the default is one minute.
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
 used. The default value is 20 milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostlimit_go">
 <a href="#autovacuumvacuumcostlimit_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Cost<wbr>Limit</a>
@@ -4642,8 +4173,7 @@ used. The default value is 20 milliseconds.
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
 value will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumscalefactor_go">
 <a href="#autovacuumvacuumscalefactor_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Scale<wbr>Factor</a>
@@ -4653,8 +4183,7 @@ value will be used.
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumthreshold_go">
 <a href="#autovacuumvacuumthreshold_go" style="color: inherit; text-decoration: inherit;">Autovacuum<wbr>Vacuum<wbr>Threshold</a>
@@ -4664,8 +4193,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlocktimeout_go">
 <a href="#deadlocktimeout_go" style="color: inherit; text-decoration: inherit;">Deadlock<wbr>Timeout</a>
@@ -4675,8 +4203,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idleintransactionsessiontimeout_go">
 <a href="#idleintransactionsessiontimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
@@ -4686,8 +4213,7 @@ checking to see if there is a deadlock condition.
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jit_go">
 <a href="#jit_go" style="color: inherit; text-decoration: inherit;">Jit</a>
@@ -4696,8 +4222,7 @@ this number of milliseconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logautovacuumminduration_go">
 <a href="#logautovacuumminduration_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Autovacuum<wbr>Min<wbr>Duration</a>
@@ -4708,8 +4233,7 @@ this number of milliseconds.
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
 actions. Minus-one (the default) disables logging autovacuum actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logerrorverbosity_go">
 <a href="#logerrorverbosity_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Error<wbr>Verbosity</a>
@@ -4719,8 +4243,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmindurationstatement_go">
 <a href="#logmindurationstatement_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Min<wbr>Duration<wbr>Statement</a>
@@ -4730,8 +4253,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of 
 milliseconds to run, -1 disables
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_go">
 <a href="#maxfilesperprocess_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Files<wbr>Per<wbr>Process</a>
@@ -4740,8 +4262,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlockspertransaction_go">
 <a href="#maxlockspertransaction_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -4750,8 +4271,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlogicalreplicationworkers_go">
 <a href="#maxlogicalreplicationworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Logical<wbr>Replication<wbr>Workers</a>
@@ -4761,8 +4281,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkers_go">
 <a href="#maxparallelworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Workers</a>
@@ -4772,8 +4291,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkerspergather_go">
 <a href="#maxparallelworkerspergather_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Workers<wbr>Per<wbr>Gather</a>
@@ -4783,8 +4301,7 @@ support for parallel queries.
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpredlockspertransaction_go">
 <a href="#maxpredlockspertransaction_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pred<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -4793,8 +4310,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpreparedtransactions_go">
 <a href="#maxpreparedtransactions_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prepared<wbr>Transactions</a>
@@ -4803,8 +4319,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicationslots_go">
 <a href="#maxreplicationslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replication<wbr>Slots</a>
@@ -4813,8 +4328,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstackdepth_go">
 <a href="#maxstackdepth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Stack<wbr>Depth</a>
@@ -4823,8 +4337,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbyarchivedelay_go">
 <a href="#maxstandbyarchivedelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Archive<wbr>Delay</a>
@@ -4833,8 +4346,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbystreamingdelay_go">
 <a href="#maxstandbystreamingdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
@@ -4843,8 +4355,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwalsenders_go">
 <a href="#maxwalsenders_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wal<wbr>Senders</a>
@@ -4853,8 +4364,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkerprocesses_go">
 <a href="#maxworkerprocesses_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Worker<wbr>Processes</a>
@@ -4871,8 +4381,7 @@ background tasks.
 to track top-level statements (those issued directly by clients), all to also track nested
 statements (such as statements invoked within functions), or none to disable statement statistics
 collection. The default value is top.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotinterval_go">
 <a href="#pgpartmanbgwdotinterval_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
@@ -4880,8 +4389,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotrole_go">
 <a href="#pgpartmanbgwdotrole_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
@@ -4889,8 +4397,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgstatstatementsdottrack_go">
 <a href="#pgstatstatementsdottrack_go" style="color: inherit; text-decoration: inherit;">Pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
@@ -4898,8 +4405,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempfilelimit_go">
 <a href="#tempfilelimit_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>File<wbr>Limit</a>
@@ -4908,8 +4414,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -4918,8 +4423,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackactivityquerysize_go">
 <a href="#trackactivityquerysize_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Activity<wbr>Query<wbr>Size</a>
@@ -4929,8 +4433,7 @@ collection. The default value is top.
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackcommittimestamp_go">
 <a href="#trackcommittimestamp_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Commit<wbr>Timestamp</a>
@@ -4939,8 +4442,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackfunctions_go">
 <a href="#trackfunctions_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Functions</a>
@@ -4949,8 +4451,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_go">
 <a href="#walsendertimeout_go" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
@@ -4960,8 +4461,7 @@ executing command for each active session.
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walwriterdelay_go">
 <a href="#walwriterdelay_go" style="color: inherit; text-decoration: inherit;">Wal<wbr>Writer<wbr>Delay</a>
@@ -4971,14 +4471,11 @@ this amount of time, in milliseconds.
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzescalefactor_nodejs">
 <a href="#autovacuumanalyzescalefactor_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Scale<wbr>Factor</a>
@@ -4989,8 +4486,7 @@ to lower than the default 200ms may negatively impact performance
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumanalyzethreshold_nodejs">
 <a href="#autovacuumanalyzethreshold_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Threshold</a>
@@ -5000,8 +4496,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumfreezemaxage_nodejs">
 <a href="#autovacuumfreezemaxage_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Freeze<wbr>Max<wbr>Age</a>
@@ -5013,8 +4508,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
 wraparound within the table. Note that the system will launch autovacuum processes to prevent wraparound
 even when autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuummaxworkers_nodejs">
 <a href="#autovacuummaxworkers_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Max<wbr>Workers</a>
@@ -5025,8 +4519,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
 can only be set at server start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumnaptime_nodejs">
 <a href="#autovacuumnaptime_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Naptime</a>
@@ -5036,8 +4529,7 @@ can only be set at server start.
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostdelay_nodejs">
 <a href="#autovacuumvacuumcostdelay_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Delay</a>
@@ -5048,8 +4540,7 @@ given database. The delay is measured in seconds, and the default is one minute.
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
 used. The default value is 20 milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumcostlimit_nodejs">
 <a href="#autovacuumvacuumcostlimit_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Limit</a>
@@ -5060,8 +4551,7 @@ used. The default value is 20 milliseconds.
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
 value will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumscalefactor_nodejs">
 <a href="#autovacuumvacuumscalefactor_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Scale<wbr>Factor</a>
@@ -5071,8 +4561,7 @@ value will be used.
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuumvacuumthreshold_nodejs">
 <a href="#autovacuumvacuumthreshold_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Threshold</a>
@@ -5082,8 +4571,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlocktimeout_nodejs">
 <a href="#deadlocktimeout_nodejs" style="color: inherit; text-decoration: inherit;">deadlock<wbr>Timeout</a>
@@ -5093,8 +4581,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idleintransactionsessiontimeout_nodejs">
 <a href="#idleintransactionsessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
@@ -5104,8 +4591,7 @@ checking to see if there is a deadlock condition.
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jit_nodejs">
 <a href="#jit_nodejs" style="color: inherit; text-decoration: inherit;">jit</a>
@@ -5114,8 +4600,7 @@ this number of milliseconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logautovacuumminduration_nodejs">
 <a href="#logautovacuumminduration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Autovacuum<wbr>Min<wbr>Duration</a>
@@ -5126,8 +4611,7 @@ this number of milliseconds.
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
 actions. Minus-one (the default) disables logging autovacuum actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logerrorverbosity_nodejs">
 <a href="#logerrorverbosity_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Error<wbr>Verbosity</a>
@@ -5137,8 +4621,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmindurationstatement_nodejs">
 <a href="#logmindurationstatement_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
@@ -5148,8 +4631,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of 
 milliseconds to run, -1 disables
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesperprocess_nodejs">
 <a href="#maxfilesperprocess_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Files<wbr>Per<wbr>Process</a>
@@ -5158,8 +4640,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlockspertransaction_nodejs">
 <a href="#maxlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -5168,8 +4649,7 @@ milliseconds to run, -1 disables
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlogicalreplicationworkers_nodejs">
 <a href="#maxlogicalreplicationworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Logical<wbr>Replication<wbr>Workers</a>
@@ -5179,8 +4659,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkers_nodejs">
 <a href="#maxparallelworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers</a>
@@ -5190,8 +4669,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelworkerspergather_nodejs">
 <a href="#maxparallelworkerspergather_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers<wbr>Per<wbr>Gather</a>
@@ -5201,8 +4679,7 @@ support for parallel queries.
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpredlockspertransaction_nodejs">
 <a href="#maxpredlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pred<wbr>Locks<wbr>Per<wbr>Transaction</a>
@@ -5211,8 +4688,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpreparedtransactions_nodejs">
 <a href="#maxpreparedtransactions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prepared<wbr>Transactions</a>
@@ -5221,8 +4697,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreplicationslots_nodejs">
 <a href="#maxreplicationslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replication<wbr>Slots</a>
@@ -5231,8 +4706,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstackdepth_nodejs">
 <a href="#maxstackdepth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stack<wbr>Depth</a>
@@ -5241,8 +4715,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbyarchivedelay_nodejs">
 <a href="#maxstandbyarchivedelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Archive<wbr>Delay</a>
@@ -5251,8 +4724,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxstandbystreamingdelay_nodejs">
 <a href="#maxstandbystreamingdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
@@ -5261,8 +4733,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwalsenders_nodejs">
 <a href="#maxwalsenders_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wal<wbr>Senders</a>
@@ -5271,8 +4742,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkerprocesses_nodejs">
 <a href="#maxworkerprocesses_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Worker<wbr>Processes</a>
@@ -5289,8 +4759,7 @@ background tasks.
 to track top-level statements (those issued directly by clients), all to also track nested
 statements (such as statements invoked within functions), or none to disable statement statistics
 collection. The default value is top.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotinterval_nodejs">
 <a href="#pgpartmanbgwdotinterval_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
@@ -5298,8 +4767,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpartmanbgwdotrole_nodejs">
 <a href="#pgpartmanbgwdotrole_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
@@ -5307,8 +4775,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgstatstatementsdottrack_nodejs">
 <a href="#pgstatstatementsdottrack_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
@@ -5316,8 +4783,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempfilelimit_nodejs">
 <a href="#tempfilelimit_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>File<wbr>Limit</a>
@@ -5326,8 +4792,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -5336,8 +4801,7 @@ collection. The default value is top.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackactivityquerysize_nodejs">
 <a href="#trackactivityquerysize_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Activity<wbr>Query<wbr>Size</a>
@@ -5347,8 +4811,7 @@ collection. The default value is top.
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackcommittimestamp_nodejs">
 <a href="#trackcommittimestamp_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Commit<wbr>Timestamp</a>
@@ -5357,8 +4820,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackfunctions_nodejs">
 <a href="#trackfunctions_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Functions</a>
@@ -5367,8 +4829,7 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
@@ -5378,8 +4839,7 @@ executing command for each active session.
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walwriterdelay_nodejs">
 <a href="#walwriterdelay_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Writer<wbr>Delay</a>
@@ -5389,14 +4849,11 @@ this amount of time, in milliseconds.
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_analyze_scale_factor_python">
 <a href="#autovacuum_analyze_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>scale_<wbr>factor</a>
@@ -5407,8 +4864,7 @@ to lower than the default 200ms may negatively impact performance
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_analyze_threshold_python">
 <a href="#autovacuum_analyze_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>threshold</a>
@@ -5418,8 +4874,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_freeze_max_age_python">
 <a href="#autovacuum_freeze_max_age_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>freeze_<wbr>max_<wbr>age</a>
@@ -5431,8 +4886,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
 wraparound within the table. Note that the system will launch autovacuum processes to prevent wraparound
 even when autovacuum is otherwise disabled. This parameter will cause the server to be restarted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_max_workers_python">
 <a href="#autovacuum_max_workers_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>max_<wbr>workers</a>
@@ -5443,8 +4897,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
 can only be set at server start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_naptime_python">
 <a href="#autovacuum_naptime_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>naptime</a>
@@ -5454,8 +4907,7 @@ can only be set at server start.
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_vacuum_cost_delay_python">
 <a href="#autovacuum_vacuum_cost_delay_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>delay</a>
@@ -5466,8 +4918,7 @@ given database. The delay is measured in seconds, and the default is one minute.
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
 used. The default value is 20 milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_vacuum_cost_limit_python">
 <a href="#autovacuum_vacuum_cost_limit_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>limit</a>
@@ -5478,8 +4929,7 @@ used. The default value is 20 milliseconds.
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
 value will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_vacuum_scale_factor_python">
 <a href="#autovacuum_vacuum_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>scale_<wbr>factor</a>
@@ -5489,8 +4939,7 @@ value will be used.
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autovacuum_vacuum_threshold_python">
 <a href="#autovacuum_vacuum_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>threshold</a>
@@ -5500,8 +4949,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlock_timeout_python">
 <a href="#deadlock_timeout_python" style="color: inherit; text-decoration: inherit;">deadlock_<wbr>timeout</a>
@@ -5511,8 +4959,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_in_transaction_session_timeout_python">
 <a href="#idle_in_transaction_session_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>in_<wbr>transaction_<wbr>session_<wbr>timeout</a>
@@ -5522,8 +4969,7 @@ checking to see if there is a deadlock condition.
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jit_python">
 <a href="#jit_python" style="color: inherit; text-decoration: inherit;">jit</a>
@@ -5532,8 +4978,7 @@ this number of milliseconds.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_autovacuum_min_duration_python">
 <a href="#log_autovacuum_min_duration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>autovacuum_<wbr>min_<wbr>duration</a>
@@ -5544,8 +4989,7 @@ this number of milliseconds.
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
 actions. Minus-one (the default) disables logging autovacuum actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_error_verbosity_python">
 <a href="#log_error_verbosity_python" style="color: inherit; text-decoration: inherit;">log_<wbr>error_<wbr>verbosity</a>
@@ -5555,8 +4999,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_min_duration_statement_python">
 <a href="#log_min_duration_statement_python" style="color: inherit; text-decoration: inherit;">log_<wbr>min_<wbr>duration_<wbr>statement</a>
@@ -5566,8 +5009,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of 
 milliseconds to run, -1 disables
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_files_per_process_python">
 <a href="#max_files_per_process_python" style="color: inherit; text-decoration: inherit;">max_<wbr>files_<wbr>per_<wbr>process</a>
@@ -5576,8 +5018,7 @@ milliseconds to run, -1 disables
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_locks_per_transaction_python">
 <a href="#max_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>locks_<wbr>per_<wbr>transaction</a>
@@ -5586,8 +5027,7 @@ milliseconds to run, -1 disables
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_logical_replication_workers_python">
 <a href="#max_logical_replication_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>logical_<wbr>replication_<wbr>workers</a>
@@ -5597,8 +5037,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_parallel_workers_python">
 <a href="#max_parallel_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers</a>
@@ -5608,8 +5047,7 @@ milliseconds to run, -1 disables
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_parallel_workers_per_gather_python">
 <a href="#max_parallel_workers_per_gather_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers_<wbr>per_<wbr>gather</a>
@@ -5619,8 +5057,7 @@ support for parallel queries.
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_pred_locks_per_transaction_python">
 <a href="#max_pred_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pred_<wbr>locks_<wbr>per_<wbr>transaction</a>
@@ -5629,8 +5066,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_prepared_transactions_python">
 <a href="#max_prepared_transactions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prepared_<wbr>transactions</a>
@@ -5639,8 +5075,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_replication_slots_python">
 <a href="#max_replication_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replication_<wbr>slots</a>
@@ -5649,8 +5084,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_stack_depth_python">
 <a href="#max_stack_depth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stack_<wbr>depth</a>
@@ -5659,8 +5093,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_standby_archive_delay_python">
 <a href="#max_standby_archive_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>archive_<wbr>delay</a>
@@ -5669,8 +5102,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_standby_streaming_delay_python">
 <a href="#max_standby_streaming_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>streaming_<wbr>delay</a>
@@ -5679,8 +5111,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_wal_senders_python">
 <a href="#max_wal_senders_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wal_<wbr>senders</a>
@@ -5689,8 +5120,7 @@ started by a single Gather or Gather Merge node.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_worker_processes_python">
 <a href="#max_worker_processes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>processes</a>
@@ -5707,8 +5137,7 @@ background tasks.
 to track top-level statements (those issued directly by clients), all to also track nested
 statements (such as statements invoked within functions), or none to disable statement statistics
 collection. The default value is top.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_partman_bgw_dot_interval_python">
 <a href="#pg_partman_bgw_dot_interval_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>interval</a>
@@ -5716,8 +5145,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_partman_bgw_dot_role_python">
 <a href="#pg_partman_bgw_dot_role_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>role</a>
@@ -5725,8 +5153,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pg_stat_statements_dot_track_python">
 <a href="#pg_stat_statements_dot_track_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>stat_<wbr>statements_<wbr>dot_<wbr>track</a>
@@ -5734,8 +5161,7 @@ collection. The default value is top.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temp_file_limit_python">
 <a href="#temp_file_limit_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>file_<wbr>limit</a>
@@ -5744,8 +5170,7 @@ collection. The default value is top.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -5754,8 +5179,7 @@ collection. The default value is top.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="track_activity_query_size_python">
 <a href="#track_activity_query_size_python" style="color: inherit; text-decoration: inherit;">track_<wbr>activity_<wbr>query_<wbr>size</a>
@@ -5765,8 +5189,7 @@ collection. The default value is top.
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="track_commit_timestamp_python">
 <a href="#track_commit_timestamp_python" style="color: inherit; text-decoration: inherit;">track_<wbr>commit_<wbr>timestamp</a>
@@ -5775,8 +5198,7 @@ executing command for each active session.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="track_functions_python">
 <a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
@@ -5785,8 +5207,7 @@ executing command for each active session.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wal_sender_timeout_python">
 <a href="#wal_sender_timeout_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>sender_<wbr>timeout</a>
@@ -5796,8 +5217,7 @@ executing command for each active session.
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wal_writer_delay_python">
 <a href="#wal_writer_delay_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>writer_<wbr>delay</a>
@@ -5807,16 +5227,13 @@ this amount of time, in milliseconds.
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autodbidletimeout_csharp">
 <a href="#autodbidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
@@ -5826,8 +5243,7 @@ to lower than the default 200ms may negatively impact performance
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbmaxdbconnections_csharp">
 <a href="#autodbmaxdbconnections_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
@@ -5837,8 +5253,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolmode_csharp">
 <a href="#autodbpoolmode_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
@@ -5847,8 +5262,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolsize_csharp">
 <a href="#autodbpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
@@ -5858,8 +5272,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorestartupparameters_csharp">
 <a href="#ignorestartupparameters_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
@@ -5868,8 +5281,7 @@ when a pool doesn't exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minpoolsize_csharp">
 <a href="#minpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
@@ -5880,8 +5292,7 @@ when a pool doesn't exist.
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
 effectively capped at the pool size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveridletimeout_csharp">
 <a href="#serveridletimeout_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
@@ -5891,8 +5302,7 @@ effectively capped at the pool size.
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlifetime_csharp">
 <a href="#serverlifetime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
@@ -5902,8 +5312,7 @@ it will be dropped. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverresetqueryalways_csharp">
 <a href="#serverresetqueryalways_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Reset<wbr>Query<wbr>Always</a>
@@ -5912,14 +5321,11 @@ longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autodbidletimeout_go">
 <a href="#autodbidletimeout_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
@@ -5929,8 +5335,7 @@ longer than this.
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbmaxdbconnections_go">
 <a href="#autodbmaxdbconnections_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
@@ -5940,8 +5345,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolmode_go">
 <a href="#autodbpoolmode_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
@@ -5950,8 +5354,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolsize_go">
 <a href="#autodbpoolsize_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
@@ -5961,8 +5364,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorestartupparameters_go">
 <a href="#ignorestartupparameters_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
@@ -5971,8 +5373,7 @@ when a pool doesn't exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minpoolsize_go">
 <a href="#minpoolsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
@@ -5983,8 +5384,7 @@ when a pool doesn't exist.
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
 effectively capped at the pool size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveridletimeout_go">
 <a href="#serveridletimeout_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
@@ -5994,8 +5394,7 @@ effectively capped at the pool size.
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlifetime_go">
 <a href="#serverlifetime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
@@ -6005,8 +5404,7 @@ it will be dropped. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverresetqueryalways_go">
 <a href="#serverresetqueryalways_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Reset<wbr>Query<wbr>Always</a>
@@ -6015,14 +5413,11 @@ longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autodbidletimeout_nodejs">
 <a href="#autodbidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Idle<wbr>Timeout</a>
@@ -6032,8 +5427,7 @@ longer than this.
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbmaxdbconnections_nodejs">
 <a href="#autodbmaxdbconnections_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Max<wbr>Db<wbr>Connections</a>
@@ -6043,8 +5437,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolmode_nodejs">
 <a href="#autodbpoolmode_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Mode</a>
@@ -6053,8 +5446,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodbpoolsize_nodejs">
 <a href="#autodbpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Size</a>
@@ -6064,8 +5456,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorestartupparameters_nodejs">
 <a href="#ignorestartupparameters_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Startup<wbr>Parameters</a>
@@ -6074,8 +5465,7 @@ when a pool doesn't exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minpoolsize_nodejs">
 <a href="#minpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pool<wbr>Size</a>
@@ -6086,8 +5476,7 @@ when a pool doesn't exist.
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
 effectively capped at the pool size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveridletimeout_nodejs">
 <a href="#serveridletimeout_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Idle<wbr>Timeout</a>
@@ -6097,8 +5486,7 @@ effectively capped at the pool size.
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlifetime_nodejs">
 <a href="#serverlifetime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Lifetime</a>
@@ -6108,8 +5496,7 @@ it will be dropped. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverresetqueryalways_nodejs">
 <a href="#serverresetqueryalways_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Reset<wbr>Query<wbr>Always</a>
@@ -6118,14 +5505,11 @@ longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autodb_idle_timeout_python">
 <a href="#autodb_idle_timeout_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>idle_<wbr>timeout</a>
@@ -6135,8 +5519,7 @@ longer than this.
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodb_max_db_connections_python">
 <a href="#autodb_max_db_connections_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>max_<wbr>db_<wbr>connections</a>
@@ -6146,8 +5529,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodb_pool_mode_python">
 <a href="#autodb_pool_mode_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>mode</a>
@@ -6156,8 +5538,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodb_pool_size_python">
 <a href="#autodb_pool_size_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>size</a>
@@ -6167,8 +5548,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_startup_parameters_python">
 <a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
@@ -6177,8 +5557,7 @@ when a pool doesn't exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_pool_size_python">
 <a href="#min_pool_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pool_<wbr>size</a>
@@ -6189,8 +5568,7 @@ when a pool doesn't exist.
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
 effectively capped at the pool size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_idle_timeout_python">
 <a href="#server_idle_timeout_python" style="color: inherit; text-decoration: inherit;">server_<wbr>idle_<wbr>timeout</a>
@@ -6200,8 +5578,7 @@ effectively capped at the pool size.
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_lifetime_python">
 <a href="#server_lifetime_python" style="color: inherit; text-decoration: inherit;">server_<wbr>lifetime</a>
@@ -6211,8 +5588,7 @@ it will be dropped. If 0 then timeout is disabled.
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_reset_query_always_python">
 <a href="#server_reset_query_always_python" style="color: inherit; text-decoration: inherit;">server_<wbr>reset_<wbr>query_<wbr>always</a>
@@ -6221,16 +5597,13 @@ longer than this.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxfailoverreplicationtimelag_csharp">
 <a href="#maxfailoverreplicationtimelag_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failover<wbr>Replication<wbr>Time<wbr>Lag</a>
@@ -6240,14 +5613,11 @@ longer than this.
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxfailoverreplicationtimelag_go">
 <a href="#maxfailoverreplicationtimelag_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failover<wbr>Replication<wbr>Time<wbr>Lag</a>
@@ -6257,14 +5627,11 @@ triggering database failover to standby
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxfailoverreplicationtimelag_nodejs">
 <a href="#maxfailoverreplicationtimelag_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failover<wbr>Replication<wbr>Time<wbr>Lag</a>
@@ -6274,14 +5641,11 @@ triggering database failover to standby
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_failover_replication_time_lag_python">
 <a href="#max_failover_replication_time_lag_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failover_<wbr>replication_<wbr>time_<wbr>lag</a>
@@ -6291,16 +5655,13 @@ triggering database failover to standby
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6309,8 +5670,7 @@ triggering database failover to standby
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_csharp">
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6319,8 +5679,7 @@ triggering database failover to standby
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6330,14 +5689,11 @@ triggering database failover to standby
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_go">
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6346,8 +5702,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_go">
 <a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6356,8 +5711,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6367,14 +5721,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6383,8 +5734,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_nodejs">
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6393,8 +5743,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6404,14 +5753,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6420,8 +5766,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_python">
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6430,8 +5775,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6441,16 +5785,13 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6459,8 +5800,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_csharp">
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6469,14 +5809,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_go">
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6485,8 +5822,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_go">
 <a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6495,14 +5831,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6511,8 +5844,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_nodejs">
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6521,14 +5853,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6537,8 +5866,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_python">
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6547,16 +5875,13 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_csharp">
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6565,8 +5890,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_csharp">
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6575,8 +5899,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6586,14 +5909,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_go">
 <a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
@@ -6602,8 +5922,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_go">
 <a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
@@ -6612,8 +5931,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6623,14 +5941,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_nodejs">
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6639,8 +5954,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_nodejs">
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6649,8 +5963,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6660,14 +5973,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pg_python">
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
@@ -6676,8 +5986,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgbouncer_python">
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
@@ -6686,8 +5995,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6697,16 +6005,13 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxbackgroundworkers_csharp">
 <a href="#maxbackgroundworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Background<wbr>Workers</a>
@@ -6717,14 +6022,11 @@ service nodes that are in a project VPC or another type of private network
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
 total number of concurrent background workers you want running at any given point in time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxbackgroundworkers_go">
 <a href="#maxbackgroundworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Background<wbr>Workers</a>
@@ -6735,14 +6037,11 @@ total number of concurrent background workers you want running at any given poin
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
 total number of concurrent background workers you want running at any given point in time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxbackgroundworkers_nodejs">
 <a href="#maxbackgroundworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Background<wbr>Workers</a>
@@ -6753,14 +6052,11 @@ total number of concurrent background workers you want running at any given poin
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
 total number of concurrent background workers you want running at any given point in time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_background_workers_python">
 <a href="#max_background_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>background_<wbr>workers</a>
@@ -6771,16 +6067,13 @@ total number of concurrent background workers you want running at any given poin
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
 total number of concurrent background workers you want running at any given point in time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgserviceintegration">Pg<wbr>Service<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -6788,8 +6081,7 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -6797,14 +6089,11 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -6812,8 +6101,7 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -6821,14 +6109,11 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -6836,8 +6121,7 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -6845,14 +6129,11 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -6860,8 +6141,7 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -6869,8 +6149,7 @@ total number of concurrent background workers you want running at any given poin
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -6881,6 +6160,6 @@ total number of concurrent background workers you want running at any given poin
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

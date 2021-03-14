@@ -15,11 +15,17 @@ The task will have all information to schedule a run against it.
 API Version: 2019-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Tasks_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -101,9 +107,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -176,9 +185,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -232,9 +244,12 @@ task = azure_native.containerregistry.Task("task",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -289,10 +304,17 @@ const task = new azure_native.containerregistry.Task("task", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Tasks_Create_WithSystemAndUserIdentities
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -378,13 +400,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -441,9 +469,12 @@ task = azure_native.containerregistry.Task("task",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -501,10 +532,17 @@ const task = new azure_native.containerregistry.Task("task", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Tasks_Create_WithUserIdentities
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -591,13 +629,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -655,9 +699,12 @@ task = azure_native.containerregistry.Task("task",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -716,10 +763,17 @@ const task = new azure_native.containerregistry.Task("task", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Tasks_Create_WithUserIdentities_WithSystemIdentity
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -801,9 +855,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -876,9 +933,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -932,9 +992,12 @@ task = azure_native.containerregistry.Task("task",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -989,9 +1052,16 @@ const task = new azure_native.containerregistry.Task("task", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Task Resource {#create}
@@ -1016,9 +1086,7 @@ const task = new azure_native.containerregistry.Task("task", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1026,9 +1094,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1036,9 +1102,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1046,10 +1110,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1075,9 +1136,7 @@ const task = new azure_native.containerregistry.Task("task", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1085,9 +1144,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1095,9 +1152,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1105,9 +1160,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1115,18 +1168,13 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1134,9 +1182,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1144,9 +1190,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1154,10 +1198,7 @@ const task = new azure_native.containerregistry.Task("task", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1172,9 +1213,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1182,8 +1221,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -1191,8 +1229,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1200,8 +1237,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="step_csharp">
 <a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
@@ -1209,8 +1245,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskstepproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_csharp">
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
@@ -1218,8 +1253,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1227,8 +1261,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1236,8 +1269,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1245,8 +1277,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1254,8 +1285,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#taskstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1263,8 +1293,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskname_csharp">
 <a href="#taskname_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
@@ -1272,8 +1301,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1281,8 +1309,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1290,14 +1317,11 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1305,8 +1329,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -1314,8 +1337,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1323,8 +1345,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="step_go">
 <a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
@@ -1332,8 +1353,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_go">
 <a href="#agentconfiguration_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
@@ -1341,8 +1361,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1350,8 +1369,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1359,8 +1377,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1368,8 +1385,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1377,8 +1393,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1386,8 +1401,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskname_go">
 <a href="#taskname_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
@@ -1395,8 +1409,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1404,8 +1417,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1413,14 +1425,11 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1428,8 +1437,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -1437,8 +1445,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1446,8 +1453,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="step_nodejs">
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
@@ -1455,8 +1461,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentconfiguration_nodejs">
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
@@ -1464,8 +1469,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1473,8 +1477,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1482,8 +1485,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1491,8 +1493,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1500,8 +1501,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1509,8 +1509,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskname_nodejs">
 <a href="#taskname_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Name</a>
@@ -1518,8 +1517,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1527,8 +1525,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1536,14 +1533,11 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1551,8 +1545,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -1560,8 +1553,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1569,8 +1561,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="step_python">
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
@@ -1578,8 +1569,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_configuration_python">
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
@@ -1587,8 +1577,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1596,8 +1585,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1605,8 +1593,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1614,8 +1601,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1623,8 +1609,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#taskstatus">Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1632,8 +1617,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="task_name_python">
 <a href="#task_name_python" style="color: inherit; text-decoration: inherit;">task_<wbr>name</a>
@@ -1641,8 +1625,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1650,8 +1633,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1659,8 +1641,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1671,9 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1681,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1690,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1699,8 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1708,8 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1717,14 +1692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1732,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1741,8 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1750,8 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1759,8 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1768,14 +1736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -1783,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1792,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1801,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1810,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1819,14 +1780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -1834,8 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1843,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1852,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1861,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1870,8 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1887,9 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="agentproperties">Agent<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1897,14 +1848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1912,14 +1860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1927,14 +1872,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1942,16 +1884,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1959,14 +1898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1974,14 +1910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1989,14 +1922,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -2004,78 +1934,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="architecture">Architecture</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Arm</dt>
-    <dd>arm</dd>
-    <dt>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Amd64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Arm</dt>
+    <dd>arm</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Architecture<wbr>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>Architecture<wbr>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Architecture<wbr>Arm</dt>
-    <dd>arm</dd>
-    <dt>Architecture<wbr>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Architecture<wbr>Amd64</dt>
+    <dd>amd64</dd><dt>Architecture<wbr>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Architecture<wbr>Arm</dt>
+    <dd>arm</dd><dt>Architecture<wbr>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Arm</dt>
-    <dd>arm</dd>
-    <dt>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Amd64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Arm</dt>
+    <dd>arm</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AMD64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>ARCHITECTURE_386</dt>
-    <dd>386</dd>
-    <dt>ARM</dt>
-    <dd>arm</dd>
-    <dt>ARM64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>AMD64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>ARCHITECTURE_386</dt>
+    <dd>386</dd><dt>ARM</dt>
+    <dd>arm</dd><dt>ARM64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 <h4 id="argumentresponse">Argument<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2083,8 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2092,8 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_csharp">
 <a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
@@ -2101,14 +2002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2116,8 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2125,8 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_go">
 <a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
@@ -2134,14 +2030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2149,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2158,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_nodejs">
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
@@ -2167,14 +2058,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2182,8 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2191,8 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_secret_python">
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
@@ -2200,16 +2086,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authinfo">Auth<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -2217,8 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2226,8 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_csharp">
 <a href="#expiresin_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -2235,8 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_csharp">
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -2244,8 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2253,14 +2132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -2268,8 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2277,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_go">
 <a href="#expiresin_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -2286,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_go">
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -2295,8 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2304,14 +2176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -2319,8 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -2328,8 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_nodejs">
 <a href="#expiresin_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
@@ -2337,8 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_nodejs">
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -2346,8 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2355,14 +2220,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -2370,8 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -2379,8 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_in_python">
 <a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
@@ -2388,8 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_python">
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -2397,8 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2406,16 +2264,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authinforesponse">Auth<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -2423,8 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2432,8 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_csharp">
 <a href="#expiresin_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -2441,8 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_csharp">
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -2450,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2459,14 +2310,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -2474,8 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2483,8 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_go">
 <a href="#expiresin_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -2492,8 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_go">
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -2501,8 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2510,14 +2354,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -2525,8 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -2534,8 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_nodejs">
 <a href="#expiresin_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
@@ -2543,8 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_nodejs">
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -2552,8 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2561,14 +2398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -2576,8 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -2585,8 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_in_python">
 <a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
@@ -2594,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_python">
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -2603,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2612,16 +2442,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="digest_csharp">
 <a href="#digest_csharp" style="color: inherit; text-decoration: inherit;">Digest</a>
@@ -2629,8 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_csharp">
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -2638,8 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registry login server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -2647,8 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -2656,8 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tag name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2665,14 +2488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="digest_go">
 <a href="#digest_go" style="color: inherit; text-decoration: inherit;">Digest</a>
@@ -2680,8 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_go">
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -2689,8 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registry login server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -2698,8 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -2707,8 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tag name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2716,14 +2532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="digest_nodejs">
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
@@ -2731,8 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_nodejs">
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -2740,8 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registry login server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -2749,8 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -2758,8 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tag name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2767,14 +2576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="digest_python">
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
@@ -2782,8 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_python">
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -2791,8 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The registry login server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -2800,8 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -2809,8 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tag name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2818,16 +2620,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the base image dependency.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagetrigger">Base<wbr>Image<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_csharp">
 <a href="#baseimagetriggertype_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -2835,8 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#baseimagetriggertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2844,8 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2853,14 +2650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_go">
 <a href="#baseimagetriggertype_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -2868,8 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#baseimagetriggertype">Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2877,8 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2886,14 +2678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_nodejs">
 <a href="#baseimagetriggertype_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -2901,8 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#baseimagetriggertype">Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2910,8 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2919,14 +2706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_image_trigger_type_python">
 <a href="#base_image_trigger_type_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger_<wbr>type</a>
@@ -2934,8 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#baseimagetriggertype">Base<wbr>Image<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2943,8 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2952,16 +2734,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_csharp">
 <a href="#baseimagetriggertype_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -2969,8 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2978,8 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2987,14 +2764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_go">
 <a href="#baseimagetriggertype_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -3002,8 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3011,8 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -3020,14 +2792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagetriggertype_nodejs">
 <a href="#baseimagetriggertype_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger<wbr>Type</a>
@@ -3035,8 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3044,8 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3053,14 +2820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_image_trigger_type_python">
 <a href="#base_image_trigger_type_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger_<wbr>type</a>
@@ -3068,8 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of the auto trigger for base image dependency updates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3077,8 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3086,54 +2848,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="baseimagetriggertype">Base<wbr>Image<wbr>Trigger<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All</dd>
-    <dt>Runtime</dt>
-    <dd>Runtime</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Runtime</dt>
+    <dd>Runtime</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Base<wbr>Image<wbr>Trigger<wbr>Type<wbr>All</dt>
-    <dd>All</dd>
-    <dt>Base<wbr>Image<wbr>Trigger<wbr>Type<wbr>Runtime</dt>
-    <dd>Runtime</dd>
-</dl>
+<dl class="tabular"><dt>Base<wbr>Image<wbr>Trigger<wbr>Type<wbr>All</dt>
+    <dd>All</dd><dt>Base<wbr>Image<wbr>Trigger<wbr>Type<wbr>Runtime</dt>
+    <dd>Runtime</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All</dd>
-    <dt>Runtime</dt>
-    <dd>Runtime</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Runtime</dt>
+    <dd>Runtime</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL</dt>
-    <dd>All</dd>
-    <dt>RUNTIME</dt>
-    <dd>Runtime</dd>
-</dl>
+<dl class="tabular"><dt>ALL</dt>
+    <dd>All</dd><dt>RUNTIME</dt>
+    <dd>Runtime</dd></dl>
 {{% /choosable %}}
 
 <h4 id="credentials">Credentials</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_csharp">
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
@@ -3143,8 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_csharp">
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
@@ -3152,14 +2898,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_go">
 <a href="#customregistries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
@@ -3169,8 +2912,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_go">
 <a href="#sourceregistry_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
@@ -3178,14 +2920,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_nodejs">
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
@@ -3195,8 +2934,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_nodejs">
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
@@ -3204,14 +2942,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_registries_python">
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
@@ -3221,8 +2956,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_registry_python">
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
@@ -3230,16 +2964,13 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="credentialsresponse">Credentials<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_csharp">
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
@@ -3249,8 +2980,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_csharp">
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
@@ -3258,14 +2988,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_go">
 <a href="#customregistries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
@@ -3275,8 +3002,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_go">
 <a href="#sourceregistry_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
@@ -3284,14 +3010,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customregistries_nodejs">
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
@@ -3301,8 +3024,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceregistry_nodejs">
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
@@ -3310,14 +3032,11 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_registries_python">
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
@@ -3327,8 +3046,7 @@ the value of the item will be the registry credentials for accessing the registr
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
-the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+the value of the item will be the registry credentials for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_registry_python">
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
@@ -3336,16 +3054,13 @@ the value of the item will be the registry credentials for accessing the registr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customregistrycredentials">Custom<wbr>Registry<wbr>Credentials</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3357,8 +3072,7 @@ the value of the item will be the registry credentials for accessing the registr
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3367,8 +3081,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -3376,14 +3089,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3395,8 +3105,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3405,8 +3114,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -3414,14 +3122,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3433,8 +3138,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3443,8 +3147,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -3452,14 +3155,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3471,8 +3171,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3481,8 +3180,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -3490,16 +3188,13 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customregistrycredentialsresponse">Custom<wbr>Registry<wbr>Credentials<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3511,8 +3206,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3521,8 +3215,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -3530,14 +3223,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3549,8 +3239,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3559,8 +3248,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -3568,14 +3256,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3587,8 +3272,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3597,8 +3281,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -3606,14 +3289,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3625,8 +3305,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
 identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
-source of authentication used for accessing the registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+source of authentication used for accessing the registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3635,8 +3314,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
-object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
-    <dt class="property-optional"
+object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -3644,16 +3322,13 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_csharp">
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -3661,8 +3336,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
@@ -3670,8 +3344,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_csharp">
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -3679,8 +3352,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_csharp">
 <a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -3688,8 +3360,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_csharp">
 <a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -3697,8 +3368,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagenames_csharp">
 <a href="#imagenames_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Names</a>
@@ -3706,8 +3376,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispushenabled_csharp">
 <a href="#ispushenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Push<wbr>Enabled</a>
@@ -3715,8 +3384,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_csharp">
 <a href="#nocache_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
@@ -3724,8 +3392,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3733,14 +3400,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_go">
 <a href="#baseimagedependencies_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -3748,8 +3412,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">[]Base<wbr>Image<wbr>Dependency<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerfilepath_go">
 <a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>File<wbr>Path</a>
@@ -3757,8 +3420,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_go">
 <a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -3766,8 +3428,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#argumentresponse">[]Argument<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_go">
 <a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -3775,8 +3436,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_go">
 <a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -3784,8 +3444,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagenames_go">
 <a href="#imagenames_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Names</a>
@@ -3793,8 +3452,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispushenabled_go">
 <a href="#ispushenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Push<wbr>Enabled</a>
@@ -3802,8 +3460,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_go">
 <a href="#nocache_go" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
@@ -3811,8 +3468,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3820,14 +3476,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_nodejs">
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
@@ -3835,8 +3488,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerfilepath_nodejs">
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
@@ -3844,8 +3496,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_nodejs">
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -3853,8 +3504,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_nodejs">
 <a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
@@ -3862,8 +3512,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_nodejs">
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
@@ -3871,8 +3520,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagenames_nodejs">
 <a href="#imagenames_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
@@ -3880,8 +3528,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispushenabled_nodejs">
 <a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
@@ -3889,8 +3536,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_nodejs">
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
@@ -3898,8 +3544,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3907,14 +3552,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_image_dependencies_python">
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
@@ -3922,8 +3564,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="docker_file_path_python">
 <a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
@@ -3931,8 +3572,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Docker file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_python">
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -3940,8 +3580,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_access_token_python">
 <a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
@@ -3949,8 +3588,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_path_python">
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
@@ -3958,8 +3596,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_names_python">
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
@@ -3967,8 +3604,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_push_enabled_python">
 <a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
@@ -3976,8 +3612,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_cache_python">
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
@@ -3985,8 +3620,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3994,16 +3628,13 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_csharp">
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -4011,8 +3642,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedtaskcontent_csharp">
 <a href="#encodedtaskcontent_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Task<wbr>Content</a>
@@ -4020,8 +3650,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_csharp">
 <a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -4029,8 +3658,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_csharp">
 <a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -4038,8 +3666,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encodedvaluescontent_csharp">
 <a href="#encodedvaluescontent_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Values<wbr>Content</a>
@@ -4047,8 +3674,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4056,14 +3682,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_go">
 <a href="#baseimagedependencies_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -4071,8 +3694,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">[]Base<wbr>Image<wbr>Dependency<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedtaskcontent_go">
 <a href="#encodedtaskcontent_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Task<wbr>Content</a>
@@ -4080,8 +3702,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_go">
 <a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -4089,8 +3710,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_go">
 <a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -4098,8 +3718,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encodedvaluescontent_go">
 <a href="#encodedvaluescontent_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Values<wbr>Content</a>
@@ -4107,8 +3726,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4116,14 +3734,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">[]Set<wbr>Value<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_nodejs">
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
@@ -4131,8 +3746,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedtaskcontent_nodejs">
 <a href="#encodedtaskcontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
@@ -4140,8 +3754,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_nodejs">
 <a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
@@ -4149,8 +3762,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_nodejs">
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
@@ -4158,8 +3770,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encodedvaluescontent_nodejs">
 <a href="#encodedvaluescontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
@@ -4167,8 +3778,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4176,14 +3786,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_image_dependencies_python">
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
@@ -4191,8 +3798,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encoded_task_content_python">
 <a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
@@ -4200,8 +3806,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_access_token_python">
 <a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
@@ -4209,8 +3814,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_path_python">
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
@@ -4218,8 +3822,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoded_values_content_python">
 <a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
@@ -4227,8 +3830,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4236,16 +3838,13 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_csharp">
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -4253,8 +3852,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taskfilepath_csharp">
 <a href="#taskfilepath_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>File<wbr>Path</a>
@@ -4262,8 +3860,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_csharp">
 <a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -4271,8 +3868,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_csharp">
 <a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -4280,8 +3876,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4289,8 +3884,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesfilepath_csharp">
 <a href="#valuesfilepath_csharp" style="color: inherit; text-decoration: inherit;">Values<wbr>File<wbr>Path</a>
@@ -4298,14 +3892,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_go">
 <a href="#baseimagedependencies_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
@@ -4313,8 +3904,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">[]Base<wbr>Image<wbr>Dependency<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taskfilepath_go">
 <a href="#taskfilepath_go" style="color: inherit; text-decoration: inherit;">Task<wbr>File<wbr>Path</a>
@@ -4322,8 +3912,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_go">
 <a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -4331,8 +3920,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_go">
 <a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -4340,8 +3928,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4349,8 +3936,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">[]Set<wbr>Value<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesfilepath_go">
 <a href="#valuesfilepath_go" style="color: inherit; text-decoration: inherit;">Values<wbr>File<wbr>Path</a>
@@ -4358,14 +3944,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseimagedependencies_nodejs">
 <a href="#baseimagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Dependencies</a>
@@ -4373,8 +3956,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Base<wbr>Image<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taskfilepath_nodejs">
 <a href="#taskfilepath_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
@@ -4382,8 +3964,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_nodejs">
 <a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
@@ -4391,8 +3972,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_nodejs">
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
@@ -4400,8 +3980,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4409,8 +3988,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesfilepath_nodejs">
 <a href="#valuesfilepath_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
@@ -4418,14 +3996,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_image_dependencies_python">
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
@@ -4433,8 +4008,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="task_file_path_python">
 <a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
@@ -4442,8 +4016,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The task template/definition file path relative to the source context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_access_token_python">
 <a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
@@ -4451,8 +4024,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_path_python">
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
@@ -4460,8 +4032,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4469,8 +4040,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_file_path_python">
 <a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
@@ -4478,16 +4048,13 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The task values/parameters file path relative to the source context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityproperties">Identity<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4495,8 +4062,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4504,8 +4070,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4513,8 +4078,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4525,14 +4089,11 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4540,8 +4101,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4549,8 +4109,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4558,8 +4117,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4570,14 +4128,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -4585,8 +4140,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4594,8 +4148,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4603,8 +4156,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -4615,14 +4167,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -4630,8 +4179,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4639,8 +4187,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4648,8 +4195,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -4660,16 +4206,13 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4677,8 +4220,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4686,8 +4228,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4695,8 +4236,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4707,14 +4247,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4722,8 +4259,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4731,8 +4267,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4740,8 +4275,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4752,14 +4286,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -4767,8 +4298,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4776,8 +4306,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4785,8 +4314,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -4797,14 +4325,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -4812,8 +4337,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4821,8 +4345,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4830,8 +4353,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -4842,54 +4364,39 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="os">OS</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>OSWindows</dt>
-    <dd>Windows</dd>
-    <dt>OSLinux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>OSWindows</dt>
+    <dd>Windows</dd><dt>OSLinux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformproperties">Platform<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_csharp">
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -4897,8 +4404,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -4906,8 +4412,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -4915,14 +4420,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_go">
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -4930,8 +4432,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -4939,8 +4440,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -4948,14 +4448,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_nodejs">
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
@@ -4963,8 +4460,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -4972,8 +4468,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -4981,14 +4476,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_python">
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
@@ -4996,8 +4488,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -5005,8 +4496,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_python">
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -5014,16 +4504,13 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_csharp">
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -5031,8 +4518,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -5040,8 +4526,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -5049,14 +4534,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_go">
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -5064,8 +4546,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -5073,8 +4554,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -5082,14 +4562,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_nodejs">
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
@@ -5097,8 +4574,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -5106,8 +4582,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -5115,14 +4590,11 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_python">
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
@@ -5130,8 +4602,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -5139,8 +4610,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_python">
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -5148,70 +4618,47 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned</dd>
-    <dt>USER_ASSIGNED</dt>
-    <dd>UserAssigned</dd>
-    <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretobject">Secret<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5220,8 +4667,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-type">string | <a href="#secretobjecttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Secret<wbr>Object<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5231,14 +4677,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5247,8 +4690,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">string | <a href="#secretobjecttype">Secret<wbr>Object<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5258,14 +4700,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5274,8 +4713,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">string | <a href="#secretobjecttype">Secret<wbr>Object<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5285,14 +4723,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5301,8 +4736,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">str | <a href="#secretobjecttype">Secret<wbr>Object<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5312,16 +4746,13 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretobjectresponse">Secret<wbr>Object<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5330,8 +4761,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5341,14 +4771,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5357,8 +4784,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5368,14 +4794,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5384,8 +4807,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5395,14 +4817,11 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5411,8 +4830,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
-interpreted.{{% /md %}}</dd>
-    <dt class="property-optional"
+interpreted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5422,54 +4840,39 @@ interpreted.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.{{% /md %}}</dd>
-</dl>
+used as is without any modification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretobjecttype">Secret<wbr>Object<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Opaque</dt>
-    <dd>Opaque</dd>
-    <dt>Vaultsecret</dt>
-    <dd>Vaultsecret</dd>
-</dl>
+<dl class="tabular"><dt>Opaque</dt>
+    <dd>Opaque</dd><dt>Vaultsecret</dt>
+    <dd>Vaultsecret</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Secret<wbr>Object<wbr>Type<wbr>Opaque</dt>
-    <dd>Opaque</dd>
-    <dt>Secret<wbr>Object<wbr>Type<wbr>Vaultsecret</dt>
-    <dd>Vaultsecret</dd>
-</dl>
+<dl class="tabular"><dt>Secret<wbr>Object<wbr>Type<wbr>Opaque</dt>
+    <dd>Opaque</dd><dt>Secret<wbr>Object<wbr>Type<wbr>Vaultsecret</dt>
+    <dd>Vaultsecret</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Opaque</dt>
-    <dd>Opaque</dd>
-    <dt>Vaultsecret</dt>
-    <dd>Vaultsecret</dd>
-</dl>
+<dl class="tabular"><dt>Opaque</dt>
+    <dd>Opaque</dd><dt>Vaultsecret</dt>
+    <dd>Vaultsecret</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>OPAQUE</dt>
-    <dd>Opaque</dd>
-    <dt>VAULTSECRET</dt>
-    <dd>Vaultsecret</dd>
-</dl>
+<dl class="tabular"><dt>OPAQUE</dt>
+    <dd>Opaque</dd><dt>VAULTSECRET</dt>
+    <dd>Vaultsecret</dd></dl>
 {{% /choosable %}}
 
 <h4 id="setvalueresponse">Set<wbr>Value<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5477,8 +4880,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5486,8 +4888,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overridable value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_csharp">
 <a href="#issecret_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
@@ -5495,14 +4896,11 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5510,8 +4908,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5519,8 +4916,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overridable value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_go">
 <a href="#issecret_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secret</a>
@@ -5528,14 +4924,11 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5543,8 +4936,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5552,8 +4944,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overridable value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecret_nodejs">
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
@@ -5561,14 +4952,11 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5576,8 +4964,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5585,8 +4972,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The overridable value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_secret_python">
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
@@ -5594,54 +4980,39 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecontroltype">Source<wbr>Control<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Github</dt>
-    <dd>Github</dd>
-    <dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Github</dt>
+    <dd>Github</dd><dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Source<wbr>Control<wbr>Type<wbr>Github</dt>
-    <dd>Github</dd>
-    <dt>Source<wbr>Control<wbr>Type<wbr>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Source<wbr>Control<wbr>Type<wbr>Github</dt>
+    <dd>Github</dd><dt>Source<wbr>Control<wbr>Type<wbr>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Github</dt>
-    <dd>Github</dd>
-    <dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Github</dt>
+    <dd>Github</dd><dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GITHUB</dt>
-    <dd>Github</dd>
-    <dt>VISUAL_STUDIO_TEAM_SERVICE</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>GITHUB</dt>
+    <dd>Github</dd><dt>VISUAL_STUDIO_TEAM_SERVICE</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourceproperties">Source<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -5649,8 +5020,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_csharp">
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -5658,8 +5028,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -5667,8 +5036,7 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_csharp">
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5677,14 +5045,11 @@ used as is without any modification.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -5692,8 +5057,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_go">
 <a href="#sourcecontroltype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -5701,8 +5065,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -5710,8 +5073,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_go">
 <a href="#sourcecontrolauthproperties_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5720,14 +5082,11 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinfo">Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -5735,8 +5094,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_nodejs">
 <a href="#sourcecontroltype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
@@ -5744,8 +5102,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -5753,8 +5110,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_nodejs">
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5763,14 +5119,11 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinfo">Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -5778,8 +5131,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_control_type_python">
 <a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
@@ -5787,8 +5139,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -5796,8 +5147,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_control_auth_properties_python">
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
@@ -5806,16 +5156,13 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinfo">Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcepropertiesresponse">Source<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -5823,8 +5170,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_csharp">
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -5832,8 +5178,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -5841,8 +5186,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_csharp">
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5851,14 +5195,11 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -5866,8 +5207,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_go">
 <a href="#sourcecontroltype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -5875,8 +5215,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -5884,8 +5223,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_go">
 <a href="#sourcecontrolauthproperties_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5894,14 +5232,11 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -5909,8 +5244,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_nodejs">
 <a href="#sourcecontroltype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
@@ -5918,8 +5252,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -5927,8 +5260,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_nodejs">
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -5937,14 +5269,11 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -5952,8 +5281,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_control_type_python">
 <a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
@@ -5961,8 +5289,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -5970,8 +5297,7 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The branch name of the source code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_control_auth_properties_python">
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
@@ -5980,16 +5306,13 @@ webhooks for notifications.{{% /md %}}</dd>
         <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
-webhooks for notifications.{{% /md %}}</dd>
-</dl>
+webhooks for notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_csharp">
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -5999,14 +5322,11 @@ webhooks for notifications.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_go">
 <a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -6016,14 +5336,11 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_nodejs">
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
@@ -6033,14 +5350,11 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="login_mode_python">
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
@@ -6050,16 +5364,13 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_csharp">
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -6069,14 +5380,11 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_go">
 <a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -6086,14 +5394,11 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginmode_nodejs">
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
@@ -6103,14 +5408,11 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="login_mode_python">
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
@@ -6120,54 +5422,39 @@ the source registry during the run.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run.{{% /md %}}</dd>
-</dl>
+the source registry during the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourceregistryloginmode">Source<wbr>Registry<wbr>Login<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Default</dt>
-    <dd>Default</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Default</dt>
+    <dd>Default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Source<wbr>Registry<wbr>Login<wbr>Mode<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Source<wbr>Registry<wbr>Login<wbr>Mode<wbr>Default</dt>
-    <dd>Default</dd>
-</dl>
+<dl class="tabular"><dt>Source<wbr>Registry<wbr>Login<wbr>Mode<wbr>None</dt>
+    <dd>None</dd><dt>Source<wbr>Registry<wbr>Login<wbr>Mode<wbr>Default</dt>
+    <dd>Default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Default</dt>
-    <dd>Default</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Default</dt>
+    <dd>Default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>DEFAULT</dt>
-    <dd>Default</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>DEFAULT</dt>
+    <dd>Default</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcetrigger">Source<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6175,8 +5462,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_csharp">
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -6184,8 +5470,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_csharp">
 <a href="#sourcetriggerevents_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger<wbr>Events</a>
@@ -6193,8 +5478,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Trigger<wbr>Event&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6202,14 +5486,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6217,8 +5498,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_go">
 <a href="#sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -6226,8 +5506,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_go">
 <a href="#sourcetriggerevents_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger<wbr>Events</a>
@@ -6235,8 +5514,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6244,14 +5522,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6259,8 +5534,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_nodejs">
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
@@ -6268,8 +5542,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_nodejs">
 <a href="#sourcetriggerevents_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
@@ -6277,8 +5550,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | Source<wbr>Trigger<wbr>Event[]</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6286,14 +5558,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6301,8 +5570,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
@@ -6310,8 +5578,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_trigger_events_python">
 <a href="#source_trigger_events_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger_<wbr>events</a>
@@ -6319,8 +5586,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Source<wbr>Trigger<wbr>Event]]</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6328,54 +5594,39 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcetriggerevent">Source<wbr>Trigger<wbr>Event</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Commit</dt>
-    <dd>commit</dd>
-    <dt>Pullrequest</dt>
-    <dd>pullrequest</dd>
-</dl>
+<dl class="tabular"><dt>Commit</dt>
+    <dd>commit</dd><dt>Pullrequest</dt>
+    <dd>pullrequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Source<wbr>Trigger<wbr>Event<wbr>Commit</dt>
-    <dd>commit</dd>
-    <dt>Source<wbr>Trigger<wbr>Event<wbr>Pullrequest</dt>
-    <dd>pullrequest</dd>
-</dl>
+<dl class="tabular"><dt>Source<wbr>Trigger<wbr>Event<wbr>Commit</dt>
+    <dd>commit</dd><dt>Source<wbr>Trigger<wbr>Event<wbr>Pullrequest</dt>
+    <dd>pullrequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Commit</dt>
-    <dd>commit</dd>
-    <dt>Pullrequest</dt>
-    <dd>pullrequest</dd>
-</dl>
+<dl class="tabular"><dt>Commit</dt>
+    <dd>commit</dd><dt>Pullrequest</dt>
+    <dd>pullrequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>COMMIT</dt>
-    <dd>commit</dd>
-    <dt>PULLREQUEST</dt>
-    <dd>pullrequest</dd>
-</dl>
+<dl class="tabular"><dt>COMMIT</dt>
+    <dd>commit</dd><dt>PULLREQUEST</dt>
+    <dd>pullrequest</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcetriggerresponse">Source<wbr>Trigger<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6383,8 +5634,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_csharp">
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -6392,8 +5642,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_csharp">
 <a href="#sourcetriggerevents_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger<wbr>Events</a>
@@ -6401,8 +5650,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6410,14 +5658,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6425,8 +5670,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_go">
 <a href="#sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -6434,8 +5678,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_go">
 <a href="#sourcetriggerevents_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger<wbr>Events</a>
@@ -6443,8 +5686,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6452,14 +5694,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6467,8 +5706,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_nodejs">
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
@@ -6476,8 +5714,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetriggerevents_nodejs">
 <a href="#sourcetriggerevents_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
@@ -6485,8 +5722,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6494,14 +5730,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6509,8 +5742,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
@@ -6518,8 +5750,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_trigger_events_python">
 <a href="#source_trigger_events_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger_<wbr>events</a>
@@ -6527,8 +5758,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6536,54 +5766,39 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="taskstatus">Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Task<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Task<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Task<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Task<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="taskstepproperties">Task<wbr>Step<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_csharp">
 <a href="#contextaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -6591,8 +5806,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_csharp">
 <a href="#contextpath_csharp" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -6600,14 +5814,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_go">
 <a href="#contextaccesstoken_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Access<wbr>Token</a>
@@ -6615,8 +5826,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_go">
 <a href="#contextpath_go" style="color: inherit; text-decoration: inherit;">Context<wbr>Path</a>
@@ -6624,14 +5834,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contextaccesstoken_nodejs">
 <a href="#contextaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Access<wbr>Token</a>
@@ -6639,8 +5846,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contextpath_nodejs">
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
@@ -6648,14 +5854,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="context_access_token_python">
 <a href="#context_access_token_python" style="color: inherit; text-decoration: inherit;">context_<wbr>access_<wbr>token</a>
@@ -6663,8 +5866,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The token (git PAT or SAS token of storage account blob) associated with the context for a step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_path_python">
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
@@ -6672,16 +5874,13 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL(absolute or relative) of the source context for the task step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timertrigger">Timer<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6689,8 +5888,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -6698,8 +5896,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6707,14 +5904,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6722,8 +5916,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -6731,8 +5924,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6740,14 +5932,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6755,8 +5944,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -6764,8 +5952,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6773,14 +5960,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6788,8 +5972,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -6797,8 +5980,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6806,16 +5988,13 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#triggerstatus">Trigger<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timertriggerresponse">Timer<wbr>Trigger<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6823,8 +6002,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -6832,8 +6010,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6841,14 +6018,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6856,8 +6030,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -6865,8 +6038,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6874,14 +6046,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6889,8 +6058,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -6898,8 +6066,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6907,14 +6074,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6922,8 +6086,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -6931,8 +6094,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CRON expression for the task schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6940,54 +6102,39 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tokentype">Token<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Token<wbr>Type<wbr>PAT</dt>
-    <dd>PAT</dd>
-    <dt>Token<wbr>Type<wbr>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>Token<wbr>Type<wbr>PAT</dt>
+    <dd>PAT</dd><dt>Token<wbr>Type<wbr>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>O_AUTH</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>O_AUTH</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerproperties">Trigger<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_csharp">
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
@@ -6995,8 +6142,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_csharp">
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
@@ -7004,8 +6150,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetrigger">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_csharp">
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
@@ -7013,14 +6158,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertrigger">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_go">
 <a href="#baseimagetrigger_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
@@ -7028,8 +6170,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_go">
 <a href="#sourcetriggers_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
@@ -7037,8 +6178,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetrigger">[]Source<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_go">
 <a href="#timertriggers_go" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
@@ -7046,14 +6186,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertrigger">[]Timer<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_nodejs">
 <a href="#baseimagetrigger_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger</a>
@@ -7061,8 +6198,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_nodejs">
 <a href="#sourcetriggers_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Triggers</a>
@@ -7070,8 +6206,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetrigger">Source<wbr>Trigger[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_nodejs">
 <a href="#timertriggers_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Triggers</a>
@@ -7079,14 +6214,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertrigger">Timer<wbr>Trigger[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base_image_trigger_python">
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
@@ -7094,8 +6226,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_triggers_python">
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
@@ -7103,8 +6234,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetrigger">Sequence[Source<wbr>Trigger<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timer_triggers_python">
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
@@ -7112,16 +6242,13 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertrigger">Sequence[Timer<wbr>Trigger<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerpropertiesresponse">Trigger<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_csharp">
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
@@ -7129,8 +6256,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_csharp">
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
@@ -7138,8 +6264,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_csharp">
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
@@ -7147,14 +6272,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_go">
 <a href="#baseimagetrigger_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
@@ -7162,8 +6284,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_go">
 <a href="#sourcetriggers_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
@@ -7171,8 +6292,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetriggerresponse">[]Source<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_go">
 <a href="#timertriggers_go" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
@@ -7180,14 +6300,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertriggerresponse">[]Timer<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseimagetrigger_nodejs">
 <a href="#baseimagetrigger_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Trigger</a>
@@ -7195,8 +6312,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetriggers_nodejs">
 <a href="#sourcetriggers_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Triggers</a>
@@ -7204,8 +6320,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetriggerresponse">Source<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timertriggers_nodejs">
 <a href="#timertriggers_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Triggers</a>
@@ -7213,14 +6328,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertriggerresponse">Timer<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base_image_trigger_python">
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
@@ -7228,8 +6340,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_triggers_python">
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
@@ -7237,8 +6348,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcetriggerresponse">Sequence[Source<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timer_triggers_python">
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
@@ -7246,54 +6356,39 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timertriggerresponse">Sequence[Timer<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerstatus">Trigger<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Trigger<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Trigger<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Trigger<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Trigger<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useridentityproperties">User<wbr>Identity<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7301,8 +6396,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7310,14 +6404,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7325,8 +6416,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7334,14 +6424,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -7349,8 +6436,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -7358,14 +6444,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -7373,8 +6456,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -7382,16 +6464,13 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useridentitypropertiesresponse">User<wbr>Identity<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7399,8 +6478,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7408,14 +6486,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7423,8 +6498,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7432,14 +6506,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -7447,8 +6518,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -7456,14 +6526,11 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -7471,8 +6538,7 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -7480,54 +6546,37 @@ the source registry during the run.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="variant">Variant</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Variant<wbr>V6</dt>
-    <dd>v6</dd>
-    <dt>Variant<wbr>V7</dt>
-    <dd>v7</dd>
-    <dt>Variant<wbr>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>Variant<wbr>V6</dt>
+    <dd>v6</dd><dt>Variant<wbr>V7</dt>
+    <dd>v7</dd><dt>Variant<wbr>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 ## Import
 

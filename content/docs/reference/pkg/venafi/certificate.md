@@ -20,11 +20,17 @@ window of the issuing CA to achieve the desired result.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Venafi = Pulumi.Venafi;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -90,9 +99,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_venafi as venafi
@@ -112,9 +124,12 @@ webserver = venafi.Certificate("webserver",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -136,9 +151,16 @@ const webserver = new venafi.Certificate("webserver", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Certificate Resource {#create}
@@ -163,9 +185,7 @@ const webserver = new venafi.Certificate("webserver", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +193,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +201,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +209,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -222,9 +235,7 @@ const webserver = new venafi.Certificate("webserver", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -232,9 +243,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +251,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +259,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,18 +267,13 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -281,9 +281,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -291,9 +289,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -301,10 +297,7 @@ const webserver = new venafi.Certificate("webserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -319,9 +312,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -330,8 +321,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -341,8 +331,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatedn_csharp">
 <a href="#certificatedn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Dn</a>
@@ -350,8 +339,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="csrpem_csharp">
 <a href="#csrpem_csharp" style="color: inherit; text-decoration: inherit;">Csr<wbr>Pem</a>
@@ -359,8 +347,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customfields_csharp">
 <a href="#customfields_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fields</a>
@@ -370,8 +357,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_csharp">
 <a href="#ecdsacurve_csharp" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -380,8 +366,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationwindow_csharp">
 <a href="#expirationwindow_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Window</a>
@@ -391,8 +376,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuerhint_csharp">
 <a href="#issuerhint_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Hint</a>
@@ -403,8 +387,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypassword_csharp">
 <a href="#keypassword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Password</a>
@@ -413,8 +396,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs12_csharp">
 <a href="#pkcs12_csharp" style="color: inherit; text-decoration: inherit;">Pkcs12</a>
@@ -423,8 +405,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -433,8 +414,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_csharp">
 <a href="#rsabits_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -444,8 +424,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandns_csharp">
 <a href="#sandns_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Dns</a>
@@ -455,8 +434,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanemails_csharp">
 <a href="#sanemails_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Emails</a>
@@ -466,8 +444,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanips_csharp">
 <a href="#sanips_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Ips</a>
@@ -477,8 +454,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validdays_csharp">
 <a href="#validdays_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Days</a>
@@ -488,14 +464,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -504,8 +477,7 @@ certificate will be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -515,8 +487,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatedn_go">
 <a href="#certificatedn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Dn</a>
@@ -524,8 +495,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="csrpem_go">
 <a href="#csrpem_go" style="color: inherit; text-decoration: inherit;">Csr<wbr>Pem</a>
@@ -533,8 +503,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customfields_go">
 <a href="#customfields_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fields</a>
@@ -544,8 +513,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_go">
 <a href="#ecdsacurve_go" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -554,8 +522,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationwindow_go">
 <a href="#expirationwindow_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Window</a>
@@ -565,8 +532,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuerhint_go">
 <a href="#issuerhint_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Hint</a>
@@ -577,8 +543,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypassword_go">
 <a href="#keypassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Password</a>
@@ -587,8 +552,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs12_go">
 <a href="#pkcs12_go" style="color: inherit; text-decoration: inherit;">Pkcs12</a>
@@ -597,8 +561,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -607,8 +570,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_go">
 <a href="#rsabits_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -618,8 +580,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandns_go">
 <a href="#sandns_go" style="color: inherit; text-decoration: inherit;">San<wbr>Dns</a>
@@ -629,8 +590,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanemails_go">
 <a href="#sanemails_go" style="color: inherit; text-decoration: inherit;">San<wbr>Emails</a>
@@ -640,8 +600,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanips_go">
 <a href="#sanips_go" style="color: inherit; text-decoration: inherit;">San<wbr>Ips</a>
@@ -651,8 +610,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validdays_go">
 <a href="#validdays_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Days</a>
@@ -662,14 +620,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -678,8 +633,7 @@ certificate will be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -689,8 +643,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatedn_nodejs">
 <a href="#certificatedn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Dn</a>
@@ -698,8 +651,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="csrpem_nodejs">
 <a href="#csrpem_nodejs" style="color: inherit; text-decoration: inherit;">csr<wbr>Pem</a>
@@ -707,8 +659,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customfields_nodejs">
 <a href="#customfields_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fields</a>
@@ -718,8 +669,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_nodejs">
 <a href="#ecdsacurve_nodejs" style="color: inherit; text-decoration: inherit;">ecdsa<wbr>Curve</a>
@@ -728,8 +678,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationwindow_nodejs">
 <a href="#expirationwindow_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Window</a>
@@ -739,8 +688,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuerhint_nodejs">
 <a href="#issuerhint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Hint</a>
@@ -751,8 +699,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypassword_nodejs">
 <a href="#keypassword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password</a>
@@ -761,8 +708,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs12_nodejs">
 <a href="#pkcs12_nodejs" style="color: inherit; text-decoration: inherit;">pkcs12</a>
@@ -771,8 +717,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -781,8 +726,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_nodejs">
 <a href="#rsabits_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Bits</a>
@@ -792,8 +736,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandns_nodejs">
 <a href="#sandns_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Dns</a>
@@ -803,8 +746,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanemails_nodejs">
 <a href="#sanemails_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Emails</a>
@@ -814,8 +756,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sanips_nodejs">
 <a href="#sanips_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Ips</a>
@@ -825,8 +766,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validdays_nodejs">
 <a href="#validdays_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Days</a>
@@ -836,14 +776,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -852,8 +789,7 @@ certificate will be valid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -863,8 +799,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_dn_python">
 <a href="#certificate_dn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>dn</a>
@@ -872,8 +807,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="csr_pem_python">
 <a href="#csr_pem_python" style="color: inherit; text-decoration: inherit;">csr_<wbr>pem</a>
@@ -881,8 +815,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_fields_python">
 <a href="#custom_fields_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fields</a>
@@ -892,8 +825,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsa_curve_python">
 <a href="#ecdsa_curve_python" style="color: inherit; text-decoration: inherit;">ecdsa_<wbr>curve</a>
@@ -902,8 +834,7 @@ assign to the certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_window_python">
 <a href="#expiration_window_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>window</a>
@@ -913,8 +844,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_hint_python">
 <a href="#issuer_hint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>hint</a>
@@ -925,8 +855,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_password_python">
 <a href="#key_password_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password</a>
@@ -935,8 +864,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs12_python">
 <a href="#pkcs12_python" style="color: inherit; text-decoration: inherit;">pkcs12</a>
@@ -945,8 +873,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -955,8 +882,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsa_bits_python">
 <a href="#rsa_bits_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>bits</a>
@@ -966,8 +892,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="san_dns_python">
 <a href="#san_dns_python" style="color: inherit; text-decoration: inherit;">san_<wbr>dns</a>
@@ -977,8 +902,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="san_emails_python">
 <a href="#san_emails_python" style="color: inherit; text-decoration: inherit;">san_<wbr>emails</a>
@@ -988,8 +912,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="san_ips_python">
 <a href="#san_ips_python" style="color: inherit; text-decoration: inherit;">san_<wbr>ips</a>
@@ -999,8 +922,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_days_python">
 <a href="#valid_days_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>days</a>
@@ -1010,8 +932,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1022,9 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificatedetails_csharp">
 <a href="#certificatedetails_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Details</a>
@@ -1033,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chain_csharp">
 <a href="#chain_csharp" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -1044,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1053,14 +970,11 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1069,8 +983,7 @@ concatenated together.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chain_go">
 <a href="#chain_go" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -1080,8 +993,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1089,14 +1001,11 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1105,8 +1014,7 @@ concatenated together.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chain_nodejs">
 <a href="#chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -1116,8 +1024,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1125,14 +1032,11 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1141,8 +1045,7 @@ concatenated together.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chain_python">
 <a href="#chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -1152,8 +1055,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1161,8 +1063,7 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1289,9 +1190,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1301,8 +1200,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedetails_csharp">
 <a href="#state_certificatedetails_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Details</a>
@@ -1311,8 +1209,7 @@ Defaults to `RSA`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedn_csharp">
 <a href="#state_certificatedn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Dn</a>
@@ -1320,8 +1217,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chain_csharp">
 <a href="#state_chain_csharp" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -1331,8 +1227,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_csharp">
 <a href="#state_commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1341,8 +1236,7 @@ concatenated together.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csrpem_csharp">
 <a href="#state_csrpem_csharp" style="color: inherit; text-decoration: inherit;">Csr<wbr>Pem</a>
@@ -1350,8 +1244,7 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customfields_csharp">
 <a href="#state_customfields_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fields</a>
@@ -1361,8 +1254,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_csharp">
 <a href="#state_ecdsacurve_csharp" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -1371,8 +1263,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationwindow_csharp">
 <a href="#state_expirationwindow_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Window</a>
@@ -1382,8 +1273,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuerhint_csharp">
 <a href="#state_issuerhint_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Hint</a>
@@ -1394,8 +1284,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypassword_csharp">
 <a href="#state_keypassword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Password</a>
@@ -1404,8 +1293,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs12_csharp">
 <a href="#state_pkcs12_csharp" style="color: inherit; text-decoration: inherit;">Pkcs12</a>
@@ -1414,8 +1302,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_csharp">
 <a href="#state_privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -1424,8 +1311,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_csharp">
 <a href="#state_rsabits_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -1435,8 +1321,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandns_csharp">
 <a href="#state_sandns_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Dns</a>
@@ -1446,8 +1331,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanemails_csharp">
 <a href="#state_sanemails_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Emails</a>
@@ -1457,8 +1341,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanips_csharp">
 <a href="#state_sanips_csharp" style="color: inherit; text-decoration: inherit;">San<wbr>Ips</a>
@@ -1468,8 +1351,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validdays_csharp">
 <a href="#state_validdays_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Days</a>
@@ -1479,14 +1361,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1496,8 +1375,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1506,8 +1384,7 @@ Defaults to `RSA`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedn_go">
 <a href="#state_certificatedn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Dn</a>
@@ -1515,8 +1392,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chain_go">
 <a href="#state_chain_go" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -1526,8 +1402,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_go">
 <a href="#state_commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1536,8 +1411,7 @@ concatenated together.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csrpem_go">
 <a href="#state_csrpem_go" style="color: inherit; text-decoration: inherit;">Csr<wbr>Pem</a>
@@ -1545,8 +1419,7 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customfields_go">
 <a href="#state_customfields_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fields</a>
@@ -1556,8 +1429,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_go">
 <a href="#state_ecdsacurve_go" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -1566,8 +1438,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationwindow_go">
 <a href="#state_expirationwindow_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Window</a>
@@ -1577,8 +1448,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuerhint_go">
 <a href="#state_issuerhint_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Hint</a>
@@ -1589,8 +1459,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypassword_go">
 <a href="#state_keypassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Password</a>
@@ -1599,8 +1468,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs12_go">
 <a href="#state_pkcs12_go" style="color: inherit; text-decoration: inherit;">Pkcs12</a>
@@ -1609,8 +1477,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_go">
 <a href="#state_privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -1619,8 +1486,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_go">
 <a href="#state_rsabits_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -1630,8 +1496,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandns_go">
 <a href="#state_sandns_go" style="color: inherit; text-decoration: inherit;">San<wbr>Dns</a>
@@ -1641,8 +1506,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanemails_go">
 <a href="#state_sanemails_go" style="color: inherit; text-decoration: inherit;">San<wbr>Emails</a>
@@ -1652,8 +1516,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanips_go">
 <a href="#state_sanips_go" style="color: inherit; text-decoration: inherit;">San<wbr>Ips</a>
@@ -1663,8 +1526,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validdays_go">
 <a href="#state_validdays_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Days</a>
@@ -1674,14 +1536,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1691,8 +1550,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1701,8 +1559,7 @@ Defaults to `RSA`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedn_nodejs">
 <a href="#state_certificatedn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Dn</a>
@@ -1710,8 +1567,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chain_nodejs">
 <a href="#state_chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -1721,8 +1577,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_nodejs">
 <a href="#state_commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1731,8 +1586,7 @@ concatenated together.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csrpem_nodejs">
 <a href="#state_csrpem_nodejs" style="color: inherit; text-decoration: inherit;">csr<wbr>Pem</a>
@@ -1740,8 +1594,7 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customfields_nodejs">
 <a href="#state_customfields_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fields</a>
@@ -1751,8 +1604,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_nodejs">
 <a href="#state_ecdsacurve_nodejs" style="color: inherit; text-decoration: inherit;">ecdsa<wbr>Curve</a>
@@ -1761,8 +1613,7 @@ assign to the certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationwindow_nodejs">
 <a href="#state_expirationwindow_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Window</a>
@@ -1772,8 +1623,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuerhint_nodejs">
 <a href="#state_issuerhint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Hint</a>
@@ -1784,8 +1634,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypassword_nodejs">
 <a href="#state_keypassword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password</a>
@@ -1794,8 +1643,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs12_nodejs">
 <a href="#state_pkcs12_nodejs" style="color: inherit; text-decoration: inherit;">pkcs12</a>
@@ -1804,8 +1652,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_nodejs">
 <a href="#state_privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -1814,8 +1661,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_nodejs">
 <a href="#state_rsabits_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Bits</a>
@@ -1825,8 +1671,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandns_nodejs">
 <a href="#state_sandns_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Dns</a>
@@ -1836,8 +1681,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanemails_nodejs">
 <a href="#state_sanemails_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Emails</a>
@@ -1847,8 +1691,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sanips_nodejs">
 <a href="#state_sanips_nodejs" style="color: inherit; text-decoration: inherit;">san<wbr>Ips</a>
@@ -1858,8 +1701,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validdays_nodejs">
 <a href="#state_validdays_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Days</a>
@@ -1869,14 +1711,11 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1886,8 +1725,7 @@ certificate will be valid.
     </dt>
     <dd>{{% md %}}Key encryption algorithm, either `RSA` or `ECDSA`.
 Defaults to `RSA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1896,8 +1734,7 @@ Defaults to `RSA`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The X509 certificate in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_dn_python">
 <a href="#state_certificate_dn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>dn</a>
@@ -1905,8 +1742,7 @@ Defaults to `RSA`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chain_python">
 <a href="#state_chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -1916,8 +1752,7 @@ Defaults to `RSA`.
     </dt>
     <dd>{{% md %}}The trust chain of X509 certificate authority certificates in PEM format
 concatenated together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_common_name_python">
 <a href="#state_common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -1926,8 +1761,7 @@ concatenated together.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csr_pem_python">
 <a href="#state_csr_pem_python" style="color: inherit; text-decoration: inherit;">csr_<wbr>pem</a>
@@ -1935,8 +1769,7 @@ concatenated together.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_fields_python">
 <a href="#state_custom_fields_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fields</a>
@@ -1946,8 +1779,7 @@ concatenated together.
     </dt>
     <dd>{{% md %}}Collection of Custom Field name-value pairs to
 assign to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsa_curve_python">
 <a href="#state_ecdsa_curve_python" style="color: inherit; text-decoration: inherit;">ecdsa_<wbr>curve</a>
@@ -1956,8 +1788,7 @@ assign to the certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ECDSA curve to use when generating a key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_window_python">
 <a href="#state_expiration_window_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>window</a>
@@ -1967,8 +1798,7 @@ assign to the certificate.
     </dt>
     <dd>{{% md %}}Number of hours before certificate expiry
 to request a new certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_hint_python">
 <a href="#state_issuer_hint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>hint</a>
@@ -1979,8 +1809,7 @@ to request a new certificate.
     <dd>{{% md %}}Used with valid_days to indicate the target
 issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
 "Entrust", and "Microsoft".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_password_python">
 <a href="#state_key_password_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password</a>
@@ -1989,8 +1818,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to encrypt the private key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs12_python">
 <a href="#state_pkcs12_python" style="color: inherit; text-decoration: inherit;">pkcs12</a>
@@ -1999,8 +1827,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A base64-encoded PKCS#12 keystore secured by the `key_password`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_pem_python">
 <a href="#state_private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -2009,8 +1836,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsa_bits_python">
 <a href="#state_rsa_bits_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>bits</a>
@@ -2020,8 +1846,7 @@ issuer when using Trust Protection Platform.  Relevant values are: "DigiCert",
     </dt>
     <dd>{{% md %}}Number of bits to use when generating an RSA key.
 Applies when `algorithm=RSA`.  Defaults to `2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_san_dns_python">
 <a href="#state_san_dns_python" style="color: inherit; text-decoration: inherit;">san_<wbr>dns</a>
@@ -2031,8 +1856,7 @@ Applies when `algorithm=RSA`.  Defaults to `2048`.
     </dt>
     <dd>{{% md %}}List of DNS names to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_san_emails_python">
 <a href="#state_san_emails_python" style="color: inherit; text-decoration: inherit;">san_<wbr>emails</a>
@@ -2042,8 +1866,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of email addresses to use as
 alternative subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_san_ips_python">
 <a href="#state_san_ips_python" style="color: inherit; text-decoration: inherit;">san_<wbr>ips</a>
@@ -2053,8 +1876,7 @@ alternative subjects of the certificate.
     </dt>
     <dd>{{% md %}}List of IP addresses to use as alternative
 subjects of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_days_python">
 <a href="#state_valid_days_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>days</a>
@@ -2064,8 +1886,7 @@ subjects of the certificate.
     </dt>
     <dd>{{% md %}}Desired number of days for which the new
 certificate will be valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2081,6 +1902,6 @@ certificate will be valid.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).{{% /md %}}</dd>
 </dl>
 

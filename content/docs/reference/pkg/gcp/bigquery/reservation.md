@@ -19,11 +19,17 @@ To get more information about Reservation, see:
     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Bigquery Reservation Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -43,9 +49,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -69,9 +78,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -82,9 +94,12 @@ reservation = gcp.bigquery.Reservation("reservation",
     slot_capacity=0)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Reservation Resource {#create}
@@ -126,9 +148,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -136,9 +156,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -146,9 +164,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -156,10 +172,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -185,9 +198,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -195,9 +206,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +214,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +222,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,18 +230,13 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +244,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +252,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,10 +260,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,9 +275,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="slotcapacity_csharp">
 <a href="#slotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
@@ -294,8 +285,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreidleslots_csharp">
 <a href="#ignoreidleslots_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
@@ -306,8 +296,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -317,8 +306,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -327,8 +315,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -338,14 +325,11 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="slotcapacity_go">
 <a href="#slotcapacity_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
@@ -355,8 +339,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreidleslots_go">
 <a href="#ignoreidleslots_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
@@ -367,8 +350,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -378,8 +360,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +369,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -399,14 +379,11 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="slotcapacity_nodejs">
 <a href="#slotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Capacity</a>
@@ -416,8 +393,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreidleslots_nodejs">
 <a href="#ignoreidleslots_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Idle<wbr>Slots</a>
@@ -428,8 +404,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -439,8 +414,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -449,8 +423,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -460,14 +433,11 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="slot_capacity_python">
 <a href="#slot_capacity_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>capacity</a>
@@ -477,8 +447,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_idle_slots_python">
 <a href="#ignore_idle_slots_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>idle_<wbr>slots</a>
@@ -489,8 +458,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -500,8 +468,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -510,8 +477,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -521,8 +487,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -533,9 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,14 +506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -558,14 +518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -573,14 +530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -588,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -716,9 +669,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreidleslots_csharp">
 <a href="#state_ignoreidleslots_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
@@ -729,8 +680,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -740,8 +690,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -750,8 +699,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -761,8 +709,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotcapacity_csharp">
 <a href="#state_slotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
@@ -772,14 +719,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreidleslots_go">
 <a href="#state_ignoreidleslots_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Idle<wbr>Slots</a>
@@ -790,8 +734,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -801,8 +744,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -811,8 +753,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -822,8 +763,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotcapacity_go">
 <a href="#state_slotcapacity_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Capacity</a>
@@ -833,14 +773,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreidleslots_nodejs">
 <a href="#state_ignoreidleslots_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Idle<wbr>Slots</a>
@@ -851,8 +788,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -862,8 +798,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -872,8 +807,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -883,8 +817,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotcapacity_nodejs">
 <a href="#state_slotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Capacity</a>
@@ -894,14 +827,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_idle_slots_python">
 <a href="#state_ignore_idle_slots_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>idle_<wbr>slots</a>
@@ -912,8 +842,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
     <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -923,8 +852,7 @@ capacity specified above at most.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -933,8 +861,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the reservation. This field must only contain alphanumeric characters or dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -944,8 +871,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slot_capacity_python">
 <a href="#state_slot_capacity_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>capacity</a>
@@ -955,8 +881,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -990,6 +915,6 @@ Reservation can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

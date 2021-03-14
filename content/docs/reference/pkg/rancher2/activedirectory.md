@@ -39,9 +39,7 @@ In addition to the built-in local auth, only one external auth config provider c
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ In addition to the built-in local auth, only one external auth config provider c
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ In addition to the built-in local auth, only one external auth config provider c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -206,8 +175,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountpassword_csharp">
 <a href="#serviceaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
@@ -216,8 +184,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountusername_csharp">
 <a href="#serviceaccountusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
@@ -226,8 +193,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testpassword_csharp">
 <a href="#testpassword_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Password</a>
@@ -236,8 +202,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testusername_csharp">
 <a href="#testusername_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Username</a>
@@ -246,8 +211,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersearchbase_csharp">
 <a href="#usersearchbase_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Base</a>
@@ -256,8 +220,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmode_csharp">
 <a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -266,8 +229,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipalids_csharp">
 <a href="#allowedprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
@@ -276,8 +238,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -286,8 +247,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -296,8 +256,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontimeout_csharp">
 <a href="#connectiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
@@ -306,8 +265,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultlogindomain_csharp">
 <a href="#defaultlogindomain_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Login<wbr>Domain</a>
@@ -316,8 +274,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -326,8 +283,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdnattribute_csharp">
 <a href="#groupdnattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Dn<wbr>Attribute</a>
@@ -336,8 +292,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmembermappingattribute_csharp">
 <a href="#groupmembermappingattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -346,8 +301,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmemberuserattribute_csharp">
 <a href="#groupmemberuserattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -356,8 +310,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupnameattribute_csharp">
 <a href="#groupnameattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Attribute</a>
@@ -366,8 +319,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupobjectclass_csharp">
 <a href="#groupobjectclass_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Class</a>
@@ -376,8 +328,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchattribute_csharp">
 <a href="#groupsearchattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Attribute</a>
@@ -386,8 +337,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchbase_csharp">
 <a href="#groupsearchbase_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Base</a>
@@ -396,8 +346,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchfilter_csharp">
 <a href="#groupsearchfilter_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Filter</a>
@@ -406,8 +355,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -416,8 +364,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedgroupmembershipenabled_csharp">
 <a href="#nestedgroupmembershipenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -426,8 +373,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -436,8 +382,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -446,8 +391,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdisabledbitmask_csharp">
 <a href="#userdisabledbitmask_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -456,8 +400,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledattribute_csharp">
 <a href="#userenabledattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>Attribute</a>
@@ -466,8 +409,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userloginattribute_csharp">
 <a href="#userloginattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Login<wbr>Attribute</a>
@@ -476,8 +418,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattribute_csharp">
 <a href="#usernameattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Attribute</a>
@@ -486,8 +427,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectclass_csharp">
 <a href="#userobjectclass_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Class</a>
@@ -496,8 +436,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchattribute_csharp">
 <a href="#usersearchattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Attribute</a>
@@ -506,8 +445,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchfilter_csharp">
 <a href="#usersearchfilter_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Filter</a>
@@ -516,14 +454,11 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -532,8 +467,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountpassword_go">
 <a href="#serviceaccountpassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
@@ -542,8 +476,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountusername_go">
 <a href="#serviceaccountusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
@@ -552,8 +485,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testpassword_go">
 <a href="#testpassword_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Password</a>
@@ -562,8 +494,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testusername_go">
 <a href="#testusername_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Username</a>
@@ -572,8 +503,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersearchbase_go">
 <a href="#usersearchbase_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Base</a>
@@ -582,8 +512,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmode_go">
 <a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -592,8 +521,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipalids_go">
 <a href="#allowedprincipalids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
@@ -602,8 +530,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -612,8 +539,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -622,8 +548,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontimeout_go">
 <a href="#connectiontimeout_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
@@ -632,8 +557,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultlogindomain_go">
 <a href="#defaultlogindomain_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Login<wbr>Domain</a>
@@ -642,8 +566,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -652,8 +575,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdnattribute_go">
 <a href="#groupdnattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Dn<wbr>Attribute</a>
@@ -662,8 +584,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmembermappingattribute_go">
 <a href="#groupmembermappingattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -672,8 +593,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmemberuserattribute_go">
 <a href="#groupmemberuserattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -682,8 +602,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupnameattribute_go">
 <a href="#groupnameattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Attribute</a>
@@ -692,8 +611,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupobjectclass_go">
 <a href="#groupobjectclass_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Class</a>
@@ -702,8 +620,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchattribute_go">
 <a href="#groupsearchattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Attribute</a>
@@ -712,8 +629,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchbase_go">
 <a href="#groupsearchbase_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Base</a>
@@ -722,8 +638,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchfilter_go">
 <a href="#groupsearchfilter_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Filter</a>
@@ -732,8 +647,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -742,8 +656,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedgroupmembershipenabled_go">
 <a href="#nestedgroupmembershipenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -752,8 +665,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -762,8 +674,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -772,8 +683,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdisabledbitmask_go">
 <a href="#userdisabledbitmask_go" style="color: inherit; text-decoration: inherit;">User<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -782,8 +692,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledattribute_go">
 <a href="#userenabledattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>Attribute</a>
@@ -792,8 +701,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userloginattribute_go">
 <a href="#userloginattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Login<wbr>Attribute</a>
@@ -802,8 +710,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattribute_go">
 <a href="#usernameattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Attribute</a>
@@ -812,8 +719,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectclass_go">
 <a href="#userobjectclass_go" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Class</a>
@@ -822,8 +728,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchattribute_go">
 <a href="#usersearchattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Attribute</a>
@@ -832,8 +737,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchfilter_go">
 <a href="#usersearchfilter_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Filter</a>
@@ -842,14 +746,11 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -858,8 +759,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountpassword_nodejs">
 <a href="#serviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Password</a>
@@ -868,8 +768,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountusername_nodejs">
 <a href="#serviceaccountusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Username</a>
@@ -878,8 +777,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testpassword_nodejs">
 <a href="#testpassword_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Password</a>
@@ -888,8 +786,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testusername_nodejs">
 <a href="#testusername_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Username</a>
@@ -898,8 +795,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersearchbase_nodejs">
 <a href="#usersearchbase_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Base</a>
@@ -908,8 +804,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmode_nodejs">
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
@@ -918,8 +813,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipalids_nodejs">
 <a href="#allowedprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principal<wbr>Ids</a>
@@ -928,8 +822,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -938,8 +831,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -948,8 +840,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontimeout_nodejs">
 <a href="#connectiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeout</a>
@@ -958,8 +849,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultlogindomain_nodejs">
 <a href="#defaultlogindomain_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Login<wbr>Domain</a>
@@ -968,8 +858,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -978,8 +867,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdnattribute_nodejs">
 <a href="#groupdnattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Dn<wbr>Attribute</a>
@@ -988,8 +876,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmembermappingattribute_nodejs">
 <a href="#groupmembermappingattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -998,8 +885,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmemberuserattribute_nodejs">
 <a href="#groupmemberuserattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -1008,8 +894,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupnameattribute_nodejs">
 <a href="#groupnameattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Attribute</a>
@@ -1018,8 +903,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupobjectclass_nodejs">
 <a href="#groupobjectclass_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Class</a>
@@ -1028,8 +912,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchattribute_nodejs">
 <a href="#groupsearchattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Attribute</a>
@@ -1038,8 +921,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchbase_nodejs">
 <a href="#groupsearchbase_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Base</a>
@@ -1048,8 +930,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsearchfilter_nodejs">
 <a href="#groupsearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Filter</a>
@@ -1058,8 +939,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1068,8 +948,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nestedgroupmembershipenabled_nodejs">
 <a href="#nestedgroupmembershipenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -1078,8 +957,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1088,8 +966,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1098,8 +975,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdisabledbitmask_nodejs">
 <a href="#userdisabledbitmask_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -1108,8 +984,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userenabledattribute_nodejs">
 <a href="#userenabledattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>Attribute</a>
@@ -1118,8 +993,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userloginattribute_nodejs">
 <a href="#userloginattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Login<wbr>Attribute</a>
@@ -1128,8 +1002,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattribute_nodejs">
 <a href="#usernameattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Attribute</a>
@@ -1138,8 +1011,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectclass_nodejs">
 <a href="#userobjectclass_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Class</a>
@@ -1148,8 +1020,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchattribute_nodejs">
 <a href="#usersearchattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Attribute</a>
@@ -1158,8 +1029,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersearchfilter_nodejs">
 <a href="#usersearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Filter</a>
@@ -1168,14 +1038,11 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1184,8 +1051,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_account_password_python">
 <a href="#service_account_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>password</a>
@@ -1194,8 +1060,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_account_username_python">
 <a href="#service_account_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>username</a>
@@ -1204,8 +1069,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_password_python">
 <a href="#test_password_python" style="color: inherit; text-decoration: inherit;">test_<wbr>password</a>
@@ -1214,8 +1078,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_username_python">
 <a href="#test_username_python" style="color: inherit; text-decoration: inherit;">test_<wbr>username</a>
@@ -1224,8 +1087,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_search_base_python">
 <a href="#user_search_base_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>base</a>
@@ -1234,8 +1096,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_mode_python">
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
@@ -1244,8 +1105,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_principal_ids_python">
 <a href="#allowed_principal_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principal_<wbr>ids</a>
@@ -1254,8 +1114,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1264,8 +1123,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1274,8 +1132,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_timeout_python">
 <a href="#connection_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeout</a>
@@ -1284,8 +1141,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_login_domain_python">
 <a href="#default_login_domain_python" style="color: inherit; text-decoration: inherit;">default_<wbr>login_<wbr>domain</a>
@@ -1294,8 +1150,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1304,8 +1159,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_dn_attribute_python">
 <a href="#group_dn_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>dn_<wbr>attribute</a>
@@ -1314,8 +1168,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_member_mapping_attribute_python">
 <a href="#group_member_mapping_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>member_<wbr>mapping_<wbr>attribute</a>
@@ -1324,8 +1177,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_member_user_attribute_python">
 <a href="#group_member_user_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>member_<wbr>user_<wbr>attribute</a>
@@ -1334,8 +1186,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_name_attribute_python">
 <a href="#group_name_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>attribute</a>
@@ -1344,8 +1195,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_object_class_python">
 <a href="#group_object_class_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>class</a>
@@ -1354,8 +1204,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_search_attribute_python">
 <a href="#group_search_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>attribute</a>
@@ -1364,8 +1213,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_search_base_python">
 <a href="#group_search_base_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>base</a>
@@ -1374,8 +1222,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_search_filter_python">
 <a href="#group_search_filter_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>filter</a>
@@ -1384,8 +1231,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1394,8 +1240,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nested_group_membership_enabled_python">
 <a href="#nested_group_membership_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>group_<wbr>membership_<wbr>enabled</a>
@@ -1404,8 +1249,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1414,8 +1258,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1424,8 +1267,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_disabled_bit_mask_python">
 <a href="#user_disabled_bit_mask_python" style="color: inherit; text-decoration: inherit;">user_<wbr>disabled_<wbr>bit_<wbr>mask</a>
@@ -1434,8 +1276,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_enabled_attribute_python">
 <a href="#user_enabled_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>attribute</a>
@@ -1444,8 +1285,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_login_attribute_python">
 <a href="#user_login_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>login_<wbr>attribute</a>
@@ -1454,8 +1294,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_attribute_python">
 <a href="#user_name_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>attribute</a>
@@ -1464,8 +1303,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_object_class_python">
 <a href="#user_object_class_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>class</a>
@@ -1474,8 +1312,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_search_attribute_python">
 <a href="#user_search_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>attribute</a>
@@ -1484,8 +1321,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_search_filter_python">
 <a href="#user_search_filter_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>filter</a>
@@ -1494,8 +1330,7 @@ The ActiveDirectory resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1506,9 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1516,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1526,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1536,14 +1367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1551,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1561,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1571,14 +1397,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1586,8 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1596,8 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1606,14 +1427,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1621,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1631,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1641,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1769,9 +1584,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessmode_csharp">
 <a href="#state_accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -1780,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipalids_csharp">
 <a href="#state_allowedprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
@@ -1790,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1800,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1810,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontimeout_csharp">
 <a href="#state_connectiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
@@ -1820,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlogindomain_csharp">
 <a href="#state_defaultlogindomain_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Login<wbr>Domain</a>
@@ -1830,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1840,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdnattribute_csharp">
 <a href="#state_groupdnattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Dn<wbr>Attribute</a>
@@ -1850,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmembermappingattribute_csharp">
 <a href="#state_groupmembermappingattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -1860,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmemberuserattribute_csharp">
 <a href="#state_groupmemberuserattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -1870,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameattribute_csharp">
 <a href="#state_groupnameattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Attribute</a>
@@ -1880,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclass_csharp">
 <a href="#state_groupobjectclass_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Class</a>
@@ -1890,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchattribute_csharp">
 <a href="#state_groupsearchattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Attribute</a>
@@ -1900,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchbase_csharp">
 <a href="#state_groupsearchbase_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Base</a>
@@ -1910,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchfilter_csharp">
 <a href="#state_groupsearchfilter_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Filter</a>
@@ -1920,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1930,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1940,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedgroupmembershipenabled_csharp">
 <a href="#state_nestedgroupmembershipenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -1950,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1960,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_csharp">
 <a href="#state_servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1970,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountpassword_csharp">
 <a href="#state_serviceaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
@@ -1980,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountusername_csharp">
 <a href="#state_serviceaccountusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
@@ -1990,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testpassword_csharp">
 <a href="#state_testpassword_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Password</a>
@@ -2000,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testusername_csharp">
 <a href="#state_testusername_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Username</a>
@@ -2010,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_csharp">
 <a href="#state_tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -2020,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2030,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdisabledbitmask_csharp">
 <a href="#state_userdisabledbitmask_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -2040,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userenabledattribute_csharp">
 <a href="#state_userenabledattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>Attribute</a>
@@ -2050,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userloginattribute_csharp">
 <a href="#state_userloginattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Login<wbr>Attribute</a>
@@ -2060,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattribute_csharp">
 <a href="#state_usernameattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Attribute</a>
@@ -2070,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userobjectclass_csharp">
 <a href="#state_userobjectclass_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Class</a>
@@ -2080,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchattribute_csharp">
 <a href="#state_usersearchattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Attribute</a>
@@ -2090,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchbase_csharp">
 <a href="#state_usersearchbase_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Base</a>
@@ -2100,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchfilter_csharp">
 <a href="#state_usersearchfilter_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Filter</a>
@@ -2110,14 +1890,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessmode_go">
 <a href="#state_accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -2126,8 +1903,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipalids_go">
 <a href="#state_allowedprincipalids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
@@ -2136,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2146,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2156,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontimeout_go">
 <a href="#state_connectiontimeout_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeout</a>
@@ -2166,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlogindomain_go">
 <a href="#state_defaultlogindomain_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Login<wbr>Domain</a>
@@ -2176,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2186,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdnattribute_go">
 <a href="#state_groupdnattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Dn<wbr>Attribute</a>
@@ -2196,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmembermappingattribute_go">
 <a href="#state_groupmembermappingattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -2206,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmemberuserattribute_go">
 <a href="#state_groupmemberuserattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -2216,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameattribute_go">
 <a href="#state_groupnameattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Attribute</a>
@@ -2226,8 +1993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclass_go">
 <a href="#state_groupobjectclass_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Class</a>
@@ -2236,8 +2002,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchattribute_go">
 <a href="#state_groupsearchattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Attribute</a>
@@ -2246,8 +2011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchbase_go">
 <a href="#state_groupsearchbase_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Base</a>
@@ -2256,8 +2020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchfilter_go">
 <a href="#state_groupsearchfilter_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Search<wbr>Filter</a>
@@ -2266,8 +2029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2276,8 +2038,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2286,8 +2047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedgroupmembershipenabled_go">
 <a href="#state_nestedgroupmembershipenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -2296,8 +2056,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2306,8 +2065,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_go">
 <a href="#state_servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -2316,8 +2074,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountpassword_go">
 <a href="#state_serviceaccountpassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Password</a>
@@ -2326,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountusername_go">
 <a href="#state_serviceaccountusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Username</a>
@@ -2336,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testpassword_go">
 <a href="#state_testpassword_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Password</a>
@@ -2346,8 +2101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testusername_go">
 <a href="#state_testusername_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Username</a>
@@ -2356,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_go">
 <a href="#state_tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -2366,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2376,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdisabledbitmask_go">
 <a href="#state_userdisabledbitmask_go" style="color: inherit; text-decoration: inherit;">User<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -2386,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userenabledattribute_go">
 <a href="#state_userenabledattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>Attribute</a>
@@ -2396,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userloginattribute_go">
 <a href="#state_userloginattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Login<wbr>Attribute</a>
@@ -2406,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattribute_go">
 <a href="#state_usernameattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Attribute</a>
@@ -2416,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userobjectclass_go">
 <a href="#state_userobjectclass_go" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Class</a>
@@ -2426,8 +2173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchattribute_go">
 <a href="#state_usersearchattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Attribute</a>
@@ -2436,8 +2182,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchbase_go">
 <a href="#state_usersearchbase_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Base</a>
@@ -2446,8 +2191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchfilter_go">
 <a href="#state_usersearchfilter_go" style="color: inherit; text-decoration: inherit;">User<wbr>Search<wbr>Filter</a>
@@ -2456,14 +2200,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessmode_nodejs">
 <a href="#state_accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
@@ -2472,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipalids_nodejs">
 <a href="#state_allowedprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principal<wbr>Ids</a>
@@ -2482,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2492,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2502,8 +2240,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontimeout_nodejs">
 <a href="#state_connectiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeout</a>
@@ -2512,8 +2249,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlogindomain_nodejs">
 <a href="#state_defaultlogindomain_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Login<wbr>Domain</a>
@@ -2522,8 +2258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2532,8 +2267,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdnattribute_nodejs">
 <a href="#state_groupdnattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Dn<wbr>Attribute</a>
@@ -2542,8 +2276,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmembermappingattribute_nodejs">
 <a href="#state_groupmembermappingattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Member<wbr>Mapping<wbr>Attribute</a>
@@ -2552,8 +2285,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupmemberuserattribute_nodejs">
 <a href="#state_groupmemberuserattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Member<wbr>User<wbr>Attribute</a>
@@ -2562,8 +2294,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameattribute_nodejs">
 <a href="#state_groupnameattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Attribute</a>
@@ -2572,8 +2303,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclass_nodejs">
 <a href="#state_groupobjectclass_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Class</a>
@@ -2582,8 +2312,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchattribute_nodejs">
 <a href="#state_groupsearchattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Attribute</a>
@@ -2592,8 +2321,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchbase_nodejs">
 <a href="#state_groupsearchbase_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Base</a>
@@ -2602,8 +2330,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsearchfilter_nodejs">
 <a href="#state_groupsearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Search<wbr>Filter</a>
@@ -2612,8 +2339,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2622,8 +2348,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2632,8 +2357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nestedgroupmembershipenabled_nodejs">
 <a href="#state_nestedgroupmembershipenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Group<wbr>Membership<wbr>Enabled</a>
@@ -2642,8 +2366,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2652,8 +2375,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_nodejs">
 <a href="#state_servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -2662,8 +2384,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountpassword_nodejs">
 <a href="#state_serviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Password</a>
@@ -2672,8 +2393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountusername_nodejs">
 <a href="#state_serviceaccountusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Username</a>
@@ -2682,8 +2402,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testpassword_nodejs">
 <a href="#state_testpassword_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Password</a>
@@ -2692,8 +2411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testusername_nodejs">
 <a href="#state_testusername_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Username</a>
@@ -2702,8 +2420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_nodejs">
 <a href="#state_tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -2712,8 +2429,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2722,8 +2438,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdisabledbitmask_nodejs">
 <a href="#state_userdisabledbitmask_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Disabled<wbr>Bit<wbr>Mask</a>
@@ -2732,8 +2447,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userenabledattribute_nodejs">
 <a href="#state_userenabledattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>Attribute</a>
@@ -2742,8 +2456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userloginattribute_nodejs">
 <a href="#state_userloginattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Login<wbr>Attribute</a>
@@ -2752,8 +2465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattribute_nodejs">
 <a href="#state_usernameattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Attribute</a>
@@ -2762,8 +2474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userobjectclass_nodejs">
 <a href="#state_userobjectclass_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Class</a>
@@ -2772,8 +2483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchattribute_nodejs">
 <a href="#state_usersearchattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Attribute</a>
@@ -2782,8 +2492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchbase_nodejs">
 <a href="#state_usersearchbase_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Base</a>
@@ -2792,8 +2501,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersearchfilter_nodejs">
 <a href="#state_usersearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Filter</a>
@@ -2802,14 +2510,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_mode_python">
 <a href="#state_access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
@@ -2818,8 +2523,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_principal_ids_python">
 <a href="#state_allowed_principal_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principal_<wbr>ids</a>
@@ -2828,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2838,8 +2541,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2848,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_timeout_python">
 <a href="#state_connection_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeout</a>
@@ -2858,8 +2559,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_login_domain_python">
 <a href="#state_default_login_domain_python" style="color: inherit; text-decoration: inherit;">default_<wbr>login_<wbr>domain</a>
@@ -2868,8 +2568,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult login domain (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2878,8 +2577,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_dn_attribute_python">
 <a href="#state_group_dn_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>dn_<wbr>attribute</a>
@@ -2888,8 +2586,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_member_mapping_attribute_python">
 <a href="#state_group_member_mapping_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>member_<wbr>mapping_<wbr>attribute</a>
@@ -2898,8 +2595,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_member_user_attribute_python">
 <a href="#state_group_member_user_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>member_<wbr>user_<wbr>attribute</a>
@@ -2908,8 +2604,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_name_attribute_python">
 <a href="#state_group_name_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>attribute</a>
@@ -2918,8 +2613,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_object_class_python">
 <a href="#state_group_object_class_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>class</a>
@@ -2928,8 +2622,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_search_attribute_python">
 <a href="#state_group_search_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>attribute</a>
@@ -2938,8 +2631,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_search_base_python">
 <a href="#state_group_search_base_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>base</a>
@@ -2948,8 +2640,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_search_filter_python">
 <a href="#state_group_search_filter_python" style="color: inherit; text-decoration: inherit;">group_<wbr>search_<wbr>filter</a>
@@ -2958,8 +2649,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2968,8 +2658,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2978,8 +2667,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nested_group_membership_enabled_python">
 <a href="#state_nested_group_membership_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>group_<wbr>membership_<wbr>enabled</a>
@@ -2988,8 +2676,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2998,8 +2685,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_python">
 <a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -3008,8 +2694,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_password_python">
 <a href="#state_service_account_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>password</a>
@@ -3018,8 +2703,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_username_python">
 <a href="#state_service_account_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>username</a>
@@ -3028,8 +2712,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_test_password_python">
 <a href="#state_test_password_python" style="color: inherit; text-decoration: inherit;">test_<wbr>password</a>
@@ -3038,8 +2721,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_test_username_python">
 <a href="#state_test_username_python" style="color: inherit; text-decoration: inherit;">test_<wbr>username</a>
@@ -3048,8 +2730,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for test access to ActiveDirectory service (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_python">
 <a href="#state_tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -3058,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3068,8 +2748,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_disabled_bit_mask_python">
 <a href="#state_user_disabled_bit_mask_python" style="color: inherit; text-decoration: inherit;">user_<wbr>disabled_<wbr>bit_<wbr>mask</a>
@@ -3078,8 +2757,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_enabled_attribute_python">
 <a href="#state_user_enabled_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>attribute</a>
@@ -3088,8 +2766,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_login_attribute_python">
 <a href="#state_user_login_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>login_<wbr>attribute</a>
@@ -3098,8 +2775,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_attribute_python">
 <a href="#state_user_name_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>attribute</a>
@@ -3108,8 +2784,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_object_class_python">
 <a href="#state_user_object_class_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>class</a>
@@ -3118,8 +2793,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_search_attribute_python">
 <a href="#state_user_search_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>attribute</a>
@@ -3128,8 +2802,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_search_base_python">
 <a href="#state_user_search_base_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>base</a>
@@ -3138,8 +2811,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_search_filter_python">
 <a href="#state_user_search_filter_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>filter</a>
@@ -3148,8 +2820,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3165,6 +2836,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 </dl>
 

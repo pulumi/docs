@@ -14,11 +14,17 @@ The connector mapping resource format.
 API Version: 2017-04-26.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ConnectorMappings_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -85,9 +91,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -151,9 +160,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -204,9 +216,12 @@ connector_mapping = azure_native.customerinsights.ConnectorMapping("connectorMap
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -258,9 +273,16 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ConnectorMapping Resource {#create}
@@ -285,9 +307,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -295,9 +315,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -305,9 +323,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -315,10 +331,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -344,9 +357,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -354,9 +365,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -364,9 +373,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -374,9 +381,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -384,18 +389,13 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -403,9 +403,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -413,9 +411,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -423,10 +419,7 @@ const connectorMapping = new azure_native.customerinsights.ConnectorMapping("con
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -441,9 +434,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -451,8 +442,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -460,8 +450,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytypename_csharp">
 <a href="#entitytypename_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -469,8 +458,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -478,8 +466,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappingproperties_csharp">
 <a href="#mappingproperties_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Properties</a>
@@ -487,8 +474,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -496,8 +482,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectortype_csharp">
 <a href="#connectortype_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
@@ -505,8 +490,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectortypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Connector<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -514,8 +498,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -523,8 +506,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingname_csharp">
 <a href="#mappingname_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Name</a>
@@ -532,14 +514,11 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -547,8 +526,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -556,8 +534,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytypename_go">
 <a href="#entitytypename_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -565,8 +542,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -574,8 +550,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappingproperties_go">
 <a href="#mappingproperties_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Properties</a>
@@ -583,8 +558,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -592,8 +566,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectortype_go">
 <a href="#connectortype_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
@@ -601,8 +574,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectortypes">Connector<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -610,8 +582,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -619,8 +590,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingname_go">
 <a href="#mappingname_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Name</a>
@@ -628,14 +598,11 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
@@ -643,8 +610,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -652,8 +618,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytypename_nodejs">
 <a href="#entitytypename_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type<wbr>Name</a>
@@ -661,8 +626,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -670,8 +634,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappingproperties_nodejs">
 <a href="#mappingproperties_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Properties</a>
@@ -679,8 +642,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -688,8 +650,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectortype_nodejs">
 <a href="#connectortype_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Type</a>
@@ -697,8 +658,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectortypes">Connector<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -706,8 +666,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -715,8 +674,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingname_nodejs">
 <a href="#mappingname_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Name</a>
@@ -724,14 +682,11 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
@@ -739,8 +694,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -748,8 +702,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines which entity type the file should map to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_type_name_python">
 <a href="#entity_type_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type_<wbr>name</a>
@@ -757,8 +710,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -766,8 +718,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mapping_properties_python">
 <a href="#mapping_properties_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>properties</a>
@@ -775,8 +726,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -784,8 +734,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connector_type_python">
 <a href="#connector_type_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>type</a>
@@ -793,8 +742,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#connectortypes">Connector<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -802,8 +750,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -811,8 +758,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name for the connector mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapping_name_python">
 <a href="#mapping_name_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>name</a>
@@ -820,8 +766,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the connector mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -832,9 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectormappingname_csharp">
 <a href="#connectormappingname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Mapping<wbr>Name</a>
@@ -842,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -851,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataformatid_csharp">
 <a href="#dataformatid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format<wbr>Id</a>
@@ -860,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -869,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -878,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -887,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntime_csharp">
 <a href="#nextruntime_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time</a>
@@ -896,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runid_csharp">
 <a href="#runid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
@@ -905,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RunId.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RunId.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -914,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -923,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -932,14 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectormappingname_go">
 <a href="#connectormappingname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Mapping<wbr>Name</a>
@@ -947,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -956,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataformatid_go">
 <a href="#dataformatid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format<wbr>Id</a>
@@ -965,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -974,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -983,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -992,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntime_go">
 <a href="#nextruntime_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Time</a>
@@ -1001,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runid_go">
 <a href="#runid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
@@ -1010,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RunId.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RunId.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1019,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1028,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1037,14 +957,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectormappingname_nodejs">
 <a href="#connectormappingname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Mapping<wbr>Name</a>
@@ -1052,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1061,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataformatid_nodejs">
 <a href="#dataformatid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Id</a>
@@ -1070,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1088,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1097,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextruntime_nodejs">
 <a href="#nextruntime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Time</a>
@@ -1106,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runid_nodejs">
 <a href="#runid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Id</a>
@@ -1115,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RunId.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RunId.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1124,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1133,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1142,14 +1049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connector_mapping_name_python">
 <a href="#connector_mapping_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>mapping_<wbr>name</a>
@@ -1157,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connector mapping name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1166,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_format_id_python">
 <a href="#data_format_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format_<wbr>id</a>
@@ -1175,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The DataFormat ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1184,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1193,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1202,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_run_time_python">
 <a href="#next_run_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>time</a>
@@ -1211,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next run time based on customer's settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="run_id_python">
 <a href="#run_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>id</a>
@@ -1220,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RunId.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RunId.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1229,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of connector mapping.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1238,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1247,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1264,55 +1157,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="completionoperationtypes">Completion<wbr>Operation<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Do<wbr>Nothing</dt>
-    <dd>DoNothing</dd>
-    <dt>Delete<wbr>File</dt>
-    <dd>DeleteFile</dd>
-    <dt>Move<wbr>File</dt>
-    <dd>MoveFile</dd>
-</dl>
+<dl class="tabular"><dt>Do<wbr>Nothing</dt>
+    <dd>DoNothing</dd><dt>Delete<wbr>File</dt>
+    <dd>DeleteFile</dd><dt>Move<wbr>File</dt>
+    <dd>MoveFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Completion<wbr>Operation<wbr>Types<wbr>Do<wbr>Nothing</dt>
-    <dd>DoNothing</dd>
-    <dt>Completion<wbr>Operation<wbr>Types<wbr>Delete<wbr>File</dt>
-    <dd>DeleteFile</dd>
-    <dt>Completion<wbr>Operation<wbr>Types<wbr>Move<wbr>File</dt>
-    <dd>MoveFile</dd>
-</dl>
+<dl class="tabular"><dt>Completion<wbr>Operation<wbr>Types<wbr>Do<wbr>Nothing</dt>
+    <dd>DoNothing</dd><dt>Completion<wbr>Operation<wbr>Types<wbr>Delete<wbr>File</dt>
+    <dd>DeleteFile</dd><dt>Completion<wbr>Operation<wbr>Types<wbr>Move<wbr>File</dt>
+    <dd>MoveFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Do<wbr>Nothing</dt>
-    <dd>DoNothing</dd>
-    <dt>Delete<wbr>File</dt>
-    <dd>DeleteFile</dd>
-    <dt>Move<wbr>File</dt>
-    <dd>MoveFile</dd>
-</dl>
+<dl class="tabular"><dt>Do<wbr>Nothing</dt>
+    <dd>DoNothing</dd><dt>Delete<wbr>File</dt>
+    <dd>DeleteFile</dd><dt>Move<wbr>File</dt>
+    <dd>MoveFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DO_NOTHING</dt>
-    <dd>DoNothing</dd>
-    <dt>DELETE_FILE</dt>
-    <dd>DeleteFile</dd>
-    <dt>MOVE_FILE</dt>
-    <dd>MoveFile</dd>
-</dl>
+<dl class="tabular"><dt>DO_NOTHING</dt>
+    <dd>DoNothing</dd><dt>DELETE_FILE</dt>
+    <dd>DeleteFile</dd><dt>MOVE_FILE</dt>
+    <dd>MoveFile</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingavailability">Connector<wbr>Mapping<wbr>Availability</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1320,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1329,14 +1203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Frequency<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1344,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1353,14 +1223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencytypes">Frequency<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1368,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1377,14 +1243,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencytypes">Frequency<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1392,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1401,16 +1263,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frequencytypes">Frequency<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1418,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1427,14 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1442,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1451,14 +1305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1466,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1475,14 +1325,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1490,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval of the given frequency to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1499,16 +1345,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_csharp">
 <a href="#completionoperationtype_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
@@ -1516,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#completionoperationtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Completion<wbr>Operation<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_csharp">
 <a href="#destinationfolder_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Folder</a>
@@ -1525,14 +1367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_go">
 <a href="#completionoperationtype_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
@@ -1540,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#completionoperationtypes">Completion<wbr>Operation<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_go">
 <a href="#destinationfolder_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Folder</a>
@@ -1549,14 +1387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_nodejs">
 <a href="#completionoperationtype_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Operation<wbr>Type</a>
@@ -1564,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#completionoperationtypes">Completion<wbr>Operation<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_nodejs">
 <a href="#destinationfolder_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Folder</a>
@@ -1573,14 +1407,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completion_operation_type_python">
 <a href="#completion_operation_type_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>operation_<wbr>type</a>
@@ -1588,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#completionoperationtypes">Completion<wbr>Operation<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_folder_python">
 <a href="#destination_folder_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>folder</a>
@@ -1597,16 +1427,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_csharp">
 <a href="#completionoperationtype_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
@@ -1614,8 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_csharp">
 <a href="#destinationfolder_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Folder</a>
@@ -1623,14 +1449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_go">
 <a href="#completionoperationtype_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
@@ -1638,8 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_go">
 <a href="#destinationfolder_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Folder</a>
@@ -1647,14 +1469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completionoperationtype_nodejs">
 <a href="#completionoperationtype_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Operation<wbr>Type</a>
@@ -1662,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationfolder_nodejs">
 <a href="#destinationfolder_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Folder</a>
@@ -1671,14 +1489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="completion_operation_type_python">
 <a href="#completion_operation_type_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>operation_<wbr>type</a>
@@ -1686,8 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_folder_python">
 <a href="#destination_folder_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>folder</a>
@@ -1695,16 +1509,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The destination folder where files will be moved to once the import is done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_csharp">
 <a href="#errormanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
@@ -1712,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errormanagementtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Error<wbr>Management<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_csharp">
 <a href="#errorlimit_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Limit</a>
@@ -1721,14 +1531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_go">
 <a href="#errormanagementtype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
@@ -1736,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errormanagementtypes">Error<wbr>Management<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_go">
 <a href="#errorlimit_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Limit</a>
@@ -1745,14 +1551,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_nodejs">
 <a href="#errormanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management<wbr>Type</a>
@@ -1760,8 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errormanagementtypes">Error<wbr>Management<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_nodejs">
 <a href="#errorlimit_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Limit</a>
@@ -1769,14 +1571,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_management_type_python">
 <a href="#error_management_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management_<wbr>type</a>
@@ -1784,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errormanagementtypes">Error<wbr>Management<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_limit_python">
 <a href="#error_limit_python" style="color: inherit; text-decoration: inherit;">error_<wbr>limit</a>
@@ -1793,16 +1591,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_csharp">
 <a href="#errormanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
@@ -1810,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_csharp">
 <a href="#errorlimit_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Limit</a>
@@ -1819,14 +1613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_go">
 <a href="#errormanagementtype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Management<wbr>Type</a>
@@ -1834,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_go">
 <a href="#errorlimit_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Limit</a>
@@ -1843,14 +1633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormanagementtype_nodejs">
 <a href="#errormanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management<wbr>Type</a>
@@ -1858,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlimit_nodejs">
 <a href="#errorlimit_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Limit</a>
@@ -1867,14 +1653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_management_type_python">
 <a href="#error_management_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management_<wbr>type</a>
@@ -1882,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of error management to use for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_limit_python">
 <a href="#error_limit_python" style="color: inherit; text-decoration: inherit;">error_<wbr>limit</a>
@@ -1891,16 +1673,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error limit allowed while importing data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingformat">Connector<wbr>Mapping<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_csharp">
 <a href="#formattype_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
@@ -1908,8 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formattypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Format<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_csharp">
 <a href="#acceptlanguage_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Language</a>
@@ -1917,8 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_csharp">
 <a href="#arrayseparator_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Separator</a>
@@ -1926,8 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_csharp">
 <a href="#columndelimiter_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Delimiter</a>
@@ -1935,8 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_csharp">
 <a href="#quotecharacter_csharp" style="color: inherit; text-decoration: inherit;">Quote<wbr>Character</a>
@@ -1944,8 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_csharp">
 <a href="#quoteescapecharacter_csharp" style="color: inherit; text-decoration: inherit;">Quote<wbr>Escape<wbr>Character</a>
@@ -1953,14 +1727,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_go">
 <a href="#formattype_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
@@ -1968,8 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formattypes">Format<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_go">
 <a href="#acceptlanguage_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Language</a>
@@ -1977,8 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_go">
 <a href="#arrayseparator_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Separator</a>
@@ -1986,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_go">
 <a href="#columndelimiter_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Delimiter</a>
@@ -1995,8 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_go">
 <a href="#quotecharacter_go" style="color: inherit; text-decoration: inherit;">Quote<wbr>Character</a>
@@ -2004,8 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_go">
 <a href="#quoteescapecharacter_go" style="color: inherit; text-decoration: inherit;">Quote<wbr>Escape<wbr>Character</a>
@@ -2013,14 +1779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_nodejs">
 <a href="#formattype_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Type</a>
@@ -2028,8 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formattypes">Format<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_nodejs">
 <a href="#acceptlanguage_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Language</a>
@@ -2037,8 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_nodejs">
 <a href="#arrayseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Separator</a>
@@ -2046,8 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_nodejs">
 <a href="#columndelimiter_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Delimiter</a>
@@ -2055,8 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_nodejs">
 <a href="#quotecharacter_nodejs" style="color: inherit; text-decoration: inherit;">quote<wbr>Character</a>
@@ -2064,8 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_nodejs">
 <a href="#quoteescapecharacter_nodejs" style="color: inherit; text-decoration: inherit;">quote<wbr>Escape<wbr>Character</a>
@@ -2073,14 +1831,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_type_python">
 <a href="#format_type_python" style="color: inherit; text-decoration: inherit;">format_<wbr>type</a>
@@ -2088,8 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formattypes">Format<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_language_python">
 <a href="#accept_language_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>language</a>
@@ -2097,8 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_separator_python">
 <a href="#array_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>separator</a>
@@ -2106,8 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_delimiter_python">
 <a href="#column_delimiter_python" style="color: inherit; text-decoration: inherit;">column_<wbr>delimiter</a>
@@ -2115,8 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_character_python">
 <a href="#quote_character_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>character</a>
@@ -2124,8 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_escape_character_python">
 <a href="#quote_escape_character_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>escape_<wbr>character</a>
@@ -2133,16 +1883,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_csharp">
 <a href="#formattype_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
@@ -2150,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_csharp">
 <a href="#acceptlanguage_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Language</a>
@@ -2159,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_csharp">
 <a href="#arrayseparator_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Separator</a>
@@ -2168,8 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_csharp">
 <a href="#columndelimiter_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Delimiter</a>
@@ -2177,8 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_csharp">
 <a href="#quotecharacter_csharp" style="color: inherit; text-decoration: inherit;">Quote<wbr>Character</a>
@@ -2186,8 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_csharp">
 <a href="#quoteescapecharacter_csharp" style="color: inherit; text-decoration: inherit;">Quote<wbr>Escape<wbr>Character</a>
@@ -2195,14 +1937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_go">
 <a href="#formattype_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
@@ -2210,8 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_go">
 <a href="#acceptlanguage_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Language</a>
@@ -2219,8 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_go">
 <a href="#arrayseparator_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Separator</a>
@@ -2228,8 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_go">
 <a href="#columndelimiter_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Delimiter</a>
@@ -2237,8 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_go">
 <a href="#quotecharacter_go" style="color: inherit; text-decoration: inherit;">Quote<wbr>Character</a>
@@ -2246,8 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_go">
 <a href="#quoteescapecharacter_go" style="color: inherit; text-decoration: inherit;">Quote<wbr>Escape<wbr>Character</a>
@@ -2255,14 +1989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="formattype_nodejs">
 <a href="#formattype_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Type</a>
@@ -2270,8 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptlanguage_nodejs">
 <a href="#acceptlanguage_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Language</a>
@@ -2279,8 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayseparator_nodejs">
 <a href="#arrayseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Separator</a>
@@ -2288,8 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_nodejs">
 <a href="#columndelimiter_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Delimiter</a>
@@ -2297,8 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotecharacter_nodejs">
 <a href="#quotecharacter_nodejs" style="color: inherit; text-decoration: inherit;">quote<wbr>Character</a>
@@ -2306,8 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quoteescapecharacter_nodejs">
 <a href="#quoteescapecharacter_nodejs" style="color: inherit; text-decoration: inherit;">quote<wbr>Escape<wbr>Character</a>
@@ -2315,14 +2041,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="format_type_python">
 <a href="#format_type_python" style="color: inherit; text-decoration: inherit;">format_<wbr>type</a>
@@ -2330,8 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type mapping format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_language_python">
 <a href="#accept_language_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>language</a>
@@ -2339,8 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oData language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The oData language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_separator_python">
 <a href="#array_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>separator</a>
@@ -2348,8 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Character separating array elements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_delimiter_python">
 <a href="#column_delimiter_python" style="color: inherit; text-decoration: inherit;">column_<wbr>delimiter</a>
@@ -2357,8 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character that signifies a break between columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_character_python">
 <a href="#quote_character_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>character</a>
@@ -2366,8 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quote character, used to indicate enquoted fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quote_escape_character_python">
 <a href="#quote_escape_character_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>escape_<wbr>character</a>
@@ -2375,16 +2093,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Escape character for quotes, can be the same as the quoteCharacter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingproperties">Connector<wbr>Mapping<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_csharp">
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -2392,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailability">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_csharp">
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
@@ -2401,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_csharp">
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
@@ -2410,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagement">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2419,8 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
@@ -2428,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructure">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_csharp">
 <a href="#filefilter_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Filter</a>
@@ -2437,8 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_csharp">
 <a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -2446,8 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_csharp">
 <a href="#hasheader_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Header</a>
@@ -2455,14 +2163,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_go">
 <a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -2470,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_go">
 <a href="#completeoperation_go" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
@@ -2479,8 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_go">
 <a href="#errormanagement_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
@@ -2488,8 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2497,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
@@ -2506,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructure">[]Connector<wbr>Mapping<wbr>Structure</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_go">
 <a href="#filefilter_go" style="color: inherit; text-decoration: inherit;">File<wbr>Filter</a>
@@ -2515,8 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_go">
 <a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -2524,8 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_go">
 <a href="#hasheader_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Header</a>
@@ -2533,14 +2231,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_nodejs">
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -2548,8 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_nodejs">
 <a href="#completeoperation_nodejs" style="color: inherit; text-decoration: inherit;">complete<wbr>Operation</a>
@@ -2557,8 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_nodejs">
 <a href="#errormanagement_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management</a>
@@ -2566,8 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2575,8 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
@@ -2584,8 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructure">Connector<wbr>Mapping<wbr>Structure[]</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_nodejs">
 <a href="#filefilter_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Filter</a>
@@ -2593,8 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_nodejs">
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
@@ -2602,8 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_nodejs">
 <a href="#hasheader_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Header</a>
@@ -2611,14 +2299,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_python">
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -2626,8 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="complete_operation_python">
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
@@ -2635,8 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_management_python">
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
@@ -2644,8 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2653,8 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
@@ -2662,8 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructure">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_filter_python">
 <a href="#file_filter_python" style="color: inherit; text-decoration: inherit;">file_<wbr>filter</a>
@@ -2671,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_path_python">
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
@@ -2680,8 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_header_python">
 <a href="#has_header_python" style="color: inherit; text-decoration: inherit;">has_<wbr>header</a>
@@ -2689,16 +2367,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingpropertiesresponse">Connector<wbr>Mapping<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_csharp">
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -2706,8 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_csharp">
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
@@ -2715,8 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_csharp">
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
@@ -2724,8 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2733,8 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_csharp">
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
@@ -2742,8 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_csharp">
 <a href="#filefilter_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Filter</a>
@@ -2751,8 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_csharp">
 <a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -2760,8 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_csharp">
 <a href="#hasheader_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Header</a>
@@ -2769,14 +2437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_go">
 <a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -2784,8 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_go">
 <a href="#completeoperation_go" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
@@ -2793,8 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_go">
 <a href="#errormanagement_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
@@ -2802,8 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -2811,8 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_go">
 <a href="#structure_go" style="color: inherit; text-decoration: inherit;">Structure</a>
@@ -2820,8 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructureresponse">[]Connector<wbr>Mapping<wbr>Structure<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_go">
 <a href="#filefilter_go" style="color: inherit; text-decoration: inherit;">File<wbr>Filter</a>
@@ -2829,8 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_go">
 <a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -2838,8 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_go">
 <a href="#hasheader_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Header</a>
@@ -2847,14 +2505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_nodejs">
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -2862,8 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="completeoperation_nodejs">
 <a href="#completeoperation_nodejs" style="color: inherit; text-decoration: inherit;">complete<wbr>Operation</a>
@@ -2871,8 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormanagement_nodejs">
 <a href="#errormanagement_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management</a>
@@ -2880,8 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2889,8 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_nodejs">
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
@@ -2898,8 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructureresponse">Connector<wbr>Mapping<wbr>Structure<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filefilter_nodejs">
 <a href="#filefilter_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Filter</a>
@@ -2907,8 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderpath_nodejs">
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
@@ -2916,8 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasheader_nodejs">
 <a href="#hasheader_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Header</a>
@@ -2925,14 +2573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_python">
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -2940,8 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="complete_operation_python">
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
@@ -2949,8 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_management_python">
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
@@ -2958,8 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2967,8 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="structure_python">
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
@@ -2976,8 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_filter_python">
 <a href="#file_filter_python" style="color: inherit; text-decoration: inherit;">file_<wbr>filter</a>
@@ -2985,8 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file filter for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_path_python">
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
@@ -2994,8 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The folder path for the mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_header_python">
 <a href="#has_header_python" style="color: inherit; text-decoration: inherit;">has_<wbr>header</a>
@@ -3003,16 +2641,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the file contains a header or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingstructure">Connector<wbr>Mapping<wbr>Structure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_csharp">
 <a href="#columnname_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -3020,8 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_csharp">
 <a href="#propertyname_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -3029,8 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_csharp">
 <a href="#customformatspecifier_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Format<wbr>Specifier</a>
@@ -3038,8 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_csharp">
 <a href="#isencrypted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Encrypted</a>
@@ -3047,14 +2679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_go">
 <a href="#columnname_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -3062,8 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_go">
 <a href="#propertyname_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -3071,8 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_go">
 <a href="#customformatspecifier_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Format<wbr>Specifier</a>
@@ -3080,8 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_go">
 <a href="#isencrypted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Encrypted</a>
@@ -3089,14 +2715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_nodejs">
 <a href="#columnname_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
@@ -3104,8 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_nodejs">
 <a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
@@ -3113,8 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_nodejs">
 <a href="#customformatspecifier_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Format<wbr>Specifier</a>
@@ -3122,8 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_nodejs">
 <a href="#isencrypted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Encrypted</a>
@@ -3131,14 +2751,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_name_python">
 <a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
@@ -3146,8 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_name_python">
 <a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
@@ -3155,8 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_format_specifier_python">
 <a href="#custom_format_specifier_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>format_<wbr>specifier</a>
@@ -3164,8 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_encrypted_python">
 <a href="#is_encrypted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encrypted</a>
@@ -3173,16 +2787,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectormappingstructureresponse">Connector<wbr>Mapping<wbr>Structure<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_csharp">
 <a href="#columnname_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -3190,8 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_csharp">
 <a href="#propertyname_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -3199,8 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_csharp">
 <a href="#customformatspecifier_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Format<wbr>Specifier</a>
@@ -3208,8 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_csharp">
 <a href="#isencrypted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Encrypted</a>
@@ -3217,14 +2825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_go">
 <a href="#columnname_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -3232,8 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_go">
 <a href="#propertyname_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -3241,8 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_go">
 <a href="#customformatspecifier_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Format<wbr>Specifier</a>
@@ -3250,8 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_go">
 <a href="#isencrypted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Encrypted</a>
@@ -3259,14 +2861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_nodejs">
 <a href="#columnname_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
@@ -3274,8 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyname_nodejs">
 <a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
@@ -3283,8 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customformatspecifier_nodejs">
 <a href="#customformatspecifier_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Format<wbr>Specifier</a>
@@ -3292,8 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isencrypted_nodejs">
 <a href="#isencrypted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Encrypted</a>
@@ -3301,14 +2897,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_name_python">
 <a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
@@ -3316,8 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The column name of the import file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_name_python">
 <a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
@@ -3325,8 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property name of the mapping entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_format_specifier_python">
 <a href="#custom_format_specifier_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>format_<wbr>specifier</a>
@@ -3334,8 +2925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom format specifier for input parsing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_encrypted_python">
 <a href="#is_encrypted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encrypted</a>
@@ -3343,270 +2933,173 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the column is encrypted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectortypes">Connector<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>CRM</dt>
-    <dd>CRM</dd>
-    <dt>Azure<wbr>Blob</dt>
-    <dd>AzureBlob</dd>
-    <dt>Salesforce</dt>
-    <dd>Salesforce</dd>
-    <dt>Exchange<wbr>Online</dt>
-    <dd>ExchangeOnline</dd>
-    <dt>Outbound</dt>
-    <dd>Outbound</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>CRM</dt>
+    <dd>CRM</dd><dt>Azure<wbr>Blob</dt>
+    <dd>AzureBlob</dd><dt>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Exchange<wbr>Online</dt>
+    <dd>ExchangeOnline</dd><dt>Outbound</dt>
+    <dd>Outbound</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Connector<wbr>Types<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Connector<wbr>Types<wbr>CRM</dt>
-    <dd>CRM</dd>
-    <dt>Connector<wbr>Types<wbr>Azure<wbr>Blob</dt>
-    <dd>AzureBlob</dd>
-    <dt>Connector<wbr>Types<wbr>Salesforce</dt>
-    <dd>Salesforce</dd>
-    <dt>Connector<wbr>Types<wbr>Exchange<wbr>Online</dt>
-    <dd>ExchangeOnline</dd>
-    <dt>Connector<wbr>Types<wbr>Outbound</dt>
-    <dd>Outbound</dd>
-</dl>
+<dl class="tabular"><dt>Connector<wbr>Types<wbr>None</dt>
+    <dd>None</dd><dt>Connector<wbr>Types<wbr>CRM</dt>
+    <dd>CRM</dd><dt>Connector<wbr>Types<wbr>Azure<wbr>Blob</dt>
+    <dd>AzureBlob</dd><dt>Connector<wbr>Types<wbr>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Connector<wbr>Types<wbr>Exchange<wbr>Online</dt>
+    <dd>ExchangeOnline</dd><dt>Connector<wbr>Types<wbr>Outbound</dt>
+    <dd>Outbound</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>CRM</dt>
-    <dd>CRM</dd>
-    <dt>Azure<wbr>Blob</dt>
-    <dd>AzureBlob</dd>
-    <dt>Salesforce</dt>
-    <dd>Salesforce</dd>
-    <dt>Exchange<wbr>Online</dt>
-    <dd>ExchangeOnline</dd>
-    <dt>Outbound</dt>
-    <dd>Outbound</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>CRM</dt>
+    <dd>CRM</dd><dt>Azure<wbr>Blob</dt>
+    <dd>AzureBlob</dd><dt>Salesforce</dt>
+    <dd>Salesforce</dd><dt>Exchange<wbr>Online</dt>
+    <dd>ExchangeOnline</dd><dt>Outbound</dt>
+    <dd>Outbound</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>CRM</dt>
-    <dd>CRM</dd>
-    <dt>AZURE_BLOB</dt>
-    <dd>AzureBlob</dd>
-    <dt>SALESFORCE</dt>
-    <dd>Salesforce</dd>
-    <dt>EXCHANGE_ONLINE</dt>
-    <dd>ExchangeOnline</dd>
-    <dt>OUTBOUND</dt>
-    <dd>Outbound</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>CRM</dt>
+    <dd>CRM</dd><dt>AZURE_BLOB</dt>
+    <dd>AzureBlob</dd><dt>SALESFORCE</dt>
+    <dd>Salesforce</dd><dt>EXCHANGE_ONLINE</dt>
+    <dd>ExchangeOnline</dd><dt>OUTBOUND</dt>
+    <dd>Outbound</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entitytypes">Entity<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Profile</dt>
+    <dd>Profile</dd><dt>Interaction</dt>
+    <dd>Interaction</dd><dt>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Entity<wbr>Types<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Entity<wbr>Types<wbr>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Entity<wbr>Types<wbr>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Entity<wbr>Types<wbr>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>Entity<wbr>Types<wbr>None</dt>
+    <dd>None</dd><dt>Entity<wbr>Types<wbr>Profile</dt>
+    <dd>Profile</dd><dt>Entity<wbr>Types<wbr>Interaction</dt>
+    <dd>Interaction</dd><dt>Entity<wbr>Types<wbr>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Profile</dt>
+    <dd>Profile</dd><dt>Interaction</dt>
+    <dd>Interaction</dd><dt>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>PROFILE</dt>
-    <dd>Profile</dd>
-    <dt>INTERACTION</dt>
-    <dd>Interaction</dd>
-    <dt>RELATIONSHIP</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>PROFILE</dt>
+    <dd>Profile</dd><dt>INTERACTION</dt>
+    <dd>Interaction</dd><dt>RELATIONSHIP</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errormanagementtypes">Error<wbr>Management<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Reject<wbr>And<wbr>Continue</dt>
-    <dd>RejectAndContinue</dd>
-    <dt>Stop<wbr>Import</dt>
-    <dd>StopImport</dd>
-    <dt>Reject<wbr>Until<wbr>Limit</dt>
-    <dd>RejectUntilLimit</dd>
-</dl>
+<dl class="tabular"><dt>Reject<wbr>And<wbr>Continue</dt>
+    <dd>RejectAndContinue</dd><dt>Stop<wbr>Import</dt>
+    <dd>StopImport</dd><dt>Reject<wbr>Until<wbr>Limit</dt>
+    <dd>RejectUntilLimit</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Error<wbr>Management<wbr>Types<wbr>Reject<wbr>And<wbr>Continue</dt>
-    <dd>RejectAndContinue</dd>
-    <dt>Error<wbr>Management<wbr>Types<wbr>Stop<wbr>Import</dt>
-    <dd>StopImport</dd>
-    <dt>Error<wbr>Management<wbr>Types<wbr>Reject<wbr>Until<wbr>Limit</dt>
-    <dd>RejectUntilLimit</dd>
-</dl>
+<dl class="tabular"><dt>Error<wbr>Management<wbr>Types<wbr>Reject<wbr>And<wbr>Continue</dt>
+    <dd>RejectAndContinue</dd><dt>Error<wbr>Management<wbr>Types<wbr>Stop<wbr>Import</dt>
+    <dd>StopImport</dd><dt>Error<wbr>Management<wbr>Types<wbr>Reject<wbr>Until<wbr>Limit</dt>
+    <dd>RejectUntilLimit</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Reject<wbr>And<wbr>Continue</dt>
-    <dd>RejectAndContinue</dd>
-    <dt>Stop<wbr>Import</dt>
-    <dd>StopImport</dd>
-    <dt>Reject<wbr>Until<wbr>Limit</dt>
-    <dd>RejectUntilLimit</dd>
-</dl>
+<dl class="tabular"><dt>Reject<wbr>And<wbr>Continue</dt>
+    <dd>RejectAndContinue</dd><dt>Stop<wbr>Import</dt>
+    <dd>StopImport</dd><dt>Reject<wbr>Until<wbr>Limit</dt>
+    <dd>RejectUntilLimit</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>REJECT_AND_CONTINUE</dt>
-    <dd>RejectAndContinue</dd>
-    <dt>STOP_IMPORT</dt>
-    <dd>StopImport</dd>
-    <dt>REJECT_UNTIL_LIMIT</dt>
-    <dd>RejectUntilLimit</dd>
-</dl>
+<dl class="tabular"><dt>REJECT_AND_CONTINUE</dt>
+    <dd>RejectAndContinue</dd><dt>STOP_IMPORT</dt>
+    <dd>StopImport</dd><dt>REJECT_UNTIL_LIMIT</dt>
+    <dd>RejectUntilLimit</dd></dl>
 {{% /choosable %}}
 
 <h4 id="formattypes">Format<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Text<wbr>Format</dt>
-    <dd>TextFormat</dd>
-</dl>
+<dl class="tabular"><dt>Text<wbr>Format</dt>
+    <dd>TextFormat</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Format<wbr>Types<wbr>Text<wbr>Format</dt>
-    <dd>TextFormat</dd>
-</dl>
+<dl class="tabular"><dt>Format<wbr>Types<wbr>Text<wbr>Format</dt>
+    <dd>TextFormat</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Text<wbr>Format</dt>
-    <dd>TextFormat</dd>
-</dl>
+<dl class="tabular"><dt>Text<wbr>Format</dt>
+    <dd>TextFormat</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TEXT_FORMAT</dt>
-    <dd>TextFormat</dd>
-</dl>
+<dl class="tabular"><dt>TEXT_FORMAT</dt>
+    <dd>TextFormat</dd></dl>
 {{% /choosable %}}
 
 <h4 id="frequencytypes">Frequency<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Minute</dt>
+    <dd>Minute</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Frequency<wbr>Types<wbr>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Frequency<wbr>Types<wbr>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Frequency<wbr>Types<wbr>Day</dt>
-    <dd>Day</dd>
-    <dt>Frequency<wbr>Types<wbr>Week</dt>
-    <dd>Week</dd>
-    <dt>Frequency<wbr>Types<wbr>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Frequency<wbr>Types<wbr>Minute</dt>
+    <dd>Minute</dd><dt>Frequency<wbr>Types<wbr>Hour</dt>
+    <dd>Hour</dd><dt>Frequency<wbr>Types<wbr>Day</dt>
+    <dd>Day</dd><dt>Frequency<wbr>Types<wbr>Week</dt>
+    <dd>Week</dd><dt>Frequency<wbr>Types<wbr>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Minute</dt>
+    <dd>Minute</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MINUTE</dt>
-    <dd>Minute</dd>
-    <dt>HOUR</dt>
-    <dd>Hour</dd>
-    <dt>DAY</dt>
-    <dd>Day</dd>
-    <dt>WEEK</dt>
-    <dd>Week</dd>
-    <dt>MONTH</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>MINUTE</dt>
+    <dd>Minute</dd><dt>HOUR</dt>
+    <dd>Hour</dd><dt>DAY</dt>
+    <dd>Day</dd><dt>WEEK</dt>
+    <dd>Week</dd><dt>MONTH</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -15,11 +15,17 @@ Provides a Brain Industrial Pid Loop resource.
 > **NOTE:** Available in v1.117.0+.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -87,9 +99,12 @@ example = alicloud.brain.IndustrialPidLoop("example",
     pid_project_id="856c6b8f-ca63-40a4-xxxx-xxxx")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -105,9 +120,16 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IndustrialPidLoop Resource {#create}
@@ -132,9 +154,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -142,9 +162,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -152,9 +170,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -162,10 +178,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +204,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -201,9 +212,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +220,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +228,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,18 +236,13 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +250,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +258,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,10 +266,7 @@ const example = new alicloud.brain.IndustrialPidLoop("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +281,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidloopconfiguration_csharp">
 <a href="#pidloopconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Configuration</a>
@@ -299,8 +290,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopdcstype_csharp">
 <a href="#pidloopdcstype_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -309,8 +299,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopiscrucial_csharp">
 <a href="#pidloopiscrucial_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -319,8 +308,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopname_csharp">
 <a href="#pidloopname_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Name</a>
@@ -329,8 +317,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidlooptype_csharp">
 <a href="#pidlooptype_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Type</a>
@@ -339,8 +326,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidprojectid_csharp">
 <a href="#pidprojectid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Project<wbr>Id</a>
@@ -349,8 +335,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidloopdesc_csharp">
 <a href="#pidloopdesc_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Desc</a>
@@ -359,14 +344,11 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidloopconfiguration_go">
 <a href="#pidloopconfiguration_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Configuration</a>
@@ -375,8 +357,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopdcstype_go">
 <a href="#pidloopdcstype_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -385,8 +366,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopiscrucial_go">
 <a href="#pidloopiscrucial_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -395,8 +375,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopname_go">
 <a href="#pidloopname_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Name</a>
@@ -405,8 +384,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidlooptype_go">
 <a href="#pidlooptype_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Type</a>
@@ -415,8 +393,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidprojectid_go">
 <a href="#pidprojectid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Project<wbr>Id</a>
@@ -425,8 +402,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidloopdesc_go">
 <a href="#pidloopdesc_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Desc</a>
@@ -435,14 +411,11 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidloopconfiguration_nodejs">
 <a href="#pidloopconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Configuration</a>
@@ -451,8 +424,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopdcstype_nodejs">
 <a href="#pidloopdcstype_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -461,8 +433,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopiscrucial_nodejs">
 <a href="#pidloopiscrucial_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -471,8 +442,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidloopname_nodejs">
 <a href="#pidloopname_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Name</a>
@@ -481,8 +451,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidlooptype_nodejs">
 <a href="#pidlooptype_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Type</a>
@@ -491,8 +460,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pidprojectid_nodejs">
 <a href="#pidprojectid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Project<wbr>Id</a>
@@ -501,8 +469,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pidloopdesc_nodejs">
 <a href="#pidloopdesc_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Desc</a>
@@ -511,14 +478,11 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pid_loop_configuration_python">
 <a href="#pid_loop_configuration_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>configuration</a>
@@ -527,8 +491,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pid_loop_dcs_type_python">
 <a href="#pid_loop_dcs_type_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>dcs_<wbr>type</a>
@@ -537,8 +500,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pid_loop_is_crucial_python">
 <a href="#pid_loop_is_crucial_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>is_<wbr>crucial</a>
@@ -547,8 +509,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pid_loop_name_python">
 <a href="#pid_loop_name_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>name</a>
@@ -557,8 +518,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pid_loop_type_python">
 <a href="#pid_loop_type_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>type</a>
@@ -567,8 +527,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pid_project_id_python">
 <a href="#pid_project_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>project_<wbr>id</a>
@@ -577,8 +536,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pid_loop_desc_python">
 <a href="#pid_loop_desc_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>desc</a>
@@ -587,8 +545,7 @@ The IndustrialPidLoop resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -599,9 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -609,8 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -619,14 +573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -644,14 +594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -659,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -669,14 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -684,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -694,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -822,9 +763,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopconfiguration_csharp">
 <a href="#state_pidloopconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Configuration</a>
@@ -833,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdcstype_csharp">
 <a href="#state_pidloopdcstype_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -843,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdesc_csharp">
 <a href="#state_pidloopdesc_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Desc</a>
@@ -853,8 +790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopiscrucial_csharp">
 <a href="#state_pidloopiscrucial_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -863,8 +799,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopname_csharp">
 <a href="#state_pidloopname_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Name</a>
@@ -873,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidlooptype_csharp">
 <a href="#state_pidlooptype_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Type</a>
@@ -883,8 +817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidprojectid_csharp">
 <a href="#state_pidprojectid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Project<wbr>Id</a>
@@ -893,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -903,14 +835,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopconfiguration_go">
 <a href="#state_pidloopconfiguration_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Configuration</a>
@@ -919,8 +848,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdcstype_go">
 <a href="#state_pidloopdcstype_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -929,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdesc_go">
 <a href="#state_pidloopdesc_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Desc</a>
@@ -939,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopiscrucial_go">
 <a href="#state_pidloopiscrucial_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -949,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopname_go">
 <a href="#state_pidloopname_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Name</a>
@@ -959,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidlooptype_go">
 <a href="#state_pidlooptype_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Loop<wbr>Type</a>
@@ -969,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidprojectid_go">
 <a href="#state_pidprojectid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Project<wbr>Id</a>
@@ -979,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -989,14 +911,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopconfiguration_nodejs">
 <a href="#state_pidloopconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Configuration</a>
@@ -1005,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdcstype_nodejs">
 <a href="#state_pidloopdcstype_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Dcs<wbr>Type</a>
@@ -1015,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopdesc_nodejs">
 <a href="#state_pidloopdesc_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Desc</a>
@@ -1025,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopiscrucial_nodejs">
 <a href="#state_pidloopiscrucial_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Is<wbr>Crucial</a>
@@ -1035,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidloopname_nodejs">
 <a href="#state_pidloopname_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Name</a>
@@ -1045,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidlooptype_nodejs">
 <a href="#state_pidlooptype_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Loop<wbr>Type</a>
@@ -1055,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidprojectid_nodejs">
 <a href="#state_pidprojectid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Project<wbr>Id</a>
@@ -1065,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1075,14 +987,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_configuration_python">
 <a href="#state_pid_loop_configuration_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>configuration</a>
@@ -1091,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pid Loop Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_dcs_type_python">
 <a href="#state_pid_loop_dcs_type_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>dcs_<wbr>type</a>
@@ -1101,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dcs type of Pid Loop. Valid values: `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_desc_python">
 <a href="#state_pid_loop_desc_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>desc</a>
@@ -1111,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desc of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_is_crucial_python">
 <a href="#state_pid_loop_is_crucial_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>is_<wbr>crucial</a>
@@ -1121,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether is crucial Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_name_python">
 <a href="#state_pid_loop_name_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>name</a>
@@ -1131,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Pid Loop.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_loop_type_python">
 <a href="#state_pid_loop_type_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>loop_<wbr>type</a>
@@ -1141,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Pid Loop. Valid values: `0`, `1`, `2`, `3`, `4`, `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_project_id_python">
 <a href="#state_pid_project_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>project_<wbr>id</a>
@@ -1151,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pid project id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1161,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Pid Loop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1188,6 +1089,6 @@ Brain Industrial Pid Loop can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

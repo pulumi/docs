@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Outputs.<wbr>Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -220,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitepropertiesresponse">Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitepropertiesresponse">Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -358,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitepropertiesresponse">Site<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of resource. Type = Microsoft.OffAzure/VMWareSites.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location in which Sites is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the VMware site.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,9 +390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_csharp">
 <a href="#lastheartbeatutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heart<wbr>Beat<wbr>Utc</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -479,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -488,14 +430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_go">
 <a href="#lastheartbeatutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heart<wbr>Beat<wbr>Utc</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -521,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_go">
 <a href="#keyvaulturi_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -539,14 +474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_nodejs">
 <a href="#lastheartbeatutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heart<wbr>Beat<wbr>Utc</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -581,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_nodejs">
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
@@ -590,14 +518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_heart_beat_utc_python">
 <a href="#last_heart_beat_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heart_<wbr>beat_<wbr>utc</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last heartbeat time of the agent in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key vault ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_uri_python">
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sitepropertiesresponse">Site<wbr>Properties<wbr>Response</h4>
@@ -650,9 +570,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_csharp">
 <a href="#serviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -660,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentdetails_csharp">
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
@@ -669,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteagentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appliancename_csharp">
 <a href="#appliancename_csharp" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Name</a>
@@ -678,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysolutionid_csharp">
 <a href="#discoverysolutionid_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Solution<wbr>Id</a>
@@ -687,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalidentitydetails_csharp">
 <a href="#serviceprincipalidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Identity<wbr>Details</a>
@@ -696,14 +610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitespnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_go">
 <a href="#serviceendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -711,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentdetails_go">
 <a href="#agentdetails_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appliancename_go">
 <a href="#appliancename_go" style="color: inherit; text-decoration: inherit;">Appliance<wbr>Name</a>
@@ -729,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysolutionid_go">
 <a href="#discoverysolutionid_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Solution<wbr>Id</a>
@@ -738,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalidentitydetails_go">
 <a href="#serviceprincipalidentitydetails_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Identity<wbr>Details</a>
@@ -747,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceendpoint_nodejs">
 <a href="#serviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint</a>
@@ -762,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentdetails_nodejs">
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
@@ -771,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appliancename_nodejs">
 <a href="#appliancename_nodejs" style="color: inherit; text-decoration: inherit;">appliance<wbr>Name</a>
@@ -780,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysolutionid_nodejs">
 <a href="#discoverysolutionid_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Solution<wbr>Id</a>
@@ -789,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalidentitydetails_nodejs">
 <a href="#serviceprincipalidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Identity<wbr>Details</a>
@@ -798,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_endpoint_python">
 <a href="#service_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint</a>
@@ -813,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_details_python">
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
@@ -822,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appliance_name_python">
 <a href="#appliance_name_python" style="color: inherit; text-decoration: inherit;">appliance_<wbr>name</a>
@@ -831,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Appliance Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovery_solution_id_python">
 <a href="#discovery_solution_id_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>solution_<wbr>id</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of migration hub solution for SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_identity_details_python">
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response</h4>
@@ -858,9 +750,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadauthority_csharp">
 <a href="#aadauthority_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Authority</a>
@@ -868,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -877,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -886,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -895,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawcertdata_csharp">
 <a href="#rawcertdata_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Cert<wbr>Data</a>
@@ -904,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -913,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadauthority_go">
 <a href="#aadauthority_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Authority</a>
@@ -928,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -937,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -946,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -955,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawcertdata_go">
 <a href="#rawcertdata_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Cert<wbr>Data</a>
@@ -964,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -973,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadauthority_nodejs">
 <a href="#aadauthority_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Authority</a>
@@ -988,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -997,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1006,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1015,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawcertdata_nodejs">
 <a href="#rawcertdata_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Cert<wbr>Data</a>
@@ -1024,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1033,14 +902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aad_authority_python">
 <a href="#aad_authority_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>authority</a>
@@ -1048,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1057,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1066,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1075,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_cert_data_python">
 <a href="#raw_cert_data_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>cert_<wbr>data</a>
@@ -1084,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Raw certificate data for building certificate expiry flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1093,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -14,11 +14,17 @@ Security assessment on a resource
 API Version: 2020-01-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create security recommendation task on a resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,13 +52,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -70,9 +82,12 @@ assessment = azure_native.security.Assessment("assessment",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,9 +106,16 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Assessment Resource {#create}
@@ -118,9 +140,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -128,9 +148,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -138,9 +156,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -148,10 +164,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -177,9 +190,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -187,9 +198,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -197,9 +206,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -207,9 +214,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -217,18 +222,13 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +236,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +244,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,10 +252,7 @@ const assessment = new azure_native.security.Assessment("assessment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -274,9 +267,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcedetails_csharp">
 <a href="#resourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
@@ -284,8 +275,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourcedetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -293,8 +283,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -302,8 +291,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldata_csharp">
 <a href="#additionaldata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
@@ -311,8 +299,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentname_csharp">
 <a href="#assessmentname_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Name</a>
@@ -320,8 +307,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -329,8 +315,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadataproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnersdata_csharp">
 <a href="#partnersdata_csharp" style="color: inherit; text-decoration: inherit;">Partners<wbr>Data</a>
@@ -338,14 +323,11 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentpartnerdata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcedetails_go">
 <a href="#resourcedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
@@ -353,8 +335,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -362,8 +343,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -371,8 +351,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldata_go">
 <a href="#additionaldata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
@@ -380,8 +359,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentname_go">
 <a href="#assessmentname_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Name</a>
@@ -389,8 +367,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -398,8 +375,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnersdata_go">
 <a href="#partnersdata_go" style="color: inherit; text-decoration: inherit;">Partners<wbr>Data</a>
@@ -407,14 +383,11 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcedetails_nodejs">
 <a href="#resourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Details</a>
@@ -422,8 +395,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -431,8 +403,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -440,8 +411,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldata_nodejs">
 <a href="#additionaldata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Data</a>
@@ -449,8 +419,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessmentname_nodejs">
 <a href="#assessmentname_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Name</a>
@@ -458,8 +427,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -467,8 +435,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnersdata_nodejs">
 <a href="#partnersdata_nodejs" style="color: inherit; text-decoration: inherit;">partners<wbr>Data</a>
@@ -476,14 +443,11 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_details_python">
 <a href="#resource_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>details</a>
@@ -491,8 +455,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -500,8 +463,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -509,8 +471,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_data_python">
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
@@ -518,8 +479,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assessment_name_python">
 <a href="#assessment_name_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>name</a>
@@ -527,8 +487,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -536,8 +495,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partners_data_python">
 <a href="#partners_data_python" style="color: inherit; text-decoration: inherit;">partners_<wbr>data</a>
@@ -545,8 +503,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -557,9 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -567,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -576,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -585,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentlinksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -594,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -603,14 +554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -618,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -627,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -636,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -645,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -654,14 +598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -669,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -687,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -696,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -705,14 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -720,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -738,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -747,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -756,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -773,9 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureportaluri_csharp">
 <a href="#azureportaluri_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>Uri</a>
@@ -783,14 +710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureportaluri_go">
 <a href="#azureportaluri_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>Uri</a>
@@ -798,14 +722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureportaluri_nodejs">
 <a href="#azureportaluri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Portal<wbr>Uri</a>
@@ -813,14 +734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_portal_uri_python">
 <a href="#azure_portal_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>portal_<wbr>uri</a>
@@ -828,16 +746,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmentstatus">Assessment<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -845,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmentstatuscode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Assessment<wbr>Status<wbr>Code</a></span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_csharp">
 <a href="#cause_csharp" style="color: inherit; text-decoration: inherit;">Cause</a>
@@ -854,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -863,14 +776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -878,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmentstatuscode">Assessment<wbr>Status<wbr>Code</a></span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_go">
 <a href="#cause_go" style="color: inherit; text-decoration: inherit;">Cause</a>
@@ -887,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -896,14 +804,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -911,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmentstatuscode">Assessment<wbr>Status<wbr>Code</a></span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_nodejs">
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
@@ -920,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -929,14 +832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -944,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#assessmentstatuscode">Assessment<wbr>Status<wbr>Code</a></span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_python">
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
@@ -953,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -962,62 +860,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmentstatuscode">Assessment<wbr>Status<wbr>Code</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Healthy</dt>
-    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd>
-    <dt>Unhealthy</dt>
-    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd>
-    <dt>Not<wbr>Applicable</dt>
-    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Healthy</dt>
+    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd><dt>Unhealthy</dt>
+    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd><dt>Not<wbr>Applicable</dt>
+    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Assessment<wbr>Status<wbr>Code<wbr>Healthy</dt>
-    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd>
-    <dt>Assessment<wbr>Status<wbr>Code<wbr>Unhealthy</dt>
-    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd>
-    <dt>Assessment<wbr>Status<wbr>Code<wbr>Not<wbr>Applicable</dt>
-    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Assessment<wbr>Status<wbr>Code<wbr>Healthy</dt>
+    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd><dt>Assessment<wbr>Status<wbr>Code<wbr>Unhealthy</dt>
+    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd><dt>Assessment<wbr>Status<wbr>Code<wbr>Not<wbr>Applicable</dt>
+    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Healthy</dt>
-    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd>
-    <dt>Unhealthy</dt>
-    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd>
-    <dt>Not<wbr>Applicable</dt>
-    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Healthy</dt>
+    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd><dt>Unhealthy</dt>
+    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd><dt>Not<wbr>Applicable</dt>
+    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HEALTHY</dt>
-    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd>
-    <dt>UNHEALTHY</dt>
-    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd>
-    <dt>NOT_APPLICABLE</dt>
-    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>HEALTHY</dt>
+    <dd>Healthy{{% md %}}The resource is healthy{{% /md %}}</dd><dt>UNHEALTHY</dt>
+    <dd>Unhealthy{{% md %}}The resource has a security issue that needs to be addressed{{% /md %}}</dd><dt>NOT_APPLICABLE</dt>
+    <dd>NotApplicable{{% md %}}Assessment for this resource did not happen{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmentstatusresponse">Assessment<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1025,8 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_csharp">
 <a href="#cause_csharp" style="color: inherit; text-decoration: inherit;">Cause</a>
@@ -1034,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1043,14 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1058,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_go">
 <a href="#cause_go" style="color: inherit; text-decoration: inherit;">Cause</a>
@@ -1067,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1076,14 +948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1091,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_nodejs">
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
@@ -1100,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1109,14 +976,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1124,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cause_python">
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
@@ -1133,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1142,96 +1004,65 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assessmenttype">Assessment<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Built<wbr>In</dt>
-    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd>
-    <dt>Custom<wbr>Policy</dt>
-    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd>
-    <dt>Verified<wbr>Partner</dt>
-    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Built<wbr>In</dt>
+    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd><dt>Custom<wbr>Policy</dt>
+    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd><dt>Verified<wbr>Partner</dt>
+    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Assessment<wbr>Type<wbr>Built<wbr>In</dt>
-    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd>
-    <dt>Assessment<wbr>Type<wbr>Custom<wbr>Policy</dt>
-    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd>
-    <dt>Assessment<wbr>Type<wbr>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd>
-    <dt>Assessment<wbr>Type<wbr>Verified<wbr>Partner</dt>
-    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Assessment<wbr>Type<wbr>Built<wbr>In</dt>
+    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd><dt>Assessment<wbr>Type<wbr>Custom<wbr>Policy</dt>
+    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd><dt>Assessment<wbr>Type<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd><dt>Assessment<wbr>Type<wbr>Verified<wbr>Partner</dt>
+    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Built<wbr>In</dt>
-    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd>
-    <dt>Custom<wbr>Policy</dt>
-    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd>
-    <dt>Verified<wbr>Partner</dt>
-    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Built<wbr>In</dt>
+    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd><dt>Custom<wbr>Policy</dt>
+    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd><dt>Verified<wbr>Partner</dt>
+    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BUILT_IN</dt>
-    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd>
-    <dt>CUSTOM_POLICY</dt>
-    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd>
-    <dt>CUSTOMER_MANAGED</dt>
-    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd>
-    <dt>VERIFIED_PARTNER</dt>
-    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>BUILT_IN</dt>
+    <dd>BuiltIn{{% md %}}Azure Security Center managed assessments{{% /md %}}</dd><dt>CUSTOM_POLICY</dt>
+    <dd>CustomPolicy{{% md %}}User defined policies that are automatically ingested from Azure Policy to Azure Security Center{{% /md %}}</dd><dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged{{% md %}}User assessments pushed directly by the user or other third party to Azure Security Center{{% /md %}}</dd><dt>VERIFIED_PARTNER</dt>
+    <dd>VerifiedPartner{{% md %}}An assessment that was created by a verified 3rd party if the user connected it to ASC{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureresourcedetails">Azure<wbr>Resource<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 <h4 id="azureresourcedetailsresponse">Azure<wbr>Resource<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1239,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1254,14 +1082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1269,14 +1094,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1284,124 +1106,81 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="category">Category</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Compute</dt>
-    <dd>Compute</dd>
-    <dt>Networking</dt>
-    <dd>Networking</dd>
-    <dt>Data</dt>
-    <dd>Data</dd>
-    <dt>Identity<wbr>And<wbr>Access</dt>
-    <dd>IdentityAndAccess</dd>
-    <dt>Io<wbr>T</dt>
-    <dd>IoT</dd>
-</dl>
+<dl class="tabular"><dt>Compute</dt>
+    <dd>Compute</dd><dt>Networking</dt>
+    <dd>Networking</dd><dt>Data</dt>
+    <dd>Data</dd><dt>Identity<wbr>And<wbr>Access</dt>
+    <dd>IdentityAndAccess</dd><dt>Io<wbr>T</dt>
+    <dd>IoT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Category<wbr>Compute</dt>
-    <dd>Compute</dd>
-    <dt>Category<wbr>Networking</dt>
-    <dd>Networking</dd>
-    <dt>Category<wbr>Data</dt>
-    <dd>Data</dd>
-    <dt>Category<wbr>Identity<wbr>And<wbr>Access</dt>
-    <dd>IdentityAndAccess</dd>
-    <dt>Category<wbr>Io<wbr>T</dt>
-    <dd>IoT</dd>
-</dl>
+<dl class="tabular"><dt>Category<wbr>Compute</dt>
+    <dd>Compute</dd><dt>Category<wbr>Networking</dt>
+    <dd>Networking</dd><dt>Category<wbr>Data</dt>
+    <dd>Data</dd><dt>Category<wbr>Identity<wbr>And<wbr>Access</dt>
+    <dd>IdentityAndAccess</dd><dt>Category<wbr>Io<wbr>T</dt>
+    <dd>IoT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Compute</dt>
-    <dd>Compute</dd>
-    <dt>Networking</dt>
-    <dd>Networking</dd>
-    <dt>Data</dt>
-    <dd>Data</dd>
-    <dt>Identity<wbr>And<wbr>Access</dt>
-    <dd>IdentityAndAccess</dd>
-    <dt>Io<wbr>T</dt>
-    <dd>IoT</dd>
-</dl>
+<dl class="tabular"><dt>Compute</dt>
+    <dd>Compute</dd><dt>Networking</dt>
+    <dd>Networking</dd><dt>Data</dt>
+    <dd>Data</dd><dt>Identity<wbr>And<wbr>Access</dt>
+    <dd>IdentityAndAccess</dd><dt>Io<wbr>T</dt>
+    <dd>IoT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>COMPUTE</dt>
-    <dd>Compute</dd>
-    <dt>NETWORKING</dt>
-    <dd>Networking</dd>
-    <dt>DATA</dt>
-    <dd>Data</dd>
-    <dt>IDENTITY_AND_ACCESS</dt>
-    <dd>IdentityAndAccess</dd>
-    <dt>IO_T</dt>
-    <dd>IoT</dd>
-</dl>
+<dl class="tabular"><dt>COMPUTE</dt>
+    <dd>Compute</dd><dt>NETWORKING</dt>
+    <dd>Networking</dd><dt>DATA</dt>
+    <dd>Data</dd><dt>IDENTITY_AND_ACCESS</dt>
+    <dd>IdentityAndAccess</dd><dt>IO_T</dt>
+    <dd>IoT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="implementationeffort">Implementation<wbr>Effort</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Moderate</dt>
+    <dd>Moderate</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Implementation<wbr>Effort<wbr>Low</dt>
-    <dd>Low</dd>
-    <dt>Implementation<wbr>Effort<wbr>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>Implementation<wbr>Effort<wbr>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Implementation<wbr>Effort<wbr>Low</dt>
+    <dd>Low</dd><dt>Implementation<wbr>Effort<wbr>Moderate</dt>
+    <dd>Moderate</dd><dt>Implementation<wbr>Effort<wbr>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Moderate</dt>
+    <dd>Moderate</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>LOW</dt>
-    <dd>Low</dd>
-    <dt>MODERATE</dt>
-    <dd>Moderate</dd>
-    <dt>HIGH</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>LOW</dt>
+    <dd>Low</dd><dt>MODERATE</dt>
+    <dd>Moderate</dd><dt>HIGH</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_csharp">
 <a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1409,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_csharp">
 <a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1418,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_csharp">
 <a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1427,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1436,14 +1212,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_go">
 <a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1451,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_go">
 <a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1460,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_go">
 <a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1469,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1478,14 +1248,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_nodejs">
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
@@ -1493,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_nodejs">
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
@@ -1502,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_nodejs">
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1511,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -1520,14 +1284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_name_python">
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
@@ -1535,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_computer_id_python">
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
@@ -1544,8 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_python">
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1553,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -1562,16 +1320,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onpremiseresourcedetailsresponse">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_csharp">
 <a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1579,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_csharp">
 <a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1588,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_csharp">
 <a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1597,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1606,14 +1358,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_go">
 <a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1621,8 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_go">
 <a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1630,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_go">
 <a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1639,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1648,14 +1394,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_nodejs">
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
@@ -1663,8 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_nodejs">
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
@@ -1672,8 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_nodejs">
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1681,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -1690,14 +1430,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_name_python">
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
@@ -1705,8 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_computer_id_python">
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
@@ -1714,8 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_python">
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1723,8 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -1732,16 +1466,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1749,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_csharp">
 <a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1758,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1767,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_csharp">
 <a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1776,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_csharp">
 <a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1785,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1794,14 +1520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1809,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_go">
 <a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -1818,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1827,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_go">
 <a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -1836,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_go">
 <a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -1845,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1854,14 +1572,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1869,8 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_nodejs">
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
@@ -1878,8 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -1887,8 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_nodejs">
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
@@ -1896,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_nodejs">
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1905,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -1914,14 +1624,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1929,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machine_name_python">
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
@@ -1938,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -1947,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_computer_id_python">
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
@@ -1956,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_python">
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -1965,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -1974,16 +1676,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onpremisesqlresourcedetailsresponse">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1991,8 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_csharp">
 <a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -2000,8 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -2009,8 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_csharp">
 <a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -2018,8 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_csharp">
 <a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -2027,8 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2036,14 +1730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2051,8 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_go">
 <a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -2060,8 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -2069,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_go">
 <a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
@@ -2078,8 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_go">
 <a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
@@ -2087,8 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2096,14 +1782,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -2111,8 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinename_nodejs">
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
@@ -2120,8 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -2129,8 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecomputerid_nodejs">
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
@@ -2138,8 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_nodejs">
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -2147,8 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -2156,14 +1834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -2171,8 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machine_name_python">
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
@@ -2180,8 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -2189,8 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_computer_id_python">
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
@@ -2198,8 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmuuid_python">
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
@@ -2207,8 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -2216,16 +1886,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -2233,8 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2242,8 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -2251,14 +1916,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -2266,8 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2275,8 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -2284,14 +1944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -2299,8 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2308,8 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -2317,14 +1972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -2332,8 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2341,8 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -2350,16 +2000,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -2367,8 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2376,8 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -2385,14 +2030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -2400,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2409,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -2418,14 +2058,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -2433,8 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2442,8 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -2451,14 +2086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -2466,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2475,8 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -2484,16 +2114,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_csharp">
 <a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
@@ -2501,8 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmenttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Assessment<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2510,8 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -2519,8 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -2528,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Category&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2537,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_csharp">
 <a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
@@ -2546,8 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#implementationeffort">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Implementation<wbr>Effort</a></span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_csharp">
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
@@ -2555,8 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -2564,8 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_csharp">
 <a href="#remediationdescription_csharp" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -2573,8 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_csharp">
 <a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
@@ -2582,8 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Threats&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_csharp">
 <a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
@@ -2591,14 +2208,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#userimpact">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>User<wbr>Impact</a></span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_go">
 <a href="#assessmenttype_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
@@ -2606,8 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmenttype">Assessment<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2615,8 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -2624,8 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -2633,8 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2642,8 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_go">
 <a href="#implementationeffort_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
@@ -2651,8 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#implementationeffort">Implementation<wbr>Effort</a></span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_go">
 <a href="#partnerdata_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
@@ -2660,8 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -2669,8 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_go">
 <a href="#remediationdescription_go" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -2678,8 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_go">
 <a href="#threats_go" style="color: inherit; text-decoration: inherit;">Threats</a>
@@ -2687,8 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_go">
 <a href="#userimpact_go" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
@@ -2696,14 +2300,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#userimpact">User<wbr>Impact</a></span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_nodejs">
 <a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
@@ -2711,8 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#assessmenttype">Assessment<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2720,8 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -2729,8 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -2738,8 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | Category[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2747,8 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_nodejs">
 <a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
@@ -2756,8 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#implementationeffort">Implementation<wbr>Effort</a></span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_nodejs">
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
@@ -2765,8 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -2774,8 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_nodejs">
 <a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
@@ -2783,8 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_nodejs">
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
@@ -2792,8 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | Threats[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_nodejs">
 <a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
@@ -2801,14 +2392,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#userimpact">User<wbr>Impact</a></span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessment_type_python">
 <a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
@@ -2816,8 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#assessmenttype">Assessment<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2825,8 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -2834,8 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -2843,8 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Category]]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2852,8 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementation_effort_python">
 <a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
@@ -2861,8 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#implementationeffort">Implementation<wbr>Effort</a></span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_data_python">
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
@@ -2870,8 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -2879,8 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_description_python">
 <a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
@@ -2888,8 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_python">
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
@@ -2897,8 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Threats]]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_impact_python">
 <a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
@@ -2906,16 +2484,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#userimpact">User<wbr>Impact</a></span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentmetadatapropertiesresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_csharp">
 <a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
@@ -2923,8 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2932,8 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_csharp">
 <a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -2941,8 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -2950,8 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -2959,8 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2968,8 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_csharp">
 <a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
@@ -2977,8 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_csharp">
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
@@ -2986,8 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -2995,8 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_csharp">
 <a href="#remediationdescription_csharp" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -3004,8 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_csharp">
 <a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
@@ -3013,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_csharp">
 <a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
@@ -3022,14 +2586,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_go">
 <a href="#assessmenttype_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
@@ -3037,8 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3046,8 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_go">
 <a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -3055,8 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -3064,8 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -3073,8 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3082,8 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_go">
 <a href="#implementationeffort_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
@@ -3091,8 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_go">
 <a href="#partnerdata_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
@@ -3100,8 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -3109,8 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_go">
 <a href="#remediationdescription_go" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -3118,8 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_go">
 <a href="#threats_go" style="color: inherit; text-decoration: inherit;">Threats</a>
@@ -3127,8 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_go">
 <a href="#userimpact_go" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
@@ -3136,14 +2686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessmenttype_nodejs">
 <a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
@@ -3151,8 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -3160,8 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_nodejs">
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
@@ -3169,8 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -3178,8 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -3187,8 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3196,8 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationeffort_nodejs">
 <a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
@@ -3205,8 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerdata_nodejs">
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
@@ -3214,8 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -3223,8 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_nodejs">
 <a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
@@ -3232,8 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_nodejs">
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
@@ -3241,8 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userimpact_nodejs">
 <a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
@@ -3250,14 +2786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assessment_type_python">
 <a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
@@ -3265,8 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -3274,8 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_definition_id_python">
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
@@ -3283,8 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -3292,8 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -3301,8 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3310,8 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementation_effort_python">
 <a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
@@ -3319,8 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_data_python">
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
@@ -3328,8 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -3337,8 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_description_python">
 <a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
@@ -3346,8 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threats_python">
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
@@ -3355,8 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_impact_python">
 <a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
@@ -3364,16 +2886,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -3381,8 +2900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3390,14 +2908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -3405,8 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3414,14 +2928,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -3429,8 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3438,14 +2948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -3453,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3462,16 +2968,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securityassessmentpartnerdataresponse">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -3479,8 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3488,14 +2990,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -3503,8 +3002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3512,14 +3010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -3527,8 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3536,14 +3030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -3551,8 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3560,186 +3050,117 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="severity">Severity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Severity<wbr>Low</dt>
-    <dd>Low</dd>
-    <dt>Severity<wbr>Medium</dt>
-    <dd>Medium</dd>
-    <dt>Severity<wbr>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Severity<wbr>Low</dt>
+    <dd>Low</dd><dt>Severity<wbr>Medium</dt>
+    <dd>Medium</dd><dt>Severity<wbr>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>LOW</dt>
-    <dd>Low</dd>
-    <dt>MEDIUM</dt>
-    <dd>Medium</dd>
-    <dt>HIGH</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>LOW</dt>
+    <dd>Low</dd><dt>MEDIUM</dt>
+    <dd>Medium</dd><dt>HIGH</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threats">Threats</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Account<wbr>Breach</dt>
-    <dd>accountBreach</dd>
-    <dt>Data<wbr>Exfiltration</dt>
-    <dd>dataExfiltration</dd>
-    <dt>Data<wbr>Spillage</dt>
-    <dd>dataSpillage</dd>
-    <dt>Malicious<wbr>Insider</dt>
-    <dd>maliciousInsider</dd>
-    <dt>Elevation<wbr>Of<wbr>Privilege</dt>
-    <dd>elevationOfPrivilege</dd>
-    <dt>Threat<wbr>Resistance</dt>
-    <dd>threatResistance</dd>
-    <dt>Missing<wbr>Coverage</dt>
-    <dd>missingCoverage</dd>
-    <dt>Denial<wbr>Of<wbr>Service</dt>
-    <dd>denialOfService</dd>
-</dl>
+<dl class="tabular"><dt>Account<wbr>Breach</dt>
+    <dd>accountBreach</dd><dt>Data<wbr>Exfiltration</dt>
+    <dd>dataExfiltration</dd><dt>Data<wbr>Spillage</dt>
+    <dd>dataSpillage</dd><dt>Malicious<wbr>Insider</dt>
+    <dd>maliciousInsider</dd><dt>Elevation<wbr>Of<wbr>Privilege</dt>
+    <dd>elevationOfPrivilege</dd><dt>Threat<wbr>Resistance</dt>
+    <dd>threatResistance</dd><dt>Missing<wbr>Coverage</dt>
+    <dd>missingCoverage</dd><dt>Denial<wbr>Of<wbr>Service</dt>
+    <dd>denialOfService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Threats<wbr>Account<wbr>Breach</dt>
-    <dd>accountBreach</dd>
-    <dt>Threats<wbr>Data<wbr>Exfiltration</dt>
-    <dd>dataExfiltration</dd>
-    <dt>Threats<wbr>Data<wbr>Spillage</dt>
-    <dd>dataSpillage</dd>
-    <dt>Threats<wbr>Malicious<wbr>Insider</dt>
-    <dd>maliciousInsider</dd>
-    <dt>Threats<wbr>Elevation<wbr>Of<wbr>Privilege</dt>
-    <dd>elevationOfPrivilege</dd>
-    <dt>Threats<wbr>Threat<wbr>Resistance</dt>
-    <dd>threatResistance</dd>
-    <dt>Threats<wbr>Missing<wbr>Coverage</dt>
-    <dd>missingCoverage</dd>
-    <dt>Threats<wbr>Denial<wbr>Of<wbr>Service</dt>
-    <dd>denialOfService</dd>
-</dl>
+<dl class="tabular"><dt>Threats<wbr>Account<wbr>Breach</dt>
+    <dd>accountBreach</dd><dt>Threats<wbr>Data<wbr>Exfiltration</dt>
+    <dd>dataExfiltration</dd><dt>Threats<wbr>Data<wbr>Spillage</dt>
+    <dd>dataSpillage</dd><dt>Threats<wbr>Malicious<wbr>Insider</dt>
+    <dd>maliciousInsider</dd><dt>Threats<wbr>Elevation<wbr>Of<wbr>Privilege</dt>
+    <dd>elevationOfPrivilege</dd><dt>Threats<wbr>Threat<wbr>Resistance</dt>
+    <dd>threatResistance</dd><dt>Threats<wbr>Missing<wbr>Coverage</dt>
+    <dd>missingCoverage</dd><dt>Threats<wbr>Denial<wbr>Of<wbr>Service</dt>
+    <dd>denialOfService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Account<wbr>Breach</dt>
-    <dd>accountBreach</dd>
-    <dt>Data<wbr>Exfiltration</dt>
-    <dd>dataExfiltration</dd>
-    <dt>Data<wbr>Spillage</dt>
-    <dd>dataSpillage</dd>
-    <dt>Malicious<wbr>Insider</dt>
-    <dd>maliciousInsider</dd>
-    <dt>Elevation<wbr>Of<wbr>Privilege</dt>
-    <dd>elevationOfPrivilege</dd>
-    <dt>Threat<wbr>Resistance</dt>
-    <dd>threatResistance</dd>
-    <dt>Missing<wbr>Coverage</dt>
-    <dd>missingCoverage</dd>
-    <dt>Denial<wbr>Of<wbr>Service</dt>
-    <dd>denialOfService</dd>
-</dl>
+<dl class="tabular"><dt>Account<wbr>Breach</dt>
+    <dd>accountBreach</dd><dt>Data<wbr>Exfiltration</dt>
+    <dd>dataExfiltration</dd><dt>Data<wbr>Spillage</dt>
+    <dd>dataSpillage</dd><dt>Malicious<wbr>Insider</dt>
+    <dd>maliciousInsider</dd><dt>Elevation<wbr>Of<wbr>Privilege</dt>
+    <dd>elevationOfPrivilege</dd><dt>Threat<wbr>Resistance</dt>
+    <dd>threatResistance</dd><dt>Missing<wbr>Coverage</dt>
+    <dd>missingCoverage</dd><dt>Denial<wbr>Of<wbr>Service</dt>
+    <dd>denialOfService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACCOUNT_BREACH</dt>
-    <dd>accountBreach</dd>
-    <dt>DATA_EXFILTRATION</dt>
-    <dd>dataExfiltration</dd>
-    <dt>DATA_SPILLAGE</dt>
-    <dd>dataSpillage</dd>
-    <dt>MALICIOUS_INSIDER</dt>
-    <dd>maliciousInsider</dd>
-    <dt>ELEVATION_OF_PRIVILEGE</dt>
-    <dd>elevationOfPrivilege</dd>
-    <dt>THREAT_RESISTANCE</dt>
-    <dd>threatResistance</dd>
-    <dt>MISSING_COVERAGE</dt>
-    <dd>missingCoverage</dd>
-    <dt>DENIAL_OF_SERVICE</dt>
-    <dd>denialOfService</dd>
-</dl>
+<dl class="tabular"><dt>ACCOUNT_BREACH</dt>
+    <dd>accountBreach</dd><dt>DATA_EXFILTRATION</dt>
+    <dd>dataExfiltration</dd><dt>DATA_SPILLAGE</dt>
+    <dd>dataSpillage</dd><dt>MALICIOUS_INSIDER</dt>
+    <dd>maliciousInsider</dd><dt>ELEVATION_OF_PRIVILEGE</dt>
+    <dd>elevationOfPrivilege</dd><dt>THREAT_RESISTANCE</dt>
+    <dd>threatResistance</dd><dt>MISSING_COVERAGE</dt>
+    <dd>missingCoverage</dd><dt>DENIAL_OF_SERVICE</dt>
+    <dd>denialOfService</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userimpact">User<wbr>Impact</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Moderate</dt>
+    <dd>Moderate</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>User<wbr>Impact<wbr>Low</dt>
-    <dd>Low</dd>
-    <dt>User<wbr>Impact<wbr>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>User<wbr>Impact<wbr>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Impact<wbr>Low</dt>
+    <dd>Low</dd><dt>User<wbr>Impact<wbr>Moderate</dt>
+    <dd>Moderate</dd><dt>User<wbr>Impact<wbr>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Moderate</dt>
-    <dd>Moderate</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low</dd><dt>Moderate</dt>
+    <dd>Moderate</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>LOW</dt>
-    <dd>Low</dd>
-    <dt>MODERATE</dt>
-    <dd>Moderate</dd>
-    <dt>HIGH</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>LOW</dt>
+    <dd>Low</dd><dt>MODERATE</dt>
+    <dd>Moderate</dd><dt>HIGH</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_csharp">
 <a href="#integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_go">
 <a href="#integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_nodejs">
 <a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_runtime_name_python">
 <a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostserviceuri_csharp">
 <a href="#hostserviceuri_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Service<wbr>Uri</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitycertthumbprint_csharp">
 <a href="#identitycertthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Cert<wbr>Thumbprint</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isidentitycertexprired_csharp">
 <a href="#isidentitycertexprired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Identity<wbr>Cert<wbr>Exprired</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetoken_csharp">
 <a href="#servicetoken_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Token</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostserviceuri_go">
 <a href="#hostserviceuri_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Service<wbr>Uri</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitycertthumbprint_go">
 <a href="#identitycertthumbprint_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Cert<wbr>Thumbprint</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isidentitycertexprired_go">
 <a href="#isidentitycertexprired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Identity<wbr>Cert<wbr>Exprired</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetoken_go">
 <a href="#servicetoken_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Token</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostserviceuri_nodejs">
 <a href="#hostserviceuri_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Service<wbr>Uri</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitycertthumbprint_nodejs">
 <a href="#identitycertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Cert<wbr>Thumbprint</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isidentitycertexprired_nodejs">
 <a href="#isidentitycertexprired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Identity<wbr>Cert<wbr>Exprired</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetoken_nodejs">
 <a href="#servicetoken_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Token</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -367,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="host_service_uri_python">
 <a href="#host_service_uri_python" style="color: inherit; text-decoration: inherit;">host_<wbr>service_<wbr>uri</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The on-premises integration runtime host URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_cert_thumbprint_python">
 <a href="#identity_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>cert_<wbr>thumbprint</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_identity_cert_exprired_python">
 <a href="#is_identity_cert_exprired_python" style="color: inherit; text-decoration: inherit;">is_<wbr>identity_<wbr>cert_<wbr>exprired</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the identity certificate is expired.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public key for encrypting a credential when transferring the credential to the integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_token_python">
 <a href="#service_token_python" style="color: inherit; text-decoration: inherit;">service_<wbr>token</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The token generated in service. Callers use this token to authenticate to integration runtime.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration runtime version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

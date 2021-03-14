@@ -19,11 +19,17 @@ To learn more about Layer 2 networking in Equinix Metal, refer to
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using EquinixMetal = Pulumi.EquinixMetal;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -70,9 +79,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_equinix_metal as equinix_metal
@@ -84,9 +96,12 @@ vlan1 = equinix_metal.Vlan("vlan1",
     project_id=local["project_id"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -100,9 +115,16 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Vlan Resource {#create}
@@ -127,9 +149,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -137,9 +157,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,9 +165,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -157,10 +173,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -186,9 +199,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -196,9 +207,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +215,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +223,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,18 +231,13 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +245,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +253,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,10 +261,7 @@ const vlan1 = new equinix_metal.Vlan("vlan1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -283,9 +276,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_csharp">
 <a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -294,8 +285,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -304,8 +294,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -314,14 +303,11 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_go">
 <a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -330,8 +316,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -340,8 +325,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -350,14 +334,11 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_nodejs">
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -366,8 +347,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -376,8 +356,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -386,14 +365,11 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_python">
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -402,8 +378,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -412,8 +387,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -422,8 +396,7 @@ The Vlan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -434,9 +407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -444,8 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vxlan_csharp">
 <a href="#vxlan_csharp" style="color: inherit; text-decoration: inherit;">Vxlan</a>
@@ -454,14 +424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -469,8 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vxlan_go">
 <a href="#vxlan_go" style="color: inherit; text-decoration: inherit;">Vxlan</a>
@@ -479,14 +445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -494,8 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vxlan_nodejs">
 <a href="#vxlan_nodejs" style="color: inherit; text-decoration: inherit;">vxlan</a>
@@ -504,14 +466,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -519,8 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vxlan_python">
 <a href="#vxlan_python" style="color: inherit; text-decoration: inherit;">vxlan</a>
@@ -529,8 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -657,9 +614,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -668,8 +623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_csharp">
 <a href="#state_facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -678,8 +632,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -688,8 +641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vxlan_csharp">
 <a href="#state_vxlan_csharp" style="color: inherit; text-decoration: inherit;">Vxlan</a>
@@ -698,14 +650,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -714,8 +663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_go">
 <a href="#state_facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -724,8 +672,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -734,8 +681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vxlan_go">
 <a href="#state_vxlan_go" style="color: inherit; text-decoration: inherit;">Vxlan</a>
@@ -744,14 +690,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -760,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_nodejs">
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -770,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -780,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vxlan_nodejs">
 <a href="#state_vxlan_nodejs" style="color: inherit; text-decoration: inherit;">vxlan</a>
@@ -790,14 +730,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -806,8 +743,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_python">
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -816,8 +752,7 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to create the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -826,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of parent project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vxlan_python">
 <a href="#state_vxlan_python" style="color: inherit; text-decoration: inherit;">vxlan</a>
@@ -836,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN segment ID
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -852,231 +785,123 @@ The following state arguments are supported:
 <h4 id="facility">Facility</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Facility<wbr>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>Facility<wbr>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>Facility<wbr>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>Facility<wbr>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>Facility<wbr>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>Facility<wbr>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>Facility<wbr>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>Facility<wbr>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>Facility<wbr>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>Facility<wbr>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>Facility<wbr>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>Facility<wbr>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>Facility<wbr>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>Facility<wbr>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>Facility<wbr>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>Facility<wbr>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>Facility<wbr>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>Facility<wbr>AM6</dt>
-    <dd>am6</dd>
-    <dt>Facility<wbr>DC13</dt>
-    <dd>dc13</dd>
-    <dt>Facility<wbr>CH3</dt>
-    <dd>ch3</dd>
-    <dt>Facility<wbr>DA3</dt>
-    <dd>da3</dd>
-    <dt>Facility<wbr>DA11</dt>
-    <dd>da11</dd>
-    <dt>Facility<wbr>LA4</dt>
-    <dd>la4</dd>
-    <dt>Facility<wbr>NY5</dt>
-    <dd>ny5</dd>
-    <dt>Facility<wbr>SG1</dt>
-    <dd>sg1</dd>
-    <dt>Facility<wbr>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>Facility<wbr>EWR1</dt>
+    <dd>ewr1</dd><dt>Facility<wbr>SJC1</dt>
+    <dd>sjc1</dd><dt>Facility<wbr>DFW1</dt>
+    <dd>dfw1</dd><dt>Facility<wbr>DFW2</dt>
+    <dd>dfw2</dd><dt>Facility<wbr>AMS1</dt>
+    <dd>ams1</dd><dt>Facility<wbr>NRT1</dt>
+    <dd>nrt1</dd><dt>Facility<wbr>SEA1</dt>
+    <dd>sea1</dd><dt>Facility<wbr>LAX1</dt>
+    <dd>lax1</dd><dt>Facility<wbr>ORD1</dt>
+    <dd>ord1</dd><dt>Facility<wbr>ATL1</dt>
+    <dd>atl1</dd><dt>Facility<wbr>IAD1</dt>
+    <dd>iad1</dd><dt>Facility<wbr>SIN1</dt>
+    <dd>sin1</dd><dt>Facility<wbr>HKG1</dt>
+    <dd>hkg1</dd><dt>Facility<wbr>SYD1</dt>
+    <dd>syd1</dd><dt>Facility<wbr>MRS1</dt>
+    <dd>mrs1</dd><dt>Facility<wbr>YYZ1</dt>
+    <dd>yyz1</dd><dt>Facility<wbr>FRA2</dt>
+    <dd>fra2</dd><dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd><dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd><dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd><dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd><dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd><dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd><dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd><dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd><dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 
@@ -1087,6 +912,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 </dl>
 

@@ -22,11 +22,17 @@ meta_desc: "Documentation for the mongodbatlas.PrivateEndpointInterfaceLink reso
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -116,9 +125,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -140,9 +152,12 @@ test_private_endpoint_interface_link = mongodbatlas.PrivateEndpointInterfaceLink
     project_id=test_private_endpoint.project_id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -168,9 +183,16 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateEndpointInterfaceLink Resource {#create}
@@ -195,9 +217,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +225,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +233,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,10 +241,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -254,9 +267,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -264,9 +275,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +283,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +291,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,18 +299,13 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -313,9 +313,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -323,9 +321,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -333,10 +329,7 @@ const testPrivateEndpointInterfaceLink = new mongodbatlas.PrivateEndpointInterfa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -351,9 +344,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_csharp">
 <a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -362,8 +353,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -372,8 +362,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -382,14 +371,11 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_go">
 <a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -398,8 +384,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -408,8 +393,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -418,14 +402,11 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_nodejs">
 <a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -434,8 +415,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -444,8 +424,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -454,14 +433,11 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_endpoint_id_python">
 <a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -470,8 +446,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -480,8 +455,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -490,8 +464,7 @@ The PrivateEndpointInterfaceLink resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -502,9 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_csharp">
 <a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -514,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_csharp">
 <a href="#deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -524,8 +494,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -534,8 +503,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,14 +511,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_go">
 <a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -560,8 +525,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_go">
 <a href="#deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -570,8 +534,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -580,8 +543,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -589,14 +551,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_nodejs">
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
@@ -606,8 +565,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_nodejs">
 <a href="#deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
@@ -616,8 +574,7 @@ Returns one of the following values:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -626,8 +583,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -635,14 +591,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_status_python">
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
@@ -652,8 +605,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delete_requested_python">
 <a href="#delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
@@ -662,8 +614,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -672,8 +623,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +631,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +758,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstatus_csharp">
 <a href="#state_connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -821,8 +768,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_csharp">
 <a href="#state_deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -831,8 +777,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_csharp">
 <a href="#state_errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -841,8 +786,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_csharp">
 <a href="#state_interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -851,8 +795,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_csharp">
 <a href="#state_privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -861,8 +804,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -871,14 +813,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstatus_go">
 <a href="#state_connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -888,8 +827,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_go">
 <a href="#state_deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -898,8 +836,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_go">
 <a href="#state_errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -908,8 +845,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_go">
 <a href="#state_interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -918,8 +854,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_go">
 <a href="#state_privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -928,8 +863,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -938,14 +872,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstatus_nodejs">
 <a href="#state_connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
@@ -955,8 +886,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_nodejs">
 <a href="#state_deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
@@ -965,8 +895,7 @@ Returns one of the following values:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_nodejs">
 <a href="#state_errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -975,8 +904,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_nodejs">
 <a href="#state_interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -985,8 +913,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_nodejs">
 <a href="#state_privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -995,8 +922,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1005,14 +931,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connection_status_python">
 <a href="#state_connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
@@ -1022,8 +945,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_requested_python">
 <a href="#state_delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
@@ -1032,8 +954,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_message_python">
 <a href="#state_error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1042,8 +963,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_endpoint_id_python">
 <a href="#state_interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -1052,8 +972,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the AWS resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_link_id_python">
 <a href="#state_private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -1062,8 +981,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection which is created by `mongodbatlas.PrivateEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1072,8 +990,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1101,6 +1018,6 @@ Private Endpoint Link Connection can be imported using project ID and username, 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

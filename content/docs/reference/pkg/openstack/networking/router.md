@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.networking.Router resource with exam
 Manages a V2 router resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -61,9 +70,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -73,9 +85,12 @@ router1 = openstack.networking.Router("router1",
     external_network_id="f67f0d72-0ddf-11e4-9d95-e1f29f417e2f")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -87,9 +102,16 @@ const router1 = new openstack.networking.Router("router_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Router Resource {#create}
@@ -114,9 +136,7 @@ const router1 = new openstack.networking.Router("router_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +144,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +152,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,10 +160,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -173,9 +186,7 @@ const router1 = new openstack.networking.Router("router_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -183,9 +194,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +202,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +210,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,18 +218,13 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +232,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +240,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,10 +248,7 @@ const router1 = new openstack.networking.Router("router_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -270,9 +263,7 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -283,8 +274,7 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_csharp">
 <a href="#availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -296,8 +286,7 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -306,8 +295,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_csharp">
 <a href="#distributed_csharp" style="color: inherit; text-decoration: inherit;">Distributed</a>
@@ -318,8 +306,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesnat_csharp">
 <a href="#enablesnat_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
@@ -332,8 +319,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalfixedips_csharp">
 <a href="#externalfixedips_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
@@ -345,8 +331,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="externalgateway_csharp">
 <a href="#externalgateway_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
@@ -359,8 +344,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="externalnetworkid_csharp">
 <a href="#externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -372,8 +356,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsubnetids_csharp">
 <a href="#externalsubnetids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
@@ -386,8 +369,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +379,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -410,8 +391,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -420,8 +400,7 @@ router.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -431,8 +410,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -441,8 +419,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_csharp">
 <a href="#vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -452,14 +429,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -470,8 +444,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_go">
 <a href="#availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -483,8 +456,7 @@ Supported options are described below.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -493,8 +465,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_go">
 <a href="#distributed_go" style="color: inherit; text-decoration: inherit;">Distributed</a>
@@ -505,8 +476,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesnat_go">
 <a href="#enablesnat_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
@@ -519,8 +489,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalfixedips_go">
 <a href="#externalfixedips_go" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
@@ -532,8 +501,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="externalgateway_go">
 <a href="#externalgateway_go" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
@@ -546,8 +514,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="externalnetworkid_go">
 <a href="#externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -559,8 +526,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsubnetids_go">
 <a href="#externalsubnetids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
@@ -573,8 +539,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -584,8 +549,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -597,8 +561,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -607,8 +570,7 @@ router.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -618,8 +580,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -628,8 +589,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_go">
 <a href="#vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -639,14 +599,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -657,8 +614,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_nodejs">
 <a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
@@ -670,8 +626,7 @@ Supported options are described below.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -680,8 +635,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_nodejs">
 <a href="#distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
@@ -692,8 +646,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesnat_nodejs">
 <a href="#enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
@@ -706,8 +659,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalfixedips_nodejs">
 <a href="#externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
@@ -719,8 +671,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="externalgateway_nodejs">
 <a href="#externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
@@ -733,8 +684,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="externalnetworkid_nodejs">
 <a href="#externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
@@ -746,8 +696,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsubnetids_nodejs">
 <a href="#externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
@@ -760,8 +709,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -771,8 +719,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -784,8 +731,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -794,8 +740,7 @@ router.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -805,8 +750,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -815,8 +759,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_nodejs">
 <a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
@@ -826,14 +769,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -844,8 +784,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_hints_python">
 <a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
@@ -857,8 +796,7 @@ Supported options are described below.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -867,8 +805,7 @@ creates a new router.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_python">
 <a href="#distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
@@ -879,8 +816,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_snat_python">
 <a href="#enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
@@ -893,8 +829,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_fixed_ips_python">
 <a href="#external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
@@ -906,8 +841,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="external_gateway_python">
 <a href="#external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
@@ -920,8 +854,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="external_network_id_python">
 <a href="#external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
@@ -933,8 +866,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_subnet_ids_python">
 <a href="#external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
@@ -947,8 +879,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -958,8 +889,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -971,8 +901,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -981,8 +910,7 @@ router.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -992,8 +920,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1002,8 +929,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_options_python">
 <a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
@@ -1013,8 +939,7 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1025,9 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1037,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1046,14 +968,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1063,8 +982,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1072,14 +990,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1089,8 +1004,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1098,14 +1012,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1115,8 +1026,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1124,8 +1034,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1252,9 +1161,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1265,8 +1172,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1276,8 +1182,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_csharp">
 <a href="#state_availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -1289,8 +1194,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1299,8 +1203,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_csharp">
 <a href="#state_distributed_csharp" style="color: inherit; text-decoration: inherit;">Distributed</a>
@@ -1311,8 +1214,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesnat_csharp">
 <a href="#state_enablesnat_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
@@ -1325,8 +1227,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalfixedips_csharp">
 <a href="#state_externalfixedips_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
@@ -1338,8 +1239,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_externalgateway_csharp">
 <a href="#state_externalgateway_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
@@ -1352,8 +1252,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnetworkid_csharp">
 <a href="#state_externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -1365,8 +1264,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalsubnetids_csharp">
 <a href="#state_externalsubnetids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
@@ -1379,8 +1277,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1390,8 +1287,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1403,8 +1299,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1413,8 +1308,7 @@ router.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1424,8 +1318,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1434,8 +1327,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_csharp">
 <a href="#state_vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -1445,14 +1337,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1463,8 +1352,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1474,8 +1362,7 @@ Supported options are described below.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_go">
 <a href="#state_availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -1487,8 +1374,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1497,8 +1383,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_go">
 <a href="#state_distributed_go" style="color: inherit; text-decoration: inherit;">Distributed</a>
@@ -1509,8 +1394,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesnat_go">
 <a href="#state_enablesnat_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Snat</a>
@@ -1523,8 +1407,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalfixedips_go">
 <a href="#state_externalfixedips_go" style="color: inherit; text-decoration: inherit;">External<wbr>Fixed<wbr>Ips</a>
@@ -1536,8 +1419,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_externalgateway_go">
 <a href="#state_externalgateway_go" style="color: inherit; text-decoration: inherit;">External<wbr>Gateway</a>
@@ -1550,8 +1432,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnetworkid_go">
 <a href="#state_externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -1563,8 +1444,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalsubnetids_go">
 <a href="#state_externalsubnetids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
@@ -1577,8 +1457,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1588,8 +1467,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1601,8 +1479,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1611,8 +1488,7 @@ router.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1622,8 +1498,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1632,8 +1507,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_go">
 <a href="#state_vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -1643,14 +1517,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1661,8 +1532,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1672,8 +1542,7 @@ Supported options are described below.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_nodejs">
 <a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
@@ -1685,8 +1554,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1695,8 +1563,7 @@ creates a new router.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_nodejs">
 <a href="#state_distributed_nodejs" style="color: inherit; text-decoration: inherit;">distributed</a>
@@ -1707,8 +1574,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesnat_nodejs">
 <a href="#state_enablesnat_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Snat</a>
@@ -1721,8 +1587,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalfixedips_nodejs">
 <a href="#state_externalfixedips_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Fixed<wbr>Ips</a>
@@ -1734,8 +1599,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_externalgateway_nodejs">
 <a href="#state_externalgateway_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gateway</a>
@@ -1748,8 +1612,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnetworkid_nodejs">
 <a href="#state_externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
@@ -1761,8 +1624,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalsubnetids_nodejs">
 <a href="#state_externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
@@ -1775,8 +1637,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1786,8 +1647,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1799,8 +1659,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1809,8 +1668,7 @@ router.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1820,8 +1678,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1830,8 +1687,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_nodejs">
 <a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
@@ -1841,14 +1697,11 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1859,8 +1712,7 @@ Supported options are described below.
     <dd>{{% md %}}Administrative up/down status for the router
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1870,8 +1722,7 @@ Supported options are described below.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the router, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_hints_python">
 <a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
@@ -1883,8 +1734,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1893,8 +1743,7 @@ creates a new router.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_python">
 <a href="#state_distributed_python" style="color: inherit; text-decoration: inherit;">distributed</a>
@@ -1905,8 +1754,7 @@ creates a new router.
     <dd>{{% md %}}Indicates whether or not to create a
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_snat_python">
 <a href="#state_enable_snat_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>snat</a>
@@ -1919,8 +1767,7 @@ usage of this property to administrative users only.
 set this property. Changing this updates the `enable_snat` of the router.
 Setting this value **requires** an **ext-gw-mode** extension to be enabled
 in OpenStack Neutron.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_fixed_ips_python">
 <a href="#state_external_fixed_ips_python" style="color: inherit; text-decoration: inherit;">external_<wbr>fixed_<wbr>ips</a>
@@ -1932,8 +1779,7 @@ in OpenStack Neutron.
 can be repeated. The structure is described below. An `external_network_id`
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_external_gateway_python">
 <a href="#state_external_gateway_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gateway</a>
@@ -1946,8 +1792,7 @@ network UUID of an external gateway for the router. A router with an
 external gateway is required if any compute instances or load balancers
 will be using floating IPs. Changing this updates the external gateway
 of an existing router.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use external_network_id instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_network_id_python">
 <a href="#state_external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
@@ -1959,8 +1804,7 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_subnet_ids_python">
 <a href="#state_external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
@@ -1973,8 +1817,7 @@ each to obtain a fixed IP for the router. If a subnet ID in a list has
 exhausted floating IP pool, the next subnet ID will be tried. This argument is
 used only during the router creation and allows to set only one external fixed
 IP. Conflicts with an `external_fixed_ip` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1984,8 +1827,7 @@ IP. Conflicts with an `external_fixed_ip` argument.
     </dt>
     <dd>{{% md %}}A unique name for the router. Changing this
 updates the `name` of an existing router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1997,8 +1839,7 @@ updates the `name` of an existing router.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2007,8 +1848,7 @@ router.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2018,8 +1858,7 @@ router.
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -2028,8 +1867,7 @@ to create a router for another tenant. Changing this creates a new router.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional driver-specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_options_python">
 <a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
@@ -2039,8 +1877,7 @@ to create a router for another tenant. Changing this creates a new router.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2055,9 +1892,7 @@ Supported options are described below.
 <h4 id="routerexternalfixedip">Router<wbr>External<wbr>Fixed<wbr>Ip</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2066,8 +1901,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2076,14 +1910,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2092,8 +1923,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2102,14 +1932,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2118,8 +1945,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2128,14 +1954,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2144,8 +1967,7 @@ Supported options are described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address to set on the router.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2154,16 +1976,13 @@ Supported options are described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet in which the fixed IP belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routervendoroptions">Router<wbr>Vendor<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="setroutergatewayaftercreate_csharp">
 <a href="#setroutergatewayaftercreate_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
@@ -2173,14 +1992,11 @@ Supported options are described below.
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="setroutergatewayaftercreate_go">
 <a href="#setroutergatewayaftercreate_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
@@ -2190,14 +2006,11 @@ the Router gateway is assigned during creation or updated after creation.
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="setroutergatewayaftercreate_nodejs">
 <a href="#setroutergatewayaftercreate_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Router<wbr>Gateway<wbr>After<wbr>Create</a>
@@ -2207,14 +2020,11 @@ the Router gateway is assigned during creation or updated after creation.
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="set_router_gateway_after_create_python">
 <a href="#set_router_gateway_after_create_python" style="color: inherit; text-decoration: inherit;">set_<wbr>router_<wbr>gateway_<wbr>after_<wbr>create</a>
@@ -2224,8 +2034,7 @@ the Router gateway is assigned during creation or updated after creation.
     </dt>
     <dd>{{% md %}}Boolean to control whether
 the Router gateway is assigned during creation or updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2246,6 +2055,6 @@ Routers can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

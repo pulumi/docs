@@ -21,11 +21,17 @@ To get more information about Tag, see:
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Data Catalog Entry Tag Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -118,9 +124,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -209,9 +218,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -272,9 +284,12 @@ basic_tag = gcp.datacatalog.Tag("basicTag",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -339,10 +354,17 @@ const basicTag = new gcp.datacatalog.Tag("basicTag", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Data Catalog Entry Group Tag
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -442,9 +464,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -542,9 +567,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -610,9 +638,12 @@ entry_group_tag = gcp.datacatalog.Tag("entryGroupTag",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -683,10 +714,17 @@ const entryGroupTag = new gcp.datacatalog.Tag("entryGroupTag", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Data Catalog Entry Tag Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -846,9 +884,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -967,9 +1008,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1092,9 +1136,12 @@ second_tag = gcp.datacatalog.Tag("second-tag",
     column="first_name")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1222,9 +1269,16 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Tag Resource {#create}
@@ -1249,9 +1303,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1259,9 +1311,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1269,9 +1319,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1279,10 +1327,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1308,9 +1353,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1318,9 +1361,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1328,9 +1369,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1338,9 +1377,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1348,18 +1385,13 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1367,9 +1399,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1377,9 +1407,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1387,10 +1415,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1405,9 +1430,7 @@ The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -1418,8 +1441,7 @@ The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1430,8 +1452,7 @@ Structure is documented below.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_csharp">
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1443,8 +1464,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1454,14 +1474,11 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -1472,8 +1489,7 @@ all entries in that group.
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1484,8 +1500,7 @@ Structure is documented below.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_go">
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1497,8 +1512,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1508,14 +1522,11 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1526,8 +1537,7 @@ all entries in that group.
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1538,8 +1548,7 @@ Structure is documented below.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_nodejs">
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
@@ -1551,8 +1560,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1562,14 +1570,11 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1580,8 +1585,7 @@ all entries in that group.
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1592,8 +1596,7 @@ Structure is documented below.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_python">
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
@@ -1605,8 +1608,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1616,8 +1618,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1628,9 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1638,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1651,8 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedisplayname_csharp">
 <a href="#templatedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
@@ -1661,14 +1658,11 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1676,8 +1670,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1689,8 +1682,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedisplayname_go">
 <a href="#templatedisplayname_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
@@ -1699,14 +1691,11 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1714,8 +1703,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1727,8 +1715,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedisplayname_nodejs">
 <a href="#templatedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Displayname</a>
@@ -1737,14 +1724,11 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1752,8 +1736,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1765,8 +1748,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="template_displayname_python">
 <a href="#template_displayname_python" style="color: inherit; text-decoration: inherit;">template_<wbr>displayname</a>
@@ -1775,8 +1757,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1903,9 +1884,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_column_csharp">
 <a href="#state_column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1917,8 +1896,7 @@ The following state arguments are supported:
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_csharp">
 <a href="#state_fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -1929,8 +1907,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1942,8 +1919,7 @@ Structure is documented below.
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1953,8 +1929,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1965,8 +1940,7 @@ all entries in that group.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_csharp">
 <a href="#state_templatedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
@@ -1975,14 +1949,11 @@ This field cannot be modified after creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_column_go">
 <a href="#state_column_go" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1994,8 +1965,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_go">
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -2006,8 +1976,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2019,8 +1988,7 @@ Structure is documented below.
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -2030,8 +1998,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -2042,8 +2009,7 @@ all entries in that group.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_go">
 <a href="#state_templatedisplayname_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
@@ -2052,14 +2018,11 @@ This field cannot be modified after creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_column_nodejs">
 <a href="#state_column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2071,8 +2034,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_nodejs">
 <a href="#state_fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -2083,8 +2045,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2096,8 +2057,7 @@ Structure is documented below.
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -2107,8 +2067,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -2119,8 +2078,7 @@ all entries in that group.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_nodejs">
 <a href="#state_templatedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Displayname</a>
@@ -2129,14 +2087,11 @@ This field cannot be modified after creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_column_python">
 <a href="#state_column_python" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2148,8 +2103,7 @@ This field cannot be modified after creation.
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_python">
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -2160,8 +2114,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2173,8 +2126,7 @@ Structure is documented below.
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -2184,8 +2136,7 @@ identifier. Note that this Tag may not actually be stored in the location in thi
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -2196,8 +2147,7 @@ all entries in that group.
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_displayname_python">
 <a href="#state_template_displayname_python" style="color: inherit; text-decoration: inherit;">template_<wbr>displayname</a>
@@ -2206,8 +2156,7 @@ This field cannot be modified after creation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2222,9 +2171,7 @@ This field cannot be modified after creation.
 <h4 id="tagfield">Tag<wbr>Field</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -2233,8 +2180,7 @@ This field cannot be modified after creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boolvalue_csharp">
 <a href="#boolvalue_csharp" style="color: inherit; text-decoration: inherit;">Bool<wbr>Value</a>
@@ -2243,8 +2189,7 @@ This field cannot be modified after creation.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2254,8 +2199,7 @@ This field cannot be modified after creation.
     </dt>
     <dd>{{% md %}}-
 The display name of this field
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="doublevalue_csharp">
 <a href="#doublevalue_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Value</a>
@@ -2264,8 +2208,7 @@ The display name of this field
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalue_csharp">
 <a href="#enumvalue_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Value</a>
@@ -2275,8 +2218,7 @@ The display name of this field
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2288,8 +2230,7 @@ Structure is documented below.
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_csharp">
 <a href="#stringvalue_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
@@ -2298,8 +2239,7 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_csharp">
 <a href="#timestampvalue_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
@@ -2308,14 +2248,11 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -2324,8 +2261,7 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boolvalue_go">
 <a href="#boolvalue_go" style="color: inherit; text-decoration: inherit;">Bool<wbr>Value</a>
@@ -2334,8 +2270,7 @@ within a tag do not have to be sequential.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2345,8 +2280,7 @@ within a tag do not have to be sequential.
     </dt>
     <dd>{{% md %}}-
 The display name of this field
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="doublevalue_go">
 <a href="#doublevalue_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Value</a>
@@ -2355,8 +2289,7 @@ The display name of this field
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalue_go">
 <a href="#enumvalue_go" style="color: inherit; text-decoration: inherit;">Enum<wbr>Value</a>
@@ -2366,8 +2299,7 @@ The display name of this field
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2379,8 +2311,7 @@ Structure is documented below.
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_go">
 <a href="#stringvalue_go" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
@@ -2389,8 +2320,7 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_go">
 <a href="#timestampvalue_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
@@ -2399,14 +2329,11 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
@@ -2415,8 +2342,7 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boolvalue_nodejs">
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
@@ -2425,8 +2351,7 @@ within a tag do not have to be sequential.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2436,8 +2361,7 @@ within a tag do not have to be sequential.
     </dt>
     <dd>{{% md %}}-
 The display name of this field
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="doublevalue_nodejs">
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
@@ -2446,8 +2370,7 @@ The display name of this field
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalue_nodejs">
 <a href="#enumvalue_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Value</a>
@@ -2457,8 +2380,7 @@ The display name of this field
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2470,8 +2392,7 @@ Structure is documented below.
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_nodejs">
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
@@ -2480,8 +2401,7 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_nodejs">
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
@@ -2490,14 +2410,11 @@ within a tag do not have to be sequential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
@@ -2506,8 +2423,7 @@ within a tag do not have to be sequential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bool_value_python">
 <a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
@@ -2516,8 +2432,7 @@ within a tag do not have to be sequential.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2527,8 +2442,7 @@ within a tag do not have to be sequential.
     </dt>
     <dd>{{% md %}}-
 The display name of this field
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="double_value_python">
 <a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
@@ -2537,8 +2451,7 @@ The display name of this field
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enum_value_python">
 <a href="#enum_value_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>value</a>
@@ -2548,8 +2461,7 @@ The display name of this field
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2561,8 +2473,7 @@ Structure is documented below.
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_value_python">
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
@@ -2571,8 +2482,7 @@ within a tag do not have to be sequential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_value_python">
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
@@ -2581,8 +2491,7 @@ within a tag do not have to be sequential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2603,6 +2512,6 @@ Tag can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

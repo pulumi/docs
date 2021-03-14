@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_csharp">
 <a href="#migrateprojectname_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Project<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_go">
 <a href="#migrateprojectname_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Project<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_nodejs">
 <a href="#migrateprojectname_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Project<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrate_project_name_python">
 <a href="#migrate_project_name_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>project_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -220,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectresponsetags">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Outputs.<wbr>Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectpropertiesresponse">Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectresponsetags">Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectpropertiesresponse">Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -358,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectresponsetags">Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the relative URL to get this migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the name of the migrate project.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectpropertiesresponse">Migrate<wbr>Project<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the eTag for concurrency control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the Azure location in which migrate project is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#migrateprojectresponsetags">Migrate<wbr>Project<wbr>Response<wbr>Tags</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,9 +390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_csharp">
 <a href="#extendedsummary_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Summary</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_csharp">
 <a href="#lastsummaryrefreshedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_csharp">
 <a href="#refreshsummarystate_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -470,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_go">
 <a href="#extendedsummary_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Summary</a>
@@ -485,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_go">
 <a href="#lastsummaryrefreshedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_go">
 <a href="#refreshsummarystate_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -503,14 +442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_nodejs">
 <a href="#extendedsummary_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Summary</a>
@@ -518,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_nodejs">
 <a href="#lastsummaryrefreshedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -527,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_nodejs">
 <a href="#refreshsummarystate_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Summary<wbr>State</a>
@@ -536,14 +470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extended_summary_python">
 <a href="#extended_summary_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>summary</a>
@@ -551,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_summary_refreshed_time_python">
 <a href="#last_summary_refreshed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>summary_<wbr>refreshed_<wbr>time</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_summary_state_python">
 <a href="#refresh_summary_state_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>summary_<wbr>state</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="migrateprojectpropertiesresponse">Migrate<wbr>Project<wbr>Properties<wbr>Response</h4>
@@ -578,9 +506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastsummaryrefreshedtime_csharp">
 <a href="#lastsummaryrefreshedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -588,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refreshsummarystate_csharp">
 <a href="#refreshsummarystate_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -597,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_csharp">
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
@@ -606,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -615,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredtools_csharp">
 <a href="#registeredtools_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Tools</a>
@@ -624,14 +546,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastsummaryrefreshedtime_go">
 <a href="#lastsummaryrefreshedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -639,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refreshsummarystate_go">
 <a href="#refreshsummarystate_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -648,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_go">
 <a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
@@ -657,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -666,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredtools_go">
 <a href="#registeredtools_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>Tools</a>
@@ -675,14 +590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastsummaryrefreshedtime_nodejs">
 <a href="#lastsummaryrefreshedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -690,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refreshsummarystate_nodejs">
 <a href="#refreshsummarystate_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Summary<wbr>State</a>
@@ -699,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_nodejs">
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
@@ -708,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Database<wbr>Project<wbr>Summary<wbr>Response | Servers<wbr>Project<wbr>Summary<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -717,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredtools_nodejs">
 <a href="#registeredtools_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>Tools</a>
@@ -726,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_summary_refreshed_time_python">
 <a href="#last_summary_refreshed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>summary_<wbr>refreshed_<wbr>time</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the last time the project summary was refreshed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refresh_summary_state_python">
 <a href="#refresh_summary_state_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>summary_<wbr>state</a>
@@ -750,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the refresh summary state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_python">
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
@@ -759,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Union[Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -768,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registered_tools_python">
 <a href="#registered_tools_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>tools</a>
@@ -777,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the list of tools registered with the migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="migrateprojectresponsetags">Migrate<wbr>Project<wbr>Response<wbr>Tags</h4>
@@ -786,9 +686,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -796,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -811,14 +706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
@@ -826,14 +718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_properties_python">
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serversprojectsummaryresponse">Servers<wbr>Project<wbr>Summary<wbr>Response</h4>
@@ -850,9 +738,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assessedcount_csharp">
 <a href="#assessedcount_csharp" style="color: inherit; text-decoration: inherit;">Assessed<wbr>Count</a>
@@ -860,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveredcount_csharp">
 <a href="#discoveredcount_csharp" style="color: inherit; text-decoration: inherit;">Discovered<wbr>Count</a>
@@ -869,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_csharp">
 <a href="#extendedsummary_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Summary</a>
@@ -878,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_csharp">
 <a href="#lastsummaryrefreshedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -887,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migratedcount_csharp">
 <a href="#migratedcount_csharp" style="color: inherit; text-decoration: inherit;">Migrated<wbr>Count</a>
@@ -896,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_csharp">
 <a href="#refreshsummarystate_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -905,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicatingcount_csharp">
 <a href="#replicatingcount_csharp" style="color: inherit; text-decoration: inherit;">Replicating<wbr>Count</a>
@@ -914,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testmigratedcount_csharp">
 <a href="#testmigratedcount_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Migrated<wbr>Count</a>
@@ -923,14 +802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assessedcount_go">
 <a href="#assessedcount_go" style="color: inherit; text-decoration: inherit;">Assessed<wbr>Count</a>
@@ -938,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveredcount_go">
 <a href="#discoveredcount_go" style="color: inherit; text-decoration: inherit;">Discovered<wbr>Count</a>
@@ -947,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_go">
 <a href="#extendedsummary_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Summary</a>
@@ -956,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_go">
 <a href="#lastsummaryrefreshedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -965,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migratedcount_go">
 <a href="#migratedcount_go" style="color: inherit; text-decoration: inherit;">Migrated<wbr>Count</a>
@@ -974,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_go">
 <a href="#refreshsummarystate_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Summary<wbr>State</a>
@@ -983,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicatingcount_go">
 <a href="#replicatingcount_go" style="color: inherit; text-decoration: inherit;">Replicating<wbr>Count</a>
@@ -992,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testmigratedcount_go">
 <a href="#testmigratedcount_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Migrated<wbr>Count</a>
@@ -1001,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assessedcount_nodejs">
 <a href="#assessedcount_nodejs" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
@@ -1016,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveredcount_nodejs">
 <a href="#discoveredcount_nodejs" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
@@ -1025,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedsummary_nodejs">
 <a href="#extendedsummary_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Summary</a>
@@ -1034,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastsummaryrefreshedtime_nodejs">
 <a href="#lastsummaryrefreshedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Summary<wbr>Refreshed<wbr>Time</a>
@@ -1043,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migratedcount_nodejs">
 <a href="#migratedcount_nodejs" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
@@ -1052,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshsummarystate_nodejs">
 <a href="#refreshsummarystate_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Summary<wbr>State</a>
@@ -1061,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicatingcount_nodejs">
 <a href="#replicatingcount_nodejs" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
@@ -1070,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testmigratedcount_nodejs">
 <a href="#testmigratedcount_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
@@ -1079,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assessed_count_python">
 <a href="#assessed_count_python" style="color: inherit; text-decoration: inherit;">assessed_<wbr>count</a>
@@ -1094,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovered_count_python">
 <a href="#discovered_count_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>count</a>
@@ -1103,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_summary_python">
 <a href="#extended_summary_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>summary</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the extended summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_summary_refreshed_time_python">
 <a href="#last_summary_refreshed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>summary_<wbr>refreshed_<wbr>time</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the time when summary was last refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migrated_count_python">
 <a href="#migrated_count_python" style="color: inherit; text-decoration: inherit;">migrated_<wbr>count</a>
@@ -1130,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_summary_state_python">
 <a href="#refresh_summary_state_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>summary_<wbr>state</a>
@@ -1139,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the state of refresh summary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicating_count_python">
 <a href="#replicating_count_python" style="color: inherit; text-decoration: inherit;">replicating_<wbr>count</a>
@@ -1148,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the count of entities being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="test_migrated_count_python">
 <a href="#test_migrated_count_python" style="color: inherit; text-decoration: inherit;">test_<wbr>migrated_<wbr>count</a>
@@ -1157,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the count of entities test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

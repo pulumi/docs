@@ -43,9 +43,7 @@ VPN gateway can be imported using the id, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ VPN gateway can be imported using the id, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ VPN gateway can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -209,8 +178,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -219,8 +187,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -229,8 +196,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableipsec_csharp">
 <a href="#enableipsec_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ipsec</a>
@@ -239,8 +205,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_csharp">
 <a href="#enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -249,8 +214,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -260,8 +224,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -270,8 +233,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -280,8 +242,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconnections_csharp">
 <a href="#sslconnections_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connections</a>
@@ -291,8 +252,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -301,14 +261,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -316,8 +273,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -326,8 +282,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -336,8 +291,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableipsec_go">
 <a href="#enableipsec_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ipsec</a>
@@ -346,8 +300,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_go">
 <a href="#enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -356,8 +309,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -367,8 +319,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -377,8 +328,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -387,8 +337,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconnections_go">
 <a href="#sslconnections_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connections</a>
@@ -398,8 +347,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -408,14 +356,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -423,8 +368,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -433,8 +377,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -443,8 +386,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableipsec_nodejs">
 <a href="#enableipsec_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ipsec</a>
@@ -453,8 +395,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_nodejs">
 <a href="#enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -463,8 +404,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -474,8 +414,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -484,8 +423,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -494,8 +432,7 @@ Default to PostPaid.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconnections_nodejs">
 <a href="#sslconnections_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Connections</a>
@@ -505,8 +442,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -515,14 +451,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -530,8 +463,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -540,8 +472,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -550,8 +481,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ipsec_python">
 <a href="#enable_ipsec_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ipsec</a>
@@ -560,8 +490,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ssl_python">
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -570,8 +499,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -581,8 +509,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -591,8 +518,7 @@ Default to PostPaid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -601,8 +527,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_connections_python">
 <a href="#ssl_connections_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>connections</a>
@@ -612,8 +537,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -622,8 +546,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -634,9 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="businessstatus_csharp">
 <a href="#businessstatus_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
@@ -645,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internetip_csharp">
 <a href="#internetip_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -664,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -674,14 +592,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="businessstatus_go">
 <a href="#businessstatus_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
@@ -690,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -699,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internetip_go">
 <a href="#internetip_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -709,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -719,14 +631,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="businessstatus_nodejs">
 <a href="#businessstatus_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Status</a>
@@ -735,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -744,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internetip_nodejs">
 <a href="#internetip_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Ip</a>
@@ -754,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -764,14 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="business_status_python">
 <a href="#business_status_python" style="color: inherit; text-decoration: inherit;">business_<wbr>status</a>
@@ -780,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -789,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internet_ip_python">
 <a href="#internet_ip_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>ip</a>
@@ -799,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -809,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -937,9 +836,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -947,8 +844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_businessstatus_csharp">
 <a href="#state_businessstatus_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
@@ -957,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -967,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableipsec_csharp">
 <a href="#state_enableipsec_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ipsec</a>
@@ -977,8 +871,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_csharp">
 <a href="#state_enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -987,8 +880,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -998,8 +890,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetip_csharp">
 <a href="#state_internetip_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -1008,8 +899,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1018,8 +908,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1028,8 +917,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconnections_csharp">
 <a href="#state_sslconnections_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connections</a>
@@ -1039,8 +927,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1049,8 +936,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1059,8 +945,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1069,14 +954,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1084,8 +966,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_businessstatus_go">
 <a href="#state_businessstatus_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Status</a>
@@ -1094,8 +975,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1104,8 +984,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableipsec_go">
 <a href="#state_enableipsec_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ipsec</a>
@@ -1114,8 +993,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_go">
 <a href="#state_enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -1124,8 +1002,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -1135,8 +1012,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetip_go">
 <a href="#state_internetip_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -1145,8 +1021,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1155,8 +1030,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1165,8 +1039,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconnections_go">
 <a href="#state_sslconnections_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Connections</a>
@@ -1176,8 +1049,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1186,8 +1058,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1196,8 +1067,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1206,14 +1076,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1221,8 +1088,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_businessstatus_nodejs">
 <a href="#state_businessstatus_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Status</a>
@@ -1231,8 +1097,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1241,8 +1106,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableipsec_nodejs">
 <a href="#state_enableipsec_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ipsec</a>
@@ -1251,8 +1115,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_nodejs">
 <a href="#state_enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -1261,8 +1124,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -1272,8 +1134,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetip_nodejs">
 <a href="#state_internetip_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Ip</a>
@@ -1282,8 +1143,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1292,8 +1152,7 @@ Default to PostPaid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1302,8 +1161,7 @@ Default to PostPaid.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconnections_nodejs">
 <a href="#state_sslconnections_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Connections</a>
@@ -1313,8 +1171,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1323,8 +1180,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1333,8 +1189,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1343,14 +1198,11 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1358,8 +1210,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_business_status_python">
 <a href="#state_business_status_python" style="color: inherit; text-decoration: inherit;">business_<wbr>status</a>
@@ -1368,8 +1219,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1378,8 +1228,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the VPN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ipsec_python">
 <a href="#state_enable_ipsec_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ipsec</a>
@@ -1388,8 +1237,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable IPSec VPN. At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ssl_python">
 <a href="#state_enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -1398,8 +1246,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or Disable SSL VPN.  At least one type of VPN should be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -1409,8 +1256,7 @@ This field is ignored when enable_ssl is false.
     </dt>
     <dd>{{% md %}}The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_ip_python">
 <a href="#state_internet_ip_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>ip</a>
@@ -1419,8 +1265,7 @@ Default to PostPaid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internet ip of the VPN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1429,8 +1274,7 @@ Default to PostPaid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPN. Defaults to null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1439,8 +1283,7 @@ Default to PostPaid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_connections_python">
 <a href="#state_ssl_connections_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>connections</a>
@@ -1450,8 +1293,7 @@ Default to PostPaid.
     </dt>
     <dd>{{% md %}}The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1460,8 +1302,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1470,8 +1311,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vpc_id, the field can't be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1480,8 +1320,7 @@ This field is ignored when enable_ssl is false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPN belongs the vswitch_id, the field can't be changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1497,6 +1336,6 @@ This field is ignored when enable_ssl is false.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

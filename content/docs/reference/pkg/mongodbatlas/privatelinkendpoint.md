@@ -21,11 +21,17 @@ meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpoint resource with
 > **NOTE:** A network container is created for a private endpoint to reside in if one does not yet exist in the project.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -84,9 +96,12 @@ test = mongodbatlas.PrivateLinkEndpoint("test",
     region="us-east-1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateLinkEndpoint Resource {#create}
@@ -126,9 +148,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -136,9 +156,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -146,9 +164,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -156,10 +172,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -185,9 +198,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -195,9 +206,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +214,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +222,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,18 +230,13 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +244,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +252,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,10 +260,7 @@ const test = new mongodbatlas.PrivateLinkEndpoint("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,9 +275,7 @@ The PrivateLinkEndpoint resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -293,8 +284,7 @@ The PrivateLinkEndpoint resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -302,8 +292,7 @@ The PrivateLinkEndpoint resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -313,14 +302,11 @@ The PrivateLinkEndpoint resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -329,8 +315,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -338,8 +323,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -349,14 +333,11 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -365,8 +346,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -374,8 +354,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -385,14 +364,11 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -401,8 +377,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -410,8 +385,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -421,8 +395,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -433,9 +406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointservicename_csharp">
 <a href="#endpointservicename_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
@@ -444,8 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -454,8 +424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -463,8 +432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpoints_csharp">
 <a href="#interfaceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
@@ -473,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpoints_csharp">
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -483,8 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -493,8 +459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkservicename_csharp">
 <a href="#privatelinkservicename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -503,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkserviceresourceid_csharp">
 <a href="#privatelinkserviceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -513,8 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -524,14 +487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointservicename_go">
 <a href="#endpointservicename_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
@@ -540,8 +500,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -550,8 +509,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,8 +517,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpoints_go">
 <a href="#interfaceendpoints_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
@@ -569,8 +526,7 @@ AWS:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpoints_go">
 <a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -579,8 +535,7 @@ AWS:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -589,8 +544,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkservicename_go">
 <a href="#privatelinkservicename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -599,8 +553,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkserviceresourceid_go">
 <a href="#privatelinkserviceresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -609,8 +562,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -620,14 +572,11 @@ AWS:
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointservicename_nodejs">
 <a href="#endpointservicename_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Service<wbr>Name</a>
@@ -636,8 +585,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -646,8 +594,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,8 +602,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpoints_nodejs">
 <a href="#interfaceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoints</a>
@@ -665,8 +611,7 @@ AWS:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpoints_nodejs">
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
@@ -675,8 +620,7 @@ AWS:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -685,8 +629,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkservicename_nodejs">
 <a href="#privatelinkservicename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -695,8 +638,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkserviceresourceid_nodejs">
 <a href="#privatelinkserviceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -705,8 +647,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -716,14 +657,11 @@ AWS:
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_service_name_python">
 <a href="#endpoint_service_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>service_<wbr>name</a>
@@ -732,8 +670,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -742,8 +679,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -751,8 +687,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interface_endpoints_python">
 <a href="#interface_endpoints_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoints</a>
@@ -761,8 +696,7 @@ AWS:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoints_python">
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
@@ -771,8 +705,7 @@ AWS:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -781,8 +714,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_service_name_python">
 <a href="#private_link_service_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>name</a>
@@ -791,8 +723,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_service_resource_id_python">
 <a href="#private_link_service_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>resource_<wbr>id</a>
@@ -801,8 +732,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -812,8 +742,7 @@ AWS:
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -940,9 +869,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointservicename_csharp">
 <a href="#state_endpointservicename_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
@@ -951,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_csharp">
 <a href="#state_errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -961,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpoints_csharp">
 <a href="#state_interfaceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
@@ -971,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpoints_csharp">
 <a href="#state_privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -981,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_csharp">
 <a href="#state_privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -991,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkservicename_csharp">
 <a href="#state_privatelinkservicename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -1001,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkserviceresourceid_csharp">
 <a href="#state_privatelinkserviceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -1011,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1021,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_csharp">
 <a href="#state_providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1030,8 +949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1041,8 +959,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1052,14 +969,11 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointservicename_go">
 <a href="#state_endpointservicename_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
@@ -1068,8 +982,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_go">
 <a href="#state_errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1078,8 +991,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpoints_go">
 <a href="#state_interfaceendpoints_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
@@ -1088,8 +1000,7 @@ AWS:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpoints_go">
 <a href="#state_privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -1098,8 +1009,7 @@ AWS:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_go">
 <a href="#state_privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -1108,8 +1018,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkservicename_go">
 <a href="#state_privatelinkservicename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -1118,8 +1027,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkserviceresourceid_go">
 <a href="#state_privatelinkserviceresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -1128,8 +1036,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1138,8 +1045,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_go">
 <a href="#state_providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1147,8 +1053,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1158,8 +1063,7 @@ AWS:
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1169,14 +1073,11 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointservicename_nodejs">
 <a href="#state_endpointservicename_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Service<wbr>Name</a>
@@ -1185,8 +1086,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_nodejs">
 <a href="#state_errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1195,8 +1095,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpoints_nodejs">
 <a href="#state_interfaceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoints</a>
@@ -1205,8 +1104,7 @@ AWS:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpoints_nodejs">
 <a href="#state_privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
@@ -1215,8 +1113,7 @@ AWS:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_nodejs">
 <a href="#state_privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -1225,8 +1122,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkservicename_nodejs">
 <a href="#state_privatelinkservicename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Name</a>
@@ -1235,8 +1131,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkserviceresourceid_nodejs">
 <a href="#state_privatelinkserviceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Resource<wbr>Id</a>
@@ -1245,8 +1140,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1255,8 +1149,7 @@ AWS:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_nodejs">
 <a href="#state_providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -1264,8 +1157,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1275,8 +1167,7 @@ AWS:
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1286,14 +1177,11 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_service_name_python">
 <a href="#state_endpoint_service_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>service_<wbr>name</a>
@@ -1302,8 +1190,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_message_python">
 <a href="#state_error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1312,8 +1199,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_endpoints_python">
 <a href="#state_interface_endpoints_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoints</a>
@@ -1322,8 +1208,7 @@ AWS:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_endpoints_python">
 <a href="#state_private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
@@ -1332,8 +1217,7 @@ AWS:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}All private endpoints that you have added to this Azure Private Link Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_link_id_python">
 <a href="#state_private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -1342,8 +1226,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_link_service_name_python">
 <a href="#state_private_link_service_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>name</a>
@@ -1352,8 +1235,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_link_service_resource_id_python">
 <a href="#state_private_link_service_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>resource_<wbr>id</a>
@@ -1362,8 +1244,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Azure Private Link Service that Atlas manages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1372,8 +1253,7 @@ AWS:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required 	Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_name_python">
 <a href="#state_provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -1381,8 +1261,7 @@ AWS:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1392,8 +1271,7 @@ AWS:
     </dt>
     <dd>{{% md %}}Cloud provider region in which you want to create the private endpoint connection.
 Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws) and [AZURE regions](https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1403,8 +1281,7 @@ Accepted values are: [AWS regions](https://docs.atlas.mongodb.com/reference/amaz
     </dt>
     <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
 AWS:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1432,6 +1309,6 @@ Private Endpoint Service can be imported using project ID, private link ID, prov
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

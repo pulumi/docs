@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.sns.PlatformApplication resource with exam
 Provides an SNS platform application resource
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Apple Push Notification Service (APNS)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -37,9 +43,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -63,9 +72,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -76,9 +88,12 @@ apns_application = aws.sns.PlatformApplication("apnsApplication",
     platform_principal="<APNS CERTIFICATE>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,10 +106,17 @@ const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Google Cloud Messaging (GCM)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -113,9 +135,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -138,9 +163,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -150,9 +178,12 @@ gcm_application = aws.sns.PlatformApplication("gcmApplication",
     platform_credential="<GCM API KEY>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -164,9 +195,16 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PlatformApplication Resource {#create}
@@ -191,9 +229,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -201,9 +237,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -211,9 +245,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -221,10 +253,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -250,9 +279,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -260,9 +287,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -270,9 +295,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -280,9 +303,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -290,18 +311,13 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -309,9 +325,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -319,9 +333,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,10 +341,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -347,9 +356,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -358,8 +365,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platformcredential_csharp">
 <a href="#platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
@@ -368,8 +374,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryfailuretopicarn_csharp">
 <a href="#eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -378,8 +383,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointcreatedtopicarn_csharp">
 <a href="#eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -388,8 +392,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointdeletedtopicarn_csharp">
 <a href="#eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -398,8 +401,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointupdatedtopicarn_csharp">
 <a href="#eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -408,8 +410,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurefeedbackrolearn_csharp">
 <a href="#failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -418,8 +419,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -428,8 +428,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformprincipal_csharp">
 <a href="#platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
@@ -438,8 +437,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbackrolearn_csharp">
 <a href="#successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -448,8 +446,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbacksamplerate_csharp">
 <a href="#successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -458,14 +455,11 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -474,8 +468,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platformcredential_go">
 <a href="#platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
@@ -484,8 +477,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryfailuretopicarn_go">
 <a href="#eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -494,8 +486,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointcreatedtopicarn_go">
 <a href="#eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -504,8 +495,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointdeletedtopicarn_go">
 <a href="#eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -514,8 +504,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointupdatedtopicarn_go">
 <a href="#eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -524,8 +513,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurefeedbackrolearn_go">
 <a href="#failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -534,8 +522,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -544,8 +531,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformprincipal_go">
 <a href="#platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
@@ -554,8 +540,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbackrolearn_go">
 <a href="#successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -564,8 +549,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbacksamplerate_go">
 <a href="#successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -574,14 +558,11 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -590,8 +571,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platformcredential_nodejs">
 <a href="#platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
@@ -600,8 +580,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryfailuretopicarn_nodejs">
 <a href="#eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -610,8 +589,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointcreatedtopicarn_nodejs">
 <a href="#eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -620,8 +598,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointdeletedtopicarn_nodejs">
 <a href="#eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -630,8 +607,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventendpointupdatedtopicarn_nodejs">
 <a href="#eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -640,8 +616,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurefeedbackrolearn_nodejs">
 <a href="#failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -650,8 +625,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -660,8 +634,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformprincipal_nodejs">
 <a href="#platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
@@ -670,8 +643,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbackrolearn_nodejs">
 <a href="#successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -680,8 +652,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successfeedbacksamplerate_nodejs">
 <a href="#successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -690,14 +661,11 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -706,8 +674,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_credential_python">
 <a href="#platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
@@ -716,8 +683,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_delivery_failure_topic_arn_python">
 <a href="#event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
@@ -726,8 +692,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_endpoint_created_topic_arn_python">
 <a href="#event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
@@ -736,8 +701,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_endpoint_deleted_topic_arn_python">
 <a href="#event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
@@ -746,8 +710,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_endpoint_updated_topic_arn_python">
 <a href="#event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
@@ -756,8 +719,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_feedback_role_arn_python">
 <a href="#failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
@@ -766,8 +728,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -776,8 +737,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_principal_python">
 <a href="#platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
@@ -786,8 +746,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="success_feedback_role_arn_python">
 <a href="#success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
@@ -796,8 +755,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="success_feedback_sample_rate_python">
 <a href="#success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
@@ -806,8 +764,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -818,9 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -829,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -838,14 +792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -854,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -863,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -879,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -888,14 +834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -904,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -913,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1041,9 +982,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1052,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryfailuretopicarn_csharp">
 <a href="#state_eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -1062,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointcreatedtopicarn_csharp">
 <a href="#state_eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -1072,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointdeletedtopicarn_csharp">
 <a href="#state_eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -1082,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointupdatedtopicarn_csharp">
 <a href="#state_eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -1092,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurefeedbackrolearn_csharp">
 <a href="#state_failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1102,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1112,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_csharp">
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1122,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformcredential_csharp">
 <a href="#state_platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
@@ -1132,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformprincipal_csharp">
 <a href="#state_platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
@@ -1142,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbackrolearn_csharp">
 <a href="#state_successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1152,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbacksamplerate_csharp">
 <a href="#state_successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -1162,14 +1090,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1178,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryfailuretopicarn_go">
 <a href="#state_eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -1188,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointcreatedtopicarn_go">
 <a href="#state_eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -1198,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointdeletedtopicarn_go">
 <a href="#state_eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -1208,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointupdatedtopicarn_go">
 <a href="#state_eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -1218,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurefeedbackrolearn_go">
 <a href="#state_failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1228,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1238,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_go">
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1248,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformcredential_go">
 <a href="#state_platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
@@ -1258,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformprincipal_go">
 <a href="#state_platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
@@ -1268,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbackrolearn_go">
 <a href="#state_successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1278,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbacksamplerate_go">
 <a href="#state_successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -1288,14 +1202,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1304,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryfailuretopicarn_nodejs">
 <a href="#state_eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
@@ -1314,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointcreatedtopicarn_nodejs">
 <a href="#state_eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
@@ -1324,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointdeletedtopicarn_nodejs">
 <a href="#state_eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
@@ -1334,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventendpointupdatedtopicarn_nodejs">
 <a href="#state_eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
@@ -1344,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurefeedbackrolearn_nodejs">
 <a href="#state_failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1354,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1364,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_nodejs">
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1374,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformcredential_nodejs">
 <a href="#state_platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
@@ -1384,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformprincipal_nodejs">
 <a href="#state_platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
@@ -1394,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbackrolearn_nodejs">
 <a href="#state_successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
@@ -1404,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_successfeedbacksamplerate_nodejs">
 <a href="#state_successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
@@ -1414,14 +1314,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1430,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_delivery_failure_topic_arn_python">
 <a href="#state_event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
@@ -1440,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_endpoint_created_topic_arn_python">
 <a href="#state_event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
@@ -1450,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_endpoint_deleted_topic_arn_python">
 <a href="#state_event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
@@ -1460,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_endpoint_updated_topic_arn_python">
 <a href="#state_event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
@@ -1470,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failure_feedback_role_arn_python">
 <a href="#state_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
@@ -1480,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1490,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_python">
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1500,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_credential_python">
 <a href="#state_platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
@@ -1510,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_principal_python">
 <a href="#state_platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
@@ -1520,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_success_feedback_role_arn_python">
 <a href="#state_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
@@ -1530,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_success_feedback_sample_rate_python">
 <a href="#state_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
@@ -1540,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1567,6 +1452,6 @@ SNS platform applications can be imported using the ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

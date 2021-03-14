@@ -14,11 +14,17 @@ The description of the IoT hub.
 API Version: 2020-08-31.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### IotHubResource_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -132,13 +138,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -224,9 +236,12 @@ iot_hub_resource = azure_native.devices.IotHubResource("iotHubResource",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -313,9 +328,16 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IotHubResource Resource {#create}
@@ -340,9 +362,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -350,9 +370,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -360,9 +378,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -370,10 +386,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -399,9 +412,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -409,9 +420,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -419,9 +428,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -429,9 +436,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -439,18 +444,13 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -458,9 +458,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -468,9 +466,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -478,10 +474,7 @@ const iotHubResource = new azure_native.devices.IotHubResource("iotHubResource",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -496,9 +489,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -506,8 +497,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -515,8 +505,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubskuinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -524,8 +513,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -533,8 +521,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -542,8 +529,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}IotHub properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -551,8 +537,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -560,14 +545,11 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -575,8 +557,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -584,8 +565,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -593,8 +573,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -602,8 +581,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -611,8 +589,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}IotHub properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -620,8 +597,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -629,14 +605,11 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -644,8 +617,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -653,8 +625,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -662,8 +633,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -671,8 +641,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -680,8 +649,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}IotHub properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -689,8 +657,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -698,14 +665,11 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -713,8 +677,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -722,8 +685,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -731,8 +693,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -740,8 +701,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -749,8 +709,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}IotHub properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IotHub properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -758,8 +717,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -767,8 +725,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -779,9 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -789,8 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -798,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -807,14 +760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -822,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -831,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -840,14 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -855,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -864,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -873,14 +816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -888,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -897,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -906,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -923,227 +860,137 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="accessrights">Access<wbr>Rights</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Registry<wbr>Read</dt>
-    <dd>RegistryRead</dd>
-    <dt>Registry<wbr>Write</dt>
-    <dd>RegistryWrite</dd>
-    <dt>Service<wbr>Connect</dt>
-    <dd>ServiceConnect</dd>
-    <dt>Device<wbr>Connect</dt>
-    <dd>DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write</dt>
-    <dd>RegistryRead, RegistryWrite</dd>
-    <dt>Registry<wbr>Read_Service<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect</dd>
-    <dt>Registry<wbr>Read_Device<wbr>Connect</dt>
-    <dd>RegistryRead, DeviceConnect</dd>
-    <dt>Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect</dd>
-    <dt>Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, DeviceConnect</dd>
-    <dt>Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd>
-</dl>
+<dl class="tabular"><dt>Registry<wbr>Read</dt>
+    <dd>RegistryRead</dd><dt>Registry<wbr>Write</dt>
+    <dd>RegistryWrite</dd><dt>Service<wbr>Connect</dt>
+    <dd>ServiceConnect</dd><dt>Device<wbr>Connect</dt>
+    <dd>DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write</dt>
+    <dd>RegistryRead, RegistryWrite</dd><dt>Registry<wbr>Read_Service<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect</dd><dt>Registry<wbr>Read_Device<wbr>Connect</dt>
+    <dd>RegistryRead, DeviceConnect</dd><dt>Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect</dd><dt>Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, DeviceConnect</dd><dt>Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd><dt>Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Access<wbr>Rights<wbr>Registry<wbr>Read</dt>
-    <dd>RegistryRead</dd>
-    <dt>Access<wbr>Rights<wbr>Registry<wbr>Write</dt>
-    <dd>RegistryWrite</dd>
-    <dt>Access<wbr>Rights<wbr>Service<wbr>Connect</dt>
-    <dd>ServiceConnect</dd>
-    <dt>Access<wbr>Rights<wbr>Device<wbr>Connect</dt>
-    <dd>DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write</dt>
-    <dd>RegistryRead, RegistryWrite</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Service<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Device<wbr>Connect</dt>
-    <dd>RegistryRead, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>ServiceConnect, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd>
-    <dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd>
-</dl>
+<dl class="tabular"><dt>Access<wbr>Rights<wbr>Registry<wbr>Read</dt>
+    <dd>RegistryRead</dd><dt>Access<wbr>Rights<wbr>Registry<wbr>Write</dt>
+    <dd>RegistryWrite</dd><dt>Access<wbr>Rights<wbr>Service<wbr>Connect</dt>
+    <dd>ServiceConnect</dd><dt>Access<wbr>Rights<wbr>Device<wbr>Connect</dt>
+    <dd>DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write</dt>
+    <dd>RegistryRead, RegistryWrite</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Service<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Device<wbr>Connect</dt>
+    <dd>RegistryRead, DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, DeviceConnect</dd><dt>Access<wbr>Rights_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>ServiceConnect, DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd><dt>Access<wbr>Rights_Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Registry<wbr>Read</dt>
-    <dd>RegistryRead</dd>
-    <dt>Registry<wbr>Write</dt>
-    <dd>RegistryWrite</dd>
-    <dt>Service<wbr>Connect</dt>
-    <dd>ServiceConnect</dd>
-    <dt>Device<wbr>Connect</dt>
-    <dd>DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write</dt>
-    <dd>RegistryRead, RegistryWrite</dd>
-    <dt>Registry<wbr>Read_Service<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect</dd>
-    <dt>Registry<wbr>Read_Device<wbr>Connect</dt>
-    <dd>RegistryRead, DeviceConnect</dd>
-    <dt>Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect</dd>
-    <dt>Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, DeviceConnect</dd>
-    <dt>Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd>
-    <dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd>
-</dl>
+<dl class="tabular"><dt>Registry<wbr>Read</dt>
+    <dd>RegistryRead</dd><dt>Registry<wbr>Write</dt>
+    <dd>RegistryWrite</dd><dt>Service<wbr>Connect</dt>
+    <dd>ServiceConnect</dd><dt>Device<wbr>Connect</dt>
+    <dd>DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write</dt>
+    <dd>RegistryRead, RegistryWrite</dd><dt>Registry<wbr>Read_Service<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect</dd><dt>Registry<wbr>Read_Device<wbr>Connect</dt>
+    <dd>RegistryRead, DeviceConnect</dd><dt>Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect</dd><dt>Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, DeviceConnect</dd><dt>Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd><dt>Registry<wbr>Read_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd><dt>Registry<wbr>Read_Registry<wbr>Write_Service<wbr>Connect_Device<wbr>Connect</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>REGISTRY_READ</dt>
-    <dd>RegistryRead</dd>
-    <dt>REGISTRY_WRITE</dt>
-    <dd>RegistryWrite</dd>
-    <dt>SERVICE_CONNECT</dt>
-    <dd>ServiceConnect</dd>
-    <dt>DEVICE_CONNECT</dt>
-    <dd>DeviceConnect</dd>
-    <dt>REGISTRY_READ_REGISTRY_WRITE</dt>
-    <dd>RegistryRead, RegistryWrite</dd>
-    <dt>REGISTRY_READ_SERVICE_CONNECT</dt>
-    <dd>RegistryRead, ServiceConnect</dd>
-    <dt>REGISTRY_READ_DEVICE_CONNECT</dt>
-    <dd>RegistryRead, DeviceConnect</dd>
-    <dt>REGISTRY_WRITE_SERVICE_CONNECT</dt>
-    <dd>RegistryWrite, ServiceConnect</dd>
-    <dt>REGISTRY_WRITE_DEVICE_CONNECT</dt>
-    <dd>RegistryWrite, DeviceConnect</dd>
-    <dt>SERVICE_CONNECT_DEVICE_CONNECT</dt>
-    <dd>ServiceConnect, DeviceConnect</dd>
-    <dt>REGISTRY_READ_REGISTRY_WRITE_SERVICE_CONNECT</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd>
-    <dt>REGISTRY_READ_REGISTRY_WRITE_DEVICE_CONNECT</dt>
-    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd>
-    <dt>REGISTRY_READ_SERVICE_CONNECT_DEVICE_CONNECT</dt>
-    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd>
-    <dt>REGISTRY_WRITE_SERVICE_CONNECT_DEVICE_CONNECT</dt>
-    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd>
-    <dt>REGISTRY_READ_REGISTRY_WRITE_SERVICE_CONNECT_DEVICE_CONNECT</dt>
-    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd>
-</dl>
+<dl class="tabular"><dt>REGISTRY_READ</dt>
+    <dd>RegistryRead</dd><dt>REGISTRY_WRITE</dt>
+    <dd>RegistryWrite</dd><dt>SERVICE_CONNECT</dt>
+    <dd>ServiceConnect</dd><dt>DEVICE_CONNECT</dt>
+    <dd>DeviceConnect</dd><dt>REGISTRY_READ_REGISTRY_WRITE</dt>
+    <dd>RegistryRead, RegistryWrite</dd><dt>REGISTRY_READ_SERVICE_CONNECT</dt>
+    <dd>RegistryRead, ServiceConnect</dd><dt>REGISTRY_READ_DEVICE_CONNECT</dt>
+    <dd>RegistryRead, DeviceConnect</dd><dt>REGISTRY_WRITE_SERVICE_CONNECT</dt>
+    <dd>RegistryWrite, ServiceConnect</dd><dt>REGISTRY_WRITE_DEVICE_CONNECT</dt>
+    <dd>RegistryWrite, DeviceConnect</dd><dt>SERVICE_CONNECT_DEVICE_CONNECT</dt>
+    <dd>ServiceConnect, DeviceConnect</dd><dt>REGISTRY_READ_REGISTRY_WRITE_SERVICE_CONNECT</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect</dd><dt>REGISTRY_READ_REGISTRY_WRITE_DEVICE_CONNECT</dt>
+    <dd>RegistryRead, RegistryWrite, DeviceConnect</dd><dt>REGISTRY_READ_SERVICE_CONNECT_DEVICE_CONNECT</dt>
+    <dd>RegistryRead, ServiceConnect, DeviceConnect</dd><dt>REGISTRY_WRITE_SERVICE_CONNECT_DEVICE_CONNECT</dt>
+    <dd>RegistryWrite, ServiceConnect, DeviceConnect</dd><dt>REGISTRY_READ_REGISTRY_WRITE_SERVICE_CONNECT_DEVICE_CONNECT</dt>
+    <dd>RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authenticationtype">Authentication<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Key<wbr>Based</dt>
-    <dd>keyBased</dd>
-    <dt>Identity<wbr>Based</dt>
-    <dd>identityBased</dd>
-</dl>
+<dl class="tabular"><dt>Key<wbr>Based</dt>
+    <dd>keyBased</dd><dt>Identity<wbr>Based</dt>
+    <dd>identityBased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Authentication<wbr>Type<wbr>Key<wbr>Based</dt>
-    <dd>keyBased</dd>
-    <dt>Authentication<wbr>Type<wbr>Identity<wbr>Based</dt>
-    <dd>identityBased</dd>
-</dl>
+<dl class="tabular"><dt>Authentication<wbr>Type<wbr>Key<wbr>Based</dt>
+    <dd>keyBased</dd><dt>Authentication<wbr>Type<wbr>Identity<wbr>Based</dt>
+    <dd>identityBased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Key<wbr>Based</dt>
-    <dd>keyBased</dd>
-    <dt>Identity<wbr>Based</dt>
-    <dd>identityBased</dd>
-</dl>
+<dl class="tabular"><dt>Key<wbr>Based</dt>
+    <dd>keyBased</dd><dt>Identity<wbr>Based</dt>
+    <dd>identityBased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>KEY_BASED</dt>
-    <dd>keyBased</dd>
-    <dt>IDENTITY_BASED</dt>
-    <dd>identityBased</dd>
-</dl>
+<dl class="tabular"><dt>KEY_BASED</dt>
+    <dd>keyBased</dd><dt>IDENTITY_BASED</dt>
+    <dd>identityBased</dd></dl>
 {{% /choosable %}}
 
 <h4 id="capabilities">Capabilities</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Device<wbr>Management</dt>
-    <dd>DeviceManagement</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Device<wbr>Management</dt>
+    <dd>DeviceManagement</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Capabilities<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Capabilities<wbr>Device<wbr>Management</dt>
-    <dd>DeviceManagement</dd>
-</dl>
+<dl class="tabular"><dt>Capabilities<wbr>None</dt>
+    <dd>None</dd><dt>Capabilities<wbr>Device<wbr>Management</dt>
+    <dd>DeviceManagement</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Device<wbr>Management</dt>
-    <dd>DeviceManagement</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Device<wbr>Management</dt>
+    <dd>DeviceManagement</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>DEVICE_MANAGEMENT</dt>
-    <dd>DeviceManagement</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>DEVICE_MANAGEMENT</dt>
+    <dd>DeviceManagement</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_csharp">
 <a href="#defaultttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1151,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_csharp">
 <a href="#feedback_csharp" style="color: inherit; text-decoration: inherit;">Feedback</a>
@@ -1160,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -1169,14 +1014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_go">
 <a href="#defaultttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1184,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_go">
 <a href="#feedback_go" style="color: inherit; text-decoration: inherit;">Feedback</a>
@@ -1193,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -1202,14 +1042,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_nodejs">
 <a href="#defaultttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1217,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_nodejs">
 <a href="#feedback_nodejs" style="color: inherit; text-decoration: inherit;">feedback</a>
@@ -1226,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -1235,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_as_iso8601_python">
 <a href="#default_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
@@ -1250,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_python">
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
@@ -1259,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -1268,16 +1098,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_csharp">
 <a href="#defaultttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1285,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_csharp">
 <a href="#feedback_csharp" style="color: inherit; text-decoration: inherit;">Feedback</a>
@@ -1294,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -1303,14 +1128,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_go">
 <a href="#defaultttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1318,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_go">
 <a href="#feedback_go" style="color: inherit; text-decoration: inherit;">Feedback</a>
@@ -1327,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -1336,14 +1156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultttlasiso8601_nodejs">
 <a href="#defaultttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -1351,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_nodejs">
 <a href="#feedback_nodejs" style="color: inherit; text-decoration: inherit;">feedback</a>
@@ -1360,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -1369,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_as_iso8601_python">
 <a href="#default_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
@@ -1384,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feedback_python">
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
@@ -1393,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -1402,54 +1212,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="defaultaction">Default<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Deny</dt>
+    <dd>Deny</dd><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Default<wbr>Action<wbr>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Default<wbr>Action<wbr>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Deny</dt>
+    <dd>Deny</dd><dt>Default<wbr>Action<wbr>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Deny</dt>
+    <dd>Deny</dd><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>DENY</dt>
+    <dd>Deny</dd><dt>ALLOW</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enrichmentproperties">Enrichment<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -1457,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1466,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1475,14 +1268,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -1490,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1499,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1508,14 +1296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -1523,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1532,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1541,14 +1324,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -1556,8 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1565,8 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1574,16 +1352,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enrichmentpropertiesresponse">Enrichment<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -1591,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1600,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1609,14 +1382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -1624,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1633,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1642,14 +1410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -1657,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1666,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1675,14 +1438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -1690,8 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1699,8 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The key or name for the enrichment property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1708,16 +1466,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value for the enrichment property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventhubproperties">Event<wbr>Hub<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_csharp">
 <a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
@@ -1725,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_csharp">
 <a href="#retentiontimeindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1734,14 +1488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_go">
 <a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
@@ -1749,8 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_go">
 <a href="#retentiontimeindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1758,14 +1508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_nodejs">
 <a href="#partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
@@ -1773,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_nodejs">
 <a href="#retentiontimeindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1782,14 +1528,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partition_count_python">
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
@@ -1797,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_time_in_days_python">
 <a href="#retention_time_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>time_<wbr>in_<wbr>days</a>
@@ -1806,16 +1548,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventhubpropertiesresponse">Event<wbr>Hub<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1823,8 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionids_csharp">
 <a href="#partitionids_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
@@ -1832,8 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1841,8 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_csharp">
 <a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
@@ -1850,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_csharp">
 <a href="#retentiontimeindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1859,14 +1594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1874,8 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionids_go">
 <a href="#partitionids_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Ids</a>
@@ -1883,8 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1892,8 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_go">
 <a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
@@ -1901,8 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_go">
 <a href="#retentiontimeindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1910,14 +1638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1925,8 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionids_nodejs">
 <a href="#partitionids_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Ids</a>
@@ -1934,8 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1943,8 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitioncount_nodejs">
 <a href="#partitioncount_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Count</a>
@@ -1952,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiontimeindays_nodejs">
 <a href="#retentiontimeindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Time<wbr>In<wbr>Days</a>
@@ -1961,14 +1682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1976,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_ids_python">
 <a href="#partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
@@ -1985,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1994,8 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_count_python">
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
@@ -2003,8 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_time_in_days_python">
 <a href="#retention_time_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>time_<wbr>in_<wbr>days</a>
@@ -2012,16 +1726,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -2029,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2038,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2047,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -2056,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2065,14 +1772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -2080,8 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2089,8 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2098,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -2107,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2116,14 +1816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -2131,8 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2140,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2149,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2158,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2167,14 +1860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -2182,8 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2191,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2200,8 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2209,8 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2218,16 +1904,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -2235,8 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2244,8 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2253,8 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -2262,8 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2271,14 +1950,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -2286,8 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2295,8 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2304,8 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -2313,8 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2322,14 +1994,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -2337,8 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2346,8 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2355,8 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2364,8 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2373,14 +2038,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -2388,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2397,8 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether the fallback route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2406,8 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source to which the routing rule is to be applied to. For example, DeviceMessages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2415,8 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2424,16 +2082,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="feedbackproperties">Feedback<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_csharp">
 <a href="#lockdurationasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2441,8 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -2450,8 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_csharp">
 <a href="#ttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -2459,14 +2112,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_go">
 <a href="#lockdurationasiso8601_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2474,8 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -2483,8 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_go">
 <a href="#ttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -2492,14 +2140,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_nodejs">
 <a href="#lockdurationasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2507,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -2516,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_nodejs">
 <a href="#ttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>As<wbr>Iso8601</a>
@@ -2525,14 +2168,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lock_duration_as_iso8601_python">
 <a href="#lock_duration_as_iso8601_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration_<wbr>as_<wbr>iso8601</a>
@@ -2540,8 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -2549,8 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_as_iso8601_python">
 <a href="#ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>as_<wbr>iso8601</a>
@@ -2558,16 +2196,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_csharp">
 <a href="#lockdurationasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2575,8 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -2584,8 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_csharp">
 <a href="#ttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -2593,14 +2226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_go">
 <a href="#lockdurationasiso8601_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2608,8 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -2617,8 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_go">
 <a href="#ttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -2626,14 +2254,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_nodejs">
 <a href="#lockdurationasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -2641,8 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -2650,8 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_nodejs">
 <a href="#ttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>As<wbr>Iso8601</a>
@@ -2659,14 +2282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lock_duration_as_iso8601_python">
 <a href="#lock_duration_as_iso8601_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration_<wbr>as_<wbr>iso8601</a>
@@ -2674,8 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -2683,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_as_iso8601_python">
 <a href="#ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>as_<wbr>iso8601</a>
@@ -2692,16 +2310,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothublocationdescriptionresponse">Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2709,8 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -2718,14 +2332,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2733,8 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -2742,14 +2352,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2757,8 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2766,14 +2372,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2781,8 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2790,16 +2392,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubproperties">Iot<wbr>Hub<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_csharp">
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -2807,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_csharp">
 <a href="#cloudtodevice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
@@ -2816,8 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodeviceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
 <a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2825,8 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_csharp">
 <a href="#enablefileuploadnotifications_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -2834,8 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_csharp">
 <a href="#eventhubendpoints_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
@@ -2843,8 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -2852,8 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#capabilities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Capabilities</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_csharp">
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -2861,8 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_csharp">
 <a href="#messagingendpoints_csharp" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
@@ -2870,8 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -2879,8 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_csharp">
 <a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
@@ -2888,8 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -2897,8 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -2906,8 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_csharp">
 <a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -2915,8 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_csharp">
 <a href="#storageendpoints_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
@@ -2924,14 +2510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_go">
 <a href="#authorizationpolicies_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -2939,8 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">[]Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_go">
 <a href="#cloudtodevice_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
@@ -2948,8 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
 <a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2957,8 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_go">
 <a href="#enablefileuploadnotifications_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -2966,8 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_go">
 <a href="#eventhubendpoints_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
@@ -2975,8 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Event<wbr>Hub<wbr>Properties</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -2984,8 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#capabilities">Capabilities</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_go">
 <a href="#ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -2993,8 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterrule">[]Ip<wbr>Filter<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_go">
 <a href="#messagingendpoints_go" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
@@ -3002,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Messaging<wbr>Endpoint<wbr>Properties</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -3011,8 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_go">
 <a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
@@ -3020,8 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3029,8 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">[]Private<wbr>Endpoint<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3038,8 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_go">
 <a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -3047,8 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_go">
 <a href="#storageendpoints_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
@@ -3056,14 +2626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Storage<wbr>Endpoint<wbr>Properties</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_nodejs">
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
@@ -3071,8 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_nodejs">
 <a href="#cloudtodevice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>To<wbr>Device</a>
@@ -3080,8 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -3089,8 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_nodejs">
 <a href="#enablefileuploadnotifications_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -3098,8 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_nodejs">
 <a href="#eventhubendpoints_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Endpoints</a>
@@ -3107,8 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties}</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -3116,8 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#capabilities">Capabilities</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_nodejs">
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
@@ -3125,8 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterrule">Ip<wbr>Filter<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_nodejs">
 <a href="#messagingendpoints_nodejs" style="color: inherit; text-decoration: inherit;">messaging<wbr>Endpoints</a>
@@ -3134,8 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties}</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -3143,8 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_nodejs">
 <a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
@@ -3152,8 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -3161,8 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -3170,8 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_nodejs">
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -3179,8 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_nodejs">
 <a href="#storageendpoints_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoints</a>
@@ -3188,14 +2742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties}</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_policies_python">
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
@@ -3203,8 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_to_device_python">
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
@@ -3212,8 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -3221,8 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_file_upload_notifications_python">
 <a href="#enable_file_upload_notifications_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>file_<wbr>upload_<wbr>notifications</a>
@@ -3230,8 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_endpoints_python">
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
@@ -3239,8 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -3248,8 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#capabilities">Capabilities</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filter_rules_python">
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
@@ -3257,8 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterrule">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messaging_endpoints_python">
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
@@ -3266,8 +2810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -3275,8 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_rule_sets_python">
 <a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
@@ -3284,8 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -3293,8 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -3302,8 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_python">
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -3311,8 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoints_python">
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
@@ -3320,16 +2858,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubpropertiesresponse">Iot<wbr>Hub<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3337,8 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3346,8 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothublocationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3355,8 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3364,8 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hub state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_csharp">
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -3373,8 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_csharp">
 <a href="#cloudtodevice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
@@ -3382,8 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
 <a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -3391,8 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_csharp">
 <a href="#enablefileuploadnotifications_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -3400,8 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_csharp">
 <a href="#eventhubendpoints_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
@@ -3409,8 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -3418,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_csharp">
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -3427,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_csharp">
 <a href="#messagingendpoints_csharp" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
@@ -3436,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -3445,8 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_csharp">
 <a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
@@ -3454,8 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3463,8 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3472,8 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_csharp">
 <a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -3481,8 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_csharp">
 <a href="#storageendpoints_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
@@ -3490,14 +3008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3505,8 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3514,8 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothublocationdescriptionresponse">[]Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3523,8 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3532,8 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hub state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_go">
 <a href="#authorizationpolicies_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -3541,8 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">[]Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_go">
 <a href="#cloudtodevice_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
@@ -3550,8 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
 <a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -3559,8 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_go">
 <a href="#enablefileuploadnotifications_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -3568,8 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_go">
 <a href="#eventhubendpoints_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
@@ -3577,8 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Event<wbr>Hub<wbr>Properties<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -3586,8 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_go">
 <a href="#ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -3595,8 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">[]Ip<wbr>Filter<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_go">
 <a href="#messagingendpoints_go" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
@@ -3604,8 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Messaging<wbr>Endpoint<wbr>Properties<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -3613,8 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_go">
 <a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
@@ -3622,8 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3631,8 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3640,8 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_go">
 <a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -3649,8 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_go">
 <a href="#storageendpoints_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
@@ -3658,14 +3156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Storage<wbr>Endpoint<wbr>Properties<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -3673,8 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3682,8 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothublocationdescriptionresponse">Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3691,8 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3700,8 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hub state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_nodejs">
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
@@ -3709,8 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtodevice_nodejs">
 <a href="#cloudtodevice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>To<wbr>Device</a>
@@ -3718,8 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -3727,8 +3216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefileuploadnotifications_nodejs">
 <a href="#enablefileuploadnotifications_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>File<wbr>Upload<wbr>Notifications</a>
@@ -3736,8 +3224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpoints_nodejs">
 <a href="#eventhubendpoints_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Endpoints</a>
@@ -3745,8 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -3754,8 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_nodejs">
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
@@ -3763,8 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagingendpoints_nodejs">
 <a href="#messagingendpoints_nodejs" style="color: inherit; text-decoration: inherit;">messaging<wbr>Endpoints</a>
@@ -3772,8 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -3781,8 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrulesets_nodejs">
 <a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
@@ -3790,8 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -3799,8 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -3808,8 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_nodejs">
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -3817,8 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoints_nodejs">
 <a href="#storageendpoints_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoints</a>
@@ -3826,14 +3304,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -3841,8 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3850,8 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothublocationdescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3859,8 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3868,8 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hub state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_policies_python">
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
@@ -3877,8 +3348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_to_device_python">
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
@@ -3886,8 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -3895,8 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IoT hub comments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_file_upload_notifications_python">
 <a href="#enable_file_upload_notifications_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>file_<wbr>upload_<wbr>notifications</a>
@@ -3904,8 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If True, file upload notifications are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_endpoints_python">
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
@@ -3913,8 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -3922,8 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capabilities and features enabled for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filter_rules_python">
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
@@ -3931,8 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messaging_endpoints_python">
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
@@ -3940,8 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -3949,8 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_rule_sets_python">
 <a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
@@ -3958,8 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -3967,8 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -3976,8 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_python">
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -3985,8 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoints_python">
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
@@ -3994,94 +3452,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubsku">Iot<wbr>Hub<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>F1</dt>
-    <dd>F1</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-    <dt>S2</dt>
-    <dd>S2</dd>
-    <dt>S3</dt>
-    <dd>S3</dd>
-    <dt>B1</dt>
-    <dd>B1</dd>
-    <dt>B2</dt>
-    <dd>B2</dd>
-    <dt>B3</dt>
-    <dd>B3</dd>
-</dl>
+<dl class="tabular"><dt>F1</dt>
+    <dd>F1</dd><dt>S1</dt>
+    <dd>S1</dd><dt>S2</dt>
+    <dd>S2</dd><dt>S3</dt>
+    <dd>S3</dd><dt>B1</dt>
+    <dd>B1</dd><dt>B2</dt>
+    <dd>B2</dd><dt>B3</dt>
+    <dd>B3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>F1</dt>
-    <dd>F1</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>S1</dt>
-    <dd>S1</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>S2</dt>
-    <dd>S2</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>S3</dt>
-    <dd>S3</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>B1</dt>
-    <dd>B1</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>B2</dt>
-    <dd>B2</dd>
-    <dt>Iot<wbr>Hub<wbr>Sku<wbr>B3</dt>
-    <dd>B3</dd>
-</dl>
+<dl class="tabular"><dt>Iot<wbr>Hub<wbr>Sku<wbr>F1</dt>
+    <dd>F1</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>S1</dt>
+    <dd>S1</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>S2</dt>
+    <dd>S2</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>S3</dt>
+    <dd>S3</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>B1</dt>
+    <dd>B1</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>B2</dt>
+    <dd>B2</dd><dt>Iot<wbr>Hub<wbr>Sku<wbr>B3</dt>
+    <dd>B3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>F1</dt>
-    <dd>F1</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-    <dt>S2</dt>
-    <dd>S2</dd>
-    <dt>S3</dt>
-    <dd>S3</dd>
-    <dt>B1</dt>
-    <dd>B1</dd>
-    <dt>B2</dt>
-    <dd>B2</dd>
-    <dt>B3</dt>
-    <dd>B3</dd>
-</dl>
+<dl class="tabular"><dt>F1</dt>
+    <dd>F1</dd><dt>S1</dt>
+    <dd>S1</dd><dt>S2</dt>
+    <dd>S2</dd><dt>S3</dt>
+    <dd>S3</dd><dt>B1</dt>
+    <dd>B1</dd><dt>B2</dt>
+    <dd>B2</dd><dt>B3</dt>
+    <dd>B3</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>F1</dt>
-    <dd>F1</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-    <dt>S2</dt>
-    <dd>S2</dd>
-    <dt>S3</dt>
-    <dd>S3</dd>
-    <dt>B1</dt>
-    <dd>B1</dd>
-    <dt>B2</dt>
-    <dd>B2</dd>
-    <dt>B3</dt>
-    <dd>B3</dd>
-</dl>
+<dl class="tabular"><dt>F1</dt>
+    <dd>F1</dd><dt>S1</dt>
+    <dd>S1</dd><dt>S2</dt>
+    <dd>S2</dd><dt>S3</dt>
+    <dd>S3</dd><dt>B1</dt>
+    <dd>B1</dd><dt>B2</dt>
+    <dd>B2</dd><dt>B3</dt>
+    <dd>B3</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4089,8 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#iothubsku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Iot<wbr>Hub<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4098,14 +3520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4113,8 +3532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#iothubsku">Iot<wbr>Hub<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4122,14 +3540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4137,8 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#iothubsku">Iot<wbr>Hub<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4146,14 +3560,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4161,8 +3572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#iothubsku">Iot<wbr>Hub<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4170,16 +3580,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubskuinforesponse">Iot<wbr>Hub<wbr>Sku<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4187,8 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -4196,8 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4205,14 +3610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4220,8 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -4229,8 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4238,14 +3638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4253,8 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4262,8 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4271,14 +3666,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4286,8 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4295,8 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The billing tier for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4304,54 +3694,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipfilteractiontype">Ip<wbr>Filter<wbr>Action<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Accept</dt>
-    <dd>Accept</dd>
-    <dt>Reject</dt>
-    <dd>Reject</dd>
-</dl>
+<dl class="tabular"><dt>Accept</dt>
+    <dd>Accept</dd><dt>Reject</dt>
+    <dd>Reject</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Ip<wbr>Filter<wbr>Action<wbr>Type<wbr>Accept</dt>
-    <dd>Accept</dd>
-    <dt>Ip<wbr>Filter<wbr>Action<wbr>Type<wbr>Reject</dt>
-    <dd>Reject</dd>
-</dl>
+<dl class="tabular"><dt>Ip<wbr>Filter<wbr>Action<wbr>Type<wbr>Accept</dt>
+    <dd>Accept</dd><dt>Ip<wbr>Filter<wbr>Action<wbr>Type<wbr>Reject</dt>
+    <dd>Reject</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Accept</dt>
-    <dd>Accept</dd>
-    <dt>Reject</dt>
-    <dd>Reject</dd>
-</dl>
+<dl class="tabular"><dt>Accept</dt>
+    <dd>Accept</dd><dt>Reject</dt>
+    <dd>Reject</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACCEPT</dt>
-    <dd>Accept</dd>
-    <dt>REJECT</dt>
-    <dd>Reject</dd>
-</dl>
+<dl class="tabular"><dt>ACCEPT</dt>
+    <dd>Accept</dd><dt>REJECT</dt>
+    <dd>Reject</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipfilterrule">Ip<wbr>Filter<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4359,8 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilteractiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Ip<wbr>Filter<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4368,8 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4377,14 +3750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4392,8 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilteractiontype">Ip<wbr>Filter<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4401,8 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4410,14 +3778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -4425,8 +3790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilteractiontype">Ip<wbr>Filter<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
@@ -4434,8 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -4443,14 +3806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -4458,8 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilteractiontype">Ip<wbr>Filter<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
@@ -4467,8 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -4476,16 +3834,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4493,8 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4502,8 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4511,14 +3864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4526,8 +3876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4535,8 +3884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4544,14 +3892,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -4559,8 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
@@ -4568,8 +3912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -4577,14 +3920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -4592,8 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
@@ -4601,8 +3940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -4610,16 +3948,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="messagingendpointproperties">Messaging<wbr>Endpoint<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_csharp">
 <a href="#lockdurationasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4627,8 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -4636,8 +3970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_csharp">
 <a href="#ttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -4645,14 +3978,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_go">
 <a href="#lockdurationasiso8601_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4660,8 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -4669,8 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_go">
 <a href="#ttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -4678,14 +4006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_nodejs">
 <a href="#lockdurationasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4693,8 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -4702,8 +4026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_nodejs">
 <a href="#ttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>As<wbr>Iso8601</a>
@@ -4711,14 +4034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lock_duration_as_iso8601_python">
 <a href="#lock_duration_as_iso8601_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration_<wbr>as_<wbr>iso8601</a>
@@ -4726,8 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -4735,8 +4054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_as_iso8601_python">
 <a href="#ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>as_<wbr>iso8601</a>
@@ -4744,16 +4062,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="messagingendpointpropertiesresponse">Messaging<wbr>Endpoint<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_csharp">
 <a href="#lockdurationasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4761,8 +4076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -4770,8 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_csharp">
 <a href="#ttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -4779,14 +4092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_go">
 <a href="#lockdurationasiso8601_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4794,8 +4104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -4803,8 +4112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_go">
 <a href="#ttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>As<wbr>Iso8601</a>
@@ -4812,14 +4120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lockdurationasiso8601_nodejs">
 <a href="#lockdurationasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration<wbr>As<wbr>Iso8601</a>
@@ -4827,8 +4132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -4836,8 +4140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlasiso8601_nodejs">
 <a href="#ttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>As<wbr>Iso8601</a>
@@ -4845,14 +4148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lock_duration_as_iso8601_python">
 <a href="#lock_duration_as_iso8601_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration_<wbr>as_<wbr>iso8601</a>
@@ -4860,8 +4160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -4869,8 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_as_iso8601_python">
 <a href="#ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>as_<wbr>iso8601</a>
@@ -4878,46 +4176,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkruleipaction">Network<wbr>Rule<wbr>IPAction</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Network<wbr>Rule<wbr>IPAction<wbr>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Network<wbr>Rule<wbr>IPAction<wbr>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4925,8 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4934,8 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4943,14 +4228,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -4958,8 +4240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -4967,8 +4248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -4976,14 +4256,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
@@ -4991,8 +4268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -5000,8 +4276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -5009,14 +4284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
@@ -5024,8 +4296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -5033,8 +4304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -5042,16 +4312,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -5059,8 +4326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -5068,8 +4334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -5077,14 +4342,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -5092,8 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -5101,8 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -5110,14 +4370,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
@@ -5125,8 +4382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -5134,8 +4390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -5143,14 +4398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
@@ -5158,8 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -5167,8 +4418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -5176,16 +4426,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_csharp">
 <a href="#applytobuiltineventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5193,8 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5202,8 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5211,14 +4456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_go">
 <a href="#applytobuiltineventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5226,8 +4468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5235,8 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetiprule">[]Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5244,14 +4484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_nodejs">
 <a href="#applytobuiltineventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5259,8 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -5268,8 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -5277,14 +4512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apply_to_built_in_event_hub_endpoint_python">
 <a href="#apply_to_built_in_event_hub_endpoint_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>to_<wbr>built_<wbr>in_<wbr>event_<wbr>hub_<wbr>endpoint</a>
@@ -5292,8 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -5301,8 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetiprule">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -5310,16 +4540,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_csharp">
 <a href="#applytobuiltineventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5327,8 +4554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5336,8 +4562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5345,14 +4570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_go">
 <a href="#applytobuiltineventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5360,8 +4582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5369,8 +4590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetipruleresponse">[]Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5378,14 +4598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applytobuiltineventhubendpoint_nodejs">
 <a href="#applytobuiltineventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
@@ -5393,8 +4610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -5402,8 +4618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -5411,14 +4626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apply_to_built_in_event_hub_endpoint_python">
 <a href="#apply_to_built_in_event_hub_endpoint_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>to_<wbr>built_<wbr>in_<wbr>event_<wbr>hub_<wbr>endpoint</a>
@@ -5426,8 +4638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -5435,8 +4646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetipruleresponse">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -5444,16 +4654,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnection">Private<wbr>Endpoint<wbr>Connection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5461,14 +4668,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5476,14 +4680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5491,14 +4692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5506,16 +4704,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5523,14 +4718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5538,14 +4730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5553,14 +4742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -5568,16 +4754,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5585,8 +4768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -5594,14 +4776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5609,8 +4788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -5618,14 +4796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -5633,8 +4808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -5642,14 +4816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -5657,8 +4828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -5666,16 +4836,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5683,8 +4850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5692,8 +4858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5701,8 +4866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5710,14 +4874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5725,8 +4886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5734,8 +4894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5743,8 +4902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5752,14 +4910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5767,8 +4922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5776,8 +4930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5785,8 +4938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5794,14 +4946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5809,8 +4958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5818,8 +4966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5827,8 +4974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5836,16 +4982,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5853,14 +4996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5868,14 +5008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5883,14 +5020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5898,16 +5032,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -5915,8 +5046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -5924,8 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -5933,14 +5062,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -5948,8 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -5957,8 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -5966,14 +5090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -5981,8 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -5990,8 +5110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privatelinkserviceconnectionstatus">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -5999,14 +5118,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -6014,8 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6023,8 +5138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#privatelinkserviceconnectionstatus">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -6032,16 +5146,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -6049,8 +5160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6058,8 +5168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -6067,14 +5176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -6082,8 +5188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6091,8 +5196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -6100,14 +5204,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -6115,8 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6124,8 +5224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -6133,14 +5232,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -6148,8 +5244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6157,8 +5252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -6166,108 +5260,73 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstatus">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Approved</dt>
+    <dd>Approved</dd><dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Rejected</dt>
+    <dd>Rejected</dd><dt>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status<wbr>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PENDING</dt>
-    <dd>Pending</dd>
-    <dt>APPROVED</dt>
-    <dd>Approved</dd>
-    <dt>REJECTED</dt>
-    <dd>Rejected</dd>
-    <dt>DISCONNECTED</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>Pending</dd><dt>APPROVED</dt>
+    <dd>Approved</dd><dt>REJECTED</dt>
+    <dd>Rejected</dd><dt>DISCONNECTED</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routeproperties">Route<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -6275,8 +5334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6284,8 +5342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6293,8 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6302,8 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -6311,14 +5366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -6326,8 +5378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6335,8 +5386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6344,8 +5394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6353,8 +5402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -6362,14 +5410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -6377,8 +5422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -6386,8 +5430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6395,8 +5438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6404,8 +5446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -6413,14 +5454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -6428,8 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -6437,8 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6446,8 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6455,8 +5490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#routingsource">Routing<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -6464,16 +5498,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routepropertiesresponse">Route<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_csharp">
 <a href="#endpointnames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -6481,8 +5512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6490,8 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6499,8 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6508,8 +5536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -6517,14 +5544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_go">
 <a href="#endpointnames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Names</a>
@@ -6532,8 +5556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6541,8 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6550,8 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -6559,8 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -6568,14 +5588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointnames_nodejs">
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
@@ -6583,8 +5600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -6592,8 +5608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6601,8 +5616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6610,8 +5624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -6619,14 +5632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_names_python">
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
@@ -6634,8 +5644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -6643,8 +5652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Used to specify whether a route is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6652,8 +5660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -6661,8 +5668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source that the routing rule is to be applied to, such as DeviceMessages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -6670,16 +5676,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingendpoints">Routing<wbr>Endpoints</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_csharp">
 <a href="#eventhubs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
@@ -6687,8 +5690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_csharp">
 <a href="#servicebusqueues_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
@@ -6696,8 +5698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_csharp">
 <a href="#servicebustopics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
@@ -6705,8 +5706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_csharp">
 <a href="#storagecontainers_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
@@ -6714,14 +5714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_go">
 <a href="#eventhubs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
@@ -6729,8 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubproperties">[]Routing<wbr>Event<wbr>Hub<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_go">
 <a href="#servicebusqueues_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
@@ -6738,8 +5734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointproperties">[]Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_go">
 <a href="#servicebustopics_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
@@ -6747,8 +5742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointproperties">[]Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_go">
 <a href="#storagecontainers_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
@@ -6756,14 +5750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerproperties">[]Routing<wbr>Storage<wbr>Container<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_nodejs">
 <a href="#eventhubs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hubs</a>
@@ -6771,8 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubproperties">Routing<wbr>Event<wbr>Hub<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_nodejs">
 <a href="#servicebusqueues_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queues</a>
@@ -6780,8 +5770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_nodejs">
 <a href="#servicebustopics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topics</a>
@@ -6789,8 +5778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_nodejs">
 <a href="#storagecontainers_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Containers</a>
@@ -6798,14 +5786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerproperties">Routing<wbr>Storage<wbr>Container<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_hubs_python">
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
@@ -6813,8 +5798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubproperties">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_queues_python">
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
@@ -6822,8 +5806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_topics_python">
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
@@ -6831,8 +5814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_containers_python">
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
@@ -6840,16 +5822,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerproperties">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_csharp">
 <a href="#eventhubs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
@@ -6857,8 +5836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_csharp">
 <a href="#servicebusqueues_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
@@ -6866,8 +5844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_csharp">
 <a href="#servicebustopics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
@@ -6875,8 +5852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_csharp">
 <a href="#storagecontainers_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
@@ -6884,14 +5860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_go">
 <a href="#eventhubs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
@@ -6899,8 +5872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubpropertiesresponse">[]Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_go">
 <a href="#servicebusqueues_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
@@ -6908,8 +5880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">[]Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_go">
 <a href="#servicebustopics_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
@@ -6917,8 +5888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">[]Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_go">
 <a href="#storagecontainers_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
@@ -6926,14 +5896,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">[]Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubs_nodejs">
 <a href="#eventhubs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hubs</a>
@@ -6941,8 +5908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubpropertiesresponse">Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueues_nodejs">
 <a href="#servicebusqueues_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queues</a>
@@ -6950,8 +5916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopics_nodejs">
 <a href="#servicebustopics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topics</a>
@@ -6959,8 +5924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecontainers_nodejs">
 <a href="#storagecontainers_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Containers</a>
@@ -6968,14 +5932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_hubs_python">
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
@@ -6983,8 +5944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingeventhubpropertiesresponse">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_queues_python">
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
@@ -6992,8 +5952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_topics_python">
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
@@ -7001,8 +5960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_containers_python">
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
@@ -7010,16 +5968,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingeventhubproperties">Routing<wbr>Event<wbr>Hub<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7027,8 +5982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -7036,8 +5990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -7045,8 +5998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -7054,8 +6006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -7063,8 +6014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7072,8 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -7081,8 +6030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -7090,14 +6038,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7105,8 +6050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -7114,8 +6058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -7123,8 +6066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -7132,8 +6074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -7141,8 +6082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7150,8 +6090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -7159,8 +6098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -7168,14 +6106,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7183,8 +6118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -7192,8 +6126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -7201,8 +6134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -7210,8 +6142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -7219,8 +6150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7228,8 +6158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -7237,8 +6166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -7246,14 +6174,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7261,8 +6186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -7270,8 +6194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -7279,8 +6202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -7288,8 +6210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -7297,8 +6218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7306,8 +6226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -7315,8 +6234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -7324,16 +6242,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingeventhubpropertiesresponse">Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7341,8 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -7350,8 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -7359,8 +6272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -7368,8 +6280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -7377,8 +6288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7386,8 +6296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -7395,8 +6304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -7404,14 +6312,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7419,8 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -7428,8 +6332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -7437,8 +6340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -7446,8 +6348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -7455,8 +6356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7464,8 +6364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -7473,8 +6372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -7482,14 +6380,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7497,8 +6392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -7506,8 +6400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -7515,8 +6408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -7524,8 +6416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -7533,8 +6424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7542,8 +6432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -7551,8 +6440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -7560,14 +6448,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7575,8 +6460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -7584,8 +6468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -7593,8 +6476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the event hub endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -7602,8 +6484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the event hub endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -7611,8 +6492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Event hub name on the event hub namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7620,8 +6500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the event hub endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -7629,8 +6508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the event hub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -7638,16 +6516,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the event hub endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingproperties">Routing<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -7655,8 +6530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpoints">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_csharp">
 <a href="#enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
@@ -7664,8 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_csharp">
 <a href="#fallbackroute_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
@@ -7673,8 +6546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackrouteproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -7682,14 +6554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routeproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -7697,8 +6566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_go">
 <a href="#enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
@@ -7706,8 +6574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentproperties">[]Enrichment<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_go">
 <a href="#fallbackroute_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
@@ -7715,8 +6582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -7724,14 +6590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routeproperties">[]Route<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -7739,8 +6602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_nodejs">
 <a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
@@ -7748,8 +6610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentproperties">Enrichment<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_nodejs">
 <a href="#fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
@@ -7757,8 +6618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -7766,14 +6626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routeproperties">Route<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -7781,8 +6638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_python">
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
@@ -7790,8 +6646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentproperties">Sequence[Enrichment<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_route_python">
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
@@ -7799,8 +6654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -7808,16 +6662,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routeproperties">Sequence[Route<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingpropertiesresponse">Routing<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -7825,8 +6676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_csharp">
 <a href="#enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
@@ -7834,8 +6684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_csharp">
 <a href="#fallbackroute_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
@@ -7843,8 +6692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackroutepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -7852,14 +6700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -7867,8 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_go">
 <a href="#enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
@@ -7876,8 +6720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentpropertiesresponse">[]Enrichment<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_go">
 <a href="#fallbackroute_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
@@ -7885,8 +6728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -7894,14 +6736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routepropertiesresponse">[]Route<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -7909,8 +6748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_nodejs">
 <a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
@@ -7918,8 +6756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentpropertiesresponse">Enrichment<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackroute_nodejs">
 <a href="#fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
@@ -7927,8 +6764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -7936,14 +6772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routepropertiesresponse">Route<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -7951,8 +6784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrichments_python">
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
@@ -7960,8 +6792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enrichmentpropertiesresponse">Sequence[Enrichment<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_route_python">
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
@@ -7969,8 +6800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -7978,16 +6808,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routepropertiesresponse">Sequence[Route<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingservicebusqueueendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7995,8 +6822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8004,8 +6830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8013,8 +6838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8022,8 +6846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8031,8 +6854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8040,8 +6862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8049,8 +6870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8058,14 +6878,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8073,8 +6890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8082,8 +6898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8091,8 +6906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8100,8 +6914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8109,8 +6922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8118,8 +6930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8127,8 +6938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8136,14 +6946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8151,8 +6958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -8160,8 +6966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -8169,8 +6974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -8178,8 +6982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -8187,8 +6990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8196,8 +6998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -8205,8 +7006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -8214,14 +7014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8229,8 +7026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -8238,8 +7034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -8247,8 +7042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -8256,8 +7050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -8265,8 +7058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8274,8 +7066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -8283,8 +7074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -8292,16 +7082,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingservicebusqueueendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8309,8 +7096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8318,8 +7104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8327,8 +7112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8336,8 +7120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8345,8 +7128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8354,8 +7136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8363,8 +7144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8372,14 +7152,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8387,8 +7164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8396,8 +7172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8405,8 +7180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8414,8 +7188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8423,8 +7196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8432,8 +7204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8441,8 +7212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8450,14 +7220,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8465,8 +7232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -8474,8 +7240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -8483,8 +7248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -8492,8 +7256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -8501,8 +7264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8510,8 +7272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -8519,8 +7280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -8528,14 +7288,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8543,8 +7300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -8552,8 +7308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -8561,8 +7316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -8570,8 +7324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus queue endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -8579,8 +7332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8588,8 +7340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus queue endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -8597,8 +7348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus queue endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -8606,16 +7356,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus queue endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingservicebustopicendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8623,8 +7370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8632,8 +7378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8641,8 +7386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8650,8 +7394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8659,8 +7402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8668,8 +7410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8677,8 +7418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8686,14 +7426,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8701,8 +7438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8710,8 +7446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8719,8 +7454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8728,8 +7462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8737,8 +7470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8746,8 +7478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8755,8 +7486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -8764,14 +7494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8779,8 +7506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -8788,8 +7514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -8797,8 +7522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -8806,8 +7530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -8815,8 +7538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8824,8 +7546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -8833,8 +7554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -8842,14 +7562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8857,8 +7574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -8866,8 +7582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -8875,8 +7590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -8884,8 +7598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -8893,8 +7606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -8902,8 +7614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -8911,8 +7622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -8920,16 +7630,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingservicebustopicendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8937,8 +7644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -8946,8 +7652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -8955,8 +7660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -8964,8 +7668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -8973,8 +7676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -8982,8 +7684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -8991,8 +7692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9000,14 +7700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9015,8 +7712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -9024,8 +7720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -9033,8 +7728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -9042,8 +7736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -9051,8 +7744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -9060,8 +7752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -9069,8 +7760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9078,14 +7768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9093,8 +7780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -9102,8 +7788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -9111,8 +7796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -9120,8 +7804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -9129,8 +7812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -9138,8 +7820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -9147,8 +7828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -9156,14 +7836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9171,8 +7848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -9180,8 +7856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -9189,8 +7864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -9198,8 +7872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the service bus topic endpoint. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -9207,8 +7880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue name on the service bus topic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -9216,8 +7888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the service bus topic endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -9225,8 +7896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the service bus topic endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -9234,78 +7904,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the service bus topic endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingsource">Routing<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Invalid</dt>
-    <dd>Invalid</dd>
-    <dt>Device<wbr>Messages</dt>
-    <dd>DeviceMessages</dd>
-    <dt>Twin<wbr>Change<wbr>Events</dt>
-    <dd>TwinChangeEvents</dd>
-    <dt>Device<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceLifecycleEvents</dd>
-    <dt>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceJobLifecycleEvents</dd>
-</dl>
+<dl class="tabular"><dt>Invalid</dt>
+    <dd>Invalid</dd><dt>Device<wbr>Messages</dt>
+    <dd>DeviceMessages</dd><dt>Twin<wbr>Change<wbr>Events</dt>
+    <dd>TwinChangeEvents</dd><dt>Device<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceLifecycleEvents</dd><dt>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceJobLifecycleEvents</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Routing<wbr>Source<wbr>Invalid</dt>
-    <dd>Invalid</dd>
-    <dt>Routing<wbr>Source<wbr>Device<wbr>Messages</dt>
-    <dd>DeviceMessages</dd>
-    <dt>Routing<wbr>Source<wbr>Twin<wbr>Change<wbr>Events</dt>
-    <dd>TwinChangeEvents</dd>
-    <dt>Routing<wbr>Source<wbr>Device<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceLifecycleEvents</dd>
-    <dt>Routing<wbr>Source<wbr>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceJobLifecycleEvents</dd>
-</dl>
+<dl class="tabular"><dt>Routing<wbr>Source<wbr>Invalid</dt>
+    <dd>Invalid</dd><dt>Routing<wbr>Source<wbr>Device<wbr>Messages</dt>
+    <dd>DeviceMessages</dd><dt>Routing<wbr>Source<wbr>Twin<wbr>Change<wbr>Events</dt>
+    <dd>TwinChangeEvents</dd><dt>Routing<wbr>Source<wbr>Device<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceLifecycleEvents</dd><dt>Routing<wbr>Source<wbr>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceJobLifecycleEvents</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Invalid</dt>
-    <dd>Invalid</dd>
-    <dt>Device<wbr>Messages</dt>
-    <dd>DeviceMessages</dd>
-    <dt>Twin<wbr>Change<wbr>Events</dt>
-    <dd>TwinChangeEvents</dd>
-    <dt>Device<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceLifecycleEvents</dd>
-    <dt>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
-    <dd>DeviceJobLifecycleEvents</dd>
-</dl>
+<dl class="tabular"><dt>Invalid</dt>
+    <dd>Invalid</dd><dt>Device<wbr>Messages</dt>
+    <dd>DeviceMessages</dd><dt>Twin<wbr>Change<wbr>Events</dt>
+    <dd>TwinChangeEvents</dd><dt>Device<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceLifecycleEvents</dd><dt>Device<wbr>Job<wbr>Lifecycle<wbr>Events</dt>
+    <dd>DeviceJobLifecycleEvents</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>INVALID</dt>
-    <dd>Invalid</dd>
-    <dt>DEVICE_MESSAGES</dt>
-    <dd>DeviceMessages</dd>
-    <dt>TWIN_CHANGE_EVENTS</dt>
-    <dd>TwinChangeEvents</dd>
-    <dt>DEVICE_LIFECYCLE_EVENTS</dt>
-    <dd>DeviceLifecycleEvents</dd>
-    <dt>DEVICE_JOB_LIFECYCLE_EVENTS</dt>
-    <dd>DeviceJobLifecycleEvents</dd>
-</dl>
+<dl class="tabular"><dt>INVALID</dt>
+    <dd>Invalid</dd><dt>DEVICE_MESSAGES</dt>
+    <dd>DeviceMessages</dd><dt>TWIN_CHANGE_EVENTS</dt>
+    <dd>TwinChangeEvents</dd><dt>DEVICE_LIFECYCLE_EVENTS</dt>
+    <dd>DeviceLifecycleEvents</dd><dt>DEVICE_JOB_LIFECYCLE_EVENTS</dt>
+    <dd>DeviceJobLifecycleEvents</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingstoragecontainerproperties">Routing<wbr>Storage<wbr>Container<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -9313,8 +7956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9322,8 +7964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -9331,8 +7972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_csharp">
 <a href="#batchfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -9340,8 +7980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -9349,8 +7988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -9358,8 +7996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -9367,8 +8004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_csharp">
 <a href="#filenameformat_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Format</a>
@@ -9376,8 +8012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -9385,8 +8020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_csharp">
 <a href="#maxchunksizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -9394,8 +8028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -9403,8 +8036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9412,14 +8044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -9427,8 +8056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9436,8 +8064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -9445,8 +8072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_go">
 <a href="#batchfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -9454,8 +8080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -9463,8 +8088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -9472,8 +8096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -9481,8 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_go">
 <a href="#filenameformat_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Format</a>
@@ -9490,8 +8112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -9499,8 +8120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_go">
 <a href="#maxchunksizeinbytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -9508,8 +8128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -9517,8 +8136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9526,14 +8144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -9541,8 +8156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9550,8 +8164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -9559,8 +8172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_nodejs">
 <a href="#batchfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -9568,8 +8180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -9577,8 +8188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -9586,8 +8196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -9595,8 +8204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_nodejs">
 <a href="#filenameformat_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Format</a>
@@ -9604,8 +8212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -9613,8 +8220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_nodejs">
 <a href="#maxchunksizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -9622,8 +8228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -9631,8 +8236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -9640,14 +8244,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -9655,8 +8256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9664,8 +8264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -9673,8 +8272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_frequency_in_seconds_python">
 <a href="#batch_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>frequency_<wbr>in_<wbr>seconds</a>
@@ -9682,8 +8280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -9691,8 +8288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -9700,8 +8296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -9709,8 +8304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_name_format_python">
 <a href="#file_name_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>format</a>
@@ -9718,8 +8312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -9727,8 +8320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_chunk_size_in_bytes_python">
 <a href="#max_chunk_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>chunk_<wbr>size_<wbr>in_<wbr>bytes</a>
@@ -9736,8 +8328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -9745,8 +8336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -9754,16 +8344,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingstoragecontainerpropertiesresponse">Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -9771,8 +8358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9780,8 +8366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -9789,8 +8374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_csharp">
 <a href="#batchfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -9798,8 +8382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -9807,8 +8390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -9816,8 +8398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -9825,8 +8406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_csharp">
 <a href="#filenameformat_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Format</a>
@@ -9834,8 +8414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -9843,8 +8422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_csharp">
 <a href="#maxchunksizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -9852,8 +8430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -9861,8 +8438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9870,14 +8446,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -9885,8 +8458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9894,8 +8466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -9903,8 +8474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_go">
 <a href="#batchfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -9912,8 +8482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -9921,8 +8490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -9930,8 +8498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -9939,8 +8506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_go">
 <a href="#filenameformat_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Format</a>
@@ -9948,8 +8514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -9957,8 +8522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_go">
 <a href="#maxchunksizeinbytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -9966,8 +8530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -9975,8 +8538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -9984,14 +8546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -9999,8 +8558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10008,8 +8566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -10017,8 +8574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchfrequencyinseconds_nodejs">
 <a href="#batchfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -10026,8 +8582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -10035,8 +8590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -10044,8 +8598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -10053,8 +8606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenameformat_nodejs">
 <a href="#filenameformat_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Format</a>
@@ -10062,8 +8614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -10071,8 +8622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxchunksizeinbytes_nodejs">
 <a href="#maxchunksizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
@@ -10080,8 +8630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -10089,8 +8638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -10098,14 +8646,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -10113,8 +8658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10122,8 +8666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -10131,8 +8674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Method used to authenticate against the storage endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_frequency_in_seconds_python">
 <a href="#batch_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>frequency_<wbr>in_<wbr>seconds</a>
@@ -10140,8 +8682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -10149,8 +8690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -10158,8 +8698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -10167,8 +8706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the storage endpoint. It must include the protocol https://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_name_format_python">
 <a href="#file_name_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>format</a>
@@ -10176,8 +8714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -10185,8 +8722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of the storage container endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_chunk_size_in_bytes_python">
 <a href="#max_chunk_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>chunk_<wbr>size_<wbr>in_<wbr>bytes</a>
@@ -10194,8 +8730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -10203,8 +8738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -10212,16 +8746,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedaccesssignatureauthorizationrule">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -10229,8 +8760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_csharp">
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -10238,8 +8768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Access<wbr>Rights</a></span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -10247,8 +8776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -10256,14 +8784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -10271,8 +8796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_go">
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -10280,8 +8804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Access<wbr>Rights</a></span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -10289,8 +8812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -10298,14 +8820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -10313,8 +8832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_nodejs">
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -10322,8 +8840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Access<wbr>Rights</a></span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -10331,8 +8848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -10340,14 +8856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -10355,8 +8868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_python">
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -10364,8 +8876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Access<wbr>Rights</a></span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -10373,8 +8884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -10382,16 +8892,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedaccesssignatureauthorizationruleresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -10399,8 +8906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_csharp">
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -10408,8 +8914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -10417,8 +8922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -10426,14 +8930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -10441,8 +8942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_go">
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -10450,8 +8950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -10459,8 +8958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -10468,14 +8966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -10483,8 +8978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_nodejs">
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -10492,8 +8986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -10501,8 +8994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -10510,14 +9002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -10525,8 +9014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_python">
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -10534,8 +9022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -10543,8 +9030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -10552,16 +9038,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageendpointproperties">Storage<wbr>Endpoint<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10569,8 +9052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -10578,8 +9060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -10587,8 +9068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_csharp">
 <a href="#sasttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10596,14 +9076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10611,8 +9088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -10620,8 +9096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -10629,8 +9104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_go">
 <a href="#sasttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10638,14 +9112,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -10653,8 +9124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -10662,8 +9132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -10671,8 +9140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_nodejs">
 <a href="#sasttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10680,14 +9148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -10695,8 +9160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -10704,8 +9168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -10713,8 +9176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#authenticationtype">Authentication<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_ttl_as_iso8601_python">
 <a href="#sas_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
@@ -10722,16 +9184,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageendpointpropertiesresponse">Storage<wbr>Endpoint<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10739,8 +9198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -10748,8 +9206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -10757,8 +9214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_csharp">
 <a href="#sasttlasiso8601_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10766,14 +9222,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -10781,8 +9234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -10790,8 +9242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -10799,8 +9250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_go">
 <a href="#sasttlasiso8601_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10808,14 +9258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -10823,8 +9270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -10832,8 +9278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -10841,8 +9286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasttlasiso8601_nodejs">
 <a href="#sasttlasiso8601_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
@@ -10850,14 +9294,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -10865,8 +9306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -10874,8 +9314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -10883,8 +9322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies authentication type being used for connecting to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_ttl_as_iso8601_python">
 <a href="#sas_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
@@ -10892,8 +9330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

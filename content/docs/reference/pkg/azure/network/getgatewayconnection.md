@@ -14,11 +14,17 @@ Use this data source to access information about an existing Virtual Network Gat
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -78,9 +90,12 @@ example = azure.network.get_gateway_connection(name="production",
 pulumi.export("virtualNetworkGatewayConnectionId", example.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -93,9 +108,16 @@ const example = azure.network.getGatewayConnection({
 export const virtualNetworkGatewayConnectionId = example.then(example => example.id);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getGatewayConnection {#using}
@@ -133,9 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -144,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -154,14 +173,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway Connection is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -170,8 +186,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -180,14 +195,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway Connection is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -196,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -206,14 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway Connection is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -222,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -232,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway Connection is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -246,9 +252,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_csharp">
 <a href="#authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -259,8 +263,7 @@ The following output properties are available:
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is present only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_csharp">
 <a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -268,8 +271,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_csharp">
 <a href="#dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -278,8 +280,7 @@ ExpressRoute connection.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -287,8 +288,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -298,8 +298,7 @@ ExpressRoute connection.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutecircuitid_csharp">
 <a href="#expressroutecircuitid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -309,8 +308,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 (i.e. when `type` is `ExpressRoute`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_csharp">
 <a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -319,8 +317,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding. This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -329,8 +326,7 @@ for this connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_csharp">
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -338,8 +334,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_csharp">
 <a href="#ipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -347,8 +342,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">List&lt;Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localazureipaddressenabled_csharp">
 <a href="#localazureipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -357,8 +351,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgatewayid_csharp">
 <a href="#localnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -368,8 +361,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when a Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -379,8 +371,7 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +379,7 @@ located.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervirtualnetworkgatewayid_csharp">
 <a href="#peervirtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -400,8 +390,7 @@ located.
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -409,8 +398,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -418,8 +406,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_csharp">
 <a href="#routingweight_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -428,8 +415,7 @@ is `Vnet2Vnet`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -438,8 +424,7 @@ is `Vnet2Vnet`).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -448,8 +433,7 @@ is `Vnet2Vnet`).
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicy_csharp">
 <a href="#trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -457,8 +441,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -468,8 +451,7 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_csharp">
 <a href="#usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -480,8 +462,7 @@ is `Vnet2Vnet`).
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgatewayid_csharp">
 <a href="#virtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -491,14 +472,11 @@ selectors requires an `ipsec_policy` block.
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_go">
 <a href="#authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -509,8 +487,7 @@ in which the connection is created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is present only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_go">
 <a href="#connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -518,8 +495,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_go">
 <a href="#dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -528,8 +504,7 @@ ExpressRoute connection.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -537,8 +512,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -548,8 +522,7 @@ ExpressRoute connection.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutecircuitid_go">
 <a href="#expressroutecircuitid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -559,8 +532,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 (i.e. when `type` is `ExpressRoute`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_go">
 <a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -569,8 +541,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding. This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -579,8 +550,7 @@ for this connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_go">
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -588,8 +558,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_go">
 <a href="#ipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -597,8 +566,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">[]Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localazureipaddressenabled_go">
 <a href="#localazureipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -607,8 +575,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgatewayid_go">
 <a href="#localnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -618,8 +585,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when a Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -629,8 +595,7 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -638,8 +603,7 @@ located.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervirtualnetworkgatewayid_go">
 <a href="#peervirtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -650,8 +614,7 @@ located.
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -659,8 +622,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -668,8 +630,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_go">
 <a href="#routingweight_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -678,8 +639,7 @@ is `Vnet2Vnet`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_go">
 <a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -688,8 +648,7 @@ is `Vnet2Vnet`).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -698,8 +657,7 @@ is `Vnet2Vnet`).
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicy_go">
 <a href="#trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -707,8 +665,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -718,8 +675,7 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_go">
 <a href="#usepolicybasedtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -730,8 +686,7 @@ is `Vnet2Vnet`).
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgatewayid_go">
 <a href="#virtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -741,14 +696,11 @@ selectors requires an `ipsec_policy` block.
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_nodejs">
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -759,8 +711,7 @@ in which the connection is created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is present only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_nodejs">
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
@@ -768,8 +719,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_nodejs">
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
@@ -778,8 +728,7 @@ ExpressRoute connection.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
@@ -787,8 +736,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -798,8 +746,7 @@ ExpressRoute connection.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutecircuitid_nodejs">
 <a href="#expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -809,8 +756,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 (i.e. when `type` is `ExpressRoute`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_nodejs">
 <a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -819,8 +765,7 @@ for this connection.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding. This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -829,8 +774,7 @@ for this connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_nodejs">
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
@@ -838,8 +782,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_nodejs">
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
@@ -847,8 +790,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localazureipaddressenabled_nodejs">
 <a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -857,8 +799,7 @@ for this connection.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgatewayid_nodejs">
 <a href="#localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -868,8 +809,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when a Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -879,8 +819,7 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -888,8 +827,7 @@ located.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervirtualnetworkgatewayid_nodejs">
 <a href="#peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -900,8 +838,7 @@ located.
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -909,8 +846,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -918,8 +854,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_nodejs">
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
@@ -928,8 +863,7 @@ is `Vnet2Vnet`).
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The routing weight.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -938,8 +872,7 @@ is `Vnet2Vnet`).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -948,8 +881,7 @@ is `Vnet2Vnet`).
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicy_nodejs">
 <a href="#trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
@@ -957,8 +889,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -968,8 +899,7 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_nodejs">
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -980,8 +910,7 @@ is `Vnet2Vnet`).
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgatewayid_nodejs">
 <a href="#virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -991,14 +920,11 @@ selectors requires an `ipsec_policy` block.
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorization_key_python">
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -1009,8 +935,7 @@ in which the connection is created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is present only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_protocol_python">
 <a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
@@ -1018,8 +943,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpd_timeout_seconds_python">
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
@@ -1028,8 +952,7 @@ ExpressRoute connection.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
@@ -1037,8 +960,7 @@ ExpressRoute connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -1048,8 +970,7 @@ ExpressRoute connection.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="express_route_circuit_id_python">
 <a href="#express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
@@ -1059,8 +980,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the Express Route Circuit
 (i.e. when `type` is `ExpressRoute`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="express_route_gateway_bypass_python">
 <a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
@@ -1069,8 +989,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding. This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,8 +998,7 @@ for this connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingress_bytes_transferred_python">
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
@@ -1088,8 +1006,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsec_policies_python">
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
@@ -1097,8 +1014,7 @@ for this connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectionipsecpolicy">Sequence[Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_azure_ip_address_enabled_python">
 <a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
@@ -1107,8 +1023,7 @@ for this connection.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_network_gateway_id_python">
 <a href="#local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1118,8 +1033,7 @@ for this connection.
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when a Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1129,8 +1043,7 @@ when a Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1138,8 +1051,7 @@ located.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_virtual_network_gateway_id_python">
 <a href="#peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1150,8 +1062,7 @@ located.
     <dd>{{% md %}}The ID of the peer virtual
 network gateway when a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1159,8 +1070,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -1168,8 +1078,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routing_weight_python">
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
@@ -1178,8 +1087,7 @@ is `Vnet2Vnet`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_key_python">
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -1188,8 +1096,7 @@ is `Vnet2Vnet`).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared IPSec key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1198,8 +1105,7 @@ is `Vnet2Vnet`).
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="traffic_selector_policy_python">
 <a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
@@ -1207,8 +1113,7 @@ is `Vnet2Vnet`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1218,8 +1123,7 @@ is `Vnet2Vnet`).
     </dt>
     <dd>{{% md %}}The type of connection. Valid options are `IPsec`
 (Site-to-Site), `ExpressRoute` (ExpressRoute), and `Vnet2Vnet` (VNet-to-VNet).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_policy_based_traffic_selectors_python">
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
@@ -1230,8 +1134,7 @@ is `Vnet2Vnet`).
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_network_gateway_id_python">
 <a href="#virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1241,8 +1144,7 @@ selectors requires an `ipsec_policy` block.
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1256,9 +1158,7 @@ in which the connection is created.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1269,8 +1169,7 @@ in which the connection is created.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_csharp">
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -1280,8 +1179,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -1291,8 +1189,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -1302,8 +1199,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_csharp">
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -1313,8 +1209,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_csharp">
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1325,8 +1220,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasize_csharp">
 <a href="#sadatasize_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
@@ -1336,8 +1230,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetime_csharp">
 <a href="#salifetime_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
@@ -1347,14 +1240,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1365,8 +1255,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_go">
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -1376,8 +1265,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -1387,8 +1275,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -1398,8 +1285,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_go">
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -1409,8 +1295,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_go">
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1421,8 +1306,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasize_go">
 <a href="#sadatasize_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
@@ -1432,8 +1316,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetime_go">
 <a href="#salifetime_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
@@ -1443,14 +1326,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
@@ -1461,8 +1341,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_nodejs">
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
@@ -1472,8 +1351,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
@@ -1483,8 +1361,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
@@ -1494,8 +1371,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_nodejs">
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
@@ -1505,8 +1381,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_nodejs">
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
@@ -1517,8 +1392,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasize_nodejs">
 <a href="#sadatasize_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
@@ -1528,8 +1402,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetime_nodejs">
 <a href="#salifetime_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
@@ -1539,14 +1412,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dh_group_python">
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
@@ -1557,8 +1427,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_encryption_python">
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
@@ -1568,8 +1437,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
@@ -1579,8 +1447,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
@@ -1590,8 +1457,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_integrity_python">
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
@@ -1601,8 +1467,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfs_group_python">
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
@@ -1613,8 +1478,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_datasize_python">
 <a href="#sa_datasize_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>datasize</a>
@@ -1624,8 +1488,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_lifetime_python">
 <a href="#sa_lifetime_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime</a>
@@ -1635,8 +1498,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getgatewayconnectiontrafficselectorpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</h4>
@@ -1644,9 +1506,7 @@ or `None`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_csharp">
 <a href="#localaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
@@ -1655,8 +1515,7 @@ or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of local CIDRs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_csharp">
 <a href="#remoteaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
@@ -1665,14 +1524,11 @@ or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of remote CIDRs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_go">
 <a href="#localaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
@@ -1681,8 +1537,7 @@ or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of local CIDRs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_go">
 <a href="#remoteaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
@@ -1691,14 +1546,11 @@ or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of remote CIDRs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_nodejs">
 <a href="#localaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
@@ -1707,8 +1559,7 @@ or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of local CIDRs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_nodejs">
 <a href="#remoteaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
@@ -1717,14 +1568,11 @@ or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of remote CIDRs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="local_address_cidrs_python">
 <a href="#local_address_cidrs_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>cidrs</a>
@@ -1733,8 +1581,7 @@ or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of local CIDRs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_address_cidrs_python">
 <a href="#remote_address_cidrs_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>cidrs</a>
@@ -1743,8 +1590,7 @@ or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of remote CIDRs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1758,6 +1604,6 @@ or `None`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

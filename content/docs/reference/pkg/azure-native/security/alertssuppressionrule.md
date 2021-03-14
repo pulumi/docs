@@ -14,11 +14,17 @@ Describes the suppression rule
 API Version: 2019-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Update or create suppression rule for subscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -56,9 +62,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -97,9 +106,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -125,9 +137,12 @@ alerts_suppression_rule = azure_native.security.AlertsSuppressionRule("alertsSup
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -154,9 +169,16 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AlertsSuppressionRule Resource {#create}
@@ -181,9 +203,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -191,9 +211,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -201,9 +219,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -211,10 +227,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -240,9 +253,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -250,9 +261,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +269,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +277,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,18 +285,13 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -299,9 +299,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -309,9 +307,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -319,10 +315,7 @@ const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("a
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -337,9 +330,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_csharp">
 <a href="#alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -347,8 +338,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -356,8 +346,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -365,8 +354,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertssuppressionrulename_csharp">
 <a href="#alertssuppressionrulename_csharp" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Suppression<wbr>Rule<wbr>Name</a>
@@ -374,8 +362,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -383,8 +370,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdateutc_csharp">
 <a href="#expirationdateutc_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Utc</a>
@@ -392,8 +378,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionalertsscope_csharp">
 <a href="#suppressionalertsscope_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Alerts<wbr>Scope</a>
@@ -401,14 +386,11 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionalertsscope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_go">
 <a href="#alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -416,8 +398,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -425,8 +406,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -434,8 +414,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestate">Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertssuppressionrulename_go">
 <a href="#alertssuppressionrulename_go" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Suppression<wbr>Rule<wbr>Name</a>
@@ -443,8 +422,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -452,8 +430,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdateutc_go">
 <a href="#expirationdateutc_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Utc</a>
@@ -461,8 +438,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionalertsscope_go">
 <a href="#suppressionalertsscope_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Alerts<wbr>Scope</a>
@@ -470,14 +446,11 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_nodejs">
 <a href="#alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -485,8 +458,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -494,8 +466,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -503,8 +474,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestate">Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertssuppressionrulename_nodejs">
 <a href="#alertssuppressionrulename_nodejs" style="color: inherit; text-decoration: inherit;">alerts<wbr>Suppression<wbr>Rule<wbr>Name</a>
@@ -512,8 +482,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -521,8 +490,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdateutc_nodejs">
 <a href="#expirationdateutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date<wbr>Utc</a>
@@ -530,8 +498,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionalertsscope_nodejs">
 <a href="#suppressionalertsscope_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Alerts<wbr>Scope</a>
@@ -539,14 +506,11 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alert_type_python">
 <a href="#alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -554,8 +518,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the alert to automatically suppress. For all alert types, use '*'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -563,8 +526,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for dismissing the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -572,8 +534,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#rulestate">Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible states of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerts_suppression_rule_name_python">
 <a href="#alerts_suppression_rule_name_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>suppression_<wbr>rule_<wbr>name</a>
@@ -581,8 +542,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique name of the suppression alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -590,8 +550,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any comment regarding the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_date_utc_python">
 <a href="#expiration_date_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date_<wbr>utc</a>
@@ -599,8 +558,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppression_alerts_scope_python">
 <a href="#suppression_alerts_scope_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>alerts_<wbr>scope</a>
@@ -608,8 +566,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The suppression conditions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -620,9 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -630,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedutc_csharp">
 <a href="#lastmodifiedutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Utc</a>
@@ -639,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -648,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -657,14 +609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedutc_go">
 <a href="#lastmodifiedutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Utc</a>
@@ -681,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -690,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -699,14 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -714,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedutc_nodejs">
 <a href="#lastmodifiedutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Utc</a>
@@ -723,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -732,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -741,14 +681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_utc_python">
 <a href="#last_modified_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>utc</a>
@@ -765,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time this rule was modified{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -783,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,55 +733,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="rulestate">Rule<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Expired</dt>
-    <dd>Expired</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Expired</dt>
+    <dd>Expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Rule<wbr>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Rule<wbr>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Rule<wbr>State<wbr>Expired</dt>
-    <dd>Expired</dd>
-</dl>
+<dl class="tabular"><dt>Rule<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Rule<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Rule<wbr>State<wbr>Expired</dt>
+    <dd>Expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Expired</dt>
-    <dd>Expired</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Expired</dt>
+    <dd>Expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>EXPIRED</dt>
-    <dd>Expired</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>EXPIRED</dt>
+    <dd>Expired</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scopeelement">Scope<wbr>Element</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -856,14 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -871,14 +783,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -886,14 +795,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -901,16 +807,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scopeelementresponse">Scope<wbr>Element<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -918,14 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -933,14 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -948,14 +845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -963,16 +857,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -980,14 +871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelement">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -995,14 +883,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelement">[]Scope<wbr>Element</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -1010,14 +895,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelement">Scope<wbr>Element[]</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -1025,16 +907,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelement">Sequence[Scope<wbr>Element<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="suppressionalertsscoperesponse">Suppression<wbr>Alerts<wbr>Scope<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1042,14 +921,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1057,14 +933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelementresponse">[]Scope<wbr>Element<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -1072,14 +945,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelementresponse">Scope<wbr>Element<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -1087,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scopeelementresponse">Sequence[Scope<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

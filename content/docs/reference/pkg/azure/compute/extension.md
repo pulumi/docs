@@ -18,11 +18,17 @@ and run automated tasks.
 > **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -146,9 +152,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -279,9 +288,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -356,9 +368,12 @@ example_extension = azure.compute.Extension("exampleExtension",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -441,9 +456,16 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Extension Resource {#create}
@@ -468,9 +490,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -478,9 +498,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -488,9 +506,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -498,10 +514,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -527,9 +540,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -537,9 +548,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -547,9 +556,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -557,9 +564,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -567,18 +572,13 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -586,9 +586,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -596,9 +594,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -606,10 +602,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -624,9 +617,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -636,8 +627,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -647,8 +637,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -658,8 +647,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -668,8 +656,7 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -679,8 +666,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -690,8 +676,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -701,8 +686,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -712,8 +696,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -722,14 +705,11 @@ specified as a JSON object in a string.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -739,8 +719,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -750,8 +729,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -761,8 +739,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -771,8 +748,7 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -782,8 +758,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -793,8 +768,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -804,8 +778,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -815,8 +788,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -825,14 +797,11 @@ specified as a JSON object in a string.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -842,8 +811,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -853,8 +821,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -864,8 +831,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -874,8 +840,7 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -885,8 +850,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -896,8 +860,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
@@ -907,8 +870,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -918,8 +880,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -928,14 +889,11 @@ specified as a JSON object in a string.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -945,8 +903,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -956,8 +913,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -967,8 +923,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -977,8 +932,7 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -988,8 +942,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -999,8 +952,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
@@ -1010,8 +962,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1021,8 +972,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1031,8 +981,7 @@ specified as a JSON object in a string.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1043,9 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1053,14 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1068,14 +1012,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1083,14 +1024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1098,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1226,9 +1163,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_csharp">
 <a href="#state_autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1238,8 +1173,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1249,8 +1183,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_csharp">
 <a href="#state_protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -1260,8 +1193,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_csharp">
 <a href="#state_publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1271,8 +1203,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1282,8 +1213,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1292,8 +1222,7 @@ specified as a JSON object in a string.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1303,8 +1232,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_csharp">
 <a href="#state_typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1314,8 +1242,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_csharp">
 <a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1324,14 +1251,11 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_go">
 <a href="#state_autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1341,8 +1265,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1352,8 +1275,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_go">
 <a href="#state_protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -1363,8 +1285,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_go">
 <a href="#state_publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1374,8 +1295,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1385,8 +1305,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1395,8 +1314,7 @@ specified as a JSON object in a string.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1406,8 +1324,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_go">
 <a href="#state_typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1417,8 +1334,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_go">
 <a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1427,14 +1343,11 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_nodejs">
 <a href="#state_autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1444,8 +1357,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1455,8 +1367,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_nodejs">
 <a href="#state_protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
@@ -1466,8 +1377,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_nodejs">
 <a href="#state_publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1477,8 +1387,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1488,8 +1397,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1498,8 +1406,7 @@ specified as a JSON object in a string.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1509,8 +1416,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_nodejs">
 <a href="#state_typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -1520,8 +1426,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_nodejs">
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -1530,14 +1435,11 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_upgrade_minor_version_python">
 <a href="#state_auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -1547,8 +1449,7 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1558,8 +1459,7 @@ the latest minor version update to the `type_handler_version` specified.
     </dt>
     <dd>{{% md %}}The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_settings_python">
 <a href="#state_protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
@@ -1569,8 +1469,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_python">
 <a href="#state_publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1580,8 +1479,7 @@ extension, like settings, these are specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers
 can be found by using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1591,8 +1489,7 @@ can be found by using the Azure CLI.
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are
 specified as a JSON object in a string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1601,8 +1498,7 @@ specified as a JSON object in a string.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1612,8 +1508,7 @@ specified as a JSON object in a string.
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can
 be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_handler_version_python">
 <a href="#state_type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -1623,8 +1518,7 @@ be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_id_python">
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -1633,8 +1527,7 @@ use, available versions can be found using the Azure CLI.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1660,6 +1553,6 @@ Virtual Machine Extensions can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

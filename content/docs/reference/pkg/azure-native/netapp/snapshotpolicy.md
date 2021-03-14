@@ -14,11 +14,17 @@ Snapshot policy information
 API Version: 2020-11-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### SnapshotPolicies_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -65,9 +71,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -115,9 +124,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -152,9 +164,12 @@ snapshot_policy = azure_native.netapp.SnapshotPolicy("snapshotPolicy",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -190,9 +205,16 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SnapshotPolicy Resource {#create}
@@ -217,9 +239,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -227,9 +247,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -237,9 +255,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -247,10 +263,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -276,9 +289,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -286,9 +297,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -296,9 +305,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -306,9 +313,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -316,18 +321,13 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -335,9 +335,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -345,9 +343,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -355,10 +351,7 @@ const snapshotPolicy = new azure_native.netapp.SnapshotPolicy("snapshotPolicy", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -373,9 +366,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -383,8 +374,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -392,8 +382,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_csharp">
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
@@ -401,8 +390,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -410,8 +398,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_csharp">
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
@@ -419,8 +406,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourlyschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -428,8 +414,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_csharp">
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
@@ -437,8 +422,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicyname_csharp">
 <a href="#snapshotpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Name</a>
@@ -446,8 +430,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -455,8 +438,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_csharp">
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
@@ -464,14 +446,11 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -479,8 +458,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -488,8 +466,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_go">
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
@@ -497,8 +474,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -506,8 +482,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_go">
 <a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
@@ -515,8 +490,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -524,8 +498,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_go">
 <a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
@@ -533,8 +506,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicyname_go">
 <a href="#snapshotpolicyname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Name</a>
@@ -542,8 +514,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -551,8 +522,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_go">
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
@@ -560,14 +530,11 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -575,8 +542,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -584,8 +550,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_nodejs">
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
@@ -593,8 +558,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -602,8 +566,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_nodejs">
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
@@ -611,8 +574,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -620,8 +582,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_nodejs">
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
@@ -629,8 +590,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicyname_nodejs">
 <a href="#snapshotpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policy<wbr>Name</a>
@@ -638,8 +598,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -647,8 +606,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_nodejs">
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
@@ -656,14 +614,11 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -671,8 +626,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -680,8 +634,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_schedule_python">
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
@@ -689,8 +642,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -698,8 +650,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourly_schedule_python">
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
@@ -707,8 +658,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -716,8 +666,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_schedule_python">
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
@@ -725,8 +674,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_policy_name_python">
 <a href="#snapshot_policy_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policy_<wbr>name</a>
@@ -734,8 +682,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -743,8 +690,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_schedule_python">
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
@@ -752,8 +698,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -764,9 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -774,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -783,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -792,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -801,14 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -816,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -825,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -834,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -843,14 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -858,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -867,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -876,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -885,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -909,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -918,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -927,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -944,9 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dailyschedule">Daily<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -954,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -963,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -972,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -981,14 +897,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -996,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1005,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1014,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1023,14 +933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1038,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1047,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1056,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1065,14 +969,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1080,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1089,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1098,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1107,16 +1005,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dailyscheduleresponse">Daily<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1124,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1133,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1142,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1151,14 +1043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1166,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1175,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1184,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1193,14 +1079,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1208,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1217,8 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1226,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1235,14 +1115,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1250,8 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1259,8 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1268,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1277,16 +1151,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hourlyschedule">Hourly<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1294,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1303,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1312,14 +1181,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1327,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1336,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1345,14 +1209,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1360,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1369,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1378,14 +1237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1393,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1402,8 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1411,16 +1265,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hourlyscheduleresponse">Hourly<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1428,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1437,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1446,14 +1295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1461,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1470,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1479,14 +1323,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1494,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1503,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1512,14 +1351,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1527,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1536,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1545,16 +1379,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monthlyschedule">Monthly<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_csharp">
 <a href="#daysofmonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
@@ -1562,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1571,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1580,8 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1589,8 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1598,14 +1425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_go">
 <a href="#daysofmonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
@@ -1613,8 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1622,8 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1631,8 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1640,8 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1649,14 +1469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_nodejs">
 <a href="#daysofmonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Month</a>
@@ -1664,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1673,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1682,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1691,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1700,14 +1513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_of_month_python">
 <a href="#days_of_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>month</a>
@@ -1715,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1724,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1733,8 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1742,8 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1751,16 +1557,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_csharp">
 <a href="#daysofmonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
@@ -1768,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1777,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1786,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1795,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1804,14 +1603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_go">
 <a href="#daysofmonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
@@ -1819,8 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1828,8 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1837,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -1846,8 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -1855,14 +1647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofmonth_nodejs">
 <a href="#daysofmonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Month</a>
@@ -1870,8 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1879,8 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1888,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -1897,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -1906,14 +1691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_of_month_python">
 <a href="#days_of_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>month</a>
@@ -1921,8 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -1930,8 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -1939,8 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -1948,8 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -1957,16 +1735,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="weeklyschedule">Weekly<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1974,8 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -1983,8 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -1992,8 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -2001,8 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -2010,14 +1781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2025,8 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -2034,8 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -2043,8 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -2052,8 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -2061,14 +1825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2076,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -2085,8 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -2094,8 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -2103,8 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -2112,14 +1869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2127,8 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -2136,8 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -2145,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -2154,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -2163,16 +1913,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2180,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -2189,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -2198,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_csharp">
 <a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -2207,8 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_csharp">
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -2216,14 +1959,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2231,8 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -2240,8 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
@@ -2249,8 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_go">
 <a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
@@ -2258,8 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_go">
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
@@ -2267,14 +2003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2282,8 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -2291,8 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -2300,8 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotstokeep_nodejs">
 <a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
@@ -2309,8 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedbytes_nodejs">
 <a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
@@ -2318,14 +2047,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2333,8 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -2342,8 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
@@ -2351,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_to_keep_python">
 <a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
@@ -2360,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="used_bytes_python">
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
@@ -2369,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

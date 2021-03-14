@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.EntityPermissions resource with exampl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The EntityPermissions resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -202,8 +171,7 @@ The EntityPermissions resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -213,8 +181,7 @@ The EntityPermissions resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -224,14 +191,11 @@ The EntityPermissions resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -240,8 +204,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -251,8 +214,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -262,14 +224,11 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -278,8 +237,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -289,8 +247,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -300,14 +257,11 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -316,8 +270,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -327,8 +280,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -338,8 +290,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -350,9 +301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -360,14 +309,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -375,14 +321,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -390,14 +333,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -405,8 +345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -533,9 +472,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_csharp">
 <a href="#state_entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -544,8 +481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitytype_csharp">
 <a href="#state_entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -555,8 +491,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -566,14 +501,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_go">
 <a href="#state_entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -582,8 +514,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitytype_go">
 <a href="#state_entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -593,8 +524,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_go">
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -604,14 +534,11 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entityid_nodejs">
 <a href="#state_entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -620,8 +547,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitytype_nodejs">
 <a href="#state_entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -631,8 +557,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -642,14 +567,11 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entity_id_python">
 <a href="#state_entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -658,8 +580,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object id (uuid for some entities) on which permissions are to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_type_python">
 <a href="#state_entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -669,8 +590,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The managed object type, types can be found in the managed object type section 
 [here](https://code.vmware.com/apis/968/vsphere).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_python">
 <a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -680,8 +600,7 @@ alphabetically on `user_or_group` for a better user experience.
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -696,9 +615,7 @@ alphabetically on `user_or_group` for a better user experience.
 <h4 id="entitypermissionspermission">Entity<wbr>Permissions<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isgroup_csharp">
 <a href="#isgroup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Group</a>
@@ -707,8 +624,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user_or_group field refers to a user or a group. True for a group and false for a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagate_csharp">
 <a href="#propagate_csharp" style="color: inherit; text-decoration: inherit;">Propagate</a>
@@ -717,8 +633,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this permission propagates down the hierarchy to sub-entities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -727,8 +642,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id of the role to be given to the user on the specified entity.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgroup_csharp">
 <a href="#userorgroup_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Or<wbr>Group</a>
@@ -737,14 +651,11 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user/group getting the permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isgroup_go">
 <a href="#isgroup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Group</a>
@@ -753,8 +664,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user_or_group field refers to a user or a group. True for a group and false for a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagate_go">
 <a href="#propagate_go" style="color: inherit; text-decoration: inherit;">Propagate</a>
@@ -763,8 +673,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this permission propagates down the hierarchy to sub-entities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -773,8 +682,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id of the role to be given to the user on the specified entity.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgroup_go">
 <a href="#userorgroup_go" style="color: inherit; text-decoration: inherit;">User<wbr>Or<wbr>Group</a>
@@ -783,14 +691,11 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user/group getting the permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isgroup_nodejs">
 <a href="#isgroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Group</a>
@@ -799,8 +704,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether user_or_group field refers to a user or a group. True for a group and false for a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagate_nodejs">
 <a href="#propagate_nodejs" style="color: inherit; text-decoration: inherit;">propagate</a>
@@ -809,8 +713,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this permission propagates down the hierarchy to sub-entities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -819,8 +722,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id of the role to be given to the user on the specified entity.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgroup_nodejs">
 <a href="#userorgroup_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Or<wbr>Group</a>
@@ -829,14 +731,11 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user/group getting the permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_group_python">
 <a href="#is_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>group</a>
@@ -845,8 +744,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user_or_group field refers to a user or a group. True for a group and false for a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagate_python">
 <a href="#propagate_python" style="color: inherit; text-decoration: inherit;">propagate</a>
@@ -855,8 +753,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this permission propagates down the hierarchy to sub-entities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -865,8 +762,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role id of the role to be given to the user on the specified entity.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_or_group_python">
 <a href="#user_or_group_python" style="color: inherit; text-decoration: inherit;">user_<wbr>or_<wbr>group</a>
@@ -875,8 +771,7 @@ alphabetically on `user_or_group` for a better user experience.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user/group getting the permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -887,6 +782,6 @@ alphabetically on `user_or_group` for a better user experience.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

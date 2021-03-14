@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostgroupname_csharp">
 <a href="#hostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostgroupname_go">
 <a href="#hostgroupname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostgroupname_nodejs">
 <a href="#hostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_group_name_python">
 <a href="#host_group_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the dedicated host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_csharp">
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningtime_csharp">
 <a href="#provisioningtime_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Time</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_csharp">
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcereadonlyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoreplaceonfailure_csharp">
 <a href="#autoreplaceonfailure_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Replace<wbr>On<wbr>Failure</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformfaultdomain_csharp">
 <a href="#platformfaultdomain_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -355,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_go">
 <a href="#instanceview_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningtime_go">
 <a href="#provisioningtime_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Time</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_go">
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcereadonlyresponse">[]Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoreplaceonfailure_go">
 <a href="#autoreplaceonfailure_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Replace<wbr>On<wbr>Failure</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformfaultdomain_go">
 <a href="#platformfaultdomain_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -487,14 +432,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_nodejs">
 <a href="#instanceview_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>View</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningtime_nodejs">
 <a href="#provisioningtime_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Time</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_nodejs">
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcereadonlyresponse">Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoreplaceonfailure_nodejs">
 <a href="#autoreplaceonfailure_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Replace<wbr>On<wbr>Failure</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformfaultdomain_nodejs">
 <a href="#platformfaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Fault<wbr>Domain</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -619,14 +548,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_view_python">
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_time_python">
 <a href="#provisioning_time_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>time</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when the host was first provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machines_python">
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcereadonlyresponse">Sequence[Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_replace_on_failure_python">
 <a href="#auto_replace_on_failure_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>replace_<wbr>on_<wbr>failure</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_fault_domain_python">
 <a href="#platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fault domain of the dedicated host within a dedicated host group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -766,9 +678,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -776,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -785,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -800,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -809,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -833,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</h4>
@@ -866,9 +762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatablevms_csharp">
 <a href="#allocatablevms_csharp" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
@@ -876,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatablevms_go">
 <a href="#allocatablevms_go" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
@@ -891,14 +782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">[]Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse</a></span>
     </dt>
-    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatablevms_nodejs">
 <a href="#allocatablevms_nodejs" style="color: inherit; text-decoration: inherit;">allocatable<wbr>VMs</a>
@@ -906,14 +794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse[]</a></span>
     </dt>
-    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatable_vms_python">
 <a href="#allocatable_vms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>vms</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Sequence[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetid_csharp">
 <a href="#assetid_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Id</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_csharp">
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
@@ -949,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -958,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetid_go">
 <a href="#assetid_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Id</a>
@@ -973,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_go">
 <a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
@@ -982,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -991,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetid_nodejs">
 <a href="#assetid_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Id</a>
@@ -1006,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecapacity_nodejs">
 <a href="#availablecapacity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Capacity</a>
@@ -1015,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1024,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_id_python">
 <a href="#asset_id_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>id</a>
@@ -1039,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_capacity_python">
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
@@ -1048,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1057,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</h4>
@@ -1066,9 +930,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1076,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_csharp">
 <a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1085,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1094,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1103,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1112,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1127,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_go">
 <a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1136,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1145,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1154,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1163,14 +1014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1178,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_nodejs">
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
@@ -1187,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1196,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1205,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1214,14 +1058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1229,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_status_python">
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
@@ -1238,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1247,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1256,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1265,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -1274,9 +1110,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1284,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1293,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1302,14 +1134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1317,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1326,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1335,14 +1162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1350,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1359,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1368,14 +1190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1383,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1392,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1401,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourcereadonlyresponse">Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response</h4>
@@ -1410,9 +1226,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1420,14 +1234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1435,14 +1246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1450,14 +1258,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1465,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

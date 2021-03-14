@@ -14,11 +14,17 @@ Allows setting the issuing certificate endpoints, CRL distribution points, and O
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -83,9 +92,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -99,9 +111,12 @@ config_urls = vault.pki_secret.SecretBackendConfigUrls("configUrls",
     issuing_certificates=["http://127.0.0.1:8200/v1/pki/ca"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecretBackendConfigUrls Resource {#create}
@@ -145,9 +167,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -312,8 +303,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_csharp">
 <a href="#crldistributionpoints_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -322,8 +312,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingcertificates_csharp">
 <a href="#issuingcertificates_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
@@ -332,8 +321,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspservers_csharp">
 <a href="#ocspservers_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
@@ -342,14 +330,11 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -358,8 +343,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_go">
 <a href="#crldistributionpoints_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -368,8 +352,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingcertificates_go">
 <a href="#issuingcertificates_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
@@ -378,8 +361,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspservers_go">
 <a href="#ocspservers_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
@@ -388,14 +370,11 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -404,8 +383,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_nodejs">
 <a href="#crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
@@ -414,8 +392,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingcertificates_nodejs">
 <a href="#issuingcertificates_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Certificates</a>
@@ -424,8 +401,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspservers_nodejs">
 <a href="#ocspservers_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Servers</a>
@@ -434,14 +410,11 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -450,8 +423,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crl_distribution_points_python">
 <a href="#crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
@@ -460,8 +432,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuing_certificates_python">
 <a href="#issuing_certificates_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>certificates</a>
@@ -470,8 +441,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocsp_servers_python">
 <a href="#ocsp_servers_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>servers</a>
@@ -480,8 +450,7 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -492,9 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -502,14 +469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,14 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -532,14 +493,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -675,9 +632,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -686,8 +641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crldistributionpoints_csharp">
 <a href="#state_crldistributionpoints_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -696,8 +650,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingcertificates_csharp">
 <a href="#state_issuingcertificates_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
@@ -706,8 +659,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ocspservers_csharp">
 <a href="#state_ocspservers_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
@@ -716,14 +668,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -732,8 +681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crldistributionpoints_go">
 <a href="#state_crldistributionpoints_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -742,8 +690,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingcertificates_go">
 <a href="#state_issuingcertificates_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
@@ -752,8 +699,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ocspservers_go">
 <a href="#state_ocspservers_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
@@ -762,14 +708,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -778,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crldistributionpoints_nodejs">
 <a href="#state_crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
@@ -788,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingcertificates_nodejs">
 <a href="#state_issuingcertificates_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Certificates</a>
@@ -798,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ocspservers_nodejs">
 <a href="#state_ocspservers_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Servers</a>
@@ -808,14 +748,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -824,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crl_distribution_points_python">
 <a href="#state_crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
@@ -834,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the CRL Distribution Points field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuing_certificates_python">
 <a href="#state_issuing_certificates_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>certificates</a>
@@ -844,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the Issuing Certificate field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ocsp_servers_python">
 <a href="#state_ocsp_servers_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>servers</a>
@@ -854,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the URL values for the OCSP Servers field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -871,6 +804,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

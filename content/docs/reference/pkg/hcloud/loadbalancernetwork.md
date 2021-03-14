@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerNetwork"
-title_tag: "Resource LoadBalancerNetwork | Package Hetzner Cloud"
-meta_desc: "Explore the LoadBalancerNetwork resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Load Balancer Network to represent a private network on a Load Balancer in the Hetzner Cloud."
+title_tag: "hcloud.LoadBalancerNetwork"
+meta_desc: "Documentation for the hcloud.LoadBalancerNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the LoadBalancerNetwork resource of the Hetzner Cloud packag
 Provides a Hetzner Cloud Load Balancer Network to represent a private network on a Load Balancer in the Hetzner Cloud.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -101,9 +110,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -123,9 +135,12 @@ srvnetwork = hcloud.LoadBalancerNetwork("srvnetwork",
     ip="10.0.1.5")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -149,9 +164,16 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LoadBalancerNetwork Resource {#create}
@@ -176,9 +198,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -186,9 +206,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -196,9 +214,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -206,10 +222,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -235,9 +248,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -245,9 +256,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +264,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +272,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,18 +280,13 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -294,9 +294,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -304,9 +302,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -314,10 +310,7 @@ const srvnetwork = new hcloud.LoadBalancerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -332,9 +325,7 @@ The LoadBalancerNetwork resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -343,8 +334,7 @@ The LoadBalancerNetwork resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicinterface_csharp">
 <a href="#enablepublicinterface_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Interface</a>
@@ -354,8 +344,7 @@ The LoadBalancerNetwork resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -366,8 +355,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -383,8 +371,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -396,14 +383,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -412,8 +396,7 @@ currently added to the last created subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicinterface_go">
 <a href="#enablepublicinterface_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Interface</a>
@@ -423,8 +406,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -435,8 +417,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -452,8 +433,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -465,14 +445,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -481,8 +458,7 @@ currently added to the last created subnet.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicinterface_nodejs">
 <a href="#enablepublicinterface_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public<wbr>Interface</a>
@@ -492,8 +468,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -504,8 +479,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -521,8 +495,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -534,14 +507,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -550,8 +520,7 @@ currently added to the last created subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_public_interface_python">
 <a href="#enable_public_interface_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public_<wbr>interface</a>
@@ -561,8 +530,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -573,8 +541,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -590,8 +557,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -603,8 +569,7 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -615,9 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,14 +588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -640,14 +600,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,14 +612,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -798,9 +751,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablepublicinterface_csharp">
 <a href="#state_enablepublicinterface_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Interface</a>
@@ -810,8 +761,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_csharp">
 <a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -822,8 +772,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -832,8 +781,7 @@ IP address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -849,8 +797,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -862,14 +809,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablepublicinterface_go">
 <a href="#state_enablepublicinterface_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Interface</a>
@@ -879,8 +823,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_go">
 <a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -891,8 +834,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -901,8 +843,7 @@ IP address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -918,8 +859,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -931,14 +871,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablepublicinterface_nodejs">
 <a href="#state_enablepublicinterface_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public<wbr>Interface</a>
@@ -948,8 +885,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_nodejs">
 <a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -960,8 +896,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -970,8 +905,7 @@ IP address.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -987,8 +921,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1000,14 +933,11 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_public_interface_python">
 <a href="#state_enable_public_interface_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public_<wbr>interface</a>
@@ -1017,8 +947,7 @@ currently added to the last created subnet.
     </dt>
     <dd>{{% md %}}Enable or disable the
 Load Balancers public interface. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_python">
 <a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1029,8 +958,7 @@ Load Balancers public interface. Default: `true`
     <dd>{{% md %}}IP to request to be assigned to this Load
 Balancer. If you do not provide this then you will be auto assigned an
 IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_id_python">
 <a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -1039,8 +967,7 @@ IP address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1056,8 +983,7 @@ dependency between the Load Balancer and the subnet. Therefore
 `depends_on` may need to be used. Alternatively the `subnet_id`
 property can be used, which will create an explicit dependency between
 `hcloud.LoadBalancerNetwork` and the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1069,8 +995,7 @@ property can be used, which will create an explicit dependency between
 added to the Load Balancer. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Load Balancer is
 currently added to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1096,6 +1021,6 @@ Load Balancer Network entries can be imported using a compound ID with the follo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 </dl>
 

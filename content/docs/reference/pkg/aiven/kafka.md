@@ -16,11 +16,17 @@ The Kafka resource allows the creation and management of Aiven Kafka services.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -103,9 +112,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -133,9 +145,12 @@ kafka1 = aiven.Kafka("kafka1",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -165,9 +180,16 @@ const kafka1 = new aiven.Kafka("kafka1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Kafka Resource {#create}
@@ -192,9 +214,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,9 +222,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -212,9 +230,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,10 +238,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -251,9 +264,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -261,9 +272,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -271,9 +280,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,9 +288,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -291,18 +296,13 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -310,9 +310,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -320,9 +318,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -330,10 +326,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -348,9 +341,7 @@ The Kafka resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -361,8 +352,7 @@ The Kafka resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -373,8 +363,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -389,8 +378,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultacl_csharp">
 <a href="#defaultacl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Acl</a>
@@ -399,8 +387,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaserver_csharp">
 <a href="#kafkaserver_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Server</a>
@@ -409,8 +396,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkauserconfig_csharp">
 <a href="#kafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
@@ -420,8 +406,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -431,8 +416,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -442,8 +426,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -459,8 +442,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -474,8 +456,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -484,8 +465,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">List&lt;Kafka<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -498,14 +478,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -516,8 +493,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -528,8 +504,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -544,8 +519,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultacl_go">
 <a href="#defaultacl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Acl</a>
@@ -554,8 +528,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_go">
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -564,8 +537,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkauserconfig_go">
 <a href="#kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
@@ -575,8 +547,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -586,8 +557,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -597,8 +567,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -614,8 +583,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -629,8 +597,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -639,8 +606,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -653,14 +619,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -671,8 +634,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -683,8 +645,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -699,8 +660,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultacl_nodejs">
 <a href="#defaultacl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Acl</a>
@@ -709,8 +669,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_nodejs">
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -719,8 +678,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkauserconfig_nodejs">
 <a href="#kafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>User<wbr>Config</a>
@@ -730,8 +688,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -741,8 +698,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -752,8 +708,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -769,8 +724,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -784,8 +738,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -794,8 +747,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">Kafka<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -808,14 +760,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -826,8 +775,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -838,8 +786,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -854,8 +801,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_acl_python">
 <a href="#default_acl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>acl</a>
@@ -864,8 +810,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_python">
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -874,8 +819,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_user_config_python">
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
@@ -885,8 +829,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -896,8 +839,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -907,8 +849,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -924,8 +865,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -939,8 +879,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -949,8 +888,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">Sequence[Kafka<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -963,8 +901,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -975,9 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -986,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkacomponent">List&lt;Kafka<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -995,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1005,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1015,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1025,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1035,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1045,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1055,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1065,14 +992,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1081,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkacomponent">[]Kafka<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1090,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1100,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1110,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1120,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1130,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1140,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1150,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1160,14 +1076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1176,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkacomponent">Kafka<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1185,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1195,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1205,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1215,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1225,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1235,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1245,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1255,14 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1271,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkacomponent">Sequence[Kafka<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1280,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1290,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1300,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1310,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1320,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1330,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1340,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1350,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1478,9 +1371,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
 <a href="#state_cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1495,8 +1386,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_csharp">
 <a href="#state_components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1505,8 +1395,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkacomponent">List&lt;Kafka<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultacl_csharp">
 <a href="#state_defaultacl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Acl</a>
@@ -1515,8 +1404,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkaserver_csharp">
 <a href="#state_kafkaserver_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Server</a>
@@ -1525,8 +1413,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkauserconfig_csharp">
 <a href="#state_kafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
@@ -1536,8 +1423,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_csharp">
 <a href="#state_maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1547,8 +1433,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_csharp">
 <a href="#state_maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1558,8 +1443,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1575,8 +1459,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1587,8 +1470,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_csharp">
 <a href="#state_projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1602,8 +1484,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_csharp">
 <a href="#state_servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1612,8 +1493,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_csharp">
 <a href="#state_serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1622,8 +1502,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">List&lt;Kafka<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1634,8 +1513,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_csharp">
 <a href="#state_servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1644,8 +1522,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_csharp">
 <a href="#state_serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1654,8 +1531,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1664,8 +1540,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_csharp">
 <a href="#state_serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1674,8 +1549,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_csharp">
 <a href="#state_serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1684,8 +1558,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1694,8 +1567,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1708,14 +1580,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
 <a href="#state_cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1730,8 +1599,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_go">
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1740,8 +1608,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkacomponent">[]Kafka<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultacl_go">
 <a href="#state_defaultacl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Acl</a>
@@ -1750,8 +1617,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_go">
 <a href="#state_kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -1760,8 +1626,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkauserconfig_go">
 <a href="#state_kafkauserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
@@ -1771,8 +1636,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_go">
 <a href="#state_maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1782,8 +1646,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_go">
 <a href="#state_maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1793,8 +1656,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1810,8 +1672,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1822,8 +1683,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_go">
 <a href="#state_projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1837,8 +1697,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_go">
 <a href="#state_servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1847,8 +1706,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_go">
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1857,8 +1715,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">[]Kafka<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1869,8 +1726,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_go">
 <a href="#state_servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1879,8 +1735,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_go">
 <a href="#state_serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1889,8 +1744,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1899,8 +1753,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_go">
 <a href="#state_serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1909,8 +1762,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_go">
 <a href="#state_serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1919,8 +1771,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1929,8 +1780,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1943,14 +1793,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1965,8 +1812,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_nodejs">
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1975,8 +1821,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkacomponent">Kafka<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultacl_nodejs">
 <a href="#state_defaultacl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Acl</a>
@@ -1985,8 +1830,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_nodejs">
 <a href="#state_kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -1995,8 +1839,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkauserconfig_nodejs">
 <a href="#state_kafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>User<wbr>Config</a>
@@ -2006,8 +1849,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_nodejs">
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -2017,8 +1859,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_nodejs">
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -2028,8 +1869,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2045,8 +1885,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2057,8 +1896,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_nodejs">
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -2072,8 +1910,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_nodejs">
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -2082,8 +1919,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_nodejs">
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -2092,8 +1928,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">Kafka<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -2104,8 +1939,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_nodejs">
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -2114,8 +1948,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_nodejs">
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -2124,8 +1957,7 @@ intended service usage rather than current attributes.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -2134,8 +1966,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_nodejs">
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -2144,8 +1975,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_nodejs">
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -2154,8 +1984,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2164,8 +1993,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -2178,14 +2006,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -2200,8 +2025,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_python">
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -2210,8 +2034,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkacomponent">Sequence[Kafka<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_acl_python">
 <a href="#state_default_acl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>acl</a>
@@ -2220,8 +2043,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create default wildcard Kafka ACL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_python">
 <a href="#state_kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -2230,8 +2052,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_user_config_python">
 <a href="#state_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
@@ -2241,8 +2062,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_dow_python">
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -2252,8 +2072,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_time_python">
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -2263,8 +2082,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2280,8 +2098,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2292,8 +2109,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_vpc_id_python">
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -2307,8 +2123,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_host_python">
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -2317,8 +2132,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_integrations_python">
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -2327,8 +2141,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkaserviceintegration">Sequence[Kafka<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2339,8 +2152,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_password_python">
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -2349,8 +2161,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_port_python">
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -2359,8 +2170,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -2369,8 +2179,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_uri_python">
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2379,8 +2188,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_username_python">
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -2389,8 +2197,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2399,8 +2206,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -2413,8 +2219,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2429,9 +2234,7 @@ deletion is done.
 <h4 id="kafkacomponent">Kafka<wbr>Component</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2439,8 +2242,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2448,8 +2250,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2457,8 +2258,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2466,8 +2266,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2475,8 +2274,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2484,8 +2282,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2493,14 +2290,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2508,8 +2302,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2517,8 +2310,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2526,8 +2318,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2535,8 +2326,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2544,8 +2334,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2553,8 +2342,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2562,14 +2350,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2577,8 +2362,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2586,8 +2370,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2595,8 +2378,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2604,8 +2386,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2613,8 +2394,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2622,8 +2402,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2631,14 +2410,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2646,8 +2422,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2655,8 +2430,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2664,8 +2438,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2673,8 +2446,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2682,8 +2454,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2691,8 +2462,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2700,16 +2470,13 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafka">Kafka<wbr>Kafka</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesscert_csharp">
 <a href="#accesscert_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -2718,8 +2485,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -2728,8 +2494,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecturi_csharp">
 <a href="#connecturi_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Uri</a>
@@ -2738,8 +2503,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka Connect URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resturi_csharp">
 <a href="#resturi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Uri</a>
@@ -2748,8 +2512,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka REST URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryuri_csharp">
 <a href="#schemaregistryuri_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Uri</a>
@@ -2758,14 +2521,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Schema Registry URI, if any
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesscert_go">
 <a href="#accesscert_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -2774,8 +2534,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -2784,8 +2543,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecturi_go">
 <a href="#connecturi_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Uri</a>
@@ -2794,8 +2552,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka Connect URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resturi_go">
 <a href="#resturi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Uri</a>
@@ -2804,8 +2561,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka REST URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryuri_go">
 <a href="#schemaregistryuri_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Uri</a>
@@ -2814,14 +2570,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Schema Registry URI, if any
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesscert_nodejs">
 <a href="#accesscert_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Cert</a>
@@ -2830,8 +2583,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -2840,8 +2592,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecturi_nodejs">
 <a href="#connecturi_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Uri</a>
@@ -2850,8 +2601,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka Connect URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resturi_nodejs">
 <a href="#resturi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Uri</a>
@@ -2860,8 +2610,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kafka REST URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryuri_nodejs">
 <a href="#schemaregistryuri_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Uri</a>
@@ -2870,14 +2619,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Schema Registry URI, if any
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_cert_python">
 <a href="#access_cert_python" style="color: inherit; text-decoration: inherit;">access_<wbr>cert</a>
@@ -2886,8 +2632,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -2896,8 +2641,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kafka client certificate key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_uri_python">
 <a href="#connect_uri_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>uri</a>
@@ -2906,8 +2650,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kafka Connect URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rest_uri_python">
 <a href="#rest_uri_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>uri</a>
@@ -2916,8 +2659,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kafka REST URI, if any
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_registry_uri_python">
 <a href="#schema_registry_uri_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>uri</a>
@@ -2926,16 +2668,13 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Schema Registry URI, if any
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -2944,8 +2683,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2954,8 +2692,7 @@ deletion is done.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_csharp">
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -2964,8 +2701,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethods_csharp">
 <a href="#kafkaauthenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
@@ -2974,8 +2710,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -2984,8 +2719,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectconfig_csharp">
 <a href="#kafkaconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
@@ -2994,8 +2728,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_csharp">
 <a href="#kafkarest_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -3004,8 +2737,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarestconfig_csharp">
 <a href="#kafkarestconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
@@ -3014,8 +2746,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaversion_csharp">
 <a href="#kafkaversion_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
@@ -3024,8 +2755,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -3034,8 +2764,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -3044,8 +2773,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -3054,8 +2782,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_csharp">
 <a href="#schemaregistry_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -3064,8 +2791,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryconfig_csharp">
 <a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
@@ -3074,14 +2800,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -3090,8 +2813,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -3100,8 +2822,7 @@ deletion is done.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_go">
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -3110,8 +2831,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethods_go">
 <a href="#kafkaauthenticationmethods_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
@@ -3120,8 +2840,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -3130,8 +2849,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectconfig_go">
 <a href="#kafkaconnectconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
@@ -3140,8 +2858,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_go">
 <a href="#kafkarest_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -3150,8 +2867,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarestconfig_go">
 <a href="#kafkarestconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
@@ -3160,8 +2876,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaversion_go">
 <a href="#kafkaversion_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
@@ -3170,8 +2885,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -3180,8 +2894,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -3190,8 +2903,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -3200,8 +2912,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_go">
 <a href="#schemaregistry_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -3210,8 +2921,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryconfig_go">
 <a href="#schemaregistryconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
@@ -3220,14 +2930,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
@@ -3236,8 +2943,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -3246,8 +2952,7 @@ deletion is done.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_nodejs">
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -3256,8 +2961,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethods_nodejs">
 <a href="#kafkaauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
@@ -3266,8 +2970,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
@@ -3276,8 +2979,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectconfig_nodejs">
 <a href="#kafkaconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
@@ -3286,8 +2988,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_nodejs">
 <a href="#kafkarest_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
@@ -3296,8 +2997,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarestconfig_nodejs">
 <a href="#kafkarestconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
@@ -3306,8 +3006,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaversion_nodejs">
 <a href="#kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
@@ -3316,8 +3015,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -3326,8 +3024,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -3336,8 +3033,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -3346,8 +3042,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_nodejs">
 <a href="#schemaregistry_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
@@ -3356,8 +3051,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistryconfig_nodejs">
 <a href="#schemaregistryconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Config</a>
@@ -3366,14 +3060,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
@@ -3382,8 +3073,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -3392,8 +3082,7 @@ deletion is done.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_python">
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -3402,8 +3091,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_methods_python">
 <a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
@@ -3412,8 +3100,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
@@ -3422,8 +3109,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_config_python">
 <a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
@@ -3432,8 +3118,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_rest_python">
 <a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
@@ -3442,8 +3127,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_rest_config_python">
 <a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
@@ -3452,8 +3136,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_version_python">
 <a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
@@ -3462,8 +3145,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -3472,8 +3154,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -3482,8 +3163,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -3492,8 +3172,7 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_registry_python">
 <a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
@@ -3502,8 +3181,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_registry_config_python">
 <a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
@@ -3512,16 +3190,13 @@ deletion is done.
         <span class="property-type"><a href="#kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatetopicsenable_csharp">
 <a href="#autocreatetopicsenable_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Topics<wbr>Enable</a>
@@ -3530,8 +3205,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable auto creation of topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_csharp">
 <a href="#compressiontype_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
@@ -3543,8 +3217,7 @@ deletion is done.
 configuration accepts the standard compression codecs ('gzip', 'snappy', 'lz4', 'zstd').
 It additionally accepts 'uncompressed' which is equivalent to no compression; and 'producer'
 which means retain the original compression codec set by the producer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionsmaxidlems_csharp">
 <a href="#connectionsmaxidlems_csharp" style="color: inherit; text-decoration: inherit;">Connections<wbr>Max<wbr>Idle<wbr>Ms</a>
@@ -3554,8 +3227,7 @@ which means retain the original compression codec set by the producer.
     </dt>
     <dd>{{% md %}}Idle connections timeout: the server socket processor 
 threads close the connections that idle for longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultreplicationfactor_csharp">
 <a href="#defaultreplicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
@@ -3564,8 +3236,7 @@ threads close the connections that idle for longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupinitialrebalancedelayms_csharp">
 <a href="#groupinitialrebalancedelayms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
@@ -3578,8 +3249,7 @@ coordinator will wait for more consumers to join a new group before performing t
 A longer delay means potentially fewer rebalances, but increases the time until processing begins.
 The default value for this is 3 seconds. During development and testing it might be desirable to set
 this to 0 in order to not delay test execution time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmaxsessiontimeoutms_csharp">
 <a href="#groupmaxsessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -3590,8 +3260,7 @@ this to 0 in order to not delay test execution time.
     <dd>{{% md %}}The maximum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_csharp">
 <a href="#groupminsessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -3602,8 +3271,7 @@ at the cost of a longer time to detect failures.
     <dd>{{% md %}}The minimum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanerdeleteretentionms_csharp">
 <a href="#logcleanerdeleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
@@ -3611,8 +3279,7 @@ at the cost of a longer time to detect failures.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermaxcompactionlagms_csharp">
 <a href="#logcleanermaxcompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -3622,8 +3289,7 @@ at the cost of a longer time to detect failures.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincleanableratio_csharp">
 <a href="#logcleanermincleanableratio_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Min<wbr>Cleanable<wbr>Ratio</a>
@@ -3635,8 +3301,7 @@ remain uncompacted. Only applicable for logs that are being compacted
 value means more frequent compactions but also more space wasted for logs. Consider setting
 log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
 high value for this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincompactionlagms_csharp">
 <a href="#logcleanermincompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -3646,8 +3311,7 @@ high value for this option.
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanuppolicy_csharp">
 <a href="#logcleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleanup<wbr>Policy</a>
@@ -3656,8 +3320,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalmessages_csharp">
 <a href="#logflushintervalmessages_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
@@ -3667,8 +3330,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
     </dt>
     <dd>{{% md %}}The number of messages accumulated on a log partition 
 before messages are flushed to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalms_csharp">
 <a href="#logflushintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -3678,8 +3340,7 @@ before messages are flushed to disk.
     </dt>
     <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
 in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexintervalbytes_csharp">
 <a href="#logindexintervalbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Interval<wbr>Bytes</a>
@@ -3688,8 +3349,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexsizemaxbytes_csharp">
 <a href="#logindexsizemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
@@ -3698,8 +3358,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size in bytes of the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagedownconversionenable_csharp">
 <a href="#logmessagedownconversionenable_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
@@ -3709,8 +3368,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
     </dt>
     <dd>{{% md %}}This configuration controls whether down-conversion 
 of message formats is enabled to satisfy consume requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestampdifferencemaxms_csharp">
 <a href="#logmessagetimestampdifferencemaxms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -3720,8 +3378,7 @@ of message formats is enabled to satisfy consume requests.
     </dt>
     <dd>{{% md %}}The maximum difference allowed between 
 the timestamp when a broker receives a message and the timestamp specified in the message
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestamptype_csharp">
 <a href="#logmessagetimestamptype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Timestamp<wbr>Type</a>
@@ -3731,8 +3388,7 @@ the timestamp when a broker receives a message and the timestamp specified in th
     </dt>
     <dd>{{% md %}}Define whether the timestamp in the message is 
 message create time or log append time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpreallocate_csharp">
 <a href="#logpreallocate_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Preallocate</a>
@@ -3741,8 +3397,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should pre allocate file when create new segment?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionbytes_csharp">
 <a href="#logretentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
@@ -3751,8 +3406,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of the log before deleting messages
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionhours_csharp">
 <a href="#logretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
@@ -3761,8 +3415,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of hours to keep a log file before deleting it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionms_csharp">
 <a href="#logretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
@@ -3773,8 +3426,7 @@ message create time or log append time.
     <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
 (in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
 time limit is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrolljitterms_csharp">
 <a href="#logrolljitterms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
@@ -3784,8 +3436,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
 (in milliseconds). If not set, the value in log.roll.jitter.hours is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrollms_csharp">
 <a href="#logrollms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Ms</a>
@@ -3794,8 +3445,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentbytes_csharp">
 <a href="#logsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
@@ -3804,8 +3454,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of a single log file
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentdeletedelayms_csharp">
 <a href="#logsegmentdeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -3815,8 +3464,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The amount of time to wait before deleting a file 
 from the filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperip_csharp">
 <a href="#maxconnectionsperip_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
@@ -3826,8 +3474,7 @@ from the filesystem.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxincrementalfetchsessioncacheslots_csharp">
 <a href="#maxincrementalfetchsessioncacheslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
@@ -3837,8 +3484,7 @@ address (defaults to 2147483647).
     </dt>
     <dd>{{% md %}}The maximum number of incremental fetch 
 sessions that the broker will maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagemaxbytes_csharp">
 <a href="#messagemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
@@ -3847,8 +3493,7 @@ sessions that the broker will maintain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of message that the server can receive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_csharp">
 <a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
@@ -3859,8 +3504,7 @@ sessions that the broker will maintain.
     <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
 min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
 the write to be considered successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numpartitions_csharp">
 <a href="#numpartitions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
@@ -3869,8 +3513,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetsretentionminutes_csharp">
 <a href="#offsetsretentionminutes_csharp" style="color: inherit; text-decoration: inherit;">Offsets<wbr>Retention<wbr>Minutes</a>
@@ -3879,8 +3522,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log retention window in minutes for offsets topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerpurgatorypurgeintervalrequests_csharp">
 <a href="#producerpurgatorypurgeintervalrequests_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Purgatory<wbr>Purge<wbr>Interval<wbr>Requests</a>
@@ -3890,8 +3532,7 @@ the write to be considered successful.
     </dt>
     <dd>{{% md %}}The purge interval (in number of 
 requests) of the producer request purgatory(defaults to 1000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchmaxbytes_csharp">
 <a href="#replicafetchmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -3903,8 +3544,7 @@ requests) of the producer request purgatory(defaults to 1000).
 for each partition (defaults to 1048576). This is not an absolute maximum, if the first record
 batch in the first non-empty partition of the fetch is larger than this value, the record batch
 will still be returned to ensure that progress can be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchresponsemaxbytes_csharp">
 <a href="#replicafetchresponsemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Fetch<wbr>Response<wbr>Max<wbr>Bytes</a>
@@ -3916,8 +3556,7 @@ will still be returned to ensure that progress can be made.
 response (defaults to 10485760). Records are fetched in batches, and if the first record batch
 in the first non-empty partition of the fetch is larger than this value, the record batch will
 still be returned to ensure that progress can be made. As such, this is not an absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="socketrequestmaxbytes_csharp">
 <a href="#socketrequestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -3927,8 +3566,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionremoveexpiredtransactioncleanupintervalms_csharp">
 <a href="#transactionremoveexpiredtransactioncleanupintervalms_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
@@ -3939,8 +3577,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     <dd>{{% md %}}The interval at which 
 to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
 to 3600000 (1 hour)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionstatelogsegmentbytes_csharp">
 <a href="#transactionstatelogsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
@@ -3951,14 +3588,11 @@ to 3600000 (1 hour)).
     <dd>{{% md %}}The transaction topic segment bytes should 
 be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
 to 104857600 (100 mebibytes)).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatetopicsenable_go">
 <a href="#autocreatetopicsenable_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Topics<wbr>Enable</a>
@@ -3967,8 +3601,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable auto creation of topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_go">
 <a href="#compressiontype_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
@@ -3980,8 +3613,7 @@ to 104857600 (100 mebibytes)).
 configuration accepts the standard compression codecs ('gzip', 'snappy', 'lz4', 'zstd').
 It additionally accepts 'uncompressed' which is equivalent to no compression; and 'producer'
 which means retain the original compression codec set by the producer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionsmaxidlems_go">
 <a href="#connectionsmaxidlems_go" style="color: inherit; text-decoration: inherit;">Connections<wbr>Max<wbr>Idle<wbr>Ms</a>
@@ -3991,8 +3623,7 @@ which means retain the original compression codec set by the producer.
     </dt>
     <dd>{{% md %}}Idle connections timeout: the server socket processor 
 threads close the connections that idle for longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultreplicationfactor_go">
 <a href="#defaultreplicationfactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
@@ -4001,8 +3632,7 @@ threads close the connections that idle for longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupinitialrebalancedelayms_go">
 <a href="#groupinitialrebalancedelayms_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
@@ -4015,8 +3645,7 @@ coordinator will wait for more consumers to join a new group before performing t
 A longer delay means potentially fewer rebalances, but increases the time until processing begins.
 The default value for this is 3 seconds. During development and testing it might be desirable to set
 this to 0 in order to not delay test execution time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmaxsessiontimeoutms_go">
 <a href="#groupmaxsessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -4027,8 +3656,7 @@ this to 0 in order to not delay test execution time.
     <dd>{{% md %}}The maximum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_go">
 <a href="#groupminsessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -4039,8 +3667,7 @@ at the cost of a longer time to detect failures.
     <dd>{{% md %}}The minimum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanerdeleteretentionms_go">
 <a href="#logcleanerdeleteretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
@@ -4048,8 +3675,7 @@ at the cost of a longer time to detect failures.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermaxcompactionlagms_go">
 <a href="#logcleanermaxcompactionlagms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -4059,8 +3685,7 @@ at the cost of a longer time to detect failures.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincleanableratio_go">
 <a href="#logcleanermincleanableratio_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Min<wbr>Cleanable<wbr>Ratio</a>
@@ -4072,8 +3697,7 @@ remain uncompacted. Only applicable for logs that are being compacted
 value means more frequent compactions but also more space wasted for logs. Consider setting
 log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
 high value for this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincompactionlagms_go">
 <a href="#logcleanermincompactionlagms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -4083,8 +3707,7 @@ high value for this option.
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanuppolicy_go">
 <a href="#logcleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleanup<wbr>Policy</a>
@@ -4093,8 +3716,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalmessages_go">
 <a href="#logflushintervalmessages_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
@@ -4104,8 +3726,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
     </dt>
     <dd>{{% md %}}The number of messages accumulated on a log partition 
 before messages are flushed to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalms_go">
 <a href="#logflushintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -4115,8 +3736,7 @@ before messages are flushed to disk.
     </dt>
     <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
 in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexintervalbytes_go">
 <a href="#logindexintervalbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Interval<wbr>Bytes</a>
@@ -4125,8 +3745,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexsizemaxbytes_go">
 <a href="#logindexsizemaxbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
@@ -4135,8 +3754,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size in bytes of the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagedownconversionenable_go">
 <a href="#logmessagedownconversionenable_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
@@ -4146,8 +3764,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
     </dt>
     <dd>{{% md %}}This configuration controls whether down-conversion 
 of message formats is enabled to satisfy consume requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestampdifferencemaxms_go">
 <a href="#logmessagetimestampdifferencemaxms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -4157,8 +3774,7 @@ of message formats is enabled to satisfy consume requests.
     </dt>
     <dd>{{% md %}}The maximum difference allowed between 
 the timestamp when a broker receives a message and the timestamp specified in the message
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestamptype_go">
 <a href="#logmessagetimestamptype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Timestamp<wbr>Type</a>
@@ -4168,8 +3784,7 @@ the timestamp when a broker receives a message and the timestamp specified in th
     </dt>
     <dd>{{% md %}}Define whether the timestamp in the message is 
 message create time or log append time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpreallocate_go">
 <a href="#logpreallocate_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Preallocate</a>
@@ -4178,8 +3793,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should pre allocate file when create new segment?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionbytes_go">
 <a href="#logretentionbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
@@ -4188,8 +3802,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of the log before deleting messages
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionhours_go">
 <a href="#logretentionhours_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Hours</a>
@@ -4198,8 +3811,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of hours to keep a log file before deleting it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionms_go">
 <a href="#logretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
@@ -4210,8 +3822,7 @@ message create time or log append time.
     <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
 (in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
 time limit is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrolljitterms_go">
 <a href="#logrolljitterms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
@@ -4221,8 +3832,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
 (in milliseconds). If not set, the value in log.roll.jitter.hours is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrollms_go">
 <a href="#logrollms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Ms</a>
@@ -4231,8 +3841,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentbytes_go">
 <a href="#logsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Bytes</a>
@@ -4241,8 +3850,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of a single log file
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentdeletedelayms_go">
 <a href="#logsegmentdeletedelayms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -4252,8 +3860,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The amount of time to wait before deleting a file 
 from the filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperip_go">
 <a href="#maxconnectionsperip_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
@@ -4263,8 +3870,7 @@ from the filesystem.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxincrementalfetchsessioncacheslots_go">
 <a href="#maxincrementalfetchsessioncacheslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
@@ -4274,8 +3880,7 @@ address (defaults to 2147483647).
     </dt>
     <dd>{{% md %}}The maximum number of incremental fetch 
 sessions that the broker will maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagemaxbytes_go">
 <a href="#messagemaxbytes_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
@@ -4284,8 +3889,7 @@ sessions that the broker will maintain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of message that the server can receive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_go">
 <a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
@@ -4296,8 +3900,7 @@ sessions that the broker will maintain.
     <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
 min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
 the write to be considered successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numpartitions_go">
 <a href="#numpartitions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
@@ -4306,8 +3909,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetsretentionminutes_go">
 <a href="#offsetsretentionminutes_go" style="color: inherit; text-decoration: inherit;">Offsets<wbr>Retention<wbr>Minutes</a>
@@ -4316,8 +3918,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log retention window in minutes for offsets topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerpurgatorypurgeintervalrequests_go">
 <a href="#producerpurgatorypurgeintervalrequests_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Purgatory<wbr>Purge<wbr>Interval<wbr>Requests</a>
@@ -4327,8 +3928,7 @@ the write to be considered successful.
     </dt>
     <dd>{{% md %}}The purge interval (in number of 
 requests) of the producer request purgatory(defaults to 1000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchmaxbytes_go">
 <a href="#replicafetchmaxbytes_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -4340,8 +3940,7 @@ requests) of the producer request purgatory(defaults to 1000).
 for each partition (defaults to 1048576). This is not an absolute maximum, if the first record
 batch in the first non-empty partition of the fetch is larger than this value, the record batch
 will still be returned to ensure that progress can be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchresponsemaxbytes_go">
 <a href="#replicafetchresponsemaxbytes_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Fetch<wbr>Response<wbr>Max<wbr>Bytes</a>
@@ -4353,8 +3952,7 @@ will still be returned to ensure that progress can be made.
 response (defaults to 10485760). Records are fetched in batches, and if the first record batch
 in the first non-empty partition of the fetch is larger than this value, the record batch will
 still be returned to ensure that progress can be made. As such, this is not an absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="socketrequestmaxbytes_go">
 <a href="#socketrequestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -4364,8 +3962,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionremoveexpiredtransactioncleanupintervalms_go">
 <a href="#transactionremoveexpiredtransactioncleanupintervalms_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
@@ -4376,8 +3973,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     <dd>{{% md %}}The interval at which 
 to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
 to 3600000 (1 hour)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionstatelogsegmentbytes_go">
 <a href="#transactionstatelogsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
@@ -4388,14 +3984,11 @@ to 3600000 (1 hour)).
     <dd>{{% md %}}The transaction topic segment bytes should 
 be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
 to 104857600 (100 mebibytes)).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatetopicsenable_nodejs">
 <a href="#autocreatetopicsenable_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Topics<wbr>Enable</a>
@@ -4404,8 +3997,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable auto creation of topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_nodejs">
 <a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
@@ -4417,8 +4009,7 @@ to 104857600 (100 mebibytes)).
 configuration accepts the standard compression codecs ('gzip', 'snappy', 'lz4', 'zstd').
 It additionally accepts 'uncompressed' which is equivalent to no compression; and 'producer'
 which means retain the original compression codec set by the producer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionsmaxidlems_nodejs">
 <a href="#connectionsmaxidlems_nodejs" style="color: inherit; text-decoration: inherit;">connections<wbr>Max<wbr>Idle<wbr>Ms</a>
@@ -4428,8 +4019,7 @@ which means retain the original compression codec set by the producer.
     </dt>
     <dd>{{% md %}}Idle connections timeout: the server socket processor 
 threads close the connections that idle for longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultreplicationfactor_nodejs">
 <a href="#defaultreplicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
@@ -4438,8 +4028,7 @@ threads close the connections that idle for longer than this.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupinitialrebalancedelayms_nodejs">
 <a href="#groupinitialrebalancedelayms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
@@ -4452,8 +4041,7 @@ coordinator will wait for more consumers to join a new group before performing t
 A longer delay means potentially fewer rebalances, but increases the time until processing begins.
 The default value for this is 3 seconds. During development and testing it might be desirable to set
 this to 0 in order to not delay test execution time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmaxsessiontimeoutms_nodejs">
 <a href="#groupmaxsessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -4464,8 +4052,7 @@ this to 0 in order to not delay test execution time.
     <dd>{{% md %}}The maximum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_nodejs">
 <a href="#groupminsessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
@@ -4476,8 +4063,7 @@ at the cost of a longer time to detect failures.
     <dd>{{% md %}}The minimum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanerdeleteretentionms_nodejs">
 <a href="#logcleanerdeleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
@@ -4485,8 +4071,7 @@ at the cost of a longer time to detect failures.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermaxcompactionlagms_nodejs">
 <a href="#logcleanermaxcompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -4496,8 +4081,7 @@ at the cost of a longer time to detect failures.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincleanableratio_nodejs">
 <a href="#logcleanermincleanableratio_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Cleanable<wbr>Ratio</a>
@@ -4509,8 +4093,7 @@ remain uncompacted. Only applicable for logs that are being compacted
 value means more frequent compactions but also more space wasted for logs. Consider setting
 log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
 high value for this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanermincompactionlagms_nodejs">
 <a href="#logcleanermincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -4520,8 +4103,7 @@ high value for this option.
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcleanuppolicy_nodejs">
 <a href="#logcleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleanup<wbr>Policy</a>
@@ -4530,8 +4112,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalmessages_nodejs">
 <a href="#logflushintervalmessages_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Messages</a>
@@ -4541,8 +4122,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
     </dt>
     <dd>{{% md %}}The number of messages accumulated on a log partition 
 before messages are flushed to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logflushintervalms_nodejs">
 <a href="#logflushintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -4552,8 +4132,7 @@ before messages are flushed to disk.
     </dt>
     <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
 in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexintervalbytes_nodejs">
 <a href="#logindexintervalbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Index<wbr>Interval<wbr>Bytes</a>
@@ -4562,8 +4141,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logindexsizemaxbytes_nodejs">
 <a href="#logindexsizemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
@@ -4572,8 +4150,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size in bytes of the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagedownconversionenable_nodejs">
 <a href="#logmessagedownconversionenable_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
@@ -4583,8 +4160,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
     </dt>
     <dd>{{% md %}}This configuration controls whether down-conversion 
 of message formats is enabled to satisfy consume requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestampdifferencemaxms_nodejs">
 <a href="#logmessagetimestampdifferencemaxms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -4594,8 +4170,7 @@ of message formats is enabled to satisfy consume requests.
     </dt>
     <dd>{{% md %}}The maximum difference allowed between 
 the timestamp when a broker receives a message and the timestamp specified in the message
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmessagetimestamptype_nodejs">
 <a href="#logmessagetimestamptype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Type</a>
@@ -4605,8 +4180,7 @@ the timestamp when a broker receives a message and the timestamp specified in th
     </dt>
     <dd>{{% md %}}Define whether the timestamp in the message is 
 message create time or log append time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpreallocate_nodejs">
 <a href="#logpreallocate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Preallocate</a>
@@ -4615,8 +4189,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should pre allocate file when create new segment?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionbytes_nodejs">
 <a href="#logretentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
@@ -4625,8 +4198,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of the log before deleting messages
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionhours_nodejs">
 <a href="#logretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Hours</a>
@@ -4635,8 +4207,7 @@ message create time or log append time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of hours to keep a log file before deleting it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logretentionms_nodejs">
 <a href="#logretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Ms</a>
@@ -4647,8 +4218,7 @@ message create time or log append time.
     <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
 (in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
 time limit is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrolljitterms_nodejs">
 <a href="#logrolljitterms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
@@ -4658,8 +4228,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
 (in milliseconds). If not set, the value in log.roll.jitter.hours is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logrollms_nodejs">
 <a href="#logrollms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Roll<wbr>Ms</a>
@@ -4668,8 +4237,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentbytes_nodejs">
 <a href="#logsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Bytes</a>
@@ -4678,8 +4246,7 @@ time limit is applied.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of a single log file
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsegmentdeletedelayms_nodejs">
 <a href="#logsegmentdeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -4689,8 +4256,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The amount of time to wait before deleting a file 
 from the filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperip_nodejs">
 <a href="#maxconnectionsperip_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
@@ -4700,8 +4266,7 @@ from the filesystem.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxincrementalfetchsessioncacheslots_nodejs">
 <a href="#maxincrementalfetchsessioncacheslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
@@ -4711,8 +4276,7 @@ address (defaults to 2147483647).
     </dt>
     <dd>{{% md %}}The maximum number of incremental fetch 
 sessions that the broker will maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagemaxbytes_nodejs">
 <a href="#messagemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
@@ -4721,8 +4285,7 @@ sessions that the broker will maintain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size of message that the server can receive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_nodejs">
 <a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
@@ -4733,8 +4296,7 @@ sessions that the broker will maintain.
     <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
 min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
 the write to be considered successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numpartitions_nodejs">
 <a href="#numpartitions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
@@ -4743,8 +4305,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetsretentionminutes_nodejs">
 <a href="#offsetsretentionminutes_nodejs" style="color: inherit; text-decoration: inherit;">offsets<wbr>Retention<wbr>Minutes</a>
@@ -4753,8 +4314,7 @@ the write to be considered successful.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log retention window in minutes for offsets topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerpurgatorypurgeintervalrequests_nodejs">
 <a href="#producerpurgatorypurgeintervalrequests_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Purgatory<wbr>Purge<wbr>Interval<wbr>Requests</a>
@@ -4764,8 +4324,7 @@ the write to be considered successful.
     </dt>
     <dd>{{% md %}}The purge interval (in number of 
 requests) of the producer request purgatory(defaults to 1000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchmaxbytes_nodejs">
 <a href="#replicafetchmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -4777,8 +4336,7 @@ requests) of the producer request purgatory(defaults to 1000).
 for each partition (defaults to 1048576). This is not an absolute maximum, if the first record
 batch in the first non-empty partition of the fetch is larger than this value, the record batch
 will still be returned to ensure that progress can be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicafetchresponsemaxbytes_nodejs">
 <a href="#replicafetchresponsemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Response<wbr>Max<wbr>Bytes</a>
@@ -4790,8 +4348,7 @@ will still be returned to ensure that progress can be made.
 response (defaults to 10485760). Records are fetched in batches, and if the first record batch
 in the first non-empty partition of the fetch is larger than this value, the record batch will
 still be returned to ensure that progress can be made. As such, this is not an absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="socketrequestmaxbytes_nodejs">
 <a href="#socketrequestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -4801,8 +4358,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionremoveexpiredtransactioncleanupintervalms_nodejs">
 <a href="#transactionremoveexpiredtransactioncleanupintervalms_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
@@ -4813,8 +4369,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     <dd>{{% md %}}The interval at which 
 to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
 to 3600000 (1 hour)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionstatelogsegmentbytes_nodejs">
 <a href="#transactionstatelogsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
@@ -4825,14 +4380,11 @@ to 3600000 (1 hour)).
     <dd>{{% md %}}The transaction topic segment bytes should 
 be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
 to 104857600 (100 mebibytes)).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_create_topics_enable_python">
 <a href="#auto_create_topics_enable_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>topics_<wbr>enable</a>
@@ -4841,8 +4393,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable auto creation of topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_type_python">
 <a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
@@ -4854,8 +4405,7 @@ to 104857600 (100 mebibytes)).
 configuration accepts the standard compression codecs ('gzip', 'snappy', 'lz4', 'zstd').
 It additionally accepts 'uncompressed' which is equivalent to no compression; and 'producer'
 which means retain the original compression codec set by the producer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connections_max_idle_ms_python">
 <a href="#connections_max_idle_ms_python" style="color: inherit; text-decoration: inherit;">connections_<wbr>max_<wbr>idle_<wbr>ms</a>
@@ -4865,8 +4415,7 @@ which means retain the original compression codec set by the producer.
     </dt>
     <dd>{{% md %}}Idle connections timeout: the server socket processor 
 threads close the connections that idle for longer than this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_replication_factor_python">
 <a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
@@ -4875,8 +4424,7 @@ threads close the connections that idle for longer than this.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_initial_rebalance_delay_ms_python">
 <a href="#group_initial_rebalance_delay_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>initial_<wbr>rebalance_<wbr>delay_<wbr>ms</a>
@@ -4889,8 +4437,7 @@ coordinator will wait for more consumers to join a new group before performing t
 A longer delay means potentially fewer rebalances, but increases the time until processing begins.
 The default value for this is 3 seconds. During development and testing it might be desirable to set
 this to 0 in order to not delay test execution time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_max_session_timeout_ms_python">
 <a href="#group_max_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>max_<wbr>session_<wbr>timeout_<wbr>ms</a>
@@ -4901,8 +4448,7 @@ this to 0 in order to not delay test execution time.
     <dd>{{% md %}}The maximum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_min_session_timeout_ms_python">
 <a href="#group_min_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>min_<wbr>session_<wbr>timeout_<wbr>ms</a>
@@ -4913,8 +4459,7 @@ at the cost of a longer time to detect failures.
     <dd>{{% md %}}The minimum allowed session timeout for registered 
 consumers. Longer timeouts give consumers more time to process messages in between heartbeats
 at the cost of a longer time to detect failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_cleaner_delete_retention_ms_python">
 <a href="#log_cleaner_delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>delete_<wbr>retention_<wbr>ms</a>
@@ -4922,8 +4467,7 @@ at the cost of a longer time to detect failures.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_cleaner_max_compaction_lag_ms_python">
 <a href="#log_cleaner_max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
@@ -4933,8 +4477,7 @@ at the cost of a longer time to detect failures.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_cleaner_min_cleanable_ratio_python">
 <a href="#log_cleaner_min_cleanable_ratio_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>cleanable_<wbr>ratio</a>
@@ -4946,8 +4489,7 @@ remain uncompacted. Only applicable for logs that are being compacted
 value means more frequent compactions but also more space wasted for logs. Consider setting
 log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
 high value for this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_cleaner_min_compaction_lag_ms_python">
 <a href="#log_cleaner_min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
@@ -4957,8 +4499,7 @@ high value for this option.
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_cleanup_policy_python">
 <a href="#log_cleanup_policy_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleanup_<wbr>policy</a>
@@ -4967,8 +4508,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_flush_interval_messages_python">
 <a href="#log_flush_interval_messages_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>messages</a>
@@ -4978,8 +4518,7 @@ uncompacted in the log. Only applicable for logs that are being compacted.
     </dt>
     <dd>{{% md %}}The number of messages accumulated on a log partition 
 before messages are flushed to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_flush_interval_ms_python">
 <a href="#log_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>ms</a>
@@ -4989,8 +4528,7 @@ before messages are flushed to disk.
     </dt>
     <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
 in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_index_interval_bytes_python">
 <a href="#log_index_interval_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>index_<wbr>interval_<wbr>bytes</a>
@@ -4999,8 +4537,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_index_size_max_bytes_python">
 <a href="#log_index_size_max_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>index_<wbr>size_<wbr>max_<wbr>bytes</a>
@@ -5009,8 +4546,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size in bytes of the offset index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_message_downconversion_enable_python">
 <a href="#log_message_downconversion_enable_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>downconversion_<wbr>enable</a>
@@ -5020,8 +4556,7 @@ in memory before flushed to disk. If not set, the value in log.flush.scheduler.i
     </dt>
     <dd>{{% md %}}This configuration controls whether down-conversion 
 of message formats is enabled to satisfy consume requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_message_timestamp_difference_max_ms_python">
 <a href="#log_message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
@@ -5031,8 +4566,7 @@ of message formats is enabled to satisfy consume requests.
     </dt>
     <dd>{{% md %}}The maximum difference allowed between 
 the timestamp when a broker receives a message and the timestamp specified in the message
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_message_timestamp_type_python">
 <a href="#log_message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>type</a>
@@ -5042,8 +4576,7 @@ the timestamp when a broker receives a message and the timestamp specified in th
     </dt>
     <dd>{{% md %}}Define whether the timestamp in the message is 
 message create time or log append time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_preallocate_python">
 <a href="#log_preallocate_python" style="color: inherit; text-decoration: inherit;">log_<wbr>preallocate</a>
@@ -5052,8 +4585,7 @@ message create time or log append time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should pre allocate file when create new segment?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_retention_bytes_python">
 <a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
@@ -5062,8 +4594,7 @@ message create time or log append time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size of the log before deleting messages
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_retention_hours_python">
 <a href="#log_retention_hours_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>hours</a>
@@ -5072,8 +4603,7 @@ message create time or log append time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of hours to keep a log file before deleting it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_retention_ms_python">
 <a href="#log_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>ms</a>
@@ -5084,8 +4614,7 @@ message create time or log append time.
     <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
 (in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
 time limit is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_roll_jitter_ms_python">
 <a href="#log_roll_jitter_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>roll_<wbr>jitter_<wbr>ms</a>
@@ -5095,8 +4624,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
 (in milliseconds). If not set, the value in log.roll.jitter.hours is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_roll_ms_python">
 <a href="#log_roll_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>roll_<wbr>ms</a>
@@ -5105,8 +4633,7 @@ time limit is applied.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_segment_bytes_python">
 <a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
@@ -5115,8 +4642,7 @@ time limit is applied.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size of a single log file
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_segment_delete_delay_ms_python">
 <a href="#log_segment_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>delete_<wbr>delay_<wbr>ms</a>
@@ -5126,8 +4652,7 @@ time limit is applied.
     </dt>
     <dd>{{% md %}}The amount of time to wait before deleting a file 
 from the filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connections_per_ip_python">
 <a href="#max_connections_per_ip_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>ip</a>
@@ -5137,8 +4662,7 @@ from the filesystem.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_incremental_fetch_session_cache_slots_python">
 <a href="#max_incremental_fetch_session_cache_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>incremental_<wbr>fetch_<wbr>session_<wbr>cache_<wbr>slots</a>
@@ -5148,8 +4672,7 @@ address (defaults to 2147483647).
     </dt>
     <dd>{{% md %}}The maximum number of incremental fetch 
 sessions that the broker will maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_max_bytes_python">
 <a href="#message_max_bytes_python" style="color: inherit; text-decoration: inherit;">message_<wbr>max_<wbr>bytes</a>
@@ -5158,8 +4681,7 @@ sessions that the broker will maintain.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size of message that the server can receive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_insync_replicas_python">
 <a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
@@ -5170,8 +4692,7 @@ sessions that the broker will maintain.
     <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
 min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
 the write to be considered successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_partitions_python">
 <a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
@@ -5180,8 +4701,7 @@ the write to be considered successful.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsets_retention_minutes_python">
 <a href="#offsets_retention_minutes_python" style="color: inherit; text-decoration: inherit;">offsets_<wbr>retention_<wbr>minutes</a>
@@ -5190,8 +4710,7 @@ the write to be considered successful.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log retention window in minutes for offsets topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producer_purgatory_purge_interval_requests_python">
 <a href="#producer_purgatory_purge_interval_requests_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>purgatory_<wbr>purge_<wbr>interval_<wbr>requests</a>
@@ -5201,8 +4720,7 @@ the write to be considered successful.
     </dt>
     <dd>{{% md %}}The purge interval (in number of 
 requests) of the producer request purgatory(defaults to 1000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_fetch_max_bytes_python">
 <a href="#replica_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>max_<wbr>bytes</a>
@@ -5214,8 +4732,7 @@ requests) of the producer request purgatory(defaults to 1000).
 for each partition (defaults to 1048576). This is not an absolute maximum, if the first record
 batch in the first non-empty partition of the fetch is larger than this value, the record batch
 will still be returned to ensure that progress can be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_fetch_response_max_bytes_python">
 <a href="#replica_fetch_response_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>response_<wbr>max_<wbr>bytes</a>
@@ -5227,8 +4744,7 @@ will still be returned to ensure that progress can be made.
 response (defaults to 10485760). Records are fetched in batches, and if the first record batch
 in the first non-empty partition of the fetch is larger than this value, the record batch will
 still be returned to ensure that progress can be made. As such, this is not an absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="socket_request_max_bytes_python">
 <a href="#socket_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>request_<wbr>max_<wbr>bytes</a>
@@ -5238,8 +4754,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_remove_expired_transaction_cleanup_interval_ms_python">
 <a href="#transaction_remove_expired_transaction_cleanup_interval_ms_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>remove_<wbr>expired_<wbr>transaction_<wbr>cleanup_<wbr>interval_<wbr>ms</a>
@@ -5250,8 +4765,7 @@ still be returned to ensure that progress can be made. As such, this is not an a
     <dd>{{% md %}}The interval at which 
 to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
 to 3600000 (1 hour)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_state_log_segment_bytes_python">
 <a href="#transaction_state_log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>state_<wbr>log_<wbr>segment_<wbr>bytes</a>
@@ -5262,16 +4776,13 @@ to 3600000 (1 hour)).
     <dd>{{% md %}}The transaction topic segment bytes should 
 be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
 to 104857600 (100 mebibytes)).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -5280,8 +4791,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable certificate/SSL authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_csharp">
 <a href="#sasl_csharp" style="color: inherit; text-decoration: inherit;">Sasl</a>
@@ -5290,14 +4800,11 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable SASL authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -5306,8 +4813,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable certificate/SSL authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_go">
 <a href="#sasl_go" style="color: inherit; text-decoration: inherit;">Sasl</a>
@@ -5316,14 +4822,11 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable SASL authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -5332,8 +4835,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable certificate/SSL authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_nodejs">
 <a href="#sasl_nodejs" style="color: inherit; text-decoration: inherit;">sasl</a>
@@ -5342,14 +4844,11 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable SASL authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -5358,8 +4857,7 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable certificate/SSL authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_python">
 <a href="#sasl_python" style="color: inherit; text-decoration: inherit;">sasl</a>
@@ -5368,16 +4866,13 @@ to 104857600 (100 mebibytes)).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable SASL authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_csharp">
 <a href="#connectorclientconfigoverridepolicy_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
@@ -5387,8 +4882,7 @@ to 104857600 (100 mebibytes)).
     </dt>
     <dd>{{% md %}}Defines what client configurations can 
 be overridden by the connector. Default is None
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerautooffsetreset_csharp">
 <a href="#consumerautooffsetreset_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
@@ -5398,8 +4892,7 @@ be overridden by the connector. Default is None
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
 if the current offset does not exist any more on the server. Default is earliest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerfetchmaxbytes_csharp">
 <a href="#consumerfetchmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -5411,8 +4904,7 @@ if the current offset does not exist any more on the server. Default is earliest
 if the first record batch in the first non-empty partition of the fetch is larger than this value,
 the record batch will still be returned to ensure that the consumer can make progress. As such,
 this is not a absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerisolationlevel_csharp">
 <a href="#consumerisolationlevel_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
@@ -5422,8 +4914,7 @@ this is not a absolute maximum.
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpartitionfetchbytes_csharp">
 <a href="#consumermaxpartitionfetchbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
@@ -5434,8 +4925,7 @@ the default, but read_committed can be used if consume-exactly-once behavior is 
     <dd>{{% md %}}Records are fetched in batches by the consumer.If 
 the first record batch in the first non-empty partition of the fetch is larger than this limit,
 the batch will still be returned to ensure that the consumer can make progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollintervalms_csharp">
 <a href="#consumermaxpollintervalms_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
@@ -5445,8 +4935,7 @@ the batch will still be returned to ensure that the consumer can make progress.
     </dt>
     <dd>{{% md %}}The maximum delay in milliseconds between invocations 
 of poll() when using consumer group management (defaults to 300000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollrecords_csharp">
 <a href="#consumermaxpollrecords_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Records</a>
@@ -5456,8 +4945,7 @@ of poll() when using consumer group management (defaults to 300000).
     </dt>
     <dd>{{% md %}}The maximum number of records returned in a single call 
 to poll() (defaults to 500).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushintervalms_csharp">
 <a href="#offsetflushintervalms_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -5467,8 +4955,7 @@ to poll() (defaults to 500).
     </dt>
     <dd>{{% md %}}The interval at which to try committing offsets for 
 tasks (defaults to 60000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushtimeoutms_csharp">
 <a href="#offsetflushtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
@@ -5479,8 +4966,7 @@ tasks (defaults to 60000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to 
 flush and partition offset data to be committed to offset storage before cancelling the process
 and restoring the offset data to be committed in a future attempt (defaults to 5000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producermaxrequestsize_csharp">
 <a href="#producermaxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
@@ -5490,8 +4976,7 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
     </dt>
     <dd>{{% md %}}This setting will limit the number of record batches 
 the producer will send in a single request to avoid sending huge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeoutms_csharp">
 <a href="#sessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
@@ -5501,14 +4986,11 @@ the producer will send in a single request to avoid sending huge requests.
     </dt>
     <dd>{{% md %}}The timeout in milliseconds used to detect failures when 
 using Kafka’s group management facilities (defaults to 10000).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_go">
 <a href="#connectorclientconfigoverridepolicy_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
@@ -5518,8 +5000,7 @@ using Kafka’s group management facilities (defaults to 10000).
     </dt>
     <dd>{{% md %}}Defines what client configurations can 
 be overridden by the connector. Default is None
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerautooffsetreset_go">
 <a href="#consumerautooffsetreset_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
@@ -5529,8 +5010,7 @@ be overridden by the connector. Default is None
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
 if the current offset does not exist any more on the server. Default is earliest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerfetchmaxbytes_go">
 <a href="#consumerfetchmaxbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -5542,8 +5022,7 @@ if the current offset does not exist any more on the server. Default is earliest
 if the first record batch in the first non-empty partition of the fetch is larger than this value,
 the record batch will still be returned to ensure that the consumer can make progress. As such,
 this is not a absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerisolationlevel_go">
 <a href="#consumerisolationlevel_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
@@ -5553,8 +5032,7 @@ this is not a absolute maximum.
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpartitionfetchbytes_go">
 <a href="#consumermaxpartitionfetchbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
@@ -5565,8 +5043,7 @@ the default, but read_committed can be used if consume-exactly-once behavior is 
     <dd>{{% md %}}Records are fetched in batches by the consumer.If 
 the first record batch in the first non-empty partition of the fetch is larger than this limit,
 the batch will still be returned to ensure that the consumer can make progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollintervalms_go">
 <a href="#consumermaxpollintervalms_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
@@ -5576,8 +5053,7 @@ the batch will still be returned to ensure that the consumer can make progress.
     </dt>
     <dd>{{% md %}}The maximum delay in milliseconds between invocations 
 of poll() when using consumer group management (defaults to 300000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollrecords_go">
 <a href="#consumermaxpollrecords_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Records</a>
@@ -5587,8 +5063,7 @@ of poll() when using consumer group management (defaults to 300000).
     </dt>
     <dd>{{% md %}}The maximum number of records returned in a single call 
 to poll() (defaults to 500).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushintervalms_go">
 <a href="#offsetflushintervalms_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -5598,8 +5073,7 @@ to poll() (defaults to 500).
     </dt>
     <dd>{{% md %}}The interval at which to try committing offsets for 
 tasks (defaults to 60000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushtimeoutms_go">
 <a href="#offsetflushtimeoutms_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
@@ -5610,8 +5084,7 @@ tasks (defaults to 60000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to 
 flush and partition offset data to be committed to offset storage before cancelling the process
 and restoring the offset data to be committed in a future attempt (defaults to 5000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producermaxrequestsize_go">
 <a href="#producermaxrequestsize_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
@@ -5621,8 +5094,7 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
     </dt>
     <dd>{{% md %}}This setting will limit the number of record batches 
 the producer will send in a single request to avoid sending huge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeoutms_go">
 <a href="#sessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
@@ -5632,14 +5104,11 @@ the producer will send in a single request to avoid sending huge requests.
     </dt>
     <dd>{{% md %}}The timeout in milliseconds used to detect failures when 
 using Kafka’s group management facilities (defaults to 10000).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_nodejs">
 <a href="#connectorclientconfigoverridepolicy_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
@@ -5649,8 +5118,7 @@ using Kafka’s group management facilities (defaults to 10000).
     </dt>
     <dd>{{% md %}}Defines what client configurations can 
 be overridden by the connector. Default is None
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerautooffsetreset_nodejs">
 <a href="#consumerautooffsetreset_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
@@ -5660,8 +5128,7 @@ be overridden by the connector. Default is None
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
 if the current offset does not exist any more on the server. Default is earliest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerfetchmaxbytes_nodejs">
 <a href="#consumerfetchmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
@@ -5673,8 +5140,7 @@ if the current offset does not exist any more on the server. Default is earliest
 if the first record batch in the first non-empty partition of the fetch is larger than this value,
 the record batch will still be returned to ensure that the consumer can make progress. As such,
 this is not a absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerisolationlevel_nodejs">
 <a href="#consumerisolationlevel_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
@@ -5684,8 +5150,7 @@ this is not a absolute maximum.
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpartitionfetchbytes_nodejs">
 <a href="#consumermaxpartitionfetchbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
@@ -5696,8 +5161,7 @@ the default, but read_committed can be used if consume-exactly-once behavior is 
     <dd>{{% md %}}Records are fetched in batches by the consumer.If 
 the first record batch in the first non-empty partition of the fetch is larger than this limit,
 the batch will still be returned to ensure that the consumer can make progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollintervalms_nodejs">
 <a href="#consumermaxpollintervalms_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
@@ -5707,8 +5171,7 @@ the batch will still be returned to ensure that the consumer can make progress.
     </dt>
     <dd>{{% md %}}The maximum delay in milliseconds between invocations 
 of poll() when using consumer group management (defaults to 300000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumermaxpollrecords_nodejs">
 <a href="#consumermaxpollrecords_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Records</a>
@@ -5718,8 +5181,7 @@ of poll() when using consumer group management (defaults to 300000).
     </dt>
     <dd>{{% md %}}The maximum number of records returned in a single call 
 to poll() (defaults to 500).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushintervalms_nodejs">
 <a href="#offsetflushintervalms_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
@@ -5729,8 +5191,7 @@ to poll() (defaults to 500).
     </dt>
     <dd>{{% md %}}The interval at which to try committing offsets for 
 tasks (defaults to 60000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offsetflushtimeoutms_nodejs">
 <a href="#offsetflushtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
@@ -5741,8 +5202,7 @@ tasks (defaults to 60000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to 
 flush and partition offset data to be committed to offset storage before cancelling the process
 and restoring the offset data to be committed in a future attempt (defaults to 5000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producermaxrequestsize_nodejs">
 <a href="#producermaxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Max<wbr>Request<wbr>Size</a>
@@ -5752,8 +5212,7 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
     </dt>
     <dd>{{% md %}}This setting will limit the number of record batches 
 the producer will send in a single request to avoid sending huge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontimeoutms_nodejs">
 <a href="#sessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
@@ -5763,14 +5222,11 @@ the producer will send in a single request to avoid sending huge requests.
     </dt>
     <dd>{{% md %}}The timeout in milliseconds used to detect failures when 
 using Kafka’s group management facilities (defaults to 10000).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connector_client_config_override_policy_python">
 <a href="#connector_client_config_override_policy_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>client_<wbr>config_<wbr>override_<wbr>policy</a>
@@ -5780,8 +5236,7 @@ using Kafka’s group management facilities (defaults to 10000).
     </dt>
     <dd>{{% md %}}Defines what client configurations can 
 be overridden by the connector. Default is None
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_auto_offset_reset_python">
 <a href="#consumer_auto_offset_reset_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>auto_<wbr>offset_<wbr>reset</a>
@@ -5791,8 +5246,7 @@ be overridden by the connector. Default is None
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
 if the current offset does not exist any more on the server. Default is earliest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_fetch_max_bytes_python">
 <a href="#consumer_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>fetch_<wbr>max_<wbr>bytes</a>
@@ -5804,8 +5258,7 @@ if the current offset does not exist any more on the server. Default is earliest
 if the first record batch in the first non-empty partition of the fetch is larger than this value,
 the record batch will still be returned to ensure that the consumer can make progress. As such,
 this is not a absolute maximum.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_isolation_level_python">
 <a href="#consumer_isolation_level_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>isolation_<wbr>level</a>
@@ -5815,8 +5268,7 @@ this is not a absolute maximum.
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_max_partition_fetch_bytes_python">
 <a href="#consumer_max_partition_fetch_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>partition_<wbr>fetch_<wbr>bytes</a>
@@ -5827,8 +5279,7 @@ the default, but read_committed can be used if consume-exactly-once behavior is 
     <dd>{{% md %}}Records are fetched in batches by the consumer.If 
 the first record batch in the first non-empty partition of the fetch is larger than this limit,
 the batch will still be returned to ensure that the consumer can make progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_max_poll_interval_ms_python">
 <a href="#consumer_max_poll_interval_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>interval_<wbr>ms</a>
@@ -5838,8 +5289,7 @@ the batch will still be returned to ensure that the consumer can make progress.
     </dt>
     <dd>{{% md %}}The maximum delay in milliseconds between invocations 
 of poll() when using consumer group management (defaults to 300000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_max_poll_records_python">
 <a href="#consumer_max_poll_records_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>records</a>
@@ -5849,8 +5299,7 @@ of poll() when using consumer group management (defaults to 300000).
     </dt>
     <dd>{{% md %}}The maximum number of records returned in a single call 
 to poll() (defaults to 500).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_flush_interval_ms_python">
 <a href="#offset_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>interval_<wbr>ms</a>
@@ -5860,8 +5309,7 @@ to poll() (defaults to 500).
     </dt>
     <dd>{{% md %}}The interval at which to try committing offsets for 
 tasks (defaults to 60000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_flush_timeout_ms_python">
 <a href="#offset_flush_timeout_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>timeout_<wbr>ms</a>
@@ -5872,8 +5320,7 @@ tasks (defaults to 60000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to 
 flush and partition offset data to be committed to offset storage before cancelling the process
 and restoring the offset data to be committed in a future attempt (defaults to 5000).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producer_max_request_size_python">
 <a href="#producer_max_request_size_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>max_<wbr>request_<wbr>size</a>
@@ -5883,8 +5330,7 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
     </dt>
     <dd>{{% md %}}This setting will limit the number of record batches 
 the producer will send in a single request to avoid sending huge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_timeout_ms_python">
 <a href="#session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout_<wbr>ms</a>
@@ -5894,16 +5340,13 @@ the producer will send in a single request to avoid sending huge requests.
     </dt>
     <dd>{{% md %}}The timeout in milliseconds used to detect failures when 
 using Kafka’s group management facilities (defaults to 10000).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerenableautocommit_csharp">
 <a href="#consumerenableautocommit_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Enable<wbr>Auto<wbr>Commit</a>
@@ -5913,8 +5356,7 @@ using Kafka’s group management facilities (defaults to 10000).
     </dt>
     <dd>{{% md %}}If true the consumer's offset will be periodically 
 committed to Kafka in the background
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequestmaxbytes_csharp">
 <a href="#consumerrequestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -5924,8 +5366,7 @@ committed to Kafka in the background
     </dt>
     <dd>{{% md %}}Maximum number of bytes in unencoded message keys and 
 values by a single request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequesttimeoutms_csharp">
 <a href="#consumerrequesttimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Request<wbr>Timeout<wbr>Ms</a>
@@ -5935,8 +5376,7 @@ values by a single request
     </dt>
     <dd>{{% md %}}The maximum total time to wait for messages for a 
 request if the maximum number of messages has not yet been reached
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="produceracks_csharp">
 <a href="#produceracks_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Acks</a>
@@ -5947,8 +5387,7 @@ request if the maximum number of messages has not yet been reached
     <dd>{{% md %}}The number of acknowledgments the producer requires the leader to 
 have received before considering a request complete. If set to 'all' or '-1', the leader will wait
 for the full set of in-sync replicas to acknowledge the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerlingerms_csharp">
 <a href="#producerlingerms_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Linger<wbr>Ms</a>
@@ -5957,8 +5396,7 @@ for the full set of in-sync replicas to acknowledge the record.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wait for up to the given delay to allow batching records together
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simpleconsumerpoolsizemax_csharp">
 <a href="#simpleconsumerpoolsizemax_csharp" style="color: inherit; text-decoration: inherit;">Simpleconsumer<wbr>Pool<wbr>Size<wbr>Max</a>
@@ -5968,14 +5406,11 @@ for the full set of in-sync replicas to acknowledge the record.
     </dt>
     <dd>{{% md %}}Maximum number of SimpleConsumers that can be 
 instantiated per broker.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerenableautocommit_go">
 <a href="#consumerenableautocommit_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Enable<wbr>Auto<wbr>Commit</a>
@@ -5985,8 +5420,7 @@ instantiated per broker.
     </dt>
     <dd>{{% md %}}If true the consumer's offset will be periodically 
 committed to Kafka in the background
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequestmaxbytes_go">
 <a href="#consumerrequestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -5996,8 +5430,7 @@ committed to Kafka in the background
     </dt>
     <dd>{{% md %}}Maximum number of bytes in unencoded message keys and 
 values by a single request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequesttimeoutms_go">
 <a href="#consumerrequesttimeoutms_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Request<wbr>Timeout<wbr>Ms</a>
@@ -6007,8 +5440,7 @@ values by a single request
     </dt>
     <dd>{{% md %}}The maximum total time to wait for messages for a 
 request if the maximum number of messages has not yet been reached
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="produceracks_go">
 <a href="#produceracks_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Acks</a>
@@ -6019,8 +5451,7 @@ request if the maximum number of messages has not yet been reached
     <dd>{{% md %}}The number of acknowledgments the producer requires the leader to 
 have received before considering a request complete. If set to 'all' or '-1', the leader will wait
 for the full set of in-sync replicas to acknowledge the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerlingerms_go">
 <a href="#producerlingerms_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Linger<wbr>Ms</a>
@@ -6029,8 +5460,7 @@ for the full set of in-sync replicas to acknowledge the record.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wait for up to the given delay to allow batching records together
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simpleconsumerpoolsizemax_go">
 <a href="#simpleconsumerpoolsizemax_go" style="color: inherit; text-decoration: inherit;">Simpleconsumer<wbr>Pool<wbr>Size<wbr>Max</a>
@@ -6040,14 +5470,11 @@ for the full set of in-sync replicas to acknowledge the record.
     </dt>
     <dd>{{% md %}}Maximum number of SimpleConsumers that can be 
 instantiated per broker.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumerenableautocommit_nodejs">
 <a href="#consumerenableautocommit_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Enable<wbr>Auto<wbr>Commit</a>
@@ -6057,8 +5484,7 @@ instantiated per broker.
     </dt>
     <dd>{{% md %}}If true the consumer's offset will be periodically 
 committed to Kafka in the background
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequestmaxbytes_nodejs">
 <a href="#consumerrequestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Max<wbr>Bytes</a>
@@ -6068,8 +5494,7 @@ committed to Kafka in the background
     </dt>
     <dd>{{% md %}}Maximum number of bytes in unencoded message keys and 
 values by a single request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumerrequesttimeoutms_nodejs">
 <a href="#consumerrequesttimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Timeout<wbr>Ms</a>
@@ -6079,8 +5504,7 @@ values by a single request
     </dt>
     <dd>{{% md %}}The maximum total time to wait for messages for a 
 request if the maximum number of messages has not yet been reached
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="produceracks_nodejs">
 <a href="#produceracks_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Acks</a>
@@ -6091,8 +5515,7 @@ request if the maximum number of messages has not yet been reached
     <dd>{{% md %}}The number of acknowledgments the producer requires the leader to 
 have received before considering a request complete. If set to 'all' or '-1', the leader will wait
 for the full set of in-sync replicas to acknowledge the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producerlingerms_nodejs">
 <a href="#producerlingerms_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Linger<wbr>Ms</a>
@@ -6101,8 +5524,7 @@ for the full set of in-sync replicas to acknowledge the record.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wait for up to the given delay to allow batching records together
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simpleconsumerpoolsizemax_nodejs">
 <a href="#simpleconsumerpoolsizemax_nodejs" style="color: inherit; text-decoration: inherit;">simpleconsumer<wbr>Pool<wbr>Size<wbr>Max</a>
@@ -6112,14 +5534,11 @@ for the full set of in-sync replicas to acknowledge the record.
     </dt>
     <dd>{{% md %}}Maximum number of SimpleConsumers that can be 
 instantiated per broker.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consumer_enable_auto_commit_python">
 <a href="#consumer_enable_auto_commit_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>enable_<wbr>auto_<wbr>commit</a>
@@ -6129,8 +5548,7 @@ instantiated per broker.
     </dt>
     <dd>{{% md %}}If true the consumer's offset will be periodically 
 committed to Kafka in the background
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_request_max_bytes_python">
 <a href="#consumer_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>max_<wbr>bytes</a>
@@ -6140,8 +5558,7 @@ committed to Kafka in the background
     </dt>
     <dd>{{% md %}}Maximum number of bytes in unencoded message keys and 
 values by a single request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consumer_request_timeout_ms_python">
 <a href="#consumer_request_timeout_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>timeout_<wbr>ms</a>
@@ -6151,8 +5568,7 @@ values by a single request
     </dt>
     <dd>{{% md %}}The maximum total time to wait for messages for a 
 request if the maximum number of messages has not yet been reached
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producer_acks_python">
 <a href="#producer_acks_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>acks</a>
@@ -6163,8 +5579,7 @@ request if the maximum number of messages has not yet been reached
     <dd>{{% md %}}The number of acknowledgments the producer requires the leader to 
 have received before considering a request complete. If set to 'all' or '-1', the leader will wait
 for the full set of in-sync replicas to acknowledge the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="producer_linger_ms_python">
 <a href="#producer_linger_ms_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>linger_<wbr>ms</a>
@@ -6173,8 +5588,7 @@ for the full set of in-sync replicas to acknowledge the record.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Wait for up to the given delay to allow batching records together
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simpleconsumer_pool_size_max_python">
 <a href="#simpleconsumer_pool_size_max_python" style="color: inherit; text-decoration: inherit;">simpleconsumer_<wbr>pool_<wbr>size_<wbr>max</a>
@@ -6184,16 +5598,13 @@ for the full set of in-sync replicas to acknowledge the record.
     </dt>
     <dd>{{% md %}}Maximum number of SimpleConsumers that can be 
 instantiated per broker.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6203,14 +5614,11 @@ instantiated per broker.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6220,14 +5628,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6237,14 +5642,11 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6254,16 +5656,13 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_csharp">
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -6272,8 +5671,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -6282,8 +5680,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_csharp">
 <a href="#kafkarest_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -6292,8 +5689,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_csharp">
 <a href="#schemaregistry_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -6302,14 +5698,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_go">
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -6318,8 +5711,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -6328,8 +5720,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_go">
 <a href="#kafkarest_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -6338,8 +5729,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_go">
 <a href="#schemaregistry_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -6348,14 +5738,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_nodejs">
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -6364,8 +5751,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
@@ -6374,8 +5760,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_nodejs">
 <a href="#kafkarest_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
@@ -6384,8 +5769,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_nodejs">
 <a href="#schemaregistry_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
@@ -6394,14 +5778,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_python">
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -6410,8 +5791,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
@@ -6420,8 +5800,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_rest_python">
 <a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
@@ -6430,8 +5809,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_registry_python">
 <a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
@@ -6440,16 +5818,13 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_csharp">
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -6458,8 +5833,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -6468,8 +5842,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_csharp">
 <a href="#kafkarest_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -6478,8 +5851,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6489,8 +5861,7 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_csharp">
 <a href="#schemaregistry_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -6499,14 +5870,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_go">
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
@@ -6515,8 +5883,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
@@ -6525,8 +5892,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_go">
 <a href="#kafkarest_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
@@ -6535,8 +5901,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -6546,8 +5911,7 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_go">
 <a href="#schemaregistry_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
@@ -6556,14 +5920,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_nodejs">
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -6572,8 +5933,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
@@ -6582,8 +5942,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkarest_nodejs">
 <a href="#kafkarest_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
@@ -6592,8 +5951,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6603,8 +5961,7 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaregistry_nodejs">
 <a href="#schemaregistry_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
@@ -6613,14 +5970,11 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kafka_python">
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
@@ -6629,8 +5983,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
@@ -6639,8 +5992,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_connect
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_rest_python">
 <a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
@@ -6649,8 +6001,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable kafka_rest
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -6660,8 +6011,7 @@ service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_registry_python">
 <a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
@@ -6670,16 +6020,13 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="leadereligibility_csharp">
 <a href="#leadereligibility_csharp" style="color: inherit; text-decoration: inherit;">Leader<wbr>Eligibility</a>
@@ -6691,8 +6038,7 @@ service nodes that are in a project VPC or another type of private network
 participate in leader election. It might be needed to disable this when the schemas topic is replicated
 to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicname_csharp">
 <a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -6706,14 +6052,11 @@ changing this configuration in an existing Schema Registry / Karapace setup lead
 schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
 put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
 Defaults to '_schemas'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="leadereligibility_go">
 <a href="#leadereligibility_go" style="color: inherit; text-decoration: inherit;">Leader<wbr>Eligibility</a>
@@ -6725,8 +6068,7 @@ Defaults to '_schemas'.
 participate in leader election. It might be needed to disable this when the schemas topic is replicated
 to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicname_go">
 <a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -6740,14 +6082,11 @@ changing this configuration in an existing Schema Registry / Karapace setup lead
 schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
 put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
 Defaults to '_schemas'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="leadereligibility_nodejs">
 <a href="#leadereligibility_nodejs" style="color: inherit; text-decoration: inherit;">leader<wbr>Eligibility</a>
@@ -6759,8 +6098,7 @@ Defaults to '_schemas'.
 participate in leader election. It might be needed to disable this when the schemas topic is replicated
 to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicname_nodejs">
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
@@ -6774,14 +6112,11 @@ changing this configuration in an existing Schema Registry / Karapace setup lead
 schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
 put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
 Defaults to '_schemas'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="leader_eligibility_python">
 <a href="#leader_eligibility_python" style="color: inherit; text-decoration: inherit;">leader_<wbr>eligibility</a>
@@ -6793,8 +6128,7 @@ Defaults to '_schemas'.
 participate in leader election. It might be needed to disable this when the schemas topic is replicated
 to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topic_name_python">
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
@@ -6808,16 +6142,13 @@ changing this configuration in an existing Schema Registry / Karapace setup lead
 schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
 put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
 Defaults to '_schemas'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkaserviceintegration">Kafka<wbr>Service<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -6825,8 +6156,7 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -6834,14 +6164,11 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -6849,8 +6176,7 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -6858,14 +6184,11 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -6873,8 +6196,7 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -6882,14 +6204,11 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -6897,8 +6216,7 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -6906,8 +6224,7 @@ Defaults to '_schemas'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -6918,6 +6235,6 @@ Defaults to '_schemas'.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

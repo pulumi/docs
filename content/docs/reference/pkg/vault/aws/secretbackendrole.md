@@ -43,9 +43,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ AWS secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -211,8 +180,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentialtype_csharp">
 <a href="#credentialtype_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
@@ -223,8 +191,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultststtl_csharp">
 <a href="#defaultststtl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
@@ -237,8 +204,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamgroups_csharp">
 <a href="#iamgroups_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
@@ -252,8 +218,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxststtl_csharp">
 <a href="#maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
@@ -264,8 +229,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -275,8 +239,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyarns_csharp">
 <a href="#policyarns_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
@@ -291,8 +254,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydocument_csharp">
 <a href="#policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -305,8 +267,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearns_csharp">
 <a href="#rolearns_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
@@ -317,14 +278,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -334,8 +292,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentialtype_go">
 <a href="#credentialtype_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
@@ -346,8 +303,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultststtl_go">
 <a href="#defaultststtl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
@@ -360,8 +316,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamgroups_go">
 <a href="#iamgroups_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
@@ -375,8 +330,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxststtl_go">
 <a href="#maxststtl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
@@ -387,8 +341,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -398,8 +351,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyarns_go">
 <a href="#policyarns_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
@@ -414,8 +366,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydocument_go">
 <a href="#policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -428,8 +379,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearns_go">
 <a href="#rolearns_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
@@ -440,14 +390,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -457,8 +404,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credentialtype_nodejs">
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
@@ -469,8 +415,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultststtl_nodejs">
 <a href="#defaultststtl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sts<wbr>Ttl</a>
@@ -483,8 +428,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamgroups_nodejs">
 <a href="#iamgroups_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Groups</a>
@@ -498,8 +442,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxststtl_nodejs">
 <a href="#maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
@@ -510,8 +453,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -521,8 +463,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyarns_nodejs">
 <a href="#policyarns_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arns</a>
@@ -537,8 +478,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydocument_nodejs">
 <a href="#policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
@@ -551,8 +491,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearns_nodejs">
 <a href="#rolearns_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arns</a>
@@ -563,14 +502,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -580,8 +516,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credential_type_python">
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
@@ -592,8 +527,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_sts_ttl_python">
 <a href="#default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
@@ -606,8 +540,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_groups_python">
 <a href="#iam_groups_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>groups</a>
@@ -621,8 +554,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_sts_ttl_python">
 <a href="#max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
@@ -633,8 +565,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -644,8 +575,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_arns_python">
 <a href="#policy_arns_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arns</a>
@@ -660,8 +590,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_document_python">
 <a href="#policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
@@ -674,8 +603,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_arns_python">
 <a href="#role_arns_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arns</a>
@@ -686,8 +614,7 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -698,9 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -708,14 +633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -723,14 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -738,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -753,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,9 +796,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -893,8 +806,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialtype_csharp">
 <a href="#state_credentialtype_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
@@ -905,8 +817,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultststtl_csharp">
 <a href="#state_defaultststtl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
@@ -919,8 +830,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamgroups_csharp">
 <a href="#state_iamgroups_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
@@ -934,8 +844,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxststtl_csharp">
 <a href="#state_maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
@@ -946,8 +855,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -957,8 +865,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyarns_csharp">
 <a href="#state_policyarns_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
@@ -973,8 +880,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_csharp">
 <a href="#state_policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -987,8 +893,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearns_csharp">
 <a href="#state_rolearns_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
@@ -999,14 +904,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1016,8 +918,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialtype_go">
 <a href="#state_credentialtype_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
@@ -1028,8 +929,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultststtl_go">
 <a href="#state_defaultststtl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
@@ -1042,8 +942,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamgroups_go">
 <a href="#state_iamgroups_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
@@ -1057,8 +956,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxststtl_go">
 <a href="#state_maxststtl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
@@ -1069,8 +967,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1080,8 +977,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyarns_go">
 <a href="#state_policyarns_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
@@ -1096,8 +992,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_go">
 <a href="#state_policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -1110,8 +1005,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearns_go">
 <a href="#state_rolearns_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
@@ -1122,14 +1016,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1139,8 +1030,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialtype_nodejs">
 <a href="#state_credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
@@ -1151,8 +1041,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultststtl_nodejs">
 <a href="#state_defaultststtl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sts<wbr>Ttl</a>
@@ -1165,8 +1054,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamgroups_nodejs">
 <a href="#state_iamgroups_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Groups</a>
@@ -1180,8 +1068,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxststtl_nodejs">
 <a href="#state_maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
@@ -1192,8 +1079,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1203,8 +1089,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyarns_nodejs">
 <a href="#state_policyarns_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arns</a>
@@ -1219,8 +1104,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_nodejs">
 <a href="#state_policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
@@ -1233,8 +1117,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearns_nodejs">
 <a href="#state_rolearns_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arns</a>
@@ -1245,14 +1128,11 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1262,8 +1142,7 @@ prohibited otherwise.
     </dt>
     <dd>{{% md %}}The path the AWS secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credential_type_python">
 <a href="#state_credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
@@ -1274,8 +1153,7 @@ with no leading or trailing `/`s.
     <dd>{{% md %}}Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
 `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_sts_ttl_python">
 <a href="#state_default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
@@ -1288,8 +1166,7 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_groups_python">
 <a href="#state_iam_groups_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>groups</a>
@@ -1303,8 +1180,7 @@ type of `assumed_role` or `federation_token`, the policies sent to the
 corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
 policies from each group in `iam_groups` combined with the `policy_document`
 and `policy_arns` parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_sts_ttl_python">
 <a href="#state_max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
@@ -1315,8 +1191,7 @@ and `policy_arns` parameters.
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
 one of `assumed_role` or `federation_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1326,8 +1201,7 @@ one of `assumed_role` or `federation_token`.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_arns_python">
 <a href="#state_policy_arns_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arns</a>
@@ -1342,8 +1216,7 @@ attached to IAM users when they are requested. With `assumed_role` and
 can do, similar to `policy_document`. When `credential_type` is `iam_user` or
 `federation_token`, at least one of `policy_document` or `policy_arns` must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_document_python">
 <a href="#state_policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
@@ -1356,8 +1229,7 @@ behavior depends on the credential type. With `iam_user`, the policy document
 will be attached to the IAM user generated and augment the permissions the IAM
 user has. With `assumed_role` and `federation_token`, the policy document will
 act as a filter on what the credentials can do, similar to `policy_arns`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arns_python">
 <a href="#state_role_arns_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arns</a>
@@ -1368,8 +1240,7 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
     <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when `credential_type` is `assumed_role` and
 prohibited otherwise.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1385,6 +1256,6 @@ prohibited otherwise.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

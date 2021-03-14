@@ -15,11 +15,17 @@ Provides an RDS instance backup policy resource and used to configure instance b
 > **NOTE:** Each DB instance has a backup policy and it will be set default values when destroying the resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -63,9 +69,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -131,9 +140,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -161,9 +173,12 @@ instance = alicloud.rds.Instance("instance",
 policy = alicloud.rds.BackupPolicy("policy", instance_id=instance.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -192,9 +207,16 @@ const instance = new alicloud.rds.Instance("instance", {
 const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BackupPolicy Resource {#create}
@@ -219,9 +241,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -229,9 +249,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -239,9 +257,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -249,10 +265,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -278,9 +291,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -288,9 +299,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -298,9 +307,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -308,9 +315,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -318,18 +323,13 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -337,9 +337,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -347,9 +345,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -357,10 +353,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -375,9 +368,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -386,8 +377,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_csharp">
 <a href="#archivebackupkeepcount_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -396,8 +386,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_csharp">
 <a href="#archivebackupkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -406,8 +395,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_csharp">
 <a href="#archivebackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -416,8 +404,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_csharp">
 <a href="#backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -426,8 +413,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_csharp">
 <a href="#backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -436,8 +422,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_csharp">
 <a href="#backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -446,8 +431,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="compresstype_csharp">
 <a href="#compresstype_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
@@ -456,8 +440,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_csharp">
 <a href="#enablebackuplog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
@@ -466,8 +449,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_csharp">
 <a href="#highspaceusageprotection_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -476,8 +458,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_csharp">
 <a href="#locallogretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -486,8 +467,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_csharp">
 <a href="#locallogretentionspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -496,8 +476,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_csharp">
 <a href="#logbackup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
@@ -506,8 +485,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_csharp">
 <a href="#logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -516,8 +494,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_csharp">
 <a href="#logbackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -526,8 +503,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_csharp">
 <a href="#logretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
@@ -536,8 +512,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_csharp">
 <a href="#preferredbackupperiods_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
@@ -546,8 +521,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_csharp">
 <a href="#preferredbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
@@ -556,8 +530,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -566,14 +539,11 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -582,8 +552,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_go">
 <a href="#archivebackupkeepcount_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -592,8 +561,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_go">
 <a href="#archivebackupkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -602,8 +570,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_go">
 <a href="#archivebackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -612,8 +579,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_go">
 <a href="#backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -622,8 +588,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_go">
 <a href="#backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -632,8 +597,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_go">
 <a href="#backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -642,8 +606,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="compresstype_go">
 <a href="#compresstype_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
@@ -652,8 +615,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_go">
 <a href="#enablebackuplog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
@@ -662,8 +624,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_go">
 <a href="#highspaceusageprotection_go" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -672,8 +633,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_go">
 <a href="#locallogretentionhours_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -682,8 +642,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_go">
 <a href="#locallogretentionspace_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -692,8 +651,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_go">
 <a href="#logbackup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
@@ -702,8 +660,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_go">
 <a href="#logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -712,8 +669,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_go">
 <a href="#logbackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -722,8 +678,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_go">
 <a href="#logretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
@@ -732,8 +687,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_go">
 <a href="#preferredbackupperiods_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
@@ -742,8 +696,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_go">
 <a href="#preferredbackuptime_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
@@ -752,8 +705,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -762,14 +714,11 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -778,8 +727,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_nodejs">
 <a href="#archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -788,8 +736,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_nodejs">
 <a href="#archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -798,8 +745,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_nodejs">
 <a href="#archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -808,8 +754,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_nodejs">
 <a href="#backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
@@ -818,8 +763,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_nodejs">
 <a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
@@ -828,8 +772,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_nodejs">
 <a href="#backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
@@ -838,8 +781,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="compresstype_nodejs">
 <a href="#compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
@@ -848,8 +790,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_nodejs">
 <a href="#enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
@@ -858,8 +799,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_nodejs">
 <a href="#highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -868,8 +808,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_nodejs">
 <a href="#locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -878,8 +817,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_nodejs">
 <a href="#locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -888,8 +826,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_nodejs">
 <a href="#logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
@@ -898,8 +835,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_nodejs">
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
@@ -908,8 +844,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_nodejs">
 <a href="#logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -918,8 +853,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_nodejs">
 <a href="#logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
@@ -928,8 +862,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_nodejs">
 <a href="#preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
@@ -938,8 +871,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_nodejs">
 <a href="#preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
@@ -948,8 +880,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -958,14 +889,11 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -974,8 +902,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archive_backup_keep_count_python">
 <a href="#archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
@@ -984,8 +911,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archive_backup_keep_policy_python">
 <a href="#archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
@@ -994,8 +920,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archive_backup_retention_period_python">
 <a href="#archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
@@ -1004,8 +929,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backup_periods_python">
 <a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
@@ -1014,8 +938,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="backup_retention_period_python">
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
@@ -1024,8 +947,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backup_time_python">
 <a href="#backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
@@ -1034,8 +956,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="compress_type_python">
 <a href="#compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
@@ -1044,8 +965,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backup_log_python">
 <a href="#enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
@@ -1054,8 +974,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_space_usage_protection_python">
 <a href="#high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
@@ -1064,8 +983,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_log_retention_hours_python">
 <a href="#local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
@@ -1074,8 +992,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_log_retention_space_python">
 <a href="#local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
@@ -1084,8 +1001,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="log_backup_python">
 <a href="#log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
@@ -1094,8 +1010,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="log_backup_frequency_python">
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
@@ -1104,8 +1019,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_backup_retention_period_python">
 <a href="#log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
@@ -1114,8 +1028,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="log_retention_period_python">
 <a href="#log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
@@ -1124,8 +1037,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_periods_python">
 <a href="#preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
@@ -1134,8 +1046,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_time_python">
 <a href="#preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
@@ -1144,8 +1055,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -1154,8 +1064,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1166,9 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1176,14 +1083,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1191,14 +1095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1206,14 +1107,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1221,8 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1349,9 +1246,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeepcount_csharp">
 <a href="#state_archivebackupkeepcount_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -1360,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_csharp">
 <a href="#state_archivebackupkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -1370,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_csharp">
 <a href="#state_archivebackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1380,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_csharp">
 <a href="#state_backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -1390,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_csharp">
 <a href="#state_backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -1400,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_csharp">
 <a href="#state_backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -1410,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_csharp">
 <a href="#state_compresstype_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
@@ -1420,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_csharp">
 <a href="#state_enablebackuplog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
@@ -1430,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_csharp">
 <a href="#state_highspaceusageprotection_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -1440,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1450,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_csharp">
 <a href="#state_locallogretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -1460,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_csharp">
 <a href="#state_locallogretentionspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -1470,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_csharp">
 <a href="#state_logbackup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
@@ -1480,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_csharp">
 <a href="#state_logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -1490,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_csharp">
 <a href="#state_logbackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1500,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_csharp">
 <a href="#state_logretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
@@ -1510,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_csharp">
 <a href="#state_preferredbackupperiods_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
@@ -1520,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_csharp">
 <a href="#state_preferredbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
@@ -1530,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_csharp">
 <a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1540,14 +1417,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeepcount_go">
 <a href="#state_archivebackupkeepcount_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -1556,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_go">
 <a href="#state_archivebackupkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -1566,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_go">
 <a href="#state_archivebackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1576,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_go">
 <a href="#state_backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -1586,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_go">
 <a href="#state_backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
@@ -1596,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_go">
 <a href="#state_backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -1606,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_go">
 <a href="#state_compresstype_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
@@ -1616,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_go">
 <a href="#state_enablebackuplog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
@@ -1626,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_go">
 <a href="#state_highspaceusageprotection_go" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -1636,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1646,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_go">
 <a href="#state_locallogretentionhours_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -1656,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_go">
 <a href="#state_locallogretentionspace_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -1666,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_go">
 <a href="#state_logbackup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
@@ -1676,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_go">
 <a href="#state_logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -1686,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_go">
 <a href="#state_logbackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1696,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_go">
 <a href="#state_logretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
@@ -1706,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_go">
 <a href="#state_preferredbackupperiods_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
@@ -1716,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_go">
 <a href="#state_preferredbackuptime_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
@@ -1726,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_go">
 <a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1736,14 +1592,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeepcount_nodejs">
 <a href="#state_archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
@@ -1752,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_nodejs">
 <a href="#state_archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
@@ -1762,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_nodejs">
 <a href="#state_archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1772,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_nodejs">
 <a href="#state_backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
@@ -1782,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_nodejs">
 <a href="#state_backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
@@ -1792,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_nodejs">
 <a href="#state_backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
@@ -1802,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_nodejs">
 <a href="#state_compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
@@ -1812,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_nodejs">
 <a href="#state_enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
@@ -1822,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_nodejs">
 <a href="#state_highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
@@ -1832,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1842,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_nodejs">
 <a href="#state_locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
@@ -1852,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_nodejs">
 <a href="#state_locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
@@ -1862,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_nodejs">
 <a href="#state_logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
@@ -1872,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_nodejs">
 <a href="#state_logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
@@ -1882,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_nodejs">
 <a href="#state_logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
@@ -1892,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_nodejs">
 <a href="#state_logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
@@ -1902,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_nodejs">
 <a href="#state_preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
@@ -1912,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_nodejs">
 <a href="#state_preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
@@ -1922,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_nodejs">
 <a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -1932,14 +1767,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archive_backup_keep_count_python">
 <a href="#state_archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
@@ -1948,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archive_backup_keep_policy_python">
 <a href="#state_archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
@@ -1958,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archive_backup_retention_period_python">
 <a href="#state_archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
@@ -1968,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backup_periods_python">
 <a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
@@ -1978,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_retention_period_python">
 <a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
@@ -1988,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backup_time_python">
 <a href="#state_backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
@@ -1998,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_compress_type_python">
 <a href="#state_compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
@@ -2008,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_backup_log_python">
 <a href="#state_enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
@@ -2018,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_high_space_usage_protection_python">
 <a href="#state_high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
@@ -2028,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -2038,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_log_retention_hours_python">
 <a href="#state_local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
@@ -2048,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_log_retention_space_python">
 <a href="#state_local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
@@ -2058,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_log_backup_python">
 <a href="#state_log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
@@ -2068,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_backup_frequency_python">
 <a href="#state_log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
@@ -2078,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_backup_retention_period_python">
 <a href="#state_log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
@@ -2088,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_log_retention_period_python">
 <a href="#state_log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
@@ -2098,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_periods_python">
 <a href="#state_preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
@@ -2108,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_time_python">
 <a href="#state_preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
@@ -2118,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retention_period_python">
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -2128,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -2155,6 +1968,6 @@ RDS backup policy can be imported using the id or instance id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

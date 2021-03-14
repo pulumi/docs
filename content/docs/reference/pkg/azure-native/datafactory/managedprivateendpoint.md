@@ -14,11 +14,17 @@ Managed private endpoint resource type.
 API Version: 2018-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ManagedVirtualNetworks_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -80,9 +89,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -101,9 +113,12 @@ managed_private_endpoint = azure_native.datafactory.ManagedPrivateEndpoint("mana
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -123,9 +138,16 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedPrivateEndpoint Resource {#create}
@@ -150,9 +172,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +180,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +188,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +196,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -209,9 +222,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -219,9 +230,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -229,9 +238,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -239,9 +246,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -249,18 +254,13 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +268,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +276,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,10 +284,7 @@ const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -306,9 +299,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -316,8 +307,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedvirtualnetworkname_csharp">
 <a href="#managedvirtualnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Name</a>
@@ -325,8 +315,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -334,8 +323,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +331,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedprivateendpointname_csharp">
 <a href="#managedprivateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Private<wbr>Endpoint<wbr>Name</a>
@@ -352,14 +339,11 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -367,8 +351,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedvirtualnetworkname_go">
 <a href="#managedvirtualnetworkname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Name</a>
@@ -376,8 +359,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -385,8 +367,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -394,8 +375,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedprivateendpointname_go">
 <a href="#managedprivateendpointname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Private<wbr>Endpoint<wbr>Name</a>
@@ -403,14 +383,11 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -418,8 +395,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedvirtualnetworkname_nodejs">
 <a href="#managedvirtualnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Name</a>
@@ -427,8 +403,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -436,8 +411,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint</a></span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -445,8 +419,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedprivateendpointname_nodejs">
 <a href="#managedprivateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Private<wbr>Endpoint<wbr>Name</a>
@@ -454,14 +427,11 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -469,8 +439,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_virtual_network_name_python">
 <a href="#managed_virtual_network_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>name</a>
@@ -478,8 +447,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed virtual network name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -487,8 +455,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -496,8 +463,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_private_endpoint_name_python">
 <a href="#managed_private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>private_<wbr>endpoint_<wbr>name</a>
@@ -505,8 +471,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Managed private endpoint name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -517,9 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -527,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -536,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -545,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -554,14 +514,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -569,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -578,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -587,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -596,14 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -611,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -620,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -629,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -638,14 +586,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -653,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -662,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -671,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -680,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -697,9 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -707,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -716,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -725,14 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The approval status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The approval status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -740,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -749,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -758,14 +690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The approval status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The approval status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -773,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -782,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -791,14 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The approval status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The approval status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -806,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actions required on the managed private endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -815,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The managed private endpoint description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -824,16 +746,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The approval status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The approval status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_csharp">
 <a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -841,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -850,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_csharp">
 <a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -859,14 +776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_go">
 <a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -874,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -883,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_go">
 <a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -892,14 +804,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_nodejs">
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -907,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -916,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_nodejs">
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -925,14 +832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_python">
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -940,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -949,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_resource_id_python">
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
@@ -958,16 +860,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedprivateendpointresponse">Managed<wbr>Private<wbr>Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isreserved_csharp">
 <a href="#isreserved_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Reserved</a>
@@ -975,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -984,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstate_csharp">
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
@@ -993,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionstatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdns_csharp">
 <a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -1002,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1011,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_csharp">
 <a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -1020,14 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isreserved_go">
 <a href="#isreserved_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Reserved</a>
@@ -1035,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1044,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstate_go">
 <a href="#connectionstate_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
@@ -1053,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdns_go">
 <a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -1062,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1071,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_go">
 <a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -1080,14 +966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isreserved_nodejs">
 <a href="#isreserved_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Reserved</a>
@@ -1095,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1104,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstate_nodejs">
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
@@ -1113,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdns_nodejs">
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -1122,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -1131,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_nodejs">
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -1140,14 +1018,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_reserved_python">
 <a href="#is_reserved_python" style="color: inherit; text-decoration: inherit;">is_<wbr>reserved</a>
@@ -1155,8 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes whether the managed private endpoint is reserved{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1164,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint provisioning state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_state_python">
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
@@ -1173,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdns_python">
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -1182,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1191,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to which the managed private endpoint is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_resource_id_python">
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
@@ -1200,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -43,9 +43,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -210,8 +179,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationstatements_csharp">
 <a href="#creationstatements_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Statements</a>
@@ -221,8 +189,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
@@ -232,8 +199,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -243,8 +209,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -254,8 +219,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -264,8 +228,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewstatements_csharp">
 <a href="#renewstatements_csharp" style="color: inherit; text-decoration: inherit;">Renew<wbr>Statements</a>
@@ -275,8 +238,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationstatements_csharp">
 <a href="#revocationstatements_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Statements</a>
@@ -286,8 +248,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackstatements_csharp">
 <a href="#rollbackstatements_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Statements</a>
@@ -297,14 +258,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -313,8 +271,7 @@ rolling back creation due to an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationstatements_go">
 <a href="#creationstatements_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Statements</a>
@@ -324,8 +281,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
@@ -335,8 +291,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -346,8 +301,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -357,8 +311,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -367,8 +320,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewstatements_go">
 <a href="#renewstatements_go" style="color: inherit; text-decoration: inherit;">Renew<wbr>Statements</a>
@@ -378,8 +330,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationstatements_go">
 <a href="#revocationstatements_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Statements</a>
@@ -389,8 +340,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackstatements_go">
 <a href="#rollbackstatements_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Statements</a>
@@ -400,14 +350,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -416,8 +363,7 @@ rolling back creation due to an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationstatements_nodejs">
 <a href="#creationstatements_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Statements</a>
@@ -427,8 +373,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
@@ -438,8 +383,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -449,8 +393,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -460,8 +403,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -470,8 +412,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewstatements_nodejs">
 <a href="#renewstatements_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Statements</a>
@@ -481,8 +422,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationstatements_nodejs">
 <a href="#revocationstatements_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Statements</a>
@@ -492,8 +432,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollbackstatements_nodejs">
 <a href="#rollbackstatements_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Statements</a>
@@ -503,14 +442,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -519,8 +455,7 @@ rolling back creation due to an error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creation_statements_python">
 <a href="#creation_statements_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>statements</a>
@@ -530,8 +465,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_name_python">
 <a href="#db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
@@ -541,8 +475,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -552,8 +485,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -563,8 +495,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -573,8 +504,7 @@ role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renew_statements_python">
 <a href="#renew_statements_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>statements</a>
@@ -584,8 +514,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocation_statements_python">
 <a href="#revocation_statements_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>statements</a>
@@ -595,8 +524,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollback_statements_python">
 <a href="#rollback_statements_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>statements</a>
@@ -606,8 +534,7 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -618,9 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -628,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -643,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -658,14 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -673,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,9 +716,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -812,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationstatements_csharp">
 <a href="#state_creationstatements_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Statements</a>
@@ -823,8 +735,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbname_csharp">
 <a href="#state_dbname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
@@ -834,8 +745,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_csharp">
 <a href="#state_defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -845,8 +755,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -856,8 +765,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -866,8 +774,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewstatements_csharp">
 <a href="#state_renewstatements_csharp" style="color: inherit; text-decoration: inherit;">Renew<wbr>Statements</a>
@@ -877,8 +784,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationstatements_csharp">
 <a href="#state_revocationstatements_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Statements</a>
@@ -888,8 +794,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackstatements_csharp">
 <a href="#state_rollbackstatements_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Statements</a>
@@ -899,14 +804,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -915,8 +817,7 @@ rolling back creation due to an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationstatements_go">
 <a href="#state_creationstatements_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Statements</a>
@@ -926,8 +827,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbname_go">
 <a href="#state_dbname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
@@ -937,8 +837,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_go">
 <a href="#state_defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -948,8 +847,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -959,8 +857,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -969,8 +866,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewstatements_go">
 <a href="#state_renewstatements_go" style="color: inherit; text-decoration: inherit;">Renew<wbr>Statements</a>
@@ -980,8 +876,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationstatements_go">
 <a href="#state_revocationstatements_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Statements</a>
@@ -991,8 +886,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackstatements_go">
 <a href="#state_rollbackstatements_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Statements</a>
@@ -1002,14 +896,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1018,8 +909,7 @@ rolling back creation due to an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationstatements_nodejs">
 <a href="#state_creationstatements_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Statements</a>
@@ -1029,8 +919,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbname_nodejs">
 <a href="#state_dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
@@ -1040,8 +929,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_nodejs">
 <a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -1051,8 +939,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1062,8 +949,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1072,8 +958,7 @@ role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewstatements_nodejs">
 <a href="#state_renewstatements_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Statements</a>
@@ -1083,8 +968,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationstatements_nodejs">
 <a href="#state_revocationstatements_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Statements</a>
@@ -1094,8 +978,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollbackstatements_nodejs">
 <a href="#state_rollbackstatements_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Statements</a>
@@ -1105,14 +988,11 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1121,8 +1001,7 @@ rolling back creation due to an error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_statements_python">
 <a href="#state_creation_statements_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>statements</a>
@@ -1132,8 +1011,7 @@ rolling back creation due to an error.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 creating a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_name_python">
 <a href="#state_db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
@@ -1143,8 +1021,7 @@ creating a user.
     </dt>
     <dd>{{% md %}}The unique name of the database connection to use for
 the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_ttl_python">
 <a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -1154,8 +1031,7 @@ the role.
     </dt>
     <dd>{{% md %}}The default number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1165,8 +1041,7 @@ role.
     </dt>
     <dd>{{% md %}}The maximum number of seconds for leases for this
 role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1175,8 +1050,7 @@ role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to give the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renew_statements_python">
 <a href="#state_renew_statements_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>statements</a>
@@ -1186,8 +1060,7 @@ role.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 renewing a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocation_statements_python">
 <a href="#state_revocation_statements_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>statements</a>
@@ -1197,8 +1070,7 @@ renewing a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 revoking a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollback_statements_python">
 <a href="#state_rollback_statements_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>statements</a>
@@ -1208,8 +1080,7 @@ revoking a user.
     </dt>
     <dd>{{% md %}}The database statements to execute when
 rolling back creation due to an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1225,6 +1096,6 @@ rolling back creation due to an error.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

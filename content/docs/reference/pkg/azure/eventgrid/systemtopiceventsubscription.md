@@ -36,9 +36,7 @@ Manages an EventGrid System Topic Event Subscription.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -46,9 +44,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -56,9 +52,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -66,10 +60,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -95,9 +86,7 @@ Manages an EventGrid System Topic Event Subscription.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -105,9 +94,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -115,9 +102,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -125,9 +110,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -135,18 +118,13 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +132,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +140,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +148,7 @@ Manages an EventGrid System Topic Event Subscription.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +163,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -203,8 +172,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemtopic_csharp">
 <a href="#systemtopic_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Topic</a>
@@ -213,8 +181,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedfilter_csharp">
 <a href="#advancedfilter_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
@@ -223,8 +190,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionendpoint_csharp">
 <a href="#azurefunctionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
@@ -233,8 +199,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryschema_csharp">
 <a href="#eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
@@ -243,8 +208,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpointid_csharp">
 <a href="#eventhubendpointid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
@@ -253,8 +217,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtimeutc_csharp">
 <a href="#expirationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
@@ -263,8 +226,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridconnectionendpointid_csharp">
 <a href="#hybridconnectionendpointid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -273,8 +235,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_csharp">
 <a href="#includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
@@ -283,8 +244,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -293,8 +253,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -303,8 +262,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -313,8 +271,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueueendpointid_csharp">
 <a href="#servicebusqueueendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -323,8 +280,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopicendpointid_csharp">
 <a href="#servicebustopicendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -333,8 +289,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageblobdeadletterdestination_csharp">
 <a href="#storageblobdeadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -343,8 +298,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagequeueendpoint_csharp">
 <a href="#storagequeueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
@@ -353,8 +307,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_csharp">
 <a href="#subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -363,8 +316,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookendpoint_csharp">
 <a href="#webhookendpoint_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
@@ -373,14 +325,11 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -389,8 +338,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemtopic_go">
 <a href="#systemtopic_go" style="color: inherit; text-decoration: inherit;">System<wbr>Topic</a>
@@ -399,8 +347,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedfilter_go">
 <a href="#advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
@@ -409,8 +356,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionendpoint_go">
 <a href="#azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
@@ -419,8 +365,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryschema_go">
 <a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
@@ -429,8 +374,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpointid_go">
 <a href="#eventhubendpointid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
@@ -439,8 +383,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtimeutc_go">
 <a href="#expirationtimeutc_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
@@ -449,8 +392,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridconnectionendpointid_go">
 <a href="#hybridconnectionendpointid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -459,8 +401,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_go">
 <a href="#includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
@@ -469,8 +410,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -479,8 +419,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -489,8 +428,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -499,8 +437,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueueendpointid_go">
 <a href="#servicebusqueueendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -509,8 +446,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopicendpointid_go">
 <a href="#servicebustopicendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -519,8 +455,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageblobdeadletterdestination_go">
 <a href="#storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -529,8 +464,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagequeueendpoint_go">
 <a href="#storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
@@ -539,8 +473,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_go">
 <a href="#subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -549,8 +482,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookendpoint_go">
 <a href="#webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
@@ -559,14 +491,11 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -575,8 +504,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemtopic_nodejs">
 <a href="#systemtopic_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Topic</a>
@@ -585,8 +513,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedfilter_nodejs">
 <a href="#advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
@@ -595,8 +522,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionendpoint_nodejs">
 <a href="#azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
@@ -605,8 +531,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventdeliveryschema_nodejs">
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
@@ -615,8 +540,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubendpointid_nodejs">
 <a href="#eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
@@ -625,8 +549,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtimeutc_nodejs">
 <a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
@@ -635,8 +558,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridconnectionendpointid_nodejs">
 <a href="#hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -645,8 +567,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedeventtypes_nodejs">
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
@@ -655,8 +576,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -665,8 +585,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -675,8 +594,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -685,8 +603,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusqueueendpointid_nodejs">
 <a href="#servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -695,8 +612,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebustopicendpointid_nodejs">
 <a href="#servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -705,8 +621,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageblobdeadletterdestination_nodejs">
 <a href="#storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -715,8 +630,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagequeueendpoint_nodejs">
 <a href="#storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
@@ -725,8 +639,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectfilter_nodejs">
 <a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
@@ -735,8 +648,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookendpoint_nodejs">
 <a href="#webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
@@ -745,14 +657,11 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -761,8 +670,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="system_topic_python">
 <a href="#system_topic_python" style="color: inherit; text-decoration: inherit;">system_<wbr>topic</a>
@@ -771,8 +679,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_filter_python">
 <a href="#advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
@@ -781,8 +688,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_function_endpoint_python">
 <a href="#azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
@@ -791,8 +697,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_delivery_schema_python">
 <a href="#event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
@@ -801,8 +706,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhub_endpoint_id_python">
 <a href="#eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
@@ -811,8 +715,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_utc_python">
 <a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
@@ -821,8 +724,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybrid_connection_endpoint_id_python">
 <a href="#hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
@@ -831,8 +733,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_event_types_python">
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
@@ -841,8 +742,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -851,8 +751,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -861,8 +760,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -871,8 +769,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_queue_endpoint_id_python">
 <a href="#service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
@@ -881,8 +778,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_topic_endpoint_id_python">
 <a href="#service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
@@ -891,8 +787,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_blob_dead_letter_destination_python">
 <a href="#storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
@@ -901,8 +796,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_queue_endpoint_python">
 <a href="#storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
@@ -911,8 +805,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_filter_python">
 <a href="#subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
@@ -921,8 +814,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_endpoint_python">
 <a href="#webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
@@ -931,8 +823,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -943,9 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -953,14 +842,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -968,14 +854,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -983,14 +866,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -998,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,9 +1005,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedfilter_csharp">
 <a href="#state_advancedfilter_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
@@ -1137,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionendpoint_csharp">
 <a href="#state_azurefunctionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
@@ -1147,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryschema_csharp">
 <a href="#state_eventdeliveryschema_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
@@ -1157,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubendpointid_csharp">
 <a href="#state_eventhubendpointid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
@@ -1167,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtimeutc_csharp">
 <a href="#state_expirationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
@@ -1177,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hybridconnectionendpointid_csharp">
 <a href="#state_hybridconnectionendpointid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -1187,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includedeventtypes_csharp">
 <a href="#state_includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
@@ -1197,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1207,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1217,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1227,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_csharp">
 <a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -1237,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusqueueendpointid_csharp">
 <a href="#state_servicebusqueueendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -1247,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebustopicendpointid_csharp">
 <a href="#state_servicebustopicendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -1257,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageblobdeadletterdestination_csharp">
 <a href="#state_storageblobdeadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -1267,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagequeueendpoint_csharp">
 <a href="#state_storagequeueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
@@ -1277,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_csharp">
 <a href="#state_subjectfilter_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -1287,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemtopic_csharp">
 <a href="#state_systemtopic_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Topic</a>
@@ -1297,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookendpoint_csharp">
 <a href="#state_webhookendpoint_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
@@ -1307,14 +1167,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedfilter_go">
 <a href="#state_advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
@@ -1323,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionendpoint_go">
 <a href="#state_azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
@@ -1333,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryschema_go">
 <a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
@@ -1343,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubendpointid_go">
 <a href="#state_eventhubendpointid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
@@ -1353,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtimeutc_go">
 <a href="#state_expirationtimeutc_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
@@ -1363,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hybridconnectionendpointid_go">
 <a href="#state_hybridconnectionendpointid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -1373,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includedeventtypes_go">
 <a href="#state_includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
@@ -1383,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1393,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1403,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1413,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_go">
 <a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -1423,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusqueueendpointid_go">
 <a href="#state_servicebusqueueendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -1433,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebustopicendpointid_go">
 <a href="#state_servicebustopicendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -1443,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageblobdeadletterdestination_go">
 <a href="#state_storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -1453,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagequeueendpoint_go">
 <a href="#state_storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
@@ -1463,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_go">
 <a href="#state_subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
@@ -1473,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemtopic_go">
 <a href="#state_systemtopic_go" style="color: inherit; text-decoration: inherit;">System<wbr>Topic</a>
@@ -1483,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookendpoint_go">
 <a href="#state_webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
@@ -1493,14 +1333,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedfilter_nodejs">
 <a href="#state_advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
@@ -1509,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionendpoint_nodejs">
 <a href="#state_azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
@@ -1519,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventdeliveryschema_nodejs">
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
@@ -1529,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubendpointid_nodejs">
 <a href="#state_eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
@@ -1539,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtimeutc_nodejs">
 <a href="#state_expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
@@ -1549,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hybridconnectionendpointid_nodejs">
 <a href="#state_hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
@@ -1559,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includedeventtypes_nodejs">
 <a href="#state_includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
@@ -1569,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1579,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1589,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1599,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_nodejs">
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -1609,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusqueueendpointid_nodejs">
 <a href="#state_servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
@@ -1619,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebustopicendpointid_nodejs">
 <a href="#state_servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
@@ -1629,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageblobdeadletterdestination_nodejs">
 <a href="#state_storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
@@ -1639,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagequeueendpoint_nodejs">
 <a href="#state_storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
@@ -1649,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectfilter_nodejs">
 <a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
@@ -1659,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_systemtopic_nodejs">
 <a href="#state_systemtopic_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Topic</a>
@@ -1669,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookendpoint_nodejs">
 <a href="#state_webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
@@ -1679,14 +1499,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advanced_filter_python">
 <a href="#state_advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
@@ -1695,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_function_endpoint_python">
 <a href="#state_azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
@@ -1705,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_delivery_schema_python">
 <a href="#state_event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
@@ -1715,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhub_endpoint_id_python">
 <a href="#state_eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
@@ -1725,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_time_utc_python">
 <a href="#state_expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
@@ -1735,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hybrid_connection_endpoint_id_python">
 <a href="#state_hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
@@ -1745,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_included_event_types_python">
 <a href="#state_included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
@@ -1755,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1765,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1775,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Event Subscription. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1785,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the System Topic exists. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_policy_python">
 <a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -1795,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_bus_queue_endpoint_id_python">
 <a href="#state_service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
@@ -1805,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_bus_topic_endpoint_id_python">
 <a href="#state_service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
@@ -1815,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_blob_dead_letter_destination_python">
 <a href="#state_storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
@@ -1825,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_queue_endpoint_python">
 <a href="#state_storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
@@ -1835,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_filter_python">
 <a href="#state_subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
@@ -1845,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_system_topic_python">
 <a href="#state_system_topic_python" style="color: inherit; text-decoration: inherit;">system_<wbr>topic</a>
@@ -1855,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The System Topic where the Event Subscription should be created in. Changing this forces a new Event Subscription to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_endpoint_python">
 <a href="#state_webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
@@ -1865,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1881,9 +1680,7 @@ The following state arguments are supported:
 <h4 id="systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boolequals_csharp">
 <a href="#boolequals_csharp" style="color: inherit; text-decoration: inherit;">Bool<wbr>Equals</a>
@@ -1892,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_csharp">
 <a href="#numbergreaterthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -1902,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthans_csharp">
 <a href="#numbergreaterthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Thans</a>
@@ -1912,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_csharp">
 <a href="#numberins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Ins</a>
@@ -1922,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthanorequals_csharp">
 <a href="#numberlessthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -1932,8 +1725,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthans_csharp">
 <a href="#numberlessthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Thans</a>
@@ -1942,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_csharp">
 <a href="#numbernotins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>Ins</a>
@@ -1952,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringbeginswiths_csharp">
 <a href="#stringbeginswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Begins<wbr>Withs</a>
@@ -1962,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringcontains_csharp">
 <a href="#stringcontains_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Contains</a>
@@ -1972,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringendswiths_csharp">
 <a href="#stringendswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ends<wbr>Withs</a>
@@ -1982,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringins_csharp">
 <a href="#stringins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ins</a>
@@ -1992,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringnotins_csharp">
 <a href="#stringnotins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
@@ -2002,14 +1788,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boolequals_go">
 <a href="#boolequals_go" style="color: inherit; text-decoration: inherit;">Bool<wbr>Equals</a>
@@ -2018,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_go">
 <a href="#numbergreaterthanorequals_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -2028,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthans_go">
 <a href="#numbergreaterthans_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Thans</a>
@@ -2038,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_go">
 <a href="#numberins_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Ins</a>
@@ -2048,8 +1828,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthanorequals_go">
 <a href="#numberlessthanorequals_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -2058,8 +1837,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthans_go">
 <a href="#numberlessthans_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Thans</a>
@@ -2068,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_go">
 <a href="#numbernotins_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>Ins</a>
@@ -2078,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringbeginswiths_go">
 <a href="#stringbeginswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Begins<wbr>Withs</a>
@@ -2088,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringcontains_go">
 <a href="#stringcontains_go" style="color: inherit; text-decoration: inherit;">String<wbr>Contains</a>
@@ -2098,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringendswiths_go">
 <a href="#stringendswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Ends<wbr>Withs</a>
@@ -2108,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringins_go">
 <a href="#stringins_go" style="color: inherit; text-decoration: inherit;">String<wbr>Ins</a>
@@ -2118,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringnotins_go">
 <a href="#stringnotins_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
@@ -2128,14 +1900,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boolequals_nodejs">
 <a href="#boolequals_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
@@ -2144,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_nodejs">
 <a href="#numbergreaterthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -2154,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthans_nodejs">
 <a href="#numbergreaterthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
@@ -2164,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_nodejs">
 <a href="#numberins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
@@ -2174,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthanorequals_nodejs">
 <a href="#numberlessthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
@@ -2184,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberlessthans_nodejs">
 <a href="#numberlessthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
@@ -2194,8 +1958,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_nodejs">
 <a href="#numbernotins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
@@ -2204,8 +1967,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringbeginswiths_nodejs">
 <a href="#stringbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
@@ -2214,8 +1976,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringcontains_nodejs">
 <a href="#stringcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
@@ -2224,8 +1985,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringendswiths_nodejs">
 <a href="#stringendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
@@ -2234,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringins_nodejs">
 <a href="#stringins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
@@ -2244,8 +2003,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringnotins_nodejs">
 <a href="#stringnotins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
@@ -2254,14 +2012,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bool_equals_python">
 <a href="#bool_equals_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>equals</a>
@@ -2270,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_greater_than_or_equals_python">
 <a href="#number_greater_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>than_<wbr>or_<wbr>equals</a>
@@ -2280,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_greater_thans_python">
 <a href="#number_greater_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>thans</a>
@@ -2290,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_ins_python">
 <a href="#number_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>ins</a>
@@ -2300,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_less_than_or_equals_python">
 <a href="#number_less_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>than_<wbr>or_<wbr>equals</a>
@@ -2310,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_less_thans_python">
 <a href="#number_less_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>thans</a>
@@ -2320,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_not_ins_python">
 <a href="#number_not_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>not_<wbr>ins</a>
@@ -2330,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_begins_withs_python">
 <a href="#string_begins_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>begins_<wbr>withs</a>
@@ -2340,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_contains_python">
 <a href="#string_contains_python" style="color: inherit; text-decoration: inherit;">string_<wbr>contains</a>
@@ -2350,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_ends_withs_python">
 <a href="#string_ends_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ends_<wbr>withs</a>
@@ -2360,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_ins_python">
 <a href="#string_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ins</a>
@@ -2370,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_not_ins_python">
 <a href="#string_not_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>ins</a>
@@ -2380,16 +2124,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterboolequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2398,8 +2139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2408,14 +2148,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2424,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2434,14 +2170,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2450,8 +2183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2460,14 +2192,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2476,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2486,16 +2214,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbergreaterthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2504,8 +2229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2514,14 +2238,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2530,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2540,14 +2260,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2556,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2566,14 +2282,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2582,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2592,16 +2304,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2610,8 +2319,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2620,14 +2328,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2636,8 +2341,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2646,14 +2350,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2662,8 +2363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2672,14 +2372,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2688,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2698,16 +2394,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2716,8 +2409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2726,14 +2418,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;double&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2742,8 +2431,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2752,14 +2440,11 @@ The following state arguments are supported:
         <span class="property-type">[]float64</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2768,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2778,14 +2462,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2794,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2804,16 +2484,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2822,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2832,14 +2508,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2848,8 +2521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2858,14 +2530,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2874,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2884,14 +2552,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2900,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2910,16 +2574,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2928,8 +2589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2938,14 +2598,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2954,8 +2611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2964,14 +2620,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2980,8 +2633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2990,14 +2642,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3006,8 +2655,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3016,16 +2664,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbernotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3034,8 +2679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3044,14 +2688,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;double&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3060,8 +2701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3070,14 +2710,11 @@ The following state arguments are supported:
         <span class="property-type">[]float64</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3086,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3096,14 +2732,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3112,8 +2745,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3122,16 +2754,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3140,8 +2769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3150,14 +2778,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3166,8 +2791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3176,14 +2800,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3192,8 +2813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3202,14 +2822,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3218,8 +2835,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3228,16 +2844,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3246,8 +2859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3256,14 +2868,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3272,8 +2881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3282,14 +2890,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3298,8 +2903,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3308,14 +2912,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3324,8 +2925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3334,16 +2934,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3352,8 +2949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3362,14 +2958,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3378,8 +2971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3388,14 +2980,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3404,8 +2993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3414,14 +3002,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3430,8 +3015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3440,16 +3024,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3458,8 +3039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3468,14 +3048,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3484,8 +3061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3494,14 +3070,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3510,8 +3083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3520,14 +3092,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3536,8 +3105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3546,16 +3114,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringnotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3564,8 +3129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3574,14 +3138,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3590,8 +3151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3600,14 +3160,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3616,8 +3173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3626,14 +3182,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3642,8 +3195,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3652,16 +3204,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionid_csharp">
 <a href="#functionid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -3670,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_csharp">
 <a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -3680,8 +3228,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_csharp">
 <a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -3690,14 +3237,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionid_go">
 <a href="#functionid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -3706,8 +3250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_go">
 <a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -3716,8 +3259,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_go">
 <a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -3726,14 +3268,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionid_nodejs">
 <a href="#functionid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
@@ -3742,8 +3281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_nodejs">
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -3752,8 +3290,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_nodejs">
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -3762,14 +3299,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_id_python">
 <a href="#function_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>id</a>
@@ -3778,8 +3312,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_events_per_batch_python">
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
@@ -3788,8 +3321,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_batch_size_in_kilobytes_python">
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
@@ -3798,16 +3330,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimetolive_csharp">
 <a href="#eventtimetolive_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live</a>
@@ -3816,8 +3345,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdeliveryattempts_csharp">
 <a href="#maxdeliveryattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
@@ -3826,14 +3354,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimetolive_go">
 <a href="#eventtimetolive_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live</a>
@@ -3842,8 +3367,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdeliveryattempts_go">
 <a href="#maxdeliveryattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
@@ -3852,14 +3376,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimetolive_nodejs">
 <a href="#eventtimetolive_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live</a>
@@ -3868,8 +3389,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdeliveryattempts_nodejs">
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
@@ -3878,14 +3398,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_time_to_live_python">
 <a href="#event_time_to_live_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live</a>
@@ -3894,8 +3411,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_delivery_attempts_python">
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
@@ -3904,16 +3420,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -3922,8 +3435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobcontainername_csharp">
 <a href="#storageblobcontainername_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Container<wbr>Name</a>
@@ -3932,14 +3444,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -3948,8 +3457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobcontainername_go">
 <a href="#storageblobcontainername_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Container<wbr>Name</a>
@@ -3958,14 +3466,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -3974,8 +3479,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobcontainername_nodejs">
 <a href="#storageblobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Container<wbr>Name</a>
@@ -3984,14 +3488,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -4000,8 +3501,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_blob_container_name_python">
 <a href="#storage_blob_container_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>container_<wbr>name</a>
@@ -4010,16 +3510,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_csharp">
 <a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -4028,8 +3525,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -4038,14 +3534,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_go">
 <a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -4054,8 +3547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -4064,14 +3556,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_nodejs">
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
@@ -4080,8 +3569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -4090,14 +3578,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queue_name_python">
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -4106,8 +3591,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -4116,16 +3600,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_csharp">
 <a href="#casesensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -4134,8 +3615,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_csharp">
 <a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
@@ -4144,8 +3624,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_csharp">
 <a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
@@ -4154,14 +3633,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_go">
 <a href="#casesensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -4170,8 +3646,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_go">
 <a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
@@ -4180,8 +3655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_go">
 <a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
@@ -4190,14 +3664,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="casesensitive_nodejs">
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
@@ -4206,8 +3677,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_nodejs">
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
@@ -4216,8 +3686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_nodejs">
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
@@ -4226,14 +3695,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="case_sensitive_python">
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
@@ -4242,8 +3708,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_begins_with_python">
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
@@ -4252,8 +3717,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_ends_with_python">
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
@@ -4262,16 +3726,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -4280,8 +3741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryappidoruri_csharp">
 <a href="#activedirectoryappidoruri_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
@@ -4290,8 +3750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorytenantid_csharp">
 <a href="#activedirectorytenantid_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
@@ -4300,8 +3759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
@@ -4310,8 +3768,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_csharp">
 <a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -4320,8 +3777,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_csharp">
 <a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -4330,14 +3786,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -4346,8 +3799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryappidoruri_go">
 <a href="#activedirectoryappidoruri_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
@@ -4356,8 +3808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorytenantid_go">
 <a href="#activedirectorytenantid_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
@@ -4366,8 +3817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
@@ -4376,8 +3826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_go">
 <a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -4386,8 +3835,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_go">
 <a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -4396,14 +3844,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -4412,8 +3857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryappidoruri_nodejs">
 <a href="#activedirectoryappidoruri_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
@@ -4422,8 +3866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorytenantid_nodejs">
 <a href="#activedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Tenant<wbr>Id</a>
@@ -4432,8 +3875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
@@ -4442,8 +3884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxeventsperbatch_nodejs">
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
@@ -4452,8 +3893,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredbatchsizeinkilobytes_nodejs">
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
@@ -4462,14 +3902,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -4478,8 +3915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_app_id_or_uri_python">
 <a href="#active_directory_app_id_or_uri_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>app_<wbr>id_<wbr>or_<wbr>uri</a>
@@ -4488,8 +3924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_tenant_id_python">
 <a href="#active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>tenant_<wbr>id</a>
@@ -4498,8 +3933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
@@ -4508,8 +3942,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_events_per_batch_python">
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
@@ -4518,8 +3951,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_batch_size_in_kilobytes_python">
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
@@ -4528,8 +3960,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4550,6 +3981,6 @@ EventGrid System Topic Event Subscriptions can be imported using the `resource i
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

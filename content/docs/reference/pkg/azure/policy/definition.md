@@ -15,11 +15,17 @@ Manages a policy rule definition on a management group or your provider subscrip
 Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -70,9 +76,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -101,9 +110,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -145,9 +157,12 @@ policy = azure.policy.Definition("policy",
     policy_type="Custom")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -188,9 +203,16 @@ const policy = new azure.policy.Definition("policy", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Definition Resource {#create}
@@ -215,9 +237,7 @@ const policy = new azure.policy.Definition("policy", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +245,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +253,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,10 +261,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -274,9 +287,7 @@ const policy = new azure.policy.Definition("policy", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -284,9 +295,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -294,9 +303,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -304,9 +311,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -314,18 +319,13 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -333,9 +333,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -343,9 +341,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -353,10 +349,7 @@ const policy = new azure.policy.Definition("policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -371,9 +364,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -382,8 +373,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -393,8 +383,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -403,8 +392,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -413,8 +401,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_csharp">
 <a href="#managementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -423,8 +410,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_csharp">
 <a href="#managementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -433,8 +419,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -445,8 +430,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -456,8 +440,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -467,8 +450,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyrule_csharp">
 <a href="#policyrule_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -479,14 +461,11 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -495,8 +474,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -506,8 +484,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -516,8 +493,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -526,8 +502,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_go">
 <a href="#managementgroupid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -536,8 +511,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_go">
 <a href="#managementgroupname_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -546,8 +520,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -558,8 +531,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -569,8 +541,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -580,8 +551,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyrule_go">
 <a href="#policyrule_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -592,14 +562,11 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -608,8 +575,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -619,8 +585,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -629,8 +594,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -639,8 +603,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_nodejs">
 <a href="#managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
@@ -649,8 +612,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_nodejs">
 <a href="#managementgroupname_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Name</a>
@@ -659,8 +621,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -671,8 +632,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -682,8 +642,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -693,8 +652,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyrule_nodejs">
 <a href="#policyrule_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rule</a>
@@ -705,14 +663,11 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -721,8 +676,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -732,8 +686,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -742,8 +695,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -752,8 +704,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="management_group_id_python">
 <a href="#management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
@@ -762,8 +713,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="management_group_name_python">
 <a href="#management_group_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>name</a>
@@ -772,8 +722,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -784,8 +733,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -795,8 +743,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -806,8 +753,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_rule_python">
 <a href="#policy_rule_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rule</a>
@@ -818,8 +764,7 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -830,9 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -840,14 +783,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -855,14 +795,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -870,14 +807,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -885,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1013,9 +946,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1024,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1034,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_csharp">
 <a href="#state_managementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -1044,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_csharp">
 <a href="#state_managementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -1054,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1066,8 +993,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1077,8 +1003,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1088,8 +1013,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1099,8 +1023,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyrule_csharp">
 <a href="#state_policyrule_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -1111,8 +1034,7 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_csharp">
 <a href="#state_policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -1121,14 +1043,11 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1137,8 +1056,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1147,8 +1065,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_go">
 <a href="#state_managementgroupid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -1157,8 +1074,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_go">
 <a href="#state_managementgroupname_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -1167,8 +1083,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1179,8 +1094,7 @@ a then block.
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1190,8 +1104,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1201,8 +1114,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1212,8 +1124,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyrule_go">
 <a href="#state_policyrule_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -1224,8 +1135,7 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_go">
 <a href="#state_policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -1234,14 +1144,11 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1250,8 +1157,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1260,8 +1166,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_nodejs">
 <a href="#state_managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
@@ -1270,8 +1175,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_nodejs">
 <a href="#state_managementgroupname_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Name</a>
@@ -1280,8 +1184,7 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1292,8 +1195,7 @@ a then block.
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1303,8 +1205,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1314,8 +1215,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1325,8 +1225,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyrule_nodejs">
 <a href="#state_policyrule_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rule</a>
@@ -1337,8 +1236,7 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_nodejs">
 <a href="#state_policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -1347,14 +1245,11 @@ a then block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1363,8 +1258,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1373,8 +1267,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_management_group_id_python">
 <a href="#state_management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
@@ -1383,8 +1276,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_group_name_python">
 <a href="#state_management_group_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>name</a>
@@ -1393,8 +1285,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1405,8 +1296,7 @@ a then block.
     <dd>{{% md %}}The metadata for the policy definition. This
 is a JSON string representing additional metadata that should be stored
 with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1416,8 +1306,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.ContainerService.Data`, `Microsoft.CustomerLockbox.Data`, `Microsoft.DataCatalog.Data`, `Microsoft.KeyVault.Data`, `Microsoft.Kubernetes.Data`, `Microsoft.MachineLearningServices.Data`, `Microsoft.Network.Data` and `Microsoft.Synapse.Data`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1427,8 +1316,7 @@ types will be evaluated. Possible values are `All`, `Indexed`, `Microsoft.Contai
     </dt>
     <dd>{{% md %}}The name of the policy definition. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1438,8 +1326,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Parameters for the policy definition. This field
 is a JSON string that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_rule_python">
 <a href="#state_policy_rule_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rule</a>
@@ -1450,8 +1337,7 @@ is a JSON string that allows you to parameterize your policy definition.
     <dd>{{% md %}}The policy rule for the policy definition. This
 is a JSON string representing the rule that contains an if and
 a then block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_python">
 <a href="#state_policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -1460,8 +1346,7 @@ a then block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type. Possible values are `BuiltIn`, `Custom` and `NotSpecified`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1493,6 +1378,6 @@ Policy Definitions can be imported using the `policy name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

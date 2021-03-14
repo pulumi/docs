@@ -14,11 +14,17 @@ The profile resource format.
 API Version: 2017-04-26.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Profiles_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -103,9 +109,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -184,9 +193,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -252,9 +264,12 @@ profile = azure_native.customerinsights.Profile("profile",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -321,9 +336,16 @@ const profile = new azure_native.customerinsights.Profile("profile", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Profile Resource {#create}
@@ -348,9 +370,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -358,9 +378,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -368,9 +386,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -378,10 +394,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -407,9 +420,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -417,9 +428,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -427,9 +436,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -437,9 +444,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -447,18 +452,13 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -466,9 +466,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -476,9 +474,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -486,10 +482,7 @@ const profile = new azure_native.customerinsights.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -504,9 +497,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -514,8 +505,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -523,8 +513,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apientitysetname_csharp">
 <a href="#apientitysetname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Entity<wbr>Set<wbr>Name</a>
@@ -532,8 +521,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -541,8 +529,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -550,8 +537,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -559,8 +545,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -568,8 +553,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -577,8 +561,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Property<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancescount_csharp">
 <a href="#instancescount_csharp" style="color: inherit; text-decoration: inherit;">Instances<wbr>Count</a>
@@ -586,8 +569,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largeimage_csharp">
 <a href="#largeimage_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>Image</a>
@@ -595,8 +577,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localizedattributes_csharp">
 <a href="#localizedattributes_csharp" style="color: inherit; text-decoration: inherit;">Localized<wbr>Attributes</a>
@@ -604,8 +585,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumimage_csharp">
 <a href="#mediumimage_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Image</a>
@@ -613,8 +593,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -622,8 +601,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemtypelink_csharp">
 <a href="#schemaitemtypelink_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Type<wbr>Link</a>
@@ -631,8 +609,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smallimage_csharp">
 <a href="#smallimage_csharp" style="color: inherit; text-decoration: inherit;">Small<wbr>Image</a>
@@ -640,8 +617,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongids_csharp">
 <a href="#strongids_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
@@ -649,8 +625,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Strong<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampfieldname_csharp">
 <a href="#timestampfieldname_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field<wbr>Name</a>
@@ -658,8 +633,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -667,14 +641,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -682,8 +653,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -691,8 +661,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apientitysetname_go">
 <a href="#apientitysetname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Entity<wbr>Set<wbr>Name</a>
@@ -700,8 +669,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -709,8 +677,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
-    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -718,8 +685,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -727,8 +693,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -736,8 +701,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -745,8 +709,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinition">[]Property<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancescount_go">
 <a href="#instancescount_go" style="color: inherit; text-decoration: inherit;">Instances<wbr>Count</a>
@@ -754,8 +717,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largeimage_go">
 <a href="#largeimage_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Image</a>
@@ -763,8 +725,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localizedattributes_go">
 <a href="#localizedattributes_go" style="color: inherit; text-decoration: inherit;">Localized<wbr>Attributes</a>
@@ -772,8 +733,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]map[string]string</span>
     </dt>
-    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumimage_go">
 <a href="#mediumimage_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Image</a>
@@ -781,8 +741,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -790,8 +749,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemtypelink_go">
 <a href="#schemaitemtypelink_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Type<wbr>Link</a>
@@ -799,8 +757,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smallimage_go">
 <a href="#smallimage_go" style="color: inherit; text-decoration: inherit;">Small<wbr>Image</a>
@@ -808,8 +765,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongids_go">
 <a href="#strongids_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
@@ -817,8 +773,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongid">[]Strong<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampfieldname_go">
 <a href="#timestampfieldname_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field<wbr>Name</a>
@@ -826,8 +781,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -835,14 +789,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -850,8 +801,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -859,8 +809,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apientitysetname_nodejs">
 <a href="#apientitysetname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Entity<wbr>Set<wbr>Name</a>
@@ -868,8 +817,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -877,8 +825,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
-    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -886,8 +833,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -895,8 +841,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -904,8 +849,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -913,8 +857,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinition">Property<wbr>Definition[]</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancescount_nodejs">
 <a href="#instancescount_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Count</a>
@@ -922,8 +865,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largeimage_nodejs">
 <a href="#largeimage_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Image</a>
@@ -931,8 +873,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localizedattributes_nodejs">
 <a href="#localizedattributes_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Attributes</a>
@@ -940,8 +881,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: {[key: string]: string}}</span>
     </dt>
-    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumimage_nodejs">
 <a href="#mediumimage_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Image</a>
@@ -949,8 +889,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -958,8 +897,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemtypelink_nodejs">
 <a href="#schemaitemtypelink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Type<wbr>Link</a>
@@ -967,8 +905,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smallimage_nodejs">
 <a href="#smallimage_nodejs" style="color: inherit; text-decoration: inherit;">small<wbr>Image</a>
@@ -976,8 +913,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongids_nodejs">
 <a href="#strongids_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Ids</a>
@@ -985,8 +921,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongid">Strong<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampfieldname_nodejs">
 <a href="#timestampfieldname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field<wbr>Name</a>
@@ -994,8 +929,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
@@ -1003,14 +937,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -1018,8 +949,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1027,8 +957,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_entity_set_name_python">
 <a href="#api_entity_set_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>entity_<wbr>set_<wbr>name</a>
@@ -1036,8 +965,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1045,8 +973,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1054,8 +981,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1063,8 +989,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -1072,8 +997,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1081,8 +1005,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinition">Sequence[Property<wbr>Definition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_count_python">
 <a href="#instances_count_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>count</a>
@@ -1090,8 +1013,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_image_python">
 <a href="#large_image_python" style="color: inherit; text-decoration: inherit;">large_<wbr>image</a>
@@ -1099,8 +1021,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localized_attributes_python">
 <a href="#localized_attributes_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>attributes</a>
@@ -1108,8 +1029,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Mapping[str, str]]</span>
     </dt>
-    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_image_python">
 <a href="#medium_image_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>image</a>
@@ -1117,8 +1037,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -1126,8 +1045,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_item_type_link_python">
 <a href="#schema_item_type_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>type_<wbr>link</a>
@@ -1135,8 +1053,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="small_image_python">
 <a href="#small_image_python" style="color: inherit; text-decoration: inherit;">small_<wbr>image</a>
@@ -1144,8 +1061,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_ids_python">
 <a href="#strong_ids_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>ids</a>
@@ -1153,8 +1069,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongid">Sequence[Strong<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_field_name_python">
 <a href="#timestamp_field_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field_<wbr>name</a>
@@ -1162,8 +1077,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
@@ -1171,8 +1085,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1183,9 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1193,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchangedutc_csharp">
 <a href="#lastchangedutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed<wbr>Utc</a>
@@ -1202,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1211,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1220,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1229,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1238,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1253,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchangedutc_go">
 <a href="#lastchangedutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed<wbr>Utc</a>
@@ -1262,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1280,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1289,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1298,14 +1196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1313,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchangedutc_nodejs">
 <a href="#lastchangedutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Changed<wbr>Utc</a>
@@ -1322,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1331,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1340,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1349,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1358,14 +1248,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1373,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_changed_utc_python">
 <a href="#last_changed_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>changed_<wbr>utc</a>
@@ -1382,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1391,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1400,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1409,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1418,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1435,9 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourcereferenceid_csharp">
 <a href="#datasourcereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Reference<wbr>Id</a>
@@ -1445,8 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourcetype_csharp">
 <a href="#datasourcetype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -1454,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1463,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1472,8 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1481,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_csharp">
 <a href="#precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -1490,14 +1364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourcereferenceid_go">
 <a href="#datasourcereferenceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Reference<wbr>Id</a>
@@ -1505,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourcetype_go">
 <a href="#datasourcetype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -1514,8 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1523,8 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1532,8 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1541,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_go">
 <a href="#precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -1550,14 +1416,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourcereferenceid_nodejs">
 <a href="#datasourcereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Reference<wbr>Id</a>
@@ -1565,8 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourcetype_nodejs">
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Type</a>
@@ -1574,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1583,8 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1592,8 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1601,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_nodejs">
 <a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -1610,14 +1468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_source_reference_id_python">
 <a href="#data_source_reference_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>reference_<wbr>id</a>
@@ -1625,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_source_type_python">
 <a href="#data_source_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>type</a>
@@ -1634,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1643,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1652,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data source name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1661,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_python">
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -1670,70 +1520,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entitytypes">Entity<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Profile</dt>
+    <dd>Profile</dd><dt>Interaction</dt>
+    <dd>Interaction</dd><dt>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Entity<wbr>Types<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Entity<wbr>Types<wbr>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Entity<wbr>Types<wbr>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Entity<wbr>Types<wbr>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>Entity<wbr>Types<wbr>None</dt>
+    <dd>None</dd><dt>Entity<wbr>Types<wbr>Profile</dt>
+    <dd>Profile</dd><dt>Entity<wbr>Types<wbr>Interaction</dt>
+    <dd>Interaction</dd><dt>Entity<wbr>Types<wbr>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Profile</dt>
-    <dd>Profile</dd>
-    <dt>Interaction</dt>
-    <dd>Interaction</dd>
-    <dt>Relationship</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Profile</dt>
+    <dd>Profile</dd><dt>Interaction</dt>
+    <dd>Interaction</dd><dt>Relationship</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>PROFILE</dt>
-    <dd>Profile</dd>
-    <dt>INTERACTION</dt>
-    <dd>Interaction</dd>
-    <dt>RELATIONSHIP</dt>
-    <dd>Relationship</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>PROFILE</dt>
+    <dd>Profile</dd><dt>INTERACTION</dt>
+    <dd>Interaction</dd><dt>RELATIONSHIP</dt>
+    <dd>Relationship</dd></dl>
 {{% /choosable %}}
 
 <h4 id="profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_csharp">
 <a href="#localizedvaluenames_csharp" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
@@ -1741,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1750,14 +1576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_go">
 <a href="#localizedvaluenames_go" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
@@ -1765,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1774,14 +1596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_nodejs">
 <a href="#localizedvaluenames_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
@@ -1789,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1798,14 +1616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localized_value_names_python">
 <a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
@@ -1813,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1822,16 +1636,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_csharp">
 <a href="#localizedvaluenames_csharp" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
@@ -1839,8 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1848,14 +1658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_go">
 <a href="#localizedvaluenames_go" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
@@ -1863,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1872,14 +1678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localizedvaluenames_nodejs">
 <a href="#localizedvaluenames_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
@@ -1887,8 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1896,14 +1698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="localized_value_names_python">
 <a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
@@ -1911,8 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1920,16 +1718,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="propertydefinition">Property<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -1937,8 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_csharp">
 <a href="#fieldtype_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -1946,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_csharp">
 <a href="#arrayvalueseparator_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
@@ -1955,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_csharp">
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
@@ -1964,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_csharp">
 <a href="#isarray_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
@@ -1973,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_csharp">
 <a href="#isavailableingraph_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -1982,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_csharp">
 <a href="#isenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
@@ -1991,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_csharp">
 <a href="#isflagenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
@@ -2000,8 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_csharp">
 <a href="#isimage_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
@@ -2009,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_csharp">
 <a href="#islocalizedstring_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
@@ -2018,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_csharp">
 <a href="#isname_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
@@ -2027,8 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_csharp">
 <a href="#isrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
@@ -2036,8 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_csharp">
 <a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -2045,8 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_csharp">
 <a href="#propertyid_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
@@ -2054,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_csharp">
 <a href="#schemaitemproplink_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2063,14 +1844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -2078,8 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_go">
 <a href="#fieldtype_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -2087,8 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_go">
 <a href="#arrayvalueseparator_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
@@ -2096,8 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_go">
 <a href="#enumvalidvalues_go" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
@@ -2105,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformat">[]Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_go">
 <a href="#isarray_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
@@ -2114,8 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_go">
 <a href="#isavailableingraph_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -2123,8 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_go">
 <a href="#isenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
@@ -2132,8 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_go">
 <a href="#isflagenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
@@ -2141,8 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_go">
 <a href="#isimage_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
@@ -2150,8 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_go">
 <a href="#islocalizedstring_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
@@ -2159,8 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_go">
 <a href="#isname_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
@@ -2168,8 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_go">
 <a href="#isrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
@@ -2177,8 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_go">
 <a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -2186,8 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_go">
 <a href="#propertyid_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
@@ -2195,8 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_go">
 <a href="#schemaitemproplink_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2204,14 +1968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
@@ -2219,8 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_nodejs">
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
@@ -2228,8 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_nodejs">
 <a href="#arrayvalueseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
@@ -2237,8 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_nodejs">
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
@@ -2246,8 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_nodejs">
 <a href="#isarray_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
@@ -2255,8 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_nodejs">
 <a href="#isavailableingraph_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -2264,8 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_nodejs">
 <a href="#isenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
@@ -2273,8 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_nodejs">
 <a href="#isflagenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
@@ -2282,8 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_nodejs">
 <a href="#isimage_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
@@ -2291,8 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_nodejs">
 <a href="#islocalizedstring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
@@ -2300,8 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_nodejs">
 <a href="#isname_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
@@ -2309,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_nodejs">
 <a href="#isrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
@@ -2318,8 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_nodejs">
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
@@ -2327,8 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_nodejs">
 <a href="#propertyid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
@@ -2336,8 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_nodejs">
 <a href="#schemaitemproplink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2345,14 +2092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
@@ -2360,8 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="field_type_python">
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
@@ -2369,8 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_value_separator_python">
 <a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
@@ -2378,8 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enum_valid_values_python">
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
@@ -2387,8 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_array_python">
 <a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
@@ -2396,8 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_available_in_graph_python">
 <a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
@@ -2405,8 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enum_python">
 <a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
@@ -2414,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_flag_enum_python">
 <a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
@@ -2423,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_image_python">
 <a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
@@ -2432,8 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_localized_string_python">
 <a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
@@ -2441,8 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_name_python">
 <a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
@@ -2450,8 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_required_python">
 <a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
@@ -2459,8 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_length_python">
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
@@ -2468,8 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_id_python">
 <a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
@@ -2477,8 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_item_prop_link_python">
 <a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
@@ -2486,16 +2216,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="propertydefinitionresponse">Property<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceprecedencerules_csharp">
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
@@ -2503,8 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -2512,8 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_csharp">
 <a href="#fieldtype_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -2521,8 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_csharp">
 <a href="#arrayvalueseparator_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
@@ -2530,8 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_csharp">
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
@@ -2539,8 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_csharp">
 <a href="#isarray_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
@@ -2548,8 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_csharp">
 <a href="#isavailableingraph_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -2557,8 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_csharp">
 <a href="#isenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
@@ -2566,8 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_csharp">
 <a href="#isflagenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
@@ -2575,8 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_csharp">
 <a href="#isimage_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
@@ -2584,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_csharp">
 <a href="#islocalizedstring_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
@@ -2593,8 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_csharp">
 <a href="#isname_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
@@ -2602,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_csharp">
 <a href="#isrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
@@ -2611,8 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_csharp">
 <a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -2620,8 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_csharp">
 <a href="#propertyid_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
@@ -2629,8 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_csharp">
 <a href="#schemaitemproplink_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2638,14 +2350,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceprecedencerules_go">
 <a href="#datasourceprecedencerules_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
@@ -2653,8 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">[]Data<wbr>Source<wbr>Precedence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -2662,8 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_go">
 <a href="#fieldtype_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -2671,8 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_go">
 <a href="#arrayvalueseparator_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
@@ -2680,8 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_go">
 <a href="#enumvalidvalues_go" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
@@ -2689,8 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">[]Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_go">
 <a href="#isarray_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
@@ -2698,8 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_go">
 <a href="#isavailableingraph_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -2707,8 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_go">
 <a href="#isenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
@@ -2716,8 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_go">
 <a href="#isflagenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
@@ -2725,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_go">
 <a href="#isimage_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
@@ -2734,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_go">
 <a href="#islocalizedstring_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
@@ -2743,8 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_go">
 <a href="#isname_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
@@ -2752,8 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_go">
 <a href="#isrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
@@ -2761,8 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_go">
 <a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -2770,8 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_go">
 <a href="#propertyid_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
@@ -2779,8 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_go">
 <a href="#schemaitemproplink_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2788,14 +2482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceprecedencerules_nodejs">
 <a href="#datasourceprecedencerules_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
@@ -2803,8 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
@@ -2812,8 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtype_nodejs">
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
@@ -2821,8 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_nodejs">
 <a href="#arrayvalueseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
@@ -2830,8 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_nodejs">
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
@@ -2839,8 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isarray_nodejs">
 <a href="#isarray_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
@@ -2848,8 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_nodejs">
 <a href="#isavailableingraph_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
@@ -2857,8 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenum_nodejs">
 <a href="#isenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
@@ -2866,8 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isflagenum_nodejs">
 <a href="#isflagenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
@@ -2875,8 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isimage_nodejs">
 <a href="#isimage_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
@@ -2884,8 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_nodejs">
 <a href="#islocalizedstring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
@@ -2893,8 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isname_nodejs">
 <a href="#isname_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
@@ -2902,8 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isrequired_nodejs">
 <a href="#isrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
@@ -2911,8 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_nodejs">
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
@@ -2920,8 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyid_nodejs">
 <a href="#propertyid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
@@ -2929,8 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_nodejs">
 <a href="#schemaitemproplink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
@@ -2938,14 +2614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_source_precedence_rules_python">
 <a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
@@ -2953,8 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
@@ -2962,8 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="field_type_python">
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
@@ -2971,8 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_value_separator_python">
 <a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
@@ -2980,8 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enum_valid_values_python">
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
@@ -2989,8 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_array_python">
 <a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
@@ -2998,8 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_available_in_graph_python">
 <a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
@@ -3007,8 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enum_python">
 <a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
@@ -3016,8 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_flag_enum_python">
 <a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
@@ -3025,8 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_image_python">
 <a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
@@ -3034,8 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_localized_string_python">
 <a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
@@ -3043,8 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_name_python">
 <a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
@@ -3052,8 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_required_python">
 <a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
@@ -3061,8 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_length_python">
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
@@ -3070,8 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_id_python">
 <a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
@@ -3079,8 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_item_prop_link_python">
 <a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
@@ -3088,16 +2746,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="strongid">Strong<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_csharp">
 <a href="#keypropertynames_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
@@ -3105,8 +2760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_csharp">
 <a href="#strongidname_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
@@ -3114,8 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3123,8 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3132,14 +2784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_go">
 <a href="#keypropertynames_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
@@ -3147,8 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_go">
 <a href="#strongidname_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
@@ -3156,8 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3165,8 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3174,14 +2820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_nodejs">
 <a href="#keypropertynames_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Property<wbr>Names</a>
@@ -3189,8 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_nodejs">
 <a href="#strongidname_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Id<wbr>Name</a>
@@ -3198,8 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3207,8 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -3216,14 +2856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_property_names_python">
 <a href="#key_property_names_python" style="color: inherit; text-decoration: inherit;">key_<wbr>property_<wbr>names</a>
@@ -3231,8 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strong_id_name_python">
 <a href="#strong_id_name_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>id_<wbr>name</a>
@@ -3240,8 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3249,8 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -3258,16 +2892,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="strongidresponse">Strong<wbr>Id<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_csharp">
 <a href="#keypropertynames_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
@@ -3275,8 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_csharp">
 <a href="#strongidname_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
@@ -3284,8 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3293,8 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3302,14 +2930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_go">
 <a href="#keypropertynames_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
@@ -3317,8 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_go">
 <a href="#strongidname_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
@@ -3326,8 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3335,8 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3344,14 +2966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keypropertynames_nodejs">
 <a href="#keypropertynames_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Property<wbr>Names</a>
@@ -3359,8 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strongidname_nodejs">
 <a href="#strongidname_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Id<wbr>Name</a>
@@ -3368,8 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3377,8 +2994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -3386,14 +3002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_property_names_python">
 <a href="#key_property_names_python" style="color: inherit; text-decoration: inherit;">key_<wbr>property_<wbr>names</a>
@@ -3401,8 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="strong_id_name_python">
 <a href="#strong_id_name_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>id_<wbr>name</a>
@@ -3410,8 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3419,8 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -3428,8 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

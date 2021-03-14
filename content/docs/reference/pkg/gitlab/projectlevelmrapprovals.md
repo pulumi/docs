@@ -35,9 +35,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the gitlab.ProjectLevelMrApprovals resource with e
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The ProjectLevelMrApprovals resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -202,8 +171,7 @@ The ProjectLevelMrApprovals resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoverridingapproverspermergerequest_csharp">
 <a href="#disableoverridingapproverspermergerequest_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -213,8 +181,7 @@ The ProjectLevelMrApprovals resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsauthorapproval_csharp">
 <a href="#mergerequestsauthorapproval_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -224,8 +191,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsdisablecommittersapproval_csharp">
 <a href="#mergerequestsdisablecommittersapproval_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -234,8 +200,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetapprovalsonpush_csharp">
 <a href="#resetapprovalsonpush_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -244,14 +209,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -260,8 +222,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoverridingapproverspermergerequest_go">
 <a href="#disableoverridingapproverspermergerequest_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -271,8 +232,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsauthorapproval_go">
 <a href="#mergerequestsauthorapproval_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -282,8 +242,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsdisablecommittersapproval_go">
 <a href="#mergerequestsdisablecommittersapproval_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -292,8 +251,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetapprovalsonpush_go">
 <a href="#resetapprovalsonpush_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -302,14 +260,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -318,8 +273,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableoverridingapproverspermergerequest_nodejs">
 <a href="#disableoverridingapproverspermergerequest_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -329,8 +283,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsauthorapproval_nodejs">
 <a href="#mergerequestsauthorapproval_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -340,8 +293,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsdisablecommittersapproval_nodejs">
 <a href="#mergerequestsdisablecommittersapproval_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -350,8 +302,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetapprovalsonpush_nodejs">
 <a href="#resetapprovalsonpush_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -360,14 +311,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -376,8 +324,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_overriding_approvers_per_merge_request_python">
 <a href="#disable_overriding_approvers_per_merge_request_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>overriding_<wbr>approvers_<wbr>per_<wbr>merge_<wbr>request</a>
@@ -387,8 +334,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="merge_requests_author_approval_python">
 <a href="#merge_requests_author_approval_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>author_<wbr>approval</a>
@@ -398,8 +344,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="merge_requests_disable_committers_approval_python">
 <a href="#merge_requests_disable_committers_approval_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>disable_<wbr>committers_<wbr>approval</a>
@@ -408,8 +353,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_approvals_on_push_python">
 <a href="#reset_approvals_on_push_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>approvals_<wbr>on_<wbr>push</a>
@@ -418,8 +362,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -430,9 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -440,14 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -455,14 +393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -470,14 +405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -485,8 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -613,9 +544,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disableoverridingapproverspermergerequest_csharp">
 <a href="#state_disableoverridingapproverspermergerequest_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -625,8 +554,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsauthorapproval_csharp">
 <a href="#state_mergerequestsauthorapproval_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -636,8 +564,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsdisablecommittersapproval_csharp">
 <a href="#state_mergerequestsdisablecommittersapproval_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -646,8 +573,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -656,8 +582,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetapprovalsonpush_csharp">
 <a href="#state_resetapprovalsonpush_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -666,14 +591,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disableoverridingapproverspermergerequest_go">
 <a href="#state_disableoverridingapproverspermergerequest_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -683,8 +605,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsauthorapproval_go">
 <a href="#state_mergerequestsauthorapproval_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -694,8 +615,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsdisablecommittersapproval_go">
 <a href="#state_mergerequestsdisablecommittersapproval_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -704,8 +624,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -714,8 +633,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetapprovalsonpush_go">
 <a href="#state_resetapprovalsonpush_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -724,14 +642,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disableoverridingapproverspermergerequest_nodejs">
 <a href="#state_disableoverridingapproverspermergerequest_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Overriding<wbr>Approvers<wbr>Per<wbr>Merge<wbr>Request</a>
@@ -741,8 +656,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsauthorapproval_nodejs">
 <a href="#state_mergerequestsauthorapproval_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Author<wbr>Approval</a>
@@ -752,8 +666,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsdisablecommittersapproval_nodejs">
 <a href="#state_mergerequestsdisablecommittersapproval_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Disable<wbr>Committers<wbr>Approval</a>
@@ -762,8 +675,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -772,8 +684,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetapprovalsonpush_nodejs">
 <a href="#state_resetapprovalsonpush_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Approvals<wbr>On<wbr>Push</a>
@@ -782,14 +693,11 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disable_overriding_approvers_per_merge_request_python">
 <a href="#state_disable_overriding_approvers_per_merge_request_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>overriding_<wbr>approvers_<wbr>per_<wbr>merge_<wbr>request</a>
@@ -799,8 +707,7 @@ also need to be included in the approvers list in order to be able to approve th
     </dt>
     <dd>{{% md %}}By default, users are able to edit the approval rules in merge requests. If set to true,
 the approval rules for all new merge requests will be determined by the default approval rules. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_merge_requests_author_approval_python">
 <a href="#state_merge_requests_author_approval_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>author_<wbr>approval</a>
@@ -810,8 +717,7 @@ the approval rules for all new merge requests will be determined by the default 
     </dt>
     <dd>{{% md %}}Set to `true` if you want to allow merge request authors to self-approve merge requests. Authors
 also need to be included in the approvers list in order to be able to approve their merge request. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_merge_requests_disable_committers_approval_python">
 <a href="#state_merge_requests_disable_committers_approval_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>disable_<wbr>committers_<wbr>approval</a>
@@ -820,8 +726,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to prevent approval of merge requests by merge request committers. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -830,8 +735,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project to change MR approval configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reset_approvals_on_push_python">
 <a href="#state_reset_approvals_on_push_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>approvals_<wbr>on_<wbr>push</a>
@@ -840,8 +744,7 @@ also need to be included in the approvers list in order to be able to approve th
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -857,6 +760,6 @@ also need to be included in the approvers list in order to be able to approve th
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 </dl>
 

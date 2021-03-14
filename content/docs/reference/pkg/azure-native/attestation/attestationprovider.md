@@ -45,9 +45,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:attestation:AttestationProvider myattestationprovid
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -211,8 +180,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -220,8 +188,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -229,8 +196,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -238,8 +204,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,14 +212,11 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -262,8 +224,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -271,8 +232,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,8 +240,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -289,8 +248,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -298,14 +256,11 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -313,8 +268,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -322,8 +276,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -331,8 +284,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -340,8 +292,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -349,14 +300,11 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -364,8 +312,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -373,8 +320,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -382,8 +328,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -391,8 +336,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -400,8 +344,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -412,9 +355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -422,8 +363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -431,8 +371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -440,8 +379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -449,8 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -458,8 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attesturi_csharp">
 <a href="#attesturi_csharp" style="color: inherit; text-decoration: inherit;">Attest<wbr>Uri</a>
@@ -467,8 +403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -476,8 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustmodel_csharp">
 <a href="#trustmodel_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Model</a>
@@ -485,14 +419,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -500,8 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -509,8 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -518,8 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -527,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -536,8 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attesturi_go">
 <a href="#attesturi_go" style="color: inherit; text-decoration: inherit;">Attest<wbr>Uri</a>
@@ -545,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -554,8 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustmodel_go">
 <a href="#trustmodel_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Model</a>
@@ -563,14 +487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -587,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -596,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -605,8 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -614,8 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attesturi_nodejs">
 <a href="#attesturi_nodejs" style="color: inherit; text-decoration: inherit;">attest<wbr>Uri</a>
@@ -623,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -632,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustmodel_nodejs">
 <a href="#trustmodel_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Model</a>
@@ -641,14 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -665,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -674,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -683,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -692,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attest_uri_python">
 <a href="#attest_uri_python" style="color: inherit; text-decoration: inherit;">attest_<wbr>uri</a>
@@ -701,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the uri of attestation service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -710,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of attestation service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trust_model_python">
 <a href="#trust_model_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>model</a>
@@ -719,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,9 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="policysigningcertificates_csharp">
 <a href="#policysigningcertificates_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Signing<wbr>Certificates</a>
@@ -746,14 +647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonwebkeyset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="policysigningcertificates_go">
 <a href="#policysigningcertificates_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Signing<wbr>Certificates</a>
@@ -761,14 +659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="policysigningcertificates_nodejs">
 <a href="#policysigningcertificates_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Signing<wbr>Certificates</a>
@@ -776,14 +671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="policy_signing_certificates_python">
 <a href="#policy_signing_certificates_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>signing_<wbr>certificates</a>
@@ -791,16 +683,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jsonwebkey">JSONWeb<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -812,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alg_csharp">
 <a href="#alg_csharp" style="color: inherit; text-decoration: inherit;">Alg</a>
@@ -825,8 +713,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
 use with the key.  The values used should either be registered in the
 IANA "JSON Web Signature and Encryption Algorithms" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crv_csharp">
 <a href="#crv_csharp" style="color: inherit; text-decoration: inherit;">Crv</a>
@@ -834,8 +721,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="d_csharp">
 <a href="#d_csharp" style="color: inherit; text-decoration: inherit;">D</a>
@@ -843,8 +729,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dp_csharp">
 <a href="#dp_csharp" style="color: inherit; text-decoration: inherit;">Dp</a>
@@ -852,8 +737,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dq_csharp">
 <a href="#dq_csharp" style="color: inherit; text-decoration: inherit;">Dq</a>
@@ -861,8 +745,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_csharp">
 <a href="#e_csharp" style="color: inherit; text-decoration: inherit;">E</a>
@@ -870,8 +753,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k_csharp">
 <a href="#k_csharp" style="color: inherit; text-decoration: inherit;">K</a>
@@ -879,8 +761,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kid_csharp">
 <a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -896,8 +777,7 @@ keys within the JWK Set SHOULD use distinct "kid" values.  (One
 example in which different keys might use the same "kid" value is if
 they have different "kty" (key type) values but are considered to be
 equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_csharp">
 <a href="#n_csharp" style="color: inherit; text-decoration: inherit;">N</a>
@@ -905,8 +785,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="p_csharp">
 <a href="#p_csharp" style="color: inherit; text-decoration: inherit;">P</a>
@@ -914,8 +793,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="q_csharp">
 <a href="#q_csharp" style="color: inherit; text-decoration: inherit;">Q</a>
@@ -923,8 +801,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qi_csharp">
 <a href="#qi_csharp" style="color: inherit; text-decoration: inherit;">Qi</a>
@@ -932,8 +809,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_csharp">
 <a href="#use_csharp" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -944,8 +820,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
 a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
-    <dt class="property-optional"
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_csharp">
 <a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
@@ -953,8 +828,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x5c_csharp">
 <a href="#x5c_csharp" style="color: inherit; text-decoration: inherit;">X5c</a>
@@ -968,8 +842,7 @@ represented as a JSON array of certificate value strings.  Each
 string in the array is a base64-encoded (Section 4 of [RFC4648] --
 not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
 The PKIX certificate containing the key value MUST be the first
-certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="y_csharp">
 <a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -977,14 +850,11 @@ certificate.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -996,8 +866,7 @@ certificate.{{% /md %}}</dd>
 family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alg_go">
 <a href="#alg_go" style="color: inherit; text-decoration: inherit;">Alg</a>
@@ -1009,8 +878,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
 use with the key.  The values used should either be registered in the
 IANA "JSON Web Signature and Encryption Algorithms" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crv_go">
 <a href="#crv_go" style="color: inherit; text-decoration: inherit;">Crv</a>
@@ -1018,8 +886,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="d_go">
 <a href="#d_go" style="color: inherit; text-decoration: inherit;">D</a>
@@ -1027,8 +894,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dp_go">
 <a href="#dp_go" style="color: inherit; text-decoration: inherit;">Dp</a>
@@ -1036,8 +902,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dq_go">
 <a href="#dq_go" style="color: inherit; text-decoration: inherit;">Dq</a>
@@ -1045,8 +910,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_go">
 <a href="#e_go" style="color: inherit; text-decoration: inherit;">E</a>
@@ -1054,8 +918,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k_go">
 <a href="#k_go" style="color: inherit; text-decoration: inherit;">K</a>
@@ -1063,8 +926,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kid_go">
 <a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -1080,8 +942,7 @@ keys within the JWK Set SHOULD use distinct "kid" values.  (One
 example in which different keys might use the same "kid" value is if
 they have different "kty" (key type) values but are considered to be
 equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_go">
 <a href="#n_go" style="color: inherit; text-decoration: inherit;">N</a>
@@ -1089,8 +950,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="p_go">
 <a href="#p_go" style="color: inherit; text-decoration: inherit;">P</a>
@@ -1098,8 +958,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="q_go">
 <a href="#q_go" style="color: inherit; text-decoration: inherit;">Q</a>
@@ -1107,8 +966,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qi_go">
 <a href="#qi_go" style="color: inherit; text-decoration: inherit;">Qi</a>
@@ -1116,8 +974,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_go">
 <a href="#use_go" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -1128,8 +985,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
 a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
-    <dt class="property-optional"
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_go">
 <a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
@@ -1137,8 +993,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x5c_go">
 <a href="#x5c_go" style="color: inherit; text-decoration: inherit;">X5c</a>
@@ -1152,8 +1007,7 @@ represented as a JSON array of certificate value strings.  Each
 string in the array is a base64-encoded (Section 4 of [RFC4648] --
 not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
 The PKIX certificate containing the key value MUST be the first
-certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="y_go">
 <a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -1161,14 +1015,11 @@ certificate.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -1180,8 +1031,7 @@ certificate.{{% /md %}}</dd>
 family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alg_nodejs">
 <a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
@@ -1193,8 +1043,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
 use with the key.  The values used should either be registered in the
 IANA "JSON Web Signature and Encryption Algorithms" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crv_nodejs">
 <a href="#crv_nodejs" style="color: inherit; text-decoration: inherit;">crv</a>
@@ -1202,8 +1051,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="d_nodejs">
 <a href="#d_nodejs" style="color: inherit; text-decoration: inherit;">d</a>
@@ -1211,8 +1059,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dp_nodejs">
 <a href="#dp_nodejs" style="color: inherit; text-decoration: inherit;">dp</a>
@@ -1220,8 +1067,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dq_nodejs">
 <a href="#dq_nodejs" style="color: inherit; text-decoration: inherit;">dq</a>
@@ -1229,8 +1075,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_nodejs">
 <a href="#e_nodejs" style="color: inherit; text-decoration: inherit;">e</a>
@@ -1238,8 +1083,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k_nodejs">
 <a href="#k_nodejs" style="color: inherit; text-decoration: inherit;">k</a>
@@ -1247,8 +1091,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kid_nodejs">
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -1264,8 +1107,7 @@ keys within the JWK Set SHOULD use distinct "kid" values.  (One
 example in which different keys might use the same "kid" value is if
 they have different "kty" (key type) values but are considered to be
 equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_nodejs">
 <a href="#n_nodejs" style="color: inherit; text-decoration: inherit;">n</a>
@@ -1273,8 +1115,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="p_nodejs">
 <a href="#p_nodejs" style="color: inherit; text-decoration: inherit;">p</a>
@@ -1282,8 +1123,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="q_nodejs">
 <a href="#q_nodejs" style="color: inherit; text-decoration: inherit;">q</a>
@@ -1291,8 +1131,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qi_nodejs">
 <a href="#qi_nodejs" style="color: inherit; text-decoration: inherit;">qi</a>
@@ -1300,8 +1139,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_nodejs">
 <a href="#use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
@@ -1312,8 +1150,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
 a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
-    <dt class="property-optional"
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_nodejs">
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1321,8 +1158,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x5c_nodejs">
 <a href="#x5c_nodejs" style="color: inherit; text-decoration: inherit;">x5c</a>
@@ -1336,8 +1172,7 @@ represented as a JSON array of certificate value strings.  Each
 string in the array is a base64-encoded (Section 4 of [RFC4648] --
 not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
 The PKIX certificate containing the key value MUST be the first
-certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="y_nodejs">
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1345,14 +1180,11 @@ certificate.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -1364,8 +1196,7 @@ certificate.{{% /md %}}</dd>
 family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alg_python">
 <a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
@@ -1377,8 +1208,7 @@ Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
 use with the key.  The values used should either be registered in the
 IANA "JSON Web Signature and Encryption Algorithms" registry
 established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+Resistant Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crv_python">
 <a href="#crv_python" style="color: inherit; text-decoration: inherit;">crv</a>
@@ -1386,8 +1216,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "crv" (curve) parameter identifies the curve type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="d_python">
 <a href="#d_python" style="color: inherit; text-decoration: inherit;">d</a>
@@ -1395,8 +1224,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA private exponent or ECC private key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dp_python">
 <a href="#dp_python" style="color: inherit; text-decoration: inherit;">dp</a>
@@ -1404,8 +1232,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dq_python">
 <a href="#dq_python" style="color: inherit; text-decoration: inherit;">dq</a>
@@ -1413,8 +1240,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_python">
 <a href="#e_python" style="color: inherit; text-decoration: inherit;">e</a>
@@ -1422,8 +1248,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA public exponent, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k_python">
 <a href="#k_python" style="color: inherit; text-decoration: inherit;">k</a>
@@ -1431,8 +1256,7 @@ Resistant Name.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Symmetric key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kid_python">
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -1448,8 +1272,7 @@ keys within the JWK Set SHOULD use distinct "kid" values.  (One
 example in which different keys might use the same "kid" value is if
 they have different "kty" (key type) values but are considered to be
 equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-optional"
+value is a case-sensitive string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_python">
 <a href="#n_python" style="color: inherit; text-decoration: inherit;">n</a>
@@ -1457,8 +1280,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA modulus, in Base64{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="p_python">
 <a href="#p_python" style="color: inherit; text-decoration: inherit;">p</a>
@@ -1466,8 +1288,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="q_python">
 <a href="#q_python" style="color: inherit; text-decoration: inherit;">q</a>
@@ -1475,8 +1296,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA secret prime, with p < q{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qi_python">
 <a href="#qi_python" style="color: inherit; text-decoration: inherit;">qi</a>
@@ -1484,8 +1304,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_python">
 <a href="#use_python" style="color: inherit; text-decoration: inherit;">use</a>
@@ -1496,8 +1315,7 @@ value is a case-sensitive string.{{% /md %}}</dd>
     <dd>{{% md %}}Use ("public key use") identifies the intended use of
 the public key. The "use" parameter is employed to indicate whether
 a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
-    <dt class="property-optional"
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x_python">
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1505,8 +1323,7 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}X coordinate for the Elliptic Curve point{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x5c_python">
 <a href="#x5c_python" style="color: inherit; text-decoration: inherit;">x5c</a>
@@ -1520,8 +1337,7 @@ represented as a JSON array of certificate value strings.  Each
 string in the array is a base64-encoded (Section 4 of [RFC4648] --
 not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
 The PKIX certificate containing the key value MUST be the first
-certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="y_python">
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1529,16 +1345,13 @@ certificate.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Y coordinate for the Elliptic Curve point{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keys_csharp">
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -1550,14 +1363,11 @@ certificate.{{% /md %}}</dd>
 default, the order of the JWK values within the array does not imply
 an order of preference among them, although applications of JWK Sets
 can choose to assign a meaning to the order for their purposes, if
-desired.{{% /md %}}</dd>
-</dl>
+desired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keys_go">
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -1569,14 +1379,11 @@ desired.{{% /md %}}</dd>
 default, the order of the JWK values within the array does not imply
 an order of preference among them, although applications of JWK Sets
 can choose to assign a meaning to the order for their purposes, if
-desired.{{% /md %}}</dd>
-</dl>
+desired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keys_nodejs">
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -1588,14 +1395,11 @@ desired.{{% /md %}}</dd>
 default, the order of the JWK values within the array does not imply
 an order of preference among them, although applications of JWK Sets
 can choose to assign a meaning to the order for their purposes, if
-desired.{{% /md %}}</dd>
-</dl>
+desired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keys_python">
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -1607,16 +1411,13 @@ desired.{{% /md %}}</dd>
 default, the order of the JWK values within the array does not imply
 an order of preference among them, although applications of JWK Sets
 can choose to assign a meaning to the order for their purposes, if
-desired.{{% /md %}}</dd>
-</dl>
+desired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1624,8 +1425,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1633,8 +1433,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1642,8 +1441,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1651,8 +1449,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1660,8 +1457,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1669,14 +1465,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1684,8 +1477,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1693,8 +1485,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1702,8 +1493,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1711,8 +1501,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1720,8 +1509,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1729,14 +1517,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1744,8 +1529,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1753,8 +1537,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1762,8 +1545,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1771,8 +1553,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1780,8 +1561,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1789,14 +1569,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1804,8 +1581,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1813,8 +1589,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1822,8 +1597,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1831,8 +1605,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1840,8 +1613,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -1849,16 +1621,13 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1866,14 +1635,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1881,14 +1647,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1896,14 +1659,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1911,16 +1671,13 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1928,8 +1685,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1937,8 +1693,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1946,14 +1701,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1961,8 +1713,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1970,8 +1721,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1979,14 +1729,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -1994,8 +1741,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2003,8 +1749,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2012,14 +1757,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -2027,8 +1769,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2036,8 +1777,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2045,16 +1785,13 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2062,8 +1799,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2071,8 +1807,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2080,8 +1815,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2089,8 +1823,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2098,8 +1831,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2107,14 +1839,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2122,8 +1851,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2131,8 +1859,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2140,8 +1867,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2149,8 +1875,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2158,8 +1883,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2167,14 +1891,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2182,8 +1903,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2191,8 +1911,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2200,8 +1919,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2209,8 +1927,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2218,8 +1935,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2227,14 +1943,11 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2242,8 +1955,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2251,8 +1963,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2260,8 +1971,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2269,8 +1979,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2278,8 +1987,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2287,8 +1995,7 @@ desired.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -43,9 +43,7 @@ ESS scaling rule can be imported using the id, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ ESS scaling rule can be imported using the id, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ ESS scaling rule can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scalinggroupid_csharp">
 <a href="#scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
@@ -210,8 +179,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmenttype_csharp">
 <a href="#adjustmenttype_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
@@ -223,8 +191,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentvalue_csharp">
 <a href="#adjustmentvalue_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Value</a>
@@ -236,8 +203,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -246,8 +212,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_csharp">
 <a href="#disablescalein_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -256,8 +221,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_csharp">
 <a href="#estimatedinstancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -266,8 +230,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -276,8 +239,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingrulename_csharp">
 <a href="#scalingrulename_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Name</a>
@@ -286,8 +248,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingruletype_csharp">
 <a href="#scalingruletype_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Type</a>
@@ -296,8 +257,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_csharp">
 <a href="#stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
@@ -306,8 +266,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingrulestepadjustment">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_csharp">
 <a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -316,14 +275,11 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scalinggroupid_go">
 <a href="#scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
@@ -332,8 +288,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmenttype_go">
 <a href="#adjustmenttype_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
@@ -345,8 +300,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentvalue_go">
 <a href="#adjustmentvalue_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Value</a>
@@ -358,8 +312,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -368,8 +321,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_go">
 <a href="#disablescalein_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -378,8 +330,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_go">
 <a href="#estimatedinstancewarmup_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -388,8 +339,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -398,8 +348,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingrulename_go">
 <a href="#scalingrulename_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Name</a>
@@ -408,8 +357,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingruletype_go">
 <a href="#scalingruletype_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Type</a>
@@ -418,8 +366,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_go">
 <a href="#stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
@@ -428,8 +375,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingrulestepadjustment">[]Scaling<wbr>Rule<wbr>Step<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_go">
 <a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -438,14 +384,11 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scalinggroupid_nodejs">
 <a href="#scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
@@ -454,8 +397,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmenttype_nodejs">
 <a href="#adjustmenttype_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Type</a>
@@ -467,8 +409,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentvalue_nodejs">
 <a href="#adjustmentvalue_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Value</a>
@@ -480,8 +421,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -490,8 +430,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_nodejs">
 <a href="#disablescalein_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
@@ -500,8 +439,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_nodejs">
 <a href="#estimatedinstancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Instance<wbr>Warmup</a>
@@ -510,8 +448,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -520,8 +457,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingrulename_nodejs">
 <a href="#scalingrulename_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Rule<wbr>Name</a>
@@ -530,8 +466,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingruletype_nodejs">
 <a href="#scalingruletype_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Rule<wbr>Type</a>
@@ -540,8 +475,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_nodejs">
 <a href="#stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
@@ -550,8 +484,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingrulestepadjustment">Scaling<wbr>Rule<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_nodejs">
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
@@ -560,14 +493,11 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scaling_group_id_python">
 <a href="#scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
@@ -576,8 +506,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_type_python">
 <a href="#adjustment_type_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>type</a>
@@ -589,8 +518,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_value_python">
 <a href="#adjustment_value_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>value</a>
@@ -602,8 +530,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -612,8 +539,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_scale_in_python">
 <a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
@@ -622,8 +548,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimated_instance_warmup_python">
 <a href="#estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
@@ -632,8 +557,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -642,8 +566,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_rule_name_python">
 <a href="#scaling_rule_name_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>rule_<wbr>name</a>
@@ -652,8 +575,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_rule_type_python">
 <a href="#scaling_rule_type_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>rule_<wbr>type</a>
@@ -662,8 +584,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="step_adjustments_python">
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
@@ -672,8 +593,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingrulestepadjustment">Sequence[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_value_python">
 <a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
@@ -682,8 +602,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ari_csharp">
 <a href="#ari_csharp" style="color: inherit; text-decoration: inherit;">Ari</a>
@@ -704,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -713,14 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ari_go">
 <a href="#ari_go" style="color: inherit; text-decoration: inherit;">Ari</a>
@@ -728,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -737,14 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ari_nodejs">
 <a href="#ari_nodejs" style="color: inherit; text-decoration: inherit;">ari</a>
@@ -752,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -761,14 +669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ari_python">
 <a href="#ari_python" style="color: inherit; text-decoration: inherit;">ari</a>
@@ -776,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -913,9 +816,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmenttype_csharp">
 <a href="#state_adjustmenttype_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
@@ -927,8 +828,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmentvalue_csharp">
 <a href="#state_adjustmentvalue_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Value</a>
@@ -940,8 +840,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ari_csharp">
 <a href="#state_ari_csharp" style="color: inherit; text-decoration: inherit;">Ari</a>
@@ -949,8 +848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldown_csharp">
 <a href="#state_cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -959,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablescalein_csharp">
 <a href="#state_disablescalein_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -969,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedinstancewarmup_csharp">
 <a href="#state_estimatedinstancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -979,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricname_csharp">
 <a href="#state_metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -989,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_csharp">
 <a href="#state_scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
@@ -999,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingrulename_csharp">
 <a href="#state_scalingrulename_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Name</a>
@@ -1009,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingruletype_csharp">
 <a href="#state_scalingruletype_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Type</a>
@@ -1019,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stepadjustments_csharp">
 <a href="#state_stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
@@ -1029,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingrulestepadjustment">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvalue_csharp">
 <a href="#state_targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -1039,14 +929,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmenttype_go">
 <a href="#state_adjustmenttype_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
@@ -1058,8 +945,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmentvalue_go">
 <a href="#state_adjustmentvalue_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Value</a>
@@ -1071,8 +957,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ari_go">
 <a href="#state_ari_go" style="color: inherit; text-decoration: inherit;">Ari</a>
@@ -1080,8 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldown_go">
 <a href="#state_cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -1090,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablescalein_go">
 <a href="#state_disablescalein_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -1100,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedinstancewarmup_go">
 <a href="#state_estimatedinstancewarmup_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -1110,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricname_go">
 <a href="#state_metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -1120,8 +1001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_go">
 <a href="#state_scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
@@ -1130,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingrulename_go">
 <a href="#state_scalingrulename_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Name</a>
@@ -1140,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingruletype_go">
 <a href="#state_scalingruletype_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Rule<wbr>Type</a>
@@ -1150,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stepadjustments_go">
 <a href="#state_stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
@@ -1160,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingrulestepadjustment">[]Scaling<wbr>Rule<wbr>Step<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvalue_go">
 <a href="#state_targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -1170,14 +1046,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmenttype_nodejs">
 <a href="#state_adjustmenttype_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Type</a>
@@ -1189,8 +1062,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adjustmentvalue_nodejs">
 <a href="#state_adjustmentvalue_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Value</a>
@@ -1202,8 +1074,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ari_nodejs">
 <a href="#state_ari_nodejs" style="color: inherit; text-decoration: inherit;">ari</a>
@@ -1211,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldown_nodejs">
 <a href="#state_cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -1221,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablescalein_nodejs">
 <a href="#state_disablescalein_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
@@ -1231,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedinstancewarmup_nodejs">
 <a href="#state_estimatedinstancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Instance<wbr>Warmup</a>
@@ -1241,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricname_nodejs">
 <a href="#state_metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -1251,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_nodejs">
 <a href="#state_scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
@@ -1261,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingrulename_nodejs">
 <a href="#state_scalingrulename_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Rule<wbr>Name</a>
@@ -1271,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingruletype_nodejs">
 <a href="#state_scalingruletype_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Rule<wbr>Type</a>
@@ -1281,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stepadjustments_nodejs">
 <a href="#state_stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
@@ -1291,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingrulestepadjustment">Scaling<wbr>Rule<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvalue_nodejs">
 <a href="#state_targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
@@ -1301,14 +1163,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adjustment_type_python">
 <a href="#state_adjustment_type_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>type</a>
@@ -1320,8 +1179,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity: It is used to increase or decrease a specified number of ECS instances.
 - PercentChangeInCapacity: It is used to increase or decrease a specified proportion of ECS instances.
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adjustment_value_python">
 <a href="#state_adjustment_value_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>value</a>
@@ -1333,8 +1191,7 @@ The following state arguments are supported:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ari_python">
 <a href="#state_ari_python" style="color: inherit; text-decoration: inherit;">ari</a>
@@ -1342,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldown_python">
 <a href="#state_cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -1352,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_scale_in_python">
 <a href="#state_disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
@@ -1362,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. Default to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimated_instance_warmup_python">
 <a href="#state_estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
@@ -1372,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_name_python">
 <a href="#state_metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -1382,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CloudMonitor metric name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_group_id_python">
 <a href="#state_scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
@@ -1392,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_rule_name_python">
 <a href="#state_scaling_rule_name_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>rule_<wbr>name</a>
@@ -1402,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_rule_type_python">
 <a href="#state_scaling_rule_type_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>rule_<wbr>type</a>
@@ -1412,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_step_adjustments_python">
 <a href="#state_step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
@@ -1422,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingrulestepadjustment">Sequence[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_value_python">
 <a href="#state_target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
@@ -1432,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1448,9 +1295,7 @@ The following state arguments are supported:
 <h4 id="scalingrulestepadjustment">Scaling<wbr>Rule<wbr>Step<wbr>Adjustment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_csharp">
 <a href="#metricintervallowerbound_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
@@ -1458,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_csharp">
 <a href="#metricintervalupperbound_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
@@ -1467,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_csharp">
 <a href="#scalingadjustment_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Adjustment</a>
@@ -1476,14 +1319,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_go">
 <a href="#metricintervallowerbound_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
@@ -1491,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_go">
 <a href="#metricintervalupperbound_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
@@ -1500,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_go">
 <a href="#scalingadjustment_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Adjustment</a>
@@ -1509,14 +1347,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_nodejs">
 <a href="#metricintervallowerbound_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
@@ -1524,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_nodejs">
 <a href="#metricintervalupperbound_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
@@ -1533,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingadjustment_nodejs">
 <a href="#scalingadjustment_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Adjustment</a>
@@ -1542,14 +1375,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metric_interval_lower_bound_python">
 <a href="#metric_interval_lower_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>lower_<wbr>bound</a>
@@ -1557,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_interval_upper_bound_python">
 <a href="#metric_interval_upper_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>upper_<wbr>bound</a>
@@ -1566,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_adjustment_python">
 <a href="#scaling_adjustment_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>adjustment</a>
@@ -1575,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1587,6 +1414,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

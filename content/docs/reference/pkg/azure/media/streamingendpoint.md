@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.media.StreamingEndpoint resource with ex
 Manages a Streaming Endpoint.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -62,9 +68,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -119,9 +128,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -146,9 +158,12 @@ example_streaming_endpoint = azure.media.StreamingEndpoint("exampleStreamingEndp
     scale_units=2)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -177,10 +192,17 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With Access Control
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -256,9 +278,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -337,9 +362,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -388,9 +416,12 @@ example_streaming_endpoint = azure.media.StreamingEndpoint("exampleStreamingEndp
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -443,9 +474,16 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StreamingEndpoint Resource {#create}
@@ -470,9 +508,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -480,9 +516,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -490,9 +524,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -500,10 +532,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -529,9 +558,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -539,9 +566,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -549,9 +574,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -559,9 +582,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -569,18 +590,13 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -588,9 +604,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -598,9 +612,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -608,10 +620,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -626,9 +635,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_csharp">
 <a href="#mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -637,8 +644,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -647,8 +653,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleunits_csharp">
 <a href="#scaleunits_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Units</a>
@@ -657,8 +662,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_csharp">
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
@@ -667,8 +671,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autostartenabled_csharp">
 <a href="#autostartenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start<wbr>Enabled</a>
@@ -677,8 +680,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnenabled_csharp">
 <a href="#cdnenabled_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Enabled</a>
@@ -687,8 +689,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprofile_csharp">
 <a href="#cdnprofile_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Profile</a>
@@ -697,8 +698,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprovider_csharp">
 <a href="#cdnprovider_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Provider</a>
@@ -707,8 +707,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crosssiteaccesspolicy_csharp">
 <a href="#crosssiteaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -717,8 +716,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnames_csharp">
 <a href="#customhostnames_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Names</a>
@@ -727,8 +725,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -737,8 +734,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -747,8 +743,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcacheageseconds_csharp">
 <a href="#maxcacheageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -757,8 +752,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -767,8 +761,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -777,14 +770,11 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_go">
 <a href="#mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -793,8 +783,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -803,8 +792,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleunits_go">
 <a href="#scaleunits_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Units</a>
@@ -813,8 +801,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_go">
 <a href="#accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
@@ -823,8 +810,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autostartenabled_go">
 <a href="#autostartenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start<wbr>Enabled</a>
@@ -833,8 +819,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnenabled_go">
 <a href="#cdnenabled_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Enabled</a>
@@ -843,8 +828,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprofile_go">
 <a href="#cdnprofile_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Profile</a>
@@ -853,8 +837,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprovider_go">
 <a href="#cdnprovider_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Provider</a>
@@ -863,8 +846,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crosssiteaccesspolicy_go">
 <a href="#crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -873,8 +855,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnames_go">
 <a href="#customhostnames_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Names</a>
@@ -883,8 +864,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -893,8 +873,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -903,8 +882,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcacheageseconds_go">
 <a href="#maxcacheageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -913,8 +891,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -923,8 +900,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -933,14 +909,11 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_nodejs">
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -949,8 +922,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -959,8 +931,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleunits_nodejs">
 <a href="#scaleunits_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Units</a>
@@ -969,8 +940,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrol_nodejs">
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
@@ -979,8 +949,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autostartenabled_nodejs">
 <a href="#autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
@@ -989,8 +958,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnenabled_nodejs">
 <a href="#cdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Enabled</a>
@@ -999,8 +967,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprofile_nodejs">
 <a href="#cdnprofile_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Profile</a>
@@ -1009,8 +976,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnprovider_nodejs">
 <a href="#cdnprovider_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Provider</a>
@@ -1019,8 +985,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crosssiteaccesspolicy_nodejs">
 <a href="#crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -1029,8 +994,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnames_nodejs">
 <a href="#customhostnames_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Names</a>
@@ -1039,8 +1003,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1049,8 +1012,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1059,8 +1021,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcacheageseconds_nodejs">
 <a href="#maxcacheageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -1069,8 +1030,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1079,8 +1039,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1089,14 +1048,11 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="media_services_account_name_python">
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -1105,8 +1061,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1115,8 +1070,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scale_units_python">
 <a href="#scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
@@ -1125,8 +1079,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_control_python">
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
@@ -1135,8 +1088,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_start_enabled_python">
 <a href="#auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
@@ -1145,8 +1097,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdn_enabled_python">
 <a href="#cdn_enabled_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>enabled</a>
@@ -1155,8 +1106,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdn_profile_python">
 <a href="#cdn_profile_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>profile</a>
@@ -1165,8 +1115,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdn_provider_python">
 <a href="#cdn_provider_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>provider</a>
@@ -1175,8 +1124,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cross_site_access_policy_python">
 <a href="#cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
@@ -1185,8 +1133,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_host_names_python">
 <a href="#custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
@@ -1195,8 +1142,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1205,8 +1151,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1215,8 +1160,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_cache_age_seconds_python">
 <a href="#max_cache_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age_<wbr>seconds</a>
@@ -1225,8 +1169,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1235,8 +1178,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1245,8 +1187,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1257,9 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1268,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1277,14 +1215,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1293,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1302,14 +1236,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1318,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1327,14 +1257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1343,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1352,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1480,9 +1405,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscontrol_csharp">
 <a href="#state_accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
@@ -1491,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autostartenabled_csharp">
 <a href="#state_autostartenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start<wbr>Enabled</a>
@@ -1501,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnenabled_csharp">
 <a href="#state_cdnenabled_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Enabled</a>
@@ -1511,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprofile_csharp">
 <a href="#state_cdnprofile_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Profile</a>
@@ -1521,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprovider_csharp">
 <a href="#state_cdnprovider_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Provider</a>
@@ -1531,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crosssiteaccesspolicy_csharp">
 <a href="#state_crosssiteaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -1541,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhostnames_csharp">
 <a href="#state_customhostnames_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Names</a>
@@ -1551,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1561,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1571,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1581,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcacheageseconds_csharp">
 <a href="#state_maxcacheageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -1591,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_csharp">
 <a href="#state_mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1601,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1611,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1621,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunits_csharp">
 <a href="#state_scaleunits_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Units</a>
@@ -1631,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1641,14 +1549,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscontrol_go">
 <a href="#state_accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
@@ -1657,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autostartenabled_go">
 <a href="#state_autostartenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start<wbr>Enabled</a>
@@ -1667,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnenabled_go">
 <a href="#state_cdnenabled_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Enabled</a>
@@ -1677,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprofile_go">
 <a href="#state_cdnprofile_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Profile</a>
@@ -1687,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprovider_go">
 <a href="#state_cdnprovider_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Provider</a>
@@ -1697,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crosssiteaccesspolicy_go">
 <a href="#state_crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -1707,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhostnames_go">
 <a href="#state_customhostnames_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Names</a>
@@ -1717,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1727,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1737,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1747,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcacheageseconds_go">
 <a href="#state_maxcacheageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -1757,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_go">
 <a href="#state_mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1767,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1777,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1787,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunits_go">
 <a href="#state_scaleunits_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Units</a>
@@ -1797,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1807,14 +1697,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscontrol_nodejs">
 <a href="#state_accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
@@ -1823,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autostartenabled_nodejs">
 <a href="#state_autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
@@ -1833,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnenabled_nodejs">
 <a href="#state_cdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Enabled</a>
@@ -1843,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprofile_nodejs">
 <a href="#state_cdnprofile_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Profile</a>
@@ -1853,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnprovider_nodejs">
 <a href="#state_cdnprovider_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Provider</a>
@@ -1863,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crosssiteaccesspolicy_nodejs">
 <a href="#state_crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
@@ -1873,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhostnames_nodejs">
 <a href="#state_customhostnames_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Names</a>
@@ -1883,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1893,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1903,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1913,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcacheageseconds_nodejs">
 <a href="#state_maxcacheageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Cache<wbr>Age<wbr>Seconds</a>
@@ -1923,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_nodejs">
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1933,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1943,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1953,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunits_nodejs">
 <a href="#state_scaleunits_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Units</a>
@@ -1963,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1973,14 +1845,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_control_python">
 <a href="#state_access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
@@ -1989,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_start_enabled_python">
 <a href="#state_auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
@@ -1999,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdn_enabled_python">
 <a href="#state_cdn_enabled_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>enabled</a>
@@ -2009,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdn_profile_python">
 <a href="#state_cdn_profile_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>profile</a>
@@ -2019,8 +1885,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdn_provider_python">
 <a href="#state_cdn_provider_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>provider</a>
@@ -2029,8 +1894,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cross_site_access_policy_python">
 <a href="#state_cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
@@ -2039,8 +1903,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_host_names_python">
 <a href="#state_custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
@@ -2049,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2059,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_name_python">
 <a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -2069,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2079,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_cache_age_seconds_python">
 <a href="#state_max_cache_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age_<wbr>seconds</a>
@@ -2089,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_media_services_account_name_python">
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -2099,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2109,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2119,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scale_units_python">
 <a href="#state_scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
@@ -2129,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2139,8 +1993,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2155,9 +2008,7 @@ The following state arguments are supported:
 <h4 id="streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="akamaisignatureheaderauthenticationkeys_csharp">
 <a href="#akamaisignatureheaderauthenticationkeys_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
@@ -2166,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallows_csharp">
 <a href="#ipallows_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allows</a>
@@ -2176,14 +2026,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="akamaisignatureheaderauthenticationkeys_go">
 <a href="#akamaisignatureheaderauthenticationkeys_go" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
@@ -2192,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">[]Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallows_go">
 <a href="#ipallows_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allows</a>
@@ -2202,14 +2048,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">[]Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="akamaisignatureheaderauthenticationkeys_nodejs">
 <a href="#akamaisignatureheaderauthenticationkeys_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
@@ -2218,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallows_nodejs">
 <a href="#ipallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allows</a>
@@ -2228,14 +2070,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="akamai_signature_header_authentication_keys_python">
 <a href="#akamai_signature_header_authentication_keys_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>keys</a>
@@ -2244,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allows_python">
 <a href="#ip_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allows</a>
@@ -2254,16 +2092,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64key_csharp">
 <a href="#base64key_csharp" style="color: inherit; text-decoration: inherit;">Base64Key</a>
@@ -2272,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -2282,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -2292,14 +2125,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64key_go">
 <a href="#base64key_go" style="color: inherit; text-decoration: inherit;">Base64Key</a>
@@ -2308,8 +2138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -2318,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -2328,14 +2156,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64key_nodejs">
 <a href="#base64key_nodejs" style="color: inherit; text-decoration: inherit;">base64Key</a>
@@ -2344,8 +2169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -2354,8 +2178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2364,14 +2187,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64_key_python">
 <a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
@@ -2380,8 +2200,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -2390,8 +2209,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2400,16 +2218,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingendpointaccesscontrolipallow">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2418,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2428,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefixlength_csharp">
 <a href="#subnetprefixlength_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Prefix<wbr>Length</a>
@@ -2438,14 +2251,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2454,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2464,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefixlength_go">
 <a href="#subnetprefixlength_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Prefix<wbr>Length</a>
@@ -2474,14 +2282,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2490,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2500,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefixlength_nodejs">
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
@@ -2510,14 +2313,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2526,8 +2326,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2536,8 +2335,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_prefix_length_python">
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
@@ -2546,16 +2344,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientaccesspolicy_csharp">
 <a href="#clientaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Policy</a>
@@ -2564,8 +2359,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossdomainpolicy_csharp">
 <a href="#crossdomainpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Domain<wbr>Policy</a>
@@ -2574,14 +2368,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientaccesspolicy_go">
 <a href="#clientaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Policy</a>
@@ -2590,8 +2381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossdomainpolicy_go">
 <a href="#crossdomainpolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Domain<wbr>Policy</a>
@@ -2600,14 +2390,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientaccesspolicy_nodejs">
 <a href="#clientaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Policy</a>
@@ -2616,8 +2403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossdomainpolicy_nodejs">
 <a href="#crossdomainpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Domain<wbr>Policy</a>
@@ -2626,14 +2412,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_access_policy_python">
 <a href="#client_access_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>policy</a>
@@ -2642,8 +2425,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cross_domain_policy_python">
 <a href="#cross_domain_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>domain_<wbr>policy</a>
@@ -2652,8 +2434,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2674,6 +2455,6 @@ Streaming Endpoints can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

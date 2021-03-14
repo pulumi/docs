@@ -19,11 +19,17 @@ For more information, see
 https://cloud.google.com/compute/docs/load-balancing/http/
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Global Forwarding Rule Http
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -98,9 +104,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -178,9 +187,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -217,9 +229,12 @@ default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobal
     port_range="80")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -262,10 +277,17 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Global Forwarding Rule Internal
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -431,9 +453,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -576,9 +601,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -660,9 +688,12 @@ default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobal
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -761,9 +792,16 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GlobalForwardingRule Resource {#create}
@@ -788,9 +826,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -798,9 +834,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -808,9 +842,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -818,10 +850,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -847,9 +876,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -857,9 +884,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -867,9 +892,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -877,9 +900,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -887,18 +908,13 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -906,9 +922,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -916,9 +930,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -926,10 +938,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -944,9 +953,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -958,8 +965,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -969,8 +975,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -998,8 +1003,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1012,8 +1016,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1023,8 +1026,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1033,8 +1035,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_csharp">
 <a href="#loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -1048,8 +1049,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_csharp">
 <a href="#metadatafilters_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -1072,8 +1072,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1083,8 +1082,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1097,8 +1095,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_csharp">
 <a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1122,8 +1119,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1133,14 +1129,11 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1152,8 +1145,7 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1163,8 +1155,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1192,8 +1183,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1206,8 +1196,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1217,8 +1206,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1227,8 +1215,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_go">
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -1242,8 +1229,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_go">
 <a href="#metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -1266,8 +1252,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1277,8 +1262,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1291,8 +1275,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_go">
 <a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1316,8 +1299,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1327,14 +1309,11 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1346,8 +1325,7 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1357,8 +1335,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1386,8 +1363,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -1400,8 +1376,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -1411,8 +1386,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1421,8 +1395,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_nodejs">
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
@@ -1436,8 +1409,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_nodejs">
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
@@ -1460,8 +1432,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1471,8 +1442,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1485,8 +1455,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_nodejs">
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -1510,8 +1479,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1521,14 +1489,11 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1540,8 +1505,7 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1551,8 +1515,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1580,8 +1543,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -1594,8 +1556,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1605,8 +1566,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1615,8 +1575,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_scheme_python">
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
@@ -1630,8 +1589,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_filters_python">
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
@@ -1654,8 +1612,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1665,8 +1622,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1679,8 +1635,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_python">
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -1704,8 +1659,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1715,8 +1669,7 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1727,9 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1737,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1747,8 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1757,14 +1706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1772,8 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1782,8 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1792,14 +1736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1807,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1817,8 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1827,14 +1766,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1842,8 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1852,8 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1862,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1990,9 +1923,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2002,8 +1933,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2031,8 +1961,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_csharp">
 <a href="#state_ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -2045,8 +1974,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_csharp">
 <a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -2056,8 +1984,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2066,8 +1993,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2076,8 +2002,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_csharp">
 <a href="#state_loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -2091,8 +2016,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_csharp">
 <a href="#state_metadatafilters_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -2115,8 +2039,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2126,8 +2049,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2140,8 +2062,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_csharp">
 <a href="#state_portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -2165,8 +2086,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2176,8 +2096,7 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2186,8 +2105,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2199,14 +2117,11 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2216,8 +2131,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2245,8 +2159,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_go">
 <a href="#state_ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -2259,8 +2172,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_go">
 <a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -2270,8 +2182,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2280,8 +2191,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2290,8 +2200,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_go">
 <a href="#state_loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -2305,8 +2214,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_go">
 <a href="#state_metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -2329,8 +2237,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2340,8 +2247,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2354,8 +2260,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_go">
 <a href="#state_portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -2379,8 +2284,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2390,8 +2294,7 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2400,8 +2303,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2413,14 +2315,11 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2430,8 +2329,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2459,8 +2357,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_nodejs">
 <a href="#state_ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -2473,8 +2370,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_nodejs">
 <a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -2484,8 +2380,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2494,8 +2389,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2504,8 +2398,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_nodejs">
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
@@ -2519,8 +2412,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadatafilters_nodejs">
 <a href="#state_metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
@@ -2543,8 +2435,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2554,8 +2445,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2568,8 +2458,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_nodejs">
 <a href="#state_portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -2593,8 +2482,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2604,8 +2492,7 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2614,8 +2501,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2627,14 +2513,11 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2644,8 +2527,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2673,8 +2555,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_protocol_python">
 <a href="#state_ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -2687,8 +2568,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
 global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
 and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_version_python">
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -2698,8 +2578,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
 Possible values are `IPV4` and `IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -2708,8 +2587,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2718,8 +2596,7 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_scheme_python">
 <a href="#state_load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
@@ -2733,8 +2610,7 @@ Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
 if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
 "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_filters_python">
 <a href="#state_metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
@@ -2757,8 +2633,7 @@ the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2768,8 +2643,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2782,8 +2656,7 @@ For INTERNAL_SELF_MANAGED load balancing, this field
 identifies the network that the load balanced IP should belong to
 for this global forwarding rule. If this field is not specified,
 the default network will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_range_python">
 <a href="#state_port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -2807,8 +2680,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2818,8 +2690,7 @@ ports:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2828,8 +2699,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2841,8 +2711,7 @@ If it is not provided, the provider project is used.
 the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
 ([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
 purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2857,9 +2726,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
 <h4 id="globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_csharp">
 <a href="#filterlabels_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
@@ -2871,8 +2738,7 @@ purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" 
 provided metadata based on filterMatchCriteria
 This list must not be empty and can have at the most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_csharp">
 <a href="#filtermatchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
@@ -2887,14 +2753,11 @@ label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
 Possible values are `MATCH_ANY` and `MATCH_ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_go">
 <a href="#filterlabels_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
@@ -2906,8 +2769,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 provided metadata based on filterMatchCriteria
 This list must not be empty and can have at the most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_go">
 <a href="#filtermatchcriteria_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
@@ -2922,14 +2784,11 @@ label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
 Possible values are `MATCH_ANY` and `MATCH_ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_nodejs">
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
@@ -2941,8 +2800,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 provided metadata based on filterMatchCriteria
 This list must not be empty and can have at the most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_nodejs">
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
@@ -2957,14 +2815,11 @@ label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
 Possible values are `MATCH_ANY` and `MATCH_ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_labels_python">
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
@@ -2976,8 +2831,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 provided metadata based on filterMatchCriteria
 This list must not be empty and can have at the most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_match_criteria_python">
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
@@ -2992,16 +2846,13 @@ label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
 Possible values are `MATCH_ANY` and `MATCH_ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3011,8 +2862,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3022,14 +2872,11 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
     </dt>
     <dd>{{% md %}}The value that the label must match. The value has a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3039,8 +2886,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3050,14 +2896,11 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The value that the label must match. The value has a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3067,8 +2910,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3078,14 +2920,11 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The value that the label must match. The value has a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3095,8 +2934,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3106,8 +2944,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The value that the label must match. The value has a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3136,6 +2973,6 @@ GlobalForwardingRule can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionname_csharp">
 <a href="#actionname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionname_csharp">
 <a href="#repetitionname_csharp" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runname_csharp">
 <a href="#runname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_csharp">
 <a href="#workflowname_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Name</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionname_go">
 <a href="#actionname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionname_go">
 <a href="#repetitionname_go" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runname_go">
 <a href="#runname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_go">
 <a href="#workflowname_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Name</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionname_nodejs">
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionname_nodejs">
 <a href="#repetitionname_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runname_nodejs">
 <a href="#runname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_nodejs">
 <a href="#workflowname_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Name</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_name_python">
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetition_name_python">
 <a href="#repetition_name_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow repetition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_name_python">
 <a href="#run_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow run name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflow_name_python">
 <a href="#workflow_name_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionrootresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Expression<wbr>Root<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionrootresponse">[]Expression<wbr>Root<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -304,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionrootresponse">Expression<wbr>Root<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionrootresponse">Sequence[Expression<wbr>Root<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -334,9 +294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -353,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -362,14 +318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -395,14 +346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">[]Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -410,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -419,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -428,14 +374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -443,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Sequence[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expressionresponse">Expression<wbr>Response</h4>
@@ -470,9 +410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -480,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_csharp">
 <a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
@@ -489,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_csharp">
 <a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -498,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -507,14 +442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -522,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_go">
 <a href="#subexpressions_go" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
@@ -531,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">[]Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_go">
 <a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -540,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -549,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -564,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_nodejs">
 <a href="#subexpressions_nodejs" style="color: inherit; text-decoration: inherit;">subexpressions</a>
@@ -573,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_nodejs">
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
@@ -582,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -591,14 +514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -606,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_python">
 <a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
@@ -615,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">Sequence[Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_python">
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
@@ -624,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expressionrootresponse">Expression<wbr>Root<wbr>Response</h4>
@@ -642,9 +558,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -652,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -661,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_csharp">
 <a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
@@ -670,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_csharp">
 <a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -679,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -688,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -703,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -712,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_go">
 <a href="#subexpressions_go" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
@@ -721,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">[]Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_go">
 <a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -730,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -739,14 +642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -754,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -763,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_nodejs">
 <a href="#subexpressions_nodejs" style="color: inherit; text-decoration: inherit;">subexpressions</a>
@@ -772,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_nodejs">
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
@@ -781,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -790,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -805,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -814,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subexpressions_python">
 <a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
@@ -823,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#expressionresponse">Sequence[Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_python">
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
@@ -832,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

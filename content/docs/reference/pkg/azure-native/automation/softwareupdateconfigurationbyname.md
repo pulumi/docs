@@ -14,11 +14,17 @@ Software update configuration properties.
 API Version: 2019-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create software update configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -147,9 +153,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -259,9 +268,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -356,9 +368,12 @@ software_update_configuration_by_name = azure_native.automation.SoftwareUpdateCo
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -454,9 +469,16 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SoftwareUpdateConfigurationByName Resource {#create}
@@ -481,9 +503,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -491,9 +511,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -501,9 +519,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -511,10 +527,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -540,9 +553,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -550,9 +561,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -560,9 +569,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -570,9 +577,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -580,18 +585,13 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -599,9 +599,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -609,9 +607,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -619,10 +615,7 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -637,9 +630,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_csharp">
 <a href="#automationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -647,8 +638,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -656,8 +646,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleinfo_csharp">
 <a href="#scheduleinfo_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
@@ -665,8 +654,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sucscheduleproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateconfiguration_csharp">
 <a href="#updateconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Configuration</a>
@@ -674,8 +662,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updateconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Update<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -683,8 +670,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareupdateconfigurationname_csharp">
 <a href="#softwareupdateconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Update<wbr>Configuration<wbr>Name</a>
@@ -692,8 +678,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_csharp">
 <a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
@@ -701,14 +686,11 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareupdateconfigurationtasks">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_go">
 <a href="#automationaccountname_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -716,8 +698,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -725,8 +706,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleinfo_go">
 <a href="#scheduleinfo_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
@@ -734,8 +714,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateconfiguration_go">
 <a href="#updateconfiguration_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Configuration</a>
@@ -743,8 +722,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -752,8 +730,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponse">Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareupdateconfigurationname_go">
 <a href="#softwareupdateconfigurationname_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Update<wbr>Configuration<wbr>Name</a>
@@ -761,8 +738,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_go">
 <a href="#tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
@@ -770,14 +746,11 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks</a></span>
     </dt>
-    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_nodejs">
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
@@ -785,8 +758,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -794,8 +766,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleinfo_nodejs">
 <a href="#scheduleinfo_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Info</a>
@@ -803,8 +774,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateconfiguration_nodejs">
 <a href="#updateconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Configuration</a>
@@ -812,8 +782,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -821,8 +790,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponse">Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareupdateconfigurationname_nodejs">
 <a href="#softwareupdateconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Update<wbr>Configuration<wbr>Name</a>
@@ -830,8 +798,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_nodejs">
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
@@ -839,14 +806,11 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks</a></span>
     </dt>
-    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automation_account_name_python">
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
@@ -854,8 +818,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -863,8 +826,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_info_python">
 <a href="#schedule_info_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>info</a>
@@ -872,8 +834,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_configuration_python">
 <a href="#update_configuration_python" style="color: inherit; text-decoration: inherit;">update_<wbr>configuration</a>
@@ -881,8 +842,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -890,8 +850,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponse">Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="software_update_configuration_name_python">
 <a href="#software_update_configuration_name_python" style="color: inherit; text-decoration: inherit;">software_<wbr>update_<wbr>configuration_<wbr>name</a>
@@ -899,8 +858,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the software update configuration to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_python">
 <a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
@@ -908,8 +866,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -920,9 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -930,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -939,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -948,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -957,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -966,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -975,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -984,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -993,14 +941,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1008,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1017,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1026,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1035,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1044,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1053,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1062,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1071,14 +1009,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1086,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -1095,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1104,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1113,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1122,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1131,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1140,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1149,14 +1077,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1164,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CreatedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -1173,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of the resource, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1182,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1191,8 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LastModifiedBy property, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1200,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time resource was modified, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1209,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1218,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state for the software update configuration, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1227,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1244,9 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="advancedschedule">Advanced<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_csharp">
 <a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -1254,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_csharp">
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -1263,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1272,14 +1185,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_go">
 <a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -1287,8 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_go">
 <a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -1296,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">[]Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1305,14 +1213,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_nodejs">
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
@@ -1320,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_nodejs">
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
@@ -1329,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence[]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
@@ -1338,14 +1241,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="month_days_python">
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
@@ -1353,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_occurrences_python">
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
@@ -1362,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_days_python">
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
@@ -1371,16 +1269,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1388,8 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#scheduleday">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Schedule<wbr>Day</a></span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_csharp">
 <a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -1397,14 +1291,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1412,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#scheduleday">Schedule<wbr>Day</a></span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_go">
 <a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -1421,14 +1311,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1436,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#scheduleday">Schedule<wbr>Day</a></span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_nodejs">
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -1445,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1460,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#scheduleday">Schedule<wbr>Day</a></span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_python">
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -1469,16 +1351,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1486,8 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_csharp">
 <a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -1495,14 +1373,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1510,8 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_go">
 <a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -1519,14 +1393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1534,8 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_nodejs">
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -1543,14 +1413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1558,8 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_python">
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -1567,16 +1433,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_csharp">
 <a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -1584,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_csharp">
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -1593,8 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1602,14 +1463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_go">
 <a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -1617,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_go">
 <a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -1626,8 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">[]Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -1635,14 +1491,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_nodejs">
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
@@ -1650,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_nodejs">
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
@@ -1659,8 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
@@ -1668,14 +1519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="month_days_python">
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
@@ -1683,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_occurrences_python">
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
@@ -1692,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_days_python">
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
@@ -1701,16 +1547,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurequeryproperties">Azure<wbr>Query<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1718,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1727,8 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_csharp">
 <a href="#tagsettings_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
@@ -1736,14 +1577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1751,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1760,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_go">
 <a href="#tagsettings_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
@@ -1769,14 +1605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1784,8 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1793,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_nodejs">
 <a href="#tagsettings_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
@@ -1802,14 +1633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1817,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1826,8 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_settings_python">
 <a href="#tag_settings_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>settings</a>
@@ -1835,16 +1661,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurequerypropertiesresponse">Azure<wbr>Query<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1852,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1861,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_csharp">
 <a href="#tagsettings_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
@@ -1870,14 +1691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1885,8 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1894,8 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_go">
 <a href="#tagsettings_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Settings</a>
@@ -1903,14 +1719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1918,8 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1927,8 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsettings_nodejs">
 <a href="#tagsettings_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
@@ -1936,14 +1747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1951,8 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1960,8 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_settings_python">
 <a href="#tag_settings_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>settings</a>
@@ -1969,16 +1775,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorresponse">Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1986,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1995,14 +1797,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2010,8 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2019,14 +1817,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2034,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2043,14 +1837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2058,8 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2067,16 +1857,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2084,8 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2093,14 +1879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2108,8 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2117,14 +1899,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2132,8 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2141,14 +1919,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2156,8 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2165,16 +1939,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message indicating why the operation failed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxproperties">Linux<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_csharp">
 <a href="#excludedpackagenamemasks_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2182,8 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_csharp">
 <a href="#includedpackageclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
@@ -2191,8 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxupdateclasses">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Linux<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_csharp">
 <a href="#includedpackagenamemasks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2200,8 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_csharp">
 <a href="#rebootsetting_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -2209,14 +1977,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_go">
 <a href="#excludedpackagenamemasks_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2224,8 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_go">
 <a href="#includedpackageclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
@@ -2233,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxupdateclasses">Linux<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_go">
 <a href="#includedpackagenamemasks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2242,8 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_go">
 <a href="#rebootsetting_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -2251,14 +2013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_nodejs">
 <a href="#excludedpackagenamemasks_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2266,8 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_nodejs">
 <a href="#includedpackageclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Package<wbr>Classifications</a>
@@ -2275,8 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxupdateclasses">Linux<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_nodejs">
 <a href="#includedpackagenamemasks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2284,8 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_nodejs">
 <a href="#rebootsetting_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Setting</a>
@@ -2293,14 +2049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excluded_package_name_masks_python">
 <a href="#excluded_package_name_masks_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>package_<wbr>name_<wbr>masks</a>
@@ -2308,8 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_package_classifications_python">
 <a href="#included_package_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>classifications</a>
@@ -2317,8 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#linuxupdateclasses">Linux<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_package_name_masks_python">
 <a href="#included_package_name_masks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>name_<wbr>masks</a>
@@ -2326,8 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_setting_python">
 <a href="#reboot_setting_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>setting</a>
@@ -2335,16 +2085,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_csharp">
 <a href="#excludedpackagenamemasks_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2352,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_csharp">
 <a href="#includedpackageclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
@@ -2361,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_csharp">
 <a href="#includedpackagenamemasks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2370,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_csharp">
 <a href="#rebootsetting_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -2379,14 +2123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_go">
 <a href="#excludedpackagenamemasks_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2394,8 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_go">
 <a href="#includedpackageclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Classifications</a>
@@ -2403,8 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_go">
 <a href="#includedpackagenamemasks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2412,8 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_go">
 <a href="#rebootsetting_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -2421,14 +2159,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedpackagenamemasks_nodejs">
 <a href="#excludedpackagenamemasks_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2436,8 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackageclassifications_nodejs">
 <a href="#includedpackageclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Package<wbr>Classifications</a>
@@ -2445,8 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpackagenamemasks_nodejs">
 <a href="#includedpackagenamemasks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Package<wbr>Name<wbr>Masks</a>
@@ -2454,8 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_nodejs">
 <a href="#rebootsetting_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Setting</a>
@@ -2463,14 +2195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excluded_package_name_masks_python">
 <a href="#excluded_package_name_masks_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>package_<wbr>name_<wbr>masks</a>
@@ -2478,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_package_classifications_python">
 <a href="#included_package_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>classifications</a>
@@ -2487,8 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classifications included in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_package_name_masks_python">
 <a href="#included_package_name_masks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>name_<wbr>masks</a>
@@ -2496,8 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_setting_python">
 <a href="#reboot_setting_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>setting</a>
@@ -2505,70 +2231,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxupdateclasses">Linux<wbr>Update<wbr>Classes</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Security</dt>
-    <dd>Security</dd>
-    <dt>Other</dt>
-    <dd>Other</dd>
-</dl>
+<dl class="tabular"><dt>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Critical</dt>
+    <dd>Critical</dd><dt>Security</dt>
+    <dd>Security</dd><dt>Other</dt>
+    <dd>Other</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Linux<wbr>Update<wbr>Classes<wbr>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Linux<wbr>Update<wbr>Classes<wbr>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Linux<wbr>Update<wbr>Classes<wbr>Security</dt>
-    <dd>Security</dd>
-    <dt>Linux<wbr>Update<wbr>Classes<wbr>Other</dt>
-    <dd>Other</dd>
-</dl>
+<dl class="tabular"><dt>Linux<wbr>Update<wbr>Classes<wbr>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Linux<wbr>Update<wbr>Classes<wbr>Critical</dt>
+    <dd>Critical</dd><dt>Linux<wbr>Update<wbr>Classes<wbr>Security</dt>
+    <dd>Security</dd><dt>Linux<wbr>Update<wbr>Classes<wbr>Other</dt>
+    <dd>Other</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Security</dt>
-    <dd>Security</dd>
-    <dt>Other</dt>
-    <dd>Other</dd>
-</dl>
+<dl class="tabular"><dt>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Critical</dt>
+    <dd>Critical</dd><dt>Security</dt>
+    <dd>Security</dd><dt>Other</dt>
+    <dd>Other</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNCLASSIFIED</dt>
-    <dd>Unclassified</dd>
-    <dt>CRITICAL</dt>
-    <dd>Critical</dd>
-    <dt>SECURITY</dt>
-    <dd>Security</dd>
-    <dt>OTHER</dt>
-    <dd>Other</dd>
-</dl>
+<dl class="tabular"><dt>UNCLASSIFIED</dt>
+    <dd>Unclassified</dd><dt>CRITICAL</dt>
+    <dd>Critical</dd><dt>SECURITY</dt>
+    <dd>Security</dd><dt>OTHER</dt>
+    <dd>Other</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nonazurequeryproperties">Non<wbr>Azure<wbr>Query<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_csharp">
 <a href="#functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -2576,8 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2585,14 +2287,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_go">
 <a href="#functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -2600,8 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2609,14 +2307,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_nodejs">
 <a href="#functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
@@ -2624,8 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -2633,14 +2327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_alias_python">
 <a href="#function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>
@@ -2648,8 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -2657,16 +2347,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nonazurequerypropertiesresponse">Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_csharp">
 <a href="#functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -2674,8 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2683,14 +2369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_go">
 <a href="#functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -2698,8 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -2707,14 +2389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_nodejs">
 <a href="#functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
@@ -2722,8 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -2731,14 +2409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_alias_python">
 <a href="#function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>
@@ -2746,8 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log Analytics Saved Search name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -2755,54 +2429,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Id for Log Analytics in which the saved Search is resided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatingsystemtype">Operating<wbr>System<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operating<wbr>System<wbr>Type<wbr>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Operating<wbr>System<wbr>Type<wbr>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Operating<wbr>System<wbr>Type<wbr>Windows</dt>
+    <dd>Windows</dd><dt>Operating<wbr>System<wbr>Type<wbr>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sucscheduleproperties">SUCSchedule<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_csharp">
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -2810,8 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -2819,8 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2828,8 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_csharp">
 <a href="#expirytime_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -2837,8 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_csharp">
 <a href="#expirytimeoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -2846,8 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -2855,8 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#schedulefrequency">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2864,8 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2873,8 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -2882,8 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_csharp">
 <a href="#nextrun_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -2891,8 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_csharp">
 <a href="#nextrunoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -2900,8 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2909,8 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -2918,14 +2565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_go">
 <a href="#advancedschedule_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -2933,8 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -2942,8 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2951,8 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_go">
 <a href="#expirytime_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -2960,8 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_go">
 <a href="#expirytimeoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -2969,8 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -2978,8 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#schedulefrequency">Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2987,8 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2996,8 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -3005,8 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_go">
 <a href="#nextrun_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -3014,8 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_go">
 <a href="#nextrunoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -3023,8 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3032,8 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -3041,14 +2673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_nodejs">
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
@@ -3056,8 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -3065,8 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3074,8 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_nodejs">
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
@@ -3083,8 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_nodejs">
 <a href="#expirytimeoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3092,8 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -3101,8 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#schedulefrequency">Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3110,8 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -3119,8 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -3128,8 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_nodejs">
 <a href="#nextrun_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run</a>
@@ -3137,8 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_nodejs">
 <a href="#nextrunoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -3146,8 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -3155,8 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -3164,14 +2781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advanced_schedule_python">
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
@@ -3179,8 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -3188,8 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3197,8 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_time_python">
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
@@ -3206,8 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_time_offset_minutes_python">
 <a href="#expiry_time_offset_minutes_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time_<wbr>offset_<wbr>minutes</a>
@@ -3215,8 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -3224,8 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#schedulefrequency">Schedule<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3233,8 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -3242,8 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -3251,8 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_run_python">
 <a href="#next_run_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run</a>
@@ -3260,8 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_run_offset_minutes_python">
 <a href="#next_run_offset_minutes_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>offset_<wbr>minutes</a>
@@ -3269,8 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -3278,8 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -3287,16 +2889,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="starttimeoffsetminutes_csharp">
 <a href="#starttimeoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3304,8 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_csharp">
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -3313,8 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -3322,8 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3331,8 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_csharp">
 <a href="#expirytime_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -3340,8 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_csharp">
 <a href="#expirytimeoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3349,8 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -3358,8 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3367,8 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3376,8 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -3385,8 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_csharp">
 <a href="#nextrun_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -3394,8 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_csharp">
 <a href="#nextrunoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -3403,8 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3412,8 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -3421,14 +3007,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="starttimeoffsetminutes_go">
 <a href="#starttimeoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3436,8 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_go">
 <a href="#advancedschedule_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -3445,8 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -3454,8 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3463,8 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_go">
 <a href="#expirytime_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -3472,8 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_go">
 <a href="#expirytimeoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3481,8 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -3490,8 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3499,8 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3508,8 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -3517,8 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_go">
 <a href="#nextrun_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -3526,8 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_go">
 <a href="#nextrunoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -3535,8 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3544,8 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -3553,14 +3123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="starttimeoffsetminutes_nodejs">
 <a href="#starttimeoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3568,8 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedschedule_nodejs">
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
@@ -3577,8 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -3586,8 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3595,8 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytime_nodejs">
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
@@ -3604,8 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirytimeoffsetminutes_nodejs">
 <a href="#expirytimeoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -3613,8 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -3622,8 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3631,8 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -3640,8 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -3649,8 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrun_nodejs">
 <a href="#nextrun_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run</a>
@@ -3658,8 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextrunoffsetminutes_nodejs">
 <a href="#nextrunoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -3667,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -3676,8 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -3685,14 +3239,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="start_time_offset_minutes_python">
 <a href="#start_time_offset_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset_<wbr>minutes</a>
@@ -3700,8 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_schedule_python">
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
@@ -3709,8 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -3718,8 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3727,8 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_time_python">
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
@@ -3736,8 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_time_offset_minutes_python">
 <a href="#expiry_time_offset_minutes_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time_<wbr>offset_<wbr>minutes</a>
@@ -3745,8 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -3754,8 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3763,8 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -3772,8 +3315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -3781,8 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_run_python">
 <a href="#next_run_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run</a>
@@ -3790,8 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_run_offset_minutes_python">
 <a href="#next_run_offset_minutes_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>offset_<wbr>minutes</a>
@@ -3799,8 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -3808,8 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -3817,164 +3355,101 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleday">Schedule<wbr>Day</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
+<dl class="tabular"><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd><dt>Sunday</dt>
+    <dd>Sunday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Schedule<wbr>Day<wbr>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Schedule<wbr>Day<wbr>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Schedule<wbr>Day<wbr>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Schedule<wbr>Day<wbr>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Schedule<wbr>Day<wbr>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Schedule<wbr>Day<wbr>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Schedule<wbr>Day<wbr>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
+<dl class="tabular"><dt>Schedule<wbr>Day<wbr>Monday</dt>
+    <dd>Monday</dd><dt>Schedule<wbr>Day<wbr>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Schedule<wbr>Day<wbr>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Schedule<wbr>Day<wbr>Thursday</dt>
+    <dd>Thursday</dd><dt>Schedule<wbr>Day<wbr>Friday</dt>
+    <dd>Friday</dd><dt>Schedule<wbr>Day<wbr>Saturday</dt>
+    <dd>Saturday</dd><dt>Schedule<wbr>Day<wbr>Sunday</dt>
+    <dd>Sunday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
+<dl class="tabular"><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd><dt>Sunday</dt>
+    <dd>Sunday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MONDAY</dt>
-    <dd>Monday</dd>
-    <dt>TUESDAY</dt>
-    <dd>Tuesday</dd>
-    <dt>WEDNESDAY</dt>
-    <dd>Wednesday</dd>
-    <dt>THURSDAY</dt>
-    <dd>Thursday</dd>
-    <dt>FRIDAY</dt>
-    <dd>Friday</dd>
-    <dt>SATURDAY</dt>
-    <dd>Saturday</dd>
-    <dt>SUNDAY</dt>
-    <dd>Sunday</dd>
-</dl>
+<dl class="tabular"><dt>MONDAY</dt>
+    <dd>Monday</dd><dt>TUESDAY</dt>
+    <dd>Tuesday</dd><dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd><dt>THURSDAY</dt>
+    <dd>Thursday</dd><dt>FRIDAY</dt>
+    <dd>Friday</dd><dt>SATURDAY</dt>
+    <dd>Saturday</dd><dt>SUNDAY</dt>
+    <dd>Sunday</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulefrequency">Schedule<wbr>Frequency</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-    <dt>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>One<wbr>Time</dt>
+    <dd>OneTime</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd><dt>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Schedule<wbr>Frequency<wbr>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Day</dt>
-    <dd>Day</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Week</dt>
-    <dd>Week</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Month</dt>
-    <dd>Month</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Schedule<wbr>Frequency<wbr>One<wbr>Time</dt>
+    <dd>OneTime</dd><dt>Schedule<wbr>Frequency<wbr>Day</dt>
+    <dd>Day</dd><dt>Schedule<wbr>Frequency<wbr>Hour</dt>
+    <dd>Hour</dd><dt>Schedule<wbr>Frequency<wbr>Week</dt>
+    <dd>Week</dd><dt>Schedule<wbr>Frequency<wbr>Month</dt>
+    <dd>Month</dd><dt>Schedule<wbr>Frequency<wbr>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-    <dt>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>One<wbr>Time</dt>
+    <dd>OneTime</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd><dt>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ONE_TIME</dt>
-    <dd>OneTime</dd>
-    <dt>DAY</dt>
-    <dd>Day</dd>
-    <dt>HOUR</dt>
-    <dd>Hour</dd>
-    <dt>WEEK</dt>
-    <dd>Week</dd>
-    <dt>MONTH</dt>
-    <dd>Month</dd>
-    <dt>MINUTE</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ONE_TIME</dt>
+    <dd>OneTime</dd><dt>DAY</dt>
+    <dd>Day</dd><dt>HOUR</dt>
+    <dd>Hour</dd><dt>WEEK</dt>
+    <dd>Week</dd><dt>MONTH</dt>
+    <dd>Month</dd><dt>MINUTE</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_csharp">
 <a href="#posttask_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
@@ -3982,8 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_csharp">
 <a href="#pretask_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
@@ -3991,14 +3465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_go">
 <a href="#posttask_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
@@ -4006,8 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_go">
 <a href="#pretask_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
@@ -4015,14 +3485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_nodejs">
 <a href="#posttask_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Task</a>
@@ -4030,8 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_nodejs">
 <a href="#pretask_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Task</a>
@@ -4039,14 +3505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="post_task_python">
 <a href="#post_task_python" style="color: inherit; text-decoration: inherit;">post_<wbr>task</a>
@@ -4054,8 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_task_python">
 <a href="#pre_task_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>task</a>
@@ -4063,16 +3525,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwareupdateconfigurationtasksresponse">Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_csharp">
 <a href="#posttask_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
@@ -4080,8 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_csharp">
 <a href="#pretask_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
@@ -4089,14 +3547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_go">
 <a href="#posttask_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Task</a>
@@ -4104,8 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_go">
 <a href="#pretask_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Task</a>
@@ -4113,14 +3567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="posttask_nodejs">
 <a href="#posttask_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Task</a>
@@ -4128,8 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretask_nodejs">
 <a href="#pretask_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Task</a>
@@ -4137,14 +3587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="post_task_python">
 <a href="#post_task_python" style="color: inherit; text-decoration: inherit;">post_<wbr>task</a>
@@ -4152,8 +3599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_task_python">
 <a href="#pre_task_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>task</a>
@@ -4161,54 +3607,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tagoperators">Tag<wbr>Operators</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All</dd>
-    <dt>Any</dt>
-    <dd>Any</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Any</dt>
+    <dd>Any</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Tag<wbr>Operators<wbr>All</dt>
-    <dd>All</dd>
-    <dt>Tag<wbr>Operators<wbr>Any</dt>
-    <dd>Any</dd>
-</dl>
+<dl class="tabular"><dt>Tag<wbr>Operators<wbr>All</dt>
+    <dd>All</dd><dt>Tag<wbr>Operators<wbr>Any</dt>
+    <dd>Any</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All</dd>
-    <dt>Any</dt>
-    <dd>Any</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All</dd><dt>Any</dt>
+    <dd>Any</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL</dt>
-    <dd>All</dd>
-    <dt>ANY</dt>
-    <dd>Any</dd>
-</dl>
+<dl class="tabular"><dt>ALL</dt>
+    <dd>All</dd><dt>ANY</dt>
+    <dd>Any</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tagsettingsproperties">Tag<wbr>Settings<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_csharp">
 <a href="#filteroperator_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
@@ -4216,8 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagoperators">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Tag<wbr>Operators</a></span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4225,14 +3655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_go">
 <a href="#filteroperator_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
@@ -4240,8 +3667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagoperators">Tag<wbr>Operators</a></span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4249,14 +3675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_nodejs">
 <a href="#filteroperator_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Operator</a>
@@ -4264,8 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagoperators">Tag<wbr>Operators</a></span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4273,14 +3695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filter_operator_python">
 <a href="#filter_operator_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>operator</a>
@@ -4288,8 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagoperators">Tag<wbr>Operators</a></span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4297,16 +3715,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_csharp">
 <a href="#filteroperator_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
@@ -4314,8 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4323,14 +3737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_go">
 <a href="#filteroperator_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Operator</a>
@@ -4338,8 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4347,14 +3757,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filteroperator_nodejs">
 <a href="#filteroperator_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Operator</a>
@@ -4362,8 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4371,14 +3777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filter_operator_python">
 <a href="#filter_operator_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>operator</a>
@@ -4386,8 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter VMs by Any or All specified tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4395,16 +3797,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetproperties">Target<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_csharp">
 <a href="#azurequeries_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
@@ -4412,8 +3811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_csharp">
 <a href="#nonazurequeries_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
@@ -4421,14 +3819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequeryproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_go">
 <a href="#azurequeries_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
@@ -4436,8 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequeryproperties">[]Azure<wbr>Query<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_go">
 <a href="#nonazurequeries_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
@@ -4445,14 +3839,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequeryproperties">[]Non<wbr>Azure<wbr>Query<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_nodejs">
 <a href="#azurequeries_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Queries</a>
@@ -4460,8 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequeryproperties">Azure<wbr>Query<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_nodejs">
 <a href="#nonazurequeries_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Queries</a>
@@ -4469,14 +3859,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequeryproperties">Non<wbr>Azure<wbr>Query<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_queries_python">
 <a href="#azure_queries_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>queries</a>
@@ -4484,8 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequeryproperties">Sequence[Azure<wbr>Query<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_azure_queries_python">
 <a href="#non_azure_queries_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>queries</a>
@@ -4493,16 +3879,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequeryproperties">Sequence[Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetpropertiesresponse">Target<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_csharp">
 <a href="#azurequeries_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
@@ -4510,8 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_csharp">
 <a href="#nonazurequeries_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
@@ -4519,14 +3901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequerypropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_go">
 <a href="#azurequeries_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Queries</a>
@@ -4534,8 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequerypropertiesresponse">[]Azure<wbr>Query<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_go">
 <a href="#nonazurequeries_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Queries</a>
@@ -4543,14 +3921,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequerypropertiesresponse">[]Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurequeries_nodejs">
 <a href="#azurequeries_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Queries</a>
@@ -4558,8 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequerypropertiesresponse">Azure<wbr>Query<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurequeries_nodejs">
 <a href="#nonazurequeries_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Queries</a>
@@ -4567,14 +3941,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequerypropertiesresponse">Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_queries_python">
 <a href="#azure_queries_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>queries</a>
@@ -4582,8 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurequerypropertiesresponse">Sequence[Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_azure_queries_python">
 <a href="#non_azure_queries_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>queries</a>
@@ -4591,16 +3961,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nonazurequerypropertiesresponse">Sequence[Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="taskproperties">Task<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -4608,8 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -4617,14 +3983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -4632,8 +3995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -4641,14 +4003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -4656,8 +4015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4665,14 +4023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -4680,8 +4035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4689,16 +4043,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="taskpropertiesresponse">Task<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -4706,8 +4057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -4715,14 +4065,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -4730,8 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -4739,14 +4085,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -4754,8 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4763,14 +4105,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -4778,8 +4117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -4787,16 +4125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="updateconfiguration">Update<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -4804,8 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Operating<wbr>System<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_csharp">
 <a href="#azurevirtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Virtual<wbr>Machines</a>
@@ -4813,8 +4147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -4822,8 +4155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_csharp">
 <a href="#linux_csharp" style="color: inherit; text-decoration: inherit;">Linux</a>
@@ -4831,8 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_csharp">
 <a href="#nonazurecomputernames_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -4840,8 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -4849,8 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_csharp">
 <a href="#windows_csharp" style="color: inherit; text-decoration: inherit;">Windows</a>
@@ -4858,14 +4187,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -4873,8 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtype">Operating<wbr>System<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_go">
 <a href="#azurevirtualmachines_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Virtual<wbr>Machines</a>
@@ -4882,8 +4207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -4891,8 +4215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_go">
 <a href="#linux_go" style="color: inherit; text-decoration: inherit;">Linux</a>
@@ -4900,8 +4223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_go">
 <a href="#nonazurecomputernames_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -4909,8 +4231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -4918,8 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetproperties">Target<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_go">
 <a href="#windows_go" style="color: inherit; text-decoration: inherit;">Windows</a>
@@ -4927,14 +4247,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -4942,8 +4259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtype">Operating<wbr>System<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_nodejs">
 <a href="#azurevirtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Virtual<wbr>Machines</a>
@@ -4951,8 +4267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -4960,8 +4275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_nodejs">
 <a href="#linux_nodejs" style="color: inherit; text-decoration: inherit;">linux</a>
@@ -4969,8 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_nodejs">
 <a href="#nonazurecomputernames_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -4978,8 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -4987,8 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetproperties">Target<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_nodejs">
 <a href="#windows_nodejs" style="color: inherit; text-decoration: inherit;">windows</a>
@@ -4996,14 +4307,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -5011,8 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtype">Operating<wbr>System<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_virtual_machines_python">
 <a href="#azure_virtual_machines_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>virtual_<wbr>machines</a>
@@ -5020,8 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -5029,8 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_python">
 <a href="#linux_python" style="color: inherit; text-decoration: inherit;">linux</a>
@@ -5038,8 +4343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_azure_computer_names_python">
 <a href="#non_azure_computer_names_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>computer_<wbr>names</a>
@@ -5047,8 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -5056,8 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetproperties">Target<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_python">
 <a href="#windows_python" style="color: inherit; text-decoration: inherit;">windows</a>
@@ -5065,16 +4367,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="updateconfigurationresponse">Update<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -5082,8 +4381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_csharp">
 <a href="#azurevirtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Virtual<wbr>Machines</a>
@@ -5091,8 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -5100,8 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_csharp">
 <a href="#linux_csharp" style="color: inherit; text-decoration: inherit;">Linux</a>
@@ -5109,8 +4405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_csharp">
 <a href="#nonazurecomputernames_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -5118,8 +4413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -5127,8 +4421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_csharp">
 <a href="#windows_csharp" style="color: inherit; text-decoration: inherit;">Windows</a>
@@ -5136,14 +4429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -5151,8 +4441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_go">
 <a href="#azurevirtualmachines_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Virtual<wbr>Machines</a>
@@ -5160,8 +4449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -5169,8 +4457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_go">
 <a href="#linux_go" style="color: inherit; text-decoration: inherit;">Linux</a>
@@ -5178,8 +4465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_go">
 <a href="#nonazurecomputernames_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -5187,8 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -5196,8 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_go">
 <a href="#windows_go" style="color: inherit; text-decoration: inherit;">Windows</a>
@@ -5205,14 +4489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -5220,8 +4501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurevirtualmachines_nodejs">
 <a href="#azurevirtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Virtual<wbr>Machines</a>
@@ -5229,8 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -5238,8 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_nodejs">
 <a href="#linux_nodejs" style="color: inherit; text-decoration: inherit;">linux</a>
@@ -5247,8 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonazurecomputernames_nodejs">
 <a href="#nonazurecomputernames_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Computer<wbr>Names</a>
@@ -5256,8 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -5265,8 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_nodejs">
 <a href="#windows_nodejs" style="color: inherit; text-decoration: inherit;">windows</a>
@@ -5274,14 +4549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -5289,8 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operating system of target machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_virtual_machines_python">
 <a href="#azure_virtual_machines_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>virtual_<wbr>machines</a>
@@ -5298,8 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -5307,8 +4577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_python">
 <a href="#linux_python" style="color: inherit; text-decoration: inherit;">linux</a>
@@ -5316,8 +4585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_azure_computer_names_python">
 <a href="#non_azure_computer_names_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>computer_<wbr>names</a>
@@ -5325,8 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -5334,8 +4601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_python">
 <a href="#windows_python" style="color: inherit; text-decoration: inherit;">windows</a>
@@ -5343,16 +4609,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsproperties">Windows<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_csharp">
 <a href="#excludedkbnumbers_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Kb<wbr>Numbers</a>
@@ -5360,8 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_csharp">
 <a href="#includedkbnumbers_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Kb<wbr>Numbers</a>
@@ -5369,8 +4631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_csharp">
 <a href="#includedupdateclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
@@ -5378,8 +4639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsupdateclasses">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Windows<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_csharp">
 <a href="#rebootsetting_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -5387,14 +4647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_go">
 <a href="#excludedkbnumbers_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Kb<wbr>Numbers</a>
@@ -5402,8 +4659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_go">
 <a href="#includedkbnumbers_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Kb<wbr>Numbers</a>
@@ -5411,8 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_go">
 <a href="#includedupdateclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
@@ -5420,8 +4675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsupdateclasses">Windows<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_go">
 <a href="#rebootsetting_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -5429,14 +4683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_nodejs">
 <a href="#excludedkbnumbers_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Kb<wbr>Numbers</a>
@@ -5444,8 +4695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_nodejs">
 <a href="#includedkbnumbers_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Kb<wbr>Numbers</a>
@@ -5453,8 +4703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_nodejs">
 <a href="#includedupdateclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Update<wbr>Classifications</a>
@@ -5462,8 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsupdateclasses">Windows<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_nodejs">
 <a href="#rebootsetting_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Setting</a>
@@ -5471,14 +4719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excluded_kb_numbers_python">
 <a href="#excluded_kb_numbers_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>kb_<wbr>numbers</a>
@@ -5486,8 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_kb_numbers_python">
 <a href="#included_kb_numbers_python" style="color: inherit; text-decoration: inherit;">included_<wbr>kb_<wbr>numbers</a>
@@ -5495,8 +4739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_update_classifications_python">
 <a href="#included_update_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>update_<wbr>classifications</a>
@@ -5504,8 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#windowsupdateclasses">Windows<wbr>Update<wbr>Classes</a></span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_setting_python">
 <a href="#reboot_setting_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>setting</a>
@@ -5513,16 +4755,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowspropertiesresponse">Windows<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_csharp">
 <a href="#excludedkbnumbers_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Kb<wbr>Numbers</a>
@@ -5530,8 +4769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_csharp">
 <a href="#includedkbnumbers_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Kb<wbr>Numbers</a>
@@ -5539,8 +4777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_csharp">
 <a href="#includedupdateclassifications_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
@@ -5548,8 +4785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_csharp">
 <a href="#rebootsetting_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -5557,14 +4793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_go">
 <a href="#excludedkbnumbers_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Kb<wbr>Numbers</a>
@@ -5572,8 +4805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_go">
 <a href="#includedkbnumbers_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Kb<wbr>Numbers</a>
@@ -5581,8 +4813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_go">
 <a href="#includedupdateclassifications_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Update<wbr>Classifications</a>
@@ -5590,8 +4821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_go">
 <a href="#rebootsetting_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Setting</a>
@@ -5599,14 +4829,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludedkbnumbers_nodejs">
 <a href="#excludedkbnumbers_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Kb<wbr>Numbers</a>
@@ -5614,8 +4841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedkbnumbers_nodejs">
 <a href="#includedkbnumbers_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Kb<wbr>Numbers</a>
@@ -5623,8 +4849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedupdateclassifications_nodejs">
 <a href="#includedupdateclassifications_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Update<wbr>Classifications</a>
@@ -5632,8 +4857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootsetting_nodejs">
 <a href="#rebootsetting_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Setting</a>
@@ -5641,14 +4865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excluded_kb_numbers_python">
 <a href="#excluded_kb_numbers_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>kb_<wbr>numbers</a>
@@ -5656,8 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_kb_numbers_python">
 <a href="#included_kb_numbers_python" style="color: inherit; text-decoration: inherit;">included_<wbr>kb_<wbr>numbers</a>
@@ -5665,8 +4885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_update_classifications_python">
 <a href="#included_update_classifications_python" style="color: inherit; text-decoration: inherit;">included_<wbr>update_<wbr>classifications</a>
@@ -5674,8 +4893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Update classification included in the software update configuration. A comma separated string with required values{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_setting_python">
 <a href="#reboot_setting_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>setting</a>
@@ -5683,102 +4901,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reboot setting for the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsupdateclasses">Windows<wbr>Update<wbr>Classes</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Security</dt>
-    <dd>Security</dd>
-    <dt>Update<wbr>Rollup</dt>
-    <dd>UpdateRollup</dd>
-    <dt>Feature<wbr>Pack</dt>
-    <dd>FeaturePack</dd>
-    <dt>Service<wbr>Pack</dt>
-    <dd>ServicePack</dd>
-    <dt>Definition</dt>
-    <dd>Definition</dd>
-    <dt>Tools</dt>
-    <dd>Tools</dd>
-    <dt>Updates</dt>
-    <dd>Updates</dd>
-</dl>
+<dl class="tabular"><dt>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Critical</dt>
+    <dd>Critical</dd><dt>Security</dt>
+    <dd>Security</dd><dt>Update<wbr>Rollup</dt>
+    <dd>UpdateRollup</dd><dt>Feature<wbr>Pack</dt>
+    <dd>FeaturePack</dd><dt>Service<wbr>Pack</dt>
+    <dd>ServicePack</dd><dt>Definition</dt>
+    <dd>Definition</dd><dt>Tools</dt>
+    <dd>Tools</dd><dt>Updates</dt>
+    <dd>Updates</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Security</dt>
-    <dd>Security</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Update<wbr>Rollup</dt>
-    <dd>UpdateRollup</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Feature<wbr>Pack</dt>
-    <dd>FeaturePack</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Service<wbr>Pack</dt>
-    <dd>ServicePack</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Definition</dt>
-    <dd>Definition</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Tools</dt>
-    <dd>Tools</dd>
-    <dt>Windows<wbr>Update<wbr>Classes<wbr>Updates</dt>
-    <dd>Updates</dd>
-</dl>
+<dl class="tabular"><dt>Windows<wbr>Update<wbr>Classes<wbr>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Critical</dt>
+    <dd>Critical</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Security</dt>
+    <dd>Security</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Update<wbr>Rollup</dt>
+    <dd>UpdateRollup</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Feature<wbr>Pack</dt>
+    <dd>FeaturePack</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Service<wbr>Pack</dt>
+    <dd>ServicePack</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Definition</dt>
+    <dd>Definition</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Tools</dt>
+    <dd>Tools</dd><dt>Windows<wbr>Update<wbr>Classes<wbr>Updates</dt>
+    <dd>Updates</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unclassified</dt>
-    <dd>Unclassified</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-    <dt>Security</dt>
-    <dd>Security</dd>
-    <dt>Update<wbr>Rollup</dt>
-    <dd>UpdateRollup</dd>
-    <dt>Feature<wbr>Pack</dt>
-    <dd>FeaturePack</dd>
-    <dt>Service<wbr>Pack</dt>
-    <dd>ServicePack</dd>
-    <dt>Definition</dt>
-    <dd>Definition</dd>
-    <dt>Tools</dt>
-    <dd>Tools</dd>
-    <dt>Updates</dt>
-    <dd>Updates</dd>
-</dl>
+<dl class="tabular"><dt>Unclassified</dt>
+    <dd>Unclassified</dd><dt>Critical</dt>
+    <dd>Critical</dd><dt>Security</dt>
+    <dd>Security</dd><dt>Update<wbr>Rollup</dt>
+    <dd>UpdateRollup</dd><dt>Feature<wbr>Pack</dt>
+    <dd>FeaturePack</dd><dt>Service<wbr>Pack</dt>
+    <dd>ServicePack</dd><dt>Definition</dt>
+    <dd>Definition</dd><dt>Tools</dt>
+    <dd>Tools</dd><dt>Updates</dt>
+    <dd>Updates</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNCLASSIFIED</dt>
-    <dd>Unclassified</dd>
-    <dt>CRITICAL</dt>
-    <dd>Critical</dd>
-    <dt>SECURITY</dt>
-    <dd>Security</dd>
-    <dt>UPDATE_ROLLUP</dt>
-    <dd>UpdateRollup</dd>
-    <dt>FEATURE_PACK</dt>
-    <dd>FeaturePack</dd>
-    <dt>SERVICE_PACK</dt>
-    <dd>ServicePack</dd>
-    <dt>DEFINITION</dt>
-    <dd>Definition</dd>
-    <dt>TOOLS</dt>
-    <dd>Tools</dd>
-    <dt>UPDATES</dt>
-    <dd>Updates</dd>
-</dl>
+<dl class="tabular"><dt>UNCLASSIFIED</dt>
+    <dd>Unclassified</dd><dt>CRITICAL</dt>
+    <dd>Critical</dd><dt>SECURITY</dt>
+    <dd>Security</dd><dt>UPDATE_ROLLUP</dt>
+    <dd>UpdateRollup</dd><dt>FEATURE_PACK</dt>
+    <dd>FeaturePack</dd><dt>SERVICE_PACK</dt>
+    <dd>ServicePack</dd><dt>DEFINITION</dt>
+    <dd>Definition</dd><dt>TOOLS</dt>
+    <dd>Tools</dd><dt>UPDATES</dt>
+    <dd>Updates</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -1,6 +1,6 @@
 ---
 title: "Civo"
-title_tag: "Module Civo | Package Civo"
+title_tag: "civo.Civo"
 meta_desc: "A Pulumi package for creating and managing Civo cloud resources."
 menu:
     reference:
@@ -54,7 +54,7 @@ A Pulumi package for creating and managing Civo cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>0.3.1</dd>
 </dl>

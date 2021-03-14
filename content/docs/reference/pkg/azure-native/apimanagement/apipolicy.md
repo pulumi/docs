@@ -14,11 +14,17 @@ Policy Contract details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateApiPolicy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -42,9 +48,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -73,9 +82,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -91,9 +103,12 @@ api_policy = azure_native.apimanagement.ApiPolicy("apiPolicy",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,10 +125,17 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### ApiManagementCreateApiPolicyNonXmlEncoded
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -144,9 +166,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -175,9 +200,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -200,9 +228,12 @@ api_policy = azure_native.apimanagement.ApiPolicy("apiPolicy",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -226,9 +257,16 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiPolicy Resource {#create}
@@ -253,9 +291,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +299,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +307,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +315,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -312,9 +341,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -322,9 +349,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -332,9 +357,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -342,9 +365,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -352,18 +373,13 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -371,9 +387,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -381,9 +395,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -391,10 +403,7 @@ const apiPolicy = new azure_native.apimanagement.ApiPolicy("apiPolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -409,9 +418,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -419,8 +426,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -428,8 +434,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -437,8 +442,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -446,8 +450,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -455,8 +458,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policycontentformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Policy<wbr>Content<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -464,14 +466,11 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -479,8 +478,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -488,8 +486,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -497,8 +494,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -506,8 +502,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -515,8 +510,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policycontentformat">Policy<wbr>Content<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -524,14 +518,11 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -539,8 +530,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -548,8 +538,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -557,8 +546,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -566,8 +554,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -575,8 +562,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policycontentformat">Policy<wbr>Content<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -584,14 +570,11 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -599,8 +582,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -608,8 +590,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -617,8 +598,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -626,8 +606,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contents of the Policy as defined by the format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -635,8 +614,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#policycontentformat">Policy<wbr>Content<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Format of the policyContent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -644,8 +622,7 @@ The ApiPolicy resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identifier of the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -656,9 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -666,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -675,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -684,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -699,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -708,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -717,14 +685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -732,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -741,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -750,14 +713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -765,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -783,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,55 +757,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="policycontentformat">Policy<wbr>Content<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Xml</dt>
-    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd>
-    <dt>Xml_<wbr>link</dt>
-    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-    <dt>Rawxml</dt>
-    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd>
-    <dt>Rawxml_<wbr>link</dt>
-    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Xml</dt>
+    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd><dt>Xml_<wbr>link</dt>
+    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd><dt>Rawxml</dt>
+    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd><dt>Rawxml_<wbr>link</dt>
+    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Policy<wbr>Content<wbr>Format<wbr>Xml</dt>
-    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd>
-    <dt>Policy<wbr>Content<wbr>Format_Xml_<wbr>link</dt>
-    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-    <dt>Policy<wbr>Content<wbr>Format<wbr>Rawxml</dt>
-    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd>
-    <dt>Policy<wbr>Content<wbr>Format_Rawxml_<wbr>link</dt>
-    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Policy<wbr>Content<wbr>Format<wbr>Xml</dt>
+    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd><dt>Policy<wbr>Content<wbr>Format_Xml_<wbr>link</dt>
+    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd><dt>Policy<wbr>Content<wbr>Format<wbr>Rawxml</dt>
+    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd><dt>Policy<wbr>Content<wbr>Format_Rawxml_<wbr>link</dt>
+    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Xml</dt>
-    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd>
-    <dt>Xml_<wbr>link</dt>
-    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-    <dt>Rawxml</dt>
-    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd>
-    <dt>Rawxml_<wbr>link</dt>
-    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Xml</dt>
+    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd><dt>Xml_<wbr>link</dt>
+    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd><dt>Rawxml</dt>
+    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd><dt>Rawxml_<wbr>link</dt>
+    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>XML</dt>
-    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd>
-    <dt>XML_LINK</dt>
-    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-    <dt>RAWXML</dt>
-    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd>
-    <dt>RAWXML_LINK</dt>
-    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>XML</dt>
+    <dd>xml{{% md %}}The contents are inline and Content type is an XML document.{{% /md %}}</dd><dt>XML_LINK</dt>
+    <dd>xml-link{{% md %}}The policy XML document is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd><dt>RAWXML</dt>
+    <dd>rawxml{{% md %}}The contents are inline and Content type is a non XML encoded policy document.{{% /md %}}</dd><dt>RAWXML_LINK</dt>
+    <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

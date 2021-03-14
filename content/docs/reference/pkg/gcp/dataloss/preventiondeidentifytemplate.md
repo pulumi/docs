@@ -19,11 +19,17 @@ To get more information about DeidentifyTemplate, see:
     * [Official Documentation](https://cloud.google.com/dlp/docs/concepts-templates)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Dlp Deidentify Template Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -131,9 +137,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -220,9 +229,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -292,9 +304,12 @@ basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
     parent="projects/my-project-name")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -366,9 +381,16 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PreventionDeidentifyTemplate Resource {#create}
@@ -393,9 +415,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -403,9 +423,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -413,9 +431,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -423,10 +439,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -452,9 +465,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -462,9 +473,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -472,9 +481,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -482,9 +489,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -492,18 +497,13 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -511,9 +511,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -521,9 +519,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -531,10 +527,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -549,9 +542,7 @@ The PreventionDeidentifyTemplate resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deidentifyconfig_csharp">
 <a href="#deidentifyconfig_csharp" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
@@ -561,8 +552,7 @@ The PreventionDeidentifyTemplate resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -575,8 +565,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -585,8 +574,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -595,14 +583,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deidentifyconfig_go">
 <a href="#deidentifyconfig_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
@@ -612,8 +597,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -626,8 +610,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -636,8 +619,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -646,14 +628,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deidentifyconfig_nodejs">
 <a href="#deidentifyconfig_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Config</a>
@@ -663,8 +642,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -677,8 +655,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -687,8 +664,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -697,14 +673,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deidentify_config_python">
 <a href="#deidentify_config_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>config</a>
@@ -714,8 +687,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -728,8 +700,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -738,8 +709,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -748,8 +718,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -760,9 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -780,14 +746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -795,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -805,14 +767,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -820,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -830,14 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -845,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -855,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -983,9 +936,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deidentifyconfig_csharp">
 <a href="#state_deidentifyconfig_csharp" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
@@ -995,8 +946,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1005,8 +955,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1015,8 +964,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1025,8 +973,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1039,14 +986,11 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deidentifyconfig_go">
 <a href="#state_deidentifyconfig_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
@@ -1056,8 +1000,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1066,8 +1009,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1076,8 +1018,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1086,8 +1027,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1100,14 +1040,11 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deidentifyconfig_nodejs">
 <a href="#state_deidentifyconfig_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Config</a>
@@ -1117,8 +1054,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1127,8 +1063,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1137,8 +1072,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1147,8 +1081,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1161,14 +1094,11 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deidentify_config_python">
 <a href="#state_deidentify_config_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>config</a>
@@ -1178,8 +1108,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1188,8 +1117,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1198,8 +1126,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1208,8 +1135,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1222,8 +1148,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1238,9 +1163,7 @@ Structure is documented below.
 <h4 id="preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypetransformations_csharp">
 <a href="#infotypetransformations_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type<wbr>Transformations</a>
@@ -1250,14 +1173,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypetransformations_go">
 <a href="#infotypetransformations_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type<wbr>Transformations</a>
@@ -1267,14 +1187,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypetransformations_nodejs">
 <a href="#infotypetransformations_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type<wbr>Transformations</a>
@@ -1284,14 +1201,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_type_transformations_python">
 <a href="#info_type_transformations_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type_<wbr>transformations</a>
@@ -1301,16 +1215,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transformations_csharp">
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
@@ -1320,14 +1231,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transformations_go">
 <a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
@@ -1337,14 +1245,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transformations_nodejs">
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
@@ -1354,14 +1259,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transformations_python">
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
@@ -1371,16 +1273,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primitivetransformation_csharp">
 <a href="#primitivetransformation_csharp" style="color: inherit; text-decoration: inherit;">Primitive<wbr>Transformation</a>
@@ -1390,8 +1289,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -1402,14 +1300,11 @@ Structure is documented below.
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primitivetransformation_go">
 <a href="#primitivetransformation_go" style="color: inherit; text-decoration: inherit;">Primitive<wbr>Transformation</a>
@@ -1419,8 +1314,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -1431,14 +1325,11 @@ Structure is documented below.
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primitivetransformation_nodejs">
 <a href="#primitivetransformation_nodejs" style="color: inherit; text-decoration: inherit;">primitive<wbr>Transformation</a>
@@ -1448,8 +1339,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
@@ -1460,14 +1350,11 @@ Structure is documented below.
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primitive_transformation_python">
 <a href="#primitive_transformation_python" style="color: inherit; text-decoration: inherit;">primitive_<wbr>transformation</a>
@@ -1477,8 +1364,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
@@ -1489,16 +1375,13 @@ Structure is documented below.
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1507,14 +1390,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1523,14 +1403,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1539,14 +1416,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1555,16 +1429,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactermaskconfig_csharp">
 <a href="#charactermaskconfig_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Mask<wbr>Config</a>
@@ -1575,8 +1446,7 @@ Structure is documented below.
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceconfig_csharp">
 <a href="#replaceconfig_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Config</a>
@@ -1586,14 +1456,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactermaskconfig_go">
 <a href="#charactermaskconfig_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Mask<wbr>Config</a>
@@ -1604,8 +1471,7 @@ Structure is documented below.
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceconfig_go">
 <a href="#replaceconfig_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Config</a>
@@ -1615,14 +1481,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactermaskconfig_nodejs">
 <a href="#charactermaskconfig_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Mask<wbr>Config</a>
@@ -1633,8 +1496,7 @@ Structure is documented below.
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceconfig_nodejs">
 <a href="#replaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Config</a>
@@ -1644,14 +1506,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="character_mask_config_python">
 <a href="#character_mask_config_python" style="color: inherit; text-decoration: inherit;">character_<wbr>mask_<wbr>config</a>
@@ -1662,8 +1521,7 @@ Structure is documented below.
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_config_python">
 <a href="#replace_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>config</a>
@@ -1673,16 +1531,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="characterstoignores_csharp">
 <a href="#characterstoignores_csharp" style="color: inherit; text-decoration: inherit;">Characters<wbr>To<wbr>Ignores</a>
@@ -1692,8 +1547,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maskingcharacter_csharp">
 <a href="#maskingcharacter_csharp" style="color: inherit; text-decoration: inherit;">Masking<wbr>Character</a>
@@ -1704,8 +1558,7 @@ Structure is documented below.
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbertomask_csharp">
 <a href="#numbertomask_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>To<wbr>Mask</a>
@@ -1714,8 +1567,7 @@ strings, and 0 for digits.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverseorder_csharp">
 <a href="#reverseorder_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Order</a>
@@ -1725,14 +1577,11 @@ strings, and 0 for digits.
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="characterstoignores_go">
 <a href="#characterstoignores_go" style="color: inherit; text-decoration: inherit;">Characters<wbr>To<wbr>Ignores</a>
@@ -1742,8 +1591,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maskingcharacter_go">
 <a href="#maskingcharacter_go" style="color: inherit; text-decoration: inherit;">Masking<wbr>Character</a>
@@ -1754,8 +1602,7 @@ Structure is documented below.
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbertomask_go">
 <a href="#numbertomask_go" style="color: inherit; text-decoration: inherit;">Number<wbr>To<wbr>Mask</a>
@@ -1764,8 +1611,7 @@ strings, and 0 for digits.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverseorder_go">
 <a href="#reverseorder_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Order</a>
@@ -1775,14 +1621,11 @@ strings, and 0 for digits.
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="characterstoignores_nodejs">
 <a href="#characterstoignores_nodejs" style="color: inherit; text-decoration: inherit;">characters<wbr>To<wbr>Ignores</a>
@@ -1792,8 +1635,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maskingcharacter_nodejs">
 <a href="#maskingcharacter_nodejs" style="color: inherit; text-decoration: inherit;">masking<wbr>Character</a>
@@ -1804,8 +1646,7 @@ Structure is documented below.
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbertomask_nodejs">
 <a href="#numbertomask_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>To<wbr>Mask</a>
@@ -1814,8 +1655,7 @@ strings, and 0 for digits.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverseorder_nodejs">
 <a href="#reverseorder_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Order</a>
@@ -1825,14 +1665,11 @@ strings, and 0 for digits.
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="characters_to_ignores_python">
 <a href="#characters_to_ignores_python" style="color: inherit; text-decoration: inherit;">characters_<wbr>to_<wbr>ignores</a>
@@ -1842,8 +1679,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masking_character_python">
 <a href="#masking_character_python" style="color: inherit; text-decoration: inherit;">masking_<wbr>character</a>
@@ -1854,8 +1690,7 @@ Structure is documented below.
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_to_mask_python">
 <a href="#number_to_mask_python" style="color: inherit; text-decoration: inherit;">number_<wbr>to_<wbr>mask</a>
@@ -1864,8 +1699,7 @@ strings, and 0 for digits.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverse_order_python">
 <a href="#reverse_order_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>order</a>
@@ -1875,16 +1709,13 @@ strings, and 0 for digits.
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactertoskip_csharp">
 <a href="#charactertoskip_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>To<wbr>Skip</a>
@@ -1893,8 +1724,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commoncharacterstoignore_csharp">
 <a href="#commoncharacterstoignore_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Characters<wbr>To<wbr>Ignore</a>
@@ -1904,14 +1734,11 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactertoskip_go">
 <a href="#charactertoskip_go" style="color: inherit; text-decoration: inherit;">Character<wbr>To<wbr>Skip</a>
@@ -1920,8 +1747,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commoncharacterstoignore_go">
 <a href="#commoncharacterstoignore_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Characters<wbr>To<wbr>Ignore</a>
@@ -1931,14 +1757,11 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="charactertoskip_nodejs">
 <a href="#charactertoskip_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>To<wbr>Skip</a>
@@ -1947,8 +1770,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commoncharacterstoignore_nodejs">
 <a href="#commoncharacterstoignore_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Characters<wbr>To<wbr>Ignore</a>
@@ -1958,14 +1780,11 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="character_to_skip_python">
 <a href="#character_to_skip_python" style="color: inherit; text-decoration: inherit;">character_<wbr>to_<wbr>skip</a>
@@ -1974,8 +1793,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_characters_to_ignore_python">
 <a href="#common_characters_to_ignore_python" style="color: inherit; text-decoration: inherit;">common_<wbr>characters_<wbr>to_<wbr>ignore</a>
@@ -1985,16 +1803,13 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="newvalue_csharp">
 <a href="#newvalue_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Value</a>
@@ -2004,14 +1819,11 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="newvalue_go">
 <a href="#newvalue_go" style="color: inherit; text-decoration: inherit;">New<wbr>Value</a>
@@ -2021,14 +1833,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="newvalue_nodejs">
 <a href="#newvalue_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value</a>
@@ -2038,14 +1847,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="new_value_python">
 <a href="#new_value_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value</a>
@@ -2055,16 +1861,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="booleanvalue_csharp">
 <a href="#booleanvalue_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Value</a>
@@ -2073,8 +1876,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datevalue_csharp">
 <a href="#datevalue_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Value</a>
@@ -2084,8 +1886,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweekvalue_csharp">
 <a href="#dayofweekvalue_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week<wbr>Value</a>
@@ -2095,8 +1896,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatvalue_csharp">
 <a href="#floatvalue_csharp" style="color: inherit; text-decoration: inherit;">Float<wbr>Value</a>
@@ -2105,8 +1905,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A float value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integervalue_csharp">
 <a href="#integervalue_csharp" style="color: inherit; text-decoration: inherit;">Integer<wbr>Value</a>
@@ -2115,8 +1914,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_csharp">
 <a href="#stringvalue_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
@@ -2125,8 +1923,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timevalue_csharp">
 <a href="#timevalue_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Value</a>
@@ -2136,8 +1933,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_csharp">
 <a href="#timestampvalue_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
@@ -2147,14 +1943,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="booleanvalue_go">
 <a href="#booleanvalue_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Value</a>
@@ -2163,8 +1956,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datevalue_go">
 <a href="#datevalue_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Value</a>
@@ -2174,8 +1966,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweekvalue_go">
 <a href="#dayofweekvalue_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week<wbr>Value</a>
@@ -2185,8 +1976,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatvalue_go">
 <a href="#floatvalue_go" style="color: inherit; text-decoration: inherit;">Float<wbr>Value</a>
@@ -2195,8 +1985,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A float value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integervalue_go">
 <a href="#integervalue_go" style="color: inherit; text-decoration: inherit;">Integer<wbr>Value</a>
@@ -2205,8 +1994,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_go">
 <a href="#stringvalue_go" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
@@ -2215,8 +2003,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timevalue_go">
 <a href="#timevalue_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Value</a>
@@ -2226,8 +2013,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_go">
 <a href="#timestampvalue_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
@@ -2237,14 +2023,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="booleanvalue_nodejs">
 <a href="#booleanvalue_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Value</a>
@@ -2253,8 +2036,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datevalue_nodejs">
 <a href="#datevalue_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Value</a>
@@ -2264,8 +2046,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweekvalue_nodejs">
 <a href="#dayofweekvalue_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week<wbr>Value</a>
@@ -2275,8 +2056,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatvalue_nodejs">
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
@@ -2285,8 +2065,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A float value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integervalue_nodejs">
 <a href="#integervalue_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value</a>
@@ -2295,8 +2074,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringvalue_nodejs">
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
@@ -2305,8 +2083,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timevalue_nodejs">
 <a href="#timevalue_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Value</a>
@@ -2316,8 +2093,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_nodejs">
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
@@ -2327,14 +2103,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boolean_value_python">
 <a href="#boolean_value_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>value</a>
@@ -2343,8 +2116,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="date_value_python">
 <a href="#date_value_python" style="color: inherit; text-decoration: inherit;">date_<wbr>value</a>
@@ -2354,8 +2126,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="day_of_week_value_python">
 <a href="#day_of_week_value_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week_<wbr>value</a>
@@ -2365,8 +2136,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="float_value_python">
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
@@ -2375,8 +2145,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A float value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integer_value_python">
 <a href="#integer_value_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value</a>
@@ -2385,8 +2154,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_value_python">
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
@@ -2395,8 +2163,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_value_python">
 <a href="#time_value_python" style="color: inherit; text-decoration: inherit;">time_<wbr>value</a>
@@ -2406,8 +2173,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_value_python">
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
@@ -2417,16 +2183,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2436,8 +2199,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="month_csharp">
 <a href="#month_csharp" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -2446,8 +2208,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="year_csharp">
 <a href="#year_csharp" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -2456,14 +2217,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2473,8 +2231,7 @@ year by itself or a year and month where the day is not significant.
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="month_go">
 <a href="#month_go" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -2483,8 +2240,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="year_go">
 <a href="#year_go" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -2493,14 +2249,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2510,8 +2263,7 @@ year by itself or a year and month where the day is not significant.
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="month_nodejs">
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
@@ -2520,8 +2272,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="year_nodejs">
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
@@ -2530,14 +2281,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2547,8 +2295,7 @@ year by itself or a year and month where the day is not significant.
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="month_python">
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
@@ -2557,8 +2304,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="year_python">
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
@@ -2567,16 +2313,13 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -2585,8 +2328,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -2595,8 +2337,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -2605,8 +2346,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -2615,14 +2355,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -2631,8 +2368,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -2641,8 +2377,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -2651,8 +2386,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -2661,14 +2395,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2677,8 +2408,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2687,8 +2417,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2697,8 +2426,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -2707,14 +2435,11 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2723,8 +2448,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2733,8 +2457,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2743,8 +2466,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -2753,8 +2475,7 @@ year by itself or a year and month where the day is not significant.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2779,6 +2500,6 @@ DeidentifyTemplate can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

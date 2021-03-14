@@ -35,9 +35,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the gitlab.User resource with examples, input prop
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -202,8 +171,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -212,8 +180,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancreategroup_csharp">
 <a href="#cancreategroup_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
@@ -222,8 +189,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isadmin_csharp">
 <a href="#isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -233,8 +199,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isexternal_csharp">
 <a href="#isexternal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>External</a>
@@ -243,8 +208,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -253,8 +217,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -263,8 +226,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectslimit_csharp">
 <a href="#projectslimit_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
@@ -273,8 +235,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpassword_csharp">
 <a href="#resetpassword_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password</a>
@@ -283,8 +244,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipconfirmation_csharp">
 <a href="#skipconfirmation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Confirmation</a>
@@ -293,14 +253,11 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -309,8 +266,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -319,8 +275,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancreategroup_go">
 <a href="#cancreategroup_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
@@ -329,8 +284,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isadmin_go">
 <a href="#isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -340,8 +294,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isexternal_go">
 <a href="#isexternal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>External</a>
@@ -350,8 +303,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,8 +312,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -370,8 +321,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectslimit_go">
 <a href="#projectslimit_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
@@ -380,8 +330,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpassword_go">
 <a href="#resetpassword_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password</a>
@@ -390,8 +339,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipconfirmation_go">
 <a href="#skipconfirmation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Confirmation</a>
@@ -400,14 +348,11 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -416,8 +361,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -426,8 +370,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancreategroup_nodejs">
 <a href="#cancreategroup_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Create<wbr>Group</a>
@@ -436,8 +379,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isadmin_nodejs">
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -447,8 +389,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isexternal_nodejs">
 <a href="#isexternal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>External</a>
@@ -457,8 +398,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -467,8 +407,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -477,8 +416,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectslimit_nodejs">
 <a href="#projectslimit_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Limit</a>
@@ -487,8 +425,7 @@ for the user.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetpassword_nodejs">
 <a href="#resetpassword_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password</a>
@@ -497,8 +434,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipconfirmation_nodejs">
 <a href="#skipconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Confirmation</a>
@@ -507,14 +443,11 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -523,8 +456,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -533,8 +465,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_create_group_python">
 <a href="#can_create_group_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>group</a>
@@ -543,8 +474,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_admin_python">
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -554,8 +484,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_external_python">
 <a href="#is_external_python" style="color: inherit; text-decoration: inherit;">is_<wbr>external</a>
@@ -564,8 +493,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +502,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -584,8 +511,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_limit_python">
 <a href="#projects_limit_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>limit</a>
@@ -594,8 +520,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_password_python">
 <a href="#reset_password_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password</a>
@@ -604,8 +529,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_confirmation_python">
 <a href="#skip_confirmation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>confirmation</a>
@@ -614,8 +538,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -626,9 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,14 +557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -651,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +720,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cancreategroup_csharp">
 <a href="#state_cancreategroup_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
@@ -820,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -830,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isadmin_csharp">
 <a href="#state_isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -841,8 +748,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isexternal_csharp">
 <a href="#state_isexternal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>External</a>
@@ -851,8 +757,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -861,8 +766,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -871,8 +775,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectslimit_csharp">
 <a href="#state_projectslimit_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
@@ -881,8 +784,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpassword_csharp">
 <a href="#state_resetpassword_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password</a>
@@ -891,8 +793,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipconfirmation_csharp">
 <a href="#state_skipconfirmation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Confirmation</a>
@@ -901,8 +802,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -911,14 +811,11 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cancreategroup_go">
 <a href="#state_cancreategroup_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
@@ -927,8 +824,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -937,8 +833,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isadmin_go">
 <a href="#state_isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -948,8 +843,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isexternal_go">
 <a href="#state_isexternal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>External</a>
@@ -958,8 +852,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -968,8 +861,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -978,8 +870,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectslimit_go">
 <a href="#state_projectslimit_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
@@ -988,8 +879,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpassword_go">
 <a href="#state_resetpassword_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Password</a>
@@ -998,8 +888,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipconfirmation_go">
 <a href="#state_skipconfirmation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Confirmation</a>
@@ -1008,8 +897,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1018,14 +906,11 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cancreategroup_nodejs">
 <a href="#state_cancreategroup_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Create<wbr>Group</a>
@@ -1034,8 +919,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1044,8 +928,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isadmin_nodejs">
 <a href="#state_isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -1055,8 +938,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isexternal_nodejs">
 <a href="#state_isexternal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>External</a>
@@ -1065,8 +947,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1075,8 +956,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1085,8 +965,7 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectslimit_nodejs">
 <a href="#state_projectslimit_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Limit</a>
@@ -1095,8 +974,7 @@ for the user.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetpassword_nodejs">
 <a href="#state_resetpassword_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password</a>
@@ -1105,8 +983,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipconfirmation_nodejs">
 <a href="#state_skipconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Confirmation</a>
@@ -1115,8 +992,7 @@ for the user.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1125,14 +1001,11 @@ for the user.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_can_create_group_python">
 <a href="#state_can_create_group_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>group</a>
@@ -1141,8 +1014,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether to allow the user to create groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1151,8 +1023,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_admin_python">
 <a href="#state_is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -1162,8 +1033,7 @@ for the user.
     </dt>
     <dd>{{% md %}}Boolean, defaults to false.  Whether to enable administrative priviledges
 for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_external_python">
 <a href="#state_is_external_python" style="color: inherit; text-decoration: inherit;">is_<wbr>external</a>
@@ -1172,8 +1042,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Whether a user has access only to some internal or private projects. External users can only access projects to which they are explicitly granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1182,8 +1051,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1192,8 +1060,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projects_limit_python">
 <a href="#state_projects_limit_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>limit</a>
@@ -1202,8 +1069,7 @@ for the user.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, defaults to 0.  Number of projects user can create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reset_password_python">
 <a href="#state_reset_password_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password</a>
@@ -1212,8 +1078,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to false. Send user password reset link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_confirmation_python">
 <a href="#state_skip_confirmation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>confirmation</a>
@@ -1222,8 +1087,7 @@ for the user.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, defaults to true. Whether to skip confirmation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1232,8 +1096,7 @@ for the user.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1249,6 +1112,6 @@ for the user.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 </dl>
 

@@ -43,9 +43,7 @@ PolicyTag can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ PolicyTag can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ PolicyTag can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The PolicyTag resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -212,8 +181,7 @@ The PolicyTag resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taxonomy_csharp">
 <a href="#taxonomy_csharp" style="color: inherit; text-decoration: inherit;">Taxonomy</a>
@@ -222,8 +190,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -235,8 +202,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpolicytag_csharp">
 <a href="#parentpolicytag_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -247,14 +213,11 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -265,8 +228,7 @@ If not set, defaults to an empty string.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taxonomy_go">
 <a href="#taxonomy_go" style="color: inherit; text-decoration: inherit;">Taxonomy</a>
@@ -275,8 +237,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -288,8 +249,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpolicytag_go">
 <a href="#parentpolicytag_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -300,14 +260,11 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -318,8 +275,7 @@ If not set, defaults to an empty string.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taxonomy_nodejs">
 <a href="#taxonomy_nodejs" style="color: inherit; text-decoration: inherit;">taxonomy</a>
@@ -328,8 +284,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -341,8 +296,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpolicytag_nodejs">
 <a href="#parentpolicytag_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Policy<wbr>Tag</a>
@@ -353,14 +307,11 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -371,8 +322,7 @@ If not set, defaults to an empty string.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taxonomy_python">
 <a href="#taxonomy_python" style="color: inherit; text-decoration: inherit;">taxonomy</a>
@@ -381,8 +331,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -394,8 +343,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_policy_tag_python">
 <a href="#parent_policy_tag_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>policy_<wbr>tag</a>
@@ -406,8 +354,7 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -418,9 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicytags_csharp">
 <a href="#childpolicytags_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Policy<wbr>Tags</a>
@@ -429,8 +374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -438,8 +382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -449,14 +392,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicytags_go">
 <a href="#childpolicytags_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Policy<wbr>Tags</a>
@@ -465,8 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -474,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -485,14 +423,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicytags_nodejs">
 <a href="#childpolicytags_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Policy<wbr>Tags</a>
@@ -501,8 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -510,8 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -521,14 +454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="child_policy_tags_python">
 <a href="#child_policy_tags_python" style="color: inherit; text-decoration: inherit;">child_<wbr>policy_<wbr>tags</a>
@@ -537,8 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -546,8 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -557,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -685,9 +612,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childpolicytags_csharp">
 <a href="#state_childpolicytags_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Policy<wbr>Tags</a>
@@ -696,8 +621,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -709,8 +633,7 @@ The following state arguments are supported:
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -721,8 +644,7 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -732,8 +654,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentpolicytag_csharp">
 <a href="#state_parentpolicytag_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -744,8 +665,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taxonomy_csharp">
 <a href="#state_taxonomy_csharp" style="color: inherit; text-decoration: inherit;">Taxonomy</a>
@@ -754,14 +674,11 @@ If not set, defaults to an empty string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childpolicytags_go">
 <a href="#state_childpolicytags_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Policy<wbr>Tags</a>
@@ -770,8 +687,7 @@ If not set, defaults to an empty string.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -783,8 +699,7 @@ If not set, defaults to an empty string.
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -795,8 +710,7 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -806,8 +720,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentpolicytag_go">
 <a href="#state_parentpolicytag_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Policy<wbr>Tag</a>
@@ -818,8 +731,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taxonomy_go">
 <a href="#state_taxonomy_go" style="color: inherit; text-decoration: inherit;">Taxonomy</a>
@@ -828,14 +740,11 @@ If not set, defaults to an empty string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childpolicytags_nodejs">
 <a href="#state_childpolicytags_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Policy<wbr>Tags</a>
@@ -844,8 +753,7 @@ If not set, defaults to an empty string.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -857,8 +765,7 @@ If not set, defaults to an empty string.
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -869,8 +776,7 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -880,8 +786,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentpolicytag_nodejs">
 <a href="#state_parentpolicytag_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Policy<wbr>Tag</a>
@@ -892,8 +797,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taxonomy_nodejs">
 <a href="#state_taxonomy_nodejs" style="color: inherit; text-decoration: inherit;">taxonomy</a>
@@ -902,14 +806,11 @@ If not set, defaults to an empty string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_child_policy_tags_python">
 <a href="#state_child_policy_tags_python" style="color: inherit; text-decoration: inherit;">child_<wbr>policy_<wbr>tags</a>
@@ -918,8 +819,7 @@ If not set, defaults to an empty string.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource names of child policy tags of this policy tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -931,8 +831,7 @@ If not set, defaults to an empty string.
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -943,8 +842,7 @@ If not set, defaults to an empty description.
     <dd>{{% md %}}User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -954,8 +852,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     </dt>
     <dd>{{% md %}}Resource name of this policy tag, whose format is:
 "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_policy_tag_python">
 <a href="#state_parent_policy_tag_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>policy_<wbr>tag</a>
@@ -966,8 +863,7 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
     <dd>{{% md %}}Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taxonomy_python">
 <a href="#state_taxonomy_python" style="color: inherit; text-decoration: inherit;">taxonomy</a>
@@ -976,8 +872,7 @@ If not set, defaults to an empty string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taxonomy the policy tag is associated with
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -993,6 +888,6 @@ If not set, defaults to an empty string.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

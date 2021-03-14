@@ -16,11 +16,17 @@ For more information, see the
 [Vault docs](https://www.vaultproject.io/api-docs/auth/aws#configure-identity-whitelist-tidy-operation).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -43,9 +49,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -75,9 +84,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -88,9 +100,12 @@ example_auth_backend_identity_whitelist = vault.aws.AuthBackendIdentityWhitelist
     safety_buffer=3600)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -105,9 +120,16 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AuthBackendIdentityWhitelist Resource {#create}
@@ -132,9 +154,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -142,9 +162,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -152,9 +170,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -162,10 +178,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +204,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -201,9 +212,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +220,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +228,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,18 +236,13 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +250,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +258,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,10 +266,7 @@ const exampleAuthBackendIdentityWhitelist = new vault.aws.AuthBackendIdentityWhi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +281,7 @@ The AuthBackendIdentityWhitelist resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -299,8 +290,7 @@ The AuthBackendIdentityWhitelist resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_csharp">
 <a href="#disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -310,8 +300,7 @@ The AuthBackendIdentityWhitelist resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_csharp">
 <a href="#safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -322,14 +311,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -338,8 +324,7 @@ backend storage.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_go">
 <a href="#disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -349,8 +334,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_go">
 <a href="#safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -361,14 +345,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -377,8 +358,7 @@ backend storage.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_nodejs">
 <a href="#disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
@@ -388,8 +368,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_nodejs">
 <a href="#safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
@@ -400,14 +379,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -416,8 +392,7 @@ backend storage.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_periodic_tidy_python">
 <a href="#disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
@@ -427,8 +402,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safety_buffer_python">
 <a href="#safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
@@ -439,8 +413,7 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -451,9 +424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -461,14 +432,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -476,14 +444,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -491,14 +456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -506,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -634,9 +595,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -645,8 +604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_csharp">
 <a href="#state_disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -656,8 +614,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_csharp">
 <a href="#state_safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -668,14 +625,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -684,8 +638,7 @@ backend storage.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_go">
 <a href="#state_disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -695,8 +648,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_go">
 <a href="#state_safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -707,14 +659,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -723,8 +672,7 @@ backend storage.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_nodejs">
 <a href="#state_disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
@@ -734,8 +682,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_nodejs">
 <a href="#state_safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
@@ -746,14 +693,11 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -762,8 +706,7 @@ backend storage.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the AWS backend being configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_periodic_tidy_python">
 <a href="#state_disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
@@ -773,8 +716,7 @@ backend storage.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the identity-whitelist entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safety_buffer_python">
 <a href="#state_safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
@@ -785,8 +727,7 @@ tidying of the identity-whitelist entries.
     <dd>{{% md %}}The amount of extra time, in minutes, that must
 have passed beyond the roletag expiration, before it is removed from the
 backend storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -812,6 +753,6 @@ AWS auth backend identity whitelists can be imported using `auth/`, the `backend
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

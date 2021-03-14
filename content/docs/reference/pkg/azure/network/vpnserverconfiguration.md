@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.network.VpnServerConfiguration resource 
 Manages a VPN Server Configuration.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -72,9 +78,12 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -115,9 +124,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -153,9 +165,12 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -193,9 +208,16 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VpnServerConfiguration Resource {#create}
@@ -220,9 +242,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -230,9 +250,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,9 +258,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,10 +266,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -279,9 +292,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -289,9 +300,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -299,9 +308,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -309,9 +316,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -319,18 +324,13 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -338,9 +338,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -348,9 +346,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -358,10 +354,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -376,9 +369,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -387,8 +378,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnauthenticationtypes_csharp">
 <a href="#vpnauthenticationtypes_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
@@ -397,8 +387,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureactivedirectoryauthentications_csharp">
 <a href="#azureactivedirectoryauthentications_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -407,8 +396,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrevokedcertificates_csharp">
 <a href="#clientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
@@ -417,8 +405,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_csharp">
 <a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -427,8 +414,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_csharp">
 <a href="#ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -437,8 +423,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -447,8 +432,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -457,8 +441,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_csharp">
 <a href="#radius_csharp" style="color: inherit; text-decoration: inherit;">Radius</a>
@@ -467,8 +450,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="radiusserver_csharp">
 <a href="#radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
@@ -477,8 +459,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -487,8 +468,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnprotocols_csharp">
 <a href="#vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
@@ -497,14 +477,11 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -513,8 +490,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnauthenticationtypes_go">
 <a href="#vpnauthenticationtypes_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
@@ -523,8 +499,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureactivedirectoryauthentications_go">
 <a href="#azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -533,8 +508,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrevokedcertificates_go">
 <a href="#clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
@@ -543,8 +517,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_go">
 <a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -553,8 +526,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_go">
 <a href="#ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -563,8 +535,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -573,8 +544,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -583,8 +553,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_go">
 <a href="#radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
@@ -593,8 +562,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="radiusserver_go">
 <a href="#radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
@@ -603,8 +571,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -613,8 +580,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnprotocols_go">
 <a href="#vpnprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
@@ -623,14 +589,11 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -639,8 +602,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnauthenticationtypes_nodejs">
 <a href="#vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
@@ -649,8 +611,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureactivedirectoryauthentications_nodejs">
 <a href="#azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -659,8 +620,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrevokedcertificates_nodejs">
 <a href="#clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
@@ -669,8 +629,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_nodejs">
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
@@ -679,8 +638,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_nodejs">
 <a href="#ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
@@ -689,8 +647,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -699,8 +656,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -709,8 +665,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_nodejs">
 <a href="#radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
@@ -719,8 +674,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="radiusserver_nodejs">
 <a href="#radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
@@ -729,8 +683,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -739,8 +692,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnprotocols_nodejs">
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
@@ -749,14 +701,11 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -765,8 +714,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_authentication_types_python">
 <a href="#vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
@@ -775,8 +723,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_active_directory_authentications_python">
 <a href="#azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
@@ -785,8 +732,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_revoked_certificates_python">
 <a href="#client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
@@ -795,8 +741,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_root_certificates_python">
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
@@ -805,8 +750,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_policy_python">
 <a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
@@ -815,8 +759,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -825,8 +768,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +777,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_python">
 <a href="#radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
@@ -845,8 +786,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="radius_server_python">
 <a href="#radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
@@ -855,8 +795,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -865,8 +804,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_protocols_python">
 <a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
@@ -875,8 +813,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -887,9 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -897,14 +832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -912,14 +844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -927,14 +856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -942,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1070,9 +995,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureactivedirectoryauthentications_csharp">
 <a href="#state_azureactivedirectoryauthentications_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -1081,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrevokedcertificates_csharp">
 <a href="#state_clientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
@@ -1091,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrootcertificates_csharp">
 <a href="#state_clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -1101,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_csharp">
 <a href="#state_ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -1111,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1121,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1131,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_radius_csharp">
 <a href="#state_radius_csharp" style="color: inherit; text-decoration: inherit;">Radius</a>
@@ -1141,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_radiusserver_csharp">
 <a href="#state_radiusserver_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
@@ -1151,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1161,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1171,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnauthenticationtypes_csharp">
 <a href="#state_vpnauthenticationtypes_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
@@ -1181,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnprotocols_csharp">
 <a href="#state_vpnprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
@@ -1191,14 +1103,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureactivedirectoryauthentications_go">
 <a href="#state_azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -1207,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrevokedcertificates_go">
 <a href="#state_clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
@@ -1217,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrootcertificates_go">
 <a href="#state_clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -1227,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_go">
 <a href="#state_ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -1237,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1247,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1257,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_radius_go">
 <a href="#state_radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
@@ -1267,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_radiusserver_go">
 <a href="#state_radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
@@ -1277,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1287,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1297,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnauthenticationtypes_go">
 <a href="#state_vpnauthenticationtypes_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Authentication<wbr>Types</a>
@@ -1307,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnprotocols_go">
 <a href="#state_vpnprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Protocols</a>
@@ -1317,14 +1215,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureactivedirectoryauthentications_nodejs">
 <a href="#state_azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
@@ -1333,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrevokedcertificates_nodejs">
 <a href="#state_clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
@@ -1343,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientrootcertificates_nodejs">
 <a href="#state_clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
@@ -1353,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_nodejs">
 <a href="#state_ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
@@ -1363,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1373,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1383,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_radius_nodejs">
 <a href="#state_radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
@@ -1393,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_radiusserver_nodejs">
 <a href="#state_radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
@@ -1403,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1413,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1423,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnauthenticationtypes_nodejs">
 <a href="#state_vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
@@ -1433,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnprotocols_nodejs">
 <a href="#state_vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
@@ -1443,14 +1327,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azure_active_directory_authentications_python">
 <a href="#state_azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
@@ -1459,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_revoked_certificates_python">
 <a href="#state_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
@@ -1469,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_root_certificates_python">
 <a href="#state_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
@@ -1479,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsec_policy_python">
 <a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
@@ -1489,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1499,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1509,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_radius_python">
 <a href="#state_radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
@@ -1519,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_radius_server_python">
 <a href="#state_radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
@@ -1529,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1539,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1549,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_authentication_types_python">
 <a href="#state_vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
@@ -1559,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_protocols_python">
 <a href="#state_vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
@@ -1569,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1585,9 +1454,7 @@ The following state arguments are supported:
 <h4 id="vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1596,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -1606,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_csharp">
 <a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -1616,14 +1481,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1632,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -1642,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_go">
 <a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -1652,14 +1512,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1668,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -1678,8 +1534,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_nodejs">
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -1688,14 +1543,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1704,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -1714,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_python">
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -1724,16 +1574,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1742,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1752,14 +1598,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1768,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1778,14 +1620,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1794,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1804,14 +1642,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1820,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1830,16 +1664,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1848,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_csharp">
 <a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -1858,14 +1688,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1874,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_go">
 <a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -1884,14 +1710,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1900,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_nodejs">
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
@@ -1910,14 +1732,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1926,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_cert_data_python">
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
@@ -1936,16 +1754,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1954,8 +1769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_csharp">
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -1964,8 +1778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -1974,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -1984,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_csharp">
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -1994,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_csharp">
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -2004,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_csharp">
 <a href="#sadatasizekilobytes_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -2014,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_csharp">
 <a href="#salifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Seconds</a>
@@ -2024,14 +1832,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -2040,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_go">
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -2050,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -2060,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -2070,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_go">
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -2080,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_go">
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -2090,8 +1890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_go">
 <a href="#sadatasizekilobytes_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -2100,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_go">
 <a href="#salifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Seconds</a>
@@ -2110,14 +1908,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
@@ -2126,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_nodejs">
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
@@ -2136,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
@@ -2146,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
@@ -2156,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_nodejs">
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
@@ -2166,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_nodejs">
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
@@ -2176,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_nodejs">
 <a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -2186,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_nodejs">
 <a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Seconds</a>
@@ -2196,14 +1984,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dh_group_python">
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
@@ -2212,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_encryption_python">
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
@@ -2222,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
@@ -2232,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
@@ -2242,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_integrity_python">
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
@@ -2252,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfs_group_python">
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
@@ -2262,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_data_size_kilobytes_python">
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
@@ -2272,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_lifetime_seconds_python">
 <a href="#sa_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime_<wbr>seconds</a>
@@ -2282,16 +2060,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_csharp">
 <a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
@@ -2300,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_csharp">
 <a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -2310,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -2320,14 +2093,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_go">
 <a href="#serverrootcertificates_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
@@ -2336,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_go">
 <a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -2346,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -2356,14 +2124,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_nodejs">
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
@@ -2372,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_nodejs">
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
@@ -2382,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -2392,14 +2155,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="server_root_certificates_python">
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
@@ -2408,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_root_certificates_python">
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
@@ -2418,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -2428,16 +2186,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2446,8 +2201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -2456,14 +2210,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2472,8 +2223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -2482,14 +2232,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2498,8 +2245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -2508,14 +2254,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2524,8 +2267,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -2534,16 +2276,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2552,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2562,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_csharp">
 <a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
@@ -2572,8 +2309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_csharp">
 <a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -2582,14 +2318,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2598,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -2608,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_go">
 <a href="#serverrootcertificates_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
@@ -2618,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_go">
 <a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
@@ -2628,14 +2358,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2644,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2654,8 +2380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrootcertificates_nodejs">
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
@@ -2664,8 +2389,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientrootcertificates_nodejs">
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
@@ -2674,14 +2398,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2690,8 +2411,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -2700,8 +2420,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_root_certificates_python">
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
@@ -2710,8 +2429,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_root_certificates_python">
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
@@ -2720,16 +2438,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2738,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -2748,14 +2462,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2764,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -2774,14 +2484,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2790,8 +2497,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -2800,14 +2506,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2816,8 +2519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -2826,16 +2528,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2844,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_csharp">
 <a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -2854,14 +2552,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2870,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_go">
 <a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -2880,14 +2574,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2896,8 +2587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_nodejs">
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
@@ -2906,14 +2596,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2922,8 +2609,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_cert_data_python">
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
@@ -2932,16 +2618,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2950,8 +2633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_csharp">
 <a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -2960,14 +2642,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2976,8 +2655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_go">
 <a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -2986,14 +2664,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3002,8 +2677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_nodejs">
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
@@ -3012,14 +2686,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3028,8 +2699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_cert_data_python">
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
@@ -3038,8 +2708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3060,6 +2729,6 @@ VPN Server Configurations can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

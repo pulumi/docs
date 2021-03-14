@@ -35,9 +35,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the tls.CertRequest resource with examples, input 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The CertRequest resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_csharp">
 <a href="#keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -203,8 +172,7 @@ The CertRequest resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -213,8 +181,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_csharp">
 <a href="#subjects_csharp" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -224,8 +191,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -234,8 +200,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -244,8 +209,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_csharp">
 <a href="#uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -254,14 +218,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_go">
 <a href="#keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -271,8 +232,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -281,8 +241,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_go">
 <a href="#subjects_go" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -292,8 +251,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -302,8 +260,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -312,8 +269,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_go">
 <a href="#uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -322,14 +278,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_nodejs">
 <a href="#keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -339,8 +292,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -349,8 +301,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_nodejs">
 <a href="#subjects_nodejs" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -360,8 +311,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -370,8 +320,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -380,8 +329,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_nodejs">
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -390,14 +338,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_algorithm_python">
 <a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -407,8 +352,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -417,8 +361,7 @@ in `private_key_pem`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_python">
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -428,8 +371,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -438,8 +380,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -448,8 +389,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_python">
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -458,8 +398,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -470,9 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certrequestpem_csharp">
 <a href="#certrequestpem_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Request<wbr>Pem</a>
@@ -481,8 +418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -490,14 +426,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certrequestpem_go">
 <a href="#certrequestpem_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Request<wbr>Pem</a>
@@ -506,8 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -515,14 +447,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certrequestpem_nodejs">
 <a href="#certrequestpem_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Request<wbr>Pem</a>
@@ -531,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -540,14 +468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_request_pem_python">
 <a href="#cert_request_pem_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>request_<wbr>pem</a>
@@ -556,8 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -565,8 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -693,9 +616,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certrequestpem_csharp">
 <a href="#state_certrequestpem_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Request<wbr>Pem</a>
@@ -704,8 +625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_csharp">
 <a href="#state_dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -714,8 +634,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_csharp">
 <a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -724,8 +643,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_csharp">
 <a href="#state_keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -735,8 +653,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_csharp">
 <a href="#state_privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -745,8 +662,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_csharp">
 <a href="#state_subjects_csharp" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -756,8 +672,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_csharp">
 <a href="#state_uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -766,14 +681,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certrequestpem_go">
 <a href="#state_certrequestpem_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Request<wbr>Pem</a>
@@ -782,8 +694,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_go">
 <a href="#state_dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -792,8 +703,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_go">
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -802,8 +712,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_go">
 <a href="#state_keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -813,8 +722,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_go">
 <a href="#state_privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -823,8 +731,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_go">
 <a href="#state_subjects_go" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -834,8 +741,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_go">
 <a href="#state_uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -844,14 +750,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certrequestpem_nodejs">
 <a href="#state_certrequestpem_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Request<wbr>Pem</a>
@@ -860,8 +763,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_nodejs">
 <a href="#state_dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -870,8 +772,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_nodejs">
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -880,8 +781,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_nodejs">
 <a href="#state_keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -891,8 +791,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_nodejs">
 <a href="#state_privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -901,8 +800,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_nodejs">
 <a href="#state_subjects_nodejs" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -912,8 +810,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_nodejs">
 <a href="#state_uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -922,14 +819,11 @@ a nested configuration block whose structure is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cert_request_pem_python">
 <a href="#state_cert_request_pem_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>request_<wbr>pem</a>
@@ -938,8 +832,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate request data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_names_python">
 <a href="#state_dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -948,8 +841,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_addresses_python">
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -958,8 +850,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_algorithm_python">
 <a href="#state_key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -969,8 +860,7 @@ a nested configuration block whose structure is described below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_pem_python">
 <a href="#state_private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -979,8 +869,7 @@ in `private_key_pem`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_python">
 <a href="#state_subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -990,8 +879,7 @@ in `private_key_pem`.
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_python">
 <a href="#state_uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -1000,8 +888,7 @@ a nested configuration block whose structure is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1016,9 +903,7 @@ a nested configuration block whose structure is described below.
 <h4 id="certrequestsubject">Cert<wbr>Request<wbr>Subject</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1026,8 +911,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1035,8 +919,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1044,8 +927,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1053,8 +935,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -1062,8 +943,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1071,8 +951,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1080,8 +959,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1089,8 +967,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_csharp">
 <a href="#streetaddresses_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
@@ -1098,14 +975,11 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1113,8 +987,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1122,8 +995,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1131,8 +1003,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1140,8 +1011,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -1149,8 +1019,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1158,8 +1027,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1167,8 +1035,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1176,8 +1043,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_go">
 <a href="#streetaddresses_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
@@ -1185,14 +1051,11 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1200,8 +1063,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1209,8 +1071,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -1218,8 +1079,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1227,8 +1087,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -1236,8 +1095,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1245,8 +1103,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -1254,8 +1111,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -1263,8 +1119,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_nodejs">
 <a href="#streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
@@ -1272,14 +1127,11 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -1287,8 +1139,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1296,8 +1147,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -1305,8 +1155,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1314,8 +1163,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -1323,8 +1171,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1332,8 +1179,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -1341,8 +1187,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1350,8 +1195,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_addresses_python">
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
@@ -1359,8 +1203,7 @@ a nested configuration block whose structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1371,6 +1214,6 @@ a nested configuration block whose structure is described below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the datadog.LogsArchiveOrder resource with example
 Provides a Datadog [Logs Archive API](https://docs.datadoghq.com/api/v2/logs-archives/) resource, which is used to manage Datadog log archives order.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -39,13 +45,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -56,9 +68,12 @@ sample_archive_order = datadog.LogsArchiveOrder("sampleArchiveOrder", archive_id
 ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -72,9 +87,16 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LogsArchiveOrder Resource {#create}
@@ -99,9 +121,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -109,9 +129,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -119,9 +137,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -129,10 +145,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -158,9 +171,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -168,9 +179,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -178,9 +187,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -188,9 +195,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -198,18 +203,13 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -217,9 +217,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -227,9 +225,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -237,10 +233,7 @@ const sampleArchiveOrder = new datadog.LogsArchiveOrder("sample_archive_order", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -255,9 +248,7 @@ The LogsArchiveOrder resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_csharp">
 <a href="#archiveids_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -268,14 +259,11 @@ The LogsArchiveOrder resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_go">
 <a href="#archiveids_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -286,14 +274,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_nodejs">
 <a href="#archiveids_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Ids</a>
@@ -304,14 +289,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archive_ids_python">
 <a href="#archive_ids_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>ids</a>
@@ -322,8 +304,7 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -334,9 +315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -344,14 +323,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -359,14 +335,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -374,14 +347,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -389,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -517,9 +486,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_csharp">
 <a href="#state_archiveids_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -530,14 +497,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_go">
 <a href="#state_archiveids_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -548,14 +512,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_nodejs">
 <a href="#state_archiveids_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Ids</a>
@@ -566,14 +527,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archive_ids_python">
 <a href="#state_archive_ids_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>ids</a>
@@ -584,8 +542,7 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -611,6 +568,6 @@ There must be at most one `datadog_logs_archive_order` resource. You can import 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

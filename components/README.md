@@ -167,15 +167,25 @@ Similarly:
 
 ```
 {{< chooser cloud "aws,azure,gcp" >}}
+
 {{% choosable cloud aws %}}
+
 Some AWS stuff.
+
 {{% /choosable %}}
+
 {{% choosable cloud azure %}}
+
 Some Azure stuff.
+
 {{% /choosable %}}
+
 {{% choosable cloud gcp %}}
+
 Some GCP stuff.
+
 {{% /choosable %}}
+
 {{< /chooser >}}
 ```
 
@@ -199,8 +209,72 @@ Some GCP stuff.
 
 A few things to note:
 
-* The `choosable` shortcode **renders Markdown automatically**. You don't need use the
-  `md` shortcode to do that anymore. (So please don't, and thank you!)
+* Pay attention to how you nest `chooser` and `choosable` shortcodes. [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) work with both
+  `<>` and `%%` delimiters, but the two behave very differently: `%` will cause content to be
+  Markdown-rendered, `<` and `>` will not. So for example:
+
+  ```
+  {{< some-shortcode >}}
+
+    This content will *not* be rendered as Markdown.
+
+  {{< /some-shortcode >}}
+
+  {{% some-shortcode %}}
+
+    This content *will* be.
+
+  {{% /some-shortcode %}}
+  ```
+
+  You need to be careful about double-rendering, though. For example, this is okay: the outer
+  container won't be rendered as Markdown, but the inner children will be.
+
+  ```
+  {{< some-parent >}}
+
+    <some-component>
+        Just some regular HTML, here.
+    </some-component>
+
+    {{% some-child %}}
+        [Some Markdown]("http://some-link").
+    {{% /some-child %}}
+
+    {% some-child %}}
+        [Some more Markdown]("http://some-link").
+    {{% /some-child %}}
+
+  {{< /some-parent >}}
+  ```
+
+  If you did this, however:
+
+  ```
+  {{% some-parent %}}
+
+    <some-component>
+        Just some regular HTML, here.
+    </some-component>
+
+    {{% some-child %}}
+        [Some Markdown]("http://some-link").
+    {{% /some-child %}}
+
+    {% some-child %}}
+        [Some more Markdown]("http://some-link").
+    {{% /some-child %}}
+
+  {{% /some-parent %}}
+  ```
+
+  ... the nested shortcodes would be rendered twice -- first by virtue of their being
+  wrapped in a `%`-delimited shortcode, and then a second time when the parent's content
+  is rendered itself. Sometimes this turns out okay, but if you're rendering source code,
+  where indentation matters, you can wind up with some terrible results.
+
+  So as a rule, avoid nesting `%`-delimited shortcodes. Decide which shortcode will be responsible
+  for rendering, and use `%`s on that one, `<>`s on descendants.
 
 * The containing `div`s emitted by the `chooser` and `choosable` shortcodes are
   intentional and in most cases required, because the template renderers we're using today

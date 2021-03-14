@@ -45,9 +45,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:intune:AndroidMAMPolicyByName myresource1 /provider
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -211,8 +180,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -220,8 +188,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckofflinetimeout_csharp">
 <a href="#accessrecheckofflinetimeout_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Recheck<wbr>Offline<wbr>Timeout</a>
@@ -229,8 +196,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckonlinetimeout_csharp">
 <a href="#accessrecheckonlinetimeout_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Recheck<wbr>Online<wbr>Timeout</a>
@@ -238,8 +204,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingfromlevel_csharp">
 <a href="#appsharingfromlevel_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Sharing<wbr>From<wbr>Level</a>
@@ -247,8 +212,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingtolevel_csharp">
 <a href="#appsharingtolevel_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Sharing<wbr>To<wbr>Level</a>
@@ -256,8 +220,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -265,8 +228,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clipboardsharinglevel_csharp">
 <a href="#clipboardsharinglevel_csharp" style="color: inherit; text-decoration: inherit;">Clipboard<wbr>Sharing<wbr>Level</a>
@@ -274,8 +236,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databackup_csharp">
 <a href="#databackup_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Backup</a>
@@ -283,8 +244,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -292,8 +252,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecompliance_csharp">
 <a href="#devicecompliance_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Compliance</a>
@@ -301,8 +260,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileencryption_csharp">
 <a href="#fileencryption_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Encryption</a>
@@ -310,8 +268,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharingsaveas_csharp">
 <a href="#filesharingsaveas_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Sharing<wbr>Save<wbr>As</a>
@@ -319,8 +276,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -328,8 +284,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedbrowser_csharp">
 <a href="#managedbrowser_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Browser</a>
@@ -337,8 +292,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinewipetimeout_csharp">
 <a href="#offlinewipetimeout_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Wipe<wbr>Timeout</a>
@@ -346,8 +300,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pin_csharp">
 <a href="#pin_csharp" style="color: inherit; text-decoration: inherit;">Pin</a>
@@ -355,8 +308,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pinnumretry_csharp">
 <a href="#pinnumretry_csharp" style="color: inherit; text-decoration: inherit;">Pin<wbr>Num<wbr>Retry</a>
@@ -364,8 +316,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -373,8 +324,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="screencapture_csharp">
 <a href="#screencapture_csharp" style="color: inherit; text-decoration: inherit;">Screen<wbr>Capture</a>
@@ -382,8 +332,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -391,14 +340,11 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -406,8 +352,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -415,8 +360,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckofflinetimeout_go">
 <a href="#accessrecheckofflinetimeout_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Recheck<wbr>Offline<wbr>Timeout</a>
@@ -424,8 +368,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckonlinetimeout_go">
 <a href="#accessrecheckonlinetimeout_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Recheck<wbr>Online<wbr>Timeout</a>
@@ -433,8 +376,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingfromlevel_go">
 <a href="#appsharingfromlevel_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sharing<wbr>From<wbr>Level</a>
@@ -442,8 +384,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingtolevel_go">
 <a href="#appsharingtolevel_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sharing<wbr>To<wbr>Level</a>
@@ -451,8 +392,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -460,8 +400,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clipboardsharinglevel_go">
 <a href="#clipboardsharinglevel_go" style="color: inherit; text-decoration: inherit;">Clipboard<wbr>Sharing<wbr>Level</a>
@@ -469,8 +408,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databackup_go">
 <a href="#databackup_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Backup</a>
@@ -478,8 +416,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -487,8 +424,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecompliance_go">
 <a href="#devicecompliance_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Compliance</a>
@@ -496,8 +432,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileencryption_go">
 <a href="#fileencryption_go" style="color: inherit; text-decoration: inherit;">File<wbr>Encryption</a>
@@ -505,8 +440,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharingsaveas_go">
 <a href="#filesharingsaveas_go" style="color: inherit; text-decoration: inherit;">File<wbr>Sharing<wbr>Save<wbr>As</a>
@@ -514,8 +448,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -523,8 +456,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedbrowser_go">
 <a href="#managedbrowser_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Browser</a>
@@ -532,8 +464,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinewipetimeout_go">
 <a href="#offlinewipetimeout_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Wipe<wbr>Timeout</a>
@@ -541,8 +472,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pin_go">
 <a href="#pin_go" style="color: inherit; text-decoration: inherit;">Pin</a>
@@ -550,8 +480,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pinnumretry_go">
 <a href="#pinnumretry_go" style="color: inherit; text-decoration: inherit;">Pin<wbr>Num<wbr>Retry</a>
@@ -559,8 +488,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -568,8 +496,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="screencapture_go">
 <a href="#screencapture_go" style="color: inherit; text-decoration: inherit;">Screen<wbr>Capture</a>
@@ -577,8 +504,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -586,14 +512,11 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -601,8 +524,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -610,8 +532,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckofflinetimeout_nodejs">
 <a href="#accessrecheckofflinetimeout_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Recheck<wbr>Offline<wbr>Timeout</a>
@@ -619,8 +540,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessrecheckonlinetimeout_nodejs">
 <a href="#accessrecheckonlinetimeout_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Recheck<wbr>Online<wbr>Timeout</a>
@@ -628,8 +548,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingfromlevel_nodejs">
 <a href="#appsharingfromlevel_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Sharing<wbr>From<wbr>Level</a>
@@ -637,8 +556,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsharingtolevel_nodejs">
 <a href="#appsharingtolevel_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Sharing<wbr>To<wbr>Level</a>
@@ -646,8 +564,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -655,8 +572,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clipboardsharinglevel_nodejs">
 <a href="#clipboardsharinglevel_nodejs" style="color: inherit; text-decoration: inherit;">clipboard<wbr>Sharing<wbr>Level</a>
@@ -664,8 +580,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databackup_nodejs">
 <a href="#databackup_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Backup</a>
@@ -673,8 +588,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -682,8 +596,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecompliance_nodejs">
 <a href="#devicecompliance_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Compliance</a>
@@ -691,8 +604,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileencryption_nodejs">
 <a href="#fileencryption_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Encryption</a>
@@ -700,8 +612,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharingsaveas_nodejs">
 <a href="#filesharingsaveas_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Sharing<wbr>Save<wbr>As</a>
@@ -709,8 +620,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -718,8 +628,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedbrowser_nodejs">
 <a href="#managedbrowser_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Browser</a>
@@ -727,8 +636,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinewipetimeout_nodejs">
 <a href="#offlinewipetimeout_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Wipe<wbr>Timeout</a>
@@ -736,8 +644,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pin_nodejs">
 <a href="#pin_nodejs" style="color: inherit; text-decoration: inherit;">pin</a>
@@ -745,8 +652,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pinnumretry_nodejs">
 <a href="#pinnumretry_nodejs" style="color: inherit; text-decoration: inherit;">pin<wbr>Num<wbr>Retry</a>
@@ -754,8 +660,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -763,8 +668,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="screencapture_nodejs">
 <a href="#screencapture_nodejs" style="color: inherit; text-decoration: inherit;">screen<wbr>Capture</a>
@@ -772,8 +676,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -781,14 +684,11 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -796,8 +696,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -805,8 +704,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location hostName for the tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_recheck_offline_timeout_python">
 <a href="#access_recheck_offline_timeout_python" style="color: inherit; text-decoration: inherit;">access_<wbr>recheck_<wbr>offline_<wbr>timeout</a>
@@ -814,8 +712,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_recheck_online_timeout_python">
 <a href="#access_recheck_online_timeout_python" style="color: inherit; text-decoration: inherit;">access_<wbr>recheck_<wbr>online_<wbr>timeout</a>
@@ -823,8 +720,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_sharing_from_level_python">
 <a href="#app_sharing_from_level_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sharing_<wbr>from_<wbr>level</a>
@@ -832,8 +728,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_sharing_to_level_python">
 <a href="#app_sharing_to_level_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sharing_<wbr>to_<wbr>level</a>
@@ -841,8 +736,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -850,8 +744,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clipboard_sharing_level_python">
 <a href="#clipboard_sharing_level_python" style="color: inherit; text-decoration: inherit;">clipboard_<wbr>sharing_<wbr>level</a>
@@ -859,8 +752,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_backup_python">
 <a href="#data_backup_python" style="color: inherit; text-decoration: inherit;">data_<wbr>backup</a>
@@ -868,8 +760,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -877,8 +768,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_compliance_python">
 <a href="#device_compliance_python" style="color: inherit; text-decoration: inherit;">device_<wbr>compliance</a>
@@ -886,8 +776,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_encryption_python">
 <a href="#file_encryption_python" style="color: inherit; text-decoration: inherit;">file_<wbr>encryption</a>
@@ -895,8 +784,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_sharing_save_as_python">
 <a href="#file_sharing_save_as_python" style="color: inherit; text-decoration: inherit;">file_<wbr>sharing_<wbr>save_<wbr>as</a>
@@ -904,8 +792,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -913,8 +800,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_browser_python">
 <a href="#managed_browser_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>browser</a>
@@ -922,8 +808,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_wipe_timeout_python">
 <a href="#offline_wipe_timeout_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>wipe_<wbr>timeout</a>
@@ -931,8 +816,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pin_python">
 <a href="#pin_python" style="color: inherit; text-decoration: inherit;">pin</a>
@@ -940,8 +824,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pin_num_retry_python">
 <a href="#pin_num_retry_python" style="color: inherit; text-decoration: inherit;">pin_<wbr>num_<wbr>retry</a>
@@ -949,8 +832,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -958,8 +840,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name for the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="screen_capture_python">
 <a href="#screen_capture_python" style="color: inherit; text-decoration: inherit;">screen_<wbr>capture</a>
@@ -967,8 +848,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -976,8 +856,7 @@ The AndroidMAMPolicyByName resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -988,9 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groupstatus_csharp">
 <a href="#groupstatus_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Status</a>
@@ -998,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1007,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1016,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1025,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numofapps_csharp">
 <a href="#numofapps_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Apps</a>
@@ -1034,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1043,14 +915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groupstatus_go">
 <a href="#groupstatus_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Status</a>
@@ -1058,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1067,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1076,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1085,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numofapps_go">
 <a href="#numofapps_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Apps</a>
@@ -1094,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1103,14 +967,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groupstatus_nodejs">
 <a href="#groupstatus_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Status</a>
@@ -1118,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1127,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1136,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1145,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numofapps_nodejs">
 <a href="#numofapps_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Apps</a>
@@ -1154,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1163,14 +1019,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="group_status_python">
 <a href="#group_status_python" style="color: inherit; text-decoration: inherit;">group_<wbr>status</a>
@@ -1178,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1187,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1196,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1205,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="num_of_apps_python">
 <a href="#num_of_apps_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>apps</a>
@@ -1214,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1223,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

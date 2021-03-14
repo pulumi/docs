@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
 <a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_go">
 <a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Endpoint Resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the DigitalTwinsInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventgridresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Digital<wbr>Twins.<wbr>Outputs.<wbr>Service<wbr>Bus<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventgridresponse">Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Service<wbr>Bus<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventgridresponse">Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Service<wbr>Bus<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -313,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -328,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -337,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Extension resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventgridresponse">Event<wbr>Grid<wbr>Response</a> | <a href="#eventhubresponse">Event<wbr>Hub<wbr>Response</a> | <a href="#servicebusresponse">Service<wbr>Bus<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,9 +326,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey1_csharp">
 <a href="#accesskey1_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key1</a>
@@ -380,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -389,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -398,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicendpoint_csharp">
 <a href="#topicendpoint_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
@@ -407,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey2_csharp">
 <a href="#accesskey2_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_csharp">
 <a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_csharp">
 <a href="#deadletteruri_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -443,14 +390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey1_go">
 <a href="#accesskey1_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key1</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -467,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -476,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicendpoint_go">
 <a href="#topicendpoint_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
@@ -485,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey2_go">
 <a href="#accesskey2_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_go">
 <a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_go">
 <a href="#deadletteruri_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey1_nodejs">
 <a href="#accesskey1_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key1</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicendpoint_nodejs">
 <a href="#topicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey2_nodejs">
 <a href="#accesskey2_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -581,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_nodejs">
 <a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_nodejs">
 <a href="#deadletteruri_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Uri</a>
@@ -599,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key1_python">
 <a href="#access_key1_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key1</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_endpoint_python">
 <a href="#topic_endpoint_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>endpoint</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_key2_python">
 <a href="#access_key2_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key2</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_secret_python">
 <a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_uri_python">
 <a href="#dead_letter_uri_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>uri</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventhubresponse">Event<wbr>Hub<wbr>Response</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -696,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -705,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -714,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringprimarykey_csharp">
 <a href="#connectionstringprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Primary<wbr>Key</a>
@@ -723,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringsecondarykey_csharp">
 <a href="#connectionstringsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
@@ -732,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_csharp">
 <a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -741,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_csharp">
 <a href="#deadletteruri_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -750,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -759,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -768,14 +674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -783,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -792,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -801,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringprimarykey_go">
 <a href="#connectionstringprimarykey_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Primary<wbr>Key</a>
@@ -810,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringsecondarykey_go">
 <a href="#connectionstringsecondarykey_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
@@ -819,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_go">
 <a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_go">
 <a href="#deadletteruri_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -837,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -846,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -855,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -870,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -879,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -888,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringprimarykey_nodejs">
 <a href="#connectionstringprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Primary<wbr>Key</a>
@@ -897,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstringsecondarykey_nodejs">
 <a href="#connectionstringsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
@@ -906,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_nodejs">
 <a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
@@ -915,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_nodejs">
 <a href="#deadletteruri_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Uri</a>
@@ -924,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -933,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -942,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -957,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -966,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -975,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_primary_key_python">
 <a href="#connection_string_primary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>primary_<wbr>key</a>
@@ -984,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_secondary_key_python">
 <a href="#connection_string_secondary_key_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>secondary_<wbr>key</a>
@@ -993,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_secret_python">
 <a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_uri_python">
 <a href="#dead_letter_uri_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>uri</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EventHub name in the EventHub namespace for identity-based authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicebusresponse">Service<wbr>Bus<wbr>Response</h4>
@@ -1038,9 +910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1048,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1057,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -1066,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_csharp">
 <a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -1075,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_csharp">
 <a href="#deadletteruri_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -1084,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -1093,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_csharp">
 <a href="#entitypath_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -1102,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1111,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1120,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1135,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1144,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -1153,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_go">
 <a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
@@ -1162,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_go">
 <a href="#deadletteruri_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Uri</a>
@@ -1171,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -1180,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_go">
 <a href="#entitypath_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Path</a>
@@ -1189,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1198,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1207,14 +1058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -1222,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1231,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -1240,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadlettersecret_nodejs">
 <a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
@@ -1249,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteruri_nodejs">
 <a href="#deadletteruri_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Uri</a>
@@ -1258,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -1267,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitypath_nodejs">
 <a href="#entitypath_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
@@ -1276,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -1285,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -1294,14 +1134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -1309,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when the Endpoint was added to DigitalTwinsInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1318,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -1327,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the authentication type being used for connecting to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_secret_python">
 <a href="#dead_letter_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>secret</a>
@@ -1336,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage secret for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_uri_python">
 <a href="#dead_letter_uri_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>uri</a>
@@ -1345,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dead letter storage URL for identity-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -1354,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_path_python">
 <a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
@@ -1363,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ServiceBus Topic name for identity-based authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -1372,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -1381,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

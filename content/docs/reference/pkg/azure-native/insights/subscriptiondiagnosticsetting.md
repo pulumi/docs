@@ -14,11 +14,17 @@ The subscription diagnostic setting resource.
 API Version: 2017-05-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creates or Updates the subscription diagnostic setting
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -49,9 +55,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -85,9 +94,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -106,9 +118,12 @@ subscription_diagnostic_setting = azure_native.insights.SubscriptionDiagnosticSe
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SubscriptionDiagnosticSetting Resource {#create}
@@ -155,9 +177,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubauthorizationruleid_csharp">
 <a href="#eventhubauthorizationruleid_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -321,8 +312,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubname_csharp">
 <a href="#eventhubname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
@@ -330,8 +320,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -339,8 +328,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_csharp">
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -348,8 +336,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionlogsettings">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Subscription<wbr>Log<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +344,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusruleid_csharp">
 <a href="#servicebusruleid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -366,8 +352,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -375,8 +360,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -384,14 +368,11 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubauthorizationruleid_go">
 <a href="#eventhubauthorizationruleid_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -399,8 +380,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubname_go">
 <a href="#eventhubname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
@@ -408,8 +388,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -417,8 +396,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_go">
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -426,8 +404,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionlogsettings">[]Subscription<wbr>Log<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -435,8 +412,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusruleid_go">
 <a href="#servicebusruleid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -444,8 +420,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -453,8 +428,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -462,14 +436,11 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventhubauthorizationruleid_nodejs">
 <a href="#eventhubauthorizationruleid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -477,8 +448,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubname_nodejs">
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
@@ -486,8 +456,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -495,8 +464,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_nodejs">
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -504,8 +472,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionlogsettings">Subscription<wbr>Log<wbr>Settings[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -513,8 +480,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicebusruleid_nodejs">
 <a href="#servicebusruleid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -522,8 +488,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -531,8 +496,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -540,14 +504,11 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_hub_authorization_rule_id_python">
 <a href="#event_hub_authorization_rule_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>authorization_<wbr>rule_<wbr>id</a>
@@ -555,8 +516,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_name_python">
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
@@ -564,8 +524,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -573,8 +532,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_python">
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -582,8 +540,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionlogsettings">Sequence[Subscription<wbr>Log<wbr>Settings<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -591,8 +548,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_bus_rule_id_python">
 <a href="#service_bus_rule_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>rule_<wbr>id</a>
@@ -600,8 +556,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -609,8 +564,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -618,8 +572,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -630,9 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -640,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -649,14 +599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -664,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -673,14 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -688,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -697,14 +639,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -712,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -721,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,9 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="subscriptionlogsettings">Subscription<wbr>Log<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -748,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -757,14 +691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -772,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -781,14 +711,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -796,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -805,14 +731,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -820,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -829,16 +751,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subscriptionlogsettingsresponse">Subscription<wbr>Log<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -846,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -855,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -870,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -879,14 +793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -894,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -903,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -918,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -927,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

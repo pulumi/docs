@@ -37,9 +37,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +164,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_csharp">
 <a href="#clustersecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -203,8 +172,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygrouptags_csharp">
 <a href="#clustersecuritygrouptags_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -212,8 +180,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertags_csharp">
 <a href="#clustertags_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Tags</a>
@@ -221,8 +188,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createoidcprovider_csharp">
 <a href="#createoidcprovider_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Oidc<wbr>Provider</a>
@@ -238,8 +204,7 @@ See for more details:
  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
- - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd>
-    <dt class="property-optional"
+ - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationroleprovider_csharp">
 <a href="#creationroleprovider_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Role<wbr>Provider</a>
@@ -247,8 +212,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationroleprovider">Creation<wbr>Role<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -256,8 +220,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_csharp">
 <a href="#enabledclusterlogtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -265,8 +228,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_csharp">
 <a href="#encryptrootblockdevice_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -274,8 +236,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfigkeyarn_csharp">
 <a href="#encryptionconfigkeyarn_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Key<wbr>Arn</a>
@@ -287,8 +248,7 @@ See for more details:
 
 Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
 See for more details:
-- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_csharp">
 <a href="#endpointprivateaccess_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Private<wbr>Access</a>
@@ -296,8 +256,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_csharp">
 <a href="#endpointpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Public<wbr>Access</a>
@@ -305,8 +264,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargate_csharp">
 <a href="#fargate_csharp" style="color: inherit; text-decoration: inherit;">Fargate</a>
@@ -314,8 +272,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#fargateprofile">Fargate<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_csharp">
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -331,8 +288,7 @@ Note: `gpu` and `nodeAmiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofilename_csharp">
 <a href="#instanceprofilename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Name</a>
@@ -340,8 +296,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_csharp">
 <a href="#instancerole_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
@@ -351,8 +306,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceroles_csharp">
 <a href="#instanceroles_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Roles</a>
@@ -362,8 +316,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
     </dt>
     <dd>{{% md %}}This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -371,8 +324,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesserviceipaddressrange_csharp">
 <a href="#kubernetesserviceipaddressrange_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Service<wbr>Ip<wbr>Address<wbr>Range</a>
@@ -389,8 +341,7 @@ a custom CIDR block when you create a cluster, changing this value will force a 
 The block must meet the following requirements:
 - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
 - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-- Between /24 and /12.{{% /md %}}</dd>
-    <dt class="property-optional"
+- Between /24 and /12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -398,8 +349,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -407,8 +357,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -420,8 +369,7 @@ The block must meet the following requirements:
 
 If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
 
-See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeamiid_csharp">
 <a href="#nodeamiid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Ami<wbr>Id</a>
@@ -436,8 +384,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `nodeAmiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_csharp">
 <a href="#nodeassociatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -445,8 +392,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodegroupoptions_csharp">
 <a href="#nodegroupoptions_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Options</a>
@@ -454,8 +400,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_csharp">
 <a href="#nodepublickey_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Key</a>
@@ -465,8 +410,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_csharp">
 <a href="#noderootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -474,8 +418,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_csharp">
 <a href="#nodesecuritygrouptags_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -485,8 +428,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The tags to apply to the default `nodeSecurityGroup` created by the cluster.
 
-Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_csharp">
 <a href="#nodesubnetids_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Subnet<wbr>Ids</a>
@@ -494,8 +436,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_csharp">
 <a href="#nodeuserdata_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data</a>
@@ -503,8 +444,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_csharp">
 <a href="#privatesubnetids_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Subnet<wbr>Ids</a>
@@ -526,8 +466,7 @@ Worker network architecture options:
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
 
-Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd>
-    <dt class="property-optional"
+Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providercredentialopts_csharp">
 <a href="#providercredentialopts_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Credential<wbr>Opts</a>
@@ -547,8 +486,7 @@ See for more details:
 - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
-- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_csharp">
 <a href="#proxy_csharp" style="color: inherit; text-decoration: inherit;">Proxy</a>
@@ -570,8 +508,7 @@ Auth Format: <protocol>://<username>:<password>@<host>:<port>
 Ex:
   - "http://proxy.example.com:3128"
   - "https://proxy.example.com"
-  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd>
-    <dt class="property-optional"
+  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_csharp">
 <a href="#publicaccesscidrs_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Cidrs</a>
@@ -579,8 +516,7 @@ Ex:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_csharp">
 <a href="#publicsubnetids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Subnet<wbr>Ids</a>
@@ -600,8 +536,7 @@ Worker network architecture options:
  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolemappings_csharp">
 <a href="#rolemappings_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
@@ -609,8 +544,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolemapping">List&lt;Role<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerole_csharp">
 <a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
@@ -618,8 +552,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Role</span>
     </dt>
-    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdefaultnodegroup_csharp">
 <a href="#skipdefaultnodegroup_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Default<wbr>Node<wbr>Group</a>
@@ -627,8 +560,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_csharp">
 <a href="#storageclasses_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Classes</a>
@@ -638,8 +570,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
     </dt>
     <dd>{{% md %}}An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
 
-Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -655,8 +586,7 @@ If the list of subnets includes both public and private subnets, the worker node
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
 
-Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -664,8 +594,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultvpccni_csharp">
 <a href="#usedefaultvpccni_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Default<wbr>Vpc<wbr>Cni</a>
@@ -673,8 +602,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermappings_csharp">
 <a href="#usermappings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Mappings</a>
@@ -682,8 +610,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usermapping">List&lt;User<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -691,8 +618,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccnioptions_csharp">
 <a href="#vpccnioptions_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cni<wbr>Options</a>
@@ -700,8 +626,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpccnioptions">Vpc<wbr>Cni<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -709,14 +634,11 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_go">
 <a href="#clustersecuritygroup_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -724,8 +646,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygrouptags_go">
 <a href="#clustersecuritygrouptags_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -733,8 +654,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertags_go">
 <a href="#clustertags_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Tags</a>
@@ -742,8 +662,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createoidcprovider_go">
 <a href="#createoidcprovider_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Oidc<wbr>Provider</a>
@@ -759,8 +678,7 @@ See for more details:
  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
- - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd>
-    <dt class="property-optional"
+ - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationroleprovider_go">
 <a href="#creationroleprovider_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Role<wbr>Provider</a>
@@ -768,8 +686,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationroleprovider">Creation<wbr>Role<wbr>Provider</a></span>
     </dt>
-    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -777,8 +694,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_go">
 <a href="#enabledclusterlogtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -786,8 +702,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_go">
 <a href="#encryptrootblockdevice_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -795,8 +710,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfigkeyarn_go">
 <a href="#encryptionconfigkeyarn_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config<wbr>Key<wbr>Arn</a>
@@ -808,8 +722,7 @@ See for more details:
 
 Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
 See for more details:
-- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_go">
 <a href="#endpointprivateaccess_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Private<wbr>Access</a>
@@ -817,8 +730,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_go">
 <a href="#endpointpublicaccess_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Public<wbr>Access</a>
@@ -826,8 +738,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargate_go">
 <a href="#fargate_go" style="color: inherit; text-decoration: inherit;">Fargate</a>
@@ -835,8 +746,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#fargateprofile">Fargate<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_go">
 <a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -852,8 +762,7 @@ Note: `gpu` and `nodeAmiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofilename_go">
 <a href="#instanceprofilename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Name</a>
@@ -861,8 +770,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_go">
 <a href="#instancerole_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
@@ -872,8 +780,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceroles_go">
 <a href="#instanceroles_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Roles</a>
@@ -883,8 +790,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
     </dt>
     <dd>{{% md %}}This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -892,8 +798,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesserviceipaddressrange_go">
 <a href="#kubernetesserviceipaddressrange_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Service<wbr>Ip<wbr>Address<wbr>Range</a>
@@ -910,8 +815,7 @@ a custom CIDR block when you create a cluster, changing this value will force a 
 The block must meet the following requirements:
 - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
 - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-- Between /24 and /12.{{% /md %}}</dd>
-    <dt class="property-optional"
+- Between /24 and /12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -919,8 +823,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -928,8 +831,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -941,8 +843,7 @@ The block must meet the following requirements:
 
 If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
 
-See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeamiid_go">
 <a href="#nodeamiid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Ami<wbr>Id</a>
@@ -957,8 +858,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `nodeAmiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_go">
 <a href="#nodeassociatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -966,8 +866,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodegroupoptions_go">
 <a href="#nodegroupoptions_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Options</a>
@@ -975,8 +874,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_go">
 <a href="#nodepublickey_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Key</a>
@@ -986,8 +884,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_go">
 <a href="#noderootvolumesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -995,8 +892,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_go">
 <a href="#nodesecuritygrouptags_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -1006,8 +902,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The tags to apply to the default `nodeSecurityGroup` created by the cluster.
 
-Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_go">
 <a href="#nodesubnetids_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Subnet<wbr>Ids</a>
@@ -1015,8 +910,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_go">
 <a href="#nodeuserdata_go" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data</a>
@@ -1024,8 +918,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_go">
 <a href="#privatesubnetids_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Subnet<wbr>Ids</a>
@@ -1047,8 +940,7 @@ Worker network architecture options:
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
 
-Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd>
-    <dt class="property-optional"
+Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providercredentialopts_go">
 <a href="#providercredentialopts_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Credential<wbr>Opts</a>
@@ -1068,8 +960,7 @@ See for more details:
 - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
-- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_go">
 <a href="#proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
@@ -1091,8 +982,7 @@ Auth Format: <protocol>://<username>:<password>@<host>:<port>
 Ex:
   - "http://proxy.example.com:3128"
   - "https://proxy.example.com"
-  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd>
-    <dt class="property-optional"
+  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_go">
 <a href="#publicaccesscidrs_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Cidrs</a>
@@ -1100,8 +990,7 @@ Ex:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_go">
 <a href="#publicsubnetids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Subnet<wbr>Ids</a>
@@ -1121,8 +1010,7 @@ Worker network architecture options:
  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolemappings_go">
 <a href="#rolemappings_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Mappings</a>
@@ -1130,8 +1018,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolemapping">[]Role<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerole_go">
 <a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
@@ -1139,8 +1026,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">Role</span>
     </dt>
-    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdefaultnodegroup_go">
 <a href="#skipdefaultnodegroup_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Default<wbr>Node<wbr>Group</a>
@@ -1148,8 +1034,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_go">
 <a href="#storageclasses_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Classes</a>
@@ -1159,8 +1044,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
     </dt>
     <dd>{{% md %}}An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
 
-Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1176,8 +1060,7 @@ If the list of subnets includes both public and private subnets, the worker node
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
 
-Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1185,8 +1068,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultvpccni_go">
 <a href="#usedefaultvpccni_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Default<wbr>Vpc<wbr>Cni</a>
@@ -1194,8 +1076,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermappings_go">
 <a href="#usermappings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Mappings</a>
@@ -1203,8 +1084,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usermapping">[]User<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1212,8 +1092,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccnioptions_go">
 <a href="#vpccnioptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cni<wbr>Options</a>
@@ -1221,8 +1100,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpccnioptions">Vpc<wbr>Cni<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1230,14 +1108,11 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_nodejs">
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
@@ -1245,8 +1120,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygrouptags_nodejs">
 <a href="#clustersecuritygrouptags_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -1254,8 +1128,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertags_nodejs">
 <a href="#clustertags_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Tags</a>
@@ -1263,8 +1136,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createoidcprovider_nodejs">
 <a href="#createoidcprovider_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Oidc<wbr>Provider</a>
@@ -1280,8 +1152,7 @@ See for more details:
  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
- - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd>
-    <dt class="property-optional"
+ - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationroleprovider_nodejs">
 <a href="#creationroleprovider_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Role<wbr>Provider</a>
@@ -1289,8 +1160,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationroleprovider">Creation<wbr>Role<wbr>Provider</a></span>
     </dt>
-    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -1298,8 +1168,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledclusterlogtypes_nodejs">
 <a href="#enabledclusterlogtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cluster<wbr>Log<wbr>Types</a>
@@ -1307,8 +1176,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_nodejs">
 <a href="#encryptrootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -1316,8 +1184,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfigkeyarn_nodejs">
 <a href="#encryptionconfigkeyarn_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config<wbr>Key<wbr>Arn</a>
@@ -1329,8 +1196,7 @@ See for more details:
 
 Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
 See for more details:
-- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointprivateaccess_nodejs">
 <a href="#endpointprivateaccess_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Private<wbr>Access</a>
@@ -1338,8 +1204,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointpublicaccess_nodejs">
 <a href="#endpointpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Public<wbr>Access</a>
@@ -1347,8 +1212,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargate_nodejs">
 <a href="#fargate_nodejs" style="color: inherit; text-decoration: inherit;">fargate</a>
@@ -1356,8 +1220,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean | <a href="#fargateprofile">Fargate<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_nodejs">
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -1373,8 +1236,7 @@ Note: `gpu` and `nodeAmiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofilename_nodejs">
 <a href="#instanceprofilename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile<wbr>Name</a>
@@ -1382,8 +1244,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_nodejs">
 <a href="#instancerole_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
@@ -1393,8 +1254,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceroles_nodejs">
 <a href="#instanceroles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Roles</a>
@@ -1404,8 +1264,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
     </dt>
     <dd>{{% md %}}This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1413,8 +1272,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesserviceipaddressrange_nodejs">
 <a href="#kubernetesserviceipaddressrange_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Service<wbr>Ip<wbr>Address<wbr>Range</a>
@@ -1431,8 +1289,7 @@ a custom CIDR block when you create a cluster, changing this value will force a 
 The block must meet the following requirements:
 - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
 - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-- Between /24 and /12.{{% /md %}}</dd>
-    <dt class="property-optional"
+- Between /24 and /12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -1440,8 +1297,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -1449,8 +1305,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1462,8 +1317,7 @@ The block must meet the following requirements:
 
 If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
 
-See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeamiid_nodejs">
 <a href="#nodeamiid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Ami<wbr>Id</a>
@@ -1478,8 +1332,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `nodeAmiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_nodejs">
 <a href="#nodeassociatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1487,8 +1340,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodegroupoptions_nodejs">
 <a href="#nodegroupoptions_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Options</a>
@@ -1496,8 +1348,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_nodejs">
 <a href="#nodepublickey_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>Key</a>
@@ -1507,8 +1358,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_nodejs">
 <a href="#noderootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -1516,8 +1366,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_nodejs">
 <a href="#nodesecuritygrouptags_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -1527,8 +1376,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The tags to apply to the default `nodeSecurityGroup` created by the cluster.
 
-Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_nodejs">
 <a href="#nodesubnetids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Subnet<wbr>Ids</a>
@@ -1536,8 +1384,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_nodejs">
 <a href="#nodeuserdata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>User<wbr>Data</a>
@@ -1545,8 +1392,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_nodejs">
 <a href="#privatesubnetids_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Subnet<wbr>Ids</a>
@@ -1568,8 +1414,7 @@ Worker network architecture options:
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
 
-Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd>
-    <dt class="property-optional"
+Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providercredentialopts_nodejs">
 <a href="#providercredentialopts_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Credential<wbr>Opts</a>
@@ -1589,8 +1434,7 @@ See for more details:
 - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
-- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_nodejs">
 <a href="#proxy_nodejs" style="color: inherit; text-decoration: inherit;">proxy</a>
@@ -1612,8 +1456,7 @@ Auth Format: <protocol>://<username>:<password>@<host>:<port>
 Ex:
   - "http://proxy.example.com:3128"
   - "https://proxy.example.com"
-  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd>
-    <dt class="property-optional"
+  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccesscidrs_nodejs">
 <a href="#publicaccesscidrs_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Cidrs</a>
@@ -1621,8 +1464,7 @@ Ex:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_nodejs">
 <a href="#publicsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Subnet<wbr>Ids</a>
@@ -1642,8 +1484,7 @@ Worker network architecture options:
  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolemappings_nodejs">
 <a href="#rolemappings_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Mappings</a>
@@ -1651,8 +1492,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolemapping">Role<wbr>Mapping[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerole_nodejs">
 <a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
@@ -1660,8 +1500,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">awsiam<wbr>Role</span>
     </dt>
-    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdefaultnodegroup_nodejs">
 <a href="#skipdefaultnodegroup_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Default<wbr>Node<wbr>Group</a>
@@ -1669,8 +1508,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_nodejs">
 <a href="#storageclasses_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Classes</a>
@@ -1680,8 +1518,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
     </dt>
     <dd>{{% md %}}An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
 
-Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -1697,8 +1534,7 @@ If the list of subnets includes both public and private subnets, the worker node
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
 
-Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1706,8 +1542,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultvpccni_nodejs">
 <a href="#usedefaultvpccni_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Default<wbr>Vpc<wbr>Cni</a>
@@ -1715,8 +1550,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermappings_nodejs">
 <a href="#usermappings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Mappings</a>
@@ -1724,8 +1558,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usermapping">User<wbr>Mapping[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1733,8 +1566,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccnioptions_nodejs">
 <a href="#vpccnioptions_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Cni<wbr>Options</a>
@@ -1742,8 +1574,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpccnioptions">Vpc<wbr>Cni<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1751,14 +1582,11 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_security_group_python">
 <a href="#cluster_security_group_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group</a>
@@ -1766,8 +1594,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_security_group_tags_python">
 <a href="#cluster_security_group_tags_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group_<wbr>tags</a>
@@ -1775,8 +1602,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the cluster security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_tags_python">
 <a href="#cluster_tags_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>tags</a>
@@ -1784,8 +1610,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags to apply to the EKS cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_oidc_provider_python">
 <a href="#create_oidc_provider_python" style="color: inherit; text-decoration: inherit;">create_<wbr>oidc_<wbr>provider</a>
@@ -1801,8 +1626,7 @@ See for more details:
  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
- - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd>
-    <dt class="property-optional"
+ - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_role_provider_python">
 <a href="#creation_role_provider_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>role_<wbr>provider</a>
@@ -1810,8 +1634,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationroleprovider">Creation<wbr>Role<wbr>Provider<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -1819,8 +1642,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_cluster_log_types_python">
 <a href="#enabled_cluster_log_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cluster_<wbr>log_<wbr>types</a>
@@ -1828,8 +1650,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_root_block_device_python">
 <a href="#encrypt_root_block_device_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>root_<wbr>block_<wbr>device</a>
@@ -1837,8 +1658,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_config_key_arn_python">
 <a href="#encryption_config_key_arn_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config_<wbr>key_<wbr>arn</a>
@@ -1850,8 +1670,7 @@ See for more details:
 
 Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
 See for more details:
-- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_private_access_python">
 <a href="#endpoint_private_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>private_<wbr>access</a>
@@ -1859,8 +1678,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_public_access_python">
 <a href="#endpoint_public_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>public_<wbr>access</a>
@@ -1868,8 +1686,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargate_python">
 <a href="#fargate_python" style="color: inherit; text-decoration: inherit;">fargate</a>
@@ -1877,8 +1694,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#fargateprofile">Fargate<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_python">
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -1894,8 +1710,7 @@ Note: `gpu` and `nodeAmiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_profile_name_python">
 <a href="#instance_profile_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile_<wbr>name</a>
@@ -1903,8 +1718,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_role_python">
 <a href="#instance_role_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role</a>
@@ -1914,8 +1728,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_roles_python">
 <a href="#instance_roles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>roles</a>
@@ -1925,8 +1738,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
     </dt>
     <dd>{{% md %}}This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
 
-Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1934,8 +1746,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_service_ip_address_range_python">
 <a href="#kubernetes_service_ip_address_range_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>service_<wbr>ip_<wbr>address_<wbr>range</a>
@@ -1952,8 +1763,7 @@ a custom CIDR block when you create a cluster, changing this value will force a 
 The block must meet the following requirements:
 - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
 - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-- Between /24 and /12.{{% /md %}}</dd>
-    <dt class="property-optional"
+- Between /24 and /12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -1961,8 +1771,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -1970,8 +1779,7 @@ The block must meet the following requirements:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1983,8 +1791,7 @@ The block must meet the following requirements:
 
 If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
 
-See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_ami_id_python">
 <a href="#node_ami_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ami_<wbr>id</a>
@@ -1999,8 +1806,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `nodeAmiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_associate_public_ip_address_python">
 <a href="#node_associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">node_<wbr>associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -2008,8 +1814,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_group_options_python">
 <a href="#node_group_options_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>options</a>
@@ -2017,8 +1822,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common configuration settings for NodeGroups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_public_key_python">
 <a href="#node_public_key_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>key</a>
@@ -2028,8 +1832,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_root_volume_size_python">
 <a href="#node_root_volume_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>root_<wbr>volume_<wbr>size</a>
@@ -2037,8 +1840,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_security_group_tags_python">
 <a href="#node_security_group_tags_python" style="color: inherit; text-decoration: inherit;">node_<wbr>security_<wbr>group_<wbr>tags</a>
@@ -2048,8 +1850,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The tags to apply to the default `nodeSecurityGroup` created by the cluster.
 
-Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_subnet_ids_python">
 <a href="#node_subnet_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>subnet_<wbr>ids</a>
@@ -2057,8 +1858,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnets to use for worker nodes. Defaults to the value of subnetIds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_user_data_python">
 <a href="#node_user_data_python" style="color: inherit; text-decoration: inherit;">node_<wbr>user_<wbr>data</a>
@@ -2066,8 +1866,7 @@ Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurity
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_subnet_ids_python">
 <a href="#private_subnet_ids_python" style="color: inherit; text-decoration: inherit;">private_<wbr>subnet_<wbr>ids</a>
@@ -2089,8 +1888,7 @@ Worker network architecture options:
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
 
-Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd>
-    <dt class="property-optional"
+Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_credential_opts_python">
 <a href="#provider_credential_opts_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>credential_<wbr>opts</a>
@@ -2110,8 +1908,7 @@ See for more details:
 - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
 - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
-- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_python">
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
@@ -2133,8 +1930,7 @@ Auth Format: <protocol>://<username>:<password>@<host>:<port>
 Ex:
   - "http://proxy.example.com:3128"
   - "https://proxy.example.com"
-  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd>
-    <dt class="property-optional"
+  - "http://username:password@proxy.example.com:3128"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_cidrs_python">
 <a href="#public_access_cidrs_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>cidrs</a>
@@ -2142,8 +1938,7 @@ Ex:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_subnet_ids_python">
 <a href="#public_subnet_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subnet_<wbr>ids</a>
@@ -2163,8 +1958,7 @@ Worker network architecture options:
  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_mappings_python">
 <a href="#role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
@@ -2172,8 +1966,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolemapping">Sequence[Role<wbr>Mapping<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM roles to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_role_python">
 <a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
@@ -2181,8 +1974,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">Role</span>
     </dt>
-    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_default_node_group_python">
 <a href="#skip_default_node_group_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>default_<wbr>node_<wbr>group</a>
@@ -2190,8 +1982,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_classes_python">
 <a href="#storage_classes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>classes</a>
@@ -2201,8 +1992,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
     </dt>
     <dd>{{% md %}}An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
 
-Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -2218,8 +2008,7 @@ If the list of subnets includes both public and private subnets, the worker node
 
 See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
 
-Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2227,8 +2016,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_default_vpc_cni_python">
 <a href="#use_default_vpc_cni_python" style="color: inherit; text-decoration: inherit;">use_<wbr>default_<wbr>vpc_<wbr>cni</a>
@@ -2236,8 +2024,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_mappings_python">
 <a href="#user_mappings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>mappings</a>
@@ -2245,8 +2032,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usermapping">Sequence[User<wbr>Mapping<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional mappings from AWS IAM users to Kubernetes users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2254,8 +2040,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_cni_options_python">
 <a href="#vpc_cni_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>cni_<wbr>options</a>
@@ -2263,8 +2048,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpccnioptions">Vpc<wbr>Cni<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -2272,8 +2056,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2284,9 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsprovider_csharp">
 <a href="#awsprovider_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Provider</a>
@@ -2294,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="core_csharp">
 <a href="#core_csharp" style="color: inherit; text-decoration: inherit;">Core</a>
@@ -2303,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#coredata">Core<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ekscluster_csharp">
 <a href="#ekscluster_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster</a>
@@ -2312,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eksclusteringressrule_csharp">
 <a href="#eksclusteringressrule_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster<wbr>Ingress<wbr>Rule</a>
@@ -2321,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2330,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -2339,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesecuritygroup_csharp">
 <a href="#nodesecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -2348,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -2357,8 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Kubernetes.<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultnodegroup_csharp">
 <a href="#defaultnodegroup_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Group</a>
@@ -2366,14 +2139,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupdata">Node<wbr>Group<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsprovider_go">
 <a href="#awsprovider_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Provider</a>
@@ -2381,8 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="core_go">
 <a href="#core_go" style="color: inherit; text-decoration: inherit;">Core</a>
@@ -2390,8 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#coredata">Core<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ekscluster_go">
 <a href="#ekscluster_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster</a>
@@ -2399,8 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eksclusteringressrule_go">
 <a href="#eksclusteringressrule_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster<wbr>Ingress<wbr>Rule</a>
@@ -2408,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2417,8 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -2426,8 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesecuritygroup_go">
 <a href="#nodesecuritygroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -2435,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -2444,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultnodegroup_go">
 <a href="#defaultnodegroup_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Group</a>
@@ -2453,14 +2215,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupdata">Node<wbr>Group<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsprovider_nodejs">
 <a href="#awsprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Provider</a>
@@ -2468,8 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">aws<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="core_nodejs">
 <a href="#core_nodejs" style="color: inherit; text-decoration: inherit;">core</a>
@@ -2477,8 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#coredata">Core<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ekscluster_nodejs">
 <a href="#ekscluster_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster</a>
@@ -2486,8 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eksclusteringressrule_nodejs">
 <a href="#eksclusteringressrule_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster<wbr>Ingress<wbr>Rule</a>
@@ -2495,8 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2504,8 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -2513,8 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodesecuritygroup_nodejs">
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
@@ -2522,8 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -2531,8 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">kubernetes<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultnodegroup_nodejs">
 <a href="#defaultnodegroup_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Group</a>
@@ -2540,14 +2291,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupdata">Node<wbr>Group<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aws_provider_python">
 <a href="#aws_provider_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>provider</a>
@@ -2555,8 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="core_python">
 <a href="#core_python" style="color: inherit; text-decoration: inherit;">core</a>
@@ -2564,8 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#coredata">Core<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster and its dependencies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eks_cluster_python">
 <a href="#eks_cluster_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>cluster</a>
@@ -2573,8 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eks_cluster_ingress_rule_python">
 <a href="#eks_cluster_ingress_rule_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>cluster_<wbr>ingress_<wbr>rule</a>
@@ -2582,8 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2591,8 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -2600,8 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A kubeconfig that can be used to connect to the EKS cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_security_group_python">
 <a href="#node_security_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>security_<wbr>group</a>
@@ -2609,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -2618,8 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_node_group_python">
 <a href="#default_node_group_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>group</a>
@@ -2627,8 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupdata">Node<wbr>Group<wbr>Data</a></span>
     </dt>
-    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2644,9 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amiid_csharp">
 <a href="#amiid_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
@@ -2661,8 +2398,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `amiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggrouptags_csharp">
 <a href="#autoscalinggrouptags_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Tags</a>
@@ -2674,8 +2410,7 @@ See for more details:
 
 Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrapextraargs_csharp">
 <a href="#bootstrapextraargs_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Extra<wbr>Args</a>
@@ -2683,8 +2418,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudformationtags_csharp">
 <a href="#cloudformationtags_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Formation<wbr>Tags</a>
@@ -2694,8 +2428,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringressrule_csharp">
 <a href="#clusteringressrule_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ingress<wbr>Rule</a>
@@ -2703,8 +2436,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -2712,8 +2444,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_csharp">
 <a href="#encryptrootblockdevice_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -2721,8 +2452,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extranodesecuritygroups_csharp">
 <a href="#extranodesecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -2732,8 +2462,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
-This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_csharp">
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -2749,8 +2478,7 @@ Note: `gpu` and `amiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofile_csharp">
 <a href="#instanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile</a>
@@ -2758,8 +2486,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Instance<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2767,8 +2494,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -2776,8 +2502,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletextraargs_csharp">
 <a href="#kubeletextraargs_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Extra<wbr>Args</a>
@@ -2785,8 +2510,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2794,8 +2518,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -2803,8 +2526,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -2812,8 +2534,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_csharp">
 <a href="#nodeassociatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -2821,8 +2542,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_csharp">
 <a href="#nodepublickey_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Key</a>
@@ -2832,8 +2552,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_csharp">
 <a href="#noderootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -2841,8 +2560,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygroup_csharp">
 <a href="#nodesecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -2857,8 +2575,7 @@ This security group requires specific inbound and outbound rules.
 See for more details:
 https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
 
-Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_csharp">
 <a href="#nodesubnetids_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Subnet<wbr>Ids</a>
@@ -2868,8 +2585,7 @@ Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTag
     </dt>
     <dd>{{% md %}}The set of subnets to override and use for the worker node group.
 
-Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd>
-    <dt class="property-optional"
+Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_csharp">
 <a href="#nodeuserdata_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data</a>
@@ -2877,8 +2593,7 @@ Setting this option overrides which subnets to use for the worker node group, re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdataoverride_csharp">
 <a href="#nodeuserdataoverride_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data<wbr>Override</a>
@@ -2888,8 +2603,7 @@ Setting this option overrides which subnets to use for the worker node group, re
     </dt>
     <dd>{{% md %}}User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -2897,8 +2611,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_csharp">
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
@@ -2906,8 +2619,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Taint<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2915,14 +2627,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amiid_go">
 <a href="#amiid_go" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
@@ -2937,8 +2646,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `amiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggrouptags_go">
 <a href="#autoscalinggrouptags_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Tags</a>
@@ -2950,8 +2658,7 @@ See for more details:
 
 Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrapextraargs_go">
 <a href="#bootstrapextraargs_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Extra<wbr>Args</a>
@@ -2959,8 +2666,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudformationtags_go">
 <a href="#cloudformationtags_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Formation<wbr>Tags</a>
@@ -2970,8 +2676,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringressrule_go">
 <a href="#clusteringressrule_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ingress<wbr>Rule</a>
@@ -2979,8 +2684,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -2988,8 +2692,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_go">
 <a href="#encryptrootblockdevice_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -2997,8 +2700,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extranodesecuritygroups_go">
 <a href="#extranodesecuritygroups_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -3008,8 +2710,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
-This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_go">
 <a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -3025,8 +2726,7 @@ Note: `gpu` and `amiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofile_go">
 <a href="#instanceprofile_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile</a>
@@ -3034,8 +2734,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Instance<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -3043,8 +2742,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -3052,8 +2750,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletextraargs_go">
 <a href="#kubeletextraargs_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Extra<wbr>Args</a>
@@ -3061,8 +2758,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3070,8 +2766,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -3079,8 +2774,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -3088,8 +2782,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_go">
 <a href="#nodeassociatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3097,8 +2790,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_go">
 <a href="#nodepublickey_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Key</a>
@@ -3108,8 +2800,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_go">
 <a href="#noderootvolumesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -3117,8 +2808,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygroup_go">
 <a href="#nodesecuritygroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -3133,8 +2823,7 @@ This security group requires specific inbound and outbound rules.
 See for more details:
 https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
 
-Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_go">
 <a href="#nodesubnetids_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Subnet<wbr>Ids</a>
@@ -3144,8 +2833,7 @@ Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTag
     </dt>
     <dd>{{% md %}}The set of subnets to override and use for the worker node group.
 
-Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd>
-    <dt class="property-optional"
+Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_go">
 <a href="#nodeuserdata_go" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data</a>
@@ -3153,8 +2841,7 @@ Setting this option overrides which subnets to use for the worker node group, re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdataoverride_go">
 <a href="#nodeuserdataoverride_go" style="color: inherit; text-decoration: inherit;">Node<wbr>User<wbr>Data<wbr>Override</a>
@@ -3164,8 +2851,7 @@ Setting this option overrides which subnets to use for the worker node group, re
     </dt>
     <dd>{{% md %}}User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -3173,8 +2859,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_go">
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
@@ -3182,8 +2867,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Taint</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3191,14 +2875,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amiid_nodejs">
 <a href="#amiid_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Id</a>
@@ -3213,8 +2894,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `amiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggrouptags_nodejs">
 <a href="#autoscalinggrouptags_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Tags</a>
@@ -3226,8 +2906,7 @@ See for more details:
 
 Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrapextraargs_nodejs">
 <a href="#bootstrapextraargs_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Extra<wbr>Args</a>
@@ -3235,8 +2914,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudformationtags_nodejs">
 <a href="#cloudformationtags_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Formation<wbr>Tags</a>
@@ -3246,8 +2924,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringressrule_nodejs">
 <a href="#clusteringressrule_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ingress<wbr>Rule</a>
@@ -3255,8 +2932,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -3264,8 +2940,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptrootblockdevice_nodejs">
 <a href="#encryptrootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Root<wbr>Block<wbr>Device</a>
@@ -3273,8 +2948,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extranodesecuritygroups_nodejs">
 <a href="#extranodesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -3284,8 +2958,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
-This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_nodejs">
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -3301,8 +2974,7 @@ Note: `gpu` and `amiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceprofile_nodejs">
 <a href="#instanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile</a>
@@ -3310,8 +2982,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">awsiam<wbr>Instance<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -3319,8 +2990,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -3328,8 +2998,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletextraargs_nodejs">
 <a href="#kubeletextraargs_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Extra<wbr>Args</a>
@@ -3337,8 +3006,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3346,8 +3014,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -3355,8 +3022,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -3364,8 +3030,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeassociatepublicipaddress_nodejs">
 <a href="#nodeassociatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3373,8 +3038,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublickey_nodejs">
 <a href="#nodepublickey_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>Key</a>
@@ -3384,8 +3048,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderootvolumesize_nodejs">
 <a href="#noderootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Root<wbr>Volume<wbr>Size</a>
@@ -3393,8 +3056,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygroup_nodejs">
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
@@ -3409,8 +3071,7 @@ This security group requires specific inbound and outbound rules.
 See for more details:
 https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
 
-Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesubnetids_nodejs">
 <a href="#nodesubnetids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Subnet<wbr>Ids</a>
@@ -3420,8 +3081,7 @@ Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTag
     </dt>
     <dd>{{% md %}}The set of subnets to override and use for the worker node group.
 
-Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd>
-    <dt class="property-optional"
+Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdata_nodejs">
 <a href="#nodeuserdata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>User<wbr>Data</a>
@@ -3429,8 +3089,7 @@ Setting this option overrides which subnets to use for the worker node group, re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeuserdataoverride_nodejs">
 <a href="#nodeuserdataoverride_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>User<wbr>Data<wbr>Override</a>
@@ -3440,8 +3099,7 @@ Setting this option overrides which subnets to use for the worker node group, re
     </dt>
     <dd>{{% md %}}User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -3449,8 +3107,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_nodejs">
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
@@ -3458,8 +3115,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Taint}</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3467,14 +3123,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ami_id_python">
 <a href="#ami_id_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>id</a>
@@ -3489,8 +3142,7 @@ Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems 
 Note: `amiId` and `gpu` are mutually exclusive.
 
 See for more details:
-- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scaling_group_tags_python">
 <a href="#auto_scaling_group_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>tags</a>
@@ -3502,8 +3154,7 @@ See for more details:
 
 Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_extra_args_python">
 <a href="#bootstrap_extra_args_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>extra_<wbr>args</a>
@@ -3511,8 +3162,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional args to pass directly to `/etc/eks/bootstrap.sh`. Fror details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_formation_tags_python">
 <a href="#cloud_formation_tags_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>formation_<wbr>tags</a>
@@ -3522,8 +3172,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}The tags to apply to the CloudFormation Stack of the Worker NodeGroup.
 
-Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_ingress_rule_python">
 <a href="#cluster_ingress_rule_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ingress_<wbr>rule</a>
@@ -3531,8 +3180,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -3540,8 +3188,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of worker nodes that should be running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_root_block_device_python">
 <a href="#encrypt_root_block_device_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>root_<wbr>block_<wbr>device</a>
@@ -3549,8 +3196,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypt the root block device of the nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_node_security_groups_python">
 <a href="#extra_node_security_groups_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>node_<wbr>security_<wbr>groups</a>
@@ -3560,8 +3206,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
-This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+This additional set of security groups captures any user application rules that will be needed for the nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_python">
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -3577,8 +3222,7 @@ Note: `gpu` and `amiId` are mutually exclusive.
 
 See for more details:
 - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
-- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd>
-    <dt class="property-optional"
+- https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_profile_python">
 <a href="#instance_profile_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile</a>
@@ -3586,8 +3230,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Instance<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -3595,8 +3238,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance type to use for the cluster's nodes. Defaults to "t2.medium".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -3604,8 +3246,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the key pair to use for SSH access to worker nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubelet_extra_args_python">
 <a href="#kubelet_extra_args_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>extra_<wbr>args</a>
@@ -3613,8 +3254,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the expicit `kubeletExtraArgs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3622,8 +3262,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node labels to be attached to each woker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -3631,8 +3270,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of worker nodes running in the cluster. Defaults to 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -3640,8 +3278,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of worker nodes running in the cluster. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_associate_public_ip_address_python">
 <a href="#node_associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">node_<wbr>associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -3649,8 +3286,7 @@ See for more details:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_public_key_python">
 <a href="#node_public_key_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>key</a>
@@ -3660,8 +3296,7 @@ See for more details:
     </dt>
     <dd>{{% md %}}Public key material for SSH access to worker nodes. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
-If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_root_volume_size_python">
 <a href="#node_root_volume_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>root_<wbr>volume_<wbr>size</a>
@@ -3669,8 +3304,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size in GiB of a cluster node's root volume. Defaults to 20.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_security_group_python">
 <a href="#node_security_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>security_<wbr>group</a>
@@ -3685,8 +3319,7 @@ This security group requires specific inbound and outbound rules.
 See for more details:
 https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html
 
-Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd>
-    <dt class="property-optional"
+Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_subnet_ids_python">
 <a href="#node_subnet_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>subnet_<wbr>ids</a>
@@ -3696,8 +3329,7 @@ Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTag
     </dt>
     <dd>{{% md %}}The set of subnets to override and use for the worker node group.
 
-Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd>
-    <dt class="property-optional"
+Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_user_data_python">
 <a href="#node_user_data_python" style="color: inherit; text-decoration: inherit;">node_<wbr>user_<wbr>data</a>
@@ -3705,8 +3337,7 @@ Setting this option overrides which subnets to use for the worker node group, re
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_user_data_override_python">
 <a href="#node_user_data_override_python" style="color: inherit; text-decoration: inherit;">node_<wbr>user_<wbr>data_<wbr>override</a>
@@ -3716,8 +3347,7 @@ Setting this option overrides which subnets to use for the worker node group, re
     </dt>
     <dd>{{% md %}}User specified code to run on node startup. This code is expected to handle the full AWS EKS bootstrapping code and signal node readiness to the managing CloudFormation stack. This code must be a complete and executable user data script in bash (Linux) or powershell (Windows).
 
-See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd>
-    <dt class="property-optional"
+See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -3725,8 +3355,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bidding price for spot instance. If set, only spot instances will be added as worker node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_python">
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
@@ -3734,8 +3363,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Taint<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3743,16 +3371,13 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="coredata">Core<wbr>Data</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -3760,8 +3385,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_csharp">
 <a href="#clustersecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -3769,8 +3393,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -3778,8 +3401,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceroles_csharp">
 <a href="#instanceroles_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Roles</a>
@@ -3787,8 +3409,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Role&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodegroupoptions_csharp">
 <a href="#nodegroupoptions_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Options</a>
@@ -3796,8 +3417,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -3805,8 +3425,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Kubernetes.<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -3814,8 +3433,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -3823,8 +3441,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsprovider_csharp">
 <a href="#awsprovider_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Provider</a>
@@ -3832,8 +3449,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksnodeaccess_csharp">
 <a href="#eksnodeaccess_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Node<wbr>Access</a>
@@ -3841,8 +3457,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Config<wbr>Map</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargateprofile_csharp">
 <a href="#fargateprofile_csharp" style="color: inherit; text-decoration: inherit;">Fargate<wbr>Profile</a>
@@ -3850,8 +3465,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Fargate<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -3859,8 +3473,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_csharp">
 <a href="#nodesecuritygrouptags_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -3868,8 +3481,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcprovider_csharp">
 <a href="#oidcprovider_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Provider</a>
@@ -3877,8 +3489,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_csharp">
 <a href="#privatesubnetids_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Subnet<wbr>Ids</a>
@@ -3886,8 +3497,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_csharp">
 <a href="#publicsubnetids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Subnet<wbr>Ids</a>
@@ -3895,8 +3505,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_csharp">
 <a href="#storageclasses_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Classes</a>
@@ -3904,8 +3513,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Kubernetes.<wbr>Storage.<wbr>V1.<wbr>Storage<wbr>Class&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3913,8 +3521,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccni_csharp">
 <a href="#vpccni_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cni</a>
@@ -3922,14 +3529,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Eks.<wbr>Vpc<wbr>Cni</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -3937,8 +3541,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_go">
 <a href="#clustersecuritygroup_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -3946,8 +3549,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -3955,8 +3557,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceroles_go">
 <a href="#instanceroles_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Roles</a>
@@ -3964,8 +3565,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Role</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodegroupoptions_go">
 <a href="#nodegroupoptions_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Options</a>
@@ -3973,8 +3573,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -3982,8 +3581,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -3991,8 +3589,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -4000,8 +3597,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsprovider_go">
 <a href="#awsprovider_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Provider</a>
@@ -4009,8 +3605,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksnodeaccess_go">
 <a href="#eksnodeaccess_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Node<wbr>Access</a>
@@ -4018,8 +3613,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargateprofile_go">
 <a href="#fargateprofile_go" style="color: inherit; text-decoration: inherit;">Fargate<wbr>Profile</a>
@@ -4027,8 +3621,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Fargate<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -4036,8 +3629,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_go">
 <a href="#nodesecuritygrouptags_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -4045,8 +3637,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcprovider_go">
 <a href="#oidcprovider_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Provider</a>
@@ -4054,8 +3645,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_go">
 <a href="#privatesubnetids_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Subnet<wbr>Ids</a>
@@ -4063,8 +3653,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_go">
 <a href="#publicsubnetids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Subnet<wbr>Ids</a>
@@ -4072,8 +3661,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_go">
 <a href="#storageclasses_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Classes</a>
@@ -4081,8 +3669,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Storage<wbr>Class</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4090,8 +3677,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccni_go">
 <a href="#vpccni_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Cni</a>
@@ -4099,14 +3685,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Vpc<wbr>Cni</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -4114,8 +3697,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_nodejs">
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
@@ -4123,8 +3705,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -4132,8 +3713,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceroles_nodejs">
 <a href="#instanceroles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Roles</a>
@@ -4141,8 +3721,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awsiam<wbr>Role[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodegroupoptions_nodejs">
 <a href="#nodegroupoptions_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Options</a>
@@ -4150,8 +3729,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -4159,8 +3737,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">kubernetes<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -4168,8 +3745,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -4177,8 +3753,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsprovider_nodejs">
 <a href="#awsprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Provider</a>
@@ -4186,8 +3761,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">aws<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eksnodeaccess_nodejs">
 <a href="#eksnodeaccess_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Node<wbr>Access</a>
@@ -4195,8 +3769,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">kubernetescorev1Config<wbr>Map</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargateprofile_nodejs">
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
@@ -4204,8 +3777,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awseks<wbr>Fargate<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -4213,8 +3785,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesecuritygrouptags_nodejs">
 <a href="#nodesecuritygrouptags_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group<wbr>Tags</a>
@@ -4222,8 +3793,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcprovider_nodejs">
 <a href="#oidcprovider_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Provider</a>
@@ -4231,8 +3801,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awsiam<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesubnetids_nodejs">
 <a href="#privatesubnetids_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Subnet<wbr>Ids</a>
@@ -4240,8 +3809,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicsubnetids_nodejs">
 <a href="#publicsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Subnet<wbr>Ids</a>
@@ -4249,8 +3817,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclasses_nodejs">
 <a href="#storageclasses_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Classes</a>
@@ -4258,8 +3825,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: kubernetesstoragev1Storage<wbr>Class}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4267,8 +3833,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpccni_nodejs">
 <a href="#vpccni_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Cni</a>
@@ -4276,14 +3841,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Vpc<wbr>Cni</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -4291,8 +3853,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_security_group_python">
 <a href="#cluster_security_group_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group</a>
@@ -4300,8 +3861,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -4309,8 +3869,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_roles_python">
 <a href="#instance_roles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>roles</a>
@@ -4318,8 +3877,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Role]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_group_options_python">
 <a href="#node_group_options_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>options</a>
@@ -4327,8 +3885,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodegroupoptions">Cluster<wbr>Node<wbr>Group<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -4336,8 +3893,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -4345,8 +3901,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -4354,8 +3909,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_provider_python">
 <a href="#aws_provider_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>provider</a>
@@ -4363,8 +3917,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eks_node_access_python">
 <a href="#eks_node_access_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>node_<wbr>access</a>
@@ -4372,8 +3925,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Config<wbr>Map</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fargate_profile_python">
 <a href="#fargate_profile_python" style="color: inherit; text-decoration: inherit;">fargate_<wbr>profile</a>
@@ -4381,8 +3933,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Fargate<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -4390,8 +3941,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_security_group_tags_python">
 <a href="#node_security_group_tags_python" style="color: inherit; text-decoration: inherit;">node_<wbr>security_<wbr>group_<wbr>tags</a>
@@ -4399,8 +3949,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_provider_python">
 <a href="#oidc_provider_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>provider</a>
@@ -4408,8 +3957,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_subnet_ids_python">
 <a href="#private_subnet_ids_python" style="color: inherit; text-decoration: inherit;">private_<wbr>subnet_<wbr>ids</a>
@@ -4417,8 +3965,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_subnet_ids_python">
 <a href="#public_subnet_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subnet_<wbr>ids</a>
@@ -4426,8 +3973,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_classes_python">
 <a href="#storage_classes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>classes</a>
@@ -4435,8 +3981,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Storage<wbr>Class]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4444,8 +3989,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_cni_python">
 <a href="#vpc_cni_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>cni</a>
@@ -4453,16 +3997,13 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Vpc<wbr>Cni</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="creationroleprovider">Creation<wbr>Role<wbr>Provider</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -4470,8 +4011,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -4479,14 +4019,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Role</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -4494,8 +4031,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -4503,14 +4039,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Role</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -4518,8 +4051,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">aws<wbr>Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -4527,14 +4059,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">awsiam<wbr>Role</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -4542,8 +4071,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Provider</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -4551,16 +4079,13 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Role</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fargateprofile">Fargate<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_csharp">
 <a href="#podexecutionrolearn_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Execution<wbr>Role<wbr>Arn</a>
@@ -4568,8 +4093,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_csharp">
 <a href="#selectors_csharp" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -4577,8 +4101,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fargateprofileselector">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Fargate<wbr>Profile<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -4586,14 +4109,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_go">
 <a href="#podexecutionrolearn_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Execution<wbr>Role<wbr>Arn</a>
@@ -4601,8 +4121,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_go">
 <a href="#selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -4610,8 +4129,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fargateprofileselector">Fargate<wbr>Profile<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -4619,14 +4137,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_nodejs">
 <a href="#podexecutionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Execution<wbr>Role<wbr>Arn</a>
@@ -4634,8 +4149,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_nodejs">
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -4643,8 +4157,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fargateprofileselector">awstypesinputeks<wbr>Fargate<wbr>Profile<wbr>Selector[]</a></span>
     </dt>
-    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -4652,14 +4165,11 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pod_execution_role_arn_python">
 <a href="#pod_execution_role_arn_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>execution_<wbr>role_<wbr>arn</a>
@@ -4667,8 +4177,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_python">
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -4676,8 +4185,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fargateprofileselector">Fargate<wbr>Profile<wbr>Selector<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -4685,16 +4193,13 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubeconfigoptions">Kubeconfig<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -4704,8 +4209,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
     </dt>
     <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
 
-The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -4715,14 +4219,11 @@ The profile is passed to kubeconfig as an authentication environment setting.{{%
     </dt>
     <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
 
-The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd>
-</dl>
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -4732,8 +4233,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
     </dt>
     <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
 
-The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -4743,14 +4243,11 @@ The profile is passed to kubeconfig as an authentication environment setting.{{%
     </dt>
     <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
 
-The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd>
-</dl>
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -4760,8 +4257,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
     </dt>
     <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
 
-The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -4771,14 +4267,11 @@ The profile is passed to kubeconfig as an authentication environment setting.{{%
     </dt>
     <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
 
-The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd>
-</dl>
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -4788,8 +4281,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
     </dt>
     <dd>{{% md %}}AWS credential profile name to always use instead of the default AWS credential provider chain.
 
-The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+The profile is passed to kubeconfig as an authentication environment setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -4799,16 +4291,13 @@ The profile is passed to kubeconfig as an authentication environment setting.{{%
     </dt>
     <dd>{{% md %}}Role ARN to assume instead of the default AWS credential provider chain.
 
-The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd>
-</dl>
+The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodegroupdata">Node<wbr>Group<wbr>Data</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_csharp">
 <a href="#autoscalinggroupname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Name</a>
@@ -4816,8 +4305,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cfnstack_csharp">
 <a href="#cfnstack_csharp" style="color: inherit; text-decoration: inherit;">Cfn<wbr>Stack</a>
@@ -4825,8 +4313,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Formation.<wbr>Stack</span>
     </dt>
-    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extranodesecuritygroups_csharp">
 <a href="#extranodesecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -4834,8 +4321,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group&gt;</span>
     </dt>
-    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesecuritygroup_csharp">
 <a href="#nodesecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -4843,14 +4329,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_go">
 <a href="#autoscalinggroupname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Group<wbr>Name</a>
@@ -4858,8 +4341,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cfnstack_go">
 <a href="#cfnstack_go" style="color: inherit; text-decoration: inherit;">Cfn<wbr>Stack</a>
@@ -4867,8 +4349,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Stack</span>
     </dt>
-    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extranodesecuritygroups_go">
 <a href="#extranodesecuritygroups_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -4876,8 +4357,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesecuritygroup_go">
 <a href="#nodesecuritygroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Security<wbr>Group</a>
@@ -4885,14 +4365,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_nodejs">
 <a href="#autoscalinggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Name</a>
@@ -4900,8 +4377,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cfnstack_nodejs">
 <a href="#cfnstack_nodejs" style="color: inherit; text-decoration: inherit;">cfn<wbr>Stack</a>
@@ -4909,8 +4385,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">awscloudformation<wbr>Stack</span>
     </dt>
-    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extranodesecuritygroups_nodejs">
 <a href="#extranodesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Node<wbr>Security<wbr>Groups</a>
@@ -4918,8 +4393,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group[]</span>
     </dt>
-    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesecuritygroup_nodejs">
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
@@ -4927,14 +4401,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_scaling_group_name_python">
 <a href="#auto_scaling_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>name</a>
@@ -4942,8 +4413,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AutoScalingGroup name for the node group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cfn_stack_python">
 <a href="#cfn_stack_python" style="color: inherit; text-decoration: inherit;">cfn_<wbr>stack</a>
@@ -4951,8 +4421,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Stack</span>
     </dt>
-    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extra_node_security_groups_python">
 <a href="#extra_node_security_groups_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>node_<wbr>security_<wbr>groups</a>
@@ -4960,8 +4429,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group]</span>
     </dt>
-    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_security_group_python">
 <a href="#node_security_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>security_<wbr>group</a>
@@ -4969,16 +4437,13 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rolemapping">Role<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -4986,8 +4451,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -4995,8 +4459,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5004,14 +4467,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -5019,8 +4479,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -5028,8 +4487,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5037,14 +4495,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -5052,8 +4507,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -5061,8 +4515,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5070,14 +4523,11 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -5085,8 +4535,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the role is mapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -5094,8 +4543,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM role to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5103,16 +4551,13 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM role. By default, the user name is the ARN of the IAM role.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageclass">Storage<wbr>Class</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5120,8 +4565,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvolumeexpansion_csharp">
 <a href="#allowvolumeexpansion_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Volume<wbr>Expansion</a>
@@ -5129,8 +4573,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -5142,8 +4585,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 
-Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd>
-    <dt class="property-optional"
+Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -5151,8 +4593,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iopspergb_csharp">
 <a href="#iopspergb_csharp" style="color: inherit; text-decoration: inherit;">Iops<wbr>Per<wbr>Gb</a>
@@ -5160,8 +4601,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -5169,8 +4609,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -5178,8 +4617,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Types.<wbr>Inputs.<wbr>Meta.<wbr>V1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_csharp">
 <a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -5187,8 +4625,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reclaimpolicy_csharp">
 <a href="#reclaimpolicy_csharp" style="color: inherit; text-decoration: inherit;">Reclaim<wbr>Policy</a>
@@ -5196,8 +4633,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumebindingmode_csharp">
 <a href="#volumebindingmode_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Binding<wbr>Mode</a>
@@ -5205,8 +4641,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -5214,14 +4649,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5229,8 +4661,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvolumeexpansion_go">
 <a href="#allowvolumeexpansion_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Volume<wbr>Expansion</a>
@@ -5238,8 +4669,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -5251,8 +4681,7 @@ Please note that at most one storage class can be marked as default. If two or m
 
 Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 
-Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd>
-    <dt class="property-optional"
+Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -5260,8 +4689,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iopspergb_go">
 <a href="#iopspergb_go" style="color: inherit; text-decoration: inherit;">Iops<wbr>Per<wbr>Gb</a>
@@ -5269,8 +4697,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -5278,8 +4705,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -5287,8 +4713,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_go">
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
@@ -5296,8 +4721,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reclaimpolicy_go">
 <a href="#reclaimpolicy_go" style="color: inherit; text-decoration: inherit;">Reclaim<wbr>Policy</a>
@@ -5305,8 +4729,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumebindingmode_go">
 <a href="#volumebindingmode_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Binding<wbr>Mode</a>
@@ -5314,8 +4737,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -5323,14 +4745,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5338,8 +4757,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvolumeexpansion_nodejs">
 <a href="#allowvolumeexpansion_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Volume<wbr>Expansion</a>
@@ -5347,8 +4765,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -5360,8 +4777,7 @@ Please note that at most one storage class can be marked as default. If two or m
 
 Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 
-Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd>
-    <dt class="property-optional"
+Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -5369,8 +4785,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iopspergb_nodejs">
 <a href="#iopspergb_nodejs" style="color: inherit; text-decoration: inherit;">iops<wbr>Per<wbr>Gb</a>
@@ -5378,8 +4793,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -5387,8 +4801,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -5396,8 +4809,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">kubernetestypesinputmetav1Object<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountoptions_nodejs">
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
@@ -5405,8 +4817,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reclaimpolicy_nodejs">
 <a href="#reclaimpolicy_nodejs" style="color: inherit; text-decoration: inherit;">reclaim<wbr>Policy</a>
@@ -5414,8 +4825,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumebindingmode_nodejs">
 <a href="#volumebindingmode_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Binding<wbr>Mode</a>
@@ -5423,8 +4833,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -5432,14 +4841,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5447,8 +4853,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EBS volume type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_volume_expansion_python">
 <a href="#allow_volume_expansion_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>volume_<wbr>expansion</a>
@@ -5456,8 +4861,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AllowVolumeExpansion shows whether the storage class allow volume expand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -5469,8 +4873,7 @@ Please note that at most one storage class can be marked as default. If two or m
 
 Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 
-Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd>
-    <dt class="property-optional"
+Please note that at most one storage class can be marked as default. If two or more of them are marked as default, a PersistentVolumeClaim without `storageClassName` explicitly specified cannot be created. See: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -5478,8 +4881,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether the EBS volume should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_per_gb_python">
 <a href="#iops_per_gb_python" style="color: inherit; text-decoration: inherit;">iops_<wbr>per_<wbr>gb</a>
@@ -5487,8 +4889,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -5496,8 +4897,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full Amazon Resource Name of the key to use when encrypting the volume. If none is supplied but encrypted is true, a key is generated by AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -5505,8 +4905,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_options_python">
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
@@ -5514,8 +4913,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reclaim_policy_python">
 <a href="#reclaim_policy_python" style="color: inherit; text-decoration: inherit;">reclaim_<wbr>policy</a>
@@ -5523,8 +4921,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_binding_mode_python">
 <a href="#volume_binding_mode_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>binding_<wbr>mode</a>
@@ -5532,8 +4929,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound. When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored by servers that enable the VolumeScheduling feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -5541,16 +4937,13 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AWS zone or zones for the EBS volume. If zones is not specified, volumes are generally round-robin-ed across all active zones where Kubernetes cluster has a node. zone and zones parameters must not be used at the same time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="taint">Taint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effect_csharp">
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -5558,8 +4951,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5567,14 +4959,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effect_go">
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -5582,8 +4971,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5591,14 +4979,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -5606,8 +4991,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5615,14 +4999,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effect_python">
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -5630,8 +5011,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The effect of the taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5639,16 +5019,13 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="usermapping">User<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -5656,8 +5033,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userarn_csharp">
 <a href="#userarn_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
@@ -5665,8 +5041,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5674,14 +5049,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -5689,8 +5061,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userarn_go">
 <a href="#userarn_go" style="color: inherit; text-decoration: inherit;">User<wbr>Arn</a>
@@ -5698,8 +5069,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5707,14 +5077,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -5722,8 +5089,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userarn_nodejs">
 <a href="#userarn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Arn</a>
@@ -5731,8 +5097,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5740,14 +5105,11 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -5755,8 +5117,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of groups within Kubernetes to which the user is mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_arn_python">
 <a href="#user_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>arn</a>
@@ -5764,8 +5125,7 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ARN of the IAM user to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5773,16 +5133,13 @@ Please note that at most one storage class can be marked as default. If two or m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name within Kubernetes to map to the IAM user. By default, the user name is the ARN of the IAM user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpccnioptions">Vpc<wbr>Cni<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_csharp">
 <a href="#customnetworkconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
@@ -5792,8 +5149,7 @@ Please note that at most one storage class can be marked as default. If two or m
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_csharp">
 <a href="#eniconfiglabeldef_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -5804,8 +5160,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_csharp">
 <a href="#enimtu_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Mtu</a>
@@ -5815,8 +5170,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_csharp">
 <a href="#externalsnat_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Snat</a>
@@ -5826,8 +5180,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5837,8 +5190,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_csharp">
 <a href="#logfile_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>File</a>
@@ -5848,8 +5200,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -5860,8 +5211,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_csharp">
 <a href="#nodeportsupport_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Port<wbr>Support</a>
@@ -5871,8 +5221,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_csharp">
 <a href="#vethprefix_csharp" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
@@ -5884,8 +5233,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_csharp">
 <a href="#warmenitarget_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Eni<wbr>Target</a>
@@ -5895,8 +5243,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_csharp">
 <a href="#warmiptarget_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Ip<wbr>Target</a>
@@ -5904,14 +5251,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_go">
 <a href="#customnetworkconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
@@ -5921,8 +5265,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_go">
 <a href="#eniconfiglabeldef_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -5933,8 +5276,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_go">
 <a href="#enimtu_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Mtu</a>
@@ -5944,8 +5286,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_go">
 <a href="#externalsnat_go" style="color: inherit; text-decoration: inherit;">External<wbr>Snat</a>
@@ -5955,8 +5296,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5966,8 +5306,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_go">
 <a href="#logfile_go" style="color: inherit; text-decoration: inherit;">Log<wbr>File</a>
@@ -5977,8 +5316,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -5989,8 +5327,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_go">
 <a href="#nodeportsupport_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Port<wbr>Support</a>
@@ -6000,8 +5337,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_go">
 <a href="#vethprefix_go" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
@@ -6013,8 +5349,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_go">
 <a href="#warmenitarget_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Eni<wbr>Target</a>
@@ -6024,8 +5359,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_go">
 <a href="#warmiptarget_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Ip<wbr>Target</a>
@@ -6033,14 +5367,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_nodejs">
 <a href="#customnetworkconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Network<wbr>Config</a>
@@ -6050,8 +5381,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_nodejs">
 <a href="#eniconfiglabeldef_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -6062,8 +5392,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_nodejs">
 <a href="#enimtu_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Mtu</a>
@@ -6073,8 +5402,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_nodejs">
 <a href="#externalsnat_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Snat</a>
@@ -6084,8 +5412,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -6095,8 +5422,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_nodejs">
 <a href="#logfile_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>File</a>
@@ -6106,8 +5432,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -6118,8 +5443,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_nodejs">
 <a href="#nodeportsupport_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Port<wbr>Support</a>
@@ -6129,8 +5453,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_nodejs">
 <a href="#vethprefix_nodejs" style="color: inherit; text-decoration: inherit;">veth<wbr>Prefix</a>
@@ -6142,8 +5465,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_nodejs">
 <a href="#warmenitarget_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Eni<wbr>Target</a>
@@ -6153,8 +5475,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_nodejs">
 <a href="#warmiptarget_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Ip<wbr>Target</a>
@@ -6162,14 +5483,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_network_config_python">
 <a href="#custom_network_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>network_<wbr>config</a>
@@ -6179,8 +5497,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_config_label_def_python">
 <a href="#eni_config_label_def_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>config_<wbr>label_<wbr>def</a>
@@ -6191,8 +5508,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_mtu_python">
 <a href="#eni_mtu_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>mtu</a>
@@ -6202,8 +5518,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_snat_python">
 <a href="#external_snat_python" style="color: inherit; text-decoration: inherit;">external_<wbr>snat</a>
@@ -6213,8 +5528,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -6224,8 +5538,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_file_python">
 <a href="#log_file_python" style="color: inherit; text-decoration: inherit;">log_<wbr>file</a>
@@ -6235,8 +5548,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -6247,8 +5559,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_port_support_python">
 <a href="#node_port_support_python" style="color: inherit; text-decoration: inherit;">node_<wbr>port_<wbr>support</a>
@@ -6258,8 +5569,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="veth_prefix_python">
 <a href="#veth_prefix_python" style="color: inherit; text-decoration: inherit;">veth_<wbr>prefix</a>
@@ -6271,8 +5581,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_eni_target_python">
 <a href="#warm_eni_target_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>eni_<wbr>target</a>
@@ -6282,8 +5591,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_ip_target_python">
 <a href="#warm_ip_target_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>ip_<wbr>target</a>
@@ -6291,8 +5599,7 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

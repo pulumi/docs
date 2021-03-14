@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_csharp">
 <a href="#currentserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentsku_csharp">
 <a href="#currentsku_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Sku</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseid_csharp">
 <a href="#databaseid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_csharp">
 <a href="#defaultsecondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestoredate_csharp">
 <a href="#earliestrestoredate_csharp" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Restore<wbr>Date</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_csharp">
 <a href="#failovergroupid_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Group<wbr>Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_csharp">
 <a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxlogsizebytes_csharp">
 <a href="#maxlogsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Log<wbr>Size<wbr>Bytes</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pauseddate_csharp">
 <a href="#pauseddate_csharp" style="color: inherit; text-decoration: inherit;">Paused<wbr>Date</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedserviceobjectivename_csharp">
 <a href="#requestedserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resumeddate_csharp">
 <a href="#resumeddate_csharp" style="color: inherit; text-decoration: inherit;">Resumed<wbr>Date</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopausedelay_csharp">
 <a href="#autopausedelay_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_csharp">
 <a href="#catalogcollation_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -407,8 +364,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd>
-    <dt class="property-"
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticpoolid_csharp">
 <a href="#elasticpoolid_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
@@ -416,8 +372,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="highavailabilityreplicacount_csharp">
 <a href="#highavailabilityreplicacount_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Replica<wbr>Count</a>
@@ -425,8 +380,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -434,8 +388,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_csharp">
 <a href="#longtermretentionbackupresourceid_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -443,8 +396,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_csharp">
 <a href="#maintenanceconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Configuration<wbr>Id</a>
@@ -452,8 +404,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsizebytes_csharp">
 <a href="#maxsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -461,8 +412,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincapacity_csharp">
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -470,8 +420,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readscale_csharp">
 <a href="#readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -479,8 +428,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_csharp">
 <a href="#recoverabledatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -488,8 +436,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoveryservicesrecoverypointid_csharp">
 <a href="#recoveryservicesrecoverypointid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
@@ -497,8 +444,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_csharp">
 <a href="#restorabledroppeddatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -506,8 +452,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_csharp">
 <a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -515,8 +460,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplename_csharp">
 <a href="#samplename_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
@@ -524,8 +468,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_csharp">
 <a href="#secondarytype_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Type</a>
@@ -533,8 +476,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -553,8 +495,7 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabasedeletiondate_csharp">
 <a href="#sourcedatabasedeletiondate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -562,8 +503,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_csharp">
 <a href="#sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -571,8 +511,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -580,8 +519,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -589,8 +527,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneredundant_csharp">
 <a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -598,14 +535,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -613,8 +547,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_go">
 <a href="#currentserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -622,8 +555,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentsku_go">
 <a href="#currentsku_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Sku</a>
@@ -631,8 +563,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseid_go">
 <a href="#databaseid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -640,8 +571,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_go">
 <a href="#defaultsecondarylocation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -649,8 +579,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestoredate_go">
 <a href="#earliestrestoredate_go" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Restore<wbr>Date</a>
@@ -658,8 +587,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_go">
 <a href="#failovergroupid_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Group<wbr>Id</a>
@@ -667,8 +595,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,8 +603,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -685,8 +611,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -694,8 +619,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_go">
 <a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -703,8 +627,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxlogsizebytes_go">
 <a href="#maxlogsizebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Log<wbr>Size<wbr>Bytes</a>
@@ -712,8 +635,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -721,8 +643,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pauseddate_go">
 <a href="#pauseddate_go" style="color: inherit; text-decoration: inherit;">Paused<wbr>Date</a>
@@ -730,8 +651,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedserviceobjectivename_go">
 <a href="#requestedserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -739,8 +659,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resumeddate_go">
 <a href="#resumeddate_go" style="color: inherit; text-decoration: inherit;">Resumed<wbr>Date</a>
@@ -748,8 +667,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -757,8 +675,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -766,8 +683,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopausedelay_go">
 <a href="#autopausedelay_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause<wbr>Delay</a>
@@ -775,8 +691,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_go">
 <a href="#catalogcollation_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
@@ -784,8 +699,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -793,8 +707,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -818,8 +731,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd>
-    <dt class="property-"
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticpoolid_go">
 <a href="#elasticpoolid_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Id</a>
@@ -827,8 +739,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="highavailabilityreplicacount_go">
 <a href="#highavailabilityreplicacount_go" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Replica<wbr>Count</a>
@@ -836,8 +747,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -845,8 +755,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_go">
 <a href="#longtermretentionbackupresourceid_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -854,8 +763,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_go">
 <a href="#maintenanceconfigurationid_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Configuration<wbr>Id</a>
@@ -863,8 +771,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsizebytes_go">
 <a href="#maxsizebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -872,8 +779,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincapacity_go">
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -881,8 +787,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readscale_go">
 <a href="#readscale_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -890,8 +795,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_go">
 <a href="#recoverabledatabaseid_go" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -899,8 +803,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoveryservicesrecoverypointid_go">
 <a href="#recoveryservicesrecoverypointid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
@@ -908,8 +811,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_go">
 <a href="#restorabledroppeddatabaseid_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -917,8 +819,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_go">
 <a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -926,8 +827,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplename_go">
 <a href="#samplename_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Name</a>
@@ -935,8 +835,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_go">
 <a href="#secondarytype_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Type</a>
@@ -944,8 +843,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -964,8 +862,7 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabasedeletiondate_go">
 <a href="#sourcedatabasedeletiondate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -973,8 +870,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_go">
 <a href="#sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -982,8 +878,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -991,8 +886,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1000,8 +894,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneredundant_go">
 <a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -1009,14 +902,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -1024,8 +914,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentserviceobjectivename_nodejs">
 <a href="#currentserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -1033,8 +922,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentsku_nodejs">
 <a href="#currentsku_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Sku</a>
@@ -1042,8 +930,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databaseid_nodejs">
 <a href="#databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
@@ -1051,8 +938,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_nodejs">
 <a href="#defaultsecondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Location</a>
@@ -1060,8 +946,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestoredate_nodejs">
 <a href="#earliestrestoredate_nodejs" style="color: inherit; text-decoration: inherit;">earliest<wbr>Restore<wbr>Date</a>
@@ -1069,8 +954,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_nodejs">
 <a href="#failovergroupid_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Group<wbr>Id</a>
@@ -1078,8 +962,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1087,8 +970,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1096,8 +978,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1105,8 +986,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_nodejs">
 <a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
@@ -1114,8 +994,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxlogsizebytes_nodejs">
 <a href="#maxlogsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Log<wbr>Size<wbr>Bytes</a>
@@ -1123,8 +1002,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1132,8 +1010,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pauseddate_nodejs">
 <a href="#pauseddate_nodejs" style="color: inherit; text-decoration: inherit;">paused<wbr>Date</a>
@@ -1141,8 +1018,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedserviceobjectivename_nodejs">
 <a href="#requestedserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -1150,8 +1026,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resumeddate_nodejs">
 <a href="#resumeddate_nodejs" style="color: inherit; text-decoration: inherit;">resumed<wbr>Date</a>
@@ -1159,8 +1034,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1168,8 +1042,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1177,8 +1050,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopausedelay_nodejs">
 <a href="#autopausedelay_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay</a>
@@ -1186,8 +1058,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_nodejs">
 <a href="#catalogcollation_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Collation</a>
@@ -1195,8 +1066,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -1204,8 +1074,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -1229,8 +1098,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd>
-    <dt class="property-"
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticpoolid_nodejs">
 <a href="#elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
@@ -1238,8 +1106,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="highavailabilityreplicacount_nodejs">
 <a href="#highavailabilityreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Replica<wbr>Count</a>
@@ -1247,8 +1114,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1256,8 +1122,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_nodejs">
 <a href="#longtermretentionbackupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -1265,8 +1130,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenanceconfigurationid_nodejs">
 <a href="#maintenanceconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Configuration<wbr>Id</a>
@@ -1274,8 +1138,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsizebytes_nodejs">
 <a href="#maxsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Bytes</a>
@@ -1283,8 +1146,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincapacity_nodejs">
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
@@ -1292,8 +1154,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readscale_nodejs">
 <a href="#readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
@@ -1301,8 +1162,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_nodejs">
 <a href="#recoverabledatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recoverable<wbr>Database<wbr>Id</a>
@@ -1310,8 +1170,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoveryservicesrecoverypointid_nodejs">
 <a href="#recoveryservicesrecoverypointid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
@@ -1319,8 +1178,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_nodejs">
 <a href="#restorabledroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -1328,8 +1186,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_nodejs">
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -1337,8 +1194,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplename_nodejs">
 <a href="#samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
@@ -1346,8 +1202,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytype_nodejs">
 <a href="#secondarytype_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Type</a>
@@ -1355,8 +1210,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1375,8 +1229,7 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabasedeletiondate_nodejs">
 <a href="#sourcedatabasedeletiondate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -1384,8 +1237,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_nodejs">
 <a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
@@ -1393,8 +1245,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -1402,8 +1253,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1411,8 +1261,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneredundant_nodejs">
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
@@ -1420,14 +1269,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -1435,8 +1281,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_service_objective_name_python">
 <a href="#current_service_objective_name_python" style="color: inherit; text-decoration: inherit;">current_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -1444,8 +1289,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_sku_python">
 <a href="#current_sku_python" style="color: inherit; text-decoration: inherit;">current_<wbr>sku</a>
@@ -1453,8 +1297,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_id_python">
 <a href="#database_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>id</a>
@@ -1462,8 +1305,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_secondary_location_python">
 <a href="#default_secondary_location_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>location</a>
@@ -1471,8 +1313,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default secondary region for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliest_restore_date_python">
 <a href="#earliest_restore_date_python" style="color: inherit; text-decoration: inherit;">earliest_<wbr>restore_<wbr>date</a>
@@ -1480,8 +1321,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This records the earliest start date and time that restore is available for this database (ISO8601 format).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failover_group_id_python">
 <a href="#failover_group_id_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>group_<wbr>id</a>
@@ -1489,8 +1329,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Failover Group resource identifier that this database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1498,8 +1337,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1507,8 +1345,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of database. This is metadata used for the Azure portal experience.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1516,8 +1353,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_by_python">
 <a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
@@ -1525,8 +1361,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource that manages the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_log_size_bytes_python">
 <a href="#max_log_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>log_<wbr>size_<wbr>bytes</a>
@@ -1534,8 +1369,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max log size for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1543,8 +1377,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paused_date_python">
 <a href="#paused_date_python" style="color: inherit; text-decoration: inherit;">paused_<wbr>date</a>
@@ -1552,8 +1385,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requested_service_objective_name_python">
 <a href="#requested_service_objective_name_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -1561,8 +1393,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The requested service level objective name of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resumed_date_python">
 <a href="#resumed_date_python" style="color: inherit; text-decoration: inherit;">resumed_<wbr>date</a>
@@ -1570,8 +1401,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1579,8 +1409,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1588,8 +1417,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_pause_delay_python">
 <a href="#auto_pause_delay_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay</a>
@@ -1597,8 +1425,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalog_collation_python">
 <a href="#catalog_collation_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>collation</a>
@@ -1606,8 +1433,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -1615,8 +1441,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -1640,8 +1465,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd>
-    <dt class="property-"
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elastic_pool_id_python">
 <a href="#elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
@@ -1649,8 +1473,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="high_availability_replica_count_python">
 <a href="#high_availability_replica_count_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>replica_<wbr>count</a>
@@ -1658,8 +1481,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1667,8 +1489,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="long_term_retention_backup_resource_id_python">
 <a href="#long_term_retention_backup_resource_id_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>backup_<wbr>resource_<wbr>id</a>
@@ -1676,8 +1497,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_configuration_id_python">
 <a href="#maintenance_configuration_id_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>configuration_<wbr>id</a>
@@ -1685,8 +1505,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_size_bytes_python">
 <a href="#max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
@@ -1694,8 +1513,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_capacity_python">
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
@@ -1703,8 +1521,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="read_scale_python">
 <a href="#read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
@@ -1712,8 +1529,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverable_database_id_python">
 <a href="#recoverable_database_id_python" style="color: inherit; text-decoration: inherit;">recoverable_<wbr>database_<wbr>id</a>
@@ -1721,8 +1537,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recovery_services_recovery_point_id_python">
 <a href="#recovery_services_recovery_point_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>services_<wbr>recovery_<wbr>point_<wbr>id</a>
@@ -1730,8 +1545,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorable_dropped_database_id_python">
 <a href="#restorable_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>id</a>
@@ -1739,8 +1553,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restore_point_in_time_python">
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
@@ -1748,8 +1561,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sample_name_python">
 <a href="#sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
@@ -1757,8 +1569,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_type_python">
 <a href="#secondary_type_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>type</a>
@@ -1766,8 +1577,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1786,8 +1596,7 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_database_deletion_date_python">
 <a href="#source_database_deletion_date_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>deletion_<wbr>date</a>
@@ -1795,8 +1604,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_database_id_python">
 <a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
@@ -1804,8 +1612,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -1813,8 +1620,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage account type used to store backups for this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1822,8 +1628,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_redundant_python">
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
@@ -1831,8 +1636,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1846,9 +1650,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1856,8 +1658,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1865,8 +1666,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1874,8 +1674,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1883,8 +1682,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1892,14 +1690,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1907,8 +1702,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1916,8 +1710,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1925,8 +1718,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1934,8 +1726,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1943,14 +1734,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1958,8 +1746,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1967,8 +1754,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1976,8 +1762,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1985,8 +1770,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1994,14 +1778,11 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2009,8 +1790,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -2018,8 +1798,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -2027,8 +1806,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2036,8 +1814,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2045,8 +1822,7 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

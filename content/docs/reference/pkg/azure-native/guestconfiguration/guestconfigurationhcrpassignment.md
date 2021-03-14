@@ -14,11 +14,17 @@ Guest configuration assignment is an association between a machine and guest con
 API Version: 2020-06-25.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update guest configuration assignment
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -65,9 +71,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -114,9 +123,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -148,9 +160,12 @@ guest_configuration_hcrpassignment = azure_native.guestconfiguration.GuestConfig
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -183,9 +198,16 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GuestConfigurationHCRPAssignment Resource {#create}
@@ -210,9 +232,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,9 +240,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -230,9 +248,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -240,10 +256,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -269,9 +282,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -279,9 +290,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -289,9 +298,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -299,9 +306,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -309,18 +314,13 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -328,9 +328,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -338,9 +336,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -348,10 +344,7 @@ const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.Gue
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -366,9 +359,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_csharp">
 <a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -376,8 +367,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -385,8 +375,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfigurationassignmentname_csharp">
 <a href="#guestconfigurationassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration<wbr>Assignment<wbr>Name</a>
@@ -394,8 +383,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -403,8 +391,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -412,8 +399,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -421,14 +407,11 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationassignmentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_go">
 <a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
@@ -436,8 +419,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -445,8 +427,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfigurationassignmentname_go">
 <a href="#guestconfigurationassignmentname_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration<wbr>Assignment<wbr>Name</a>
@@ -454,8 +435,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -463,8 +443,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +451,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -481,14 +459,11 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinename_nodejs">
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
@@ -496,8 +471,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -505,8 +479,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfigurationassignmentname_nodejs">
 <a href="#guestconfigurationassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration<wbr>Assignment<wbr>Name</a>
@@ -514,8 +487,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -523,8 +495,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -532,8 +503,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -541,14 +511,11 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_name_python">
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
@@ -556,8 +523,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARC machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -565,8 +531,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_configuration_assignment_name_python">
 <a href="#guest_configuration_assignment_name_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration_<wbr>assignment_<wbr>name</a>
@@ -574,8 +539,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -583,8 +547,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the VM is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -592,8 +555,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -601,8 +563,7 @@ The GuestConfigurationHCRPAssignment resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -613,9 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -623,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -632,14 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -647,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -656,14 +610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -671,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -680,14 +630,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -695,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -704,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -721,85 +666,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="actionafterreboot">Action<wbr>After<wbr>Reboot</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Continue<wbr>Configuration</dt>
-    <dd>ContinueConfiguration</dd>
-    <dt>Stop<wbr>Configuration</dt>
-    <dd>StopConfiguration</dd>
-</dl>
+<dl class="tabular"><dt>Continue<wbr>Configuration</dt>
+    <dd>ContinueConfiguration</dd><dt>Stop<wbr>Configuration</dt>
+    <dd>StopConfiguration</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Action<wbr>After<wbr>Reboot<wbr>Continue<wbr>Configuration</dt>
-    <dd>ContinueConfiguration</dd>
-    <dt>Action<wbr>After<wbr>Reboot<wbr>Stop<wbr>Configuration</dt>
-    <dd>StopConfiguration</dd>
-</dl>
+<dl class="tabular"><dt>Action<wbr>After<wbr>Reboot<wbr>Continue<wbr>Configuration</dt>
+    <dd>ContinueConfiguration</dd><dt>Action<wbr>After<wbr>Reboot<wbr>Stop<wbr>Configuration</dt>
+    <dd>StopConfiguration</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Continue<wbr>Configuration</dt>
-    <dd>ContinueConfiguration</dd>
-    <dt>Stop<wbr>Configuration</dt>
-    <dd>StopConfiguration</dd>
-</dl>
+<dl class="tabular"><dt>Continue<wbr>Configuration</dt>
+    <dd>ContinueConfiguration</dd><dt>Stop<wbr>Configuration</dt>
+    <dd>StopConfiguration</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CONTINUE_CONFIGURATION</dt>
-    <dd>ContinueConfiguration</dd>
-    <dt>STOP_CONFIGURATION</dt>
-    <dd>StopConfiguration</dd>
-</dl>
+<dl class="tabular"><dt>CONTINUE_CONFIGURATION</dt>
+    <dd>ContinueConfiguration</dd><dt>STOP_CONFIGURATION</dt>
+    <dd>StopConfiguration</dd></dl>
 {{% /choosable %}}
 
 <h4 id="allowmoduleoverwrite">Allow<wbr>Module<wbr>Overwrite</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>True</dt>
-    <dd>True</dd>
-    <dt>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>True</dt>
+    <dd>True</dd><dt>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Allow<wbr>Module<wbr>Overwrite<wbr>True</dt>
-    <dd>True</dd>
-    <dt>Allow<wbr>Module<wbr>Overwrite<wbr>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>Allow<wbr>Module<wbr>Overwrite<wbr>True</dt>
+    <dd>True</dd><dt>Allow<wbr>Module<wbr>Overwrite<wbr>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>True</dt>
-    <dd>True</dd>
-    <dt>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>True</dt>
+    <dd>True</dd><dt>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TRUE</dt>
-    <dd>True</dd>
-    <dt>FALSE</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>TRUE</dt>
+    <dd>True</dd><dt>FALSE</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assignmentinforesponse">Assignment<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -807,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -816,14 +734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -831,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -840,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -855,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -864,14 +774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -888,16 +794,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -905,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phrase_csharp">
 <a href="#phrase_csharp" style="color: inherit; text-decoration: inherit;">Phrase</a>
@@ -914,14 +816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -929,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phrase_go">
 <a href="#phrase_go" style="color: inherit; text-decoration: inherit;">Phrase</a>
@@ -938,14 +836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -953,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phrase_nodejs">
 <a href="#phrase_nodejs" style="color: inherit; text-decoration: inherit;">phrase</a>
@@ -962,14 +856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -977,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code for the compliance of the guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phrase_python">
 <a href="#phrase_python" style="color: inherit; text-decoration: inherit;">phrase</a>
@@ -986,16 +876,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reason for the compliance of the guest configuration assignment resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_csharp">
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -1003,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1012,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1021,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasons_csharp">
 <a href="#reasons_csharp" style="color: inherit; text-decoration: inherit;">Reasons</a>
@@ -1030,14 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_go">
 <a href="#compliancestatus_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -1045,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1054,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1063,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasons_go">
 <a href="#reasons_go" style="color: inherit; text-decoration: inherit;">Reasons</a>
@@ -1072,14 +950,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">[]Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_nodejs">
 <a href="#compliancestatus_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Status</a>
@@ -1087,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1096,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1105,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasons_nodejs">
 <a href="#reasons_nodejs" style="color: inherit; text-decoration: inherit;">reasons</a>
@@ -1114,14 +986,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliance_status_python">
 <a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
@@ -1129,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1138,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Properties of a guest configuration assignment resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1147,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration assignment resource setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasons_python">
 <a href="#reasons_python" style="color: inherit; text-decoration: inherit;">reasons</a>
@@ -1156,16 +1022,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assignmentreportresponse">Assignment<wbr>Report<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_csharp">
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -1173,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1182,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1191,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationtype_csharp">
 <a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
@@ -1200,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportid_csharp">
 <a href="#reportid_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -1209,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1218,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignment_csharp">
 <a href="#assignment_csharp" style="color: inherit; text-decoration: inherit;">Assignment</a>
@@ -1227,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1236,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_csharp">
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
@@ -1245,14 +1100,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vminforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMInfo<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_go">
 <a href="#compliancestatus_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -1260,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1269,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1278,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationtype_go">
 <a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
@@ -1287,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportid_go">
 <a href="#reportid_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -1296,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1305,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignment_go">
 <a href="#assignment_go" style="color: inherit; text-decoration: inherit;">Assignment</a>
@@ -1314,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1323,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourceresponse">[]Assignment<wbr>Report<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_go">
 <a href="#vm_go" style="color: inherit; text-decoration: inherit;">Vm</a>
@@ -1332,14 +1176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestatus_nodejs">
 <a href="#compliancestatus_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Status</a>
@@ -1347,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1356,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1365,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationtype_nodejs">
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
@@ -1374,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportid_nodejs">
 <a href="#reportid_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Id</a>
@@ -1383,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1392,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignment_nodejs">
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
@@ -1401,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1410,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_nodejs">
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
@@ -1419,14 +1252,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliance_status_python">
 <a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
@@ -1434,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1443,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1452,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM resource id of the report for the guest configuration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_type_python">
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
@@ -1461,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of report, Consistency or Initial{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="report_id_python">
 <a href="#report_id_python" style="color: inherit; text-decoration: inherit;">report_<wbr>id</a>
@@ -1470,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GUID that identifies the guest configuration assignment report under a subscription, resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1479,8 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date and time of the guest configuration assignment compliance status check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignment_python">
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
@@ -1488,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1497,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_python">
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
@@ -1506,16 +1328,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationinforesponse">Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1523,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1532,14 +1350,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1547,8 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1556,14 +1370,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1571,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1580,14 +1390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1595,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1604,62 +1410,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationmode">Configuration<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Apply<wbr>Only</dt>
-    <dd>ApplyOnly</dd>
-    <dt>Apply<wbr>And<wbr>Monitor</dt>
-    <dd>ApplyAndMonitor</dd>
-    <dt>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
-    <dd>ApplyAndAutoCorrect</dd>
-</dl>
+<dl class="tabular"><dt>Apply<wbr>Only</dt>
+    <dd>ApplyOnly</dd><dt>Apply<wbr>And<wbr>Monitor</dt>
+    <dd>ApplyAndMonitor</dd><dt>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
+    <dd>ApplyAndAutoCorrect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Configuration<wbr>Mode<wbr>Apply<wbr>Only</dt>
-    <dd>ApplyOnly</dd>
-    <dt>Configuration<wbr>Mode<wbr>Apply<wbr>And<wbr>Monitor</dt>
-    <dd>ApplyAndMonitor</dd>
-    <dt>Configuration<wbr>Mode<wbr>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
-    <dd>ApplyAndAutoCorrect</dd>
-</dl>
+<dl class="tabular"><dt>Configuration<wbr>Mode<wbr>Apply<wbr>Only</dt>
+    <dd>ApplyOnly</dd><dt>Configuration<wbr>Mode<wbr>Apply<wbr>And<wbr>Monitor</dt>
+    <dd>ApplyAndMonitor</dd><dt>Configuration<wbr>Mode<wbr>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
+    <dd>ApplyAndAutoCorrect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Apply<wbr>Only</dt>
-    <dd>ApplyOnly</dd>
-    <dt>Apply<wbr>And<wbr>Monitor</dt>
-    <dd>ApplyAndMonitor</dd>
-    <dt>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
-    <dd>ApplyAndAutoCorrect</dd>
-</dl>
+<dl class="tabular"><dt>Apply<wbr>Only</dt>
+    <dd>ApplyOnly</dd><dt>Apply<wbr>And<wbr>Monitor</dt>
+    <dd>ApplyAndMonitor</dd><dt>Apply<wbr>And<wbr>Auto<wbr>Correct</dt>
+    <dd>ApplyAndAutoCorrect</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>APPLY_ONLY</dt>
-    <dd>ApplyOnly</dd>
-    <dt>APPLY_AND_MONITOR</dt>
-    <dd>ApplyAndMonitor</dd>
-    <dt>APPLY_AND_AUTO_CORRECT</dt>
-    <dd>ApplyAndAutoCorrect</dd>
-</dl>
+<dl class="tabular"><dt>APPLY_ONLY</dt>
+    <dd>ApplyOnly</dd><dt>APPLY_AND_MONITOR</dt>
+    <dd>ApplyAndMonitor</dd><dt>APPLY_AND_AUTO_CORRECT</dt>
+    <dd>ApplyAndAutoCorrect</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationparameter">Configuration<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1667,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1676,14 +1462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1691,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1700,14 +1482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1715,8 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1724,14 +1502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1739,8 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1748,16 +1522,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1765,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1774,14 +1544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1789,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1798,14 +1564,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1813,8 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1822,14 +1584,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1837,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the configuration parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1846,16 +1604,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the configuration parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationsetting">Configuration<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_csharp">
 <a href="#actionafterreboot_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
@@ -1863,8 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionafterreboot">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Action<wbr>After<wbr>Reboot</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_csharp">
 <a href="#allowmoduleoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
@@ -1872,8 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#allowmoduleoverwrite">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Allow<wbr>Module<wbr>Overwrite</a></span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_csharp">
 <a href="#configurationmode_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
@@ -1881,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Configuration<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_csharp">
 <a href="#configurationmodefrequencymins_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -1890,8 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_csharp">
 <a href="#rebootifneeded_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
@@ -1899,8 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rebootifneeded">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Reboot<wbr>If<wbr>Needed</a></span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_csharp">
 <a href="#refreshfrequencymins_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Frequency<wbr>Mins</a>
@@ -1908,14 +1658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_go">
 <a href="#actionafterreboot_go" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
@@ -1923,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionafterreboot">Action<wbr>After<wbr>Reboot</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_go">
 <a href="#allowmoduleoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
@@ -1932,8 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#allowmoduleoverwrite">Allow<wbr>Module<wbr>Overwrite</a></span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_go">
 <a href="#configurationmode_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
@@ -1941,8 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationmode">Configuration<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_go">
 <a href="#configurationmodefrequencymins_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -1950,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_go">
 <a href="#rebootifneeded_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
@@ -1959,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rebootifneeded">Reboot<wbr>If<wbr>Needed</a></span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_go">
 <a href="#refreshfrequencymins_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Frequency<wbr>Mins</a>
@@ -1968,14 +1710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_nodejs">
 <a href="#actionafterreboot_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>After<wbr>Reboot</a>
@@ -1983,8 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionafterreboot">Action<wbr>After<wbr>Reboot</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_nodejs">
 <a href="#allowmoduleoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Module<wbr>Overwrite</a>
@@ -1992,8 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#allowmoduleoverwrite">Allow<wbr>Module<wbr>Overwrite</a></span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_nodejs">
 <a href="#configurationmode_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Mode</a>
@@ -2001,8 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationmode">Configuration<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_nodejs">
 <a href="#configurationmodefrequencymins_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -2010,8 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_nodejs">
 <a href="#rebootifneeded_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>If<wbr>Needed</a>
@@ -2019,8 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rebootifneeded">Reboot<wbr>If<wbr>Needed</a></span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_nodejs">
 <a href="#refreshfrequencymins_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Frequency<wbr>Mins</a>
@@ -2028,14 +1762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_after_reboot_python">
 <a href="#action_after_reboot_python" style="color: inherit; text-decoration: inherit;">action_<wbr>after_<wbr>reboot</a>
@@ -2043,8 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#actionafterreboot">Action<wbr>After<wbr>Reboot</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_module_overwrite_python">
 <a href="#allow_module_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>module_<wbr>overwrite</a>
@@ -2052,8 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#allowmoduleoverwrite">Allow<wbr>Module<wbr>Overwrite</a></span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_mode_python">
 <a href="#configuration_mode_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>mode</a>
@@ -2061,8 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#configurationmode">Configuration<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_mode_frequency_mins_python">
 <a href="#configuration_mode_frequency_mins_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>mode_<wbr>frequency_<wbr>mins</a>
@@ -2070,8 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_if_needed_python">
 <a href="#reboot_if_needed_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>if_<wbr>needed</a>
@@ -2079,8 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#rebootifneeded">Reboot<wbr>If<wbr>Needed</a></span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_frequency_mins_python">
 <a href="#refresh_frequency_mins_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>frequency_<wbr>mins</a>
@@ -2088,16 +1814,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_csharp">
 <a href="#actionafterreboot_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
@@ -2105,8 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_csharp">
 <a href="#allowmoduleoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
@@ -2114,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_csharp">
 <a href="#configurationmode_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
@@ -2123,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_csharp">
 <a href="#configurationmodefrequencymins_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -2132,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_csharp">
 <a href="#rebootifneeded_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
@@ -2141,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_csharp">
 <a href="#refreshfrequencymins_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Frequency<wbr>Mins</a>
@@ -2150,14 +1868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_go">
 <a href="#actionafterreboot_go" style="color: inherit; text-decoration: inherit;">Action<wbr>After<wbr>Reboot</a>
@@ -2165,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_go">
 <a href="#allowmoduleoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Module<wbr>Overwrite</a>
@@ -2174,8 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_go">
 <a href="#configurationmode_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode</a>
@@ -2183,8 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_go">
 <a href="#configurationmodefrequencymins_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -2192,8 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_go">
 <a href="#rebootifneeded_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>If<wbr>Needed</a>
@@ -2201,8 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_go">
 <a href="#refreshfrequencymins_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Frequency<wbr>Mins</a>
@@ -2210,14 +1920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionafterreboot_nodejs">
 <a href="#actionafterreboot_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>After<wbr>Reboot</a>
@@ -2225,8 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmoduleoverwrite_nodejs">
 <a href="#allowmoduleoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Module<wbr>Overwrite</a>
@@ -2234,8 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmode_nodejs">
 <a href="#configurationmode_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Mode</a>
@@ -2243,8 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationmodefrequencymins_nodejs">
 <a href="#configurationmodefrequencymins_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Mode<wbr>Frequency<wbr>Mins</a>
@@ -2252,8 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootifneeded_nodejs">
 <a href="#rebootifneeded_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>If<wbr>Needed</a>
@@ -2261,8 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshfrequencymins_nodejs">
 <a href="#refreshfrequencymins_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Frequency<wbr>Mins</a>
@@ -2270,14 +1972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_after_reboot_python">
 <a href="#action_after_reboot_python" style="color: inherit; text-decoration: inherit;">action_<wbr>after_<wbr>reboot</a>
@@ -2285,8 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_module_overwrite_python">
 <a href="#allow_module_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>module_<wbr>overwrite</a>
@@ -2294,8 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_mode_python">
 <a href="#configuration_mode_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>mode</a>
@@ -2303,8 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_mode_frequency_mins_python">
 <a href="#configuration_mode_frequency_mins_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>mode_<wbr>frequency_<wbr>mins</a>
@@ -2312,8 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_if_needed_python">
 <a href="#reboot_if_needed_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>if_<wbr>needed</a>
@@ -2321,8 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_frequency_mins_python">
 <a href="#refresh_frequency_mins_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>frequency_<wbr>mins</a>
@@ -2330,16 +2024,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -2347,8 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_csharp">
 <a href="#guestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
@@ -2356,14 +2046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -2371,8 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_go">
 <a href="#guestconfiguration_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
@@ -2380,14 +2066,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -2395,8 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_nodejs">
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
@@ -2404,14 +2086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -2419,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_configuration_python">
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
@@ -2428,16 +2106,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestconfigurationassignmentpropertiesresponse">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmenthash_csharp">
 <a href="#assignmenthash_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Hash</a>
@@ -2445,8 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compliancestatus_csharp">
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -2454,8 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcompliancestatuschecked_csharp">
 <a href="#lastcompliancestatuschecked_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>Status<wbr>Checked</a>
@@ -2463,8 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latestreportid_csharp">
 <a href="#latestreportid_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Report<wbr>Id</a>
@@ -2472,8 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2481,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2490,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -2499,8 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_csharp">
 <a href="#guestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
@@ -2508,8 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestassignmentreport_csharp">
 <a href="#latestassignmentreport_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Assignment<wbr>Report</a>
@@ -2517,14 +2184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmenthash_go">
 <a href="#assignmenthash_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Hash</a>
@@ -2532,8 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compliancestatus_go">
 <a href="#compliancestatus_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -2541,8 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcompliancestatuschecked_go">
 <a href="#lastcompliancestatuschecked_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>Status<wbr>Checked</a>
@@ -2550,8 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latestreportid_go">
 <a href="#latestreportid_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Report<wbr>Id</a>
@@ -2559,8 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2568,8 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2577,8 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -2586,8 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_go">
 <a href="#guestconfiguration_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
@@ -2595,8 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestassignmentreport_go">
 <a href="#latestassignmentreport_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Assignment<wbr>Report</a>
@@ -2604,14 +2260,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmenthash_nodejs">
 <a href="#assignmenthash_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Hash</a>
@@ -2619,8 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compliancestatus_nodejs">
 <a href="#compliancestatus_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Status</a>
@@ -2628,8 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcompliancestatuschecked_nodejs">
 <a href="#lastcompliancestatuschecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Compliance<wbr>Status<wbr>Checked</a>
@@ -2637,8 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latestreportid_nodejs">
 <a href="#latestreportid_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Report<wbr>Id</a>
@@ -2646,8 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -2655,8 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -2664,8 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -2673,8 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestconfiguration_nodejs">
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
@@ -2682,8 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestassignmentreport_nodejs">
 <a href="#latestassignmentreport_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Assignment<wbr>Report</a>
@@ -2691,14 +2336,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignment_hash_python">
 <a href="#assignment_hash_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>hash</a>
@@ -2706,8 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the configuration package and parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compliance_status_python">
 <a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
@@ -2715,8 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating compliance status of the machine for the assigned guest configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_compliance_status_checked_python">
 <a href="#last_compliance_status_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>compliance_<wbr>status_<wbr>checked</a>
@@ -2724,8 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date and time when last compliance status was checked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="latest_report_id_python">
 <a href="#latest_report_id_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>report_<wbr>id</a>
@@ -2733,8 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the latest report for the guest configuration assignment. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2742,8 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -2751,8 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VM resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -2760,8 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source which initiated the guest configuration assignment. Ex: Azure Policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_configuration_python">
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
@@ -2769,8 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_assignment_report_python">
 <a href="#latest_assignment_report_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>assignment_<wbr>report</a>
@@ -2778,16 +2412,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_csharp">
 <a href="#configurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
@@ -2795,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_csharp">
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -2804,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsetting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -2813,8 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2822,8 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2831,14 +2458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_go">
 <a href="#configurationparameter_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
@@ -2846,8 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameter">[]Configuration<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_go">
 <a href="#configurationsetting_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -2855,8 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -2864,8 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2873,8 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2882,14 +2502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_nodejs">
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
@@ -2897,8 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_nodejs">
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
@@ -2906,8 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -2915,8 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2924,8 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2933,14 +2546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_parameter_python">
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
@@ -2948,8 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameter">Sequence[Configuration<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_setting_python">
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
@@ -2957,8 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -2966,8 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2975,8 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2984,16 +2590,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenthash_csharp">
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
@@ -3001,8 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contenturi_csharp">
 <a href="#contenturi_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Uri</a>
@@ -3010,8 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_csharp">
 <a href="#configurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
@@ -3019,8 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_csharp">
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -3028,8 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -3037,8 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3046,8 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3055,14 +2652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenthash_go">
 <a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
@@ -3070,8 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contenturi_go">
 <a href="#contenturi_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Uri</a>
@@ -3079,8 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_go">
 <a href="#configurationparameter_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
@@ -3088,8 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameterresponse">[]Configuration<wbr>Parameter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_go">
 <a href="#configurationsetting_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
@@ -3097,8 +2688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -3106,8 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3115,8 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3124,14 +2712,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenthash_nodejs">
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
@@ -3139,8 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contenturi_nodejs">
 <a href="#contenturi_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Uri</a>
@@ -3148,8 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationparameter_nodejs">
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
@@ -3157,8 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationsetting_nodejs">
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
@@ -3166,8 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -3175,8 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3184,8 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3193,14 +2772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_hash_python">
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
@@ -3208,8 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined hash of the guest configuration package and configuration parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_uri_python">
 <a href="#content_uri_python" style="color: inherit; text-decoration: inherit;">content_<wbr>uri</a>
@@ -3217,8 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of the storage where guest configuration package is uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_parameter_python">
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
@@ -3226,8 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_setting_python">
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
@@ -3235,8 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -3244,8 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the guest configuration. For example:DSC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3253,8 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3262,84 +2832,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the guest configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>DSC</dt>
-    <dd>DSC</dd>
-</dl>
+<dl class="tabular"><dt>DSC</dt>
+    <dd>DSC</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>DSC</dt>
-    <dd>DSC</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>DSC</dt>
+    <dd>DSC</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>DSC</dt>
-    <dd>DSC</dd>
-</dl>
+<dl class="tabular"><dt>DSC</dt>
+    <dd>DSC</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DSC</dt>
-    <dd>DSC</dd>
-</dl>
+<dl class="tabular"><dt>DSC</dt>
+    <dd>DSC</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rebootifneeded">Reboot<wbr>If<wbr>Needed</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>True</dt>
-    <dd>True</dd>
-    <dt>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>True</dt>
+    <dd>True</dd><dt>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Reboot<wbr>If<wbr>Needed<wbr>True</dt>
-    <dd>True</dd>
-    <dt>Reboot<wbr>If<wbr>Needed<wbr>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>Reboot<wbr>If<wbr>Needed<wbr>True</dt>
+    <dd>True</dd><dt>Reboot<wbr>If<wbr>Needed<wbr>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>True</dt>
-    <dd>True</dd>
-    <dt>False</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>True</dt>
+    <dd>True</dd><dt>False</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TRUE</dt>
-    <dd>True</dd>
-    <dt>FALSE</dt>
-    <dd>False</dd>
-</dl>
+<dl class="tabular"><dt>TRUE</dt>
+    <dd>True</dd><dt>FALSE</dt>
+    <dd>False</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vminforesponse">VMInfo<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3347,8 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uuid_csharp">
 <a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
@@ -3356,14 +2902,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3371,8 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uuid_go">
 <a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
@@ -3380,14 +2922,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3395,8 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uuid_nodejs">
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
@@ -3404,14 +2942,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3419,8 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource Id of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uuid_python">
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
@@ -3428,8 +2962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ The top level Workspace resource container.
 API Version: 2020-10-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### WorkspacesCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -48,9 +54,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -83,9 +92,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -105,9 +117,12 @@ workspace = azure_native.operationalinsights.Workspace("workspace",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Workspace Resource {#create}
@@ -155,9 +177,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -321,8 +312,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -330,8 +320,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -339,8 +328,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Workspace features.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcecmkforquery_csharp">
 <a href="#forcecmkforquery_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Cmk<wbr>For<wbr>Query</a>
@@ -348,8 +336,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -357,8 +344,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -366,8 +352,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceentitystatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Workspace<wbr>Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforingestion_csharp">
 <a href="#publicnetworkaccessforingestion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Ingestion</a>
@@ -375,8 +360,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforquery_csharp">
 <a href="#publicnetworkaccessforquery_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Query</a>
@@ -384,8 +368,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -393,8 +376,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -402,8 +384,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacesku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Workspace<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -411,8 +392,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecapping_csharp">
 <a href="#workspacecapping_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Capping</a>
@@ -420,8 +400,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacecapping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Workspace<wbr>Capping<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -429,14 +408,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -444,8 +420,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -453,8 +428,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -462,8 +436,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Workspace features.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcecmkforquery_go">
 <a href="#forcecmkforquery_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Cmk<wbr>For<wbr>Query</a>
@@ -471,8 +444,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -480,8 +452,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -489,8 +460,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforingestion_go">
 <a href="#publicnetworkaccessforingestion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Ingestion</a>
@@ -498,8 +468,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforquery_go">
 <a href="#publicnetworkaccessforquery_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>For<wbr>Query</a>
@@ -507,8 +476,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -516,8 +484,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -525,8 +492,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -534,8 +500,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecapping_go">
 <a href="#workspacecapping_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Capping</a>
@@ -543,8 +508,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping</a></span>
     </dt>
-    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -552,14 +516,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -567,8 +528,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -576,8 +536,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -585,8 +544,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Workspace features.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcecmkforquery_nodejs">
 <a href="#forcecmkforquery_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Cmk<wbr>For<wbr>Query</a>
@@ -594,8 +552,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -603,8 +560,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -612,8 +568,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforingestion_nodejs">
 <a href="#publicnetworkaccessforingestion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>For<wbr>Ingestion</a>
@@ -621,8 +576,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessforquery_nodejs">
 <a href="#publicnetworkaccessforquery_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>For<wbr>Query</a>
@@ -630,8 +584,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -639,8 +592,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -648,8 +600,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -657,8 +608,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacecapping_nodejs">
 <a href="#workspacecapping_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Capping</a>
@@ -666,8 +616,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping</a></span>
     </dt>
-    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -675,14 +624,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -690,8 +636,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -699,8 +644,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -708,8 +652,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Workspace features.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_cmk_for_query_python">
 <a href="#force_cmk_for_query_python" style="color: inherit; text-decoration: inherit;">force_<wbr>cmk_<wbr>for_<wbr>query</a>
@@ -717,8 +660,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -726,8 +668,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -735,8 +676,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_for_ingestion_python">
 <a href="#public_network_access_for_ingestion_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>for_<wbr>ingestion</a>
@@ -744,8 +684,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_for_query_python">
 <a href="#public_network_access_for_query_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>for_<wbr>query</a>
@@ -753,8 +692,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -762,8 +700,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -771,8 +708,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -780,8 +716,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_capping_python">
 <a href="#workspace_capping_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>capping</a>
@@ -789,8 +724,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -798,8 +732,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -810,9 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -820,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerid_csharp">
 <a href="#customerid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -829,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -838,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifieddate_csharp">
 <a href="#modifieddate_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Date</a>
@@ -847,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -856,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_csharp">
 <a href="#privatelinkscopedresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -865,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -874,14 +799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -889,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerid_go">
 <a href="#customerid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -898,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -907,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifieddate_go">
 <a href="#modifieddate_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Date</a>
@@ -916,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -925,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_go">
 <a href="#privatelinkscopedresources_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -934,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">[]Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -943,14 +859,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -958,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerid_nodejs">
 <a href="#customerid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Id</a>
@@ -967,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -976,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifieddate_nodejs">
 <a href="#modifieddate_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Date</a>
@@ -985,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_nodejs">
 <a href="#privatelinkscopedresources_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -1003,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1012,14 +919,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1027,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace creation date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_id_python">
 <a href="#customer_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>id</a>
@@ -1036,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is a read-only property. Represents the ID associated with the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1045,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_date_python">
 <a href="#modified_date_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>date</a>
@@ -1054,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workspace modification date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1063,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_scoped_resources_python">
 <a href="#private_link_scoped_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>scoped_<wbr>resources</a>
@@ -1072,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">Sequence[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1081,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1098,9 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="privatelinkscopedresourceresponse">Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1108,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_csharp">
 <a href="#scopeid_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
@@ -1117,14 +1011,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1132,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_go">
 <a href="#scopeid_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
@@ -1141,14 +1031,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1156,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_nodejs">
 <a href="#scopeid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
@@ -1165,14 +1051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1180,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_id_python">
 <a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
@@ -1189,54 +1071,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Public<wbr>Network<wbr>Access<wbr>Type<wbr>Enabled</dt>
-    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-    <dt>Public<wbr>Network<wbr>Access<wbr>Type<wbr>Disabled</dt>
-    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Type<wbr>Enabled</dt>
+    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd><dt>Public<wbr>Network<wbr>Access<wbr>Type<wbr>Disabled</dt>
+    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled{{% md %}}Enables connectivity to Log Analytics through public DNS.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>Disabled{{% md %}}Disables public connectivity to Log Analytics through public DNS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspacecapping">Workspace<wbr>Capping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_csharp">
 <a href="#dailyquotagb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
@@ -1244,14 +1111,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_go">
 <a href="#dailyquotagb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
@@ -1259,14 +1123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_nodejs">
 <a href="#dailyquotagb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Quota<wbr>Gb</a>
@@ -1274,14 +1135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daily_quota_gb_python">
 <a href="#daily_quota_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>quota_<wbr>gb</a>
@@ -1289,16 +1147,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspacecappingresponse">Workspace<wbr>Capping<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataingestionstatus_csharp">
 <a href="#dataingestionstatus_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Ingestion<wbr>Status</a>
@@ -1306,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotanextresettime_csharp">
 <a href="#quotanextresettime_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Next<wbr>Reset<wbr>Time</a>
@@ -1315,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_csharp">
 <a href="#dailyquotagb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
@@ -1324,14 +1177,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataingestionstatus_go">
 <a href="#dataingestionstatus_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Ingestion<wbr>Status</a>
@@ -1339,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotanextresettime_go">
 <a href="#quotanextresettime_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Next<wbr>Reset<wbr>Time</a>
@@ -1348,8 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_go">
 <a href="#dailyquotagb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
@@ -1357,14 +1205,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataingestionstatus_nodejs">
 <a href="#dataingestionstatus_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Ingestion<wbr>Status</a>
@@ -1372,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotanextresettime_nodejs">
 <a href="#quotanextresettime_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Next<wbr>Reset<wbr>Time</a>
@@ -1381,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyquotagb_nodejs">
 <a href="#dailyquotagb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Quota<wbr>Gb</a>
@@ -1390,14 +1233,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_ingestion_status_python">
 <a href="#data_ingestion_status_python" style="color: inherit; text-decoration: inherit;">data_<wbr>ingestion_<wbr>status</a>
@@ -1405,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quota_next_reset_time_python">
 <a href="#quota_next_reset_time_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>next_<wbr>reset_<wbr>time</a>
@@ -1414,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_quota_gb_python">
 <a href="#daily_quota_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>quota_<wbr>gb</a>
@@ -1423,94 +1261,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Provisioning<wbr>Account</dt>
-    <dd>ProvisioningAccount</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Provisioning<wbr>Account</dt>
+    <dd>ProvisioningAccount</dd><dt>Updating</dt>
+    <dd>Updating</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Provisioning<wbr>Account</dt>
-    <dd>ProvisioningAccount</dd>
-    <dt>Workspace<wbr>Entity<wbr>Status<wbr>Updating</dt>
-    <dd>Updating</dd>
-</dl>
+<dl class="tabular"><dt>Workspace<wbr>Entity<wbr>Status<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Canceled</dt>
+    <dd>Canceled</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Provisioning<wbr>Account</dt>
+    <dd>ProvisioningAccount</dd><dt>Workspace<wbr>Entity<wbr>Status<wbr>Updating</dt>
+    <dd>Updating</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Provisioning<wbr>Account</dt>
-    <dd>ProvisioningAccount</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Provisioning<wbr>Account</dt>
+    <dd>ProvisioningAccount</dd><dt>Updating</dt>
+    <dd>Updating</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd>
-    <dt>FAILED</dt>
-    <dd>Failed</dd>
-    <dt>CANCELED</dt>
-    <dd>Canceled</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>PROVISIONING_ACCOUNT</dt>
-    <dd>ProvisioningAccount</dd>
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-</dl>
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>Creating</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>CANCELED</dt>
+    <dd>Canceled</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>PROVISIONING_ACCOUNT</dt>
+    <dd>ProvisioningAccount</dd><dt>UPDATING</dt>
+    <dd>Updating</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspacesku">Workspace<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1518,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceskunameenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_csharp">
 <a href="#capacityreservationlevel_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Level</a>
@@ -1527,14 +1329,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1542,8 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_go">
 <a href="#capacityreservationlevel_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Level</a>
@@ -1551,14 +1349,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1566,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_nodejs">
 <a href="#capacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Level</a>
@@ -1575,14 +1369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1590,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_reservation_level_python">
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
@@ -1599,102 +1389,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Per<wbr>Node</dt>
-    <dd>PerNode</dd>
-    <dt>Per<wbr>GB2018</dt>
-    <dd>PerGB2018</dd>
-    <dt>Standalone</dt>
-    <dd>Standalone</dd>
-    <dt>Capacity<wbr>Reservation</dt>
-    <dd>CapacityReservation</dd>
-    <dt>LACluster</dt>
-    <dd>LACluster</dd>
-</dl>
+<dl class="tabular"><dt>Free</dt>
+    <dd>Free</dd><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Per<wbr>Node</dt>
+    <dd>PerNode</dd><dt>Per<wbr>GB2018</dt>
+    <dd>PerGB2018</dd><dt>Standalone</dt>
+    <dd>Standalone</dd><dt>Capacity<wbr>Reservation</dt>
+    <dd>CapacityReservation</dd><dt>LACluster</dt>
+    <dd>LACluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Free</dt>
-    <dd>Free</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Per<wbr>Node</dt>
-    <dd>PerNode</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Per<wbr>GB2018</dt>
-    <dd>PerGB2018</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Standalone</dt>
-    <dd>Standalone</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Capacity<wbr>Reservation</dt>
-    <dd>CapacityReservation</dd>
-    <dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>LACluster</dt>
-    <dd>LACluster</dd>
-</dl>
+<dl class="tabular"><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Free</dt>
+    <dd>Free</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Premium</dt>
+    <dd>Premium</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Per<wbr>Node</dt>
+    <dd>PerNode</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Per<wbr>GB2018</dt>
+    <dd>PerGB2018</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Standalone</dt>
+    <dd>Standalone</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>Capacity<wbr>Reservation</dt>
+    <dd>CapacityReservation</dd><dt>Workspace<wbr>Sku<wbr>Name<wbr>Enum<wbr>LACluster</dt>
+    <dd>LACluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Per<wbr>Node</dt>
-    <dd>PerNode</dd>
-    <dt>Per<wbr>GB2018</dt>
-    <dd>PerGB2018</dd>
-    <dt>Standalone</dt>
-    <dd>Standalone</dd>
-    <dt>Capacity<wbr>Reservation</dt>
-    <dd>CapacityReservation</dd>
-    <dt>LACluster</dt>
-    <dd>LACluster</dd>
-</dl>
+<dl class="tabular"><dt>Free</dt>
+    <dd>Free</dd><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Per<wbr>Node</dt>
+    <dd>PerNode</dd><dt>Per<wbr>GB2018</dt>
+    <dd>PerGB2018</dd><dt>Standalone</dt>
+    <dd>Standalone</dd><dt>Capacity<wbr>Reservation</dt>
+    <dd>CapacityReservation</dd><dt>LACluster</dt>
+    <dd>LACluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FREE</dt>
-    <dd>Free</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
-    <dt>PER_NODE</dt>
-    <dd>PerNode</dd>
-    <dt>PER_GB2018</dt>
-    <dd>PerGB2018</dd>
-    <dt>STANDALONE</dt>
-    <dd>Standalone</dd>
-    <dt>CAPACITY_RESERVATION</dt>
-    <dd>CapacityReservation</dd>
-    <dt>LA_CLUSTER</dt>
-    <dd>LACluster</dd>
-</dl>
+<dl class="tabular"><dt>FREE</dt>
+    <dd>Free</dd><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd><dt>PER_NODE</dt>
+    <dd>PerNode</dd><dt>PER_GB2018</dt>
+    <dd>PerGB2018</dd><dt>STANDALONE</dt>
+    <dd>Standalone</dd><dt>CAPACITY_RESERVATION</dt>
+    <dd>CapacityReservation</dd><dt>LA_CLUSTER</dt>
+    <dd>LACluster</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceskuresponse">Workspace<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastskuupdate_csharp">
 <a href="#lastskuupdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sku<wbr>Update</a>
@@ -1702,8 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacityreservationlevel_csharp">
 <a href="#maxcapacityreservationlevel_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
@@ -1711,8 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1720,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_csharp">
 <a href="#capacityreservationlevel_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Level</a>
@@ -1729,14 +1477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastskuupdate_go">
 <a href="#lastskuupdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sku<wbr>Update</a>
@@ -1744,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacityreservationlevel_go">
 <a href="#maxcapacityreservationlevel_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
@@ -1753,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1762,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_go">
 <a href="#capacityreservationlevel_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Level</a>
@@ -1771,14 +1513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastskuupdate_nodejs">
 <a href="#lastskuupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sku<wbr>Update</a>
@@ -1786,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacityreservationlevel_nodejs">
 <a href="#maxcapacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
@@ -1795,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1804,8 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityreservationlevel_nodejs">
 <a href="#capacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Level</a>
@@ -1813,14 +1549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_sku_update_python">
 <a href="#last_sku_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sku_<wbr>update</a>
@@ -1828,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_capacity_reservation_level_python">
 <a href="#max_capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>reservation_<wbr>level</a>
@@ -1837,8 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1846,8 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_reservation_level_python">
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
@@ -1855,8 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

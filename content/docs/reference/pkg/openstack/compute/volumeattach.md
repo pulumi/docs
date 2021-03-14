@@ -14,11 +14,17 @@ Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic attachment of a single volume to a single instance
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -48,9 +54,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -102,9 +114,12 @@ va1 = openstack.compute.VolumeAttach("va1",
     volume_id=volume1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -122,22 +137,38 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Attaching multiple volumes to a single instance
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
+{{< example csharp >}}
 
-{{% example typescript %}}
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -163,10 +194,17 @@ for (let i = 0; i < 2; i++) {
 export const volumeDevices = attachments.map(v => v.device);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using Multiattach-enabled volumes
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -217,9 +255,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -277,9 +318,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -300,9 +344,12 @@ va2 = openstack.compute.VolumeAttach("va2",
     opts=pulumi.ResourceOptions(depends_on=["openstack_compute_volume_attach_v2.va_1"]))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -330,9 +377,16 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
 }, { dependsOn: [va1] });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VolumeAttach Resource {#create}
@@ -357,9 +411,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -367,9 +419,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -377,9 +427,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -387,10 +435,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -416,9 +461,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -426,9 +469,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -436,9 +477,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -446,9 +485,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -456,18 +493,13 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -475,9 +507,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -485,9 +515,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -495,10 +523,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -513,9 +538,7 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -524,8 +547,7 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -534,8 +556,7 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_csharp">
 <a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -546,8 +567,7 @@ The VolumeAttach resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiattach_csharp">
 <a href="#multiattach_csharp" style="color: inherit; text-decoration: inherit;">Multiattach</a>
@@ -556,8 +576,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -569,8 +588,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_csharp">
 <a href="#vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -580,14 +598,11 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -596,8 +611,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -606,8 +620,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_go">
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -618,8 +631,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiattach_go">
 <a href="#multiattach_go" style="color: inherit; text-decoration: inherit;">Multiattach</a>
@@ -628,8 +640,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -641,8 +652,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_go">
 <a href="#vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -652,14 +662,11 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -668,8 +675,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -678,8 +684,7 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_nodejs">
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -690,8 +695,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiattach_nodejs">
 <a href="#multiattach_nodejs" style="color: inherit; text-decoration: inherit;">multiattach</a>
@@ -700,8 +704,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -713,8 +716,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendoroptions_nodejs">
 <a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
@@ -724,14 +726,11 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -740,8 +739,7 @@ Supported options are described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -750,8 +748,7 @@ Supported options are described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_python">
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -762,8 +759,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiattach_python">
 <a href="#multiattach_python" style="color: inherit; text-decoration: inherit;">multiattach</a>
@@ -772,8 +768,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -785,8 +780,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_options_python">
 <a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
@@ -796,8 +790,7 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -808,9 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -818,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -833,14 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -848,14 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -863,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -991,9 +972,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_csharp">
 <a href="#state_device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1004,8 +983,7 @@ The following state arguments are supported:
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1014,8 +992,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiattach_csharp">
 <a href="#state_multiattach_csharp" style="color: inherit; text-decoration: inherit;">Multiattach</a>
@@ -1024,8 +1001,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1037,8 +1013,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_csharp">
 <a href="#state_vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -1048,8 +1023,7 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -1058,14 +1032,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_go">
 <a href="#state_device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1076,8 +1047,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1086,8 +1056,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiattach_go">
 <a href="#state_multiattach_go" style="color: inherit; text-decoration: inherit;">Multiattach</a>
@@ -1096,8 +1065,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1109,8 +1077,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_go">
 <a href="#state_vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
@@ -1120,8 +1087,7 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -1130,14 +1096,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_nodejs">
 <a href="#state_device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1148,8 +1111,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1158,8 +1120,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiattach_nodejs">
 <a href="#state_multiattach_nodejs" style="color: inherit; text-decoration: inherit;">multiattach</a>
@@ -1168,8 +1129,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1181,8 +1141,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendoroptions_nodejs">
 <a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
@@ -1192,8 +1151,7 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -1202,14 +1160,11 @@ Supported options are described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_python">
 <a href="#state_device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1220,8 +1175,7 @@ Supported options are described below.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1230,8 +1184,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiattach_python">
 <a href="#state_multiattach_python" style="color: inherit; text-decoration: inherit;">multiattach</a>
@@ -1240,8 +1193,7 @@ should not be used as an authoritative piece of information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1253,8 +1205,7 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_options_python">
 <a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
@@ -1264,8 +1215,7 @@ new volume attachment.
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -1274,8 +1224,7 @@ Supported options are described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1290,9 +1239,7 @@ Supported options are described below.
 <h4 id="volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignorevolumeconfirmation_csharp">
 <a href="#ignorevolumeconfirmation_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Volume<wbr>Confirmation</a>
@@ -1303,14 +1250,11 @@ Supported options are described below.
     <dd>{{% md %}}Boolean to control whether
 to ignore volume status confirmation of the attached volume. This can be helpful
 to work with some OpenStack clouds which don't have the Block Storage V3 API available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignorevolumeconfirmation_go">
 <a href="#ignorevolumeconfirmation_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Volume<wbr>Confirmation</a>
@@ -1321,14 +1265,11 @@ to work with some OpenStack clouds which don't have the Block Storage V3 API ava
     <dd>{{% md %}}Boolean to control whether
 to ignore volume status confirmation of the attached volume. This can be helpful
 to work with some OpenStack clouds which don't have the Block Storage V3 API available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignorevolumeconfirmation_nodejs">
 <a href="#ignorevolumeconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Volume<wbr>Confirmation</a>
@@ -1339,14 +1280,11 @@ to work with some OpenStack clouds which don't have the Block Storage V3 API ava
     <dd>{{% md %}}Boolean to control whether
 to ignore volume status confirmation of the attached volume. This can be helpful
 to work with some OpenStack clouds which don't have the Block Storage V3 API available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignore_volume_confirmation_python">
 <a href="#ignore_volume_confirmation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>volume_<wbr>confirmation</a>
@@ -1357,8 +1295,7 @@ to work with some OpenStack clouds which don't have the Block Storage V3 API ava
     <dd>{{% md %}}Boolean to control whether
 to ignore volume status confirmation of the attached volume. This can be helpful
 to work with some OpenStack clouds which don't have the Block Storage V3 API available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1379,6 +1316,6 @@ Volume Attachments can be imported using the Instance ID and Volume ID separated
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

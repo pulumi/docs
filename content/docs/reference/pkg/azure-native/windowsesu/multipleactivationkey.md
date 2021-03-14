@@ -14,11 +14,17 @@ MAK key details.
 API Version: 2019-09-16-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CreateMultipleActivationKey
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -77,9 +86,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -97,9 +109,12 @@ multiple_activation_key = azure_native.windowsesu.MultipleActivationKey("multipl
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MultipleActivationKey Resource {#create}
@@ -145,9 +167,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const multipleActivationKey = new azure_native.windowsesu.MultipleActivationKey(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -311,8 +302,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementnumber_csharp">
 <a href="#agreementnumber_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Number</a>
@@ -320,8 +310,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installedservernumber_csharp">
 <a href="#installedservernumber_csharp" style="color: inherit; text-decoration: inherit;">Installed<wbr>Server<wbr>Number</a>
@@ -329,8 +318,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligible_csharp">
 <a href="#iseligible_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Eligible</a>
@@ -338,8 +326,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -347,8 +334,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipleactivationkeyname_csharp">
 <a href="#multipleactivationkeyname_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Activation<wbr>Key<wbr>Name</a>
@@ -356,8 +342,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -365,8 +350,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Windows<wbr>ESU.<wbr>Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporttype_csharp">
 <a href="#supporttype_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Type</a>
@@ -374,8 +358,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supporttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Windows<wbr>ESU.<wbr>Support<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of support{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of support{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -383,14 +366,11 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -398,8 +378,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementnumber_go">
 <a href="#agreementnumber_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Number</a>
@@ -407,8 +386,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installedservernumber_go">
 <a href="#installedservernumber_go" style="color: inherit; text-decoration: inherit;">Installed<wbr>Server<wbr>Number</a>
@@ -416,8 +394,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligible_go">
 <a href="#iseligible_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Eligible</a>
@@ -425,8 +402,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -434,8 +410,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipleactivationkeyname_go">
 <a href="#multipleactivationkeyname_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Activation<wbr>Key<wbr>Name</a>
@@ -443,8 +418,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -452,8 +426,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporttype_go">
 <a href="#supporttype_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Type</a>
@@ -461,8 +434,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supporttype">Support<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of support{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of support{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -470,14 +442,11 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -485,8 +454,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementnumber_nodejs">
 <a href="#agreementnumber_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Number</a>
@@ -494,8 +462,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installedservernumber_nodejs">
 <a href="#installedservernumber_nodejs" style="color: inherit; text-decoration: inherit;">installed<wbr>Server<wbr>Number</a>
@@ -503,8 +470,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligible_nodejs">
 <a href="#iseligible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Eligible</a>
@@ -512,8 +478,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -521,8 +486,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipleactivationkeyname_nodejs">
 <a href="#multipleactivationkeyname_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Activation<wbr>Key<wbr>Name</a>
@@ -530,8 +494,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -539,8 +502,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporttype_nodejs">
 <a href="#supporttype_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Type</a>
@@ -548,8 +510,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supporttype">Support<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of support{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of support{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -557,14 +518,11 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -572,8 +530,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreement_number_python">
 <a href="#agreement_number_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>number</a>
@@ -581,8 +538,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agreement number under which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installed_server_number_python">
 <a href="#installed_server_number_python" style="color: inherit; text-decoration: inherit;">installed_<wbr>server_<wbr>number</a>
@@ -590,8 +546,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of activations/servers using the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_eligible_python">
 <a href="#is_eligible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>eligible</a>
@@ -599,8 +554,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -608,8 +562,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiple_activation_key_name_python">
 <a href="#multiple_activation_key_name_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>activation_<wbr>key_<wbr>name</a>
@@ -617,8 +570,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the MAK key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -626,8 +578,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#ostype">Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of OS for which the key is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_type_python">
 <a href="#support_type_python" style="color: inherit; text-decoration: inherit;">support_<wbr>type</a>
@@ -635,8 +586,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#supporttype">Support<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of support{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of support{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -644,8 +594,7 @@ The MultipleActivationKey resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -656,9 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -666,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -675,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multipleactivationkeyvalue_csharp">
 <a href="#multipleactivationkeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Activation<wbr>Key<wbr>Value</a>
@@ -684,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -693,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -702,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -711,14 +653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -726,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -735,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multipleactivationkey_go">
 <a href="#multipleactivationkey_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Activation<wbr>Key</a>
@@ -744,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -753,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -762,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -771,14 +705,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
@@ -786,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -795,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multipleactivationkey_nodejs">
 <a href="#multipleactivationkey_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Activation<wbr>Key</a>
@@ -804,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -813,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -822,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -831,14 +757,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
@@ -846,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}End of support of security updates activated by the MAK key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -855,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiple_activation_key_python">
 <a href="#multiple_activation_key_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>activation_<wbr>key</a>
@@ -864,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}MAK 5x5 key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -873,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -882,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -891,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -908,85 +825,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="ostype">Os<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows7</dt>
-    <dd>Windows7</dd>
-    <dt>Windows<wbr>Server2008</dt>
-    <dd>WindowsServer2008</dd>
-    <dt>Windows<wbr>Server2008R2</dt>
-    <dd>WindowsServer2008R2</dd>
-</dl>
+<dl class="tabular"><dt>Windows7</dt>
+    <dd>Windows7</dd><dt>Windows<wbr>Server2008</dt>
+    <dd>WindowsServer2008</dd><dt>Windows<wbr>Server2008R2</dt>
+    <dd>WindowsServer2008R2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Os<wbr>Type<wbr>Windows7</dt>
-    <dd>Windows7</dd>
-    <dt>Os<wbr>Type<wbr>Windows<wbr>Server2008</dt>
-    <dd>WindowsServer2008</dd>
-    <dt>Os<wbr>Type<wbr>Windows<wbr>Server2008R2</dt>
-    <dd>WindowsServer2008R2</dd>
-</dl>
+<dl class="tabular"><dt>Os<wbr>Type<wbr>Windows7</dt>
+    <dd>Windows7</dd><dt>Os<wbr>Type<wbr>Windows<wbr>Server2008</dt>
+    <dd>WindowsServer2008</dd><dt>Os<wbr>Type<wbr>Windows<wbr>Server2008R2</dt>
+    <dd>WindowsServer2008R2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows7</dt>
-    <dd>Windows7</dd>
-    <dt>Windows<wbr>Server2008</dt>
-    <dd>WindowsServer2008</dd>
-    <dt>Windows<wbr>Server2008R2</dt>
-    <dd>WindowsServer2008R2</dd>
-</dl>
+<dl class="tabular"><dt>Windows7</dt>
+    <dd>Windows7</dd><dt>Windows<wbr>Server2008</dt>
+    <dd>WindowsServer2008</dd><dt>Windows<wbr>Server2008R2</dt>
+    <dd>WindowsServer2008R2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS7</dt>
-    <dd>Windows7</dd>
-    <dt>WINDOWS_SERVER2008</dt>
-    <dd>WindowsServer2008</dd>
-    <dt>WINDOWS_SERVER2008_R2</dt>
-    <dd>WindowsServer2008R2</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS7</dt>
+    <dd>Windows7</dd><dt>WINDOWS_SERVER2008</dt>
+    <dd>WindowsServer2008</dd><dt>WINDOWS_SERVER2008_R2</dt>
+    <dd>WindowsServer2008R2</dd></dl>
 {{% /choosable %}}
 
 <h4 id="supporttype">Support<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Supplemental<wbr>Servicing</dt>
-    <dd>SupplementalServicing</dd>
-    <dt>Premium<wbr>Assurance</dt>
-    <dd>PremiumAssurance</dd>
-</dl>
+<dl class="tabular"><dt>Supplemental<wbr>Servicing</dt>
+    <dd>SupplementalServicing</dd><dt>Premium<wbr>Assurance</dt>
+    <dd>PremiumAssurance</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Support<wbr>Type<wbr>Supplemental<wbr>Servicing</dt>
-    <dd>SupplementalServicing</dd>
-    <dt>Support<wbr>Type<wbr>Premium<wbr>Assurance</dt>
-    <dd>PremiumAssurance</dd>
-</dl>
+<dl class="tabular"><dt>Support<wbr>Type<wbr>Supplemental<wbr>Servicing</dt>
+    <dd>SupplementalServicing</dd><dt>Support<wbr>Type<wbr>Premium<wbr>Assurance</dt>
+    <dd>PremiumAssurance</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Supplemental<wbr>Servicing</dt>
-    <dd>SupplementalServicing</dd>
-    <dt>Premium<wbr>Assurance</dt>
-    <dd>PremiumAssurance</dd>
-</dl>
+<dl class="tabular"><dt>Supplemental<wbr>Servicing</dt>
+    <dd>SupplementalServicing</dd><dt>Premium<wbr>Assurance</dt>
+    <dd>PremiumAssurance</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SUPPLEMENTAL_SERVICING</dt>
-    <dd>SupplementalServicing</dd>
-    <dt>PREMIUM_ASSURANCE</dt>
-    <dd>PremiumAssurance</dd>
-</dl>
+<dl class="tabular"><dt>SUPPLEMENTAL_SERVICING</dt>
+    <dd>SupplementalServicing</dd><dt>PREMIUM_ASSURANCE</dt>
+    <dd>PremiumAssurance</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ Peerings in a virtual network resource.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create peering
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -47,9 +53,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -82,9 +91,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -104,9 +116,12 @@ virtual_network_peering = azure_native.network.VirtualNetworkPeering("virtualNet
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +142,16 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualNetworkPeering Resource {#create}
@@ -154,9 +176,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +184,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +192,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +200,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +226,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +234,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +242,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +250,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +258,13 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +272,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +280,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +288,7 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +303,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -320,8 +311,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_csharp">
 <a href="#virtualnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -329,8 +319,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_csharp">
 <a href="#allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -338,8 +327,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_csharp">
 <a href="#allowgatewaytransit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -347,8 +335,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_csharp">
 <a href="#allowvirtualnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -356,8 +343,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotverifyremotegateways_csharp">
 <a href="#donotverifyremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
@@ -365,8 +351,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -374,8 +359,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -383,8 +367,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringstate_csharp">
 <a href="#peeringstate_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
@@ -392,8 +375,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressspace_csharp">
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
@@ -401,8 +383,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotebgpcommunities_csharp">
 <a href="#remotebgpcommunities_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Bgp<wbr>Communities</a>
@@ -410,8 +391,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkbgpcommunities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotevirtualnetwork_csharp">
 <a href="#remotevirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
@@ -419,8 +399,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -428,8 +407,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -437,8 +415,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpeeringname_csharp">
 <a href="#virtualnetworkpeeringname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Peering<wbr>Name</a>
@@ -446,14 +423,11 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -461,8 +435,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_go">
 <a href="#virtualnetworkname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -470,8 +443,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_go">
 <a href="#allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -479,8 +451,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_go">
 <a href="#allowgatewaytransit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -488,8 +459,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_go">
 <a href="#allowvirtualnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -497,8 +467,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotverifyremotegateways_go">
 <a href="#donotverifyremotegateways_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
@@ -506,8 +475,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -515,8 +483,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -524,8 +491,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringstate_go">
 <a href="#peeringstate_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
@@ -533,8 +499,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressspace_go">
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
@@ -542,8 +507,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotebgpcommunities_go">
 <a href="#remotebgpcommunities_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Bgp<wbr>Communities</a>
@@ -551,8 +515,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotevirtualnetwork_go">
 <a href="#remotevirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
@@ -560,8 +523,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -569,8 +531,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -578,8 +539,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpeeringname_go">
 <a href="#virtualnetworkpeeringname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Peering<wbr>Name</a>
@@ -587,14 +547,11 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -602,8 +559,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_nodejs">
 <a href="#virtualnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Name</a>
@@ -611,8 +567,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforwardedtraffic_nodejs">
 <a href="#allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
@@ -620,8 +575,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowgatewaytransit_nodejs">
 <a href="#allowgatewaytransit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Gateway<wbr>Transit</a>
@@ -629,8 +583,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvirtualnetworkaccess_nodejs">
 <a href="#allowvirtualnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -638,8 +591,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotverifyremotegateways_nodejs">
 <a href="#donotverifyremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
@@ -647,8 +599,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,8 +607,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -665,8 +615,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringstate_nodejs">
 <a href="#peeringstate_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>State</a>
@@ -674,8 +623,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressspace_nodejs">
 <a href="#remoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Space</a>
@@ -683,8 +631,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotebgpcommunities_nodejs">
 <a href="#remotebgpcommunities_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Bgp<wbr>Communities</a>
@@ -692,8 +639,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotevirtualnetwork_nodejs">
 <a href="#remotevirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network</a>
@@ -701,8 +647,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -710,8 +655,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
@@ -719,8 +663,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpeeringname_nodejs">
 <a href="#virtualnetworkpeeringname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Peering<wbr>Name</a>
@@ -728,14 +671,11 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -743,8 +683,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_name_python">
 <a href="#virtual_network_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>name</a>
@@ -752,8 +691,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_forwarded_traffic_python">
 <a href="#allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
@@ -761,8 +699,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_gateway_transit_python">
 <a href="#allow_gateway_transit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>gateway_<wbr>transit</a>
@@ -770,8 +707,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_virtual_network_access_python">
 <a href="#allow_virtual_network_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>virtual_<wbr>network_<wbr>access</a>
@@ -779,8 +715,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="do_not_verify_remote_gateways_python">
 <a href="#do_not_verify_remote_gateways_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>verify_<wbr>remote_<wbr>gateways</a>
@@ -788,8 +723,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -797,8 +731,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -806,8 +739,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peering_state_python">
 <a href="#peering_state_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>state</a>
@@ -815,8 +747,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_address_space_python">
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
@@ -824,8 +755,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_bgp_communities_python">
 <a href="#remote_bgp_communities_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>bgp_<wbr>communities</a>
@@ -833,8 +763,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_virtual_network_python">
 <a href="#remote_virtual_network_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network</a>
@@ -842,8 +771,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -851,8 +779,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
@@ -860,8 +787,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_peering_name_python">
 <a href="#virtual_network_peering_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>peering_<wbr>name</a>
@@ -869,8 +795,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,9 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -891,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -900,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -909,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -918,14 +838,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -933,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -942,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -951,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -960,14 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -975,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -984,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -993,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -1002,14 +910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1017,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1026,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1035,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -1044,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network Peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1061,9 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="addressspace">Address<wbr>Space</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1071,14 +970,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1086,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -1101,14 +994,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -1116,16 +1006,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="addressspaceresponse">Address<wbr>Space<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1133,14 +1020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1148,14 +1032,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -1163,14 +1044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -1178,16 +1056,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresource">Sub<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1195,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1210,14 +1082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1225,14 +1094,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1240,16 +1106,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1257,14 +1120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1272,14 +1132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1287,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1302,16 +1156,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_csharp">
 <a href="#virtualnetworkcommunity_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Community</a>
@@ -1319,14 +1170,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_go">
 <a href="#virtualnetworkcommunity_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Community</a>
@@ -1334,14 +1182,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_nodejs">
 <a href="#virtualnetworkcommunity_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Community</a>
@@ -1349,14 +1194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="virtual_network_community_python">
 <a href="#virtual_network_community_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>community</a>
@@ -1364,16 +1206,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkbgpcommunitiesresponse">Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regionalcommunity_csharp">
 <a href="#regionalcommunity_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Community</a>
@@ -1381,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_csharp">
 <a href="#virtualnetworkcommunity_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Community</a>
@@ -1390,14 +1228,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regionalcommunity_go">
 <a href="#regionalcommunity_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Community</a>
@@ -1405,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_go">
 <a href="#virtualnetworkcommunity_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Community</a>
@@ -1414,14 +1248,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regionalcommunity_nodejs">
 <a href="#regionalcommunity_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Community</a>
@@ -1429,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkcommunity_nodejs">
 <a href="#virtualnetworkcommunity_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Community</a>
@@ -1438,14 +1268,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regional_community_python">
 <a href="#regional_community_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>community</a>
@@ -1453,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The BGP community associated with the region of the virtual network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_community_python">
 <a href="#virtual_network_community_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>community</a>
@@ -1462,54 +1288,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The BGP community associated with the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Initiated</dt>
-    <dd>Initiated</dd>
-    <dt>Connected</dt>
-    <dd>Connected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Initiated</dt>
+    <dd>Initiated</dd><dt>Connected</dt>
+    <dd>Connected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Initiated</dt>
-    <dd>Initiated</dd>
-    <dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Connected</dt>
-    <dd>Connected</dd>
-    <dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Initiated</dt>
+    <dd>Initiated</dd><dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Connected</dt>
+    <dd>Connected</dd><dt>Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Initiated</dt>
-    <dd>Initiated</dd>
-    <dt>Connected</dt>
-    <dd>Connected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Initiated</dt>
+    <dd>Initiated</dd><dt>Connected</dt>
+    <dd>Connected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>INITIATED</dt>
-    <dd>Initiated</dd>
-    <dt>CONNECTED</dt>
-    <dd>Connected</dd>
-    <dt>DISCONNECTED</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>INITIATED</dt>
+    <dd>Initiated</dd><dt>CONNECTED</dt>
+    <dd>Connected</dd><dt>DISCONNECTED</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 ## Import
 

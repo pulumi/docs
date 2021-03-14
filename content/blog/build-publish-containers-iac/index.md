@@ -478,7 +478,7 @@ func main() {
         // [Placeholder 3: Build and publish the container image.]
         return nil
     })
-}        
+}
 ```
 
 {{< /choosable >}}
@@ -1208,7 +1208,7 @@ import (
     "encoding/json"
     "errors"
     "strings"
-    
+
     "github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
     "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -1561,7 +1561,7 @@ import (
     "encoding/json"
     "errors"
     "strings"
-    
+
     "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -1725,7 +1725,7 @@ Simply pass the path to your application's `Dockerfile` as the build context, th
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-{{< choosable language javascript >}}
+{{% choosable language javascript %}}
 
 ```javascript
 // [Existing imports ...]
@@ -1747,9 +1747,9 @@ module.exports = {
 };
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 // [Existing imports ...]
@@ -1769,9 +1769,9 @@ export const baseImageName = image.baseImageName;
 export const fullImageName = image.imageName;
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language python >}}
+{{% choosable language python %}}
 
 ```python
 # [Existing imports ...]
@@ -1791,9 +1791,9 @@ pulumi.export('baseImageName', image.base_image_name)
 pulumi.export('fullImageName', image.image_name)
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language go >}}
+{{% choosable language go %}}
 
 ```go
 // [Existing imports ...]
@@ -1819,9 +1819,9 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language csharp >}}
+{{% choosable language csharp %}}
 
 ```csharp
 // [Existing imports ...]
@@ -1851,7 +1851,7 @@ class Program
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 Now let's run `pulumi up`. If you haven't already done so, this will provision the cloud resources, as well as build/publish the container image. As the build runs, you will see Docker build output streamed to your terminal:
 
@@ -1915,19 +1915,19 @@ The Pulumi Docker `Image` component supports a number of additional options to c
 
 The same container image URLs exported above can be used as inputs to other resources, including infrastructure that will run your container inside of a container orchestration system such as Kubernetes, Amazon ECS, and so on.
 
-> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with: 
+> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
-- [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}), 
-- [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}), 
-- [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}), 
-- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}), 
+- [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}),
+- [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}),
+- [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}),
+- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
 - [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
 
 This example demonstrates deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-{{< choosable language javascript >}}
+{{% choosable language javascript %}}
 
 ```javascript
 // [Previous imports...]
@@ -1967,9 +1967,9 @@ module.exports = {
 };
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 // [Previous imports...]
@@ -2005,9 +2005,9 @@ const appSvc = new k8s.core.v1.Service("app-svc", {
 export const appIp = appSvc.status.loadBalancer.ingress[0].ip;
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language python >}}
+{{% choosable language python %}}
 
 ```python
 # [Previous imports...]
@@ -2043,9 +2043,9 @@ app_svc = k8s.core.v1.Service('app-svc',
 pulumi.export('appIp', app_svc.status.apply(lambda s: s.loadbalancer.ingress[0].ip))
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language go >}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -2097,15 +2097,15 @@ func main() {
         ctx.Export("appIp", appSvc.Status.ApplyT(func(status *corev1.ServiceStatus) *string {
             return status.LoadBalancer.Ingress[0].Ip
         }))
-        
+
         return nil
     })
-}        
+}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language csharp >}}
+{{% choosable language csharp %}}
 
 ```csharp
 // [Previous imports...]
@@ -2182,7 +2182,7 @@ class Program
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 Notice here that we are referring to the resulting image name from our service specification. All we need to do run a 'pulumi up' and Pulumi will now build, publish, and consume our application's container image from within our Kubernetes cluster:
 

@@ -33,11 +33,17 @@ To get more information about HealthCheck, see:
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Health Check Tcp
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -103,9 +115,12 @@ tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,10 +135,17 @@ const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Tcp Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -153,9 +175,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -188,9 +213,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -210,9 +238,12 @@ tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
     unhealthy_threshold=5)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -234,10 +265,17 @@ const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Ssl
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -260,9 +298,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -288,9 +329,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -303,9 +347,12 @@ ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -320,10 +367,17 @@ const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Ssl Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -353,9 +407,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -388,9 +445,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -410,9 +470,12 @@ ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
     unhealthy_threshold=5)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -434,10 +497,17 @@ const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Http
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -460,9 +530,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -488,9 +561,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -503,9 +579,12 @@ http_health_check = gcp.compute.HealthCheck("http-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -520,10 +599,17 @@ const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Http Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -554,9 +640,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -590,9 +679,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -613,9 +705,12 @@ http_health_check = gcp.compute.HealthCheck("http-health-check",
     unhealthy_threshold=5)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -638,10 +733,17 @@ const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Https
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -664,9 +766,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -692,9 +797,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -707,9 +815,12 @@ https_health_check = gcp.compute.HealthCheck("https-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -724,10 +835,17 @@ const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Https Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -758,9 +876,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -794,9 +915,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -817,9 +941,12 @@ https_health_check = gcp.compute.HealthCheck("https-health-check",
     unhealthy_threshold=5)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -842,10 +969,17 @@ const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Http2
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -868,9 +1002,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -896,9 +1033,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -911,9 +1051,12 @@ http2_health_check = gcp.compute.HealthCheck("http2-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -928,10 +1071,17 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Http2 Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -962,9 +1112,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -998,9 +1151,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1021,9 +1177,12 @@ http2_health_check = gcp.compute.HealthCheck("http2-health-check",
     unhealthy_threshold=5)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1046,10 +1205,17 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Grpc
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -1072,9 +1238,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1100,9 +1269,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1115,9 +1287,12 @@ grpc_health_check = gcp.compute.HealthCheck("grpc-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1132,10 +1307,17 @@ const grpc_health_check = new gcp.compute.HealthCheck("grpc-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check Grpc Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -1160,9 +1342,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1190,9 +1375,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1207,9 +1395,12 @@ grpc_health_check = gcp.compute.HealthCheck("grpc-health-check",
     timeout_sec=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1226,10 +1417,17 @@ const grpc_health_check = new gcp.compute.HealthCheck("grpc-health-check", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Health Check With Logging
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -1259,9 +1457,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1290,9 +1491,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1309,9 +1513,12 @@ health_check_with_logging = gcp.compute.HealthCheck("health-check-with-logging",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1331,9 +1538,16 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a HealthCheck Resource {#create}
@@ -1358,9 +1572,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1368,9 +1580,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1378,9 +1588,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1388,10 +1596,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1417,9 +1622,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1427,9 +1630,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1437,9 +1638,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1447,9 +1646,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1457,18 +1654,13 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1476,9 +1668,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1486,9 +1676,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1496,10 +1684,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1514,9 +1699,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkintervalsec_csharp">
 <a href="#checkintervalsec_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Sec</a>
@@ -1526,8 +1709,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1537,8 +1719,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpchealthcheck_csharp">
 <a href="#grpchealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
@@ -1548,8 +1729,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -1559,8 +1739,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2healthcheck_csharp">
 <a href="#http2healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
@@ -1570,8 +1749,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httphealthcheck_csharp">
 <a href="#httphealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
@@ -1581,8 +1759,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpshealthcheck_csharp">
 <a href="#httpshealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
@@ -1592,8 +1769,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1602,8 +1778,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1618,8 +1793,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1629,8 +1803,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslhealthcheck_csharp">
 <a href="#sslhealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
@@ -1640,8 +1813,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcphealthcheck_csharp">
 <a href="#tcphealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
@@ -1651,8 +1823,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_csharp">
 <a href="#timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
@@ -1663,8 +1834,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_csharp">
 <a href="#unhealthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -1674,14 +1844,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkintervalsec_go">
 <a href="#checkintervalsec_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Sec</a>
@@ -1691,8 +1858,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1702,8 +1868,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpchealthcheck_go">
 <a href="#grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
@@ -1713,8 +1878,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -1724,8 +1888,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2healthcheck_go">
 <a href="#http2healthcheck_go" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
@@ -1735,8 +1898,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httphealthcheck_go">
 <a href="#httphealthcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
@@ -1746,8 +1908,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpshealthcheck_go">
 <a href="#httpshealthcheck_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
@@ -1757,8 +1918,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1767,8 +1927,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1783,8 +1942,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1794,8 +1952,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslhealthcheck_go">
 <a href="#sslhealthcheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
@@ -1805,8 +1962,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcphealthcheck_go">
 <a href="#tcphealthcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
@@ -1816,8 +1972,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_go">
 <a href="#timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
@@ -1828,8 +1983,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_go">
 <a href="#unhealthythreshold_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -1839,14 +1993,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkintervalsec_nodejs">
 <a href="#checkintervalsec_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Sec</a>
@@ -1856,8 +2007,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1867,8 +2017,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpchealthcheck_nodejs">
 <a href="#grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
@@ -1878,8 +2027,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -1889,8 +2037,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2healthcheck_nodejs">
 <a href="#http2healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http2Health<wbr>Check</a>
@@ -1900,8 +2047,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httphealthcheck_nodejs">
 <a href="#httphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Health<wbr>Check</a>
@@ -1911,8 +2057,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpshealthcheck_nodejs">
 <a href="#httpshealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Health<wbr>Check</a>
@@ -1922,8 +2067,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -1932,8 +2076,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1948,8 +2091,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1959,8 +2101,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslhealthcheck_nodejs">
 <a href="#sslhealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Health<wbr>Check</a>
@@ -1970,8 +2111,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcphealthcheck_nodejs">
 <a href="#tcphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Health<wbr>Check</a>
@@ -1981,8 +2121,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_nodejs">
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
@@ -1993,8 +2132,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_nodejs">
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
@@ -2004,14 +2142,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="check_interval_sec_python">
 <a href="#check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
@@ -2021,8 +2156,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2032,8 +2166,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpc_health_check_python">
 <a href="#grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
@@ -2043,8 +2176,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -2054,8 +2186,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_health_check_python">
 <a href="#http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
@@ -2065,8 +2196,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_health_check_python">
 <a href="#http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
@@ -2076,8 +2206,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_health_check_python">
 <a href="#https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
@@ -2087,8 +2216,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -2097,8 +2225,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2113,8 +2240,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2124,8 +2250,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_health_check_python">
 <a href="#ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
@@ -2135,8 +2260,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_health_check_python">
 <a href="#tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
@@ -2146,8 +2270,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_sec_python">
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
@@ -2158,8 +2281,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthy_threshold_python">
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
@@ -2169,8 +2291,7 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2181,9 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2192,8 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2201,8 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2211,8 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2221,14 +2337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2237,8 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2246,8 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2256,8 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2266,14 +2376,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -2282,8 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2291,8 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2301,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2311,14 +2415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2327,8 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2336,8 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2346,8 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2356,8 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2484,9 +2581,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checkintervalsec_csharp">
 <a href="#state_checkintervalsec_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Sec</a>
@@ -2496,8 +2591,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2506,8 +2600,7 @@ seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2517,8 +2610,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpchealthcheck_csharp">
 <a href="#state_grpchealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
@@ -2528,8 +2620,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_csharp">
 <a href="#state_healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2539,8 +2630,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http2healthcheck_csharp">
 <a href="#state_http2healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
@@ -2550,8 +2640,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httphealthcheck_csharp">
 <a href="#state_httphealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
@@ -2561,8 +2650,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpshealthcheck_csharp">
 <a href="#state_httpshealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
@@ -2572,8 +2660,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -2582,8 +2669,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2598,8 +2684,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2609,8 +2694,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2619,8 +2703,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslhealthcheck_csharp">
 <a href="#state_sslhealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
@@ -2630,8 +2713,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcphealthcheck_csharp">
 <a href="#state_tcphealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
@@ -2641,8 +2723,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_csharp">
 <a href="#state_timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
@@ -2653,8 +2734,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2663,8 +2743,7 @@ greater value than checkIntervalSec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unhealthythreshold_csharp">
 <a href="#state_unhealthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2674,14 +2753,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checkintervalsec_go">
 <a href="#state_checkintervalsec_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Sec</a>
@@ -2691,8 +2767,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2701,8 +2776,7 @@ seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2712,8 +2786,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpchealthcheck_go">
 <a href="#state_grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
@@ -2723,8 +2796,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_go">
 <a href="#state_healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2734,8 +2806,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http2healthcheck_go">
 <a href="#state_http2healthcheck_go" style="color: inherit; text-decoration: inherit;">Http2Health<wbr>Check</a>
@@ -2745,8 +2816,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httphealthcheck_go">
 <a href="#state_httphealthcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Health<wbr>Check</a>
@@ -2756,8 +2826,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpshealthcheck_go">
 <a href="#state_httpshealthcheck_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Health<wbr>Check</a>
@@ -2767,8 +2836,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -2777,8 +2845,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2793,8 +2860,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2804,8 +2870,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2814,8 +2879,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslhealthcheck_go">
 <a href="#state_sslhealthcheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Health<wbr>Check</a>
@@ -2825,8 +2889,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcphealthcheck_go">
 <a href="#state_tcphealthcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Health<wbr>Check</a>
@@ -2836,8 +2899,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_go">
 <a href="#state_timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
@@ -2848,8 +2910,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2858,8 +2919,7 @@ greater value than checkIntervalSec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unhealthythreshold_go">
 <a href="#state_unhealthythreshold_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2869,14 +2929,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checkintervalsec_nodejs">
 <a href="#state_checkintervalsec_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Sec</a>
@@ -2886,8 +2943,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -2896,8 +2952,7 @@ seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2907,8 +2962,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpchealthcheck_nodejs">
 <a href="#state_grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
@@ -2918,8 +2972,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_nodejs">
 <a href="#state_healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -2929,8 +2982,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http2healthcheck_nodejs">
 <a href="#state_http2healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http2Health<wbr>Check</a>
@@ -2940,8 +2992,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httphealthcheck_nodejs">
 <a href="#state_httphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Health<wbr>Check</a>
@@ -2951,8 +3002,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpshealthcheck_nodejs">
 <a href="#state_httpshealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Health<wbr>Check</a>
@@ -2962,8 +3012,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -2972,8 +3021,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2988,8 +3036,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2999,8 +3046,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -3009,8 +3055,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslhealthcheck_nodejs">
 <a href="#state_sslhealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Health<wbr>Check</a>
@@ -3020,8 +3065,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcphealthcheck_nodejs">
 <a href="#state_tcphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Health<wbr>Check</a>
@@ -3031,8 +3075,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_nodejs">
 <a href="#state_timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
@@ -3043,8 +3086,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3053,8 +3095,7 @@ greater value than checkIntervalSec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unhealthythreshold_nodejs">
 <a href="#state_unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
@@ -3064,14 +3105,11 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_check_interval_sec_python">
 <a href="#state_check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
@@ -3081,8 +3119,7 @@ consecutive failures. The default value is 2.
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -3091,8 +3128,7 @@ seconds.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3102,8 +3138,7 @@ seconds.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpc_health_check_python">
 <a href="#state_grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
@@ -3113,8 +3148,7 @@ you create the resource.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthy_threshold_python">
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -3124,8 +3158,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http2_health_check_python">
 <a href="#state_http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
@@ -3135,8 +3168,7 @@ consecutive successes. The default value is 2.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_health_check_python">
 <a href="#state_http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
@@ -3146,8 +3178,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_https_health_check_python">
 <a href="#state_https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
@@ -3157,8 +3188,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -3167,8 +3197,7 @@ Structure is documented below.
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3183,8 +3212,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3194,8 +3222,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -3204,8 +3231,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_health_check_python">
 <a href="#state_ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
@@ -3215,8 +3241,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcp_health_check_python">
 <a href="#state_tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
@@ -3226,8 +3251,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_sec_python">
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
@@ -3238,8 +3262,7 @@ Structure is documented below.
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3248,8 +3271,7 @@ greater value than checkIntervalSec.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unhealthy_threshold_python">
 <a href="#state_unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
@@ -3259,8 +3281,7 @@ greater value than checkIntervalSec.
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3275,9 +3296,7 @@ consecutive failures. The default value is 2.
 <h4 id="healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpcservicename_csharp">
 <a href="#grpcservicename_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Service<wbr>Name</a>
@@ -3290,8 +3309,7 @@ The value of grpcServiceName has the following meanings by convention:
 - Empty serviceName means the overall status of all services at the backend.
 - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 The grpcServiceName can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3302,8 +3320,7 @@ The grpcServiceName can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -3313,8 +3330,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -3333,14 +3349,11 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpcservicename_go">
 <a href="#grpcservicename_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Service<wbr>Name</a>
@@ -3353,8 +3366,7 @@ The value of grpcServiceName has the following meanings by convention:
 - Empty serviceName means the overall status of all services at the backend.
 - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 The grpcServiceName can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3365,8 +3377,7 @@ The grpcServiceName can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -3376,8 +3387,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -3396,14 +3406,11 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpcservicename_nodejs">
 <a href="#grpcservicename_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Name</a>
@@ -3416,8 +3423,7 @@ The value of grpcServiceName has the following meanings by convention:
 - Empty serviceName means the overall status of all services at the backend.
 - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 The grpcServiceName can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3428,8 +3434,7 @@ The grpcServiceName can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -3439,8 +3444,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -3459,14 +3463,11 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpc_service_name_python">
 <a href="#grpc_service_name_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>name</a>
@@ -3479,8 +3480,7 @@ The value of grpcServiceName has the following meanings by convention:
 - Empty serviceName means the overall status of all services at the backend.
 - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 The grpcServiceName can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3491,8 +3491,7 @@ The grpcServiceName can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -3502,8 +3501,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -3522,16 +3520,13 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3542,8 +3537,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3554,8 +3548,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -3565,8 +3558,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -3585,8 +3577,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -3598,8 +3589,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_csharp">
 <a href="#requestpath_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -3609,8 +3599,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -3621,14 +3610,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3639,8 +3625,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3651,8 +3636,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -3662,8 +3646,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -3682,8 +3665,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -3695,8 +3677,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_go">
 <a href="#requestpath_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -3706,8 +3687,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -3718,14 +3698,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3736,8 +3713,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3748,8 +3724,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -3759,8 +3734,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -3779,8 +3753,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -3792,8 +3765,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_nodejs">
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
@@ -3803,8 +3775,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -3815,14 +3786,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3833,8 +3801,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3845,8 +3812,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -3856,8 +3822,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -3876,8 +3841,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -3889,8 +3853,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_path_python">
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
@@ -3900,8 +3863,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -3912,16 +3874,13 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3932,8 +3891,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3944,8 +3902,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -3955,8 +3912,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -3975,8 +3931,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -3988,8 +3943,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_csharp">
 <a href="#requestpath_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -3999,8 +3953,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4011,14 +3964,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -4029,8 +3979,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4041,8 +3990,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -4052,8 +4000,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -4072,8 +4019,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -4085,8 +4031,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_go">
 <a href="#requestpath_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -4096,8 +4041,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4108,14 +4052,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4126,8 +4067,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4138,8 +4078,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -4149,8 +4088,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -4169,8 +4107,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -4182,8 +4119,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_nodejs">
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
@@ -4193,8 +4129,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -4205,14 +4140,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4223,8 +4155,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4235,8 +4166,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -4246,8 +4176,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -4266,8 +4195,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -4279,8 +4207,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_path_python">
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
@@ -4290,8 +4217,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -4302,16 +4228,13 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -4322,8 +4245,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4334,8 +4256,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -4345,8 +4266,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -4365,8 +4285,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -4378,8 +4297,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_csharp">
 <a href="#requestpath_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -4389,8 +4307,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4401,14 +4318,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -4419,8 +4333,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4431,8 +4344,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -4442,8 +4354,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -4462,8 +4373,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -4475,8 +4385,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_go">
 <a href="#requestpath_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Path</a>
@@ -4486,8 +4395,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4498,14 +4406,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4516,8 +4421,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4528,8 +4432,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -4539,8 +4442,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -4559,8 +4461,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -4572,8 +4473,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestpath_nodejs">
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
@@ -4583,8 +4483,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -4595,14 +4494,11 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -4613,8 +4509,7 @@ can only be ASCII.
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4625,8 +4520,7 @@ check is performed will be used.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -4636,8 +4530,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -4656,8 +4549,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -4669,8 +4561,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_path_python">
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
@@ -4680,8 +4571,7 @@ Possible values are `NONE` and `PROXY_V1`.
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -4692,16 +4582,13 @@ The default value is /.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -4711,14 +4598,11 @@ can only be ASCII.
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -4728,14 +4612,11 @@ which means no health check logging will be done.
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -4745,14 +4626,11 @@ which means no health check logging will be done.
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -4762,16 +4640,13 @@ which means no health check logging will be done.
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4782,8 +4657,7 @@ which means no health check logging will be done.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -4793,8 +4667,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -4813,8 +4686,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -4826,8 +4698,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -4839,8 +4710,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4851,14 +4721,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4869,8 +4736,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -4880,8 +4746,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -4900,8 +4765,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -4913,8 +4777,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -4926,8 +4789,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -4938,14 +4800,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4956,8 +4815,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -4967,8 +4825,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -4987,8 +4844,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -5000,8 +4856,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -5013,8 +4868,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -5025,14 +4879,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5043,8 +4894,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -5054,8 +4904,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -5074,8 +4923,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -5087,8 +4935,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -5100,8 +4947,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -5112,16 +4958,13 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5132,8 +4975,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -5143,8 +4985,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_csharp">
 <a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -5163,8 +5004,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -5176,8 +5016,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -5189,8 +5028,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -5201,14 +5039,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5219,8 +5054,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -5230,8 +5064,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_go">
 <a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
@@ -5250,8 +5083,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -5263,8 +5095,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -5276,8 +5107,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -5288,14 +5118,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5306,8 +5133,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -5317,8 +5143,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portspecification_nodejs">
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
@@ -5337,8 +5162,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -5350,8 +5174,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -5363,8 +5186,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -5375,14 +5197,11 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5393,8 +5212,7 @@ can only be ASCII.
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -5404,8 +5222,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_specification_python">
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
@@ -5424,8 +5241,7 @@ checking.
 If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
 Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -5437,8 +5253,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -5450,8 +5265,7 @@ Possible values are `NONE` and `PROXY_V1`.
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -5462,8 +5276,7 @@ data can only be ASCII.
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -5492,6 +5305,6 @@ HealthCheck can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

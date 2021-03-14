@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.networking.QosMinimumBandwidthRule r
 Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a QoS Policy with some minimum bandwidth rule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -84,9 +96,12 @@ minimum_bandwidth_rule1 = openstack.networking.QosMinimumBandwidthRule("minimumB
     qos_policy_id=qos_policy1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -101,9 +116,16 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a QosMinimumBandwidthRule Resource {#create}
@@ -128,9 +150,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -138,9 +158,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -148,9 +166,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -158,10 +174,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -187,9 +200,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -197,9 +208,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -207,9 +216,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -217,9 +224,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -227,18 +232,13 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -246,9 +246,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -256,9 +254,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -266,10 +262,7 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -284,9 +277,7 @@ The QosMinimumBandwidthRule resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minkbps_csharp">
 <a href="#minkbps_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
@@ -296,8 +287,7 @@ The QosMinimumBandwidthRule resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -306,8 +296,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -317,8 +306,7 @@ QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -329,14 +317,11 @@ existing QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minkbps_go">
 <a href="#minkbps_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
@@ -346,8 +331,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -356,8 +340,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -367,8 +350,7 @@ QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -379,14 +361,11 @@ existing QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minkbps_nodejs">
 <a href="#minkbps_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Kbps</a>
@@ -396,8 +375,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -406,8 +384,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -417,8 +394,7 @@ QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -429,14 +405,11 @@ existing QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="min_kbps_python">
 <a href="#min_kbps_python" style="color: inherit; text-decoration: inherit;">min_<wbr>kbps</a>
@@ -446,8 +419,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -456,8 +428,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -467,8 +438,7 @@ QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -479,8 +449,7 @@ existing QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -491,9 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -501,14 +468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -516,14 +480,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -531,14 +492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -546,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -674,9 +631,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_direction_csharp">
 <a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -686,8 +641,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minkbps_csharp">
 <a href="#state_minkbps_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
@@ -697,8 +651,7 @@ existing QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_csharp">
 <a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -707,8 +660,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -719,14 +671,11 @@ QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_direction_go">
 <a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -736,8 +685,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minkbps_go">
 <a href="#state_minkbps_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Kbps</a>
@@ -747,8 +695,7 @@ existing QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_go">
 <a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -757,8 +704,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -769,14 +715,11 @@ QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_direction_nodejs">
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -786,8 +729,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minkbps_nodejs">
 <a href="#state_minkbps_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Kbps</a>
@@ -797,8 +739,7 @@ existing QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_nodejs">
 <a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -807,8 +748,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -819,14 +759,11 @@ QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_direction_python">
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -836,8 +773,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
     </dt>
     <dd>{{% md %}}The direction of traffic. Defaults to "egress". Changing this updates the direction of the
 existing QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_kbps_python">
 <a href="#state_min_kbps_python" style="color: inherit; text-decoration: inherit;">min_<wbr>kbps</a>
@@ -847,8 +783,7 @@ existing QoS minimum bandwidth rule.
     </dt>
     <dd>{{% md %}}The minimum kilobits per second. Changing this updates the min kbps value of the existing
 QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qos_policy_id_python">
 <a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -857,8 +792,7 @@ QoS minimum bandwidth rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -869,8 +803,7 @@ QoS minimum bandwidth rule.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -896,6 +829,6 @@ QoS minimum bandwidth rules can be imported using the `qos_policy_id/minimum_ban
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

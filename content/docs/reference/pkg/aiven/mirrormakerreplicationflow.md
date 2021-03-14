@@ -17,11 +17,17 @@ Replication Flows on Aiven Cloud.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -89,9 +98,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -110,9 +122,12 @@ f1 = aiven.MirrorMakerReplicationFlow("f1",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -133,9 +148,16 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MirrorMakerReplicationFlow Resource {#create}
@@ -160,9 +182,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -170,9 +190,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -180,9 +198,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -190,10 +206,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -219,9 +232,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -229,9 +240,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +248,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +256,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,18 +264,13 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -278,9 +278,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -288,9 +286,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -298,10 +294,7 @@ const f1 = new aiven.MirrorMakerReplicationFlow("f1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -316,9 +309,7 @@ The MirrorMakerReplicationFlow resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -327,8 +318,7 @@ The MirrorMakerReplicationFlow resource accepts the following [input]({{< relref
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -338,8 +328,7 @@ The MirrorMakerReplicationFlow resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -348,8 +337,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecluster_csharp">
 <a href="#sourcecluster_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cluster</a>
@@ -358,8 +346,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcluster_csharp">
 <a href="#targetcluster_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster</a>
@@ -368,8 +355,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -378,8 +364,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicsblacklists_csharp">
 <a href="#topicsblacklists_csharp" style="color: inherit; text-decoration: inherit;">Topics<wbr>Blacklists</a>
@@ -388,14 +373,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -404,8 +386,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -415,8 +396,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -425,8 +405,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecluster_go">
 <a href="#sourcecluster_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cluster</a>
@@ -435,8 +414,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcluster_go">
 <a href="#targetcluster_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster</a>
@@ -445,8 +423,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -455,8 +432,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicsblacklists_go">
 <a href="#topicsblacklists_go" style="color: inherit; text-decoration: inherit;">Topics<wbr>Blacklists</a>
@@ -465,14 +441,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -481,8 +454,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -492,8 +464,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -502,8 +473,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecluster_nodejs">
 <a href="#sourcecluster_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cluster</a>
@@ -512,8 +482,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcluster_nodejs">
 <a href="#targetcluster_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Cluster</a>
@@ -522,8 +491,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -532,8 +500,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topicsblacklists_nodejs">
 <a href="#topicsblacklists_nodejs" style="color: inherit; text-decoration: inherit;">topics<wbr>Blacklists</a>
@@ -542,14 +509,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -558,8 +522,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -569,8 +532,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -579,8 +541,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_cluster_python">
 <a href="#source_cluster_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cluster</a>
@@ -589,8 +550,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_cluster_python">
 <a href="#target_cluster_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cluster</a>
@@ -599,8 +559,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -609,8 +568,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_blacklists_python">
 <a href="#topics_blacklists_python" style="color: inherit; text-decoration: inherit;">topics_<wbr>blacklists</a>
@@ -619,8 +577,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -631,9 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -641,14 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,14 +608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -671,14 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -814,9 +759,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_csharp">
 <a href="#state_enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -825,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -836,8 +778,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -846,8 +787,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecluster_csharp">
 <a href="#state_sourcecluster_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cluster</a>
@@ -856,8 +796,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_csharp">
 <a href="#state_targetcluster_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster</a>
@@ -866,8 +805,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_csharp">
 <a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -876,8 +814,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topicsblacklists_csharp">
 <a href="#state_topicsblacklists_csharp" style="color: inherit; text-decoration: inherit;">Topics<wbr>Blacklists</a>
@@ -886,14 +823,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_go">
 <a href="#state_enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -902,8 +836,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -913,8 +846,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -923,8 +855,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecluster_go">
 <a href="#state_sourcecluster_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cluster</a>
@@ -933,8 +864,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_go">
 <a href="#state_targetcluster_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster</a>
@@ -943,8 +873,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_go">
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -953,8 +882,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topicsblacklists_go">
 <a href="#state_topicsblacklists_go" style="color: inherit; text-decoration: inherit;">Topics<wbr>Blacklists</a>
@@ -963,14 +891,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_nodejs">
 <a href="#state_enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -979,8 +904,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -990,8 +914,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1000,8 +923,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecluster_nodejs">
 <a href="#state_sourcecluster_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cluster</a>
@@ -1010,8 +932,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcluster_nodejs">
 <a href="#state_targetcluster_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Cluster</a>
@@ -1020,8 +941,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_nodejs">
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1030,8 +950,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topicsblacklists_nodejs">
 <a href="#state_topicsblacklists_nodejs" style="color: inherit; text-decoration: inherit;">topics<wbr>Blacklists</a>
@@ -1040,14 +959,11 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_python">
 <a href="#state_enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1056,8 +972,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1067,8 +982,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1077,8 +991,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_cluster_python">
 <a href="#state_source_cluster_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cluster</a>
@@ -1087,8 +1000,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a source cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_cluster_python">
 <a href="#state_target_cluster_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cluster</a>
@@ -1097,8 +1009,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a target cluster alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_python">
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1107,8 +1018,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to replicate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_blacklists_python">
 <a href="#state_topics_blacklists_python" style="color: inherit; text-decoration: inherit;">topics_<wbr>blacklists</a>
@@ -1117,8 +1027,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}is a list of topics and/or regular expressions to not replicate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1134,6 +1043,6 @@ Flow belongs to. They should be defined using reference as shown above to set up
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

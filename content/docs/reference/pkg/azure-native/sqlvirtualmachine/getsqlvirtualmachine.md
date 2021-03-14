@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlvirtualmachinename_csharp">
 <a href="#sqlvirtualmachinename_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlvirtualmachinename_go">
 <a href="#sqlvirtualmachinename_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlvirtualmachinename_nodejs">
 <a href="#sqlvirtualmachinename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_virtual_machine_name_python">
 <a href="#sql_virtual_machine_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The child resources to include in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autobackupsettings_csharp">
 <a href="#autobackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup<wbr>Settings</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autobackupsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopatchingsettings_csharp">
 <a href="#autopatchingsettings_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching<wbr>Settings</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopatchingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultcredentialsettings_csharp">
 <a href="#keyvaultcredentialsettings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential<wbr>Settings</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverconfigurationsmanagementsettings_csharp">
 <a href="#serverconfigurationsmanagementsettings_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Configurations<wbr>Management<wbr>Settings</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimageoffer_csharp">
 <a href="#sqlimageoffer_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Offer</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimagesku_csharp">
 <a href="#sqlimagesku_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlmanagement_csharp">
 <a href="#sqlmanagement_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Management</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlserverlicensetype_csharp">
 <a href="#sqlserverlicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>License<wbr>Type</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlvirtualmachinegroupresourceid_csharp">
 <a href="#sqlvirtualmachinegroupresourceid_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Resource<wbr>Id</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageconfigurationsettings_csharp">
 <a href="#storageconfigurationsettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration<wbr>Settings</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageconfigurationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineresourceid_csharp">
 <a href="#virtualmachineresourceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Resource<wbr>Id</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wsfcdomaincredentials_csharp">
 <a href="#wsfcdomaincredentials_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Credentials</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Outputs.<wbr>Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autobackupsettings_go">
 <a href="#autobackupsettings_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup<wbr>Settings</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopatchingsettings_go">
 <a href="#autopatchingsettings_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching<wbr>Settings</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultcredentialsettings_go">
 <a href="#keyvaultcredentialsettings_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential<wbr>Settings</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverconfigurationsmanagementsettings_go">
 <a href="#serverconfigurationsmanagementsettings_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Configurations<wbr>Management<wbr>Settings</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimageoffer_go">
 <a href="#sqlimageoffer_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Offer</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimagesku_go">
 <a href="#sqlimagesku_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlmanagement_go">
 <a href="#sqlmanagement_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Management</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlserverlicensetype_go">
 <a href="#sqlserverlicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>License<wbr>Type</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlvirtualmachinegroupresourceid_go">
 <a href="#sqlvirtualmachinegroupresourceid_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Resource<wbr>Id</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageconfigurationsettings_go">
 <a href="#storageconfigurationsettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration<wbr>Settings</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineresourceid_go">
 <a href="#virtualmachineresourceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Resource<wbr>Id</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wsfcdomaincredentials_go">
 <a href="#wsfcdomaincredentials_go" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Credentials</a>
@@ -541,14 +480,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autobackupsettings_nodejs">
 <a href="#autobackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup<wbr>Settings</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autopatchingsettings_nodejs">
 <a href="#autopatchingsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching<wbr>Settings</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultcredentialsettings_nodejs">
 <a href="#keyvaultcredentialsettings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential<wbr>Settings</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverconfigurationsmanagementsettings_nodejs">
 <a href="#serverconfigurationsmanagementsettings_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Configurations<wbr>Management<wbr>Settings</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimageoffer_nodejs">
 <a href="#sqlimageoffer_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Offer</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlimagesku_nodejs">
 <a href="#sqlimagesku_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Sku</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlmanagement_nodejs">
 <a href="#sqlmanagement_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Management</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlserverlicensetype_nodejs">
 <a href="#sqlserverlicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>License<wbr>Type</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sqlvirtualmachinegroupresourceid_nodejs">
 <a href="#sqlvirtualmachinegroupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Resource<wbr>Id</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageconfigurationsettings_nodejs">
 <a href="#storageconfigurationsettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration<wbr>Settings</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachineresourceid_nodejs">
 <a href="#virtualmachineresourceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Resource<wbr>Id</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wsfcdomaincredentials_nodejs">
 <a href="#wsfcdomaincredentials_nodejs" style="color: inherit; text-decoration: inherit;">wsfc<wbr>Domain<wbr>Credentials</a>
@@ -718,14 +636,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_backup_settings_python">
 <a href="#auto_backup_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup_<wbr>settings</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_patching_settings_python">
 <a href="#auto_patching_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching_<wbr>settings</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_vault_credential_settings_python">
 <a href="#key_vault_credential_settings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential_<wbr>settings</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_configurations_management_settings_python">
 <a href="#server_configurations_management_settings_python" style="color: inherit; text-decoration: inherit;">server_<wbr>configurations_<wbr>management_<wbr>settings</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sql_image_offer_python">
 <a href="#sql_image_offer_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>offer</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sql_image_sku_python">
 <a href="#sql_image_sku_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>sku</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sql_management_python">
 <a href="#sql_management_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>management</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sql_server_license_type_python">
 <a href="#sql_server_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>license_<wbr>type</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sql_virtual_machine_group_resource_id_python">
 <a href="#sql_virtual_machine_group_resource_id_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>group_<wbr>resource_<wbr>id</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_configuration_settings_python">
 <a href="#storage_configuration_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration_<wbr>settings</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machine_resource_id_python">
 <a href="#virtual_machine_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>resource_<wbr>id</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wsfc_domain_credentials_python">
 <a href="#wsfc_domain_credentials_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>credentials</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isrservicesenabled_csharp">
 <a href="#isrservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>RServices<wbr>Enabled</a>
@@ -920,14 +814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isrservicesenabled_go">
 <a href="#isrservicesenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>RServices<wbr>Enabled</a>
@@ -935,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isrservicesenabled_nodejs">
 <a href="#isrservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>RServices<wbr>Enabled</a>
@@ -950,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="is_r_services_enabled_python">
 <a href="#is_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>r_<wbr>services_<wbr>enabled</a>
@@ -965,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</h4>
@@ -974,9 +858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscheduletype_csharp">
 <a href="#backupscheduletype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
@@ -984,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupsystemdbs_csharp">
 <a href="#backupsystemdbs_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>System<wbr>Dbs</a>
@@ -993,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1002,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryption_csharp">
 <a href="#enableencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption</a>
@@ -1011,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupfrequency_csharp">
 <a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupstarttime_csharp">
 <a href="#fullbackupstarttime_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Time</a>
@@ -1029,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupwindowhours_csharp">
 <a href="#fullbackupwindowhours_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>Hours</a>
@@ -1038,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_csharp">
 <a href="#logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -1047,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1056,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1065,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccesskey_csharp">
 <a href="#storageaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
@@ -1074,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1083,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscheduletype_go">
 <a href="#backupscheduletype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
@@ -1098,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupsystemdbs_go">
 <a href="#backupsystemdbs_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>System<wbr>Dbs</a>
@@ -1107,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1116,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryption_go">
 <a href="#enableencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption</a>
@@ -1125,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupfrequency_go">
 <a href="#fullbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
@@ -1134,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupstarttime_go">
 <a href="#fullbackupstarttime_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Time</a>
@@ -1143,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupwindowhours_go">
 <a href="#fullbackupwindowhours_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>Hours</a>
@@ -1152,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_go">
 <a href="#logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
@@ -1161,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1170,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1179,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccesskey_go">
 <a href="#storageaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
@@ -1188,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1197,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscheduletype_nodejs">
 <a href="#backupscheduletype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Type</a>
@@ -1212,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupsystemdbs_nodejs">
 <a href="#backupsystemdbs_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>System<wbr>Dbs</a>
@@ -1221,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1230,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryption_nodejs">
 <a href="#enableencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption</a>
@@ -1239,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupfrequency_nodejs">
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
@@ -1248,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupstarttime_nodejs">
 <a href="#fullbackupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Time</a>
@@ -1257,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullbackupwindowhours_nodejs">
 <a href="#fullbackupwindowhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>Hours</a>
@@ -1266,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_nodejs">
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
@@ -1275,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1284,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -1293,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccesskey_nodejs">
 <a href="#storageaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Access<wbr>Key</a>
@@ -1302,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -1311,14 +1154,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backup_schedule_type_python">
 <a href="#backup_schedule_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>type</a>
@@ -1326,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_system_dbs_python">
 <a href="#backup_system_dbs_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>system_<wbr>dbs</a>
@@ -1335,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1344,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_encryption_python">
 <a href="#enable_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption</a>
@@ -1353,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_backup_frequency_python">
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
@@ -1362,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_backup_start_time_python">
 <a href="#full_backup_start_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>time</a>
@@ -1371,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_backup_window_hours_python">
 <a href="#full_backup_window_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>hours</a>
@@ -1380,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_backup_frequency_python">
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
@@ -1389,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1398,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -1407,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_access_key_python">
 <a href="#storage_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>access_<wbr>key</a>
@@ -1416,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -1425,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</h4>
@@ -1434,9 +1262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -1444,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1453,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowduration_csharp">
 <a href="#maintenancewindowduration_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration</a>
@@ -1462,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstartinghour_csharp">
 <a href="#maintenancewindowstartinghour_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -1471,14 +1294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -1486,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1495,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowduration_go">
 <a href="#maintenancewindowduration_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration</a>
@@ -1504,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstartinghour_go">
 <a href="#maintenancewindowstartinghour_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -1513,14 +1330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -1528,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1537,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowduration_nodejs">
 <a href="#maintenancewindowduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration</a>
@@ -1546,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstartinghour_nodejs">
 <a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -1555,14 +1366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -1570,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1579,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_duration_python">
 <a href="#maintenance_window_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration</a>
@@ -1588,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_starting_hour_python">
 <a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
@@ -1597,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</h4>
@@ -1606,9 +1410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaulturl_csharp">
 <a href="#azurekeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -1616,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialname_csharp">
 <a href="#credentialname_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Name</a>
@@ -1625,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1634,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalname_csharp">
 <a href="#serviceprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
@@ -1643,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalsecret_csharp">
 <a href="#serviceprincipalsecret_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
@@ -1652,14 +1450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaulturl_go">
 <a href="#azurekeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -1667,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialname_go">
 <a href="#credentialname_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Name</a>
@@ -1676,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -1685,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalname_go">
 <a href="#serviceprincipalname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
@@ -1694,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalsecret_go">
 <a href="#serviceprincipalsecret_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
@@ -1703,14 +1494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaulturl_nodejs">
 <a href="#azurekeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -1718,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialname_nodejs">
 <a href="#credentialname_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Name</a>
@@ -1727,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1736,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalname_nodejs">
 <a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
@@ -1745,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalsecret_nodejs">
 <a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
@@ -1754,14 +1538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_url_python">
 <a href="#azure_key_vault_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>url</a>
@@ -1769,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credential_name_python">
 <a href="#credential_name_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>name</a>
@@ -1778,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -1787,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_name_python">
 <a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
@@ -1796,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_secret_python">
 <a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
@@ -1805,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
@@ -1814,9 +1590,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1824,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1833,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1842,14 +1614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1857,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1866,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1875,14 +1642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1890,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1899,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1908,14 +1670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1923,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1932,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1941,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</h4>
@@ -1950,9 +1706,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultfilepath_csharp">
 <a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -1960,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -1969,14 +1722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultfilepath_go">
 <a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -1984,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -1993,14 +1742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultfilepath_nodejs">
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
@@ -2008,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2017,14 +1762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_file_path_python">
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
@@ -2032,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2041,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</h4>
@@ -2050,9 +1790,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalfeaturesserverconfigurations_csharp">
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
@@ -2060,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatesettings_csharp">
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
@@ -2069,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlstorageupdatesettings_csharp">
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
@@ -2078,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtypeupdatesettings_csharp">
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
@@ -2087,14 +1822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalfeaturesserverconfigurations_go">
 <a href="#additionalfeaturesserverconfigurations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
@@ -2102,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatesettings_go">
 <a href="#sqlconnectivityupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
@@ -2111,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlstorageupdatesettings_go">
 <a href="#sqlstorageupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
@@ -2120,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtypeupdatesettings_go">
 <a href="#sqlworkloadtypeupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
@@ -2129,14 +1858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalfeaturesserverconfigurations_nodejs">
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
@@ -2144,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatesettings_nodejs">
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
@@ -2153,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlstorageupdatesettings_nodejs">
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
@@ -2162,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtypeupdatesettings_nodejs">
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
@@ -2171,14 +1894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_features_server_configurations_python">
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
@@ -2186,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_connectivity_update_settings_python">
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
@@ -2195,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_storage_update_settings_python">
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
@@ -2204,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_workload_type_update_settings_python">
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
@@ -2213,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</h4>
@@ -2222,9 +1938,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectivitytype_csharp">
 <a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
@@ -2232,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2241,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdatepassword_csharp">
 <a href="#sqlauthupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
@@ -2250,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdateusername_csharp">
 <a href="#sqlauthupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
@@ -2259,14 +1970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectivitytype_go">
 <a href="#connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
@@ -2274,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2283,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdatepassword_go">
 <a href="#sqlauthupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
@@ -2292,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdateusername_go">
 <a href="#sqlauthupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
@@ -2301,14 +2006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectivitytype_nodejs">
 <a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
@@ -2316,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2325,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdatepassword_nodejs">
 <a href="#sqlauthupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>Password</a>
@@ -2334,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlauthupdateusername_nodejs">
 <a href="#sqlauthupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
@@ -2343,14 +2042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectivity_type_python">
 <a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
@@ -2358,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2367,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_auth_update_password_python">
 <a href="#sql_auth_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>password</a>
@@ -2376,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_auth_update_user_name_python">
 <a href="#sql_auth_update_user_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>user_<wbr>name</a>
@@ -2385,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</h4>
@@ -2394,9 +2086,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_csharp">
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
@@ -2404,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskcount_csharp">
 <a href="#diskcount_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
@@ -2413,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startingdeviceid_csharp">
 <a href="#startingdeviceid_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Device<wbr>Id</a>
@@ -2422,14 +2110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_go">
 <a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
@@ -2437,8 +2122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskcount_go">
 <a href="#diskcount_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
@@ -2446,8 +2130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startingdeviceid_go">
 <a href="#startingdeviceid_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Device<wbr>Id</a>
@@ -2455,14 +2138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_nodejs">
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
@@ -2470,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskcount_nodejs">
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
@@ -2479,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startingdeviceid_nodejs">
 <a href="#startingdeviceid_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Device<wbr>Id</a>
@@ -2488,14 +2166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_configuration_type_python">
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
@@ -2503,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_count_python">
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
@@ -2512,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starting_device_id_python">
 <a href="#starting_device_id_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>device_<wbr>id</a>
@@ -2521,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</h4>
@@ -2530,9 +2202,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtype_csharp">
 <a href="#sqlworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
@@ -2540,14 +2210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtype_go">
 <a href="#sqlworkloadtype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
@@ -2555,14 +2222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sqlworkloadtype_nodejs">
 <a href="#sqlworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type</a>
@@ -2570,14 +2234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sql_workload_type_python">
 <a href="#sql_workload_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type</a>
@@ -2585,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</h4>
@@ -2594,9 +2254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_csharp">
 <a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
@@ -2604,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatasettings_csharp">
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
@@ -2613,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqllogsettings_csharp">
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
@@ -2622,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqltempdbsettings_csharp">
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
@@ -2631,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageworkloadtype_csharp">
 <a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
@@ -2640,14 +2294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_go">
 <a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
@@ -2655,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatasettings_go">
 <a href="#sqldatasettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
@@ -2664,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqllogsettings_go">
 <a href="#sqllogsettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
@@ -2673,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqltempdbsettings_go">
 <a href="#sqltempdbsettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
@@ -2682,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageworkloadtype_go">
 <a href="#storageworkloadtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
@@ -2691,14 +2338,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskconfigurationtype_nodejs">
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
@@ -2706,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatasettings_nodejs">
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
@@ -2715,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqllogsettings_nodejs">
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
@@ -2724,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqltempdbsettings_nodejs">
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
@@ -2733,8 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageworkloadtype_nodejs">
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
@@ -2742,14 +2382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_configuration_type_python">
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
@@ -2757,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_data_settings_python">
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
@@ -2766,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_log_settings_python">
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
@@ -2775,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_temp_db_settings_python">
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
@@ -2784,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_workload_type_python">
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
@@ -2793,8 +2426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</h4>
@@ -2802,9 +2434,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccountpassword_csharp">
 <a href="#clusterbootstrapaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
@@ -2812,8 +2442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccountpassword_csharp">
 <a href="#clusteroperatoraccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account<wbr>Password</a>
@@ -2821,8 +2450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccountpassword_csharp">
 <a href="#sqlserviceaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account<wbr>Password</a>
@@ -2830,14 +2458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccountpassword_go">
 <a href="#clusterbootstrapaccountpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
@@ -2845,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccountpassword_go">
 <a href="#clusteroperatoraccountpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account<wbr>Password</a>
@@ -2854,8 +2478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccountpassword_go">
 <a href="#sqlserviceaccountpassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account<wbr>Password</a>
@@ -2863,14 +2486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccountpassword_nodejs">
 <a href="#clusterbootstrapaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
@@ -2878,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccountpassword_nodejs">
 <a href="#clusteroperatoraccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account<wbr>Password</a>
@@ -2887,8 +2506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccountpassword_nodejs">
 <a href="#sqlserviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account<wbr>Password</a>
@@ -2896,14 +2514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_bootstrap_account_password_python">
 <a href="#cluster_bootstrap_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account_<wbr>password</a>
@@ -2911,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_operator_account_password_python">
 <a href="#cluster_operator_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account_<wbr>password</a>
@@ -2920,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_service_account_password_python">
 <a href="#sql_service_account_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account_<wbr>password</a>
@@ -2929,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

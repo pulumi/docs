@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_csharp">
 <a href="#automationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulename_csharp">
 <a href="#schedulename_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The schedule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_go">
 <a href="#automationaccountname_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulename_go">
 <a href="#schedulename_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The schedule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountname_nodejs">
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulename_nodejs">
 <a href="#schedulename_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The schedule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automation_account_name_python">
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_name_python">
 <a href="#schedule_name_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schedule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The schedule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttimeoffsetminutes_csharp">
 <a href="#starttimeoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advancedschedule_csharp">
 <a href="#advancedschedule_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Outputs.<wbr>Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytime_csharp">
 <a href="#expirytime_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytimeoffsetminutes_csharp">
 <a href="#expirytimeoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrun_csharp">
 <a href="#nextrun_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrunoffsetminutes_csharp">
 <a href="#nextrunoffsetminutes_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -346,14 +308,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttimeoffsetminutes_go">
 <a href="#starttimeoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advancedschedule_go">
 <a href="#advancedschedule_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytime_go">
 <a href="#expirytime_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytimeoffsetminutes_go">
 <a href="#expirytimeoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrun_go">
 <a href="#nextrun_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrunoffsetminutes_go">
 <a href="#nextrunoffsetminutes_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -505,14 +448,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttimeoffsetminutes_nodejs">
 <a href="#starttimeoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advancedschedule_nodejs">
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytime_nodejs">
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirytimeoffsetminutes_nodejs">
 <a href="#expirytimeoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time<wbr>Offset<wbr>Minutes</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrun_nodejs">
 <a href="#nextrun_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextrunoffsetminutes_nodejs">
 <a href="#nextrunoffsetminutes_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Offset<wbr>Minutes</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -664,14 +588,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_offset_minutes_python">
 <a href="#start_time_offset_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset_<wbr>minutes</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the start time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advanced_schedule_python">
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_time_python">
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_time_offset_minutes_python">
 <a href="#expiry_time_offset_minutes_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time_<wbr>offset_<wbr>minutes</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the expiry time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets a value indicating whether this schedule is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_run_python">
 <a href="#next_run_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_run_offset_minutes_python">
 <a href="#next_run_offset_minutes_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>offset_<wbr>minutes</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the next run time's offset in minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -838,9 +742,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -848,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_csharp">
 <a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -857,14 +758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -872,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_go">
 <a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -881,14 +778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -896,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_nodejs">
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -905,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -920,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_python">
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -929,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</h4>
@@ -938,9 +826,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_csharp">
 <a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -948,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_csharp">
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -957,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -966,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_go">
 <a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -981,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_go">
 <a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -990,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">[]Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -999,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthdays_nodejs">
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
@@ -1014,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_nodejs">
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
@@ -1023,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
@@ -1032,14 +906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="month_days_python">
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_occurrences_python">
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_days_python">
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

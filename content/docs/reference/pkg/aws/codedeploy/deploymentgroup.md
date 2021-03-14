@@ -15,11 +15,17 @@ Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 > **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -116,9 +122,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -204,9 +213,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -263,9 +275,12 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -325,10 +340,17 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Blue Green Deployments with ECS
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -407,13 +429,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -462,9 +490,12 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -515,10 +546,17 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Blue Green Deployments with Servers and Classic ELB
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -572,9 +610,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -625,9 +666,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -660,9 +704,12 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -697,9 +744,16 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DeploymentGroup Resource {#create}
@@ -724,9 +778,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -734,9 +786,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -744,9 +794,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -754,10 +802,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -783,9 +828,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -793,9 +836,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -803,9 +844,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -813,9 +852,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -823,18 +860,13 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -842,9 +874,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -852,9 +882,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -862,10 +890,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -880,9 +905,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_csharp">
 <a href="#appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -891,8 +914,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_csharp">
 <a href="#deploymentgroupname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -901,8 +923,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicerolearn_csharp">
 <a href="#servicerolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -911,8 +932,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alarmconfiguration_csharp">
 <a href="#alarmconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
@@ -921,8 +941,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorollbackconfiguration_csharp">
 <a href="#autorollbackconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
@@ -931,8 +950,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggroups_csharp">
 <a href="#autoscalinggroups_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -941,8 +959,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bluegreendeploymentconfig_csharp">
 <a href="#bluegreendeploymentconfig_csharp" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -951,8 +968,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentconfigname_csharp">
 <a href="#deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -961,8 +977,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstyle_csharp">
 <a href="#deploymentstyle_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
@@ -971,8 +986,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_csharp">
 <a href="#ec2tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -981,8 +995,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagsets_csharp">
 <a href="#ec2tagsets_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
@@ -991,8 +1004,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecsservice_csharp">
 <a href="#ecsservice_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
@@ -1001,8 +1013,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinfo_csharp">
 <a href="#loadbalancerinfo_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
@@ -1011,8 +1022,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpremisesinstancetagfilters_csharp">
 <a href="#onpremisesinstancetagfilters_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -1021,8 +1031,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerconfigurations_csharp">
 <a href="#triggerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
@@ -1031,14 +1040,11 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_go">
 <a href="#appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -1047,8 +1053,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_go">
 <a href="#deploymentgroupname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -1057,8 +1062,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicerolearn_go">
 <a href="#servicerolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -1067,8 +1071,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alarmconfiguration_go">
 <a href="#alarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
@@ -1077,8 +1080,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorollbackconfiguration_go">
 <a href="#autorollbackconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
@@ -1087,8 +1089,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggroups_go">
 <a href="#autoscalinggroups_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1097,8 +1098,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bluegreendeploymentconfig_go">
 <a href="#bluegreendeploymentconfig_go" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -1107,8 +1107,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentconfigname_go">
 <a href="#deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -1117,8 +1116,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstyle_go">
 <a href="#deploymentstyle_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
@@ -1127,8 +1125,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_go">
 <a href="#ec2tagfilters_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -1137,8 +1134,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagsets_go">
 <a href="#ec2tagsets_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
@@ -1147,8 +1143,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecsservice_go">
 <a href="#ecsservice_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
@@ -1157,8 +1152,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinfo_go">
 <a href="#loadbalancerinfo_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
@@ -1167,8 +1161,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpremisesinstancetagfilters_go">
 <a href="#onpremisesinstancetagfilters_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -1177,8 +1170,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerconfigurations_go">
 <a href="#triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
@@ -1187,14 +1179,11 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_nodejs">
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
@@ -1203,8 +1192,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_nodejs">
 <a href="#deploymentgroupname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
@@ -1213,8 +1201,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicerolearn_nodejs">
 <a href="#servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
@@ -1223,8 +1210,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alarmconfiguration_nodejs">
 <a href="#alarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Configuration</a>
@@ -1233,8 +1219,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorollbackconfiguration_nodejs">
 <a href="#autorollbackconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rollback<wbr>Configuration</a>
@@ -1243,8 +1228,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalinggroups_nodejs">
 <a href="#autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
@@ -1253,8 +1237,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bluegreendeploymentconfig_nodejs">
 <a href="#bluegreendeploymentconfig_nodejs" style="color: inherit; text-decoration: inherit;">blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -1263,8 +1246,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentconfigname_nodejs">
 <a href="#deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
@@ -1273,8 +1255,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstyle_nodejs">
 <a href="#deploymentstyle_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Style</a>
@@ -1283,8 +1264,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_nodejs">
 <a href="#ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
@@ -1293,8 +1273,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2tagsets_nodejs">
 <a href="#ec2tagsets_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Sets</a>
@@ -1303,8 +1282,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecsservice_nodejs">
 <a href="#ecsservice_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Service</a>
@@ -1313,8 +1291,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinfo_nodejs">
 <a href="#loadbalancerinfo_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Info</a>
@@ -1323,8 +1300,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpremisesinstancetagfilters_nodejs">
 <a href="#onpremisesinstancetagfilters_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -1333,8 +1309,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerconfigurations_nodejs">
 <a href="#triggerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Configurations</a>
@@ -1343,14 +1318,11 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_name_python">
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
@@ -1359,8 +1331,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_group_name_python">
 <a href="#deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
@@ -1369,8 +1340,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_role_arn_python">
 <a href="#service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
@@ -1379,8 +1349,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alarm_configuration_python">
 <a href="#alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
@@ -1389,8 +1358,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_rollback_configuration_python">
 <a href="#auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
@@ -1399,8 +1367,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_groups_python">
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
@@ -1409,8 +1376,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blue_green_deployment_config_python">
 <a href="#blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
@@ -1419,8 +1385,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_config_name_python">
 <a href="#deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
@@ -1429,8 +1394,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_style_python">
 <a href="#deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
@@ -1439,8 +1403,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2_tag_filters_python">
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
@@ -1449,8 +1412,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2_tag_sets_python">
 <a href="#ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
@@ -1459,8 +1421,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecs_service_python">
 <a href="#ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
@@ -1469,8 +1430,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancer_info_python">
 <a href="#load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
@@ -1479,8 +1439,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_premises_instance_tag_filters_python">
 <a href="#on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
@@ -1489,8 +1448,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_configurations_python">
 <a href="#trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
@@ -1499,8 +1457,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1511,9 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1521,14 +1476,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1536,14 +1488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1551,14 +1500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1566,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1694,9 +1639,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmconfiguration_csharp">
 <a href="#state_alarmconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
@@ -1705,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appname_csharp">
 <a href="#state_appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -1715,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorollbackconfiguration_csharp">
 <a href="#state_autorollbackconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
@@ -1725,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_csharp">
 <a href="#state_autoscalinggroups_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1735,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bluegreendeploymentconfig_csharp">
 <a href="#state_bluegreendeploymentconfig_csharp" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -1745,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_csharp">
 <a href="#state_deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -1755,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_csharp">
 <a href="#state_deploymentgroupname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -1765,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstyle_csharp">
 <a href="#state_deploymentstyle_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
@@ -1775,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagfilters_csharp">
 <a href="#state_ec2tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -1785,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagsets_csharp">
 <a href="#state_ec2tagsets_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
@@ -1795,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecsservice_csharp">
 <a href="#state_ecsservice_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
@@ -1805,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerinfo_csharp">
 <a href="#state_loadbalancerinfo_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
@@ -1815,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisesinstancetagfilters_csharp">
 <a href="#state_onpremisesinstancetagfilters_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -1825,8 +1756,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_csharp">
 <a href="#state_servicerolearn_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -1835,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerconfigurations_csharp">
 <a href="#state_triggerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
@@ -1845,14 +1774,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmconfiguration_go">
 <a href="#state_alarmconfiguration_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Configuration</a>
@@ -1861,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appname_go">
 <a href="#state_appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -1871,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorollbackconfiguration_go">
 <a href="#state_autorollbackconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Rollback<wbr>Configuration</a>
@@ -1881,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_go">
 <a href="#state_autoscalinggroups_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1891,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bluegreendeploymentconfig_go">
 <a href="#state_bluegreendeploymentconfig_go" style="color: inherit; text-decoration: inherit;">Blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -1901,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_go">
 <a href="#state_deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -1911,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_go">
 <a href="#state_deploymentgroupname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -1921,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstyle_go">
 <a href="#state_deploymentstyle_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Style</a>
@@ -1931,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagfilters_go">
 <a href="#state_ec2tagfilters_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -1941,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagsets_go">
 <a href="#state_ec2tagsets_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Sets</a>
@@ -1951,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecsservice_go">
 <a href="#state_ecsservice_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Service</a>
@@ -1961,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerinfo_go">
 <a href="#state_loadbalancerinfo_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Info</a>
@@ -1971,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisesinstancetagfilters_go">
 <a href="#state_onpremisesinstancetagfilters_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -1981,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_go">
 <a href="#state_servicerolearn_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role<wbr>Arn</a>
@@ -1991,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerconfigurations_go">
 <a href="#state_triggerconfigurations_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Configurations</a>
@@ -2001,14 +1913,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmconfiguration_nodejs">
 <a href="#state_alarmconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Configuration</a>
@@ -2017,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appname_nodejs">
 <a href="#state_appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
@@ -2027,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorollbackconfiguration_nodejs">
 <a href="#state_autorollbackconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Rollback<wbr>Configuration</a>
@@ -2037,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_nodejs">
 <a href="#state_autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
@@ -2047,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bluegreendeploymentconfig_nodejs">
 <a href="#state_bluegreendeploymentconfig_nodejs" style="color: inherit; text-decoration: inherit;">blue<wbr>Green<wbr>Deployment<wbr>Config</a>
@@ -2057,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_nodejs">
 <a href="#state_deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
@@ -2067,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentgroupname_nodejs">
 <a href="#state_deploymentgroupname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
@@ -2077,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstyle_nodejs">
 <a href="#state_deploymentstyle_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Style</a>
@@ -2087,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagfilters_nodejs">
 <a href="#state_ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
@@ -2097,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2tagsets_nodejs">
 <a href="#state_ec2tagsets_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Sets</a>
@@ -2107,8 +2007,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecsservice_nodejs">
 <a href="#state_ecsservice_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Service</a>
@@ -2117,8 +2016,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerinfo_nodejs">
 <a href="#state_loadbalancerinfo_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Info</a>
@@ -2127,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisesinstancetagfilters_nodejs">
 <a href="#state_onpremisesinstancetagfilters_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
@@ -2137,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerolearn_nodejs">
 <a href="#state_servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
@@ -2147,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerconfigurations_nodejs">
 <a href="#state_triggerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Configurations</a>
@@ -2157,14 +2052,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarm_configuration_python">
 <a href="#state_alarm_configuration_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>configuration</a>
@@ -2173,8 +2065,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_name_python">
 <a href="#state_app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
@@ -2183,8 +2074,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_rollback_configuration_python">
 <a href="#state_auto_rollback_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>rollback_<wbr>configuration</a>
@@ -2193,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_groups_python">
 <a href="#state_autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
@@ -2203,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blue_green_deployment_config_python">
 <a href="#state_blue_green_deployment_config_python" style="color: inherit; text-decoration: inherit;">blue_<wbr>green_<wbr>deployment_<wbr>config</a>
@@ -2213,8 +2101,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_name_python">
 <a href="#state_deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
@@ -2223,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_group_name_python">
 <a href="#state_deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
@@ -2233,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_style_python">
 <a href="#state_deployment_style_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>style</a>
@@ -2243,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2_tag_filters_python">
 <a href="#state_ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
@@ -2253,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2_tag_sets_python">
 <a href="#state_ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
@@ -2263,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecs_service_python">
 <a href="#state_ecs_service_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>service</a>
@@ -2273,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_info_python">
 <a href="#state_load_balancer_info_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>info</a>
@@ -2283,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_on_premises_instance_tag_filters_python">
 <a href="#state_on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
@@ -2293,8 +2173,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_role_arn_python">
 <a href="#state_service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
@@ -2303,8 +2182,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_configurations_python">
 <a href="#state_trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
@@ -2313,8 +2191,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2329,9 +2206,7 @@ The following state arguments are supported:
 <h4 id="deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alarms_csharp">
 <a href="#alarms_csharp" style="color: inherit; text-decoration: inherit;">Alarms</a>
@@ -2340,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2350,8 +2224,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepollalarmfailure_csharp">
 <a href="#ignorepollalarmfailure_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Poll<wbr>Alarm<wbr>Failure</a>
@@ -2362,14 +2235,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
 * `false`: The deployment will stop if alarm status information can't be retrieved.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alarms_go">
 <a href="#alarms_go" style="color: inherit; text-decoration: inherit;">Alarms</a>
@@ -2378,8 +2248,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2388,8 +2257,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepollalarmfailure_go">
 <a href="#ignorepollalarmfailure_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Poll<wbr>Alarm<wbr>Failure</a>
@@ -2400,14 +2268,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
 * `false`: The deployment will stop if alarm status information can't be retrieved.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alarms_nodejs">
 <a href="#alarms_nodejs" style="color: inherit; text-decoration: inherit;">alarms</a>
@@ -2416,8 +2281,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2426,8 +2290,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepollalarmfailure_nodejs">
 <a href="#ignorepollalarmfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Poll<wbr>Alarm<wbr>Failure</a>
@@ -2438,14 +2301,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
 * `false`: The deployment will stop if alarm status information can't be retrieved.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alarms_python">
 <a href="#alarms_python" style="color: inherit; text-decoration: inherit;">alarms</a>
@@ -2454,8 +2314,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2464,8 +2323,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_poll_alarm_failure_python">
 <a href="#ignore_poll_alarm_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>poll_<wbr>alarm_<wbr>failure</a>
@@ -2476,16 +2334,13 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
 * `false`: The deployment will stop if alarm status information can't be retrieved.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2494,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -2504,14 +2358,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2520,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -2530,14 +2380,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2546,8 +2393,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2556,14 +2402,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2572,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2582,16 +2424,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentreadyoption_csharp">
 <a href="#deploymentreadyoption_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Ready<wbr>Option</a>
@@ -2600,8 +2439,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="greenfleetprovisioningoption_csharp">
 <a href="#greenfleetprovisioningoption_csharp" style="color: inherit; text-decoration: inherit;">Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
@@ -2610,8 +2448,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateblueinstancesondeploymentsuccess_csharp">
 <a href="#terminateblueinstancesondeploymentsuccess_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
@@ -2620,14 +2457,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentreadyoption_go">
 <a href="#deploymentreadyoption_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Ready<wbr>Option</a>
@@ -2636,8 +2470,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="greenfleetprovisioningoption_go">
 <a href="#greenfleetprovisioningoption_go" style="color: inherit; text-decoration: inherit;">Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
@@ -2646,8 +2479,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateblueinstancesondeploymentsuccess_go">
 <a href="#terminateblueinstancesondeploymentsuccess_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
@@ -2656,14 +2488,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentreadyoption_nodejs">
 <a href="#deploymentreadyoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Ready<wbr>Option</a>
@@ -2672,8 +2501,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="greenfleetprovisioningoption_nodejs">
 <a href="#greenfleetprovisioningoption_nodejs" style="color: inherit; text-decoration: inherit;">green<wbr>Fleet<wbr>Provisioning<wbr>Option</a>
@@ -2682,8 +2510,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateblueinstancesondeploymentsuccess_nodejs">
 <a href="#terminateblueinstancesondeploymentsuccess_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a>
@@ -2692,14 +2519,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deployment_ready_option_python">
 <a href="#deployment_ready_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>ready_<wbr>option</a>
@@ -2708,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="green_fleet_provisioning_option_python">
 <a href="#green_fleet_provisioning_option_python" style="color: inherit; text-decoration: inherit;">green_<wbr>fleet_<wbr>provisioning_<wbr>option</a>
@@ -2718,8 +2541,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminate_blue_instances_on_deployment_success_python">
 <a href="#terminate_blue_instances_on_deployment_success_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>blue_<wbr>instances_<wbr>on_<wbr>deployment_<wbr>success</a>
@@ -2728,16 +2550,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionontimeout_csharp">
 <a href="#actionontimeout_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>On<wbr>Timeout</a>
@@ -2748,8 +2567,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
 * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeinminutes_csharp">
 <a href="#waittimeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -2758,14 +2576,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionontimeout_go">
 <a href="#actionontimeout_go" style="color: inherit; text-decoration: inherit;">Action<wbr>On<wbr>Timeout</a>
@@ -2776,8 +2591,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
 * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeinminutes_go">
 <a href="#waittimeinminutes_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -2786,14 +2600,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionontimeout_nodejs">
 <a href="#actionontimeout_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>On<wbr>Timeout</a>
@@ -2804,8 +2615,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
 * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeinminutes_nodejs">
 <a href="#waittimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -2814,14 +2624,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_on_timeout_python">
 <a href="#action_on_timeout_python" style="color: inherit; text-decoration: inherit;">action_<wbr>on_<wbr>timeout</a>
@@ -2832,8 +2639,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
 * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_time_in_minutes_python">
 <a href="#wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time_<wbr>in_<wbr>minutes</a>
@@ -2842,16 +2648,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2862,14 +2665,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
 * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2880,14 +2680,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
 * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2898,14 +2695,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
 * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2916,16 +2710,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
 * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2936,8 +2727,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
 * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationwaittimeinminutes_csharp">
 <a href="#terminationwaittimeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -2946,14 +2736,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2964,8 +2751,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
 * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationwaittimeinminutes_go">
 <a href="#terminationwaittimeinminutes_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -2974,14 +2760,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2992,8 +2775,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
 * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationwaittimeinminutes_nodejs">
 <a href="#terminationwaittimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</a>
@@ -3002,14 +2784,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -3020,8 +2799,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
 * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_wait_time_in_minutes_python">
 <a href="#termination_wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>wait_<wbr>time_<wbr>in_<wbr>minutes</a>
@@ -3030,16 +2808,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentoption_csharp">
 <a href="#deploymentoption_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Option</a>
@@ -3048,8 +2823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_csharp">
 <a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
@@ -3058,14 +2832,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentoption_go">
 <a href="#deploymentoption_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Option</a>
@@ -3074,8 +2845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_go">
 <a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
@@ -3084,14 +2854,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentoption_nodejs">
 <a href="#deploymentoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Option</a>
@@ -3100,8 +2867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_nodejs">
 <a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
@@ -3110,14 +2876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deployment_option_python">
 <a href="#deployment_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>option</a>
@@ -3126,8 +2889,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_type_python">
 <a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
@@ -3136,16 +2898,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3154,8 +2913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3164,8 +2922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3174,14 +2931,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3190,8 +2944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3200,8 +2953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3210,14 +2962,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3226,8 +2975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3236,8 +2984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3246,14 +2993,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3262,8 +3006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3272,8 +3015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3282,16 +3024,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_csharp">
 <a href="#ec2tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -3300,14 +3039,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_go">
 <a href="#ec2tagfilters_go" style="color: inherit; text-decoration: inherit;">Ec2Tag<wbr>Filters</a>
@@ -3316,14 +3052,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ec2tagfilters_nodejs">
 <a href="#ec2tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">ec2Tag<wbr>Filters</a>
@@ -3332,14 +3065,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ec2_tag_filters_python">
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
@@ -3348,16 +3078,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3366,8 +3093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3376,8 +3102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3386,14 +3111,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3402,8 +3124,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3412,8 +3133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3422,14 +3142,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3438,8 +3155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3448,8 +3164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3458,14 +3173,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3474,8 +3186,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3484,8 +3195,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3494,16 +3204,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -3512,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -3522,14 +3228,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -3538,8 +3241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -3548,14 +3250,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -3564,8 +3263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -3574,14 +3272,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -3590,8 +3285,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -3600,16 +3294,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elbinfos_csharp">
 <a href="#elbinfos_csharp" style="color: inherit; text-decoration: inherit;">Elb<wbr>Infos</a>
@@ -3618,8 +3309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgroupinfos_csharp">
 <a href="#targetgroupinfos_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Infos</a>
@@ -3628,8 +3318,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouppairinfo_csharp">
 <a href="#targetgrouppairinfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Pair<wbr>Info</a>
@@ -3638,14 +3327,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elbinfos_go">
 <a href="#elbinfos_go" style="color: inherit; text-decoration: inherit;">Elb<wbr>Infos</a>
@@ -3654,8 +3340,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgroupinfos_go">
 <a href="#targetgroupinfos_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Infos</a>
@@ -3664,8 +3349,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouppairinfo_go">
 <a href="#targetgrouppairinfo_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Pair<wbr>Info</a>
@@ -3674,14 +3358,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elbinfos_nodejs">
 <a href="#elbinfos_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Infos</a>
@@ -3690,8 +3371,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgroupinfos_nodejs">
 <a href="#targetgroupinfos_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Infos</a>
@@ -3700,8 +3380,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouppairinfo_nodejs">
 <a href="#targetgrouppairinfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Pair<wbr>Info</a>
@@ -3710,14 +3389,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elb_infos_python">
 <a href="#elb_infos_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>infos</a>
@@ -3726,8 +3402,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_infos_python">
 <a href="#target_group_infos_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>infos</a>
@@ -3736,8 +3411,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_pair_info_python">
 <a href="#target_group_pair_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>pair_<wbr>info</a>
@@ -3746,16 +3420,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3764,14 +3435,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3780,14 +3448,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3796,14 +3461,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3812,16 +3474,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3830,14 +3489,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3846,14 +3502,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3862,14 +3515,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3878,16 +3528,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prodtrafficroute_csharp">
 <a href="#prodtrafficroute_csharp" style="color: inherit; text-decoration: inherit;">Prod<wbr>Traffic<wbr>Route</a>
@@ -3896,8 +3543,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroups_csharp">
 <a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
@@ -3906,8 +3552,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testtrafficroute_csharp">
 <a href="#testtrafficroute_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Traffic<wbr>Route</a>
@@ -3916,14 +3561,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prodtrafficroute_go">
 <a href="#prodtrafficroute_go" style="color: inherit; text-decoration: inherit;">Prod<wbr>Traffic<wbr>Route</a>
@@ -3932,8 +3574,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroups_go">
 <a href="#targetgroups_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
@@ -3942,8 +3583,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testtrafficroute_go">
 <a href="#testtrafficroute_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Traffic<wbr>Route</a>
@@ -3952,14 +3592,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prodtrafficroute_nodejs">
 <a href="#prodtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Traffic<wbr>Route</a>
@@ -3968,8 +3605,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroups_nodejs">
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
@@ -3978,8 +3614,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testtrafficroute_nodejs">
 <a href="#testtrafficroute_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Traffic<wbr>Route</a>
@@ -3988,14 +3623,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prod_traffic_route_python">
 <a href="#prod_traffic_route_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>traffic_<wbr>route</a>
@@ -4004,8 +3636,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_groups_python">
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
@@ -4014,8 +3645,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="test_traffic_route_python">
 <a href="#test_traffic_route_python" style="color: inherit; text-decoration: inherit;">test_<wbr>traffic_<wbr>route</a>
@@ -4024,16 +3654,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_csharp">
 <a href="#listenerarns_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arns</a>
@@ -4042,14 +3669,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_go">
 <a href="#listenerarns_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arns</a>
@@ -4058,14 +3682,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_nodejs">
 <a href="#listenerarns_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
@@ -4074,14 +3695,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_arns_python">
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
@@ -4090,16 +3708,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4108,14 +3723,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4124,14 +3736,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4140,14 +3749,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4156,16 +3762,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the target group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_csharp">
 <a href="#listenerarns_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arns</a>
@@ -4174,14 +3777,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_go">
 <a href="#listenerarns_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arns</a>
@@ -4190,14 +3790,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarns_nodejs">
 <a href="#listenerarns_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arns</a>
@@ -4206,14 +3803,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_arns_python">
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
@@ -4222,16 +3816,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4240,8 +3831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4250,8 +3840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4260,14 +3849,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4276,8 +3862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4286,8 +3871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4296,14 +3880,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4312,8 +3893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4322,8 +3902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4332,14 +3911,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4348,8 +3924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4358,8 +3933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4368,16 +3942,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="triggerevents_csharp">
 <a href="#triggerevents_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Events</a>
@@ -4386,8 +3957,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_csharp">
 <a href="#triggername_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -4396,8 +3966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggertargetarn_csharp">
 <a href="#triggertargetarn_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Target<wbr>Arn</a>
@@ -4406,14 +3975,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="triggerevents_go">
 <a href="#triggerevents_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Events</a>
@@ -4422,8 +3988,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_go">
 <a href="#triggername_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -4432,8 +3997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggertargetarn_go">
 <a href="#triggertargetarn_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Target<wbr>Arn</a>
@@ -4442,14 +4006,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="triggerevents_nodejs">
 <a href="#triggerevents_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Events</a>
@@ -4458,8 +4019,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_nodejs">
 <a href="#triggername_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
@@ -4468,8 +4028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggertargetarn_nodejs">
 <a href="#triggertargetarn_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Target<wbr>Arn</a>
@@ -4478,14 +4037,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trigger_events_python">
 <a href="#trigger_events_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>events</a>
@@ -4494,8 +4050,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_name_python">
 <a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
@@ -4504,8 +4059,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_target_arn_python">
 <a href="#trigger_target_arn_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>target_<wbr>arn</a>
@@ -4514,8 +4068,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4538,6 +4091,6 @@ CodeDeploy Deployment Groups can be imported by their `app_name`, a colon, and `
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

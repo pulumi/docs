@@ -19,11 +19,17 @@ To get more information about Domain, see:
     * [Managed Microsoft Active Directory Quickstart](https://cloud.google.com/managed-microsoft-ad/docs/quickstarts)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Active Directory Domain Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -74,9 +83,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -87,9 +99,12 @@ ad_domain = gcp.activedirectory.Domain("ad-domain",
     reserved_ip_range="192.168.255.0/24")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,9 +117,16 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Domain Resource {#create}
@@ -129,9 +151,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,9 +159,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -149,9 +167,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -159,10 +175,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -188,9 +201,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -198,9 +209,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -208,9 +217,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -218,9 +225,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -228,18 +233,13 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +247,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +255,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,10 +263,7 @@ const ad_domain = new gcp.activedirectory.Domain("ad-domain", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -285,9 +278,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -297,8 +288,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -308,8 +298,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservediprange_csharp">
 <a href="#reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -319,8 +308,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_csharp">
 <a href="#admin_csharp" style="color: inherit; text-decoration: inherit;">Admin</a>
@@ -330,8 +318,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -341,8 +328,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -351,8 +337,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -362,14 +347,11 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -379,8 +361,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -390,8 +371,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservediprange_go">
 <a href="#reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -401,8 +381,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_go">
 <a href="#admin_go" style="color: inherit; text-decoration: inherit;">Admin</a>
@@ -412,8 +391,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -423,8 +401,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -433,8 +410,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -444,14 +420,11 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -461,8 +434,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -472,8 +444,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservediprange_nodejs">
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
@@ -483,8 +454,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_nodejs">
 <a href="#admin_nodejs" style="color: inherit; text-decoration: inherit;">admin</a>
@@ -494,8 +464,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
@@ -505,8 +474,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -515,8 +483,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -526,14 +493,11 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -543,8 +507,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -554,8 +517,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reserved_ip_range_python">
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
@@ -565,8 +527,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_python">
 <a href="#admin_python" style="color: inherit; text-decoration: inherit;">admin</a>
@@ -576,8 +537,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
@@ -587,8 +547,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -597,8 +556,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -608,8 +566,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -620,9 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -632,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -641,8 +595,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -651,14 +604,11 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -668,8 +618,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -677,8 +626,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -687,14 +635,11 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -704,8 +649,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -713,8 +657,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,14 +666,11 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -740,8 +680,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -749,8 +688,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -759,8 +697,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -887,9 +824,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_csharp">
 <a href="#state_admin_csharp" style="color: inherit; text-decoration: inherit;">Admin</a>
@@ -899,8 +834,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetworks_csharp">
 <a href="#state_authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -910,8 +844,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_csharp">
 <a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -921,8 +854,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -932,8 +864,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -942,8 +873,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_csharp">
 <a href="#state_locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -953,8 +883,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -963,8 +892,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -974,8 +902,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_csharp">
 <a href="#state_reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -985,14 +912,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_go">
 <a href="#state_admin_go" style="color: inherit; text-decoration: inherit;">Admin</a>
@@ -1002,8 +926,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetworks_go">
 <a href="#state_authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -1013,8 +936,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1024,8 +946,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
 <a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1035,8 +956,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1045,8 +965,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_go">
 <a href="#state_locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1056,8 +975,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1066,8 +984,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1077,8 +994,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_go">
 <a href="#state_reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -1088,14 +1004,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_nodejs">
 <a href="#state_admin_nodejs" style="color: inherit; text-decoration: inherit;">admin</a>
@@ -1105,8 +1018,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetworks_nodejs">
 <a href="#state_authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
@@ -1116,8 +1028,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -1127,8 +1038,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1138,8 +1048,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1148,8 +1057,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_nodejs">
 <a href="#state_locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1159,8 +1067,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1169,8 +1076,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1180,8 +1086,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_nodejs">
 <a href="#state_reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
@@ -1191,14 +1096,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_python">
 <a href="#state_admin_python" style="color: inherit; text-decoration: inherit;">admin</a>
@@ -1208,8 +1110,7 @@ Ranges must be unique and non-overlapping with existing subnets in authorizedNet
     </dt>
     <dd>{{% md %}}The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_networks_python">
 <a href="#state_authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
@@ -1219,8 +1120,7 @@ If not specified, setupadmin will be used.
     </dt>
     <dd>{{% md %}}The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -1230,8 +1130,7 @@ If CIDR subnets overlap between networks, domain creation will fail.
     </dt>
     <dd>{{% md %}}The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1241,8 +1140,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would
 be chosen for an Active Directory set up on an internal network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1251,8 +1149,7 @@ be chosen for an Active Directory set up on an internal network.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels that can contain user-provided metadata
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_python">
 <a href="#state_locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1262,8 +1159,7 @@ be chosen for an Active Directory set up on an internal network.
     </dt>
     <dd>{{% md %}}Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1272,8 +1168,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1283,8 +1178,7 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reserved_ip_range_python">
 <a href="#state_reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
@@ -1294,8 +1188,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1321,6 +1214,6 @@ Domain can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

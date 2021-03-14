@@ -14,11 +14,17 @@ Contact details and configurations for notifications coming from Azure Security 
 API Version: 2020-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create security contact data
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -52,9 +58,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -90,9 +99,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -113,9 +125,12 @@ security_contact = azure_native.security.SecurityContact("securityContact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -137,9 +152,16 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecurityContact Resource {#create}
@@ -164,9 +186,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -174,9 +194,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -184,9 +202,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -194,10 +210,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -223,9 +236,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -233,9 +244,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +252,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +260,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,18 +268,13 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -282,9 +282,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -292,9 +290,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -302,10 +298,7 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -320,9 +313,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertnotifications_csharp">
 <a href="#alertnotifications_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
@@ -330,8 +321,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -339,8 +329,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsbyrole_csharp">
 <a href="#notificationsbyrole_csharp" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
@@ -348,8 +337,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -357,8 +345,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontactname_csharp">
 <a href="#securitycontactname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Contact<wbr>Name</a>
@@ -366,14 +353,11 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertnotifications_go">
 <a href="#alertnotifications_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
@@ -381,8 +365,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -390,8 +373,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsbyrole_go">
 <a href="#notificationsbyrole_go" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
@@ -399,8 +381,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -408,8 +389,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontactname_go">
 <a href="#securitycontactname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Contact<wbr>Name</a>
@@ -417,14 +397,11 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertnotifications_nodejs">
 <a href="#alertnotifications_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Notifications</a>
@@ -432,8 +409,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -441,8 +417,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsbyrole_nodejs">
 <a href="#notificationsbyrole_nodejs" style="color: inherit; text-decoration: inherit;">notifications<wbr>By<wbr>Role</a>
@@ -450,8 +425,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -459,8 +433,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontactname_nodejs">
 <a href="#securitycontactname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Contact<wbr>Name</a>
@@ -468,14 +441,11 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alert_notifications_python">
 <a href="#alert_notifications_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>notifications</a>
@@ -483,8 +453,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -492,8 +461,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_by_role_python">
 <a href="#notifications_by_role_python" style="color: inherit; text-decoration: inherit;">notifications_<wbr>by_<wbr>role</a>
@@ -501,8 +469,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -510,8 +477,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_contact_name_python">
 <a href="#security_contact_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>contact_<wbr>name</a>
@@ -519,8 +485,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -531,9 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -541,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -550,8 +512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -559,14 +520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -574,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -583,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -592,14 +548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -607,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -616,8 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -625,14 +576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -640,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -649,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -658,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -675,109 +620,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="minimalseverity">Minimal<wbr>Severity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>High</dt>
-    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd>
-    <dt>Medium</dt>
-    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd>
-    <dt>Low</dt>
-    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>High</dt>
+    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd><dt>Medium</dt>
+    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd><dt>Low</dt>
+    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Minimal<wbr>Severity<wbr>High</dt>
-    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd>
-    <dt>Minimal<wbr>Severity<wbr>Medium</dt>
-    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd>
-    <dt>Minimal<wbr>Severity<wbr>Low</dt>
-    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Minimal<wbr>Severity<wbr>High</dt>
+    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd><dt>Minimal<wbr>Severity<wbr>Medium</dt>
+    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd><dt>Minimal<wbr>Severity<wbr>Low</dt>
+    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>High</dt>
-    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd>
-    <dt>Medium</dt>
-    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd>
-    <dt>Low</dt>
-    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>High</dt>
+    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd><dt>Medium</dt>
+    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd><dt>Low</dt>
+    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HIGH</dt>
-    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd>
-    <dt>MEDIUM</dt>
-    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd>
-    <dt>LOW</dt>
-    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>HIGH</dt>
+    <dd>High{{% md %}}Get notifications on new alerts with High severity{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>Medium{{% md %}}Get notifications on new alerts with medium or high severity{{% /md %}}</dd><dt>LOW</dt>
+    <dd>Low{{% md %}}Don't get notifications on new alerts with low, medium or high severity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="roles">Roles</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Account<wbr>Admin</dt>
-    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd>
-    <dt>Service<wbr>Admin</dt>
-    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd>
-    <dt>Owner</dt>
-    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd>
-    <dt>Contributor</dt>
-    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Account<wbr>Admin</dt>
+    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd><dt>Service<wbr>Admin</dt>
+    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd><dt>Owner</dt>
+    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd><dt>Contributor</dt>
+    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Roles<wbr>Account<wbr>Admin</dt>
-    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd>
-    <dt>Roles<wbr>Service<wbr>Admin</dt>
-    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd>
-    <dt>Roles<wbr>Owner</dt>
-    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd>
-    <dt>Roles<wbr>Contributor</dt>
-    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Roles<wbr>Account<wbr>Admin</dt>
+    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd><dt>Roles<wbr>Service<wbr>Admin</dt>
+    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd><dt>Roles<wbr>Owner</dt>
+    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd><dt>Roles<wbr>Contributor</dt>
+    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Account<wbr>Admin</dt>
-    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd>
-    <dt>Service<wbr>Admin</dt>
-    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd>
-    <dt>Owner</dt>
-    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd>
-    <dt>Contributor</dt>
-    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Account<wbr>Admin</dt>
+    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd><dt>Service<wbr>Admin</dt>
+    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd><dt>Owner</dt>
+    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd><dt>Contributor</dt>
+    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACCOUNT_ADMIN</dt>
-    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd>
-    <dt>SERVICE_ADMIN</dt>
-    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd>
-    <dt>OWNER</dt>
-    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd>
-    <dt>CONTRIBUTOR</dt>
-    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ACCOUNT_ADMIN</dt>
+    <dd>AccountAdmin{{% md %}}If enabled, send notification on new alerts to the account admins{{% /md %}}</dd><dt>SERVICE_ADMIN</dt>
+    <dd>ServiceAdmin{{% md %}}If enabled, send notification on new alerts to the service admins{{% /md %}}</dd><dt>OWNER</dt>
+    <dd>Owner{{% md %}}If enabled, send notification on new alerts to the subscription owners{{% /md %}}</dd><dt>CONTRIBUTOR</dt>
+    <dd>Contributor{{% md %}}If enabled, send notification on new alerts to the subscription contributors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_csharp">
 <a href="#minimalseverity_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -785,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#minimalseverity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Minimal<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -794,14 +700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_go">
 <a href="#minimalseverity_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -809,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#minimalseverity">Minimal<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -818,14 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_nodejs">
 <a href="#minimalseverity_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Severity</a>
@@ -833,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#minimalseverity">Minimal<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -842,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimal_severity_python">
 <a href="#minimal_severity_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>severity</a>
@@ -857,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#minimalseverity">Minimal<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -866,16 +760,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -883,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Roles&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -892,14 +782,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -907,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -916,14 +802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -931,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | Roles[]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -940,14 +822,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -955,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Roles]]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -964,16 +842,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontactpropertiesresponsealertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_csharp">
 <a href="#minimalseverity_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -981,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -990,14 +864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_go">
 <a href="#minimalseverity_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -1005,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1014,14 +884,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_nodejs">
 <a href="#minimalseverity_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Severity</a>
@@ -1029,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1038,14 +904,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimal_severity_python">
 <a href="#minimal_severity_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>severity</a>
@@ -1053,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1062,16 +924,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1079,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1088,14 +946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1103,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1112,14 +966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1127,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1136,14 +986,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1151,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1160,46 +1006,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="state">State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>On</dt>
-    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-    <dt>Off</dt>
-    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>On</dt>
+    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd><dt>Off</dt>
+    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>State<wbr>On</dt>
-    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-    <dt>State<wbr>Off</dt>
-    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>State<wbr>On</dt>
+    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd><dt>State<wbr>Off</dt>
+    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>On</dt>
-    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-    <dt>Off</dt>
-    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>On</dt>
+    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd><dt>Off</dt>
+    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ON</dt>
-    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-    <dt>OFF</dt>
-    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ON</dt>
+    <dd>On{{% md %}}Send notification on new alerts to the subscription's admins{{% /md %}}</dd><dt>OFF</dt>
+    <dd>Off{{% md %}}Don't send notification on new alerts to the subscription's admins{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

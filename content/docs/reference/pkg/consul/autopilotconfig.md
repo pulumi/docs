@@ -18,11 +18,17 @@ cluster and stable server introduction.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Consul = Pulumi.Consul;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -68,9 +77,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_consul as consul
@@ -81,9 +93,12 @@ config = consul.AutopilotConfig("config",
     max_trailing_logs=500)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -96,9 +111,16 @@ const config = new consul.AutopilotConfig("config", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AutopilotConfig Resource {#create}
@@ -123,9 +145,7 @@ const config = new consul.AutopilotConfig("config", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -133,9 +153,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -143,9 +161,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -153,10 +169,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -182,9 +195,7 @@ const config = new consul.AutopilotConfig("config", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -192,9 +203,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,9 +211,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -212,9 +219,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,18 +227,13 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -241,9 +241,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -251,9 +249,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -261,10 +257,7 @@ const config = new consul.AutopilotConfig("config", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -279,9 +272,7 @@ The AutopilotConfig resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanupdeadservers_csharp">
 <a href="#cleanupdeadservers_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
@@ -291,8 +282,7 @@ The AutopilotConfig resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -302,8 +292,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableupgrademigration_csharp">
 <a href="#disableupgrademigration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
@@ -313,8 +302,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcontactthreshold_csharp">
 <a href="#lastcontactthreshold_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
@@ -324,8 +312,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtrailinglogs_csharp">
 <a href="#maxtrailinglogs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
@@ -335,8 +322,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancyzonetag_csharp">
 <a href="#redundancyzonetag_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
@@ -347,8 +333,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverstabilizationtime_csharp">
 <a href="#serverstabilizationtime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
@@ -359,8 +344,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradeversiontag_csharp">
 <a href="#upgradeversiontag_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
@@ -370,14 +354,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanupdeadservers_go">
 <a href="#cleanupdeadservers_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
@@ -387,8 +368,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -398,8 +378,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableupgrademigration_go">
 <a href="#disableupgrademigration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
@@ -409,8 +388,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcontactthreshold_go">
 <a href="#lastcontactthreshold_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
@@ -420,8 +398,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtrailinglogs_go">
 <a href="#maxtrailinglogs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
@@ -431,8 +408,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancyzonetag_go">
 <a href="#redundancyzonetag_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
@@ -443,8 +419,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverstabilizationtime_go">
 <a href="#serverstabilizationtime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
@@ -455,8 +430,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradeversiontag_go">
 <a href="#upgradeversiontag_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
@@ -466,14 +440,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanupdeadservers_nodejs">
 <a href="#cleanupdeadservers_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Dead<wbr>Servers</a>
@@ -483,8 +454,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -494,8 +464,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableupgrademigration_nodejs">
 <a href="#disableupgrademigration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Upgrade<wbr>Migration</a>
@@ -505,8 +474,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcontactthreshold_nodejs">
 <a href="#lastcontactthreshold_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Contact<wbr>Threshold</a>
@@ -516,8 +484,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtrailinglogs_nodejs">
 <a href="#maxtrailinglogs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trailing<wbr>Logs</a>
@@ -527,8 +494,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancyzonetag_nodejs">
 <a href="#redundancyzonetag_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Zone<wbr>Tag</a>
@@ -539,8 +505,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverstabilizationtime_nodejs">
 <a href="#serverstabilizationtime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Stabilization<wbr>Time</a>
@@ -551,8 +516,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradeversiontag_nodejs">
 <a href="#upgradeversiontag_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Version<wbr>Tag</a>
@@ -562,14 +526,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanup_dead_servers_python">
 <a href="#cleanup_dead_servers_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>dead_<wbr>servers</a>
@@ -579,8 +540,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -590,8 +550,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_upgrade_migration_python">
 <a href="#disable_upgrade_migration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>upgrade_<wbr>migration</a>
@@ -601,8 +560,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_contact_threshold_python">
 <a href="#last_contact_threshold_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact_<wbr>threshold</a>
@@ -612,8 +570,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_trailing_logs_python">
 <a href="#max_trailing_logs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trailing_<wbr>logs</a>
@@ -623,8 +580,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancy_zone_tag_python">
 <a href="#redundancy_zone_tag_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>zone_<wbr>tag</a>
@@ -635,8 +591,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_stabilization_time_python">
 <a href="#server_stabilization_time_python" style="color: inherit; text-decoration: inherit;">server_<wbr>stabilization_<wbr>time</a>
@@ -647,8 +602,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_version_tag_python">
 <a href="#upgrade_version_tag_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>version_<wbr>tag</a>
@@ -658,8 +612,7 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -670,9 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -680,14 +631,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -695,14 +643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -710,14 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -725,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -853,9 +794,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cleanupdeadservers_csharp">
 <a href="#state_cleanupdeadservers_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
@@ -865,8 +804,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -876,8 +814,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableupgrademigration_csharp">
 <a href="#state_disableupgrademigration_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
@@ -887,8 +824,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastcontactthreshold_csharp">
 <a href="#state_lastcontactthreshold_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
@@ -898,8 +834,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtrailinglogs_csharp">
 <a href="#state_maxtrailinglogs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
@@ -909,8 +844,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redundancyzonetag_csharp">
 <a href="#state_redundancyzonetag_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
@@ -921,8 +855,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverstabilizationtime_csharp">
 <a href="#state_serverstabilizationtime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
@@ -933,8 +866,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradeversiontag_csharp">
 <a href="#state_upgradeversiontag_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
@@ -944,14 +876,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cleanupdeadservers_go">
 <a href="#state_cleanupdeadservers_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Dead<wbr>Servers</a>
@@ -961,8 +890,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -972,8 +900,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableupgrademigration_go">
 <a href="#state_disableupgrademigration_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Upgrade<wbr>Migration</a>
@@ -983,8 +910,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastcontactthreshold_go">
 <a href="#state_lastcontactthreshold_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact<wbr>Threshold</a>
@@ -994,8 +920,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtrailinglogs_go">
 <a href="#state_maxtrailinglogs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Trailing<wbr>Logs</a>
@@ -1005,8 +930,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redundancyzonetag_go">
 <a href="#state_redundancyzonetag_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Zone<wbr>Tag</a>
@@ -1017,8 +941,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverstabilizationtime_go">
 <a href="#state_serverstabilizationtime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Stabilization<wbr>Time</a>
@@ -1029,8 +952,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradeversiontag_go">
 <a href="#state_upgradeversiontag_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Version<wbr>Tag</a>
@@ -1040,14 +962,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cleanupdeadservers_nodejs">
 <a href="#state_cleanupdeadservers_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Dead<wbr>Servers</a>
@@ -1057,8 +976,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1068,8 +986,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableupgrademigration_nodejs">
 <a href="#state_disableupgrademigration_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Upgrade<wbr>Migration</a>
@@ -1079,8 +996,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastcontactthreshold_nodejs">
 <a href="#state_lastcontactthreshold_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Contact<wbr>Threshold</a>
@@ -1090,8 +1006,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtrailinglogs_nodejs">
 <a href="#state_maxtrailinglogs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trailing<wbr>Logs</a>
@@ -1101,8 +1016,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redundancyzonetag_nodejs">
 <a href="#state_redundancyzonetag_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Zone<wbr>Tag</a>
@@ -1113,8 +1027,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverstabilizationtime_nodejs">
 <a href="#state_serverstabilizationtime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Stabilization<wbr>Time</a>
@@ -1125,8 +1038,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradeversiontag_nodejs">
 <a href="#state_upgradeversiontag_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Version<wbr>Tag</a>
@@ -1136,14 +1048,11 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cleanup_dead_servers_python">
 <a href="#state_cleanup_dead_servers_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>dead_<wbr>servers</a>
@@ -1153,8 +1062,7 @@ used during a migration. Defaults to an empty string.
     </dt>
     <dd>{{% md %}}Whether to remove failing servers when a
 replacement comes online. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1164,8 +1072,7 @@ replacement comes online. Defaults to true.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_upgrade_migration_python">
 <a href="#state_disable_upgrade_migration_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>upgrade_<wbr>migration</a>
@@ -1175,8 +1082,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Whether to disable [upgrade migrations](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones).
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_contact_threshold_python">
 <a href="#state_last_contact_threshold_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact_<wbr>threshold</a>
@@ -1186,8 +1092,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}The time after which a server is
 considered as unhealthy and will be removed. Defaults to `"200ms"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_trailing_logs_python">
 <a href="#state_max_trailing_logs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trailing_<wbr>logs</a>
@@ -1197,8 +1102,7 @@ considered as unhealthy and will be removed. Defaults to `"200ms"`.
     </dt>
     <dd>{{% md %}}The maximum number of Raft log entries a
 server can trail the leader. Defaults to 250.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redundancy_zone_tag_python">
 <a href="#state_redundancy_zone_tag_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>zone_<wbr>tag</a>
@@ -1209,8 +1113,7 @@ server can trail the leader. Defaults to 250.
     <dd>{{% md %}}The [redundancy zone](https://www.consul.io/docs/guides/autopilot.html#redundancy-zones)
 tag to use. Consul will try to keep one voting server by zone to take advantage
 of isolated failure domains. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_stabilization_time_python">
 <a href="#state_server_stabilization_time_python" style="color: inherit; text-decoration: inherit;">server_<wbr>stabilization_<wbr>time</a>
@@ -1221,8 +1124,7 @@ of isolated failure domains. Defaults to an empty string.
     <dd>{{% md %}}The period to wait for a server to be
 healthy and stable before being promoted to a full, voting member. Defaults to
 `"10s"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgrade_version_tag_python">
 <a href="#state_upgrade_version_tag_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>version_<wbr>tag</a>
@@ -1232,8 +1134,7 @@ healthy and stable before being promoted to a full, voting member. Defaults to
     </dt>
     <dd>{{% md %}}The tag to override the version information
 used during a migration. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1249,6 +1150,6 @@ used during a migration. Defaults to an empty string.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 </dl>
 

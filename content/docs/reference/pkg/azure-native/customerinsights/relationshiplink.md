@@ -14,11 +14,17 @@ The relationship link resource format.
 API Version: 2017-04-26.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### RelationshipLinks_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -65,9 +71,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -113,9 +122,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -144,9 +156,12 @@ relationship_link = azure_native.customerinsights.RelationshipLink("relationship
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -176,9 +191,16 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RelationshipLink Resource {#create}
@@ -203,9 +225,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -213,9 +233,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -223,9 +241,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -233,10 +249,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -262,9 +275,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -272,9 +283,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -282,9 +291,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -292,9 +299,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -302,18 +307,13 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -321,9 +321,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -331,9 +329,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -341,10 +337,7 @@ const relationshipLink = new azure_native.customerinsights.RelationshipLink("rel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -359,9 +352,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -369,8 +360,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interactiontype_csharp">
 <a href="#interactiontype_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Type</a>
@@ -378,8 +368,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyreferences_csharp">
 <a href="#profilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>References</a>
@@ -387,8 +376,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relatedprofilepropertyreferences_csharp">
 <a href="#relatedprofilepropertyreferences_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Profile<wbr>Property<wbr>References</a>
@@ -396,8 +384,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipname_csharp">
 <a href="#relationshipname_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Name</a>
@@ -405,8 +392,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -414,8 +400,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -423,8 +408,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -432,8 +416,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_csharp">
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -441,8 +424,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#relationshiplinkfieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relationshiplinkname_csharp">
 <a href="#relationshiplinkname_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Link<wbr>Name</a>
@@ -450,14 +432,11 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -465,8 +444,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interactiontype_go">
 <a href="#interactiontype_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Type</a>
@@ -474,8 +452,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyreferences_go">
 <a href="#profilepropertyreferences_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>References</a>
@@ -483,8 +460,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relatedprofilepropertyreferences_go">
 <a href="#relatedprofilepropertyreferences_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Profile<wbr>Property<wbr>References</a>
@@ -492,8 +468,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipname_go">
 <a href="#relationshipname_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Name</a>
@@ -501,8 +476,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -510,8 +484,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -519,8 +492,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -528,8 +500,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_go">
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -537,8 +508,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#relationshiplinkfieldmapping">[]Relationship<wbr>Link<wbr>Field<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relationshiplinkname_go">
 <a href="#relationshiplinkname_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Link<wbr>Name</a>
@@ -546,14 +516,11 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -561,8 +528,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interactiontype_nodejs">
 <a href="#interactiontype_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Type</a>
@@ -570,8 +536,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyreferences_nodejs">
 <a href="#profilepropertyreferences_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>References</a>
@@ -579,8 +544,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">Participant<wbr>Profile<wbr>Property<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relatedprofilepropertyreferences_nodejs">
 <a href="#relatedprofilepropertyreferences_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Profile<wbr>Property<wbr>References</a>
@@ -588,8 +552,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">Participant<wbr>Profile<wbr>Property<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipname_nodejs">
 <a href="#relationshipname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Name</a>
@@ -597,8 +560,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -606,8 +568,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -615,8 +576,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -624,8 +584,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_nodejs">
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -633,8 +592,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#relationshiplinkfieldmapping">Relationship<wbr>Link<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
-    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relationshiplinkname_nodejs">
 <a href="#relationshiplinkname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Link<wbr>Name</a>
@@ -642,14 +600,11 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -657,8 +612,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interaction_type_python">
 <a href="#interaction_type_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>type</a>
@@ -666,8 +620,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The InteractionType associated with the Relationship Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_property_references_python">
 <a href="#profile_property_references_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>references</a>
@@ -675,8 +628,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="related_profile_property_references_python">
 <a href="#related_profile_property_references_python" style="color: inherit; text-decoration: inherit;">related_<wbr>profile_<wbr>property_<wbr>references</a>
@@ -684,8 +636,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationship_name_python">
 <a href="#relationship_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>name</a>
@@ -693,8 +644,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Relationship associated with the Link.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -702,8 +652,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -711,8 +660,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -720,8 +668,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_python">
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -729,8 +676,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#relationshiplinkfieldmapping">Sequence[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relationship_link_name_python">
 <a href="#relationship_link_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>link_<wbr>name</a>
@@ -738,8 +684,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the relationship link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -750,9 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -760,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkname_csharp">
 <a href="#linkname_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Name</a>
@@ -769,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -778,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -787,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshipguidid_csharp">
 <a href="#relationshipguidid_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Guid<wbr>Id</a>
@@ -796,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -805,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -814,14 +751,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -829,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkname_go">
 <a href="#linkname_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Name</a>
@@ -838,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -847,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -856,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshipguidid_go">
 <a href="#relationshipguidid_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Guid<wbr>Id</a>
@@ -865,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -874,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -883,14 +811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -898,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkname_nodejs">
 <a href="#linkname_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Name</a>
@@ -907,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -916,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -925,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshipguidid_nodejs">
 <a href="#relationshipguidid_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Guid<wbr>Id</a>
@@ -934,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -943,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -952,14 +871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -967,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="link_name_python">
 <a href="#link_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>name</a>
@@ -976,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Relationship Link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -985,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -994,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationship_guid_id_python">
 <a href="#relationship_guid_id_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>guid_<wbr>id</a>
@@ -1003,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The relationship guid id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1012,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1021,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1038,47 +947,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="linktypes">Link<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Update<wbr>Always</dt>
-    <dd>UpdateAlways</dd>
-    <dt>Copy<wbr>If<wbr>Null</dt>
-    <dd>CopyIfNull</dd>
-</dl>
+<dl class="tabular"><dt>Update<wbr>Always</dt>
+    <dd>UpdateAlways</dd><dt>Copy<wbr>If<wbr>Null</dt>
+    <dd>CopyIfNull</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Link<wbr>Types<wbr>Update<wbr>Always</dt>
-    <dd>UpdateAlways</dd>
-    <dt>Link<wbr>Types<wbr>Copy<wbr>If<wbr>Null</dt>
-    <dd>CopyIfNull</dd>
-</dl>
+<dl class="tabular"><dt>Link<wbr>Types<wbr>Update<wbr>Always</dt>
+    <dd>UpdateAlways</dd><dt>Link<wbr>Types<wbr>Copy<wbr>If<wbr>Null</dt>
+    <dd>CopyIfNull</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Update<wbr>Always</dt>
-    <dd>UpdateAlways</dd>
-    <dt>Copy<wbr>If<wbr>Null</dt>
-    <dd>CopyIfNull</dd>
-</dl>
+<dl class="tabular"><dt>Update<wbr>Always</dt>
+    <dd>UpdateAlways</dd><dt>Copy<wbr>If<wbr>Null</dt>
+    <dd>CopyIfNull</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UPDATE_ALWAYS</dt>
-    <dd>UpdateAlways</dd>
-    <dt>COPY_IF_NULL</dt>
-    <dd>CopyIfNull</dd>
-</dl>
+<dl class="tabular"><dt>UPDATE_ALWAYS</dt>
+    <dd>UpdateAlways</dd><dt>COPY_IF_NULL</dt>
+    <dd>CopyIfNull</dd></dl>
 {{% /choosable %}}
 
 <h4 id="participantprofilepropertyreference">Participant<wbr>Profile<wbr>Property<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_csharp">
 <a href="#interactionpropertyname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
@@ -1086,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_csharp">
 <a href="#profilepropertyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -1095,14 +989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_go">
 <a href="#interactionpropertyname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
@@ -1110,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_go">
 <a href="#profilepropertyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -1119,14 +1009,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_nodejs">
 <a href="#interactionpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
@@ -1134,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_nodejs">
 <a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
@@ -1143,14 +1029,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interaction_property_name_python">
 <a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
@@ -1158,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_property_name_python">
 <a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
@@ -1167,16 +1049,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="participantprofilepropertyreferenceresponse">Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_csharp">
 <a href="#interactionpropertyname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
@@ -1184,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_csharp">
 <a href="#profilepropertyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -1193,14 +1071,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_go">
 <a href="#interactionpropertyname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
@@ -1208,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_go">
 <a href="#profilepropertyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -1217,14 +1091,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionpropertyname_nodejs">
 <a href="#interactionpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
@@ -1232,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilepropertyname_nodejs">
 <a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
@@ -1241,14 +1111,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interaction_property_name_python">
 <a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
@@ -1256,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_property_name_python">
 <a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
@@ -1265,16 +1131,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="relationshiplinkfieldmapping">Relationship<wbr>Link<wbr>Field<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_csharp">
 <a href="#interactionfieldname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
@@ -1282,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_csharp">
 <a href="#relationshipfieldname_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
@@ -1291,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_csharp">
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1300,14 +1161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linktypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Link<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_go">
 <a href="#interactionfieldname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
@@ -1315,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_go">
 <a href="#relationshipfieldname_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
@@ -1324,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_go">
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1333,14 +1189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_nodejs">
 <a href="#interactionfieldname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
@@ -1348,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_nodejs">
 <a href="#relationshipfieldname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
@@ -1357,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_nodejs">
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
@@ -1366,14 +1217,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interaction_field_name_python">
 <a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
@@ -1381,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationship_field_name_python">
 <a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
@@ -1390,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_type_python">
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
@@ -1399,16 +1245,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="relationshiplinkfieldmappingresponse">Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_csharp">
 <a href="#interactionfieldname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
@@ -1416,8 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_csharp">
 <a href="#relationshipfieldname_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
@@ -1425,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_csharp">
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1434,14 +1275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_go">
 <a href="#interactionfieldname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
@@ -1449,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_go">
 <a href="#relationshipfieldname_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
@@ -1458,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_go">
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1467,14 +1303,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interactionfieldname_nodejs">
 <a href="#interactionfieldname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
@@ -1482,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationshipfieldname_nodejs">
 <a href="#relationshipfieldname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
@@ -1491,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktype_nodejs">
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
@@ -1500,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interaction_field_name_python">
 <a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
@@ -1515,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relationship_field_name_python">
 <a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
@@ -1524,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_type_python">
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
@@ -1533,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

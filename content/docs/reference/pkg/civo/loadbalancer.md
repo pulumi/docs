@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Package Civo"
-meta_desc: "Explore the LoadBalancer resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "civo.LoadBalancer"
+meta_desc: "Documentation for the civo.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -35,9 +35,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backends_csharp">
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -202,8 +171,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerbackend">List&lt;Load<wbr>Balancer<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failtimeout_csharp">
 <a href="#failtimeout_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
@@ -212,8 +180,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -223,8 +190,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconns_csharp">
 <a href="#maxconns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
@@ -233,8 +199,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxrequestsize_csharp">
 <a href="#maxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
@@ -243,8 +208,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -255,8 +219,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -266,8 +229,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -276,8 +238,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_csharp">
 <a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -286,8 +247,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_csharp">
 <a href="#ignoreinvalidbackendtls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -296,8 +256,7 @@ same backend), default is random
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_csharp">
 <a href="#tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
@@ -306,8 +265,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlskey_csharp">
 <a href="#tlskey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
@@ -316,14 +274,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backends_go">
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -332,8 +287,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failtimeout_go">
 <a href="#failtimeout_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
@@ -342,8 +296,7 @@ same backend), default is random
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -353,8 +306,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconns_go">
 <a href="#maxconns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
@@ -363,8 +315,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxrequestsize_go">
 <a href="#maxrequestsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
@@ -373,8 +324,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -385,8 +335,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -396,8 +345,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -406,8 +354,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_go">
 <a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -416,8 +363,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_go">
 <a href="#ignoreinvalidbackendtls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -426,8 +372,7 @@ same backend), default is random
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_go">
 <a href="#tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
@@ -436,8 +381,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlskey_go">
 <a href="#tlskey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
@@ -446,14 +390,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backends_nodejs">
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -462,8 +403,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">Load<wbr>Balancer<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failtimeout_nodejs">
 <a href="#failtimeout_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Timeout</a>
@@ -472,8 +412,7 @@ same backend), default is random
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -483,8 +422,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconns_nodejs">
 <a href="#maxconns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conns</a>
@@ -493,8 +431,7 @@ blank)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxrequestsize_nodejs">
 <a href="#maxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Size</a>
@@ -503,8 +440,7 @@ blank)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -515,8 +451,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -526,8 +461,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -536,8 +470,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_nodejs">
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
@@ -546,8 +479,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_nodejs">
 <a href="#ignoreinvalidbackendtls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -556,8 +488,7 @@ same backend), default is random
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_nodejs">
 <a href="#tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
@@ -566,8 +497,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlskey_nodejs">
 <a href="#tlskey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Key</a>
@@ -576,14 +506,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backends_python">
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -592,8 +519,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fail_timeout_python">
 <a href="#fail_timeout_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>timeout</a>
@@ -602,8 +528,7 @@ same backend), default is random
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -613,8 +538,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_conns_python">
 <a href="#max_conns_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conns</a>
@@ -623,8 +547,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_request_size_python">
 <a href="#max_request_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>size</a>
@@ -633,8 +556,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -645,8 +567,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -656,8 +577,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -666,8 +586,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_path_python">
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
@@ -676,8 +595,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_invalid_backend_tls_python">
 <a href="#ignore_invalid_backend_tls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>invalid_<wbr>backend_<wbr>tls</a>
@@ -686,8 +604,7 @@ same backend), default is random
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_certificate_python">
 <a href="#tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
@@ -696,8 +613,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_key_python">
 <a href="#tls_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>key</a>
@@ -706,8 +622,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -718,9 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,14 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,14 +653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -758,14 +665,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -901,9 +804,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backends_csharp">
 <a href="#state_backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -912,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerbackend">List&lt;Load<wbr>Balancer<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_csharp">
 <a href="#state_failtimeout_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
@@ -922,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_csharp">
 <a href="#state_healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -932,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -943,8 +841,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_csharp">
 <a href="#state_ignoreinvalidbackendtls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -953,8 +850,7 @@ blank)
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_csharp">
 <a href="#state_maxconns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
@@ -963,8 +859,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_csharp">
 <a href="#state_maxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
@@ -973,8 +868,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -985,8 +879,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -996,8 +889,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1006,8 +898,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_csharp">
 <a href="#state_tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
@@ -1016,8 +907,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_csharp">
 <a href="#state_tlskey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
@@ -1026,14 +916,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backends_go">
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -1042,8 +929,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_go">
 <a href="#state_failtimeout_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
@@ -1052,8 +938,7 @@ same backend), default is random
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_go">
 <a href="#state_healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -1062,8 +947,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1073,8 +957,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_go">
 <a href="#state_ignoreinvalidbackendtls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -1083,8 +966,7 @@ blank)
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_go">
 <a href="#state_maxconns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
@@ -1093,8 +975,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_go">
 <a href="#state_maxrequestsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
@@ -1103,8 +984,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -1115,8 +995,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1126,8 +1005,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1136,8 +1014,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_go">
 <a href="#state_tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
@@ -1146,8 +1023,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_go">
 <a href="#state_tlskey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
@@ -1156,14 +1032,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backends_nodejs">
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -1172,8 +1045,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">Load<wbr>Balancer<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_nodejs">
 <a href="#state_failtimeout_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Timeout</a>
@@ -1182,8 +1054,7 @@ same backend), default is random
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_nodejs">
 <a href="#state_healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
@@ -1192,8 +1063,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1203,8 +1073,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_nodejs">
 <a href="#state_ignoreinvalidbackendtls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
@@ -1213,8 +1082,7 @@ blank)
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_nodejs">
 <a href="#state_maxconns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conns</a>
@@ -1223,8 +1091,7 @@ blank)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_nodejs">
 <a href="#state_maxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Size</a>
@@ -1233,8 +1100,7 @@ blank)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -1245,8 +1111,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1256,8 +1121,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1266,8 +1130,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_nodejs">
 <a href="#state_tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
@@ -1276,8 +1139,7 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_nodejs">
 <a href="#state_tlskey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Key</a>
@@ -1286,14 +1148,11 @@ same backend), default is random
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backends_python">
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -1302,8 +1161,7 @@ same backend), default is random
         <span class="property-type"><a href="#loadbalancerbackend">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fail_timeout_python">
 <a href="#state_fail_timeout_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>timeout</a>
@@ -1312,8 +1170,7 @@ same backend), default is random
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_path_python">
 <a href="#state_health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
@@ -1322,8 +1179,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1333,8 +1189,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_invalid_backend_tls_python">
 <a href="#state_ignore_invalid_backend_tls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>invalid_<wbr>backend_<wbr>tls</a>
@@ -1343,8 +1198,7 @@ blank)
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_conns_python">
 <a href="#state_max_conns_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conns</a>
@@ -1353,8 +1207,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_request_size_python">
 <a href="#state_max_request_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>size</a>
@@ -1363,8 +1216,7 @@ blank)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -1375,8 +1227,7 @@ blank)
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1386,8 +1237,7 @@ same backend), default is random
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1396,8 +1246,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_certificate_python">
 <a href="#state_tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
@@ -1406,8 +1255,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_key_python">
 <a href="#state_tls_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>key</a>
@@ -1416,8 +1264,7 @@ same backend), default is random
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1432,9 +1279,7 @@ same backend), default is random
 <h4 id="loadbalancerbackend">Load<wbr>Balancer<wbr>Backend</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1442,8 +1287,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1451,8 +1295,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1460,14 +1303,11 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1475,8 +1315,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1484,8 +1323,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1493,14 +1331,11 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1508,8 +1343,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1517,8 +1351,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1526,14 +1359,11 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1541,8 +1371,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1550,8 +1379,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1559,8 +1387,7 @@ same backend), default is random
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1571,6 +1398,6 @@ same backend), default is random
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 </dl>
 

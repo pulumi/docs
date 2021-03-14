@@ -43,9 +43,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ AWS auth backend clients can be imported using `auth/`, the `backend` path, and 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The AuthBackendClient resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -211,8 +180,7 @@ The AuthBackendClient resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -222,8 +190,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2endpoint_csharp">
 <a href="#ec2endpoint_csharp" style="color: inherit; text-decoration: inherit;">Ec2Endpoint</a>
@@ -233,8 +200,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamendpoint_csharp">
 <a href="#iamendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Endpoint</a>
@@ -244,8 +210,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamserveridheadervalue_csharp">
 <a href="#iamserveridheadervalue_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -256,8 +221,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -267,8 +231,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsendpoint_csharp">
 <a href="#stsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Endpoint</a>
@@ -278,8 +241,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsregion_csharp">
 <a href="#stsregion_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Region</a>
@@ -289,14 +251,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -306,8 +265,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -317,8 +275,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2endpoint_go">
 <a href="#ec2endpoint_go" style="color: inherit; text-decoration: inherit;">Ec2Endpoint</a>
@@ -328,8 +285,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamendpoint_go">
 <a href="#iamendpoint_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Endpoint</a>
@@ -339,8 +295,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamserveridheadervalue_go">
 <a href="#iamserveridheadervalue_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -351,8 +306,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -362,8 +316,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsendpoint_go">
 <a href="#stsendpoint_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Endpoint</a>
@@ -373,8 +326,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsregion_go">
 <a href="#stsregion_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Region</a>
@@ -384,14 +336,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -401,8 +350,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -412,8 +360,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2endpoint_nodejs">
 <a href="#ec2endpoint_nodejs" style="color: inherit; text-decoration: inherit;">ec2Endpoint</a>
@@ -423,8 +370,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamendpoint_nodejs">
 <a href="#iamendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Endpoint</a>
@@ -434,8 +380,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamserveridheadervalue_nodejs">
 <a href="#iamserveridheadervalue_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -446,8 +391,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -457,8 +401,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsendpoint_nodejs">
 <a href="#stsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Endpoint</a>
@@ -468,8 +411,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stsregion_nodejs">
 <a href="#stsregion_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Region</a>
@@ -479,14 +421,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -496,8 +435,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -507,8 +445,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ec2_endpoint_python">
 <a href="#ec2_endpoint_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>endpoint</a>
@@ -518,8 +455,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_endpoint_python">
 <a href="#iam_endpoint_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>endpoint</a>
@@ -529,8 +465,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_server_id_header_value_python">
 <a href="#iam_server_id_header_value_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>server_<wbr>id_<wbr>header_<wbr>value</a>
@@ -541,8 +476,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -552,8 +486,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sts_endpoint_python">
 <a href="#sts_endpoint_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>endpoint</a>
@@ -563,8 +496,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sts_region_python">
 <a href="#sts_region_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>region</a>
@@ -574,8 +506,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -596,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -611,14 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -626,14 +549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -641,8 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -769,9 +688,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_csharp">
 <a href="#state_accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -781,8 +698,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -792,8 +708,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2endpoint_csharp">
 <a href="#state_ec2endpoint_csharp" style="color: inherit; text-decoration: inherit;">Ec2Endpoint</a>
@@ -803,8 +718,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamendpoint_csharp">
 <a href="#state_iamendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Endpoint</a>
@@ -814,8 +728,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamserveridheadervalue_csharp">
 <a href="#state_iamserveridheadervalue_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -826,8 +739,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_csharp">
 <a href="#state_secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -837,8 +749,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsendpoint_csharp">
 <a href="#state_stsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Endpoint</a>
@@ -848,8 +759,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsregion_csharp">
 <a href="#state_stsregion_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Region</a>
@@ -859,14 +769,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_go">
 <a href="#state_accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -876,8 +783,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -887,8 +793,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2endpoint_go">
 <a href="#state_ec2endpoint_go" style="color: inherit; text-decoration: inherit;">Ec2Endpoint</a>
@@ -898,8 +803,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamendpoint_go">
 <a href="#state_iamendpoint_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Endpoint</a>
@@ -909,8 +813,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamserveridheadervalue_go">
 <a href="#state_iamserveridheadervalue_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -921,8 +824,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_go">
 <a href="#state_secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -932,8 +834,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsendpoint_go">
 <a href="#state_stsendpoint_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Endpoint</a>
@@ -943,8 +844,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsregion_go">
 <a href="#state_stsregion_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Region</a>
@@ -954,14 +854,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_nodejs">
 <a href="#state_accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -971,8 +868,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -982,8 +878,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2endpoint_nodejs">
 <a href="#state_ec2endpoint_nodejs" style="color: inherit; text-decoration: inherit;">ec2Endpoint</a>
@@ -993,8 +888,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamendpoint_nodejs">
 <a href="#state_iamendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Endpoint</a>
@@ -1004,8 +898,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamserveridheadervalue_nodejs">
 <a href="#state_iamserveridheadervalue_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</a>
@@ -1016,8 +909,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_nodejs">
 <a href="#state_secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -1027,8 +919,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsendpoint_nodejs">
 <a href="#state_stsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Endpoint</a>
@@ -1038,8 +929,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsregion_nodejs">
 <a href="#state_stsregion_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Region</a>
@@ -1049,14 +939,11 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_key_python">
 <a href="#state_access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -1066,8 +953,7 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
     </dt>
     <dd>{{% md %}}The AWS access key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1077,8 +963,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2_endpoint_python">
 <a href="#state_ec2_endpoint_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>endpoint</a>
@@ -1088,8 +973,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making EC2 API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_endpoint_python">
 <a href="#state_iam_endpoint_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>endpoint</a>
@@ -1099,8 +983,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making IAM API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_server_id_header_value_python">
 <a href="#state_iam_server_id_header_value_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>server_<wbr>id_<wbr>header_<wbr>value</a>
@@ -1111,8 +994,7 @@ calls.
     <dd>{{% md %}}The value to require in the
 `X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
 that are used in the IAM auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_key_python">
 <a href="#state_secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -1122,8 +1004,7 @@ that are used in the IAM auth method.
     </dt>
     <dd>{{% md %}}The AWS secret key that Vault should use for the
 auth backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sts_endpoint_python">
 <a href="#state_sts_endpoint_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>endpoint</a>
@@ -1133,8 +1014,7 @@ auth backend.
     </dt>
     <dd>{{% md %}}Override the URL Vault uses when making STS API
 calls.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sts_region_python">
 <a href="#state_sts_region_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>region</a>
@@ -1144,8 +1024,7 @@ calls.
     </dt>
     <dd>{{% md %}}Override the default region when making STS API 
 calls. The `sts_endpoint` argument must be set when using `sts_region`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1161,6 +1040,6 @@ calls. The `sts_endpoint` argument must be set when using `sts_region`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

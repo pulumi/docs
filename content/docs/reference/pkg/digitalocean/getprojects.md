@@ -20,11 +20,17 @@ obtain metadata about a single project if you already know the `id` to retrieve 
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using DigitalOcean = Pulumi.DigitalOcean;
@@ -52,9 +58,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -83,9 +92,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -96,9 +108,12 @@ staging = digitalocean.get_projects(filters=[digitalocean.GetProjectsFilterArgs(
 )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -112,9 +127,16 @@ const staging = pulumi.output(digitalocean.getProjects({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getProjects {#using}
@@ -152,9 +174,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -164,8 +184,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -175,14 +194,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -192,8 +208,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -203,14 +218,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -220,8 +232,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -231,14 +242,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -248,8 +256,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -259,8 +266,7 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -273,9 +279,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -284,8 +288,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -295,8 +298,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A set of projects satisfying any `filter` and `sort` criteria. Each project has
 the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -304,8 +306,7 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Projects<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -313,14 +314,11 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectssort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Projects<wbr>Sort&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -329,8 +327,7 @@ the following attributes:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -340,8 +337,7 @@ the following attributes:
     </dt>
     <dd>{{% md %}}A set of projects satisfying any `filter` and `sort` criteria. Each project has
 the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -349,8 +345,7 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsfilter">[]Get<wbr>Projects<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -358,14 +353,11 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectssort">[]Get<wbr>Projects<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -374,8 +366,7 @@ the following attributes:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -385,8 +376,7 @@ the following attributes:
     </dt>
     <dd>{{% md %}}A set of projects satisfying any `filter` and `sort` criteria. Each project has
 the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -394,8 +384,7 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsfilter">Get<wbr>Projects<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -403,14 +392,11 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectssort">Get<wbr>Projects<wbr>Sort[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -419,8 +405,7 @@ the following attributes:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -430,8 +415,7 @@ the following attributes:
     </dt>
     <dd>{{% md %}}A set of projects satisfying any `filter` and `sort` criteria. Each project has
 the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -439,8 +423,7 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsfilter">Sequence[Get<wbr>Projects<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -448,8 +431,7 @@ the following attributes:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectssort">Sequence[Get<wbr>Projects<wbr>Sort]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -463,9 +445,7 @@ the following attributes:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -475,8 +455,7 @@ the following attributes:
     </dt>
     <dd>{{% md %}}Filter the projects by this key. This may be one of `name`,
 `purpose`, `description`, `environment`, or `is_default`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -486,8 +465,7 @@ the following attributes:
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves projects
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -498,8 +476,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_csharp">
 <a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -510,14 +487,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -527,8 +501,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the projects by this key. This may be one of `name`,
 `purpose`, `description`, `environment`, or `is_default`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -538,8 +511,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves projects
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -550,8 +522,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_go">
 <a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -562,14 +533,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -579,8 +547,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the projects by this key. This may be one of `name`,
 `purpose`, `description`, `environment`, or `is_default`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -590,8 +557,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves projects
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -602,8 +568,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_nodejs">
 <a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
@@ -614,14 +579,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -631,8 +593,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the projects by this key. This may be one of `name`,
 `purpose`, `description`, `environment`, or `is_default`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -642,8 +603,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves projects
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -654,8 +614,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_by_python">
 <a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
@@ -666,8 +625,7 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsproject">Get<wbr>Projects<wbr>Project</h4>
@@ -675,9 +633,7 @@ substrings to find within the string field.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -686,8 +642,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was created, (ISO8601)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -696,8 +651,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -706,8 +660,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -716,8 +669,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -725,8 +677,7 @@ substrings to find within the string field.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,8 +686,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -745,8 +695,7 @@ substrings to find within the string field.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruuid_csharp">
 <a href="#owneruuid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Uuid</a>
@@ -755,8 +704,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique universal identifier of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -765,8 +713,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the project (Default: "Web Application")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -775,8 +722,7 @@ substrings to find within the string field.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of uniform resource names (URNs) for the resources associated with the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -785,14 +731,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was last updated, (ISO8601)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -801,8 +744,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was created, (ISO8601)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -811,8 +753,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -821,8 +762,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -831,8 +771,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -840,8 +779,7 @@ substrings to find within the string field.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -850,8 +788,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -860,8 +797,7 @@ substrings to find within the string field.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruuid_go">
 <a href="#owneruuid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Uuid</a>
@@ -870,8 +806,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique universal identifier of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -880,8 +815,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the project (Default: "Web Application")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -890,8 +824,7 @@ substrings to find within the string field.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of uniform resource names (URNs) for the resources associated with the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -900,14 +833,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was last updated, (ISO8601)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -916,8 +846,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was created, (ISO8601)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -926,8 +855,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -936,8 +864,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -946,8 +873,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -955,8 +881,7 @@ substrings to find within the string field.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -965,8 +890,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -975,8 +899,7 @@ substrings to find within the string field.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owneruuid_nodejs">
 <a href="#owneruuid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Uuid</a>
@@ -985,8 +908,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique universal identifier of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -995,8 +917,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the project (Default: "Web Application")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1005,8 +926,7 @@ substrings to find within the string field.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of uniform resource names (URNs) for the resources associated with the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1015,14 +935,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was last updated, (ISO8601)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1031,8 +948,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was created, (ISO8601)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1041,8 +957,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -1051,8 +966,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1061,8 +975,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -1070,8 +983,7 @@ substrings to find within the string field.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1080,8 +992,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -1090,8 +1001,7 @@ substrings to find within the string field.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_uuid_python">
 <a href="#owner_uuid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uuid</a>
@@ -1100,8 +1010,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique universal identifier of the project owner
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -1110,8 +1019,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The purpose of the project (Default: "Web Application")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1120,8 +1028,7 @@ substrings to find within the string field.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of uniform resource names (URNs) for the resources associated with the project
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1130,8 +1037,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the project was last updated, (ISO8601)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectssort">Get<wbr>Projects<wbr>Sort</h4>
@@ -1139,9 +1045,7 @@ substrings to find within the string field.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1151,8 +1055,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the projects by this key. This may be one of `name`,
 `purpose`, `description`, or `environment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1161,14 +1064,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1178,8 +1078,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the projects by this key. This may be one of `name`,
 `purpose`, `description`, or `environment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1188,14 +1087,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1205,8 +1101,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the projects by this key. This may be one of `name`,
 `purpose`, `description`, or `environment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1215,14 +1110,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1232,8 +1124,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the projects by this key. This may be one of `name`,
 `purpose`, `description`, or `environment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1242,8 +1133,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1257,6 +1147,6 @@ substrings to find within the string field.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 </dl>
 

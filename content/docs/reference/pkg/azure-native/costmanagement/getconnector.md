@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Resource Group Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collection_csharp">
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_csharp">
 <a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provideraccountid_csharp">
 <a href="#provideraccountid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Account<wbr>Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialskey_csharp">
 <a href="#credentialskey_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Key</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialssecret_csharp">
 <a href="#credentialssecret_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reportid_csharp">
 <a href="#reportid_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collection_go">
 <a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_go">
 <a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provideraccountid_go">
 <a href="#provideraccountid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Account<wbr>Id</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialskey_go">
 <a href="#credentialskey_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Key</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialssecret_go">
 <a href="#credentialssecret_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reportid_go">
 <a href="#reportid_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collection_nodejs">
 <a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_nodejs">
 <a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provideraccountid_nodejs">
 <a href="#provideraccountid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Account<wbr>Id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialskey_nodejs">
 <a href="#credentialskey_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Key</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentialssecret_nodejs">
 <a href="#credentialssecret_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Secret</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reportid_nodejs">
 <a href="#reportid_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Id</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -574,14 +508,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collection_python">
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_on_python">
 <a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_account_id_python">
 <a href="#provider_account_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>account_<wbr>id</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerAccountId (determined from credentials){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_key_python">
 <a href="#credentials_key_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>key</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_secret_python">
 <a href="#credentials_secret_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>secret</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector DisplayName (defaults to Name){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="report_id_python">
 <a href="#report_id_python" style="color: inherit; text-decoration: inherit;">report_<wbr>id</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -740,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -749,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_csharp">
 <a href="#errorstarttime_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
@@ -758,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -773,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_go">
 <a href="#errorstarttime_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
@@ -791,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -806,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -815,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_nodejs">
 <a href="#errorstarttime_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Start<wbr>Time</a>
@@ -824,14 +726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -839,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_start_time_python">
 <a href="#error_start_time_python" style="color: inherit; text-decoration: inherit;">error_<wbr>start_<wbr>time</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
@@ -866,9 +762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_csharp">
 <a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
@@ -876,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
 <a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -885,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_csharp">
 <a href="#sourcelastupdated_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
@@ -894,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -903,14 +794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_go">
 <a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
@@ -918,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
 <a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -927,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_go">
 <a href="#sourcelastupdated_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -945,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_nodejs">
 <a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
@@ -969,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_nodejs">
 <a href="#sourcelastupdated_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Last<wbr>Updated</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -987,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_run_python">
 <a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_python">
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_last_updated_python">
 <a href="#source_last_updated_python" style="color: inherit; text-decoration: inherit;">source_<wbr>last_<wbr>updated</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

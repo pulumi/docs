@@ -14,11 +14,17 @@ The Managed Network Peering Policy resource
 API Version: 2019-06-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ManagedNetworkPeeringPoliciesPut
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -54,9 +60,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -93,9 +102,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -117,9 +129,12 @@ managed_network_peering_policy = azure_native.managednetwork.ManagedNetworkPeeri
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -142,9 +157,16 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedNetworkPeeringPolicy Resource {#create}
@@ -169,9 +191,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -179,9 +199,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -189,9 +207,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -199,10 +215,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -228,9 +241,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -238,9 +249,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +257,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +265,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,18 +273,13 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -287,9 +287,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -297,9 +295,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -307,10 +303,7 @@ const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetwo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -325,9 +318,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managednetworkname_csharp">
 <a href="#managednetworkname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Name</a>
@@ -335,8 +326,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -344,8 +334,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -353,8 +342,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkpeeringpolicyname_csharp">
 <a href="#managednetworkpeeringpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Name</a>
@@ -362,8 +350,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -371,14 +358,11 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managednetworkname_go">
 <a href="#managednetworkname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Name</a>
@@ -386,8 +370,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -395,8 +378,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -404,8 +386,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkpeeringpolicyname_go">
 <a href="#managednetworkpeeringpolicyname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Name</a>
@@ -413,8 +394,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -422,14 +402,11 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managednetworkname_nodejs">
 <a href="#managednetworkname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Network<wbr>Name</a>
@@ -437,8 +414,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -446,8 +422,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -455,8 +430,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkpeeringpolicyname_nodejs">
 <a href="#managednetworkpeeringpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Name</a>
@@ -464,8 +438,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -473,14 +446,11 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managed_network_name_python">
 <a href="#managed_network_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>network_<wbr>name</a>
@@ -488,8 +458,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -497,8 +466,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -506,8 +474,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_network_peering_policy_name_python">
 <a href="#managed_network_peering_policy_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>network_<wbr>peering_<wbr>policy_<wbr>name</a>
@@ -515,8 +482,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network Peering Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -524,8 +490,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -536,9 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -546,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -555,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -564,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -579,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -588,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -597,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -612,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -621,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -630,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -645,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -654,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -663,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -680,9 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -690,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_csharp">
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -699,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_csharp">
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -708,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_csharp">
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -717,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -732,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_go">
 <a href="#hub_go" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -741,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_go">
 <a href="#mesh_go" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -750,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_go">
 <a href="#spokes_go" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -759,14 +693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -774,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_nodejs">
 <a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -783,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_nodejs">
 <a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -792,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_nodejs">
 <a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -801,14 +729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -816,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_python">
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -825,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_python">
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -834,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_python">
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -843,16 +765,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -860,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -869,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -878,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_csharp">
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -887,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_csharp">
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -896,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_csharp">
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -905,14 +819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -920,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -929,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -938,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_go">
 <a href="#hub_go" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -947,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_go">
 <a href="#mesh_go" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -956,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_go">
 <a href="#spokes_go" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -965,14 +871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -980,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -989,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -998,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_nodejs">
 <a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -1007,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_nodejs">
 <a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -1016,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_nodejs">
 <a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -1025,14 +923,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1040,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1049,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1058,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_python">
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -1067,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_python">
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -1076,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_python">
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -1085,16 +975,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceid">Resource<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1102,14 +989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1117,14 +1001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1132,14 +1013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1147,16 +1025,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1164,14 +1039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1179,14 +1051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1194,14 +1063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1209,46 +1075,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="type">Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd>
-    <dt>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd>
-</dl>
+<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
+    <dd>HubAndSpokeTopology</dd><dt>Mesh<wbr>Topology</dt>
+    <dd>MeshTopology</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Type<wbr>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd>
-    <dt>Type<wbr>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd>
-</dl>
+<dl class="tabular"><dt>Type<wbr>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
+    <dd>HubAndSpokeTopology</dd><dt>Type<wbr>Mesh<wbr>Topology</dt>
+    <dd>MeshTopology</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
-    <dd>HubAndSpokeTopology</dd>
-    <dt>Mesh<wbr>Topology</dt>
-    <dd>MeshTopology</dd>
-</dl>
+<dl class="tabular"><dt>Hub<wbr>And<wbr>Spoke<wbr>Topology</dt>
+    <dd>HubAndSpokeTopology</dd><dt>Mesh<wbr>Topology</dt>
+    <dd>MeshTopology</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HUB_AND_SPOKE_TOPOLOGY</dt>
-    <dd>HubAndSpokeTopology</dd>
-    <dt>MESH_TOPOLOGY</dt>
-    <dd>MeshTopology</dd>
-</dl>
+<dl class="tabular"><dt>HUB_AND_SPOKE_TOPOLOGY</dt>
+    <dd>HubAndSpokeTopology</dd><dt>MESH_TOPOLOGY</dt>
+    <dd>MeshTopology</dd></dl>
 {{% /choosable %}}
 ## Import
 

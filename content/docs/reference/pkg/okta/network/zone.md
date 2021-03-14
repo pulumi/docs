@@ -15,11 +15,17 @@ Creates an Okta Network Zone.
 This resource allows you to create and configure an Okta Network Zone.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Okta = Pulumi.Okta;
@@ -47,9 +53,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -79,9 +88,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_okta as okta
@@ -98,9 +110,12 @@ example = okta.network.Zone("example",
     type="IP")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,9 +134,16 @@ const example = new okta.network.Zone("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Zone Resource {#create}
@@ -146,9 +168,7 @@ const example = new okta.network.Zone("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -156,9 +176,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -166,9 +184,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -176,10 +192,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +218,7 @@ const example = new okta.network.Zone("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -215,9 +226,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +234,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +242,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,18 +250,13 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +264,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +272,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,10 +280,7 @@ const example = new okta.network.Zone("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -302,9 +295,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -313,8 +304,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiclocations_csharp">
 <a href="#dynamiclocations_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
@@ -324,8 +314,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateways_csharp">
 <a href="#gateways_csharp" style="color: inherit; text-decoration: inherit;">Gateways</a>
@@ -334,8 +323,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -344,8 +332,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_csharp">
 <a href="#proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -354,8 +341,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -364,14 +350,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -380,8 +363,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiclocations_go">
 <a href="#dynamiclocations_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
@@ -391,8 +373,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateways_go">
 <a href="#gateways_go" style="color: inherit; text-decoration: inherit;">Gateways</a>
@@ -401,8 +382,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -411,8 +391,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_go">
 <a href="#proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -421,8 +400,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -431,14 +409,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -447,8 +422,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamiclocations_nodejs">
 <a href="#dynamiclocations_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Locations</a>
@@ -458,8 +432,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateways_nodejs">
 <a href="#gateways_nodejs" style="color: inherit; text-decoration: inherit;">gateways</a>
@@ -468,8 +441,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -478,8 +450,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_nodejs">
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -488,8 +459,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -498,14 +468,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -514,8 +481,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_locations_python">
 <a href="#dynamic_locations_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>locations</a>
@@ -525,8 +491,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateways_python">
 <a href="#gateways_python" style="color: inherit; text-decoration: inherit;">gateways</a>
@@ -535,8 +500,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -545,8 +509,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_python">
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -555,8 +518,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -565,8 +527,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -577,9 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -587,14 +546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,14 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -617,14 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -760,9 +709,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dynamiclocations_csharp">
 <a href="#state_dynamiclocations_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
@@ -772,8 +719,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateways_csharp">
 <a href="#state_gateways_csharp" style="color: inherit; text-decoration: inherit;">Gateways</a>
@@ -782,8 +728,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -792,8 +737,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_csharp">
 <a href="#state_proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -802,8 +746,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -812,8 +755,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_csharp">
 <a href="#state_usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -822,14 +764,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dynamiclocations_go">
 <a href="#state_dynamiclocations_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Locations</a>
@@ -839,8 +778,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateways_go">
 <a href="#state_gateways_go" style="color: inherit; text-decoration: inherit;">Gateways</a>
@@ -849,8 +787,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -859,8 +796,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_go">
 <a href="#state_proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -869,8 +805,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -879,8 +814,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_go">
 <a href="#state_usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -889,14 +823,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dynamiclocations_nodejs">
 <a href="#state_dynamiclocations_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Locations</a>
@@ -906,8 +837,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateways_nodejs">
 <a href="#state_gateways_nodejs" style="color: inherit; text-decoration: inherit;">gateways</a>
@@ -916,8 +846,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -926,8 +855,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_nodejs">
 <a href="#state_proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -936,8 +864,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -946,8 +873,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_nodejs">
 <a href="#state_usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -956,14 +882,11 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dynamic_locations_python">
 <a href="#state_dynamic_locations_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>locations</a>
@@ -973,8 +896,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
     </dt>
     <dd>{{% md %}}Array of locations [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: countryCode OR countryCode-regionCode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateways_python">
 <a href="#state_gateways_python" style="color: inherit; text-decoration: inherit;">gateways</a>
@@ -983,8 +905,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -993,8 +914,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Network Zone Resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_python">
 <a href="#state_proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -1003,8 +923,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values in CIDR/range form. Can not be set if `usage` is set to `"BLOCKLIST"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1013,8 +932,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Network Zone - can either be `"IP"` or `"DYNAMIC"` only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_python">
 <a href="#state_usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -1023,8 +941,7 @@ and [ISO-3166-2](https://en.wikipedia.org/wiki/ISO_3166-2). Format code: country
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usage of the Network Zone - can be either `"POLICY"` or `"BLOCKLIST"`. By default, it is `"POLICY"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1050,6 +967,6 @@ Okta Network Zone can be imported via the Okta ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

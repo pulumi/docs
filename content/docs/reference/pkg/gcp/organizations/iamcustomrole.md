@@ -23,11 +23,17 @@ and
  by the provider, and new roles cannot share that name.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -86,9 +95,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -105,9 +117,12 @@ my_custom_role = gcp.organizations.IAMCustomRole("my-custom-role",
     title="My Custom Role")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,9 +141,16 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IAMCustomRole Resource {#create}
@@ -153,9 +175,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +183,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +191,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +199,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -212,9 +225,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -222,9 +233,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +241,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +249,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,18 +257,13 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -271,9 +271,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,9 +279,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -291,10 +287,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -309,9 +302,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orgid_csharp">
 <a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -320,8 +311,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -330,8 +320,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -340,8 +329,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -350,8 +338,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -360,8 +347,7 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -372,14 +358,11 @@ The IAMCustomRole resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orgid_go">
 <a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -388,8 +371,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -398,8 +380,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -408,8 +389,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -418,8 +398,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -428,8 +407,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -440,14 +418,11 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orgid_nodejs">
 <a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -456,8 +431,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -466,8 +440,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -476,8 +449,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -486,8 +458,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -496,8 +467,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -508,14 +478,11 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="org_id_python">
 <a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -524,8 +491,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -534,8 +500,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -544,8 +509,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -554,8 +518,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -564,8 +527,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -576,8 +538,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -588,9 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_csharp">
 <a href="#deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -599,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -608,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -618,14 +575,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_go">
 <a href="#deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -634,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -643,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -653,14 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_nodejs">
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -669,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -688,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_python">
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -704,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -713,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -851,9 +792,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deleted_csharp">
 <a href="#state_deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -862,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -872,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -882,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_csharp">
 <a href="#state_orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -892,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -902,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleid_csharp">
 <a href="#state_roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -912,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_csharp">
 <a href="#state_stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -924,8 +857,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_csharp">
 <a href="#state_title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -934,14 +866,11 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deleted_go">
 <a href="#state_deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -950,8 +879,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -960,8 +888,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -970,8 +897,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_go">
 <a href="#state_orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -980,8 +906,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_go">
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -990,8 +915,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleid_go">
 <a href="#state_roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -1000,8 +924,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_go">
 <a href="#state_stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -1012,8 +935,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_go">
 <a href="#state_title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1022,14 +944,11 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deleted_nodejs">
 <a href="#state_deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -1038,8 +957,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1048,8 +966,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1058,8 +975,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_nodejs">
 <a href="#state_orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -1068,8 +984,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1078,8 +993,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleid_nodejs">
 <a href="#state_roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -1088,8 +1002,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_nodejs">
 <a href="#state_stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -1100,8 +1013,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_nodejs">
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1110,14 +1022,11 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deleted_python">
 <a href="#state_deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -1126,8 +1035,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) The current deleted state of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1136,8 +1044,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description for the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1146,8 +1053,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_org_id_python">
 <a href="#state_org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -1156,8 +1062,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_python">
 <a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1166,8 +1071,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_id_python">
 <a href="#state_role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -1176,8 +1080,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role id to use for this role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_python">
 <a href="#state_stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -1188,8 +1091,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
     <dd>{{% md %}}The current launch stage of the role.
 Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_python">
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1198,8 +1100,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable title for the role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1225,6 +1126,6 @@ Customized IAM organization role can be imported using their URI, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

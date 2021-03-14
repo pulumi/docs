@@ -26,11 +26,17 @@ and it is for users who are unable to use constraints. If the default service ac
 or additional service accounts are added, this resource will need to be updated.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -74,9 +83,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -86,9 +98,12 @@ my_project = gcp.projects.DefaultServiceAccounts("myProject",
     project="my-project-id")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -100,9 +115,16 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DefaultServiceAccounts Resource {#create}
@@ -127,9 +149,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -137,9 +157,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,9 +165,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -157,10 +173,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -186,9 +199,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -196,9 +207,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +215,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +223,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,18 +231,13 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +245,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +253,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,10 +261,7 @@ const myProject = new gcp.projects.DefaultServiceAccounts("my_project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -283,9 +276,7 @@ The DefaultServiceAccounts resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -294,8 +285,7 @@ The DefaultServiceAccounts resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -304,8 +294,7 @@ The DefaultServiceAccounts resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_csharp">
 <a href="#restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -317,14 +306,11 @@ The DefaultServiceAccounts resource accepts the following [input]({{< relref "/d
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -333,8 +319,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -343,8 +328,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_go">
 <a href="#restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -356,14 +340,11 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -372,8 +353,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -382,8 +362,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_nodejs">
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
@@ -395,14 +374,11 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -411,8 +387,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -421,8 +396,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_policy_python">
 <a href="#restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
@@ -434,8 +408,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -446,9 +419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -456,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_csharp">
 <a href="#serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -466,14 +436,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -481,8 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_go">
 <a href="#serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -491,14 +457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -506,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_nodejs">
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -516,14 +478,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -531,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_accounts_python">
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -541,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -669,9 +626,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -680,8 +635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -690,8 +644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_csharp">
 <a href="#state_restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -703,8 +656,7 @@ The following state arguments are supported:
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_csharp">
 <a href="#state_serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -713,14 +665,11 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -729,8 +678,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -739,8 +687,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_go">
 <a href="#state_restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -752,8 +699,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_go">
 <a href="#state_serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -762,14 +708,11 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -778,8 +721,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -788,8 +730,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_nodejs">
 <a href="#state_restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
@@ -801,8 +742,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_nodejs">
 <a href="#state_serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -811,14 +751,11 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -827,8 +764,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -837,8 +773,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID where service accounts are created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_policy_python">
 <a href="#state_restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
@@ -850,8 +785,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
 Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
 If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
 If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_accounts_python">
 <a href="#state_service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -860,8 +794,7 @@ If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignore
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -883,6 +816,6 @@ This resource does not support import
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

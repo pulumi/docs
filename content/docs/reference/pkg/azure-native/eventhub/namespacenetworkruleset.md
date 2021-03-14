@@ -14,11 +14,17 @@ Description of NetworkRuleSet resource.
 API Version: 2017-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### NameSpaceNetworkRuleSetCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -94,9 +100,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -164,9 +173,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -221,9 +233,12 @@ namespace_network_rule_set = azure_native.eventhub.NamespaceNetworkRuleSet("name
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -279,9 +294,16 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NamespaceNetworkRuleSet Resource {#create}
@@ -306,9 +328,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -316,9 +336,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -326,9 +344,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -336,10 +352,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -365,9 +378,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -375,9 +386,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -385,9 +394,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -395,9 +402,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -405,18 +410,13 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -424,9 +424,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -434,9 +432,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -444,10 +440,7 @@ const namespaceNetworkRuleSet = new azure_native.eventhub.NamespaceNetworkRuleSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -462,9 +455,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -472,8 +463,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -481,8 +471,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -490,8 +479,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -499,8 +487,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetiprules">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -508,14 +495,11 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -523,8 +507,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -532,8 +515,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -541,8 +523,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -550,8 +531,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetiprules">[]NWRule<wbr>Set<wbr>Ip<wbr>Rules</a></span>
     </dt>
-    <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -559,14 +539,11 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">[]NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules</a></span>
     </dt>
-    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -574,8 +551,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -583,8 +559,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -592,8 +567,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -601,8 +575,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetiprules">NWRule<wbr>Set<wbr>Ip<wbr>Rules[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
@@ -610,14 +583,11 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules[]</a></span>
     </dt>
-    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -625,8 +595,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -634,8 +603,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -643,8 +611,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -652,8 +619,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetiprules">Sequence[NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IpRules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
@@ -661,8 +627,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">Sequence[NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -673,9 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -683,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -692,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -701,14 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -716,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -725,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -734,14 +690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -749,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -758,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -767,14 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -782,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -791,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -800,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -817,47 +762,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="defaultaction">Default<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Default<wbr>Action<wbr>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Default<wbr>Action<wbr>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Allow</dt>
+    <dd>Allow</dd><dt>Default<wbr>Action<wbr>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>Allow</dd><dt>DENY</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nwrulesetiprules">NWRule<wbr>Set<wbr>Ip<wbr>Rules</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -865,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -874,14 +804,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -889,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -898,14 +824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -913,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -922,14 +844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -937,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -946,16 +864,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nwrulesetiprulesresponse">NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -963,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -972,14 +886,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -987,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -996,14 +906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1011,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -1020,14 +926,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1035,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -1044,16 +946,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP Mask{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nwrulesetvirtualnetworkrules">NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_csharp">
 <a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1061,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1070,14 +968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Subnet<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_go">
 <a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1085,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1094,14 +988,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Subnet</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_nodejs">
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1109,8 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1118,14 +1008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Subnet</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_vnet_service_endpoint_python">
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
@@ -1133,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1142,16 +1028,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Subnet<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nwrulesetvirtualnetworkrulesresponse">NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_csharp">
 <a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1159,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1168,14 +1050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_go">
 <a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1183,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1192,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_nodejs">
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -1207,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1216,14 +1090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_vnet_service_endpoint_python">
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
@@ -1231,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1240,46 +1110,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Subnet properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkruleipaction">Network<wbr>Rule<wbr>IPAction</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Network<wbr>Rule<wbr>IPAction<wbr>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Network<wbr>Rule<wbr>IPAction<wbr>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnet">Subnet</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1287,14 +1146,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1302,14 +1158,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1317,14 +1170,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1332,16 +1182,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetresponse">Subnet<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1349,14 +1196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1364,14 +1208,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1379,14 +1220,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1394,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

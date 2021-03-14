@@ -51,9 +51,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -61,9 +59,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -71,9 +67,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -81,10 +75,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -110,9 +101,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -120,9 +109,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +117,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +125,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,18 +133,13 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +147,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +155,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +163,7 @@ WorkloadIdentityPool can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -207,9 +178,7 @@ The WorkloadIdentityPool resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_csharp">
 <a href="#workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -220,8 +189,7 @@ The WorkloadIdentityPool resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -230,8 +198,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -242,8 +209,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -252,8 +218,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -263,14 +228,11 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_go">
 <a href="#workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -281,8 +243,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -291,8 +252,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -303,8 +263,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -313,8 +272,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -324,14 +282,11 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_nodejs">
 <a href="#workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -342,8 +297,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -352,8 +306,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -364,8 +317,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -374,8 +326,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -385,14 +336,11 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workload_identity_pool_id_python">
 <a href="#workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
@@ -403,8 +351,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -413,8 +360,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -425,8 +371,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -435,8 +380,7 @@ access again.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -446,8 +390,7 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,9 +401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -468,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -493,14 +432,11 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -508,8 +444,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -519,8 +454,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -533,14 +467,11 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -548,8 +479,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -559,8 +489,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -573,14 +502,11 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -588,8 +514,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +524,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -613,8 +537,7 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -741,9 +664,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -752,8 +673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -764,8 +684,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -774,8 +693,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -785,8 +703,7 @@ access again.
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -796,8 +713,7 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -810,8 +726,7 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_csharp">
 <a href="#state_workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -822,14 +737,11 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -838,8 +750,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -850,8 +761,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -860,8 +770,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -871,8 +780,7 @@ access again.
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -882,8 +790,7 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -896,8 +803,7 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_go">
 <a href="#state_workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -908,14 +814,11 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -924,8 +827,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -936,8 +838,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -946,8 +847,7 @@ access again.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -957,8 +857,7 @@ access again.
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -968,8 +867,7 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -982,8 +880,7 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_nodejs">
 <a href="#state_workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -994,14 +891,11 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1010,8 +904,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the pool. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1022,8 +915,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
 existing tokens to access resources. If the pool is re-enabled, existing tokens grant
 access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1032,8 +924,7 @@ access again.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the pool. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1043,8 +934,7 @@ access again.
     </dt>
     <dd>{{% md %}}The resource name of the pool as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1054,8 +944,7 @@ access again.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1068,8 +957,7 @@ Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are perm
 days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
 pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
 tokens to access resources. If the pool is undeleted, existing tokens grant access again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workload_identity_pool_id_python">
 <a href="#state_workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
@@ -1080,8 +968,7 @@ tokens to access resources. If the pool is undeleted, existing tokens grant acce
     <dd>{{% md %}}The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1097,6 +984,6 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

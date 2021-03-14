@@ -14,11 +14,17 @@ Defines the PUT rollout request body.
 API Version: 2019-11-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update rollout
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -104,9 +110,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -181,9 +190,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -237,9 +249,12 @@ rollout = azure_native.deploymentmanager.Rollout("rollout",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -294,9 +309,16 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Rollout Resource {#create}
@@ -321,9 +343,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -331,9 +351,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -341,9 +359,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -351,10 +367,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -380,9 +393,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -390,9 +401,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -400,9 +409,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -410,9 +417,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -420,18 +425,13 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -439,9 +439,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -449,9 +447,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -459,10 +455,7 @@ const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -477,9 +470,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="buildversion_csharp">
 <a href="#buildversion_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Version</a>
@@ -487,8 +478,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -496,8 +486,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -505,8 +494,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stepgroups_csharp">
 <a href="#stepgroups_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
@@ -514,8 +502,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetservicetopologyid_csharp">
 <a href="#targetservicetopologyid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -523,8 +510,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactsourceid_csharp">
 <a href="#artifactsourceid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Source<wbr>Id</a>
@@ -532,8 +518,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -541,8 +526,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolloutname_csharp">
 <a href="#rolloutname_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Name</a>
@@ -550,8 +534,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -559,14 +542,11 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="buildversion_go">
 <a href="#buildversion_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Version</a>
@@ -574,8 +554,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -583,8 +562,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -592,8 +570,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stepgroups_go">
 <a href="#stepgroups_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
@@ -601,8 +578,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroup">[]Step<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetservicetopologyid_go">
 <a href="#targetservicetopologyid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -610,8 +586,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactsourceid_go">
 <a href="#artifactsourceid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Source<wbr>Id</a>
@@ -619,8 +594,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -628,8 +602,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolloutname_go">
 <a href="#rolloutname_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Name</a>
@@ -637,8 +610,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -646,14 +618,11 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="buildversion_nodejs">
 <a href="#buildversion_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Version</a>
@@ -661,8 +630,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -670,8 +638,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -679,8 +646,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stepgroups_nodejs">
 <a href="#stepgroups_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Groups</a>
@@ -688,8 +654,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroup">Step<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetservicetopologyid_nodejs">
 <a href="#targetservicetopologyid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -697,8 +662,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactsourceid_nodejs">
 <a href="#artifactsourceid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Source<wbr>Id</a>
@@ -706,8 +670,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -715,8 +678,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolloutname_nodejs">
 <a href="#rolloutname_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Name</a>
@@ -724,8 +686,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -733,14 +694,11 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_version_python">
 <a href="#build_version_python" style="color: inherit; text-decoration: inherit;">build_<wbr>version</a>
@@ -748,8 +706,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -757,8 +714,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -766,8 +722,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="step_groups_python">
 <a href="#step_groups_python" style="color: inherit; text-decoration: inherit;">step_<wbr>groups</a>
@@ -775,8 +730,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroup">Sequence[Step<wbr>Group<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_service_topology_id_python">
 <a href="#target_service_topology_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>topology_<wbr>id</a>
@@ -784,8 +738,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_source_id_python">
 <a href="#artifact_source_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>source_<wbr>id</a>
@@ -793,8 +746,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -802,8 +754,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollout_name_python">
 <a href="#rollout_name_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>name</a>
@@ -811,8 +762,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -820,8 +770,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -832,9 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -842,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -851,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -860,14 +805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -875,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -884,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -893,14 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -917,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -926,14 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -941,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -950,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -959,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -976,9 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="identity">Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -986,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -995,14 +921,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -1010,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1019,14 +941,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
@@ -1034,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1043,14 +961,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_ids_python">
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
@@ -1058,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1067,16 +981,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -1084,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1093,14 +1003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -1108,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1117,14 +1023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
@@ -1132,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1141,14 +1043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_ids_python">
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
@@ -1156,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1165,16 +1063,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="prepoststep">Pre<wbr>Post<wbr>Step</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_csharp">
 <a href="#stepid_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1182,14 +1077,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_go">
 <a href="#stepid_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1197,14 +1089,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_nodejs">
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
@@ -1212,14 +1101,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="step_id_python">
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
@@ -1227,16 +1113,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_csharp">
 <a href="#stepid_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1244,14 +1127,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_go">
 <a href="#stepid_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1259,14 +1139,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_nodejs">
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
@@ -1274,14 +1151,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="step_id_python">
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
@@ -1289,16 +1163,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stepgroup">Step<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_csharp">
 <a href="#deploymenttargetid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -1306,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1315,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_csharp">
 <a href="#dependsonstepgroups_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1324,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_csharp">
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -1333,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_csharp">
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -1342,14 +1209,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_go">
 <a href="#deploymenttargetid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -1357,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1366,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_go">
 <a href="#dependsonstepgroups_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1375,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_go">
 <a href="#postdeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -1384,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">[]Pre<wbr>Post<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_go">
 <a href="#predeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -1393,14 +1253,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">[]Pre<wbr>Post<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_nodejs">
 <a href="#deploymenttargetid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
@@ -1408,8 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1417,8 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_nodejs">
 <a href="#dependsonstepgroups_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1426,8 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_nodejs">
 <a href="#postdeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
@@ -1435,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_nodejs">
 <a href="#predeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
@@ -1444,14 +1297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_target_id_python">
 <a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
@@ -1459,8 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1468,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="depends_on_step_groups_python">
 <a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
@@ -1477,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_deployment_steps_python">
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
@@ -1486,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_deployment_steps_python">
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
@@ -1495,16 +1341,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stepgroupresponse">Step<wbr>Group<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_csharp">
 <a href="#deploymenttargetid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -1512,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1521,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_csharp">
 <a href="#dependsonstepgroups_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1530,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_csharp">
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -1539,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_csharp">
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -1548,14 +1387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_go">
 <a href="#deploymenttargetid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -1563,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1572,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_go">
 <a href="#dependsonstepgroups_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1581,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_go">
 <a href="#postdeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -1590,8 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">[]Pre<wbr>Post<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_go">
 <a href="#predeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -1599,14 +1431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">[]Pre<wbr>Post<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_nodejs">
 <a href="#deploymenttargetid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
@@ -1614,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1623,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_nodejs">
 <a href="#dependsonstepgroups_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -1632,8 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_nodejs">
 <a href="#postdeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
@@ -1641,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_nodejs">
 <a href="#predeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
@@ -1650,14 +1475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_target_id_python">
 <a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
@@ -1665,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1674,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="depends_on_step_groups_python">
 <a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
@@ -1683,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_deployment_steps_python">
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
@@ -1692,8 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_deployment_steps_python">
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
@@ -1701,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

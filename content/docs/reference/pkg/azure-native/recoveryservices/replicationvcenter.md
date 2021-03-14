@@ -14,11 +14,17 @@ vCenter definition.
 API Version: 2018-07-10.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Add vCenter.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -48,9 +54,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -84,9 +93,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -107,9 +119,12 @@ replicationv_center = azure_native.recoveryservices.ReplicationvCenter("replicat
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -131,9 +146,16 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ReplicationvCenter Resource {#create}
@@ -158,9 +180,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -168,9 +188,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -178,9 +196,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -188,10 +204,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -217,9 +230,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -227,9 +238,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +246,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +254,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,18 +262,13 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +276,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +284,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,10 +292,7 @@ const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -314,9 +307,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
@@ -324,8 +315,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -333,8 +323,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -342,8 +331,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -351,8 +339,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addvcenterrequestproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Add<wbr>VCenter<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcentername_csharp">
 <a href="#vcentername_csharp" style="color: inherit; text-decoration: inherit;">VCenter<wbr>Name</a>
@@ -360,14 +347,11 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
@@ -375,8 +359,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -384,8 +367,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -393,8 +375,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -402,8 +383,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addvcenterrequestproperties">Add<wbr>VCenter<wbr>Request<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcentername_go">
 <a href="#vcentername_go" style="color: inherit; text-decoration: inherit;">VCenter<wbr>Name</a>
@@ -411,14 +391,11 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
@@ -426,8 +403,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -435,8 +411,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -444,8 +419,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -453,8 +427,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addvcenterrequestproperties">Add<wbr>VCenter<wbr>Request<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcentername_nodejs">
 <a href="#vcentername_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Center<wbr>Name</a>
@@ -462,14 +435,11 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
@@ -477,8 +447,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -486,8 +455,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -495,8 +463,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -504,8 +471,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addvcenterrequestproperties">Add<wbr>VCenter<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_center_name_python">
 <a href="#v_center_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>center_<wbr>name</a>
@@ -513,8 +479,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}vCenter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -525,9 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -535,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -544,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -553,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -562,14 +522,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -577,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -586,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -595,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -604,14 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -628,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -637,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -646,14 +594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -679,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -688,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -705,9 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="addvcenterrequestproperties">Add<wbr>VCenter<wbr>Request<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -715,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -724,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -733,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_csharp">
 <a href="#processserverid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
@@ -742,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_csharp">
 <a href="#runasaccountid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
@@ -751,14 +686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -766,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -775,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -784,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_go">
 <a href="#processserverid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
@@ -793,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_go">
 <a href="#runasaccountid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
@@ -802,14 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -817,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -826,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -835,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_nodejs">
 <a href="#processserverid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Id</a>
@@ -844,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_nodejs">
 <a href="#runasaccountid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Account<wbr>Id</a>
@@ -853,14 +774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -868,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -877,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter to be discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -886,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="process_server_id_python">
 <a href="#process_server_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>server_<wbr>id</a>
@@ -895,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id from where the discovery is orchestrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_account_id_python">
 <a href="#run_as_account_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>account_<wbr>id</a>
@@ -904,16 +818,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healtherrorresponse">Health<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_csharp">
 <a href="#creationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
@@ -921,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerresolvability_csharp">
 <a href="#customerresolvability_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Resolvability</a>
@@ -930,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -939,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_csharp">
 <a href="#errorcategory_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
@@ -948,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -957,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorid_csharp">
 <a href="#errorid_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Id</a>
@@ -966,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_csharp">
 <a href="#errorlevel_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
@@ -975,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -984,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_csharp">
 <a href="#errorsource_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
@@ -993,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_csharp">
 <a href="#errortype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
@@ -1002,8 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innerhealtherrors_csharp">
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
@@ -1011,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_csharp">
 <a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
@@ -1020,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_csharp">
 <a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
@@ -1029,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_csharp">
 <a href="#recoveryprovidererrormessage_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1038,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_csharp">
 <a href="#summarymessage_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
@@ -1047,14 +944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_go">
 <a href="#creationtimeutc_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
@@ -1062,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerresolvability_go">
 <a href="#customerresolvability_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Resolvability</a>
@@ -1071,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -1080,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_go">
 <a href="#errorcategory_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
@@ -1089,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1098,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorid_go">
 <a href="#errorid_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Id</a>
@@ -1107,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_go">
 <a href="#errorlevel_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
@@ -1116,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1125,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_go">
 <a href="#errorsource_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
@@ -1134,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_go">
 <a href="#errortype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
@@ -1143,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innerhealtherrors_go">
 <a href="#innerhealtherrors_go" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
@@ -1152,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#innerhealtherrorresponse">[]Inner<wbr>Health<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_go">
 <a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
@@ -1161,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_go">
 <a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
@@ -1170,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_go">
 <a href="#recoveryprovidererrormessage_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1179,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_go">
 <a href="#summarymessage_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
@@ -1188,14 +1068,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_nodejs">
 <a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
@@ -1203,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerresolvability_nodejs">
 <a href="#customerresolvability_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
@@ -1212,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -1221,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_nodejs">
 <a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
@@ -1230,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -1239,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorid_nodejs">
 <a href="#errorid_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
@@ -1248,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_nodejs">
 <a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
@@ -1257,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1266,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_nodejs">
 <a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
@@ -1275,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_nodejs">
 <a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
@@ -1284,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innerhealtherrors_nodejs">
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
@@ -1293,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_nodejs">
 <a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
@@ -1302,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_nodejs">
 <a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
@@ -1311,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_nodejs">
 <a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1320,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_nodejs">
 <a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
@@ -1329,14 +1192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creation_time_utc_python">
 <a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
@@ -1344,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_resolvability_python">
 <a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
@@ -1353,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -1362,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_category_python">
 <a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
@@ -1371,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1380,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_id_python">
 <a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
@@ -1389,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_level_python">
 <a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
@@ -1398,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1407,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_source_python">
 <a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
@@ -1416,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_type_python">
 <a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
@@ -1425,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inner_health_errors_python">
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
@@ -1434,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possible_causes_python">
 <a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
@@ -1443,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommended_action_python">
 <a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
@@ -1452,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_provider_error_message_python">
 <a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
@@ -1461,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summary_message_python">
 <a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
@@ -1470,16 +1316,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_csharp">
 <a href="#creationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
@@ -1487,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -1496,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_csharp">
 <a href="#errorcategory_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
@@ -1505,8 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1514,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_csharp">
 <a href="#errorlevel_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
@@ -1523,8 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1532,8 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_csharp">
 <a href="#errorsource_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
@@ -1541,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_csharp">
 <a href="#errortype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
@@ -1550,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_csharp">
 <a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
@@ -1559,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_csharp">
 <a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
@@ -1568,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_csharp">
 <a href="#recoveryprovidererrormessage_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1577,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_csharp">
 <a href="#summarymessage_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
@@ -1586,14 +1418,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_go">
 <a href="#creationtimeutc_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
@@ -1601,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -1610,8 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_go">
 <a href="#errorcategory_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
@@ -1619,8 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1628,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_go">
 <a href="#errorlevel_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
@@ -1637,8 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1646,8 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_go">
 <a href="#errorsource_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
@@ -1655,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_go">
 <a href="#errortype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
@@ -1664,8 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_go">
 <a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
@@ -1673,8 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_go">
 <a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
@@ -1682,8 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_go">
 <a href="#recoveryprovidererrormessage_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1691,8 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_go">
 <a href="#summarymessage_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
@@ -1700,14 +1518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtimeutc_nodejs">
 <a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
@@ -1715,8 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -1724,8 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcategory_nodejs">
 <a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
@@ -1733,8 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -1742,8 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorlevel_nodejs">
 <a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
@@ -1751,8 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1760,8 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorsource_nodejs">
 <a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
@@ -1769,8 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errortype_nodejs">
 <a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
@@ -1778,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possiblecauses_nodejs">
 <a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
@@ -1787,8 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendedaction_nodejs">
 <a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
@@ -1796,8 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryprovidererrormessage_nodejs">
 <a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
@@ -1805,8 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summarymessage_nodejs">
 <a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
@@ -1814,14 +1618,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creation_time_utc_python">
 <a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
@@ -1829,8 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -1838,8 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_category_python">
 <a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
@@ -1847,8 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1856,8 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_level_python">
 <a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
@@ -1865,8 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1874,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_source_python">
 <a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
@@ -1883,8 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_type_python">
 <a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
@@ -1892,8 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="possible_causes_python">
 <a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
@@ -1901,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommended_action_python">
 <a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
@@ -1910,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_provider_error_message_python">
 <a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
@@ -1919,8 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="summary_message_python">
 <a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
@@ -1928,16 +1718,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vcenterpropertiesresponse">VCenter<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="discoverystatus_csharp">
 <a href="#discoverystatus_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Status</a>
@@ -1945,8 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fabricarmresourcename_csharp">
 <a href="#fabricarmresourcename_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
@@ -1954,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1963,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healtherrors_csharp">
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
@@ -1972,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infrastructureid_csharp">
 <a href="#infrastructureid_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Id</a>
@@ -1981,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1990,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1999,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_csharp">
 <a href="#lastheartbeat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat</a>
@@ -2008,8 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2017,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_csharp">
 <a href="#processserverid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
@@ -2026,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_csharp">
 <a href="#runasaccountid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
@@ -2035,14 +1812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="discoverystatus_go">
 <a href="#discoverystatus_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Status</a>
@@ -2050,8 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fabricarmresourcename_go">
 <a href="#fabricarmresourcename_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
@@ -2059,8 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -2068,8 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healtherrors_go">
 <a href="#healtherrors_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
@@ -2077,8 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healtherrorresponse">[]Health<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infrastructureid_go">
 <a href="#infrastructureid_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Id</a>
@@ -2086,8 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -2095,8 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2104,8 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_go">
 <a href="#lastheartbeat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat</a>
@@ -2113,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2122,8 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_go">
 <a href="#processserverid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
@@ -2131,8 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_go">
 <a href="#runasaccountid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
@@ -2140,14 +1904,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="discoverystatus_nodejs">
 <a href="#discoverystatus_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Status</a>
@@ -2155,8 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fabricarmresourcename_nodejs">
 <a href="#fabricarmresourcename_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
@@ -2164,8 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -2173,8 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healtherrors_nodejs">
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
@@ -2182,8 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infrastructureid_nodejs">
 <a href="#infrastructureid_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Id</a>
@@ -2191,8 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -2200,8 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2209,8 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_nodejs">
 <a href="#lastheartbeat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat</a>
@@ -2218,8 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2227,8 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processserverid_nodejs">
 <a href="#processserverid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Id</a>
@@ -2236,8 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasaccountid_nodejs">
 <a href="#runasaccountid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Account<wbr>Id</a>
@@ -2245,14 +1996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="discovery_status_python">
 <a href="#discovery_status_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>status</a>
@@ -2260,8 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fabric_arm_resource_name_python">
 <a href="#fabric_arm_resource_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>arm_<wbr>resource_<wbr>name</a>
@@ -2269,8 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -2278,8 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_errors_python">
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
@@ -2287,8 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infrastructure_id_python">
 <a href="#infrastructure_id_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>id</a>
@@ -2296,8 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -2305,8 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2314,8 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_heartbeat_python">
 <a href="#last_heartbeat_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat</a>
@@ -2323,8 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2332,8 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="process_server_id_python">
 <a href="#process_server_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>server_<wbr>id</a>
@@ -2341,8 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_account_id_python">
 <a href="#run_as_account_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>account_<wbr>id</a>
@@ -2350,8 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

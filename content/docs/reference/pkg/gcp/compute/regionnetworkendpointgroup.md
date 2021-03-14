@@ -19,11 +19,17 @@ To get more information about RegionNetworkEndpointGroup, see:
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Region Network Endpoint Group Functions
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -66,9 +72,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -120,9 +129,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -149,9 +161,12 @@ function_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointGr
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -182,10 +197,17 @@ const functionNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndpo
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Network Endpoint Group Cloudrun
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -234,9 +256,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -284,9 +309,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -313,9 +341,12 @@ cloudrun_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointGr
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -345,10 +376,17 @@ const cloudrunNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndpo
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Network Endpoint Group Appengine
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -439,9 +477,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -531,9 +572,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -590,9 +634,12 @@ appengine_neg_region_network_endpoint_group = gcp.compute.RegionNetworkEndpointG
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -653,9 +700,16 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionNetworkEndpointGroup Resource {#create}
@@ -680,9 +734,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -690,9 +742,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -700,9 +750,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -710,10 +758,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -739,9 +784,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -749,9 +792,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -759,9 +800,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -769,9 +808,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -779,18 +816,13 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -798,9 +830,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -808,9 +838,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -818,10 +846,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -836,9 +861,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -847,8 +870,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengine_csharp">
 <a href="#appengine_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
@@ -859,8 +881,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_csharp">
 <a href="#cloudfunction_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
@@ -871,8 +892,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudrun_csharp">
 <a href="#cloudrun_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
@@ -883,8 +903,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -894,8 +913,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -910,8 +928,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_csharp">
 <a href="#networkendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
@@ -922,8 +939,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -933,14 +949,11 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -949,8 +962,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengine_go">
 <a href="#appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
@@ -961,8 +973,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_go">
 <a href="#cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
@@ -973,8 +984,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudrun_go">
 <a href="#cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
@@ -985,8 +995,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -996,8 +1005,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1012,8 +1020,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_go">
 <a href="#networkendpointtype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
@@ -1024,8 +1031,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1035,14 +1041,11 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1051,8 +1054,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengine_nodejs">
 <a href="#appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
@@ -1063,8 +1065,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_nodejs">
 <a href="#cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
@@ -1075,8 +1076,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudrun_nodejs">
 <a href="#cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
@@ -1087,8 +1087,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1098,8 +1097,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1114,8 +1112,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_nodejs">
 <a href="#networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
@@ -1126,8 +1123,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1137,14 +1133,11 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1153,8 +1146,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_engine_python">
 <a href="#app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
@@ -1165,8 +1157,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_function_python">
 <a href="#cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
@@ -1177,8 +1168,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_run_python">
 <a href="#cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
@@ -1189,8 +1179,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1200,8 +1189,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1216,8 +1204,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_endpoint_type_python">
 <a href="#network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
@@ -1228,8 +1215,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1239,8 +1225,7 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1251,9 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1261,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1271,14 +1253,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1286,8 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1296,14 +1274,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1311,8 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1321,14 +1295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1336,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1346,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1474,9 +1443,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengine_csharp">
 <a href="#state_appengine_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
@@ -1487,8 +1454,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_csharp">
 <a href="#state_cloudfunction_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
@@ -1499,8 +1465,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_csharp">
 <a href="#state_cloudrun_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
@@ -1511,8 +1476,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1522,8 +1486,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1538,8 +1501,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_csharp">
 <a href="#state_networkendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
@@ -1550,8 +1512,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1561,8 +1522,7 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1571,8 +1531,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1581,14 +1540,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengine_go">
 <a href="#state_appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
@@ -1599,8 +1555,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_go">
 <a href="#state_cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
@@ -1611,8 +1566,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_go">
 <a href="#state_cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
@@ -1623,8 +1577,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1634,8 +1587,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1650,8 +1602,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_go">
 <a href="#state_networkendpointtype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
@@ -1662,8 +1613,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1673,8 +1623,7 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1683,8 +1632,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1693,14 +1641,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengine_nodejs">
 <a href="#state_appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
@@ -1711,8 +1656,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_nodejs">
 <a href="#state_cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
@@ -1723,8 +1667,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_nodejs">
 <a href="#state_cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
@@ -1735,8 +1678,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1746,8 +1688,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1762,8 +1703,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_nodejs">
 <a href="#state_networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
@@ -1774,8 +1714,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1785,8 +1724,7 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1795,8 +1733,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1805,14 +1742,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_engine_python">
 <a href="#state_app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
@@ -1823,8 +1757,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_function_python">
 <a href="#state_cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
@@ -1835,8 +1768,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_run_python">
 <a href="#state_cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
@@ -1847,8 +1779,7 @@ Structure is documented below.
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS".
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1858,8 +1789,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1874,8 +1804,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_endpoint_type_python">
 <a href="#state_network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
@@ -1886,8 +1815,7 @@ character, which cannot be a dash.
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1897,8 +1825,7 @@ Possible values are `SERVERLESS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1907,8 +1834,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1917,8 +1843,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1933,9 +1858,7 @@ If it is not provided, the provider project is used.
 <h4 id="regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1946,8 +1869,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -1961,8 +1883,7 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1973,14 +1894,11 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1991,8 +1909,7 @@ Example value: "v1", "v2".
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -2006,8 +1923,7 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2018,14 +1934,11 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2036,8 +1949,7 @@ Example value: "v1", "v2".
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
@@ -2051,8 +1963,7 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2063,14 +1974,11 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2081,8 +1989,7 @@ Example value: "v1", "v2".
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
@@ -2096,8 +2003,7 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2108,16 +2014,13 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -2128,8 +2031,7 @@ Example value: "v1", "v2".
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -2143,14 +2045,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -2161,8 +2060,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -2176,14 +2074,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -2194,8 +2089,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
@@ -2209,14 +2103,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -2227,8 +2118,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
@@ -2242,16 +2132,13 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -2262,8 +2149,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -2275,8 +2161,7 @@ Example value: "default", "my-service".
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -2290,14 +2175,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -2308,8 +2190,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -2321,8 +2202,7 @@ Example value: "default", "my-service".
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
@@ -2336,14 +2216,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2354,8 +2231,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -2367,8 +2243,7 @@ Example value: "default", "my-service".
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
@@ -2382,14 +2257,11 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2400,8 +2272,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -2413,8 +2284,7 @@ Example value: "default", "my-service".
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
@@ -2428,8 +2298,7 @@ multiple Network Endpoint Groups and backend services.
 For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2462,6 +2331,6 @@ RegionNetworkEndpointGroup can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

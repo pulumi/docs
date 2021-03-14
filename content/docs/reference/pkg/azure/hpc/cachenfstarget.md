@@ -38,9 +38,7 @@ Manages a NFS Target within a HPC Cache.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -48,9 +46,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -58,9 +54,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -68,10 +62,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -97,9 +88,7 @@ Manages a NFS Target within a HPC Cache.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -107,9 +96,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -117,9 +104,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -127,9 +112,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -137,18 +120,13 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -156,9 +134,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -166,9 +142,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -176,10 +150,7 @@ Manages a NFS Target within a HPC Cache.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +165,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachename_csharp">
 <a href="#cachename_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
@@ -205,8 +174,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacejunctions_csharp">
 <a href="#namespacejunctions_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
@@ -215,8 +183,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">List&lt;Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -225,8 +192,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_csharp">
 <a href="#targethostname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -235,8 +201,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagemodel_csharp">
 <a href="#usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
@@ -245,8 +210,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -255,14 +219,11 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachename_go">
 <a href="#cachename_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
@@ -271,8 +232,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacejunctions_go">
 <a href="#namespacejunctions_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
@@ -281,8 +241,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -291,8 +250,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_go">
 <a href="#targethostname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -301,8 +259,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagemodel_go">
 <a href="#usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
@@ -311,8 +268,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -321,14 +277,11 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachename_nodejs">
 <a href="#cachename_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Name</a>
@@ -337,8 +290,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacejunctions_nodejs">
 <a href="#namespacejunctions_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Junctions</a>
@@ -347,8 +299,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -357,8 +308,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targethostname_nodejs">
 <a href="#targethostname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Host<wbr>Name</a>
@@ -367,8 +317,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagemodel_nodejs">
 <a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
@@ -377,8 +326,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -387,14 +335,11 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cache_name_python">
 <a href="#cache_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>name</a>
@@ -403,8 +348,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_junctions_python">
 <a href="#namespace_junctions_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>junctions</a>
@@ -413,8 +357,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">Sequence[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -423,8 +366,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_host_name_python">
 <a href="#target_host_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>host_<wbr>name</a>
@@ -433,8 +375,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_model_python">
 <a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
@@ -443,8 +384,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -453,8 +393,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -465,9 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -475,14 +412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -490,14 +424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -505,14 +436,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -520,8 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -648,9 +575,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_csharp">
 <a href="#state_cachename_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
@@ -659,8 +584,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -669,8 +593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacejunctions_csharp">
 <a href="#state_namespacejunctions_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
@@ -679,8 +602,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">List&lt;Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -689,8 +611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targethostname_csharp">
 <a href="#state_targethostname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -699,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagemodel_csharp">
 <a href="#state_usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
@@ -709,14 +629,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_go">
 <a href="#state_cachename_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Name</a>
@@ -725,8 +642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacejunctions_go">
 <a href="#state_namespacejunctions_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
@@ -745,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -755,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targethostname_go">
 <a href="#state_targethostname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Host<wbr>Name</a>
@@ -765,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagemodel_go">
 <a href="#state_usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
@@ -775,14 +687,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cachename_nodejs">
 <a href="#state_cachename_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Name</a>
@@ -791,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -801,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacejunctions_nodejs">
 <a href="#state_namespacejunctions_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Junctions</a>
@@ -811,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -821,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targethostname_nodejs">
 <a href="#state_targethostname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Host<wbr>Name</a>
@@ -831,8 +736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagemodel_nodejs">
 <a href="#state_usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
@@ -841,14 +745,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cache_name_python">
 <a href="#state_cache_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>name</a>
@@ -857,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -867,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_junctions_python">
 <a href="#state_namespace_junctions_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>junctions</a>
@@ -877,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#cachenfstargetnamespacejunction">Sequence[Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -887,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_host_name_python">
 <a href="#state_target_host_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>host_<wbr>name</a>
@@ -897,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_model_python">
 <a href="#state_usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
@@ -907,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of usage of the HPC Cache NFS Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -923,9 +818,7 @@ The following state arguments are supported:
 <h4 id="cachenfstargetnamespacejunction">Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacepath_csharp">
 <a href="#namespacepath_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Path</a>
@@ -934,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client-facing file path of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexport_csharp">
 <a href="#nfsexport_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export</a>
@@ -944,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_csharp">
 <a href="#targetpath_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Path</a>
@@ -954,14 +845,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative subdirectory path from the `nfs_export` to map to the `namespace_path`. Defaults to `""`, in which case the whole `nfs_export` is exported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacepath_go">
 <a href="#namespacepath_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Path</a>
@@ -970,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client-facing file path of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexport_go">
 <a href="#nfsexport_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export</a>
@@ -980,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_go">
 <a href="#targetpath_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Path</a>
@@ -990,14 +876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative subdirectory path from the `nfs_export` to map to the `namespace_path`. Defaults to `""`, in which case the whole `nfs_export` is exported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacepath_nodejs">
 <a href="#namespacepath_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
@@ -1006,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client-facing file path of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexport_nodejs">
 <a href="#nfsexport_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
@@ -1016,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpath_nodejs">
 <a href="#targetpath_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
@@ -1026,14 +907,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative subdirectory path from the `nfs_export` to map to the `namespace_path`. Defaults to `""`, in which case the whole `nfs_export` is exported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_path_python">
 <a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
@@ -1042,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client-facing file path of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_export_python">
 <a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
@@ -1052,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NFS export of this NFS target within the HPC Cache NFS Target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_path_python">
 <a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
@@ -1062,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative subdirectory path from the `nfs_export` to map to the `namespace_path`. Defaults to `""`, in which case the whole `nfs_export` is exported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1084,6 +959,6 @@ NFS Target within a HPC Cache can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_csharp">
 <a href="#isonline_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevision_csharp">
 <a href="#apirevision_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevisiondescription_csharp">
 <a href="#apirevisiondescription_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision<wbr>Description</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apitype_csharp">
 <a href="#apitype_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversiondescription_csharp">
 <a href="#apiversiondescription_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Description</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionset_csharp">
 <a href="#apiversionset_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Version set details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionsetid_csharp">
 <a href="#apiversionsetid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set<wbr>Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authenticationsettings_csharp">
 <a href="#authenticationsettings_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_csharp">
 <a href="#iscurrent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceapiid_csharp">
 <a href="#sourceapiid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionkeyparameternames_csharp">
 <a href="#subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionrequired_csharp">
 <a href="#subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -382,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_go">
 <a href="#isonline_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevision_go">
 <a href="#apirevision_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevisiondescription_go">
 <a href="#apirevisiondescription_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision<wbr>Description</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apitype_go">
 <a href="#apitype_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversiondescription_go">
 <a href="#apiversiondescription_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Description</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionset_go">
 <a href="#apiversionset_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Version set details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionsetid_go">
 <a href="#apiversionsetid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set<wbr>Id</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authenticationsettings_go">
 <a href="#authenticationsettings_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_go">
 <a href="#iscurrent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_go">
 <a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceapiid_go">
 <a href="#sourceapiid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionkeyparameternames_go">
 <a href="#subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionrequired_go">
 <a href="#subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -577,14 +512,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_nodejs">
 <a href="#isonline_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Online</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevision_nodejs">
 <a href="#apirevision_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apirevisiondescription_nodejs">
 <a href="#apirevisiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision<wbr>Description</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apitype_nodejs">
 <a href="#apitype_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Type</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversiondescription_nodejs">
 <a href="#apiversiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Description</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionset_nodejs">
 <a href="#apiversionset_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Version set details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiversionsetid_nodejs">
 <a href="#apiversionsetid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set<wbr>Id</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authenticationsettings_nodejs">
 <a href="#authenticationsettings_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Settings</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_nodejs">
 <a href="#iscurrent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Current</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceapiid_nodejs">
 <a href="#sourceapiid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Api<wbr>Id</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionkeyparameternames_nodejs">
 <a href="#subscriptionkeyparameternames_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptionrequired_nodejs">
 <a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
@@ -772,14 +684,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_online_python">
 <a href="#is_online_python" style="color: inherit; text-decoration: inherit;">is_<wbr>online</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_revision_python">
 <a href="#api_revision_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_revision_description_python">
 <a href="#api_revision_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision_<wbr>description</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_type_python">
 <a href="#api_type_python" style="color: inherit; text-decoration: inherit;">api_<wbr>type</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_version_description_python">
 <a href="#api_version_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>description</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_version_set_python">
 <a href="#api_version_set_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetailsresponse">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Version set details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_version_set_id_python">
 <a href="#api_version_set_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set_<wbr>id</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authentication_settings_python">
 <a href="#authentication_settings_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>settings</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_current_python">
 <a href="#is_current_python" style="color: inherit; text-decoration: inherit;">is_<wbr>current</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_url_python">
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_api_id_python">
 <a href="#source_api_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>api_<wbr>id</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscription_key_parameter_names_python">
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscription_required_python">
 <a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,9 +870,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -992,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1001,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1010,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_csharp">
 <a href="#versionheadername_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
@@ -1019,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_csharp">
 <a href="#versionqueryname_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
@@ -1028,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_csharp">
 <a href="#versioningscheme_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
@@ -1037,14 +918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1052,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1061,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1070,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_go">
 <a href="#versionheadername_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
@@ -1079,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_go">
 <a href="#versionqueryname_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
@@ -1088,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_go">
 <a href="#versioningscheme_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
@@ -1097,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1112,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1121,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1130,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_nodejs">
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
@@ -1139,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_nodejs">
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
@@ -1148,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_nodejs">
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
@@ -1157,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1172,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1190,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_header_name_python">
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
@@ -1199,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_query_name_python">
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
@@ -1208,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_scheme_python">
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
@@ -1217,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
@@ -1226,9 +1082,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="oauth2_csharp">
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
@@ -1236,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_csharp">
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
@@ -1245,14 +1098,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="oauth2_go">
 <a href="#oauth2_go" style="color: inherit; text-decoration: inherit;">OAuth2</a>
@@ -1260,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_go">
 <a href="#openid_go" style="color: inherit; text-decoration: inherit;">Openid</a>
@@ -1269,14 +1118,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="oauth2_nodejs">
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
@@ -1284,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_nodejs">
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
@@ -1293,14 +1138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="o_auth2_python">
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
@@ -1308,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_python">
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
@@ -1317,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
@@ -1326,9 +1166,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationserverid_csharp">
 <a href="#authorizationserverid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
@@ -1336,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1345,14 +1182,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationserverid_go">
 <a href="#authorizationserverid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
@@ -1360,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1369,14 +1202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizationserverid_nodejs">
 <a href="#authorizationserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Id</a>
@@ -1384,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1393,14 +1222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_server_id_python">
 <a href="#authorization_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>id</a>
@@ -1408,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1417,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
@@ -1426,9 +1250,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_csharp">
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -1436,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_csharp">
 <a href="#openidproviderid_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
@@ -1445,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_go">
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -1460,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_go">
 <a href="#openidproviderid_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
@@ -1469,14 +1286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_nodejs">
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -1484,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_nodejs">
 <a href="#openidproviderid_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Id</a>
@@ -1493,14 +1306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bearer_token_sending_methods_python">
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
@@ -1508,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_provider_id_python">
 <a href="#openid_provider_id_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>id</a>
@@ -1517,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</h4>
@@ -1526,9 +1334,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -1536,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1545,14 +1350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -1560,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1569,14 +1370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -1584,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1593,14 +1390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -1608,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1617,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverendpointname_csharp">
 <a href="#serverendpointname_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_csharp">
 <a href="#storagesyncservicename_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_csharp">
 <a href="#syncgroupname_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverendpointname_go">
 <a href="#serverendpointname_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_go">
 <a href="#storagesyncservicename_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_go">
 <a href="#syncgroupname_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverendpointname_nodejs">
 <a href="#serverendpointname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_nodejs">
 <a href="#storagesyncservicename_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_nodejs">
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_endpoint_name_python">
 <a href="#server_endpoint_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_sync_service_name_python">
 <a href="#storage_sync_service_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sync_group_name_python">
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cloudtieringstatus_csharp">
 <a href="#cloudtieringstatus_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering<wbr>Status</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_csharp">
 <a href="#lastoperationname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_csharp">
 <a href="#lastworkflowid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccountresourceid_csharp">
 <a href="#offlinedatatransferstorageaccountresourceid_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccounttenantid_csharp">
 <a href="#offlinedatatransferstorageaccounttenantid_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recallstatus_csharp">
 <a href="#recallstatus_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Status</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstatus_csharp">
 <a href="#syncstatus_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Outputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudtiering_csharp">
 <a href="#cloudtiering_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initialdownloadpolicy_csharp">
 <a href="#initialdownloadpolicy_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Download<wbr>Policy</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localcachemode_csharp">
 <a href="#localcachemode_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Cache<wbr>Mode</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfer_csharp">
 <a href="#offlinedatatransfer_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfersharename_csharp">
 <a href="#offlinedatatransfersharename_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Share<wbr>Name</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverlocalpath_csharp">
 <a href="#serverlocalpath_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Local<wbr>Path</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Local path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverresourceid_csharp">
 <a href="#serverresourceid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Resource<wbr>Id</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tierfilesolderthandays_csharp">
 <a href="#tierfilesolderthandays_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>Files<wbr>Older<wbr>Than<wbr>Days</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumefreespacepercent_csharp">
 <a href="#volumefreespacepercent_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -418,14 +372,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cloudtieringstatus_go">
 <a href="#cloudtieringstatus_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering<wbr>Status</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_go">
 <a href="#lastoperationname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_go">
 <a href="#lastworkflowid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccountresourceid_go">
 <a href="#offlinedatatransferstorageaccountresourceid_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccounttenantid_go">
 <a href="#offlinedatatransferstorageaccounttenantid_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recallstatus_go">
 <a href="#recallstatus_go" style="color: inherit; text-decoration: inherit;">Recall<wbr>Status</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallstatusresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstatus_go">
 <a href="#syncstatus_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudtiering_go">
 <a href="#cloudtiering_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tiering</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initialdownloadpolicy_go">
 <a href="#initialdownloadpolicy_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Download<wbr>Policy</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localcachemode_go">
 <a href="#localcachemode_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Cache<wbr>Mode</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfer_go">
 <a href="#offlinedatatransfer_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfersharename_go">
 <a href="#offlinedatatransfersharename_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Share<wbr>Name</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverlocalpath_go">
 <a href="#serverlocalpath_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Local<wbr>Path</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Local path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverresourceid_go">
 <a href="#serverresourceid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Resource<wbr>Id</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tierfilesolderthandays_go">
 <a href="#tierfilesolderthandays_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>Files<wbr>Older<wbr>Than<wbr>Days</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumefreespacepercent_go">
 <a href="#volumefreespacepercent_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -613,14 +544,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cloudtieringstatus_nodejs">
 <a href="#cloudtieringstatus_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Tiering<wbr>Status</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_nodejs">
 <a href="#lastoperationname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation<wbr>Name</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_nodejs">
 <a href="#lastworkflowid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Workflow<wbr>Id</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccountresourceid_nodejs">
 <a href="#offlinedatatransferstorageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransferstorageaccounttenantid_nodejs">
 <a href="#offlinedatatransferstorageaccounttenantid_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recallstatus_nodejs">
 <a href="#recallstatus_nodejs" style="color: inherit; text-decoration: inherit;">recall<wbr>Status</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallstatusresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstatus_nodejs">
 <a href="#syncstatus_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Status</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudtiering_nodejs">
 <a href="#cloudtiering_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Tiering</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initialdownloadpolicy_nodejs">
 <a href="#initialdownloadpolicy_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Download<wbr>Policy</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localcachemode_nodejs">
 <a href="#localcachemode_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Cache<wbr>Mode</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfer_nodejs">
 <a href="#offlinedatatransfer_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offlinedatatransfersharename_nodejs">
 <a href="#offlinedatatransfersharename_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Share<wbr>Name</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverlocalpath_nodejs">
 <a href="#serverlocalpath_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Local<wbr>Path</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Local path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serverresourceid_nodejs">
 <a href="#serverresourceid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Resource<wbr>Id</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tierfilesolderthandays_nodejs">
 <a href="#tierfilesolderthandays_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>Files<wbr>Older<wbr>Than<wbr>Days</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumefreespacepercent_nodejs">
 <a href="#volumefreespacepercent_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -808,14 +716,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cloud_tiering_status_python">
 <a href="#cloud_tiering_status_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tiering_<wbr>status</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointcloudtieringstatusresponse">Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud tiering status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_operation_name_python">
 <a href="#last_operation_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation_<wbr>name</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_workflow_id_python">
 <a href="#last_workflow_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>workflow_<wbr>id</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offline_data_transfer_storage_account_resource_id_python">
 <a href="#offline_data_transfer_storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>storage_<wbr>account_<wbr>resource_<wbr>id</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account resource ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offline_data_transfer_storage_account_tenant_id_python">
 <a href="#offline_data_transfer_storage_account_tenant_id_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>storage_<wbr>account_<wbr>tenant_<wbr>id</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer storage account tenant ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ServerEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recall_status_python">
 <a href="#recall_status_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>status</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallstatusresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Recall status. Only populated if cloud tiering is enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sync_status_python">
 <a href="#sync_status_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>status</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Endpoint sync status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloud_tiering_python">
 <a href="#cloud_tiering_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tiering</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initial_download_policy_python">
 <a href="#initial_download_policy_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>download_<wbr>policy</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_cache_mode_python">
 <a href="#local_cache_mode_python" style="color: inherit; text-decoration: inherit;">local_<wbr>cache_<wbr>mode</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offline_data_transfer_python">
 <a href="#offline_data_transfer_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offline_data_transfer_share_name_python">
 <a href="#offline_data_transfer_share_name_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>share_<wbr>name</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_local_path_python">
 <a href="#server_local_path_python" style="color: inherit; text-decoration: inherit;">server_<wbr>local_<wbr>path</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Server Local path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_resource_id_python">
 <a href="#server_resource_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>resource_<wbr>id</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tier_files_older_than_days_python">
 <a href="#tier_files_older_than_days_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>files_<wbr>older_<wbr>than_<wbr>days</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_free_space_percent_python">
 <a href="#volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>percent</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1018,9 +902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachehitbytes_csharp">
 <a href="#cachehitbytes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes</a>
@@ -1028,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachehitbytespercent_csharp">
 <a href="#cachehitbytespercent_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes<wbr>Percent</a>
@@ -1037,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachemissbytes_csharp">
 <a href="#cachemissbytes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Miss<wbr>Bytes</a>
@@ -1046,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1055,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachehitbytes_go">
 <a href="#cachehitbytes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes</a>
@@ -1070,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachehitbytespercent_go">
 <a href="#cachehitbytespercent_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes<wbr>Percent</a>
@@ -1079,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachemissbytes_go">
 <a href="#cachemissbytes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Miss<wbr>Bytes</a>
@@ -1088,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1097,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachehitbytes_nodejs">
 <a href="#cachehitbytes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Hit<wbr>Bytes</a>
@@ -1112,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachehitbytespercent_nodejs">
 <a href="#cachehitbytespercent_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Hit<wbr>Bytes<wbr>Percent</a>
@@ -1121,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachemissbytes_nodejs">
 <a href="#cachemissbytes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Miss<wbr>Bytes</a>
@@ -1130,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -1139,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cache_hit_bytes_python">
 <a href="#cache_hit_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes</a>
@@ -1154,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cache_hit_bytes_percent_python">
 <a href="#cache_hit_bytes_percent_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes_<wbr>percent</a>
@@ -1163,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cache_miss_bytes_python">
 <a href="#cache_miss_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>miss_<wbr>bytes</a>
@@ -1172,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</h4>
@@ -1190,9 +1050,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1200,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tieredfilesmostrecentaccesstimestamp_csharp">
 <a href="#tieredfilesmostrecentaccesstimestamp_csharp" style="color: inherit; text-decoration: inherit;">Tiered<wbr>Files<wbr>Most<wbr>Recent<wbr>Access<wbr>Timestamp</a>
@@ -1209,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1224,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tieredfilesmostrecentaccesstimestamp_go">
 <a href="#tieredfilesmostrecentaccesstimestamp_go" style="color: inherit; text-decoration: inherit;">Tiered<wbr>Files<wbr>Most<wbr>Recent<wbr>Access<wbr>Timestamp</a>
@@ -1233,14 +1086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -1248,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tieredfilesmostrecentaccesstimestamp_nodejs">
 <a href="#tieredfilesmostrecentaccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">tiered<wbr>Files<wbr>Most<wbr>Recent<wbr>Access<wbr>Timestamp</a>
@@ -1257,14 +1106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -1272,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tiered_files_most_recent_access_timestamp_python">
 <a href="#tiered_files_most_recent_access_timestamp_python" style="color: inherit; text-decoration: inherit;">tiered_<wbr>files_<wbr>most_<wbr>recent_<wbr>access_<wbr>timestamp</a>
@@ -1281,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</h4>
@@ -1290,9 +1134,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1300,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1309,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilecount_csharp">
 <a href="#totalfilecount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>File<wbr>Count</a>
@@ -1318,14 +1158,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1333,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesnottieringerrorresponse">[]Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1342,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilecount_go">
 <a href="#totalfilecount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>File<wbr>Count</a>
@@ -1351,14 +1186,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1366,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -1375,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilecount_nodejs">
 <a href="#totalfilecount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>File<wbr>Count</a>
@@ -1384,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1399,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -1408,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_file_count_python">
 <a href="#total_file_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>file_<wbr>count</a>
@@ -1417,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</h4>
@@ -1426,9 +1250,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachedsizebytes_csharp">
 <a href="#cachedsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Size<wbr>Bytes</a>
@@ -1436,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1445,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingsbytes_csharp">
 <a href="#spacesavingsbytes_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Bytes</a>
@@ -1454,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingspercent_csharp">
 <a href="#spacesavingspercent_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Percent</a>
@@ -1463,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsizecloudbytes_csharp">
 <a href="#totalsizecloudbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
@@ -1472,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesizebytes_csharp">
 <a href="#volumesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size<wbr>Bytes</a>
@@ -1481,14 +1298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Volume size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachedsizebytes_go">
 <a href="#cachedsizebytes_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Size<wbr>Bytes</a>
@@ -1496,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1505,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingsbytes_go">
 <a href="#spacesavingsbytes_go" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Bytes</a>
@@ -1514,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingspercent_go">
 <a href="#spacesavingspercent_go" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Percent</a>
@@ -1523,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsizecloudbytes_go">
 <a href="#totalsizecloudbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
@@ -1532,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesizebytes_go">
 <a href="#volumesizebytes_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size<wbr>Bytes</a>
@@ -1541,14 +1350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Volume size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cachedsizebytes_nodejs">
 <a href="#cachedsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Size<wbr>Bytes</a>
@@ -1556,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -1565,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingsbytes_nodejs">
 <a href="#spacesavingsbytes_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings<wbr>Bytes</a>
@@ -1574,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavingspercent_nodejs">
 <a href="#spacesavingspercent_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings<wbr>Percent</a>
@@ -1583,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalsizecloudbytes_nodejs">
 <a href="#totalsizecloudbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
@@ -1592,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesizebytes_nodejs">
 <a href="#volumesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size<wbr>Bytes</a>
@@ -1601,14 +1402,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Volume size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cached_size_bytes_python">
 <a href="#cached_size_bytes_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>size_<wbr>bytes</a>
@@ -1616,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -1625,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="space_savings_bytes_python">
 <a href="#space_savings_bytes_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>bytes</a>
@@ -1634,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="space_savings_percent_python">
 <a href="#space_savings_percent_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>percent</a>
@@ -1643,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_size_cloud_bytes_python">
 <a href="#total_size_cloud_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size_<wbr>cloud_<wbr>bytes</a>
@@ -1652,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_bytes_python">
 <a href="#volume_size_bytes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size_<wbr>bytes</a>
@@ -1661,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Volume size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</h4>
@@ -1670,9 +1462,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvolumefreespacepercent_csharp">
 <a href="#currentvolumefreespacepercent_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -1680,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="effectivevolumefreespacepolicy_csharp">
 <a href="#effectivevolumefreespacepolicy_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy</a>
@@ -1689,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1698,14 +1486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvolumefreespacepercent_go">
 <a href="#currentvolumefreespacepercent_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -1713,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="effectivevolumefreespacepolicy_go">
 <a href="#effectivevolumefreespacepolicy_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy</a>
@@ -1722,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1731,14 +1514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvolumefreespacepercent_nodejs">
 <a href="#currentvolumefreespacepercent_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Volume<wbr>Free<wbr>Space<wbr>Percent</a>
@@ -1746,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="effectivevolumefreespacepolicy_nodejs">
 <a href="#effectivevolumefreespacepolicy_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy</a>
@@ -1755,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -1764,14 +1542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="current_volume_free_space_percent_python">
 <a href="#current_volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">current_<wbr>volume_<wbr>free_<wbr>space_<wbr>percent</a>
@@ -1779,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="effective_volume_free_space_policy_python">
 <a href="#effective_volume_free_space_policy_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>volume_<wbr>free_<wbr>space_<wbr>policy</a>
@@ -1788,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -1797,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response</h4>
@@ -1806,9 +1578,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1816,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filecount_csharp">
 <a href="#filecount_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Count</a>
@@ -1825,14 +1594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1840,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filecount_go">
 <a href="#filecount_go" style="color: inherit; text-decoration: inherit;">File<wbr>Count</a>
@@ -1849,14 +1614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -1864,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filecount_nodejs">
 <a href="#filecount_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
@@ -1873,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1888,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_count_python">
 <a href="#file_count_python" style="color: inherit; text-decoration: inherit;">file_<wbr>count</a>
@@ -1897,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointcloudtieringstatusresponse">Server<wbr>Endpoint<wbr>Cloud<wbr>Tiering<wbr>Status<wbr>Response</h4>
@@ -1906,9 +1662,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacheperformance_csharp">
 <a href="#cacheperformance_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Performance</a>
@@ -1916,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datepolicystatus_csharp">
 <a href="#datepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Policy<wbr>Status</a>
@@ -1925,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesnottiering_csharp">
 <a href="#filesnottiering_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Tiering</a>
@@ -1934,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_csharp">
 <a href="#health_csharp" style="color: inherit; text-decoration: inherit;">Health</a>
@@ -1943,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthlastupdatedtimestamp_csharp">
 <a href="#healthlastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Last<wbr>Updated<wbr>Timestamp</a>
@@ -1952,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcloudtieringresult_csharp">
 <a href="#lastcloudtieringresult_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Cloud<wbr>Tiering<wbr>Result</a>
@@ -1961,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsuccesstimestamp_csharp">
 <a href="#lastsuccesstimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Success<wbr>Timestamp</a>
@@ -1970,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -1979,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavings_csharp">
 <a href="#spacesavings_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings</a>
@@ -1988,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumefreespacepolicystatus_csharp">
 <a href="#volumefreespacepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
@@ -1997,14 +1742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacheperformance_go">
 <a href="#cacheperformance_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Performance</a>
@@ -2012,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datepolicystatus_go">
 <a href="#datepolicystatus_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Policy<wbr>Status</a>
@@ -2021,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesnottiering_go">
 <a href="#filesnottiering_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Tiering</a>
@@ -2030,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_go">
 <a href="#health_go" style="color: inherit; text-decoration: inherit;">Health</a>
@@ -2039,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthlastupdatedtimestamp_go">
 <a href="#healthlastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Last<wbr>Updated<wbr>Timestamp</a>
@@ -2048,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcloudtieringresult_go">
 <a href="#lastcloudtieringresult_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Cloud<wbr>Tiering<wbr>Result</a>
@@ -2057,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsuccesstimestamp_go">
 <a href="#lastsuccesstimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Success<wbr>Timestamp</a>
@@ -2066,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -2075,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavings_go">
 <a href="#spacesavings_go" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings</a>
@@ -2084,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumefreespacepolicystatus_go">
 <a href="#volumefreespacepolicystatus_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
@@ -2093,14 +1826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacheperformance_nodejs">
 <a href="#cacheperformance_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Performance</a>
@@ -2108,8 +1838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datepolicystatus_nodejs">
 <a href="#datepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Policy<wbr>Status</a>
@@ -2117,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesnottiering_nodejs">
 <a href="#filesnottiering_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Tiering</a>
@@ -2126,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_nodejs">
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
@@ -2135,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthlastupdatedtimestamp_nodejs">
 <a href="#healthlastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Updated<wbr>Timestamp</a>
@@ -2144,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcloudtieringresult_nodejs">
 <a href="#lastcloudtieringresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Cloud<wbr>Tiering<wbr>Result</a>
@@ -2153,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsuccesstimestamp_nodejs">
 <a href="#lastsuccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Success<wbr>Timestamp</a>
@@ -2162,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -2171,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spacesavings_nodejs">
 <a href="#spacesavings_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings</a>
@@ -2180,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumefreespacepolicystatus_nodejs">
 <a href="#volumefreespacepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
@@ -2189,14 +1910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cache_performance_python">
 <a href="#cache_performance_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>performance</a>
@@ -2204,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="date_policy_status_python">
 <a href="#date_policy_status_python" style="color: inherit; text-decoration: inherit;">date_<wbr>policy_<wbr>status</a>
@@ -2213,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="files_not_tiering_python">
 <a href="#files_not_tiering_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>tiering</a>
@@ -2222,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_python">
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
@@ -2231,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_last_updated_timestamp_python">
 <a href="#health_last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">health_<wbr>last_<wbr>updated_<wbr>timestamp</a>
@@ -2240,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_cloud_tiering_result_python">
 <a href="#last_cloud_tiering_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>cloud_<wbr>tiering_<wbr>result</a>
@@ -2249,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_success_timestamp_python">
 <a href="#last_success_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>success_<wbr>timestamp</a>
@@ -2258,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -2267,8 +1978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="space_savings_python">
 <a href="#space_savings_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings</a>
@@ -2276,8 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_free_space_policy_status_python">
 <a href="#volume_free_space_policy_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>policy_<wbr>status</a>
@@ -2285,8 +1994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response</h4>
@@ -2294,9 +2002,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -2304,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentcount_csharp">
 <a href="#persistentcount_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Count</a>
@@ -2313,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientcount_csharp">
 <a href="#transientcount_csharp" style="color: inherit; text-decoration: inherit;">Transient<wbr>Count</a>
@@ -2322,14 +2026,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -2337,8 +2038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentcount_go">
 <a href="#persistentcount_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Count</a>
@@ -2346,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientcount_go">
 <a href="#transientcount_go" style="color: inherit; text-decoration: inherit;">Transient<wbr>Count</a>
@@ -2355,14 +2054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -2370,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentcount_nodejs">
 <a href="#persistentcount_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Count</a>
@@ -2379,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientcount_nodejs">
 <a href="#transientcount_nodejs" style="color: inherit; text-decoration: inherit;">transient<wbr>Count</a>
@@ -2388,14 +2082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -2403,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistent_count_python">
 <a href="#persistent_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>count</a>
@@ -2412,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_count_python">
 <a href="#transient_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>count</a>
@@ -2421,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response</h4>
@@ -2430,9 +2118,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2440,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -2449,14 +2134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2464,8 +2146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -2473,14 +2154,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2488,8 +2166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -2497,14 +2174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2512,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -2521,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointrecallstatusresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Status<wbr>Response</h4>
@@ -2530,9 +2202,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -2540,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recallerrors_csharp">
 <a href="#recallerrors_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Errors</a>
@@ -2549,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalrecallerrorscount_csharp">
 <a href="#totalrecallerrorscount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Recall<wbr>Errors<wbr>Count</a>
@@ -2558,14 +2226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -2573,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recallerrors_go">
 <a href="#recallerrors_go" style="color: inherit; text-decoration: inherit;">Recall<wbr>Errors</a>
@@ -2582,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallerrorresponse">[]Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalrecallerrorscount_go">
 <a href="#totalrecallerrorscount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Recall<wbr>Errors<wbr>Count</a>
@@ -2591,14 +2254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -2606,8 +2266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recallerrors_nodejs">
 <a href="#recallerrors_nodejs" style="color: inherit; text-decoration: inherit;">recall<wbr>Errors</a>
@@ -2615,8 +2274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalrecallerrorscount_nodejs">
 <a href="#totalrecallerrorscount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Recall<wbr>Errors<wbr>Count</a>
@@ -2624,14 +2282,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -2639,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recall_errors_python">
 <a href="#recall_errors_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>errors</a>
@@ -2648,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_recall_errors_count_python">
 <a href="#total_recall_errors_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>recall_<wbr>errors_<wbr>count</a>
@@ -2657,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</h4>
@@ -2666,9 +2318,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appliedbytes_csharp">
 <a href="#appliedbytes_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Bytes</a>
@@ -2676,8 +2326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="applieditemcount_csharp">
 <a href="#applieditemcount_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Item<wbr>Count</a>
@@ -2685,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peritemerrorcount_csharp">
 <a href="#peritemerrorcount_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2694,8 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Per item error count{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -2703,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytes_csharp">
 <a href="#totalbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes</a>
@@ -2712,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalitemcount_csharp">
 <a href="#totalitemcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Item<wbr>Count</a>
@@ -2721,14 +2366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appliedbytes_go">
 <a href="#appliedbytes_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Bytes</a>
@@ -2736,8 +2378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="applieditemcount_go">
 <a href="#applieditemcount_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Item<wbr>Count</a>
@@ -2745,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peritemerrorcount_go">
 <a href="#peritemerrorcount_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2754,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Per item error count{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -2763,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytes_go">
 <a href="#totalbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes</a>
@@ -2772,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalitemcount_go">
 <a href="#totalitemcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Item<wbr>Count</a>
@@ -2781,14 +2418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appliedbytes_nodejs">
 <a href="#appliedbytes_nodejs" style="color: inherit; text-decoration: inherit;">applied<wbr>Bytes</a>
@@ -2796,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="applieditemcount_nodejs">
 <a href="#applieditemcount_nodejs" style="color: inherit; text-decoration: inherit;">applied<wbr>Item<wbr>Count</a>
@@ -2805,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peritemerrorcount_nodejs">
 <a href="#peritemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2814,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Per item error count{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -2823,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytes_nodejs">
 <a href="#totalbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes</a>
@@ -2832,8 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalitemcount_nodejs">
 <a href="#totalitemcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Item<wbr>Count</a>
@@ -2841,14 +2470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applied_bytes_python">
 <a href="#applied_bytes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>bytes</a>
@@ -2856,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="applied_item_count_python">
 <a href="#applied_item_count_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>item_<wbr>count</a>
@@ -2865,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="per_item_error_count_python">
 <a href="#per_item_error_count_python" style="color: inherit; text-decoration: inherit;">per_<wbr>item_<wbr>error_<wbr>count</a>
@@ -2874,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Per item error count{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -2883,8 +2506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_bytes_python">
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
@@ -2892,8 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_item_count_python">
 <a href="#total_item_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>item_<wbr>count</a>
@@ -2901,8 +2522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</h4>
@@ -2910,9 +2530,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filesnotsyncingerrors_csharp">
 <a href="#filesnotsyncingerrors_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Syncing<wbr>Errors</a>
@@ -2920,8 +2538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncperitemerrorcount_csharp">
 <a href="#lastsyncperitemerrorcount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2929,8 +2546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncresult_csharp">
 <a href="#lastsyncresult_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Result</a>
@@ -2938,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncsuccesstimestamp_csharp">
 <a href="#lastsyncsuccesstimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Success<wbr>Timestamp</a>
@@ -2947,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctimestamp_csharp">
 <a href="#lastsynctimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Timestamp</a>
@@ -2956,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentfilesnotsyncingcount_csharp">
 <a href="#persistentfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -2965,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientfilesnotsyncingcount_csharp">
 <a href="#transientfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -2974,14 +2586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filesnotsyncingerrors_go">
 <a href="#filesnotsyncingerrors_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Syncing<wbr>Errors</a>
@@ -2989,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">[]Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncperitemerrorcount_go">
 <a href="#lastsyncperitemerrorcount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -2998,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncresult_go">
 <a href="#lastsyncresult_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Result</a>
@@ -3007,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncsuccesstimestamp_go">
 <a href="#lastsyncsuccesstimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Success<wbr>Timestamp</a>
@@ -3016,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctimestamp_go">
 <a href="#lastsynctimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Timestamp</a>
@@ -3025,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentfilesnotsyncingcount_go">
 <a href="#persistentfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3034,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientfilesnotsyncingcount_go">
 <a href="#transientfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3043,14 +2646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filesnotsyncingerrors_nodejs">
 <a href="#filesnotsyncingerrors_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Syncing<wbr>Errors</a>
@@ -3058,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncperitemerrorcount_nodejs">
 <a href="#lastsyncperitemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
@@ -3067,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncresult_nodejs">
 <a href="#lastsyncresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Result</a>
@@ -3076,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsyncsuccesstimestamp_nodejs">
 <a href="#lastsyncsuccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Success<wbr>Timestamp</a>
@@ -3085,8 +2682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctimestamp_nodejs">
 <a href="#lastsynctimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Timestamp</a>
@@ -3094,8 +2690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentfilesnotsyncingcount_nodejs">
 <a href="#persistentfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3103,8 +2698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transientfilesnotsyncingcount_nodejs">
 <a href="#transientfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3112,14 +2706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="files_not_syncing_errors_python">
 <a href="#files_not_syncing_errors_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>syncing_<wbr>errors</a>
@@ -3127,8 +2718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_per_item_error_count_python">
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>
@@ -3136,8 +2726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_result_python">
 <a href="#last_sync_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>result</a>
@@ -3145,8 +2734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_success_timestamp_python">
 <a href="#last_sync_success_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>success_<wbr>timestamp</a>
@@ -3154,8 +2742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_timestamp_python">
 <a href="#last_sync_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>timestamp</a>
@@ -3163,8 +2750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistent_files_not_syncing_count_python">
 <a href="#persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
@@ -3172,8 +2758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transient_files_not_syncing_count_python">
 <a href="#transient_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
@@ -3181,8 +2766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serverendpointsyncstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Status<wbr>Response</h4>
@@ -3190,9 +2774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="combinedhealth_csharp">
 <a href="#combinedhealth_csharp" style="color: inherit; text-decoration: inherit;">Combined<wbr>Health</a>
@@ -3200,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadactivity_csharp">
 <a href="#downloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Activity</a>
@@ -3209,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadhealth_csharp">
 <a href="#downloadhealth_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Health</a>
@@ -3218,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadstatus_csharp">
 <a href="#downloadstatus_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Status</a>
@@ -3227,8 +2806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Download Status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_csharp">
 <a href="#lastupdatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -3236,8 +2814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offlinedatatransferstatus_csharp">
 <a href="#offlinedatatransferstatus_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Status</a>
@@ -3245,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncactivity_csharp">
 <a href="#syncactivity_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Activity</a>
@@ -3254,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalpersistentfilesnotsyncingcount_csharp">
 <a href="#totalpersistentfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3263,8 +2838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadactivity_csharp">
 <a href="#uploadactivity_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Activity</a>
@@ -3272,8 +2846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadhealth_csharp">
 <a href="#uploadhealth_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Health</a>
@@ -3281,8 +2854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadstatus_csharp">
 <a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
@@ -3290,14 +2862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Upload Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="combinedhealth_go">
 <a href="#combinedhealth_go" style="color: inherit; text-decoration: inherit;">Combined<wbr>Health</a>
@@ -3305,8 +2874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadactivity_go">
 <a href="#downloadactivity_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Activity</a>
@@ -3314,8 +2882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadhealth_go">
 <a href="#downloadhealth_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Health</a>
@@ -3323,8 +2890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadstatus_go">
 <a href="#downloadstatus_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Status</a>
@@ -3332,8 +2898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Download Status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_go">
 <a href="#lastupdatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Timestamp</a>
@@ -3341,8 +2906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offlinedatatransferstatus_go">
 <a href="#offlinedatatransferstatus_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Data<wbr>Transfer<wbr>Status</a>
@@ -3350,8 +2914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncactivity_go">
 <a href="#syncactivity_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Activity</a>
@@ -3359,8 +2922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalpersistentfilesnotsyncingcount_go">
 <a href="#totalpersistentfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3368,8 +2930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadactivity_go">
 <a href="#uploadactivity_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Activity</a>
@@ -3377,8 +2938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadhealth_go">
 <a href="#uploadhealth_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Health</a>
@@ -3386,8 +2946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadstatus_go">
 <a href="#uploadstatus_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
@@ -3395,14 +2954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Upload Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="combinedhealth_nodejs">
 <a href="#combinedhealth_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>Health</a>
@@ -3410,8 +2966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadactivity_nodejs">
 <a href="#downloadactivity_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Activity</a>
@@ -3419,8 +2974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadhealth_nodejs">
 <a href="#downloadhealth_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Health</a>
@@ -3428,8 +2982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="downloadstatus_nodejs">
 <a href="#downloadstatus_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Status</a>
@@ -3437,8 +2990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Download Status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtimestamp_nodejs">
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
@@ -3446,8 +2998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offlinedatatransferstatus_nodejs">
 <a href="#offlinedatatransferstatus_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Status</a>
@@ -3455,8 +3006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncactivity_nodejs">
 <a href="#syncactivity_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Activity</a>
@@ -3464,8 +3014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalpersistentfilesnotsyncingcount_nodejs">
 <a href="#totalpersistentfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
@@ -3473,8 +3022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadactivity_nodejs">
 <a href="#uploadactivity_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Activity</a>
@@ -3482,8 +3030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadhealth_nodejs">
 <a href="#uploadhealth_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Health</a>
@@ -3491,8 +3038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadstatus_nodejs">
 <a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
@@ -3500,14 +3046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Upload Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="combined_health_python">
 <a href="#combined_health_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>health</a>
@@ -3515,8 +3058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="download_activity_python">
 <a href="#download_activity_python" style="color: inherit; text-decoration: inherit;">download_<wbr>activity</a>
@@ -3524,8 +3066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Download sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="download_health_python">
 <a href="#download_health_python" style="color: inherit; text-decoration: inherit;">download_<wbr>health</a>
@@ -3533,8 +3074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="download_status_python">
 <a href="#download_status_python" style="color: inherit; text-decoration: inherit;">download_<wbr>status</a>
@@ -3542,8 +3082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Download Status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_timestamp_python">
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
@@ -3551,8 +3090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="offline_data_transfer_status_python">
 <a href="#offline_data_transfer_status_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>status</a>
@@ -3560,8 +3098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sync_activity_python">
 <a href="#sync_activity_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>activity</a>
@@ -3569,8 +3106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_persistent_files_not_syncing_count_python">
 <a href="#total_persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
@@ -3578,8 +3114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upload_activity_python">
 <a href="#upload_activity_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>activity</a>
@@ -3587,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upload_health_python">
 <a href="#upload_health_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>health</a>
@@ -3596,8 +3130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upload_status_python">
 <a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
@@ -3605,8 +3138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Upload Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

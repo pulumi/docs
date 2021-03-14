@@ -14,11 +14,17 @@ Identity Provider details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateIdentityProvider
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -41,9 +47,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -71,9 +80,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -88,9 +100,12 @@ identity_provider = azure_native.apimanagement.IdentityProvider("identityProvide
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IdentityProvider Resource {#create}
@@ -133,9 +155,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const identityProvider = new azure_native.apimanagement.IdentityProvider("identi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -299,8 +290,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -308,8 +298,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -317,8 +306,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -326,8 +314,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_csharp">
 <a href="#allowedtenants_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Tenants</a>
@@ -335,8 +322,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -344,8 +330,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityprovidername_csharp">
 <a href="#identityprovidername_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Name</a>
@@ -353,8 +338,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_csharp">
 <a href="#passwordresetpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset<wbr>Policy<wbr>Name</a>
@@ -362,8 +346,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_csharp">
 <a href="#profileeditingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Editing<wbr>Policy<wbr>Name</a>
@@ -371,8 +354,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_csharp">
 <a href="#signinpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Policy<wbr>Name</a>
@@ -380,8 +362,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signintenant_csharp">
 <a href="#signintenant_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
@@ -389,8 +370,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_csharp">
 <a href="#signuppolicyname_csharp" style="color: inherit; text-decoration: inherit;">Signup<wbr>Policy<wbr>Name</a>
@@ -398,8 +378,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -407,14 +386,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identityprovidertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -422,8 +398,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -431,8 +406,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -440,8 +414,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -449,8 +422,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_go">
 <a href="#allowedtenants_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Tenants</a>
@@ -458,8 +430,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -467,8 +438,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityprovidername_go">
 <a href="#identityprovidername_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Name</a>
@@ -476,8 +446,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_go">
 <a href="#passwordresetpolicyname_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset<wbr>Policy<wbr>Name</a>
@@ -485,8 +454,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_go">
 <a href="#profileeditingpolicyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Editing<wbr>Policy<wbr>Name</a>
@@ -494,8 +462,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_go">
 <a href="#signinpolicyname_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Policy<wbr>Name</a>
@@ -503,8 +470,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signintenant_go">
 <a href="#signintenant_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
@@ -512,8 +478,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_go">
 <a href="#signuppolicyname_go" style="color: inherit; text-decoration: inherit;">Signup<wbr>Policy<wbr>Name</a>
@@ -521,8 +486,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -530,14 +494,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -545,8 +506,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -554,8 +514,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -563,8 +522,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -572,8 +530,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_nodejs">
 <a href="#allowedtenants_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Tenants</a>
@@ -581,8 +538,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -590,8 +546,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityprovidername_nodejs">
 <a href="#identityprovidername_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Name</a>
@@ -599,8 +554,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_nodejs">
 <a href="#passwordresetpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reset<wbr>Policy<wbr>Name</a>
@@ -608,8 +562,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_nodejs">
 <a href="#profileeditingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Editing<wbr>Policy<wbr>Name</a>
@@ -617,8 +570,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_nodejs">
 <a href="#signinpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Policy<wbr>Name</a>
@@ -626,8 +578,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signintenant_nodejs">
 <a href="#signintenant_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Tenant</a>
@@ -635,8 +586,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_nodejs">
 <a href="#signuppolicyname_nodejs" style="color: inherit; text-decoration: inherit;">signup<wbr>Policy<wbr>Name</a>
@@ -644,8 +594,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -653,14 +602,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -668,8 +614,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -677,8 +622,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -686,8 +630,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -695,8 +638,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_tenants_python">
 <a href="#allowed_tenants_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>tenants</a>
@@ -704,8 +646,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -713,8 +654,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_name_python">
 <a href="#identity_provider_name_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>name</a>
@@ -722,8 +662,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_reset_policy_name_python">
 <a href="#password_reset_policy_name_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reset_<wbr>policy_<wbr>name</a>
@@ -731,8 +670,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_editing_policy_name_python">
 <a href="#profile_editing_policy_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>editing_<wbr>policy_<wbr>name</a>
@@ -740,8 +678,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signin_policy_name_python">
 <a href="#signin_policy_name_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>policy_<wbr>name</a>
@@ -749,8 +686,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signin_tenant_python">
 <a href="#signin_tenant_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>tenant</a>
@@ -758,8 +694,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signup_policy_name_python">
 <a href="#signup_policy_name_python" style="color: inherit; text-decoration: inherit;">signup_<wbr>policy_<wbr>name</a>
@@ -767,8 +702,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -776,8 +710,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -788,9 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -798,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -807,14 +737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -822,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -831,14 +757,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -855,14 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -870,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -896,71 +813,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="identityprovidertype">Identity<wbr>Provider<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Facebook</dt>
-    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
-    <dt>Google</dt>
-    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
-    <dt>Microsoft</dt>
-    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
-    <dt>Twitter</dt>
-    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
-    <dt>Aad</dt>
-    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
-    <dt>Aad<wbr>B2C</dt>
-    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd><dt>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd><dt>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd><dt>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd><dt>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd><dt>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Facebook</dt>
-    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Google</dt>
-    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Microsoft</dt>
-    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Twitter</dt>
-    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Aad</dt>
-    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
-    <dt>Identity<wbr>Provider<wbr>Type<wbr>Aad<wbr>B2C</dt>
-    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Identity<wbr>Provider<wbr>Type<wbr>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd><dt>Identity<wbr>Provider<wbr>Type<wbr>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd><dt>Identity<wbr>Provider<wbr>Type<wbr>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd><dt>Identity<wbr>Provider<wbr>Type<wbr>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd><dt>Identity<wbr>Provider<wbr>Type<wbr>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd><dt>Identity<wbr>Provider<wbr>Type<wbr>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Facebook</dt>
-    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
-    <dt>Google</dt>
-    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
-    <dt>Microsoft</dt>
-    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
-    <dt>Twitter</dt>
-    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
-    <dt>Aad</dt>
-    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
-    <dt>Aad<wbr>B2C</dt>
-    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd><dt>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd><dt>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd><dt>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd><dt>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd><dt>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FACEBOOK</dt>
-    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
-    <dt>GOOGLE</dt>
-    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
-    <dt>MICROSOFT</dt>
-    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
-    <dt>TWITTER</dt>
-    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
-    <dt>AAD</dt>
-    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
-    <dt>AAD_B2_C</dt>
-    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>FACEBOOK</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd><dt>GOOGLE</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd><dt>MICROSOFT</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd><dt>TWITTER</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd><dt>AAD</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd><dt>AAD_B2_C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

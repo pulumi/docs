@@ -402,9 +402,7 @@ func main() {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -412,9 +410,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -422,9 +418,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -432,10 +426,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -461,9 +452,7 @@ func main() {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -471,9 +460,7 @@ func main() {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -481,9 +468,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -491,9 +476,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -501,18 +484,13 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -520,9 +498,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -530,9 +506,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -540,10 +514,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -558,9 +529,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customhttpsprovisioningenabled_csharp">
 <a href="#customhttpsprovisioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -569,8 +538,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendendpointid_csharp">
 <a href="#frontendendpointid_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Id</a>
@@ -579,8 +547,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhttpsconfigurationconfig_csharp">
 <a href="#customhttpsconfigurationconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration<wbr>Config</a>
@@ -589,8 +556,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -598,14 +564,11 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customhttpsprovisioningenabled_go">
 <a href="#customhttpsprovisioningenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -614,8 +577,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendendpointid_go">
 <a href="#frontendendpointid_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Id</a>
@@ -624,8 +586,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhttpsconfiguration_go">
 <a href="#customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
@@ -634,8 +595,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -643,14 +603,11 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customhttpsprovisioningenabled_nodejs">
 <a href="#customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -659,8 +616,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontendendpointid_nodejs">
 <a href="#frontendendpointid_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoint<wbr>Id</a>
@@ -669,8 +625,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhttpsconfiguration_nodejs">
 <a href="#customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
@@ -679,8 +634,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -688,14 +642,11 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="custom_https_provisioning_enabled_python">
 <a href="#custom_https_provisioning_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>provisioning_<wbr>enabled</a>
@@ -704,8 +655,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frontend_endpoint_id_python">
 <a href="#frontend_endpoint_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoint_<wbr>id</a>
@@ -714,8 +664,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_https_configuration_python">
 <a href="#custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
@@ -724,8 +673,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -733,8 +681,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -745,9 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -755,14 +700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,14 +712,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,14 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -800,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -928,9 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsconfigurationconfig_csharp">
 <a href="#state_customhttpsconfigurationconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration<wbr>Config</a>
@@ -939,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsprovisioningenabled_csharp">
 <a href="#state_customhttpsprovisioningenabled_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -949,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendendpointid_csharp">
 <a href="#state_frontendendpointid_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Id</a>
@@ -959,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -968,14 +898,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsconfiguration_go">
 <a href="#state_customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
@@ -984,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsprovisioningenabled_go">
 <a href="#state_customhttpsprovisioningenabled_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -994,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendendpointid_go">
 <a href="#state_frontendendpointid_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Id</a>
@@ -1004,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1013,14 +937,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsconfiguration_nodejs">
 <a href="#state_customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
@@ -1029,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customhttpsprovisioningenabled_nodejs">
 <a href="#state_customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
@@ -1039,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendendpointid_nodejs">
 <a href="#state_frontendendpointid_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoint<wbr>Id</a>
@@ -1049,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1058,14 +976,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_custom_https_configuration_python">
 <a href="#state_custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
@@ -1074,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_https_provisioning_enabled_python">
 <a href="#state_custom_https_provisioning_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>provisioning_<wbr>enabled</a>
@@ -1084,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontend_endpoint_id_python">
 <a href="#state_frontend_endpoint_id_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoint_<wbr>id</a>
@@ -1094,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1103,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1119,9 +1030,7 @@ The following state arguments are supported:
 <h4 id="customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretname_csharp">
 <a href="#azurekeyvaultcertificatesecretname_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
@@ -1130,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretversion_csharp">
 <a href="#azurekeyvaultcertificatesecretversion_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
@@ -1140,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_csharp">
 <a href="#azurekeyvaultcertificatevaultid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
@@ -1150,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatesource_csharp">
 <a href="#certificatesource_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source</a>
@@ -1160,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_csharp">
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -1170,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1179,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningsubstate_csharp">
 <a href="#provisioningsubstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Substate</a>
@@ -1188,14 +1091,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretname_go">
 <a href="#azurekeyvaultcertificatesecretname_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
@@ -1204,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretversion_go">
 <a href="#azurekeyvaultcertificatesecretversion_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
@@ -1214,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_go">
 <a href="#azurekeyvaultcertificatevaultid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
@@ -1224,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatesource_go">
 <a href="#certificatesource_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Source</a>
@@ -1234,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_go">
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -1244,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1253,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningsubstate_go">
 <a href="#provisioningsubstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Substate</a>
@@ -1262,14 +1156,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretname_nodejs">
 <a href="#azurekeyvaultcertificatesecretname_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
@@ -1278,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatesecretversion_nodejs">
 <a href="#azurekeyvaultcertificatesecretversion_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
@@ -1288,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvaultcertificatevaultid_nodejs">
 <a href="#azurekeyvaultcertificatevaultid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
@@ -1298,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatesource_nodejs">
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
@@ -1308,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_nodejs">
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
@@ -1318,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1327,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningsubstate_nodejs">
 <a href="#provisioningsubstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Substate</a>
@@ -1336,14 +1221,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_certificate_secret_name_python">
 <a href="#azure_key_vault_certificate_secret_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>name</a>
@@ -1352,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_certificate_secret_version_python">
 <a href="#azure_key_vault_certificate_secret_version_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>version</a>
@@ -1362,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_certificate_vault_id_python">
 <a href="#azure_key_vault_certificate_vault_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>vault_<wbr>id</a>
@@ -1372,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_source_python">
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
@@ -1382,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_tls_version_python">
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
@@ -1392,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1401,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_substate_python">
 <a href="#provisioning_substate_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>substate</a>
@@ -1410,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1432,6 +1307,6 @@ Front Door Custom Https Configurations can be imported using the `resource id` o
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

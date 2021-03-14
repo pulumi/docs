@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_csharp">
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresourcetypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Signed<wbr>Resource<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#services">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Services</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccessexpirytime_csharp">
 <a href="#sharedaccessexpirytime_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_csharp">
 <a href="#ipaddressorrange_csharp" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
@@ -115,8 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_csharp">
 <a href="#keytosign_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Sign</a>
@@ -124,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -133,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_csharp">
 <a href="#sharedaccessstarttime_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -142,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_go">
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -184,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresourcetypes">Signed<wbr>Resource<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -193,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#services">Services</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccessexpirytime_go">
 <a href="#sharedaccessexpirytime_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -202,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_go">
 <a href="#ipaddressorrange_go" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
@@ -211,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_go">
 <a href="#keytosign_go" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Sign</a>
@@ -220,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -229,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_go">
 <a href="#sharedaccessstarttime_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -238,14 +215,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -253,8 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -262,8 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -271,8 +243,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_nodejs">
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
@@ -280,8 +251,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresourcetypes">Signed<wbr>Resource<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -289,8 +259,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#services">Services</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccessexpirytime_nodejs">
 <a href="#sharedaccessexpirytime_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -298,8 +267,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_nodejs">
 <a href="#ipaddressorrange_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
@@ -307,8 +275,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_nodejs">
 <a href="#keytosign_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Sign</a>
@@ -316,8 +283,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -325,8 +291,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_nodejs">
 <a href="#sharedaccessstarttime_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -334,14 +299,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -349,8 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -358,8 +319,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -367,8 +327,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_types_python">
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
@@ -376,8 +335,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#signedresourcetypes">Signed<wbr>Resource<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -385,8 +343,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#services">Services</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shared_access_expiry_time_python">
 <a href="#shared_access_expiry_time_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>expiry_<wbr>time</a>
@@ -394,8 +351,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="i_p_address_or_range_python">
 <a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
@@ -403,8 +359,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_to_sign_python">
 <a href="#key_to_sign_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>sign</a>
@@ -412,8 +367,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -421,8 +375,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_access_start_time_python">
 <a href="#shared_access_start_time_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>start_<wbr>time</a>
@@ -430,8 +383,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -444,9 +396,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountsastoken_csharp">
 <a href="#accountsastoken_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Sas<wbr>Token</a>
@@ -454,14 +404,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountsastoken_go">
 <a href="#accountsastoken_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Sas<wbr>Token</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountsastoken_nodejs">
 <a href="#accountsastoken_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Sas<wbr>Token</a>
@@ -484,14 +428,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="account_sas_token_python">
 <a href="#account_sas_token_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sas_<wbr>token</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List SAS credentials of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

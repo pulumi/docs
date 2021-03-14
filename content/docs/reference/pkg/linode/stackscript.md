@@ -44,11 +44,17 @@ This resource exports the following attributes:
   * `default` - The default value. If not specified, this value will be used.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Linode = Pulumi.Linode;
@@ -94,9 +100,12 @@ apt-get -q update && apt-get -q -y install $PACKAGE
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -144,9 +153,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_linode as linode
@@ -176,9 +188,12 @@ foo_instance = linode.Instance("fooInstance",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -211,9 +226,16 @@ const fooInstance = new linode.Instance("fooInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StackScript Resource {#create}
@@ -238,9 +260,7 @@ const fooInstance = new linode.Instance("fooInstance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +268,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +276,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,10 +284,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -297,9 +310,7 @@ const fooInstance = new linode.Instance("fooInstance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -307,9 +318,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -317,9 +326,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -327,9 +334,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -337,18 +342,13 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -356,9 +356,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -366,9 +364,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -376,10 +372,7 @@ const fooInstance = new linode.Instance("fooInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -394,9 +387,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -405,8 +396,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="images_csharp">
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -415,8 +405,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -425,8 +414,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -435,8 +423,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -445,8 +432,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revnote_csharp">
 <a href="#revnote_csharp" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
@@ -455,8 +441,7 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdefinedfields_csharp">
 <a href="#userdefinedfields_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
@@ -466,14 +451,11 @@ The StackScript resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -482,8 +464,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="images_go">
 <a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -492,8 +473,7 @@ parameters during deployment.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -502,8 +482,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -512,8 +491,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -522,8 +500,7 @@ parameters during deployment.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revnote_go">
 <a href="#revnote_go" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
@@ -532,8 +509,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdefinedfields_go">
 <a href="#userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
@@ -543,14 +519,11 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -559,8 +532,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="images_nodejs">
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
@@ -569,8 +541,7 @@ parameters during deployment.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -579,8 +550,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -589,8 +559,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -599,8 +568,7 @@ parameters during deployment.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revnote_nodejs">
 <a href="#revnote_nodejs" style="color: inherit; text-decoration: inherit;">rev<wbr>Note</a>
@@ -609,8 +577,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdefinedfields_nodejs">
 <a href="#userdefinedfields_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Fields</a>
@@ -620,14 +587,11 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -636,8 +600,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="images_python">
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
@@ -646,8 +609,7 @@ parameters during deployment.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -656,8 +618,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -666,8 +627,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -676,8 +636,7 @@ parameters during deployment.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rev_note_python">
 <a href="#rev_note_python" style="color: inherit; text-decoration: inherit;">rev_<wbr>note</a>
@@ -686,8 +645,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_defined_fields_python">
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
@@ -697,8 +655,7 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -709,9 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -720,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentsactive_csharp">
 <a href="#deploymentsactive_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
@@ -730,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstotal_csharp">
 <a href="#deploymentstotal_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
@@ -740,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -749,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -759,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usergravatarid_csharp">
 <a href="#usergravatarid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
@@ -769,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -779,14 +728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -795,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentsactive_go">
 <a href="#deploymentsactive_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
@@ -805,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstotal_go">
 <a href="#deploymentstotal_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
@@ -815,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -824,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -834,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usergravatarid_go">
 <a href="#usergravatarid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
@@ -844,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -854,14 +794,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -870,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentsactive_nodejs">
 <a href="#deploymentsactive_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Active</a>
@@ -880,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstotal_nodejs">
 <a href="#deploymentstotal_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Total</a>
@@ -890,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -899,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -909,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usergravatarid_nodejs">
 <a href="#usergravatarid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Gravatar<wbr>Id</a>
@@ -919,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -929,14 +860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -945,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployments_active_python">
 <a href="#deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
@@ -955,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployments_total_python">
 <a href="#deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
@@ -965,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -974,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -984,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_gravatar_id_python">
 <a href="#user_gravatar_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>gravatar_<wbr>id</a>
@@ -994,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1004,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1132,9 +1053,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1143,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentsactive_csharp">
 <a href="#state_deploymentsactive_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
@@ -1153,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstotal_csharp">
 <a href="#state_deploymentstotal_csharp" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
@@ -1163,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1173,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_images_csharp">
 <a href="#state_images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -1183,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_csharp">
 <a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1193,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1203,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revnote_csharp">
 <a href="#state_revnote_csharp" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
@@ -1213,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_script_csharp">
 <a href="#state_script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1223,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
 <a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1233,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedfields_csharp">
 <a href="#state_userdefinedfields_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
@@ -1244,8 +1153,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usergravatarid_csharp">
 <a href="#state_usergravatarid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
@@ -1254,8 +1162,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1264,14 +1171,11 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1280,8 +1184,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentsactive_go">
 <a href="#state_deploymentsactive_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Active</a>
@@ -1290,8 +1193,7 @@ parameters during deployment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstotal_go">
 <a href="#state_deploymentstotal_go" style="color: inherit; text-decoration: inherit;">Deployments<wbr>Total</a>
@@ -1300,8 +1202,7 @@ parameters during deployment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1310,8 +1211,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_images_go">
 <a href="#state_images_go" style="color: inherit; text-decoration: inherit;">Images</a>
@@ -1320,8 +1220,7 @@ parameters during deployment.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_go">
 <a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1330,8 +1229,7 @@ parameters during deployment.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1340,8 +1238,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revnote_go">
 <a href="#state_revnote_go" style="color: inherit; text-decoration: inherit;">Rev<wbr>Note</a>
@@ -1350,8 +1247,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_script_go">
 <a href="#state_script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1360,8 +1256,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
 <a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1370,8 +1265,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedfields_go">
 <a href="#state_userdefinedfields_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Fields</a>
@@ -1381,8 +1275,7 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usergravatarid_go">
 <a href="#state_usergravatarid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Gravatar<wbr>Id</a>
@@ -1391,8 +1284,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1401,14 +1293,11 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1417,8 +1306,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentsactive_nodejs">
 <a href="#state_deploymentsactive_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Active</a>
@@ -1427,8 +1315,7 @@ parameters during deployment.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentstotal_nodejs">
 <a href="#state_deploymentstotal_nodejs" style="color: inherit; text-decoration: inherit;">deployments<wbr>Total</a>
@@ -1437,8 +1324,7 @@ parameters during deployment.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1447,8 +1333,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_images_nodejs">
 <a href="#state_images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
@@ -1457,8 +1342,7 @@ parameters during deployment.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_nodejs">
 <a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -1467,8 +1351,7 @@ parameters during deployment.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1477,8 +1360,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revnote_nodejs">
 <a href="#state_revnote_nodejs" style="color: inherit; text-decoration: inherit;">rev<wbr>Note</a>
@@ -1487,8 +1369,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_script_nodejs">
 <a href="#state_script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1497,8 +1378,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1507,8 +1387,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedfields_nodejs">
 <a href="#state_userdefinedfields_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Fields</a>
@@ -1518,8 +1397,7 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usergravatarid_nodejs">
 <a href="#state_usergravatarid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Gravatar<wbr>Id</a>
@@ -1528,8 +1406,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1538,14 +1415,11 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1554,8 +1428,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployments_active_python">
 <a href="#state_deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
@@ -1564,8 +1437,7 @@ parameters during deployment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployments_total_python">
 <a href="#state_deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
@@ -1574,8 +1446,7 @@ parameters during deployment.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1584,8 +1455,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_images_python">
 <a href="#state_images_python" style="color: inherit; text-decoration: inherit;">images</a>
@@ -1594,8 +1464,7 @@ parameters during deployment.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_public_python">
 <a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -1604,8 +1473,7 @@ parameters during deployment.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1614,8 +1482,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rev_note_python">
 <a href="#state_rev_note_python" style="color: inherit; text-decoration: inherit;">rev_<wbr>note</a>
@@ -1624,8 +1491,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_script_python">
 <a href="#state_script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1634,8 +1500,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1644,8 +1509,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_defined_fields_python">
 <a href="#state_user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
@@ -1655,8 +1519,7 @@ parameters during deployment.
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_gravatar_id_python">
 <a href="#state_user_gravatar_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>gravatar_<wbr>id</a>
@@ -1665,8 +1528,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1675,8 +1537,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1691,9 +1552,7 @@ parameters during deployment.
 <h4 id="stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -1701,8 +1560,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_csharp">
 <a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -1710,8 +1568,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1720,8 +1577,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manyof_csharp">
 <a href="#manyof_csharp" style="color: inherit; text-decoration: inherit;">Many<wbr>Of</a>
@@ -1729,8 +1585,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1738,8 +1593,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneof_csharp">
 <a href="#oneof_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
@@ -1747,14 +1601,11 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -1762,8 +1613,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_go">
 <a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -1771,8 +1621,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1781,8 +1630,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manyof_go">
 <a href="#manyof_go" style="color: inherit; text-decoration: inherit;">Many<wbr>Of</a>
@@ -1790,8 +1638,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1799,8 +1646,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneof_go">
 <a href="#oneof_go" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
@@ -1808,14 +1654,11 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -1823,8 +1666,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_nodejs">
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
@@ -1832,8 +1674,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1842,8 +1683,7 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manyof_nodejs">
 <a href="#manyof_nodejs" style="color: inherit; text-decoration: inherit;">many<wbr>Of</a>
@@ -1851,8 +1691,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1860,8 +1699,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneof_nodejs">
 <a href="#oneof_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
@@ -1869,14 +1707,11 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -1884,8 +1719,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_python">
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
@@ -1893,8 +1727,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1903,8 +1736,7 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="many_of_python">
 <a href="#many_of_python" style="color: inherit; text-decoration: inherit;">many_<wbr>of</a>
@@ -1912,8 +1744,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1921,8 +1752,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="one_of_python">
 <a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
@@ -1930,8 +1760,7 @@ parameters during deployment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1952,6 +1781,6 @@ Linodes StackScripts can be imported using the Linode StackScript `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 </dl>
 

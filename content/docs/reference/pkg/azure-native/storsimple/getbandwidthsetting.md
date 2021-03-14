@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidthsettingname_csharp">
 <a href="#bandwidthsettingname_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Setting<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidthsettingname_go">
 <a href="#bandwidthsettingname_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Setting<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidthsettingname_nodejs">
 <a href="#bandwidthsettingname_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Setting<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_setting_name_python">
 <a href="#bandwidth_setting_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>setting_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of bandwidth setting to be fetched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bandwidthscheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Bandwidth<wbr>Schedule<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The schedules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The schedules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_csharp">
 <a href="#volumecount_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Count</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bandwidthscheduleresponse">[]Bandwidth<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The schedules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The schedules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_go">
 <a href="#volumecount_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Count</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bandwidthscheduleresponse">Bandwidth<wbr>Schedule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The schedules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The schedules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_nodejs">
 <a href="#volumecount_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Count</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -367,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bandwidthscheduleresponse">Sequence[Bandwidth<wbr>Schedule<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The schedules.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The schedules.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_count_python">
 <a href="#volume_count_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>count</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of volumes that uses the bandwidth setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,9 +390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rateinmbps_csharp">
 <a href="#rateinmbps_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>In<wbr>Mbps</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stop_csharp">
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
@@ -479,14 +422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rateinmbps_go">
 <a href="#rateinmbps_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>In<wbr>Mbps</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stop_go">
 <a href="#stop_go" style="color: inherit; text-decoration: inherit;">Stop</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rateinmbps_nodejs">
 <a href="#rateinmbps_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>In<wbr>Mbps</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stop_nodejs">
 <a href="#stop_nodejs" style="color: inherit; text-decoration: inherit;">stop</a>
@@ -563,14 +494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -578,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rate_in_mbps_python">
 <a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stop_python">
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeresponse">Time<wbr>Response</h4>
@@ -614,9 +538,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -624,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The hour.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -633,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -642,14 +562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The second.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -657,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The hour.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -666,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -675,14 +590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The second.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -690,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The hour.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -699,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -708,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The second.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -723,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The hour.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -732,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The second.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

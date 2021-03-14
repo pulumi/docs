@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sapmonitorname_csharp">
 <a href="#sapmonitorname_csharp" style="color: inherit; text-decoration: inherit;">Sap<wbr>Monitor<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sapmonitorname_go">
 <a href="#sapmonitorname_go" style="color: inherit; text-decoration: inherit;">Sap<wbr>Monitor<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sapmonitorname_nodejs">
 <a href="#sapmonitorname_nodejs" style="color: inherit; text-decoration: inherit;">sap<wbr>Monitor<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sap_monitor_name_python">
 <a href="#sap_monitor_name_python" style="color: inherit; text-decoration: inherit;">sap_<wbr>monitor_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SAP monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresourcegroupname_csharp">
 <a href="#managedresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sapmonitorcollectorversion_csharp">
 <a href="#sapmonitorcollectorversion_csharp" style="color: inherit; text-decoration: inherit;">Sap<wbr>Monitor<wbr>Collector<wbr>Version</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecustomeranalytics_csharp">
 <a href="#enablecustomeranalytics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Customer<wbr>Analytics</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacearmid_csharp">
 <a href="#loganalyticsworkspacearmid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Arm<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacesharedkey_csharp">
 <a href="#loganalyticsworkspacesharedkey_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Shared<wbr>Key</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorsubnet_csharp">
 <a href="#monitorsubnet_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Subnet</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresourcegroupname_go">
 <a href="#managedresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sapmonitorcollectorversion_go">
 <a href="#sapmonitorcollectorversion_go" style="color: inherit; text-decoration: inherit;">Sap<wbr>Monitor<wbr>Collector<wbr>Version</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecustomeranalytics_go">
 <a href="#enablecustomeranalytics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Customer<wbr>Analytics</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacearmid_go">
 <a href="#loganalyticsworkspacearmid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Arm<wbr>Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacesharedkey_go">
 <a href="#loganalyticsworkspacesharedkey_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Shared<wbr>Key</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorsubnet_go">
 <a href="#monitorsubnet_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Subnet</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresourcegroupname_nodejs">
 <a href="#managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sapmonitorcollectorversion_nodejs">
 <a href="#sapmonitorcollectorversion_nodejs" style="color: inherit; text-decoration: inherit;">sap<wbr>Monitor<wbr>Collector<wbr>Version</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecustomeranalytics_nodejs">
 <a href="#enablecustomeranalytics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Customer<wbr>Analytics</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacearmid_nodejs">
 <a href="#loganalyticsworkspacearmid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Arm<wbr>Id</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loganalyticsworkspacesharedkey_nodejs">
 <a href="#loganalyticsworkspacesharedkey_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Shared<wbr>Key</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorsubnet_nodejs">
 <a href="#monitorsubnet_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Subnet</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -520,14 +460,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_resource_group_name_python">
 <a href="#managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource group the SAP Monitor resources get deployed into.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sap_monitor_collector_version_python">
 <a href="#sap_monitor_collector_version_python" style="color: inherit; text-decoration: inherit;">sap_<wbr>monitor_<wbr>collector_<wbr>version</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the payload running in the Collector VM{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_customer_analytics_python">
 <a href="#enable_customer_analytics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>customer_<wbr>analytics</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value indicating whether to send analytics to Microsoft{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_analytics_workspace_arm_id_python">
 <a href="#log_analytics_workspace_arm_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>arm_<wbr>id</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM ID of the Log Analytics Workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The workspace ID of the log analytics workspace to be used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_analytics_workspace_shared_key_python">
 <a href="#log_analytics_workspace_shared_key_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>shared_<wbr>key</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The shared key of the log analytics workspace that is used for monitoring{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitor_subnet_python">
 <a href="#monitor_subnet_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>subnet</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The subnet which the SAP monitor will be deployed in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -14,11 +14,17 @@ The alert rule information
 API Version: 2019-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a Smart Detector alert rule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -63,9 +69,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -110,9 +119,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -140,9 +152,12 @@ smart_detector_alert_rule = azure_native.alertsmanagement.SmartDetectorAlertRule
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -171,9 +186,16 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SmartDetectorAlertRule Resource {#create}
@@ -198,9 +220,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -208,9 +228,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -218,9 +236,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -228,10 +244,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -257,9 +270,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -267,9 +278,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -277,9 +286,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -287,9 +294,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -297,18 +302,13 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -316,9 +316,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -326,9 +324,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -336,10 +332,7 @@ const smartDetectorAlertRule = new azure_native.alertsmanagement.SmartDetectorAl
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -354,9 +347,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroups_csharp">
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
@@ -364,8 +355,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupsinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="detector_csharp">
 <a href="#detector_csharp" style="color: inherit; text-decoration: inherit;">Detector</a>
@@ -373,8 +363,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detector">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Detector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -382,8 +371,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -391,8 +379,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -400,8 +387,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -409,8 +395,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -418,8 +403,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertrulestate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Alert<wbr>Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertrulename_csharp">
 <a href="#alertrulename_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Name</a>
@@ -427,8 +411,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -436,8 +419,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -445,8 +427,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -454,8 +435,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_csharp">
 <a href="#throttling_csharp" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -463,14 +443,11 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#throttlinginformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Throttling<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroups_go">
 <a href="#actiongroups_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
@@ -478,8 +455,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="detector_go">
 <a href="#detector_go" style="color: inherit; text-decoration: inherit;">Detector</a>
@@ -487,8 +463,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detector">Detector</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -496,8 +471,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -505,8 +479,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -514,8 +487,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -523,8 +495,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -532,8 +503,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertrulestate">Alert<wbr>Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertrulename_go">
 <a href="#alertrulename_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Name</a>
@@ -541,8 +511,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -550,8 +519,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -559,8 +527,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -568,8 +535,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_go">
 <a href="#throttling_go" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -577,14 +543,11 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroups_nodejs">
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
@@ -592,8 +555,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="detector_nodejs">
 <a href="#detector_nodejs" style="color: inherit; text-decoration: inherit;">detector</a>
@@ -601,8 +563,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detector">Detector</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -610,8 +571,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -619,8 +579,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -628,8 +587,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -637,8 +595,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -646,8 +603,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertrulestate">Alert<wbr>Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertrulename_nodejs">
 <a href="#alertrulename_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Name</a>
@@ -655,8 +611,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -664,8 +619,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -673,8 +627,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -682,8 +635,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_nodejs">
 <a href="#throttling_nodejs" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -691,14 +643,11 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_groups_python">
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
@@ -706,8 +655,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="detector_python">
 <a href="#detector_python" style="color: inherit; text-decoration: inherit;">detector</a>
@@ -715,8 +663,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detector">Detector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -724,8 +671,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -733,8 +679,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -742,8 +687,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule resources scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -751,8 +695,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#severity">Severity</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert rule severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -760,8 +703,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#alertrulestate">Alert<wbr>Rule<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_rule_name_python">
 <a href="#alert_rule_name_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>name</a>
@@ -769,8 +711,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -778,8 +719,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -787,8 +727,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -796,8 +735,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_python">
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -805,8 +743,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -817,9 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -827,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -836,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -845,14 +778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -860,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -869,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -878,14 +806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -893,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -902,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -911,14 +834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -926,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -935,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -944,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -961,9 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="actiongroupsinformation">Action<wbr>Groups<wbr>Information</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_csharp">
 <a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -971,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_csharp">
 <a href="#customemailsubject_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Subject</a>
@@ -980,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_csharp">
 <a href="#customwebhookpayload_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -989,14 +902,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_go">
 <a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1004,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_go">
 <a href="#customemailsubject_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Subject</a>
@@ -1013,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_go">
 <a href="#customwebhookpayload_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1022,14 +930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_nodejs">
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
@@ -1037,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_nodejs">
 <a href="#customemailsubject_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Email<wbr>Subject</a>
@@ -1046,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_nodejs">
 <a href="#customwebhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
@@ -1055,14 +958,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_ids_python">
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
@@ -1070,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_email_subject_python">
 <a href="#custom_email_subject_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>email_<wbr>subject</a>
@@ -1079,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_webhook_payload_python">
 <a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
@@ -1088,16 +986,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupsinformationresponse">Action<wbr>Groups<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_csharp">
 <a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1105,8 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_csharp">
 <a href="#customemailsubject_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Subject</a>
@@ -1114,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_csharp">
 <a href="#customwebhookpayload_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1123,14 +1016,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_go">
 <a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1138,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_go">
 <a href="#customemailsubject_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Subject</a>
@@ -1147,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_go">
 <a href="#customwebhookpayload_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1156,14 +1044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupids_nodejs">
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
@@ -1171,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customemailsubject_nodejs">
 <a href="#customemailsubject_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Email<wbr>Subject</a>
@@ -1180,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_nodejs">
 <a href="#customwebhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
@@ -1189,14 +1072,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_ids_python">
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
@@ -1204,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Action Group resource IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_email_subject_python">
 <a href="#custom_email_subject_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>email_<wbr>subject</a>
@@ -1213,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional custom email subject to use in email notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_webhook_payload_python">
 <a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
@@ -1222,54 +1100,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional custom web-hook payload to use in web-hook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertrulestate">Alert<wbr>Rule<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Alert<wbr>Rule<wbr>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Alert<wbr>Rule<wbr>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Alert<wbr>Rule<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Alert<wbr>Rule<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="detector">Detector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1277,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1286,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_csharp">
 <a href="#imagepaths_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Paths</a>
@@ -1295,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1304,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1313,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_csharp">
 <a href="#supportedresourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Resource<wbr>Types</a>
@@ -1322,14 +1180,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1337,8 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1346,8 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_go">
 <a href="#imagepaths_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Paths</a>
@@ -1355,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1364,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1373,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_go">
 <a href="#supportedresourcetypes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Resource<wbr>Types</a>
@@ -1382,14 +1232,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1397,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1406,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_nodejs">
 <a href="#imagepaths_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Paths</a>
@@ -1415,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1424,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1433,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_nodejs">
 <a href="#supportedresourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Resource<wbr>Types</a>
@@ -1442,14 +1284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1457,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1466,8 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_paths_python">
 <a href="#image_paths_python" style="color: inherit; text-decoration: inherit;">image_<wbr>paths</a>
@@ -1475,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1484,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1493,8 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_resource_types_python">
 <a href="#supported_resource_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>resource_<wbr>types</a>
@@ -1502,16 +1336,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="detectorresponse">Detector<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1519,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1528,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_csharp">
 <a href="#imagepaths_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Paths</a>
@@ -1537,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1546,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1555,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_csharp">
 <a href="#supportedresourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Resource<wbr>Types</a>
@@ -1564,14 +1390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1579,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1588,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_go">
 <a href="#imagepaths_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Paths</a>
@@ -1597,8 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1606,8 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1615,8 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_go">
 <a href="#supportedresourcetypes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Resource<wbr>Types</a>
@@ -1624,14 +1442,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1639,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1648,8 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepaths_nodejs">
 <a href="#imagepaths_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Paths</a>
@@ -1657,8 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1666,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1675,8 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedresourcetypes_nodejs">
 <a href="#supportedresourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Resource<wbr>Types</a>
@@ -1684,14 +1494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1699,8 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detector id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1708,8 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector description. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_paths_python">
 <a href="#image_paths_python" style="color: inherit; text-decoration: inherit;">image_<wbr>paths</a>
@@ -1717,8 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1726,8 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Smart Detector name. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1735,8 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detector's parameters.'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_resource_types_python">
 <a href="#supported_resource_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>resource_<wbr>types</a>
@@ -1744,78 +1546,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="severity">Severity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Sev0</dt>
-    <dd>Sev0</dd>
-    <dt>Sev1</dt>
-    <dd>Sev1</dd>
-    <dt>Sev2</dt>
-    <dd>Sev2</dd>
-    <dt>Sev3</dt>
-    <dd>Sev3</dd>
-    <dt>Sev4</dt>
-    <dd>Sev4</dd>
-</dl>
+<dl class="tabular"><dt>Sev0</dt>
+    <dd>Sev0</dd><dt>Sev1</dt>
+    <dd>Sev1</dd><dt>Sev2</dt>
+    <dd>Sev2</dd><dt>Sev3</dt>
+    <dd>Sev3</dd><dt>Sev4</dt>
+    <dd>Sev4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Severity<wbr>Sev0</dt>
-    <dd>Sev0</dd>
-    <dt>Severity<wbr>Sev1</dt>
-    <dd>Sev1</dd>
-    <dt>Severity<wbr>Sev2</dt>
-    <dd>Sev2</dd>
-    <dt>Severity<wbr>Sev3</dt>
-    <dd>Sev3</dd>
-    <dt>Severity<wbr>Sev4</dt>
-    <dd>Sev4</dd>
-</dl>
+<dl class="tabular"><dt>Severity<wbr>Sev0</dt>
+    <dd>Sev0</dd><dt>Severity<wbr>Sev1</dt>
+    <dd>Sev1</dd><dt>Severity<wbr>Sev2</dt>
+    <dd>Sev2</dd><dt>Severity<wbr>Sev3</dt>
+    <dd>Sev3</dd><dt>Severity<wbr>Sev4</dt>
+    <dd>Sev4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Sev0</dt>
-    <dd>Sev0</dd>
-    <dt>Sev1</dt>
-    <dd>Sev1</dd>
-    <dt>Sev2</dt>
-    <dd>Sev2</dd>
-    <dt>Sev3</dt>
-    <dd>Sev3</dd>
-    <dt>Sev4</dt>
-    <dd>Sev4</dd>
-</dl>
+<dl class="tabular"><dt>Sev0</dt>
+    <dd>Sev0</dd><dt>Sev1</dt>
+    <dd>Sev1</dd><dt>Sev2</dt>
+    <dd>Sev2</dd><dt>Sev3</dt>
+    <dd>Sev3</dd><dt>Sev4</dt>
+    <dd>Sev4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SEV0</dt>
-    <dd>Sev0</dd>
-    <dt>SEV1</dt>
-    <dd>Sev1</dd>
-    <dt>SEV2</dt>
-    <dd>Sev2</dd>
-    <dt>SEV3</dt>
-    <dd>Sev3</dd>
-    <dt>SEV4</dt>
-    <dd>Sev4</dd>
-</dl>
+<dl class="tabular"><dt>SEV0</dt>
+    <dd>Sev0</dd><dt>SEV1</dt>
+    <dd>Sev1</dd><dt>SEV2</dt>
+    <dd>Sev2</dd><dt>SEV3</dt>
+    <dd>Sev3</dd><dt>SEV4</dt>
+    <dd>Sev4</dd></dl>
 {{% /choosable %}}
 
 <h4 id="throttlinginformation">Throttling<wbr>Information</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1823,14 +1598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1838,14 +1610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1853,14 +1622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1868,16 +1634,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="throttlinginformationresponse">Throttling<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1885,14 +1648,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1900,14 +1660,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1915,14 +1672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1930,8 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

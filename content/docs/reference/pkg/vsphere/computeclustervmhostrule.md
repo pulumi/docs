@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.ComputeClusterVmHostRule resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The ComputeClusterVmHostRule resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_csharp">
 <a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -204,8 +173,7 @@ The ComputeClusterVmHostRule resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_csharp">
 <a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -215,8 +183,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="affinityhostgroupname_csharp">
 <a href="#affinityhostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -227,8 +194,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="antiaffinityhostgroupname_csharp">
 <a href="#antiaffinityhostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -239,8 +205,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -249,8 +214,7 @@ run on the hosts defined in this host group.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_csharp">
 <a href="#mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -260,8 +224,7 @@ run on the hosts defined in this host group.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,14 +234,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_go">
 <a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -289,8 +249,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_go">
 <a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -300,8 +259,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="affinityhostgroupname_go">
 <a href="#affinityhostgroupname_go" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -312,8 +270,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="antiaffinityhostgroupname_go">
 <a href="#antiaffinityhostgroupname_go" style="color: inherit; text-decoration: inherit;">Anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -324,8 +281,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -334,8 +290,7 @@ run on the hosts defined in this host group.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_go">
 <a href="#mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -345,8 +300,7 @@ run on the hosts defined in this host group.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -356,14 +310,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_nodejs">
 <a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -374,8 +325,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_nodejs">
 <a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Group<wbr>Name</a>
@@ -385,8 +335,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="affinityhostgroupname_nodejs">
 <a href="#affinityhostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -397,8 +346,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="antiaffinityhostgroupname_nodejs">
 <a href="#antiaffinityhostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -409,8 +357,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -419,8 +366,7 @@ run on the hosts defined in this host group.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_nodejs">
 <a href="#mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -430,8 +376,7 @@ run on the hosts defined in this host group.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -441,14 +386,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_cluster_id_python">
 <a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -459,8 +401,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_group_name_python">
 <a href="#vm_group_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>group_<wbr>name</a>
@@ -470,8 +411,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="affinity_host_group_name_python">
 <a href="#affinity_host_group_name_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>host_<wbr>group_<wbr>name</a>
@@ -482,8 +422,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anti_affinity_host_group_name_python">
 <a href="#anti_affinity_host_group_name_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>affinity_<wbr>host_<wbr>group_<wbr>name</a>
@@ -494,8 +433,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -504,8 +442,7 @@ run on the hosts defined in this host group.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_python">
 <a href="#mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -515,8 +452,7 @@ run on the hosts defined in this host group.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -526,8 +462,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -538,9 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -548,14 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -563,14 +493,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,14 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -721,9 +644,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_affinityhostgroupname_csharp">
 <a href="#state_affinityhostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -734,8 +655,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_antiaffinityhostgroupname_csharp">
 <a href="#state_antiaffinityhostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -746,8 +666,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_csharp">
 <a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -758,8 +677,7 @@ run on the hosts defined in this host group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -768,8 +686,7 @@ resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_csharp">
 <a href="#state_mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -779,8 +696,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -790,8 +706,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_csharp">
 <a href="#state_vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -801,14 +716,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_affinityhostgroupname_go">
 <a href="#state_affinityhostgroupname_go" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -819,8 +731,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_antiaffinityhostgroupname_go">
 <a href="#state_antiaffinityhostgroupname_go" style="color: inherit; text-decoration: inherit;">Anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -831,8 +742,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_go">
 <a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -843,8 +753,7 @@ run on the hosts defined in this host group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -853,8 +762,7 @@ resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_go">
 <a href="#state_mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -864,8 +772,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -875,8 +782,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_go">
 <a href="#state_vmgroupname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -886,14 +792,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_affinityhostgroupname_nodejs">
 <a href="#state_affinityhostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -904,8 +807,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_antiaffinityhostgroupname_nodejs">
 <a href="#state_antiaffinityhostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Affinity<wbr>Host<wbr>Group<wbr>Name</a>
@@ -916,8 +818,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_nodejs">
 <a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -928,8 +829,7 @@ run on the hosts defined in this host group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -938,8 +838,7 @@ resource if changed.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_nodejs">
 <a href="#state_mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -949,8 +848,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -960,8 +858,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_nodejs">
 <a href="#state_vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Group<wbr>Name</a>
@@ -971,14 +868,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_affinity_host_group_name_python">
 <a href="#state_affinity_host_group_name_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>host_<wbr>group_<wbr>name</a>
@@ -989,8 +883,7 @@ with this rule.
     <dd>{{% md %}}When this field is used, the virtual
 machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_anti_affinity_host_group_name_python">
 <a href="#state_anti_affinity_host_group_name_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>affinity_<wbr>host_<wbr>group_<wbr>name</a>
@@ -1001,8 +894,7 @@ hosts defined in this host group.
     <dd>{{% md %}}When this field is used, the
 virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compute_cluster_id_python">
 <a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -1013,8 +905,7 @@ run on the hosts defined in this host group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1023,8 +914,7 @@ resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_python">
 <a href="#state_mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -1034,8 +924,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1045,8 +934,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_group_name_python">
 <a href="#state_vm_group_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>group_<wbr>name</a>
@@ -1056,8 +944,7 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the virtual machine group to use
 with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1073,6 +960,6 @@ with this rule.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

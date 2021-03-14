@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.loadbalancer.Monitor resource with e
 Manages a V2 monitor resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -82,9 +94,12 @@ monitor1 = openstack.loadbalancer.Monitor("monitor1",
     type="PING")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Monitor Resource {#create}
@@ -126,9 +148,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -136,9 +156,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -146,9 +164,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -156,10 +172,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -185,9 +198,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -195,9 +206,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +214,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +222,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,18 +230,13 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +244,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +252,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,10 +260,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,9 +275,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -293,8 +284,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -305,8 +295,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -315,8 +304,7 @@ and 10.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -327,8 +315,7 @@ and 10.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -339,8 +326,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -350,8 +336,7 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedcodes_csharp">
 <a href="#expectedcodes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
@@ -362,8 +347,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -374,8 +358,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretriesdown_csharp">
 <a href="#maxretriesdown_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries<wbr>Down</a>
@@ -386,8 +369,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,8 +378,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -409,8 +390,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -421,8 +401,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpath_csharp">
 <a href="#urlpath_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
@@ -432,14 +411,11 @@ other than their own. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -448,8 +424,7 @@ accessed if monitor type is HTTP or HTTPS.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -460,8 +435,7 @@ accessed if monitor type is HTTP or HTTPS.
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -470,8 +444,7 @@ and 10.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -482,8 +455,7 @@ and 10.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -494,8 +466,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -505,8 +476,7 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedcodes_go">
 <a href="#expectedcodes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
@@ -517,8 +487,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -529,8 +498,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretriesdown_go">
 <a href="#maxretriesdown_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries<wbr>Down</a>
@@ -541,8 +509,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -551,8 +518,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -564,8 +530,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -576,8 +541,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpath_go">
 <a href="#urlpath_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
@@ -587,14 +551,11 @@ other than their own. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -603,8 +564,7 @@ accessed if monitor type is HTTP or HTTPS.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -615,8 +575,7 @@ accessed if monitor type is HTTP or HTTPS.
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -625,8 +584,7 @@ and 10.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -637,8 +595,7 @@ and 10.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -649,8 +606,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -660,8 +616,7 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedcodes_nodejs">
 <a href="#expectedcodes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Codes</a>
@@ -672,8 +627,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -684,8 +638,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretriesdown_nodejs">
 <a href="#maxretriesdown_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries<wbr>Down</a>
@@ -696,8 +649,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -706,8 +658,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -719,8 +670,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -731,8 +681,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpath_nodejs">
 <a href="#urlpath_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path</a>
@@ -742,14 +691,11 @@ other than their own. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -758,8 +704,7 @@ accessed if monitor type is HTTP or HTTPS.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -770,8 +715,7 @@ accessed if monitor type is HTTP or HTTPS.
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -780,8 +724,7 @@ and 10.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -792,8 +735,7 @@ and 10.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -804,8 +746,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -815,8 +756,7 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_codes_python">
 <a href="#expected_codes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>codes</a>
@@ -827,8 +767,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -839,8 +778,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retries_down_python">
 <a href="#max_retries_down_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries_<wbr>down</a>
@@ -851,8 +789,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -861,8 +798,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -874,8 +810,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -886,8 +821,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_path_python">
 <a href="#url_path_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path</a>
@@ -897,8 +831,7 @@ other than their own. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -909,9 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -919,14 +850,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -934,14 +862,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -949,14 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -964,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1092,9 +1013,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1104,8 +1023,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delay_csharp">
 <a href="#state_delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -1114,8 +1032,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedcodes_csharp">
 <a href="#state_expectedcodes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
@@ -1126,8 +1043,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1138,8 +1054,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_csharp">
 <a href="#state_maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -1150,8 +1065,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretriesdown_csharp">
 <a href="#state_maxretriesdown_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries<wbr>Down</a>
@@ -1162,8 +1076,7 @@ and 10.
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1172,8 +1085,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_csharp">
 <a href="#state_poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -1182,8 +1094,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1195,8 +1106,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1207,8 +1117,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1219,8 +1128,7 @@ other than their own. Changing this creates a new monitor.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1231,8 +1139,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlpath_csharp">
 <a href="#state_urlpath_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
@@ -1242,14 +1149,11 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1259,8 +1163,7 @@ accessed if monitor type is HTTP or HTTPS.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delay_go">
 <a href="#state_delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -1269,8 +1172,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedcodes_go">
 <a href="#state_expectedcodes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Codes</a>
@@ -1281,8 +1183,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1293,8 +1194,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_go">
 <a href="#state_maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -1305,8 +1205,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretriesdown_go">
 <a href="#state_maxretriesdown_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries<wbr>Down</a>
@@ -1317,8 +1216,7 @@ and 10.
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1327,8 +1225,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_go">
 <a href="#state_poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -1337,8 +1234,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1350,8 +1246,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1362,8 +1257,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1374,8 +1268,7 @@ other than their own. Changing this creates a new monitor.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1386,8 +1279,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlpath_go">
 <a href="#state_urlpath_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path</a>
@@ -1397,14 +1289,11 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1414,8 +1303,7 @@ accessed if monitor type is HTTP or HTTPS.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delay_nodejs">
 <a href="#state_delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -1424,8 +1312,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedcodes_nodejs">
 <a href="#state_expectedcodes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Codes</a>
@@ -1436,8 +1323,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1448,8 +1334,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_nodejs">
 <a href="#state_maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -1460,8 +1345,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretriesdown_nodejs">
 <a href="#state_maxretriesdown_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries<wbr>Down</a>
@@ -1472,8 +1356,7 @@ and 10.
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1482,8 +1365,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_nodejs">
 <a href="#state_poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -1492,8 +1374,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1505,8 +1386,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1517,8 +1397,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1529,8 +1408,7 @@ other than their own. Changing this creates a new monitor.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1541,8 +1419,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlpath_nodejs">
 <a href="#state_urlpath_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path</a>
@@ -1552,14 +1429,11 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1569,8 +1443,7 @@ accessed if monitor type is HTTP or HTTPS.
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delay_python">
 <a href="#state_delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -1579,8 +1452,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expected_codes_python">
 <a href="#state_expected_codes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>codes</a>
@@ -1591,8 +1463,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1603,8 +1474,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_retries_python">
 <a href="#state_max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -1615,8 +1485,7 @@ defaults to "GET".
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
 and 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_retries_down_python">
 <a href="#state_max_retries_down_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries_<wbr>down</a>
@@ -1627,8 +1496,7 @@ and 10.
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
 Changing this updates the max_retries_down of the existing monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1637,8 +1505,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_id_python">
 <a href="#state_pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -1647,8 +1514,7 @@ Changing this updates the max_retries_down of the existing monitor.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1660,8 +1526,7 @@ Changing this updates the max_retries_down of the existing monitor.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1672,8 +1537,7 @@ monitor.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1684,8 +1548,7 @@ other than their own. Changing this creates a new monitor.
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1696,8 +1559,7 @@ value.
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
 balancer to verify the member state. Changing this creates a new monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_path_python">
 <a href="#state_url_path_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path</a>
@@ -1707,8 +1569,7 @@ balancer to verify the member state. Changing this creates a new monitor.
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1740,6 +1601,6 @@ Load Balancer Pool Monitor can be imported using the Monitor ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

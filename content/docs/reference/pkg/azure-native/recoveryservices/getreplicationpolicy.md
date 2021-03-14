@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Replication policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The custom data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypropertiesresponse">Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The custom data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypropertiesresponse">Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The custom data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -340,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypropertiesresponse">Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The custom data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The custom data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_csharp">
 <a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_csharp">
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_csharp">
 <a href="#recoverypointhistory_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -443,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_csharp">
 <a href="#recoverypointthresholdinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -452,14 +398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -467,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_go">
 <a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -476,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_go">
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -485,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_go">
 <a href="#recoverypointhistory_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_go">
 <a href="#recoverypointthresholdinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -503,14 +442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -518,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_nodejs">
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -527,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_nodejs">
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_nodejs">
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_nodejs">
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -554,14 +486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crash_consistent_frequency_in_minutes_python">
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -578,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_vm_sync_status_python">
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_python">
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_threshold_in_minutes_python">
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -614,9 +538,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="activestorageaccountid_csharp">
 <a href="#activestorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -624,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_csharp">
 <a href="#applicationconsistentsnapshotfrequencyinhours_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -633,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -642,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_csharp">
 <a href="#onlinereplicationstarttime_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -651,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistorydurationinhours_csharp">
 <a href="#recoverypointhistorydurationinhours_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
@@ -660,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationinterval_csharp">
 <a href="#replicationinterval_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Interval</a>
@@ -669,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="activestorageaccountid_go">
 <a href="#activestorageaccountid_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -684,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_go">
 <a href="#applicationconsistentsnapshotfrequencyinhours_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -693,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -702,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_go">
 <a href="#onlinereplicationstarttime_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -711,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistorydurationinhours_go">
 <a href="#recoverypointhistorydurationinhours_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationinterval_go">
 <a href="#replicationinterval_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Interval</a>
@@ -729,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="activestorageaccountid_nodejs">
 <a href="#activestorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -744,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_nodejs">
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -753,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -762,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_nodejs">
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -771,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistorydurationinhours_nodejs">
 <a href="#recoverypointhistorydurationinhours_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
@@ -780,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationinterval_nodejs">
 <a href="#replicationinterval_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
@@ -789,14 +690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="active_storage_account_id_python">
 <a href="#active_storage_account_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>storage_<wbr>account_<wbr>id</a>
@@ -804,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_consistent_snapshot_frequency_in_hours_python">
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
@@ -813,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -822,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="online_replication_start_time_python">
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
@@ -831,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_duration_in_hours_python">
 <a href="#recovery_point_history_duration_in_hours_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>duration_<wbr>in_<wbr>hours</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_interval_python">
 <a href="#replication_interval_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>interval</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replication interval.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -858,9 +750,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_csharp">
 <a href="#allowedauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -868,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_csharp">
 <a href="#applicationconsistentsnapshotfrequencyinhours_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -877,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_csharp">
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -886,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_csharp">
 <a href="#initialreplicationmethod_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -895,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_csharp">
 <a href="#offlinereplicationexportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -904,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_csharp">
 <a href="#offlinereplicationimportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -913,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_csharp">
 <a href="#onlinereplicationstarttime_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -922,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_csharp">
 <a href="#recoverypoints_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -931,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_csharp">
 <a href="#replicadeletionoption_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_csharp">
 <a href="#replicationport_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -949,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_go">
 <a href="#allowedauthenticationtype_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -964,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_go">
 <a href="#applicationconsistentsnapshotfrequencyinhours_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -973,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_go">
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -982,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_go">
 <a href="#initialreplicationmethod_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -991,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_go">
 <a href="#offlinereplicationexportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1000,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_go">
 <a href="#offlinereplicationimportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1009,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_go">
 <a href="#onlinereplicationstarttime_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1018,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_go">
 <a href="#recoverypoints_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -1027,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_go">
 <a href="#replicadeletionoption_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -1036,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_go">
 <a href="#replicationport_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -1045,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_nodejs">
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
@@ -1060,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_nodejs">
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1069,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_nodejs">
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1078,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_nodejs">
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
@@ -1087,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_nodejs">
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1096,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_nodejs">
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1105,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_nodejs">
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1114,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_nodejs">
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
@@ -1123,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_nodejs">
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
@@ -1132,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_nodejs">
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
@@ -1141,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_authentication_type_python">
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
@@ -1156,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_consistent_snapshot_frequency_in_hours_python">
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_python">
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1174,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_replication_method_python">
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
@@ -1183,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_export_path_python">
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
@@ -1192,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_import_path_python">
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
@@ -1201,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="online_replication_start_time_python">
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
@@ -1210,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_points_python">
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
@@ -1219,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_deletion_option_python">
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
@@ -1228,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_port_python">
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -1246,9 +1090,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_csharp">
 <a href="#allowedauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -1256,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_csharp">
 <a href="#applicationconsistentsnapshotfrequencyinhours_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1265,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_csharp">
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -1274,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_csharp">
 <a href="#initialreplicationmethod_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -1283,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_csharp">
 <a href="#offlinereplicationexportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1292,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_csharp">
 <a href="#offlinereplicationimportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1301,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_csharp">
 <a href="#onlinereplicationstarttime_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1310,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_csharp">
 <a href="#recoverypoints_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -1319,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_csharp">
 <a href="#replicadeletionoption_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -1328,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfrequencyinseconds_csharp">
 <a href="#replicationfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -1337,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_csharp">
 <a href="#replicationport_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -1346,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_go">
 <a href="#allowedauthenticationtype_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -1361,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_go">
 <a href="#applicationconsistentsnapshotfrequencyinhours_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1370,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_go">
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -1379,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_go">
 <a href="#initialreplicationmethod_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -1388,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_go">
 <a href="#offlinereplicationexportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1397,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_go">
 <a href="#offlinereplicationimportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1406,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_go">
 <a href="#onlinereplicationstarttime_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1415,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_go">
 <a href="#recoverypoints_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -1424,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_go">
 <a href="#replicadeletionoption_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -1433,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfrequencyinseconds_go">
 <a href="#replicationfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -1442,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_go">
 <a href="#replicationport_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -1451,14 +1270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_nodejs">
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
@@ -1466,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_nodejs">
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1475,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_nodejs">
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1484,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_nodejs">
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
@@ -1493,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_nodejs">
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1502,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_nodejs">
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1511,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_nodejs">
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1520,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_nodejs">
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
@@ -1529,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_nodejs">
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
@@ -1538,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfrequencyinseconds_nodejs">
 <a href="#replicationfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -1547,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_nodejs">
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
@@ -1556,14 +1362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_authentication_type_python">
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
@@ -1571,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_consistent_snapshot_frequency_in_hours_python">
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
@@ -1580,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_python">
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1589,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_replication_method_python">
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
@@ -1598,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_export_path_python">
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
@@ -1607,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_import_path_python">
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
@@ -1616,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="online_replication_start_time_python">
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
@@ -1625,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_points_python">
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
@@ -1634,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_deletion_option_python">
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
@@ -1643,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_frequency_in_seconds_python">
 <a href="#replication_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency_<wbr>in_<wbr>seconds</a>
@@ -1652,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_port_python">
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
@@ -1661,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -1670,9 +1462,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_csharp">
 <a href="#allowedauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -1680,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_csharp">
 <a href="#applicationconsistentsnapshotfrequencyinhours_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1689,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_csharp">
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -1698,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_csharp">
 <a href="#initialreplicationmethod_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -1707,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_csharp">
 <a href="#offlinereplicationexportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1716,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_csharp">
 <a href="#offlinereplicationimportpath_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1725,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_csharp">
 <a href="#onlinereplicationstarttime_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1734,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_csharp">
 <a href="#recoverypoints_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -1743,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_csharp">
 <a href="#replicadeletionoption_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -1752,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_csharp">
 <a href="#replicationport_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -1761,14 +1542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_go">
 <a href="#allowedauthenticationtype_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Authentication<wbr>Type</a>
@@ -1776,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_go">
 <a href="#applicationconsistentsnapshotfrequencyinhours_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1785,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_go">
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
@@ -1794,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_go">
 <a href="#initialreplicationmethod_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Method</a>
@@ -1803,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_go">
 <a href="#offlinereplicationexportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1812,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_go">
 <a href="#offlinereplicationimportpath_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1821,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_go">
 <a href="#onlinereplicationstarttime_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1830,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_go">
 <a href="#recoverypoints_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Points</a>
@@ -1839,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_go">
 <a href="#replicadeletionoption_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Deletion<wbr>Option</a>
@@ -1848,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_go">
 <a href="#replicationport_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Port</a>
@@ -1857,14 +1626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedauthenticationtype_nodejs">
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
@@ -1872,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationconsistentsnapshotfrequencyinhours_nodejs">
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
@@ -1881,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_nodejs">
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1890,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialreplicationmethod_nodejs">
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
@@ -1899,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationexportpath_nodejs">
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
@@ -1908,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinereplicationimportpath_nodejs">
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
@@ -1917,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinereplicationstarttime_nodejs">
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
@@ -1926,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypoints_nodejs">
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
@@ -1935,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicadeletionoption_nodejs">
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
@@ -1944,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationport_nodejs">
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
@@ -1953,14 +1710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_authentication_type_python">
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
@@ -1968,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_consistent_snapshot_frequency_in_hours_python">
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
@@ -1977,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_python">
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
@@ -1986,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_replication_method_python">
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
@@ -1995,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_export_path_python">
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
@@ -2004,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_replication_import_path_python">
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
@@ -2013,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="online_replication_start_time_python">
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
@@ -2022,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_points_python">
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
@@ -2031,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_deletion_option_python">
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
@@ -2040,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_port_python">
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
@@ -2049,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</h4>
@@ -2058,9 +1802,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2068,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_csharp">
 <a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2077,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_csharp">
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2086,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_csharp">
 <a href="#recoverypointhistory_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2095,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_csharp">
 <a href="#recoverypointthresholdinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2104,14 +1842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2119,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_go">
 <a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2128,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_go">
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2137,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_go">
 <a href="#recoverypointhistory_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2146,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_go">
 <a href="#recoverypointthresholdinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2155,14 +1886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2170,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_nodejs">
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2179,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_nodejs">
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2188,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_nodejs">
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
@@ -2197,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_nodejs">
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2206,14 +1930,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2221,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crash_consistent_frequency_in_minutes_python">
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2230,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_vm_sync_status_python">
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
@@ -2239,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_python">
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
@@ -2248,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_threshold_in_minutes_python">
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
@@ -2257,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -2266,9 +1982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2276,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_csharp">
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2285,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_csharp">
 <a href="#recoverypointhistory_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2294,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_csharp">
 <a href="#recoverypointthresholdinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2303,14 +2014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2318,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_go">
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2327,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_go">
 <a href="#recoverypointhistory_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2336,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_go">
 <a href="#recoverypointthresholdinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2345,14 +2050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2360,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_nodejs">
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2369,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_nodejs">
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
@@ -2378,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_nodejs">
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2387,14 +2086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2402,8 +2098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_vm_sync_status_python">
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
@@ -2411,8 +2106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_python">
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
@@ -2420,8 +2114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_threshold_in_minutes_python">
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
@@ -2429,8 +2122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -2438,9 +2130,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2448,8 +2138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_csharp">
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2457,8 +2146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_csharp">
 <a href="#recoverypointhistory_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2466,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_csharp">
 <a href="#recoverypointthresholdinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2475,14 +2162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2490,8 +2174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_go">
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2499,8 +2182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_go">
 <a href="#recoverypointhistory_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2508,8 +2190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_go">
 <a href="#recoverypointthresholdinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2517,14 +2198,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2532,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_nodejs">
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2541,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_nodejs">
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
@@ -2550,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_nodejs">
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2559,14 +2234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2574,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_vm_sync_status_python">
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
@@ -2583,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_python">
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
@@ -2592,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_threshold_in_minutes_python">
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
@@ -2601,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -2610,9 +2278,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2620,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashconsistentfrequencyinminutes_csharp">
 <a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2629,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablemultivmsync_csharp">
 <a href="#enablemultivmsync_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
@@ -2638,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverypointhistoryinminutes_csharp">
 <a href="#recoverypointhistoryinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -2647,14 +2310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2662,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashconsistentfrequencyinminutes_go">
 <a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2671,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablemultivmsync_go">
 <a href="#enablemultivmsync_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
@@ -2680,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverypointhistoryinminutes_go">
 <a href="#recoverypointhistoryinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -2689,14 +2346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2704,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashconsistentfrequencyinminutes_nodejs">
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2713,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablemultivmsync_nodejs">
 <a href="#enablemultivmsync_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
@@ -2722,8 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverypointhistoryinminutes_nodejs">
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -2731,14 +2382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2746,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crash_consistent_frequency_in_minutes_python">
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -2755,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_multi_vm_sync_python">
 <a href="#enable_multi_vm_sync_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multi_<wbr>vm_<wbr>sync</a>
@@ -2764,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_point_history_in_minutes_python">
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
@@ -2773,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policypropertiesresponse">Policy<wbr>Properties<wbr>Response</h4>
@@ -2782,9 +2426,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -2792,8 +2434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerspecificdetails_csharp">
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
@@ -2801,14 +2442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#a2apolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -2816,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerspecificdetails_go">
 <a href="#providerspecificdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
@@ -2825,14 +2462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -2840,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerspecificdetails_nodejs">
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
@@ -2849,14 +2482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -2864,8 +2494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_specific_details_python">
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
@@ -2873,8 +2502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -2882,9 +2510,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2892,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_csharp">
 <a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2901,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_csharp">
 <a href="#multivmsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2910,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_csharp">
 <a href="#recoverypointhistory_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2919,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_csharp">
 <a href="#recoverypointthresholdinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2928,14 +2550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2943,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_go">
 <a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2952,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_go">
 <a href="#multivmsyncstatus_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -2961,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_go">
 <a href="#recoverypointhistory_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History</a>
@@ -2970,8 +2586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_go">
 <a href="#recoverypointthresholdinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -2979,14 +2594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -2994,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_nodejs">
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3003,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivmsyncstatus_nodejs">
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
@@ -3012,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistory_nodejs">
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
@@ -3021,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointthresholdinminutes_nodejs">
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
@@ -3030,14 +2638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -3045,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crash_consistent_frequency_in_minutes_python">
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -3054,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_vm_sync_status_python">
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
@@ -3063,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_python">
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
@@ -3072,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_threshold_in_minutes_python">
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
@@ -3081,8 +2682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</h4>
@@ -3090,9 +2690,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_csharp">
 <a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3100,8 +2698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_csharp">
 <a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3109,8 +2706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistoryinminutes_csharp">
 <a href="#recoverypointhistoryinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -3118,14 +2714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_go">
 <a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3133,8 +2726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_go">
 <a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3142,8 +2734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistoryinminutes_go">
 <a href="#recoverypointhistoryinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -3151,14 +2742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appconsistentfrequencyinminutes_nodejs">
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3166,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crashconsistentfrequencyinminutes_nodejs">
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -3175,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointhistoryinminutes_nodejs">
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
@@ -3184,14 +2770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_consistent_frequency_in_minutes_python">
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -3199,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crash_consistent_frequency_in_minutes_python">
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -3208,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_history_in_minutes_python">
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
@@ -3217,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

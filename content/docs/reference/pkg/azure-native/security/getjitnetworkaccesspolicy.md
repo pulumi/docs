@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_csharp">
 <a href="#asclocation_csharp" style="color: inherit; text-decoration: inherit;">Asc<wbr>Location</a>
@@ -60,8 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jitnetworkaccesspolicyname_csharp">
 <a href="#jitnetworkaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -69,8 +66,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -78,14 +74,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_go">
 <a href="#asclocation_go" style="color: inherit; text-decoration: inherit;">Asc<wbr>Location</a>
@@ -93,8 +86,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jitnetworkaccesspolicyname_go">
 <a href="#jitnetworkaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -102,8 +94,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -111,14 +102,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_nodejs">
 <a href="#asclocation_nodejs" style="color: inherit; text-decoration: inherit;">asc<wbr>Location</a>
@@ -126,8 +114,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jitnetworkaccesspolicyname_nodejs">
 <a href="#jitnetworkaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -135,8 +122,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -144,14 +130,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asc_location_python">
 <a href="#asc_location_python" style="color: inherit; text-decoration: inherit;">asc_<wbr>location</a>
@@ -159,8 +142,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jit_network_access_policy_name_python">
 <a href="#jit_network_access_policy_name_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>network_<wbr>access_<wbr>policy_<wbr>name</a>
@@ -168,8 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -177,8 +158,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -191,9 +171,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -201,8 +179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -210,8 +187,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -219,8 +195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -228,8 +203,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -237,8 +211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_csharp">
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -246,8 +219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -255,8 +227,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -264,14 +235,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -279,8 +247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -288,8 +255,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -297,8 +263,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -306,8 +271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -315,8 +279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_go">
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -324,8 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">[]Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -333,8 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -342,14 +303,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestresponse">[]Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -357,8 +315,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -366,8 +323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -375,8 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -384,8 +339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -393,8 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_nodejs">
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
@@ -402,8 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -411,8 +363,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -420,14 +371,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -435,8 +383,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -444,8 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -453,8 +399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -462,8 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the provisioning state of the Just-in-Time policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -471,8 +415,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machines_python">
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
@@ -480,8 +423,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -489,8 +431,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -498,8 +439,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -513,9 +453,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -523,8 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -532,8 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessportruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -541,14 +477,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -556,8 +489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -565,8 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessportruleresponse">[]Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -574,14 +505,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -589,8 +517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -598,8 +525,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -607,14 +533,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -622,8 +545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -631,8 +553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -640,8 +561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response</h4>
@@ -649,9 +569,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequestaccessduration_csharp">
 <a href="#maxrequestaccessduration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Access<wbr>Duration</a>
@@ -659,8 +577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -668,8 +585,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -677,8 +593,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_csharp">
 <a href="#allowedsourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -686,8 +601,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_csharp">
 <a href="#allowedsourceaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -695,14 +609,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequestaccessduration_go">
 <a href="#maxrequestaccessduration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Access<wbr>Duration</a>
@@ -710,8 +621,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -719,8 +629,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -728,8 +637,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_go">
 <a href="#allowedsourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -737,8 +645,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_go">
 <a href="#allowedsourceaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -746,14 +653,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequestaccessduration_nodejs">
 <a href="#maxrequestaccessduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Access<wbr>Duration</a>
@@ -761,8 +665,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -770,8 +673,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -779,8 +681,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_nodejs">
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -788,8 +689,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_nodejs">
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -797,14 +697,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_request_access_duration_python">
 <a href="#max_request_access_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>access_<wbr>duration</a>
@@ -812,8 +709,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -821,8 +717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -830,8 +725,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_source_address_prefix_python">
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
@@ -839,8 +733,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_source_address_prefixes_python">
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
@@ -848,8 +741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response</h4>
@@ -857,9 +749,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtimeutc_csharp">
 <a href="#endtimeutc_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -867,8 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -876,8 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -885,8 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the port{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusreason_csharp">
 <a href="#statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -894,8 +781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_csharp">
 <a href="#allowedsourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -903,8 +789,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_csharp">
 <a href="#allowedsourceaddressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -912,8 +797,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedport_csharp">
 <a href="#mappedport_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Port</a>
@@ -921,14 +805,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtimeutc_go">
 <a href="#endtimeutc_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -936,8 +817,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -945,8 +825,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -954,8 +833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the port{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusreason_go">
 <a href="#statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -963,8 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_go">
 <a href="#allowedsourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -972,8 +849,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_go">
 <a href="#allowedsourceaddressprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -981,8 +857,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedport_go">
 <a href="#mappedport_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Port</a>
@@ -990,14 +865,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtimeutc_nodejs">
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
@@ -1005,8 +877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -1014,8 +885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1023,8 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the port{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusreason_nodejs">
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
@@ -1032,8 +901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefix_nodejs">
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
@@ -1041,8 +909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsourceaddressprefixes_nodejs">
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
@@ -1050,8 +917,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedport_nodejs">
 <a href="#mappedport_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Port</a>
@@ -1059,14 +925,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_time_utc_python">
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
@@ -1074,8 +937,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -1083,8 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1092,8 +953,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the port{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_reason_python">
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
@@ -1101,8 +961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_source_address_prefix_python">
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
@@ -1110,8 +969,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_source_address_prefixes_python">
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
@@ -1119,8 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapped_port_python">
 <a href="#mapped_port_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>port</a>
@@ -1128,8 +985,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessrequestresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Response</h4>
@@ -1137,9 +993,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="requestor_csharp">
 <a href="#requestor_csharp" style="color: inherit; text-decoration: inherit;">Requestor</a>
@@ -1147,8 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_csharp">
 <a href="#starttimeutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -1156,8 +1009,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachines_csharp">
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -1165,8 +1017,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justification_csharp">
 <a href="#justification_csharp" style="color: inherit; text-decoration: inherit;">Justification</a>
@@ -1174,14 +1025,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="requestor_go">
 <a href="#requestor_go" style="color: inherit; text-decoration: inherit;">Requestor</a>
@@ -1189,8 +1037,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_go">
 <a href="#starttimeutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -1198,8 +1045,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachines_go">
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -1207,8 +1053,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">[]Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justification_go">
 <a href="#justification_go" style="color: inherit; text-decoration: inherit;">Justification</a>
@@ -1216,14 +1061,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="requestor_nodejs">
 <a href="#requestor_nodejs" style="color: inherit; text-decoration: inherit;">requestor</a>
@@ -1231,8 +1073,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_nodejs">
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
@@ -1240,8 +1081,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachines_nodejs">
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
@@ -1249,8 +1089,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justification_nodejs">
 <a href="#justification_nodejs" style="color: inherit; text-decoration: inherit;">justification</a>
@@ -1258,14 +1097,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="requestor_python">
 <a href="#requestor_python" style="color: inherit; text-decoration: inherit;">requestor</a>
@@ -1273,8 +1109,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_utc_python">
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
@@ -1282,8 +1117,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machines_python">
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
@@ -1291,8 +1125,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="justification_python">
 <a href="#justification_python" style="color: inherit; text-decoration: inherit;">justification</a>
@@ -1300,8 +1133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response</h4>
@@ -1309,9 +1141,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1319,8 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1328,14 +1157,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1343,8 +1169,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1352,14 +1177,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">[]Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1367,8 +1189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1376,14 +1197,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1391,8 +1209,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1400,8 +1217,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

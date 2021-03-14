@@ -14,11 +14,17 @@ The device security group resource
 API Version: 2019-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a device security group for the specified IoT hub resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -42,9 +48,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -72,9 +81,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -87,9 +99,12 @@ device_security_group = azure_native.security.DeviceSecurityGroup("deviceSecurit
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -103,9 +118,16 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DeviceSecurityGroup Resource {#create}
@@ -130,9 +152,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -140,9 +160,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -150,9 +168,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -160,10 +176,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -189,9 +202,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -199,9 +210,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -209,9 +218,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,9 +226,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -229,18 +234,13 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +248,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +256,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,10 +264,7 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +279,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -296,8 +287,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowlistrules_csharp">
 <a href="#allowlistrules_csharp" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Rules</a>
@@ -305,8 +295,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowlistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denylistrules_csharp">
 <a href="#denylistrules_csharp" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Rules</a>
@@ -314,8 +303,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#denylistcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesecuritygroupname_csharp">
 <a href="#devicesecuritygroupname_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Security<wbr>Group<wbr>Name</a>
@@ -323,8 +311,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdrules_csharp">
 <a href="#thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -332,8 +319,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thresholdcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowrules_csharp">
 <a href="#timewindowrules_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Rules</a>
@@ -341,14 +327,11 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timewindowcustomalertrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -356,8 +339,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowlistrules_go">
 <a href="#allowlistrules_go" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Rules</a>
@@ -365,8 +347,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowlistcustomalertrule">[]Allowlist<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denylistrules_go">
 <a href="#denylistrules_go" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Rules</a>
@@ -374,8 +355,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#denylistcustomalertrule">[]Denylist<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesecuritygroupname_go">
 <a href="#devicesecuritygroupname_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Security<wbr>Group<wbr>Name</a>
@@ -383,8 +363,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdrules_go">
 <a href="#thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -392,8 +371,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thresholdcustomalertrule">[]Threshold<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowrules_go">
 <a href="#timewindowrules_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Rules</a>
@@ -401,14 +379,11 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timewindowcustomalertrule">[]Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -416,8 +391,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowlistrules_nodejs">
 <a href="#allowlistrules_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Rules</a>
@@ -425,8 +399,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowlistcustomalertrule">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denylistrules_nodejs">
 <a href="#denylistrules_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Rules</a>
@@ -434,8 +407,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#denylistcustomalertrule">Denylist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesecuritygroupname_nodejs">
 <a href="#devicesecuritygroupname_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Security<wbr>Group<wbr>Name</a>
@@ -443,8 +415,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdrules_nodejs">
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
@@ -452,8 +423,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thresholdcustomalertrule">Threshold<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowrules_nodejs">
 <a href="#timewindowrules_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Rules</a>
@@ -461,14 +431,11 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timewindowcustomalertrule">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -476,8 +443,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowlist_rules_python">
 <a href="#allowlist_rules_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>rules</a>
@@ -485,8 +451,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowlistcustomalertrule">Sequence[Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denylist_rules_python">
 <a href="#denylist_rules_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>rules</a>
@@ -494,8 +459,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#denylistcustomalertrule">Sequence[Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_security_group_name_python">
 <a href="#device_security_group_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>security_<wbr>group_<wbr>name</a>
@@ -503,8 +467,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_rules_python">
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
@@ -512,8 +475,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#thresholdcustomalertrule">Sequence[Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_window_rules_python">
 <a href="#time_window_rules_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>rules</a>
@@ -521,8 +483,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timewindowcustomalertrule">Sequence[Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -533,9 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -552,8 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -561,14 +518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -576,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -585,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -594,14 +546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -609,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -618,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -627,14 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -642,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -651,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -660,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -677,9 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="allowlistcustomalertrule">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_csharp">
 <a href="#allowlistvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Values</a>
@@ -687,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -696,14 +634,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_go">
 <a href="#allowlistvalues_go" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Values</a>
@@ -711,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -720,14 +654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_nodejs">
 <a href="#allowlistvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
@@ -735,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -744,14 +674,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlist_values_python">
 <a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
@@ -759,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -768,16 +694,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="allowlistcustomalertruleresponse">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_csharp">
 <a href="#allowlistvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Values</a>
@@ -785,8 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -794,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -803,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -812,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_csharp">
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -821,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_go">
 <a href="#allowlistvalues_go" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Values</a>
@@ -836,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -845,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -854,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -863,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_go">
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -872,14 +784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlistvalues_nodejs">
 <a href="#allowlistvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
@@ -887,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -896,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -905,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -914,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_nodejs">
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
@@ -923,14 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowlist_values_python">
 <a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
@@ -938,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -947,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -956,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -965,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_type_python">
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
@@ -974,16 +872,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="denylistcustomalertrule">Denylist<wbr>Custom<wbr>Alert<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_csharp">
 <a href="#denylistvalues_csharp" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Values</a>
@@ -991,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1000,14 +894,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_go">
 <a href="#denylistvalues_go" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Values</a>
@@ -1015,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1024,14 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_nodejs">
 <a href="#denylistvalues_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
@@ -1039,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1048,14 +934,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylist_values_python">
 <a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
@@ -1063,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1072,16 +954,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="denylistcustomalertruleresponse">Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_csharp">
 <a href="#denylistvalues_csharp" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Values</a>
@@ -1089,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1098,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1107,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1116,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_csharp">
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -1125,14 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_go">
 <a href="#denylistvalues_go" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Values</a>
@@ -1140,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1149,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1158,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1167,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_go">
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -1176,14 +1044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylistvalues_nodejs">
 <a href="#denylistvalues_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
@@ -1191,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1200,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1209,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1218,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_nodejs">
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
@@ -1227,14 +1088,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denylist_values_python">
 <a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
@@ -1242,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1251,8 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1260,8 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1269,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_type_python">
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
@@ -1278,16 +1132,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="thresholdcustomalertrule">Threshold<wbr>Custom<wbr>Alert<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1295,8 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_csharp">
 <a href="#maxthreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1304,8 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_csharp">
 <a href="#minthreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1313,14 +1162,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1328,8 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_go">
 <a href="#maxthreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1337,8 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_go">
 <a href="#minthreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1346,14 +1190,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1361,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_nodejs">
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
@@ -1370,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_nodejs">
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
@@ -1379,14 +1218,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1394,8 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_threshold_python">
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
@@ -1403,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_threshold_python">
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
@@ -1412,16 +1246,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="thresholdcustomalertruleresponse">Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1429,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1438,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1447,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_csharp">
 <a href="#maxthreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1456,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_csharp">
 <a href="#minthreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1465,14 +1292,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1480,8 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1489,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1498,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_go">
 <a href="#maxthreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1507,8 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_go">
 <a href="#minthreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1516,14 +1336,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1531,8 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1540,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1549,8 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_nodejs">
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
@@ -1558,8 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_nodejs">
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
@@ -1567,14 +1380,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1582,8 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1591,8 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1600,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_threshold_python">
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
@@ -1609,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_threshold_python">
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
@@ -1618,16 +1424,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timewindowcustomalertrule">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1635,8 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_csharp">
 <a href="#maxthreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1644,8 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_csharp">
 <a href="#minthreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1653,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_csharp">
 <a href="#timewindowsize_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Size</a>
@@ -1662,14 +1462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1677,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_go">
 <a href="#maxthreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1686,8 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_go">
 <a href="#minthreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1695,8 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_go">
 <a href="#timewindowsize_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Size</a>
@@ -1704,14 +1498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1719,8 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_nodejs">
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
@@ -1728,8 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_nodejs">
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
@@ -1737,8 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_nodejs">
 <a href="#timewindowsize_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
@@ -1746,14 +1534,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1761,8 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_threshold_python">
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
@@ -1770,8 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_threshold_python">
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
@@ -1779,8 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_window_size_python">
 <a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
@@ -1788,16 +1570,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timewindowcustomalertruleresponse">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1805,8 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1814,8 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1823,8 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_csharp">
 <a href="#maxthreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1832,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_csharp">
 <a href="#minthreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1841,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_csharp">
 <a href="#timewindowsize_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Size</a>
@@ -1850,14 +1624,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1865,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1874,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1883,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_go">
 <a href="#maxthreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threshold</a>
@@ -1892,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_go">
 <a href="#minthreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Threshold</a>
@@ -1901,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_go">
 <a href="#timewindowsize_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Size</a>
@@ -1910,14 +1676,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1925,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1934,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1943,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxthreshold_nodejs">
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
@@ -1952,8 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minthreshold_nodejs">
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
@@ -1961,8 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowsize_nodejs">
 <a href="#timewindowsize_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
@@ -1970,14 +1728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1985,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1994,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2003,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_threshold_python">
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
@@ -2012,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_threshold_python">
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
@@ -2021,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_window_size_python">
 <a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
@@ -2030,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

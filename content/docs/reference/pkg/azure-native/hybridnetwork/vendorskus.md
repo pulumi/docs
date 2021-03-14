@@ -14,11 +14,17 @@ Sku sub resource.
 API Version: 2020-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update the sku of vendor resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -142,9 +148,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -253,9 +262,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -339,9 +351,12 @@ vendor_skus = azure_native.hybridnetwork.VendorSkus("vendorSkus",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -426,9 +441,16 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VendorSkus Resource {#create}
@@ -453,9 +475,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -463,9 +483,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -473,9 +491,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -483,10 +499,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -512,9 +525,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -522,9 +533,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -532,9 +541,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -542,9 +549,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -552,18 +557,13 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -571,9 +571,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -581,9 +579,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -591,10 +587,7 @@ const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -609,9 +602,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vendorname_csharp">
 <a href="#vendorname_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Name</a>
@@ -619,8 +610,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_csharp">
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -628,8 +618,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skudeploymentmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Sku<wbr>Deployment<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationparameters_csharp">
 <a href="#managedapplicationparameters_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Parameters</a>
@@ -637,8 +626,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationtemplate_csharp">
 <a href="#managedapplicationtemplate_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Template</a>
@@ -646,8 +634,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfunctiontemplate_csharp">
 <a href="#networkfunctiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
@@ -655,8 +642,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctiontemplate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -664,8 +650,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -673,8 +658,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutype_csharp">
 <a href="#skutype_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Type</a>
@@ -682,14 +666,11 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Sku<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vendorname_go">
 <a href="#vendorname_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Name</a>
@@ -697,8 +678,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_go">
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -706,8 +686,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skudeploymentmode">Sku<wbr>Deployment<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationparameters_go">
 <a href="#managedapplicationparameters_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Parameters</a>
@@ -715,8 +694,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationtemplate_go">
 <a href="#managedapplicationtemplate_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Application<wbr>Template</a>
@@ -724,8 +702,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfunctiontemplate_go">
 <a href="#networkfunctiontemplate_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
@@ -733,8 +710,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -742,8 +718,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -751,8 +726,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutype_go">
 <a href="#skutype_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Type</a>
@@ -760,14 +734,11 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutype">Sku<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vendorname_nodejs">
 <a href="#vendorname_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Name</a>
@@ -775,8 +746,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_nodejs">
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -784,8 +754,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skudeploymentmode">Sku<wbr>Deployment<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationparameters_nodejs">
 <a href="#managedapplicationparameters_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Application<wbr>Parameters</a>
@@ -793,8 +762,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedapplicationtemplate_nodejs">
 <a href="#managedapplicationtemplate_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Application<wbr>Template</a>
@@ -802,8 +770,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfunctiontemplate_nodejs">
 <a href="#networkfunctiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Template</a>
@@ -811,8 +778,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -820,8 +786,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -829,8 +794,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutype_nodejs">
 <a href="#skutype_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Type</a>
@@ -838,14 +802,11 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutype">Sku<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vendor_name_python">
 <a href="#vendor_name_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>name</a>
@@ -853,8 +814,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_mode_python">
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -862,8 +822,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skudeploymentmode">Sku<wbr>Deployment<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku deployment mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_application_parameters_python">
 <a href="#managed_application_parameters_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>parameters</a>
@@ -871,8 +830,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters for the managed application to be supplied by the vendor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_application_template_python">
 <a href="#managed_application_template_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>application_<wbr>template</a>
@@ -880,8 +838,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template for the managed application deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_function_template_python">
 <a href="#network_function_template_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>template</a>
@@ -889,8 +846,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -898,8 +854,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if the vendor sku is in preview mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -907,8 +862,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_type_python">
 <a href="#sku_type_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>type</a>
@@ -916,8 +870,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skutype">Sku<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -928,9 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -938,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -947,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -956,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -965,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -980,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -989,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -998,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1007,14 +949,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1022,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1031,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1040,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1049,14 +985,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1064,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1073,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1082,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the vendor sku sub resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1091,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1108,9 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="customprofile">Custom<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_csharp">
 <a href="#metadataconfigurationpath_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
@@ -1118,14 +1045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_go">
 <a href="#metadataconfigurationpath_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
@@ -1133,14 +1057,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_nodejs">
 <a href="#metadataconfigurationpath_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Configuration<wbr>Path</a>
@@ -1148,14 +1069,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_configuration_path_python">
 <a href="#metadata_configuration_path_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>configuration_<wbr>path</a>
@@ -1163,16 +1081,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customprofileresponse">Custom<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_csharp">
 <a href="#metadataconfigurationpath_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
@@ -1180,14 +1095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_go">
 <a href="#metadataconfigurationpath_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Configuration<wbr>Path</a>
@@ -1195,14 +1107,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadataconfigurationpath_nodejs">
 <a href="#metadataconfigurationpath_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Configuration<wbr>Path</a>
@@ -1210,14 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_configuration_path_python">
 <a href="#metadata_configuration_path_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>configuration_<wbr>path</a>
@@ -1225,16 +1131,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path for metadata configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadisk">Data<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1242,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskcreateoptiontypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1251,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1260,14 +1161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1275,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskcreateoptiontypes">Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1284,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1293,14 +1189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
@@ -1308,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskcreateoptiontypes">Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -1317,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1326,14 +1217,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
@@ -1341,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#diskcreateoptiontypes">Disk<wbr>Create<wbr>Option<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -1350,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1359,16 +1245,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadiskresponse">Data<wbr>Disk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1376,8 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1385,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1394,14 +1275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1409,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1418,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1427,14 +1303,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
@@ -1442,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -1451,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1460,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
@@ -1475,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how the virtual machine should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -1484,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1493,138 +1359,95 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of data disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskcreateoptiontypes">Disk<wbr>Create<wbr>Option<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Empty</dt>
-    <dd>Empty</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Empty</dt>
+    <dd>Empty</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Disk<wbr>Create<wbr>Option<wbr>Types<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Disk<wbr>Create<wbr>Option<wbr>Types<wbr>Empty</dt>
-    <dd>Empty</dd>
-</dl>
+<dl class="tabular"><dt>Disk<wbr>Create<wbr>Option<wbr>Types<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Disk<wbr>Create<wbr>Option<wbr>Types<wbr>Empty</dt>
+    <dd>Empty</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Empty</dt>
-    <dd>Empty</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Empty</dt>
+    <dd>Empty</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>EMPTY</dt>
-    <dd>Empty</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>EMPTY</dt>
+    <dd>Empty</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipallocationmethod">IPAllocation<wbr>Method</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Static</dt>
-    <dd>Static</dd>
-    <dt>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Static</dt>
+    <dd>Static</dd><dt>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>IPAllocation<wbr>Method<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>IPAllocation<wbr>Method<wbr>Static</dt>
-    <dd>Static</dd>
-    <dt>IPAllocation<wbr>Method<wbr>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>IPAllocation<wbr>Method<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>IPAllocation<wbr>Method<wbr>Static</dt>
+    <dd>Static</dd><dt>IPAllocation<wbr>Method<wbr>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Static</dt>
-    <dd>Static</dd>
-    <dt>Dynamic</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Static</dt>
+    <dd>Static</dd><dt>Dynamic</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>STATIC</dt>
-    <dd>Static</dd>
-    <dt>DYNAMIC</dt>
-    <dd>Dynamic</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>STATIC</dt>
+    <dd>Static</dd><dt>DYNAMIC</dt>
+    <dd>Dynamic</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipversion">IPVersion</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>IPv4</dt>
-    <dd>IPv4</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>IPv4</dt>
+    <dd>IPv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>IPVersion<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>IPVersion<wbr>IPv4</dt>
-    <dd>IPv4</dd>
-</dl>
+<dl class="tabular"><dt>IPVersion<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>IPVersion<wbr>IPv4</dt>
+    <dd>IPv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>IPv4</dt>
-    <dd>IPv4</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>IPv4</dt>
+    <dd>IPv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>I_PV4</dt>
-    <dd>IPv4</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>I_PV4</dt>
+    <dd>IPv4</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagereference">Image<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_csharp">
 <a href="#exactversion_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
@@ -1632,8 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1641,8 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1650,8 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1659,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1668,14 +1487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_go">
 <a href="#exactversion_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
@@ -1683,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1692,8 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1701,8 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1710,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1719,14 +1531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_nodejs">
 <a href="#exactversion_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Version</a>
@@ -1734,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1743,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1752,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1761,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1770,14 +1575,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exact_version_python">
 <a href="#exact_version_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>version</a>
@@ -1785,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1794,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1803,8 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1812,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1821,16 +1619,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagereferenceresponse">Image<wbr>Reference<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_csharp">
 <a href="#exactversion_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
@@ -1838,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1847,8 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1856,8 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1865,8 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1874,14 +1665,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_go">
 <a href="#exactversion_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Version</a>
@@ -1889,8 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1898,8 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1907,8 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1916,8 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1925,14 +1709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exactversion_nodejs">
 <a href="#exactversion_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Version</a>
@@ -1940,8 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1949,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1958,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1967,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1976,14 +1753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exact_version_python">
 <a href="#exact_version_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>version</a>
@@ -1991,8 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies in decimal numbers, the exact version of image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -2000,8 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2009,8 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -2018,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2027,16 +1797,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxconfiguration">Linux<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -2044,14 +1811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -2059,14 +1823,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -2074,14 +1835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -2089,16 +1847,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -2106,14 +1861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -2121,14 +1873,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -2136,14 +1885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -2151,16 +1897,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_csharp">
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -2168,8 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -2177,8 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2186,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2195,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2204,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkfunctionroleconfigurationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -2213,8 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_csharp">
 <a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
@@ -2222,8 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_csharp">
 <a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
@@ -2231,8 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_csharp">
 <a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -2240,14 +1975,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_go">
 <a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -2255,8 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -2264,8 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterface">[]Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2273,8 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2282,8 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2291,8 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkfunctionroleconfigurationtype">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -2300,8 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_go">
 <a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
@@ -2309,8 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_go">
 <a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
@@ -2318,8 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_go">
 <a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -2327,14 +2051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_nodejs">
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
@@ -2342,8 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -2351,8 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -2360,8 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -2369,8 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -2378,8 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networkfunctionroleconfigurationtype">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
@@ -2387,8 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_nodejs">
 <a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
@@ -2396,8 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_nodejs">
 <a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
@@ -2405,8 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_nodejs">
 <a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
@@ -2414,14 +2127,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_profile_python">
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
@@ -2429,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofile">Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -2438,8 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -2447,8 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofile">Os<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2456,8 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -2465,8 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#networkfunctionroleconfigurationtype">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
@@ -2474,8 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_parameters_python">
 <a href="#user_data_parameters_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>parameters</a>
@@ -2483,8 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_template_python">
 <a href="#user_data_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>template</a>
@@ -2492,8 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_size_python">
 <a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
@@ -2501,16 +2203,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_csharp">
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -2518,8 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -2527,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2536,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2545,8 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2554,8 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -2563,8 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_csharp">
 <a href="#userdataparameters_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
@@ -2572,8 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_csharp">
 <a href="#userdatatemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
@@ -2581,8 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_csharp">
 <a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -2590,14 +2281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_go">
 <a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -2605,8 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -2614,8 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceresponse">[]Network<wbr>Interface<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2623,8 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2632,8 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2641,8 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -2650,8 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_go">
 <a href="#userdataparameters_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Parameters</a>
@@ -2659,8 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_go">
 <a href="#userdatatemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Template</a>
@@ -2668,8 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_go">
 <a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -2677,14 +2357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customprofile_nodejs">
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
@@ -2692,8 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -2701,8 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -2710,8 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -2719,8 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -2728,8 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
@@ -2737,8 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdataparameters_nodejs">
 <a href="#userdataparameters_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Parameters</a>
@@ -2746,8 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatatemplate_nodejs">
 <a href="#userdatatemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Template</a>
@@ -2755,8 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_nodejs">
 <a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
@@ -2764,14 +2433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_profile_python">
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
@@ -2779,8 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -2788,8 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -2797,8 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2806,8 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -2815,8 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
@@ -2824,8 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_parameters_python">
 <a href="#user_data_parameters_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>parameters</a>
@@ -2833,8 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_template_python">
 <a href="#user_data_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>template</a>
@@ -2842,8 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user data template for customers. This is a json schema template describing the format and data type of user data parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_size_python">
 <a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
@@ -2851,54 +2509,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkfunctionroleconfigurationtype">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Virtual<wbr>Machine</dt>
-    <dd>VirtualMachine</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Virtual<wbr>Machine</dt>
+    <dd>VirtualMachine</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type<wbr>Virtual<wbr>Machine</dt>
-    <dd>VirtualMachine</dd>
-</dl>
+<dl class="tabular"><dt>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Type<wbr>Virtual<wbr>Machine</dt>
+    <dd>VirtualMachine</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Virtual<wbr>Machine</dt>
-    <dd>VirtualMachine</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Virtual<wbr>Machine</dt>
+    <dd>VirtualMachine</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>VIRTUAL_MACHINE</dt>
-    <dd>VirtualMachine</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>VIRTUAL_MACHINE</dt>
+    <dd>VirtualMachine</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkfunctiontemplate">Network<wbr>Function<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_csharp">
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2906,14 +2549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_go">
 <a href="#networkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2921,14 +2561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfiguration">[]Network<wbr>Function<wbr>Role<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_nodejs">
 <a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2936,14 +2573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="network_function_role_configurations_python">
 <a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
@@ -2951,16 +2585,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfiguration">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkfunctiontemplateresponse">Network<wbr>Function<wbr>Template<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_csharp">
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2968,14 +2599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_go">
 <a href="#networkfunctionroleconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2983,14 +2611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">[]Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkfunctionroleconfigurations_nodejs">
 <a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
@@ -2998,14 +2623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="network_function_role_configurations_python">
 <a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
@@ -3013,16 +2635,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterface">Network<wbr>Interface</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3030,8 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3039,8 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_csharp">
 <a href="#networkinterfacename_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Name</a>
@@ -3048,8 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_csharp">
 <a href="#vmswitchtype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
@@ -3057,14 +2673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#vmswitchtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>VMSwitch<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3072,8 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfiguration">[]Network<wbr>Interface<wbr>IPConfiguration</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3081,8 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_go">
 <a href="#networkinterfacename_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Name</a>
@@ -3090,8 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_go">
 <a href="#vmswitchtype_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
@@ -3099,14 +2709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#vmswitchtype">VMSwitch<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
@@ -3114,8 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -3123,8 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_nodejs">
 <a href="#networkinterfacename_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Name</a>
@@ -3132,8 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_nodejs">
 <a href="#vmswitchtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
@@ -3141,14 +2745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#vmswitchtype">VMSwitch<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
@@ -3156,8 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -3165,8 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_name_python">
 <a href="#network_interface_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>name</a>
@@ -3174,8 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_switch_type_python">
 <a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
@@ -3183,16 +2781,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#vmswitchtype">VMSwitch<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -3200,8 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3209,8 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3218,8 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_csharp">
 <a href="#ipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
@@ -3227,8 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipallocationmethod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>IPAllocation<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3236,8 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipversion">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>IPVersion</a></span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3245,14 +2835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -3260,8 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3269,8 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3278,8 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_go">
 <a href="#ipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
@@ -3287,8 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3296,8 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipversion">IPVersion</a></span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3305,14 +2887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -3320,8 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3329,8 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -3338,8 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_nodejs">
 <a href="#ipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
@@ -3347,8 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -3356,8 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ipversion">IPVersion</a></span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3365,14 +2939,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -3380,8 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3389,8 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -3398,8 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allocation_method_python">
 <a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
@@ -3407,8 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -3416,8 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#ipversion">IPVersion</a></span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3425,16 +2991,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -3442,8 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3451,8 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3460,8 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_csharp">
 <a href="#ipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
@@ -3469,8 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3478,8 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3487,14 +3045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -3502,8 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3511,8 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3520,8 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_go">
 <a href="#ipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Method</a>
@@ -3529,8 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3538,8 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3547,14 +3097,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -3562,8 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3571,8 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -3580,8 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationmethod_nodejs">
 <a href="#ipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
@@ -3589,8 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -3598,8 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3607,14 +3149,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -3622,8 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3631,8 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -3640,8 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allocation_method_python">
 <a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
@@ -3649,8 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -3658,8 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3667,16 +3201,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfaceresponse">Network<wbr>Interface<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3684,8 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3693,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_csharp">
 <a href="#networkinterfacename_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Name</a>
@@ -3702,8 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_csharp">
 <a href="#vmswitchtype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
@@ -3711,14 +3239,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3726,8 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">[]Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3735,8 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_go">
 <a href="#networkinterfacename_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Name</a>
@@ -3744,8 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_go">
 <a href="#vmswitchtype_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Switch<wbr>Type</a>
@@ -3753,14 +3275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
@@ -3768,8 +3287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -3777,8 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfacename_nodejs">
 <a href="#networkinterfacename_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Name</a>
@@ -3786,8 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswitchtype_nodejs">
 <a href="#vmswitchtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
@@ -3795,14 +3311,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
@@ -3810,8 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -3819,8 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_name_python">
 <a href="#network_interface_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>name</a>
@@ -3828,8 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_switch_type_python">
 <a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
@@ -3837,62 +3347,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatingsystemtypes">Operating<wbr>System<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operating<wbr>System<wbr>Types<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Operating<wbr>System<wbr>Types<wbr>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Operating<wbr>System<wbr>Types<wbr>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Operating<wbr>System<wbr>Types<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Operating<wbr>System<wbr>Types<wbr>Windows</dt>
+    <dd>Windows</dd><dt>Operating<wbr>System<wbr>Types<wbr>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osdisk">Os<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3900,8 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3909,8 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3918,8 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_csharp">
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -3927,14 +3415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3942,8 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3951,8 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3960,8 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_go">
 <a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -3969,14 +3451,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -3984,8 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3993,8 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -4002,8 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_nodejs">
 <a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -4011,14 +3487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -4026,8 +3499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4035,8 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -4044,8 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_python">
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -4053,16 +3523,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osdiskresponse">Os<wbr>Disk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -4070,8 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4079,8 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -4088,8 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_csharp">
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -4097,14 +3561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -4112,8 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4121,8 +3581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -4130,8 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_go">
 <a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -4139,14 +3597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -4154,8 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4163,8 +3617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -4172,8 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_nodejs">
 <a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -4181,14 +3633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -4196,8 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4205,8 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VHD name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -4214,8 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_python">
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -4223,16 +3669,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osprofile">Os<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4240,8 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4249,8 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_csharp">
 <a href="#customdatarequired_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
@@ -4258,8 +3699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_csharp">
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
@@ -4267,14 +3707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4282,8 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4291,8 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_go">
 <a href="#customdatarequired_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
@@ -4300,8 +3735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_go">
 <a href="#linuxconfiguration_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
@@ -4309,14 +3743,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -4324,8 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -4333,8 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_nodejs">
 <a href="#customdatarequired_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data<wbr>Required</a>
@@ -4342,8 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_nodejs">
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
@@ -4351,14 +3779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -4366,8 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -4375,8 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_required_python">
 <a href="#custom_data_required_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data_<wbr>required</a>
@@ -4384,8 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_configuration_python">
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
@@ -4393,16 +3815,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osprofileresponse">Os<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4410,8 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4419,8 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_csharp">
 <a href="#customdatarequired_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
@@ -4428,8 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_csharp">
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
@@ -4437,14 +3853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4452,8 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4461,8 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_go">
 <a href="#customdatarequired_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data<wbr>Required</a>
@@ -4470,8 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_go">
 <a href="#linuxconfiguration_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
@@ -4479,14 +3889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -4494,8 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -4503,8 +3909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdatarequired_nodejs">
 <a href="#customdatarequired_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data<wbr>Required</a>
@@ -4512,8 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_nodejs">
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
@@ -4521,14 +3925,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -4536,8 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -4545,8 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_required_python">
 <a href="#custom_data_required_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data_<wbr>required</a>
@@ -4554,8 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if custom data is required to deploy this role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_configuration_python">
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
@@ -4563,116 +3961,77 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skudeploymentmode">Sku<wbr>Deployment<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Azure</dt>
-    <dd>Azure</dd>
-    <dt>Private<wbr>Edge<wbr>Zone</dt>
-    <dd>PrivateEdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Azure</dt>
+    <dd>Azure</dd><dt>Private<wbr>Edge<wbr>Zone</dt>
+    <dd>PrivateEdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Deployment<wbr>Mode<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Sku<wbr>Deployment<wbr>Mode<wbr>Azure</dt>
-    <dd>Azure</dd>
-    <dt>Sku<wbr>Deployment<wbr>Mode<wbr>Private<wbr>Edge<wbr>Zone</dt>
-    <dd>PrivateEdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Deployment<wbr>Mode<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Sku<wbr>Deployment<wbr>Mode<wbr>Azure</dt>
+    <dd>Azure</dd><dt>Sku<wbr>Deployment<wbr>Mode<wbr>Private<wbr>Edge<wbr>Zone</dt>
+    <dd>PrivateEdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Azure</dt>
-    <dd>Azure</dd>
-    <dt>Private<wbr>Edge<wbr>Zone</dt>
-    <dd>PrivateEdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Azure</dt>
+    <dd>Azure</dd><dt>Private<wbr>Edge<wbr>Zone</dt>
+    <dd>PrivateEdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>AZURE</dt>
-    <dd>Azure</dd>
-    <dt>PRIVATE_EDGE_ZONE</dt>
-    <dd>PrivateEdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>AZURE</dt>
+    <dd>Azure</dd><dt>PRIVATE_EDGE_ZONE</dt>
+    <dd>PrivateEdgeZone</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skutype">Sku<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Evolved<wbr>Packet<wbr>Core</dt>
-    <dd>EvolvedPacketCore</dd>
-    <dt>SDWAN</dt>
-    <dd>SDWAN</dd>
-    <dt>Firewall</dt>
-    <dd>Firewall</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Evolved<wbr>Packet<wbr>Core</dt>
+    <dd>EvolvedPacketCore</dd><dt>SDWAN</dt>
+    <dd>SDWAN</dd><dt>Firewall</dt>
+    <dd>Firewall</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Type<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Sku<wbr>Type<wbr>Evolved<wbr>Packet<wbr>Core</dt>
-    <dd>EvolvedPacketCore</dd>
-    <dt>Sku<wbr>Type<wbr>SDWAN</dt>
-    <dd>SDWAN</dd>
-    <dt>Sku<wbr>Type<wbr>Firewall</dt>
-    <dd>Firewall</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Sku<wbr>Type<wbr>Evolved<wbr>Packet<wbr>Core</dt>
+    <dd>EvolvedPacketCore</dd><dt>Sku<wbr>Type<wbr>SDWAN</dt>
+    <dd>SDWAN</dd><dt>Sku<wbr>Type<wbr>Firewall</dt>
+    <dd>Firewall</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Evolved<wbr>Packet<wbr>Core</dt>
-    <dd>EvolvedPacketCore</dd>
-    <dt>SDWAN</dt>
-    <dd>SDWAN</dd>
-    <dt>Firewall</dt>
-    <dd>Firewall</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Evolved<wbr>Packet<wbr>Core</dt>
+    <dd>EvolvedPacketCore</dd><dt>SDWAN</dt>
+    <dd>SDWAN</dd><dt>Firewall</dt>
+    <dd>Firewall</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>EVOLVED_PACKET_CORE</dt>
-    <dd>EvolvedPacketCore</dd>
-    <dt>SDWAN</dt>
-    <dd>SDWAN</dd>
-    <dt>FIREWALL</dt>
-    <dd>Firewall</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>EVOLVED_PACKET_CORE</dt>
+    <dd>EvolvedPacketCore</dd><dt>SDWAN</dt>
+    <dd>SDWAN</dd><dt>FIREWALL</dt>
+    <dd>Firewall</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshconfiguration">Ssh<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -4680,14 +4039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -4695,14 +4051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickey">[]Ssh<wbr>Public<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -4710,14 +4063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -4725,16 +4075,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -4742,14 +4089,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -4757,14 +4101,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">[]Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -4772,14 +4113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -4787,16 +4125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshpublickey">Ssh<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -4804,8 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4813,14 +4147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -4828,8 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4837,14 +4167,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -4852,8 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4861,14 +4187,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -4876,8 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4885,16 +4207,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -4902,8 +4221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4911,14 +4229,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -4926,8 +4241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4935,14 +4249,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -4950,8 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4959,14 +4269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -4974,8 +4281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4983,16 +4289,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageprofile">Storage<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -5000,8 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_csharp">
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -5009,8 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_csharp">
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -5018,14 +4319,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -5033,8 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisk">[]Data<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -5042,8 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_go">
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -5051,14 +4347,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -5066,8 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisk">Data<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
@@ -5075,8 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_nodejs">
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -5084,14 +4375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -5099,8 +4387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisk">Sequence[Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
@@ -5108,8 +4395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_python">
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -5117,16 +4403,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdisk">Os<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -5134,8 +4417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_csharp">
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -5143,8 +4425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_csharp">
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -5152,14 +4433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -5167,8 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">[]Data<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -5176,8 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_go">
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -5185,14 +4461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -5200,8 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
@@ -5209,8 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_nodejs">
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -5218,14 +4489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -5233,8 +4501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
@@ -5242,8 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_python">
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -5251,70 +4517,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmswitchtype">VMSwitch<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Management</dt>
-    <dd>Management</dd>
-    <dt>Wan</dt>
-    <dd>Wan</dd>
-    <dt>Lan</dt>
-    <dd>Lan</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Management</dt>
+    <dd>Management</dd><dt>Wan</dt>
+    <dd>Wan</dd><dt>Lan</dt>
+    <dd>Lan</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>VMSwitch<wbr>Type<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>VMSwitch<wbr>Type<wbr>Management</dt>
-    <dd>Management</dd>
-    <dt>VMSwitch<wbr>Type<wbr>Wan</dt>
-    <dd>Wan</dd>
-    <dt>VMSwitch<wbr>Type<wbr>Lan</dt>
-    <dd>Lan</dd>
-</dl>
+<dl class="tabular"><dt>VMSwitch<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>VMSwitch<wbr>Type<wbr>Management</dt>
+    <dd>Management</dd><dt>VMSwitch<wbr>Type<wbr>Wan</dt>
+    <dd>Wan</dd><dt>VMSwitch<wbr>Type<wbr>Lan</dt>
+    <dd>Lan</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Management</dt>
-    <dd>Management</dd>
-    <dt>Wan</dt>
-    <dd>Wan</dd>
-    <dt>Lan</dt>
-    <dd>Lan</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Management</dt>
+    <dd>Management</dd><dt>Wan</dt>
+    <dd>Wan</dd><dt>Lan</dt>
+    <dd>Lan</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>MANAGEMENT</dt>
-    <dd>Management</dd>
-    <dt>WAN</dt>
-    <dd>Wan</dd>
-    <dt>LAN</dt>
-    <dd>Lan</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>MANAGEMENT</dt>
+    <dd>Management</dd><dt>WAN</dt>
+    <dd>Wan</dd><dt>LAN</dt>
+    <dd>Lan</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualharddisk">Virtual<wbr>Hard<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -5322,14 +4565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -5337,14 +4577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -5352,14 +4589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -5367,16 +4601,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -5384,14 +4615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -5399,14 +4627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -5414,14 +4639,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -5429,246 +4651,133 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the virtual hard disk's uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd>
-    <dt>Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd>
-    <dt>Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd>
-    <dt>Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd>
-    <dt>Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd>
-    <dt>Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd>
-    <dt>Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd>
-    <dt>Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd>
-    <dt>Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd>
-    <dt>Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd>
-    <dt>Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd>
-    <dt>Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd>
-    <dt>Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd>
-    <dt>Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd>
-    <dt>Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd>
-    <dt>Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd>
-    <dt>Standard_F1</dt>
-    <dd>Standard_F1</dd>
-    <dt>Standard_F2</dt>
-    <dd>Standard_F2</dd>
-    <dt>Standard_F4</dt>
-    <dd>Standard_F4</dd>
-    <dt>Standard_F8</dt>
-    <dd>Standard_F8</dd>
-    <dt>Standard_F16</dt>
-    <dd>Standard_F16</dd>
-    <dt>Standard_F1s</dt>
-    <dd>Standard_F1s</dd>
-    <dt>Standard_F2s</dt>
-    <dd>Standard_F2s</dd>
-    <dt>Standard_F4s</dt>
-    <dd>Standard_F4s</dd>
-    <dt>Standard_F8s</dt>
-    <dd>Standard_F8s</dd>
-    <dt>Standard_F16s</dt>
-    <dd>Standard_F16s</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd><dt>Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd><dt>Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd><dt>Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd><dt>Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd><dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd><dt>Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd><dt>Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd><dt>Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd><dt>Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd><dt>Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd><dt>Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd><dt>Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd><dt>Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd><dt>Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd><dt>Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd><dt>Standard_F1</dt>
+    <dd>Standard_F1</dd><dt>Standard_F2</dt>
+    <dd>Standard_F2</dd><dt>Standard_F4</dt>
+    <dd>Standard_F4</dd><dt>Standard_F8</dt>
+    <dd>Standard_F8</dd><dt>Standard_F16</dt>
+    <dd>Standard_F16</dd><dt>Standard_F1s</dt>
+    <dd>Standard_F1s</dd><dt>Standard_F2s</dt>
+    <dd>Standard_F2s</dd><dt>Standard_F4s</dt>
+    <dd>Standard_F4s</dd><dt>Standard_F8s</dt>
+    <dd>Standard_F8s</dd><dt>Standard_F16s</dt>
+    <dd>Standard_F16s</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F1</dt>
-    <dd>Standard_F1</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F2</dt>
-    <dd>Standard_F2</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F4</dt>
-    <dd>Standard_F4</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F8</dt>
-    <dd>Standard_F8</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F16</dt>
-    <dd>Standard_F16</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F1s</dt>
-    <dd>Standard_F1s</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F2s</dt>
-    <dd>Standard_F2s</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F4s</dt>
-    <dd>Standard_F4s</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F8s</dt>
-    <dd>Standard_F8s</dd>
-    <dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F16s</dt>
-    <dd>Standard_F16s</dd>
-</dl>
+<dl class="tabular"><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F1</dt>
+    <dd>Standard_F1</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F2</dt>
+    <dd>Standard_F2</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F4</dt>
+    <dd>Standard_F4</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F8</dt>
+    <dd>Standard_F8</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F16</dt>
+    <dd>Standard_F16</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F1s</dt>
+    <dd>Standard_F1s</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F2s</dt>
+    <dd>Standard_F2s</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F4s</dt>
+    <dd>Standard_F4s</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F8s</dt>
+    <dd>Standard_F8s</dd><dt>Virtual<wbr>Machine<wbr>Size<wbr>Types_Standard_F16s</dt>
+    <dd>Standard_F16s</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Standard_D1_<wbr>v2</dt>
-    <dd>Standard_D1_v2</dd>
-    <dt>Standard_D2_<wbr>v2</dt>
-    <dd>Standard_D2_v2</dd>
-    <dt>Standard_D3_<wbr>v2</dt>
-    <dd>Standard_D3_v2</dd>
-    <dt>Standard_D4_<wbr>v2</dt>
-    <dd>Standard_D4_v2</dd>
-    <dt>Standard_D5_<wbr>v2</dt>
-    <dd>Standard_D5_v2</dd>
-    <dt>Standard_D11_<wbr>v2</dt>
-    <dd>Standard_D11_v2</dd>
-    <dt>Standard_D12_<wbr>v2</dt>
-    <dd>Standard_D12_v2</dd>
-    <dt>Standard_D13_<wbr>v2</dt>
-    <dd>Standard_D13_v2</dd>
-    <dt>Standard_DS1_<wbr>v2</dt>
-    <dd>Standard_DS1_v2</dd>
-    <dt>Standard_DS2_<wbr>v2</dt>
-    <dd>Standard_DS2_v2</dd>
-    <dt>Standard_DS3_<wbr>v2</dt>
-    <dd>Standard_DS3_v2</dd>
-    <dt>Standard_DS4_<wbr>v2</dt>
-    <dd>Standard_DS4_v2</dd>
-    <dt>Standard_DS5_<wbr>v2</dt>
-    <dd>Standard_DS5_v2</dd>
-    <dt>Standard_DS11_<wbr>v2</dt>
-    <dd>Standard_DS11_v2</dd>
-    <dt>Standard_DS12_<wbr>v2</dt>
-    <dd>Standard_DS12_v2</dd>
-    <dt>Standard_DS13_<wbr>v2</dt>
-    <dd>Standard_DS13_v2</dd>
-    <dt>Standard_F1</dt>
-    <dd>Standard_F1</dd>
-    <dt>Standard_F2</dt>
-    <dd>Standard_F2</dd>
-    <dt>Standard_F4</dt>
-    <dd>Standard_F4</dd>
-    <dt>Standard_F8</dt>
-    <dd>Standard_F8</dd>
-    <dt>Standard_F16</dt>
-    <dd>Standard_F16</dd>
-    <dt>Standard_F1s</dt>
-    <dd>Standard_F1s</dd>
-    <dt>Standard_F2s</dt>
-    <dd>Standard_F2s</dd>
-    <dt>Standard_F4s</dt>
-    <dd>Standard_F4s</dd>
-    <dt>Standard_F8s</dt>
-    <dd>Standard_F8s</dd>
-    <dt>Standard_F16s</dt>
-    <dd>Standard_F16s</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd><dt>Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd><dt>Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd><dt>Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd><dt>Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd><dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd><dt>Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd><dt>Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd><dt>Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd><dt>Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd><dt>Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd><dt>Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd><dt>Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd><dt>Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd><dt>Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd><dt>Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd><dt>Standard_F1</dt>
+    <dd>Standard_F1</dd><dt>Standard_F2</dt>
+    <dd>Standard_F2</dd><dt>Standard_F4</dt>
+    <dd>Standard_F4</dd><dt>Standard_F8</dt>
+    <dd>Standard_F8</dd><dt>Standard_F16</dt>
+    <dd>Standard_F16</dd><dt>Standard_F1s</dt>
+    <dd>Standard_F1s</dd><dt>Standard_F2s</dt>
+    <dd>Standard_F2s</dd><dt>Standard_F4s</dt>
+    <dd>Standard_F4s</dd><dt>Standard_F8s</dt>
+    <dd>Standard_F8s</dd><dt>Standard_F16s</dt>
+    <dd>Standard_F16s</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>STANDARD_D1_V2</dt>
-    <dd>Standard_D1_v2</dd>
-    <dt>STANDARD_D2_V2</dt>
-    <dd>Standard_D2_v2</dd>
-    <dt>STANDARD_D3_V2</dt>
-    <dd>Standard_D3_v2</dd>
-    <dt>STANDARD_D4_V2</dt>
-    <dd>Standard_D4_v2</dd>
-    <dt>STANDARD_D5_V2</dt>
-    <dd>Standard_D5_v2</dd>
-    <dt>STANDARD_D11_V2</dt>
-    <dd>Standard_D11_v2</dd>
-    <dt>STANDARD_D12_V2</dt>
-    <dd>Standard_D12_v2</dd>
-    <dt>STANDARD_D13_V2</dt>
-    <dd>Standard_D13_v2</dd>
-    <dt>STANDARD_DS1_V2</dt>
-    <dd>Standard_DS1_v2</dd>
-    <dt>STANDARD_DS2_V2</dt>
-    <dd>Standard_DS2_v2</dd>
-    <dt>STANDARD_DS3_V2</dt>
-    <dd>Standard_DS3_v2</dd>
-    <dt>STANDARD_DS4_V2</dt>
-    <dd>Standard_DS4_v2</dd>
-    <dt>STANDARD_DS5_V2</dt>
-    <dd>Standard_DS5_v2</dd>
-    <dt>STANDARD_DS11_V2</dt>
-    <dd>Standard_DS11_v2</dd>
-    <dt>STANDARD_DS12_V2</dt>
-    <dd>Standard_DS12_v2</dd>
-    <dt>STANDARD_DS13_V2</dt>
-    <dd>Standard_DS13_v2</dd>
-    <dt>STANDARD_F1</dt>
-    <dd>Standard_F1</dd>
-    <dt>STANDARD_F2</dt>
-    <dd>Standard_F2</dd>
-    <dt>STANDARD_F4</dt>
-    <dd>Standard_F4</dd>
-    <dt>STANDARD_F8</dt>
-    <dd>Standard_F8</dd>
-    <dt>STANDARD_F16</dt>
-    <dd>Standard_F16</dd>
-    <dt>STANDARD_F1S</dt>
-    <dd>Standard_F1s</dd>
-    <dt>STANDARD_F2S</dt>
-    <dd>Standard_F2s</dd>
-    <dt>STANDARD_F4S</dt>
-    <dd>Standard_F4s</dd>
-    <dt>STANDARD_F8S</dt>
-    <dd>Standard_F8s</dd>
-    <dt>STANDARD_F16S</dt>
-    <dd>Standard_F16s</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>STANDARD_D1_V2</dt>
+    <dd>Standard_D1_v2</dd><dt>STANDARD_D2_V2</dt>
+    <dd>Standard_D2_v2</dd><dt>STANDARD_D3_V2</dt>
+    <dd>Standard_D3_v2</dd><dt>STANDARD_D4_V2</dt>
+    <dd>Standard_D4_v2</dd><dt>STANDARD_D5_V2</dt>
+    <dd>Standard_D5_v2</dd><dt>STANDARD_D11_V2</dt>
+    <dd>Standard_D11_v2</dd><dt>STANDARD_D12_V2</dt>
+    <dd>Standard_D12_v2</dd><dt>STANDARD_D13_V2</dt>
+    <dd>Standard_D13_v2</dd><dt>STANDARD_DS1_V2</dt>
+    <dd>Standard_DS1_v2</dd><dt>STANDARD_DS2_V2</dt>
+    <dd>Standard_DS2_v2</dd><dt>STANDARD_DS3_V2</dt>
+    <dd>Standard_DS3_v2</dd><dt>STANDARD_DS4_V2</dt>
+    <dd>Standard_DS4_v2</dd><dt>STANDARD_DS5_V2</dt>
+    <dd>Standard_DS5_v2</dd><dt>STANDARD_DS11_V2</dt>
+    <dd>Standard_DS11_v2</dd><dt>STANDARD_DS12_V2</dt>
+    <dd>Standard_DS12_v2</dd><dt>STANDARD_DS13_V2</dt>
+    <dd>Standard_DS13_v2</dd><dt>STANDARD_F1</dt>
+    <dd>Standard_F1</dd><dt>STANDARD_F2</dt>
+    <dd>Standard_F2</dd><dt>STANDARD_F4</dt>
+    <dd>Standard_F4</dd><dt>STANDARD_F8</dt>
+    <dd>Standard_F8</dd><dt>STANDARD_F16</dt>
+    <dd>Standard_F16</dd><dt>STANDARD_F1S</dt>
+    <dd>Standard_F1s</dd><dt>STANDARD_F2S</dt>
+    <dd>Standard_F2s</dd><dt>STANDARD_F4S</dt>
+    <dd>Standard_F4s</dd><dt>STANDARD_F8S</dt>
+    <dd>Standard_F8s</dd><dt>STANDARD_F16S</dt>
+    <dd>Standard_F16s</dd></dl>
 {{% /choosable %}}
 ## Import
 

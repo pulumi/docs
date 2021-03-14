@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicename_csharp">
 <a href="#mediaservicename_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Service<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicename_go">
 <a href="#mediaservicename_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Service<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicename_nodejs">
 <a href="#mediaservicename_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Service<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="media_service_name_python">
 <a href="#media_service_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>service_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Media Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primaryauthendpoint_csharp">
 <a href="#primaryauthendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Auth<wbr>Endpoint</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryauthendpoint_csharp">
 <a href="#secondaryauthendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Auth<wbr>Endpoint</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primaryauthendpoint_go">
 <a href="#primaryauthendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Auth<wbr>Endpoint</a>
@@ -217,8 +192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryauthendpoint_go">
 <a href="#secondaryauthendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Auth<wbr>Endpoint</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -253,14 +224,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primaryauthendpoint_nodejs">
 <a href="#primaryauthendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Auth<wbr>Endpoint</a>
@@ -268,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -277,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryauthendpoint_nodejs">
 <a href="#secondaryauthendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Auth<wbr>Endpoint</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -304,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primary_auth_endpoint_python">
 <a href="#primary_auth_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>auth_<wbr>endpoint</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -328,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The primary key for the Media Service resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -337,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorization scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_auth_endpoint_python">
 <a href="#secondary_auth_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>auth_<wbr>endpoint</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The secondary authorization endpoint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secondary key for the Media Service resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

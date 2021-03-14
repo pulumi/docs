@@ -17,11 +17,17 @@ For information about ECS Auto Snapshot Policy and how to use it, see [What is A
 > **NOTE:** Available in v1.117.0+.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -51,9 +57,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -85,9 +94,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -106,9 +118,12 @@ example = alicloud.ecs.AutoSnapshotPolicy("example",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -129,9 +144,16 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AutoSnapshotPolicy Resource {#create}
@@ -156,9 +178,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -166,9 +186,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -176,9 +194,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -186,10 +202,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -215,9 +228,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -225,9 +236,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -235,9 +244,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -245,9 +252,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -255,18 +260,13 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +274,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +282,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,10 +290,7 @@ const example = new alicloud.ecs.AutoSnapshotPolicy("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -312,9 +305,7 @@ The AutoSnapshotPolicy resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repeatweekdays_csharp">
 <a href="#repeatweekdays_csharp" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Weekdays</a>
@@ -325,8 +316,7 @@ The AutoSnapshotPolicy resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentiondays_csharp">
 <a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -338,8 +328,7 @@ The AutoSnapshotPolicy resource accepts the following [input]({{< relref "/docs/
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timepoints_csharp">
 <a href="#timepoints_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Points</a>
@@ -350,8 +339,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copiedsnapshotsretentiondays_csharp">
 <a href="#copiedsnapshotsretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -363,8 +351,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecrossregioncopy_csharp">
 <a href="#enablecrossregioncopy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -373,8 +360,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -383,8 +369,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -393,8 +378,7 @@ Default value: -1.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcopyregions_csharp">
 <a href="#targetcopyregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Copy<wbr>Regions</a>
@@ -403,14 +387,11 @@ Default value: -1.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repeatweekdays_go">
 <a href="#repeatweekdays_go" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Weekdays</a>
@@ -421,8 +402,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentiondays_go">
 <a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -434,8 +414,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timepoints_go">
 <a href="#timepoints_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Points</a>
@@ -446,8 +425,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copiedsnapshotsretentiondays_go">
 <a href="#copiedsnapshotsretentiondays_go" style="color: inherit; text-decoration: inherit;">Copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -459,8 +437,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecrossregioncopy_go">
 <a href="#enablecrossregioncopy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -469,8 +446,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +455,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -489,8 +464,7 @@ Default value: -1.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcopyregions_go">
 <a href="#targetcopyregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Copy<wbr>Regions</a>
@@ -499,14 +473,11 @@ Default value: -1.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repeatweekdays_nodejs">
 <a href="#repeatweekdays_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Weekdays</a>
@@ -517,8 +488,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentiondays_nodejs">
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
@@ -530,8 +500,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timepoints_nodejs">
 <a href="#timepoints_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Points</a>
@@ -542,8 +511,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copiedsnapshotsretentiondays_nodejs">
 <a href="#copiedsnapshotsretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -555,8 +523,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecrossregioncopy_nodejs">
 <a href="#enablecrossregioncopy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -565,8 +532,7 @@ Default value: -1.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -575,8 +541,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -585,8 +550,7 @@ Default value: -1.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcopyregions_nodejs">
 <a href="#targetcopyregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Copy<wbr>Regions</a>
@@ -595,14 +559,11 @@ Default value: -1.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repeat_weekdays_python">
 <a href="#repeat_weekdays_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>weekdays</a>
@@ -613,8 +574,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_days_python">
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
@@ -626,8 +586,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_points_python">
 <a href="#time_points_python" style="color: inherit; text-decoration: inherit;">time_<wbr>points</a>
@@ -638,8 +597,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copied_snapshots_retention_days_python">
 <a href="#copied_snapshots_retention_days_python" style="color: inherit; text-decoration: inherit;">copied_<wbr>snapshots_<wbr>retention_<wbr>days</a>
@@ -651,8 +609,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_cross_region_copy_python">
 <a href="#enable_cross_region_copy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>region_<wbr>copy</a>
@@ -661,8 +618,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -671,8 +627,7 @@ Default value: -1.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -681,8 +636,7 @@ Default value: -1.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_copy_regions_python">
 <a href="#target_copy_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>copy_<wbr>regions</a>
@@ -691,8 +645,7 @@ Default value: -1.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -703,9 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -713,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -723,14 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -738,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -748,14 +694,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -763,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -773,14 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -788,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -798,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -926,9 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_copiedsnapshotsretentiondays_csharp">
 <a href="#state_copiedsnapshotsretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -940,8 +875,7 @@ The following state arguments are supported:
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecrossregioncopy_csharp">
 <a href="#state_enablecrossregioncopy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -950,8 +884,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -960,8 +893,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatweekdays_csharp">
 <a href="#state_repeatweekdays_csharp" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Weekdays</a>
@@ -972,8 +904,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_csharp">
 <a href="#state_retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -985,8 +916,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -995,8 +925,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1005,8 +934,7 @@ Default value: -1.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcopyregions_csharp">
 <a href="#state_targetcopyregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Copy<wbr>Regions</a>
@@ -1015,8 +943,7 @@ Default value: -1.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timepoints_csharp">
 <a href="#state_timepoints_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Points</a>
@@ -1027,14 +954,11 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_copiedsnapshotsretentiondays_go">
 <a href="#state_copiedsnapshotsretentiondays_go" style="color: inherit; text-decoration: inherit;">Copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -1046,8 +970,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecrossregioncopy_go">
 <a href="#state_enablecrossregioncopy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -1056,8 +979,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1066,8 +988,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatweekdays_go">
 <a href="#state_repeatweekdays_go" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Weekdays</a>
@@ -1078,8 +999,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_go">
 <a href="#state_retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -1091,8 +1011,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1101,8 +1020,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1111,8 +1029,7 @@ Default value: -1.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcopyregions_go">
 <a href="#state_targetcopyregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Copy<wbr>Regions</a>
@@ -1121,8 +1038,7 @@ Default value: -1.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timepoints_go">
 <a href="#state_timepoints_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Points</a>
@@ -1133,14 +1049,11 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_copiedsnapshotsretentiondays_nodejs">
 <a href="#state_copiedsnapshotsretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">copied<wbr>Snapshots<wbr>Retention<wbr>Days</a>
@@ -1152,8 +1065,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecrossregioncopy_nodejs">
 <a href="#state_enablecrossregioncopy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Region<wbr>Copy</a>
@@ -1162,8 +1074,7 @@ Default value: -1.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1172,8 +1083,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatweekdays_nodejs">
 <a href="#state_repeatweekdays_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Weekdays</a>
@@ -1184,8 +1094,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_nodejs">
 <a href="#state_retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
@@ -1197,8 +1106,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1207,8 +1115,7 @@ Default value: -1.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1217,8 +1124,7 @@ Default value: -1.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcopyregions_nodejs">
 <a href="#state_targetcopyregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Copy<wbr>Regions</a>
@@ -1227,8 +1133,7 @@ Default value: -1.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timepoints_nodejs">
 <a href="#state_timepoints_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Points</a>
@@ -1239,14 +1144,11 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_copied_snapshots_retention_days_python">
 <a href="#state_copied_snapshots_retention_days_python" style="color: inherit; text-decoration: inherit;">copied_<wbr>snapshots_<wbr>retention_<wbr>days</a>
@@ -1258,8 +1160,7 @@ Default value: -1.
 - -1: The snapshot is permanently retained.
 - [1, 65535]: The automatic snapshot is retained for the specified number of days.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_cross_region_copy_python">
 <a href="#state_enable_cross_region_copy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>region_<wbr>copy</a>
@@ -1268,8 +1169,7 @@ Default value: -1.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the system to automatically copy snapshots across regions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1278,8 +1178,7 @@ Default value: -1.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The snapshot policy name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeat_weekdays_python">
 <a href="#state_repeat_weekdays_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>weekdays</a>
@@ -1290,8 +1189,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot repetition dates. The unit of measurement is day and the repeating cycle is a week. Value range: [1, 7], which represents days starting from Monday to Sunday, for example 1  indicates Monday. When you want to schedule multiple automatic snapshot tasks for a disk in a week, you can set the RepeatWeekdays to an array.
 - A maximum of seven time points can be selected.
 - The format is  an JSON array of ["1", "2", … "7"]  and the time points are separated by commas (,).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_days_python">
 <a href="#state_retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
@@ -1303,8 +1201,7 @@ Default value: -1.
 - -1: The automatic snapshots are retained permanently.
 - [1, 65536]: The number of days retained.
 Default value: -1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1313,8 +1210,7 @@ Default value: -1.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Auto Snapshot Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1323,8 +1219,7 @@ Default value: -1.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_copy_regions_python">
 <a href="#state_target_copy_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>copy_<wbr>regions</a>
@@ -1333,8 +1228,7 @@ Default value: -1.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The destination region to which the snapshot is copied. You can set a destination region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_points_python">
 <a href="#state_time_points_python" style="color: inherit; text-decoration: inherit;">time_<wbr>points</a>
@@ -1345,8 +1239,7 @@ Default value: -1.
     <dd>{{% md %}}The automatic snapshot creation schedule, and the unit of measurement is hour. Value range: [0, 23], which represents from 00:00 to 24:00,  for example 1 indicates 01:00. When you want to schedule multiple automatic snapshot tasks for a disk in a day, you can set the TimePoints to an array.
 - A maximum of 24 time points can be selected.
 - The format is  an JSON array of ["0", "1", … "23"] and the time points are separated by commas (,).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1372,6 +1265,6 @@ ECS Auto Snapshot Policy can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

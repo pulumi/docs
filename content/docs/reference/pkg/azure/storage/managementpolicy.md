@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.storage.ManagementPolicy resource with e
 Manages an Azure Storage Account Management Policy.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -109,9 +115,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -197,9 +206,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -256,9 +268,12 @@ example_management_policy = azure.storage.ManagementPolicy("exampleManagementPol
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -318,9 +333,16 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagementPolicy Resource {#create}
@@ -345,9 +367,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -355,9 +375,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -365,9 +383,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -375,10 +391,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -404,9 +417,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -414,9 +425,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -424,9 +433,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -434,9 +441,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -444,18 +449,13 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -463,9 +463,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -473,9 +471,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -483,10 +479,7 @@ const exampleManagementPolicy = new azure.storage.ManagementPolicy("exampleManag
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -501,9 +494,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -512,8 +503,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -522,14 +512,11 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -538,8 +525,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -548,14 +534,11 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -564,8 +547,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -574,14 +556,11 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -590,8 +569,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -600,8 +578,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,9 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,14 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -637,14 +609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,14 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -667,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -795,9 +760,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -806,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_csharp">
 <a href="#state_storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -816,14 +778,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -832,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_go">
 <a href="#state_storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -842,14 +800,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -858,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_nodejs">
 <a href="#state_storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -868,14 +822,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -884,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_id_python">
 <a href="#state_storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -894,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +859,7 @@ The following state arguments are supported:
 <h4 id="managementpolicyrule">Management<wbr>Policy<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -921,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -931,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -941,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -951,14 +895,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -967,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -977,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -987,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -997,14 +935,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1013,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1023,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1033,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1043,14 +975,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1059,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1069,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1079,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1089,16 +1015,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseblob_csharp">
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
@@ -1107,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -1117,14 +1039,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseblob_go">
 <a href="#baseblob_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
@@ -1133,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -1143,14 +1061,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseblob_nodejs">
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
@@ -1159,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -1169,14 +1083,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base_blob_python">
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
@@ -1185,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -1195,16 +1105,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincemodificationgreaterthan_csharp">
 <a href="#deleteafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1213,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_csharp">
 <a href="#tiertoarchiveafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1223,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_csharp">
 <a href="#tiertocoolafterdayssincemodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1233,14 +1138,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincemodificationgreaterthan_go">
 <a href="#deleteafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1249,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_go">
 <a href="#tiertoarchiveafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1259,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_go">
 <a href="#tiertocoolafterdayssincemodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1269,14 +1169,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincemodificationgreaterthan_nodejs">
 <a href="#deleteafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1285,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertoarchiveafterdayssincemodificationgreaterthan_nodejs">
 <a href="#tiertoarchiveafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1295,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tiertocoolafterdayssincemodificationgreaterthan_nodejs">
 <a href="#tiertocoolafterdayssincemodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
@@ -1305,14 +1200,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_after_days_since_modification_greater_than_python">
 <a href="#delete_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
@@ -1321,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_after_days_since_modification_greater_than_python">
 <a href="#tier_to_archive_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
@@ -1331,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_to_cool_after_days_since_modification_greater_than_python">
 <a href="#tier_to_cool_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
@@ -1341,16 +1231,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_csharp">
 <a href="#deleteafterdayssincecreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -1359,14 +1246,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_go">
 <a href="#deleteafterdayssincecreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -1375,14 +1259,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteafterdayssincecreationgreaterthan_nodejs">
 <a href="#deleteafterdayssincecreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
@@ -1391,14 +1272,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_after_days_since_creation_greater_than_python">
 <a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
@@ -1407,16 +1285,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobtypes_csharp">
 <a href="#blobtypes_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
@@ -1425,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatches_csharp">
 <a href="#prefixmatches_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
@@ -1435,14 +1309,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobtypes_go">
 <a href="#blobtypes_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
@@ -1451,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatches_go">
 <a href="#prefixmatches_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Matches</a>
@@ -1461,14 +1331,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobtypes_nodejs">
 <a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
@@ -1477,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatches_nodejs">
 <a href="#prefixmatches_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Matches</a>
@@ -1487,14 +1353,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_types_python">
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
@@ -1503,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Valid options are `blockBlob` and `appendBlob`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_matches_python">
 <a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
@@ -1513,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1535,6 +1396,6 @@ Storage Account Management Policies can be imported using the `resource id`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationrulename_csharp">
 <a href="#authorizationrulename_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rule<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationhubname_csharp">
 <a href="#notificationhubname_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Hub<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationrulename_go">
 <a href="#authorizationrulename_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rule<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationhubname_go">
 <a href="#notificationhubname_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Hub<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationrulename_nodejs">
 <a href="#authorizationrulename_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Rule<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationhubname_nodejs">
 <a href="#notificationhubname_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Hub<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_rule_name_python">
 <a href="#authorization_rule_name_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rule_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The connection string of the NotificationHub for the specified authorizationRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notification_hub_name_python">
 <a href="#notification_hub_name_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>hub_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -325,14 +288,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -376,14 +332,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KeyName of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryConnectionString of the AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PrimaryKey of the created AuthorizationRule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SecondaryConnectionString of the created AuthorizationRule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SecondaryKey of the created AuthorizationRule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

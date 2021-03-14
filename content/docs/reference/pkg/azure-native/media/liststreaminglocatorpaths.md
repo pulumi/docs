@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorname_csharp">
 <a href="#streaminglocatorname_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorname_go">
 <a href="#streaminglocatorname_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorname_nodejs">
 <a href="#streaminglocatorname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Locator<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_locator_name_python">
 <a href="#streaming_locator_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locator_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Streaming Locator name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="downloadpaths_csharp">
 <a href="#downloadpaths_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Paths</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="streamingpaths_csharp">
 <a href="#streamingpaths_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Paths</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Outputs.<wbr>Streaming<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="downloadpaths_go">
 <a href="#downloadpaths_go" style="color: inherit; text-decoration: inherit;">Download<wbr>Paths</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="streamingpaths_go">
 <a href="#streamingpaths_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Paths</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpathresponse">[]Streaming<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="downloadpaths_nodejs">
 <a href="#downloadpaths_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Paths</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="streamingpaths_nodejs">
 <a href="#streamingpaths_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Paths</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpathresponse">Streaming<wbr>Path<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="download_paths_python">
 <a href="#download_paths_python" style="color: inherit; text-decoration: inherit;">download_<wbr>paths</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Download Paths supported by current Streaming Locator{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="streaming_paths_python">
 <a href="#streaming_paths_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>paths</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpathresponse">Sequence[Streaming<wbr>Path<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming Paths supported by current Streaming Locator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionscheme_csharp">
 <a href="#encryptionscheme_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Scheme</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingprotocol_csharp">
 <a href="#streamingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Protocol</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -326,14 +286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionscheme_go">
 <a href="#encryptionscheme_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Scheme</a>
@@ -341,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingprotocol_go">
 <a href="#streamingprotocol_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Protocol</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -359,14 +314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionscheme_nodejs">
 <a href="#encryptionscheme_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Scheme</a>
@@ -374,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingprotocol_nodejs">
 <a href="#streamingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Protocol</a>
@@ -383,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -392,14 +342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryption_scheme_python">
 <a href="#encryption_scheme_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>scheme</a>
@@ -407,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Encryption scheme{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_protocol_python">
 <a href="#streaming_protocol_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>protocol</a>
@@ -416,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Streaming protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Streaming paths for each protocol and encryptionScheme pair{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

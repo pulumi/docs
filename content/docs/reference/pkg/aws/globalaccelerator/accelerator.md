@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.globalaccelerator.Accelerator resource wit
 Creates a Global Accelerator accelerator.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -72,9 +81,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -89,9 +101,12 @@ example = aws.globalaccelerator.Accelerator("example",
     ip_address_type="IPV4")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,9 +123,16 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Accelerator Resource {#create}
@@ -135,9 +157,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +165,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +173,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,10 +181,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +207,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -204,9 +215,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +223,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +231,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,18 +239,13 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +253,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +261,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +269,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,9 +284,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -302,8 +293,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -312,8 +302,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_csharp">
 <a href="#ipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -322,8 +311,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -332,8 +320,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -342,14 +329,11 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -358,8 +342,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -368,8 +351,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_go">
 <a href="#ipaddresstype_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -378,8 +360,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +369,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -398,14 +378,11 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -414,8 +391,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -424,8 +400,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresstype_nodejs">
 <a href="#ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
@@ -434,8 +409,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -444,8 +418,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -454,14 +427,11 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -470,8 +440,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -480,8 +449,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_type_python">
 <a href="#ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
@@ -490,8 +458,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -500,8 +467,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -510,8 +476,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -522,9 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -536,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -545,8 +507,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -554,8 +515,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsets_csharp">
 <a href="#ipsets_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
@@ -564,14 +524,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">List&lt;Accelerator<wbr>Ip<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -583,8 +540,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -592,8 +548,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,8 +556,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsets_go">
 <a href="#ipsets_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
@@ -611,14 +565,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -630,8 +581,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -639,8 +589,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -648,8 +597,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsets_nodejs">
 <a href="#ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
@@ -658,14 +606,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">Accelerator<wbr>Ip<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -677,8 +622,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -686,8 +630,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -695,8 +638,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_sets_python">
 <a href="#ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
@@ -705,8 +647,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">Sequence[Accelerator<wbr>Ip<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -833,9 +774,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_csharp">
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -844,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
 <a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -857,8 +795,7 @@ The following state arguments are supported:
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -867,8 +804,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_csharp">
 <a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -876,8 +812,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_csharp">
 <a href="#state_ipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -886,8 +821,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsets_csharp">
 <a href="#state_ipsets_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
@@ -896,8 +830,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">List&lt;Accelerator<wbr>Ip<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -906,8 +839,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -916,14 +848,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_go">
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -932,8 +861,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
 <a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -945,8 +873,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -955,8 +882,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_go">
 <a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -964,8 +890,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_go">
 <a href="#state_ipaddresstype_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address<wbr>Type</a>
@@ -974,8 +899,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsets_go">
 <a href="#state_ipsets_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
@@ -984,8 +908,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -994,8 +917,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1004,14 +926,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_nodejs">
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1020,8 +939,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1033,8 +951,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1043,8 +960,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_nodejs">
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -1052,8 +968,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresstype_nodejs">
 <a href="#state_ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
@@ -1062,8 +977,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsets_nodejs">
 <a href="#state_ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
@@ -1072,8 +986,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">Accelerator<wbr>Ip<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1082,8 +995,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1092,14 +1004,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_python">
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1108,8 +1017,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1121,8 +1029,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1131,8 +1038,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosted_zone_id_python">
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -1140,8 +1046,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_type_python">
 <a href="#state_ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
@@ -1150,8 +1055,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_sets_python">
 <a href="#state_ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
@@ -1160,8 +1064,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="#acceleratoripset">Sequence[Accelerator<wbr>Ip<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1170,8 +1073,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1180,8 +1082,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1196,9 +1097,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <h4 id="acceleratorattributes">Accelerator<wbr>Attributes</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_csharp">
 <a href="#flowlogsenabled_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>Enabled</a>
@@ -1207,8 +1106,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3bucket_csharp">
 <a href="#flowlogss3bucket_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>S3Bucket</a>
@@ -1217,8 +1115,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3prefix_csharp">
 <a href="#flowlogss3prefix_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>S3Prefix</a>
@@ -1227,14 +1124,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_go">
 <a href="#flowlogsenabled_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>Enabled</a>
@@ -1243,8 +1137,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3bucket_go">
 <a href="#flowlogss3bucket_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>S3Bucket</a>
@@ -1253,8 +1146,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3prefix_go">
 <a href="#flowlogss3prefix_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs<wbr>S3Prefix</a>
@@ -1263,14 +1155,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_nodejs">
 <a href="#flowlogsenabled_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>Enabled</a>
@@ -1279,8 +1168,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3bucket_nodejs">
 <a href="#flowlogss3bucket_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>S3Bucket</a>
@@ -1289,8 +1177,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowlogss3prefix_nodejs">
 <a href="#flowlogss3prefix_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>S3Prefix</a>
@@ -1299,14 +1186,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="flow_logs_enabled_python">
 <a href="#flow_logs_enabled_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>enabled</a>
@@ -1315,8 +1199,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flow_logs_s3_bucket_python">
 <a href="#flow_logs_s3_bucket_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>s3_<wbr>bucket</a>
@@ -1325,8 +1208,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flow_logs_s3_prefix_python">
 <a href="#flow_logs_s3_prefix_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>s3_<wbr>prefix</a>
@@ -1335,16 +1217,13 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="acceleratoripset">Accelerator<wbr>Ip<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1353,8 +1232,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamily_csharp">
 <a href="#ipfamily_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Family</a>
@@ -1363,14 +1241,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses included in this IP set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1379,8 +1254,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamily_go">
 <a href="#ipfamily_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Family</a>
@@ -1389,14 +1263,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses included in this IP set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -1405,8 +1276,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfamily_nodejs">
 <a href="#ipfamily_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Family</a>
@@ -1415,14 +1285,11 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses included in this IP set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -1431,8 +1298,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_family_python">
 <a href="#ip_family_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>family</a>
@@ -1441,8 +1307,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses included in this IP set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1463,6 +1328,6 @@ Global Accelerator accelerators can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessapprovalcustomendpoint_csharp">
 <a href="#accessapprovalcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
@@ -206,8 +175,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontextmanagercustomendpoint_csharp">
 <a href="#accesscontextmanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -215,8 +183,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -224,8 +191,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorycustomendpoint_csharp">
 <a href="#activedirectorycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -233,8 +199,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigatewaycustomendpoint_csharp">
 <a href="#apigatewaycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Gateway<wbr>Custom<wbr>Endpoint</a>
@@ -242,8 +207,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigeecustomendpoint_csharp">
 <a href="#apigeecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Apigee<wbr>Custom<wbr>Endpoint</a>
@@ -251,8 +215,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appenginecustomendpoint_csharp">
 <a href="#appenginecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -260,8 +223,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactregistrycustomendpoint_csharp">
 <a href="#artifactregistrycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Registry<wbr>Custom<wbr>Endpoint</a>
@@ -269,8 +231,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batching_csharp">
 <a href="#batching_csharp" style="color: inherit; text-decoration: inherit;">Batching</a>
@@ -278,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerycustomendpoint_csharp">
 <a href="#bigquerycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Custom<wbr>Endpoint</a>
@@ -287,8 +247,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryconnectioncustomendpoint_csharp">
 <a href="#bigqueryconnectioncustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Connection<wbr>Custom<wbr>Endpoint</a>
@@ -296,8 +255,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerydatatransfercustomendpoint_csharp">
 <a href="#bigquerydatatransfercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Data<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -305,8 +263,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryreservationcustomendpoint_csharp">
 <a href="#bigqueryreservationcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Reservation<wbr>Custom<wbr>Endpoint</a>
@@ -314,8 +271,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtablecustomendpoint_csharp">
 <a href="#bigtablecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Custom<wbr>Endpoint</a>
@@ -323,8 +279,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcustomendpoint_csharp">
 <a href="#billingcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Custom<wbr>Endpoint</a>
@@ -332,8 +287,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_csharp">
 <a href="#billingproject_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -341,8 +295,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binaryauthorizationcustomendpoint_csharp">
 <a href="#binaryauthorizationcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Authorization<wbr>Custom<wbr>Endpoint</a>
@@ -350,8 +303,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudassetcustomendpoint_csharp">
 <a href="#cloudassetcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
@@ -359,8 +311,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbillingcustomendpoint_csharp">
 <a href="#cloudbillingcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
@@ -368,8 +319,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbuildcustomendpoint_csharp">
 <a href="#cloudbuildcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
@@ -377,8 +327,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunctionscustomendpoint_csharp">
 <a href="#cloudfunctionscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
@@ -386,8 +335,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudidentitycustomendpoint_csharp">
 <a href="#cloudidentitycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
@@ -395,8 +343,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudiotcustomendpoint_csharp">
 <a href="#cloudiotcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Iot<wbr>Custom<wbr>Endpoint</a>
@@ -404,8 +351,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudruncustomendpoint_csharp">
 <a href="#cloudruncustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Custom<wbr>Endpoint</a>
@@ -413,8 +359,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudschedulercustomendpoint_csharp">
 <a href="#cloudschedulercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Scheduler<wbr>Custom<wbr>Endpoint</a>
@@ -422,8 +367,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtaskscustomendpoint_csharp">
 <a href="#cloudtaskscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tasks<wbr>Custom<wbr>Endpoint</a>
@@ -431,8 +375,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="composercustomendpoint_csharp">
 <a href="#composercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Composer<wbr>Custom<wbr>Endpoint</a>
@@ -440,8 +383,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computebetacustomendpoint_csharp">
 <a href="#computebetacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -449,8 +391,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computecustomendpoint_csharp">
 <a href="#computecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Custom<wbr>Endpoint</a>
@@ -458,8 +399,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containeranalysiscustomendpoint_csharp">
 <a href="#containeranalysiscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Analysis<wbr>Custom<wbr>Endpoint</a>
@@ -467,8 +407,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerbetacustomendpoint_csharp">
 <a href="#containerbetacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -476,8 +415,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containercustomendpoint_csharp">
 <a href="#containercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Custom<wbr>Endpoint</a>
@@ -485,8 +423,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -494,8 +431,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogcustomendpoint_csharp">
 <a href="#datacatalogcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Custom<wbr>Endpoint</a>
@@ -503,8 +439,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datafusioncustomendpoint_csharp">
 <a href="#datafusioncustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Fusion<wbr>Custom<wbr>Endpoint</a>
@@ -512,8 +447,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalosspreventioncustomendpoint_csharp">
 <a href="#datalosspreventioncustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Loss<wbr>Prevention<wbr>Custom<wbr>Endpoint</a>
@@ -521,8 +455,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataflowcustomendpoint_csharp">
 <a href="#dataflowcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Custom<wbr>Endpoint</a>
@@ -530,8 +463,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataprocbetacustomendpoint_csharp">
 <a href="#dataprocbetacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -539,8 +471,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproccustomendpoint_csharp">
 <a href="#dataproccustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Custom<wbr>Endpoint</a>
@@ -548,8 +479,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecustomendpoint_csharp">
 <a href="#datastorecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Custom<wbr>Endpoint</a>
@@ -557,8 +487,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmanagercustomendpoint_csharp">
 <a href="#deploymentmanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -566,8 +495,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dialogflowcustomendpoint_csharp">
 <a href="#dialogflowcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dialogflow<wbr>Custom<wbr>Endpoint</a>
@@ -575,8 +503,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsbetacustomendpoint_csharp">
 <a href="#dnsbetacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -584,8 +511,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnscustomendpoint_csharp">
 <a href="#dnscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
@@ -593,8 +519,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="essentialcontactscustomendpoint_csharp">
 <a href="#essentialcontactscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Essential<wbr>Contacts<wbr>Custom<wbr>Endpoint</a>
@@ -602,8 +527,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filestorecustomendpoint_csharp">
 <a href="#filestorecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Filestore<wbr>Custom<wbr>Endpoint</a>
@@ -611,8 +535,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebasecustomendpoint_csharp">
 <a href="#firebasecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Firebase<wbr>Custom<wbr>Endpoint</a>
@@ -620,8 +543,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firestorecustomendpoint_csharp">
 <a href="#firestorecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Firestore<wbr>Custom<wbr>Endpoint</a>
@@ -629,8 +551,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameservicescustomendpoint_csharp">
 <a href="#gameservicescustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Services<wbr>Custom<wbr>Endpoint</a>
@@ -638,8 +559,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcarecustomendpoint_csharp">
 <a href="#healthcarecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Healthcare<wbr>Custom<wbr>Endpoint</a>
@@ -647,8 +567,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iambetacustomendpoint_csharp">
 <a href="#iambetacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -656,8 +575,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcredentialscustomendpoint_csharp">
 <a href="#iamcredentialscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Credentials<wbr>Custom<wbr>Endpoint</a>
@@ -665,8 +583,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcustomendpoint_csharp">
 <a href="#iamcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Custom<wbr>Endpoint</a>
@@ -674,8 +591,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iapcustomendpoint_csharp">
 <a href="#iapcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Iap<wbr>Custom<wbr>Endpoint</a>
@@ -683,8 +599,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityplatformcustomendpoint_csharp">
 <a href="#identityplatformcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Platform<wbr>Custom<wbr>Endpoint</a>
@@ -692,8 +607,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccount_csharp">
 <a href="#impersonateserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Impersonate<wbr>Service<wbr>Account</a>
@@ -701,8 +615,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccountdelegates_csharp">
 <a href="#impersonateserviceaccountdelegates_csharp" style="color: inherit; text-decoration: inherit;">Impersonate<wbr>Service<wbr>Account<wbr>Delegates</a>
@@ -710,8 +623,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmscustomendpoint_csharp">
 <a href="#kmscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Custom<wbr>Endpoint</a>
@@ -719,8 +631,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcustomendpoint_csharp">
 <a href="#loggingcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Custom<wbr>Endpoint</a>
@@ -728,8 +639,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcachecustomendpoint_csharp">
 <a href="#memcachecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Custom<wbr>Endpoint</a>
@@ -737,8 +647,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlenginecustomendpoint_csharp">
 <a href="#mlenginecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -746,8 +655,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringcustomendpoint_csharp">
 <a href="#monitoringcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Custom<wbr>Endpoint</a>
@@ -755,8 +663,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmanagementcustomendpoint_csharp">
 <a href="#networkmanagementcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -764,8 +671,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notebookscustomendpoint_csharp">
 <a href="#notebookscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Notebooks<wbr>Custom<wbr>Endpoint</a>
@@ -773,8 +679,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconfigcustomendpoint_csharp">
 <a href="#osconfigcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -782,8 +687,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oslogincustomendpoint_csharp">
 <a href="#oslogincustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
@@ -791,8 +695,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatecacustomendpoint_csharp">
 <a href="#privatecacustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Privateca<wbr>Custom<wbr>Endpoint</a>
@@ -800,8 +703,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -809,8 +711,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubcustomendpoint_csharp">
 <a href="#pubsubcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Custom<wbr>Endpoint</a>
@@ -818,8 +719,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsublitecustomendpoint_csharp">
 <a href="#pubsublitecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Lite<wbr>Custom<wbr>Endpoint</a>
@@ -827,8 +727,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rediscustomendpoint_csharp">
 <a href="#rediscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Custom<wbr>Endpoint</a>
@@ -836,8 +735,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -845,8 +743,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_csharp">
 <a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -854,8 +751,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagercustomendpoint_csharp">
 <a href="#resourcemanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -863,8 +759,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagerv2beta1customendpoint_csharp">
 <a href="#resourcemanagerv2beta1customendpoint_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Manager<wbr>V2beta1Custom<wbr>Endpoint</a>
@@ -872,8 +767,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_csharp">
 <a href="#runtimeconfigcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -881,8 +775,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_csharp">
 <a href="#runtimeconfigcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Runtimeconfig<wbr>Custom<wbr>Endpoint</a>
@@ -890,8 +783,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -899,8 +791,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretmanagercustomendpoint_csharp">
 <a href="#secretmanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -908,8 +799,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycentercustomendpoint_csharp">
 <a href="#securitycentercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Center<wbr>Custom<wbr>Endpoint</a>
@@ -917,8 +807,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityscannercustomendpoint_csharp">
 <a href="#securityscannercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Scanner<wbr>Custom<wbr>Endpoint</a>
@@ -926,8 +815,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedirectorycustomendpoint_csharp">
 <a href="#servicedirectorycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -935,8 +823,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemanagementcustomendpoint_csharp">
 <a href="#servicemanagementcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -944,8 +831,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicenetworkingcustomendpoint_csharp">
 <a href="#servicenetworkingcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Networking<wbr>Custom<wbr>Endpoint</a>
@@ -953,8 +839,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusagecustomendpoint_csharp">
 <a href="#serviceusagecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Usage<wbr>Custom<wbr>Endpoint</a>
@@ -962,8 +847,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepocustomendpoint_csharp">
 <a href="#sourcerepocustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repo<wbr>Custom<wbr>Endpoint</a>
@@ -971,8 +855,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spannercustomendpoint_csharp">
 <a href="#spannercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Spanner<wbr>Custom<wbr>Endpoint</a>
@@ -980,8 +863,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcustomendpoint_csharp">
 <a href="#sqlcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Custom<wbr>Endpoint</a>
@@ -989,8 +871,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecustomendpoint_csharp">
 <a href="#storagecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Custom<wbr>Endpoint</a>
@@ -998,8 +879,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetransfercustomendpoint_csharp">
 <a href="#storagetransfercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -1007,8 +887,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tpucustomendpoint_csharp">
 <a href="#tpucustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Tpu<wbr>Custom<wbr>Endpoint</a>
@@ -1016,8 +895,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprojectoverride_csharp">
 <a href="#userprojectoverride_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Project<wbr>Override</a>
@@ -1025,8 +903,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcaccesscustomendpoint_csharp">
 <a href="#vpcaccesscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
@@ -1034,8 +911,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1043,14 +919,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessapprovalcustomendpoint_go">
 <a href="#accessapprovalcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
@@ -1058,8 +931,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontextmanagercustomendpoint_go">
 <a href="#accesscontextmanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -1067,8 +939,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -1076,8 +947,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorycustomendpoint_go">
 <a href="#activedirectorycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -1085,8 +955,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigatewaycustomendpoint_go">
 <a href="#apigatewaycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Gateway<wbr>Custom<wbr>Endpoint</a>
@@ -1094,8 +963,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigeecustomendpoint_go">
 <a href="#apigeecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Apigee<wbr>Custom<wbr>Endpoint</a>
@@ -1103,8 +971,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appenginecustomendpoint_go">
 <a href="#appenginecustomendpoint_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -1112,8 +979,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactregistrycustomendpoint_go">
 <a href="#artifactregistrycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Registry<wbr>Custom<wbr>Endpoint</a>
@@ -1121,8 +987,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batching_go">
 <a href="#batching_go" style="color: inherit; text-decoration: inherit;">Batching</a>
@@ -1130,8 +995,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerycustomendpoint_go">
 <a href="#bigquerycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Custom<wbr>Endpoint</a>
@@ -1139,8 +1003,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryconnectioncustomendpoint_go">
 <a href="#bigqueryconnectioncustomendpoint_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Connection<wbr>Custom<wbr>Endpoint</a>
@@ -1148,8 +1011,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerydatatransfercustomendpoint_go">
 <a href="#bigquerydatatransfercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Data<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -1157,8 +1019,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryreservationcustomendpoint_go">
 <a href="#bigqueryreservationcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Reservation<wbr>Custom<wbr>Endpoint</a>
@@ -1166,8 +1027,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtablecustomendpoint_go">
 <a href="#bigtablecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Bigtable<wbr>Custom<wbr>Endpoint</a>
@@ -1175,8 +1035,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcustomendpoint_go">
 <a href="#billingcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Custom<wbr>Endpoint</a>
@@ -1184,8 +1043,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_go">
 <a href="#billingproject_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -1193,8 +1051,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binaryauthorizationcustomendpoint_go">
 <a href="#binaryauthorizationcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Authorization<wbr>Custom<wbr>Endpoint</a>
@@ -1202,8 +1059,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudassetcustomendpoint_go">
 <a href="#cloudassetcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
@@ -1211,8 +1067,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbillingcustomendpoint_go">
 <a href="#cloudbillingcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
@@ -1220,8 +1075,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbuildcustomendpoint_go">
 <a href="#cloudbuildcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
@@ -1229,8 +1083,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunctionscustomendpoint_go">
 <a href="#cloudfunctionscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
@@ -1238,8 +1091,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudidentitycustomendpoint_go">
 <a href="#cloudidentitycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
@@ -1247,8 +1099,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudiotcustomendpoint_go">
 <a href="#cloudiotcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Iot<wbr>Custom<wbr>Endpoint</a>
@@ -1256,8 +1107,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudruncustomendpoint_go">
 <a href="#cloudruncustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Custom<wbr>Endpoint</a>
@@ -1265,8 +1115,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudschedulercustomendpoint_go">
 <a href="#cloudschedulercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Scheduler<wbr>Custom<wbr>Endpoint</a>
@@ -1274,8 +1123,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtaskscustomendpoint_go">
 <a href="#cloudtaskscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Tasks<wbr>Custom<wbr>Endpoint</a>
@@ -1283,8 +1131,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="composercustomendpoint_go">
 <a href="#composercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Composer<wbr>Custom<wbr>Endpoint</a>
@@ -1292,8 +1139,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computebetacustomendpoint_go">
 <a href="#computebetacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -1301,8 +1147,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computecustomendpoint_go">
 <a href="#computecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Custom<wbr>Endpoint</a>
@@ -1310,8 +1155,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containeranalysiscustomendpoint_go">
 <a href="#containeranalysiscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Analysis<wbr>Custom<wbr>Endpoint</a>
@@ -1319,8 +1163,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerbetacustomendpoint_go">
 <a href="#containerbetacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -1328,8 +1171,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containercustomendpoint_go">
 <a href="#containercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Custom<wbr>Endpoint</a>
@@ -1337,8 +1179,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1346,8 +1187,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogcustomendpoint_go">
 <a href="#datacatalogcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Custom<wbr>Endpoint</a>
@@ -1355,8 +1195,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datafusioncustomendpoint_go">
 <a href="#datafusioncustomendpoint_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Fusion<wbr>Custom<wbr>Endpoint</a>
@@ -1364,8 +1203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalosspreventioncustomendpoint_go">
 <a href="#datalosspreventioncustomendpoint_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Loss<wbr>Prevention<wbr>Custom<wbr>Endpoint</a>
@@ -1373,8 +1211,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataflowcustomendpoint_go">
 <a href="#dataflowcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dataflow<wbr>Custom<wbr>Endpoint</a>
@@ -1382,8 +1219,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataprocbetacustomendpoint_go">
 <a href="#dataprocbetacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -1391,8 +1227,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproccustomendpoint_go">
 <a href="#dataproccustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dataproc<wbr>Custom<wbr>Endpoint</a>
@@ -1400,8 +1235,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecustomendpoint_go">
 <a href="#datastorecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Custom<wbr>Endpoint</a>
@@ -1409,8 +1243,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmanagercustomendpoint_go">
 <a href="#deploymentmanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -1418,8 +1251,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dialogflowcustomendpoint_go">
 <a href="#dialogflowcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dialogflow<wbr>Custom<wbr>Endpoint</a>
@@ -1427,8 +1259,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsbetacustomendpoint_go">
 <a href="#dnsbetacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -1436,8 +1267,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnscustomendpoint_go">
 <a href="#dnscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
@@ -1445,8 +1275,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="essentialcontactscustomendpoint_go">
 <a href="#essentialcontactscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Essential<wbr>Contacts<wbr>Custom<wbr>Endpoint</a>
@@ -1454,8 +1283,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filestorecustomendpoint_go">
 <a href="#filestorecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Filestore<wbr>Custom<wbr>Endpoint</a>
@@ -1463,8 +1291,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebasecustomendpoint_go">
 <a href="#firebasecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Firebase<wbr>Custom<wbr>Endpoint</a>
@@ -1472,8 +1299,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firestorecustomendpoint_go">
 <a href="#firestorecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Firestore<wbr>Custom<wbr>Endpoint</a>
@@ -1481,8 +1307,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameservicescustomendpoint_go">
 <a href="#gameservicescustomendpoint_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Services<wbr>Custom<wbr>Endpoint</a>
@@ -1490,8 +1315,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcarecustomendpoint_go">
 <a href="#healthcarecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Healthcare<wbr>Custom<wbr>Endpoint</a>
@@ -1499,8 +1323,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iambetacustomendpoint_go">
 <a href="#iambetacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -1508,8 +1331,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcredentialscustomendpoint_go">
 <a href="#iamcredentialscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Credentials<wbr>Custom<wbr>Endpoint</a>
@@ -1517,8 +1339,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcustomendpoint_go">
 <a href="#iamcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Custom<wbr>Endpoint</a>
@@ -1526,8 +1347,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iapcustomendpoint_go">
 <a href="#iapcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Iap<wbr>Custom<wbr>Endpoint</a>
@@ -1535,8 +1355,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityplatformcustomendpoint_go">
 <a href="#identityplatformcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Platform<wbr>Custom<wbr>Endpoint</a>
@@ -1544,8 +1363,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccount_go">
 <a href="#impersonateserviceaccount_go" style="color: inherit; text-decoration: inherit;">Impersonate<wbr>Service<wbr>Account</a>
@@ -1553,8 +1371,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccountdelegates_go">
 <a href="#impersonateserviceaccountdelegates_go" style="color: inherit; text-decoration: inherit;">Impersonate<wbr>Service<wbr>Account<wbr>Delegates</a>
@@ -1562,8 +1379,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmscustomendpoint_go">
 <a href="#kmscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Custom<wbr>Endpoint</a>
@@ -1571,8 +1387,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcustomendpoint_go">
 <a href="#loggingcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Custom<wbr>Endpoint</a>
@@ -1580,8 +1395,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcachecustomendpoint_go">
 <a href="#memcachecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Custom<wbr>Endpoint</a>
@@ -1589,8 +1403,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlenginecustomendpoint_go">
 <a href="#mlenginecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -1598,8 +1411,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringcustomendpoint_go">
 <a href="#monitoringcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Custom<wbr>Endpoint</a>
@@ -1607,8 +1419,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmanagementcustomendpoint_go">
 <a href="#networkmanagementcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -1616,8 +1427,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notebookscustomendpoint_go">
 <a href="#notebookscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Notebooks<wbr>Custom<wbr>Endpoint</a>
@@ -1625,8 +1435,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconfigcustomendpoint_go">
 <a href="#osconfigcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -1634,8 +1443,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oslogincustomendpoint_go">
 <a href="#oslogincustomendpoint_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
@@ -1643,8 +1451,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatecacustomendpoint_go">
 <a href="#privatecacustomendpoint_go" style="color: inherit; text-decoration: inherit;">Privateca<wbr>Custom<wbr>Endpoint</a>
@@ -1652,8 +1459,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1661,8 +1467,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubcustomendpoint_go">
 <a href="#pubsubcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Custom<wbr>Endpoint</a>
@@ -1670,8 +1475,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsublitecustomendpoint_go">
 <a href="#pubsublitecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Lite<wbr>Custom<wbr>Endpoint</a>
@@ -1679,8 +1483,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rediscustomendpoint_go">
 <a href="#rediscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Custom<wbr>Endpoint</a>
@@ -1688,8 +1491,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1697,8 +1499,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_go">
 <a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -1706,8 +1507,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagercustomendpoint_go">
 <a href="#resourcemanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -1715,8 +1515,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagerv2beta1customendpoint_go">
 <a href="#resourcemanagerv2beta1customendpoint_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Manager<wbr>V2beta1Custom<wbr>Endpoint</a>
@@ -1724,8 +1523,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_go">
 <a href="#runtimeconfigcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -1733,8 +1531,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_go">
 <a href="#runtimeconfigcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Runtimeconfig<wbr>Custom<wbr>Endpoint</a>
@@ -1742,8 +1539,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -1751,8 +1547,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretmanagercustomendpoint_go">
 <a href="#secretmanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -1760,8 +1555,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycentercustomendpoint_go">
 <a href="#securitycentercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Center<wbr>Custom<wbr>Endpoint</a>
@@ -1769,8 +1563,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityscannercustomendpoint_go">
 <a href="#securityscannercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Scanner<wbr>Custom<wbr>Endpoint</a>
@@ -1778,8 +1571,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedirectorycustomendpoint_go">
 <a href="#servicedirectorycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -1787,8 +1579,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemanagementcustomendpoint_go">
 <a href="#servicemanagementcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -1796,8 +1587,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicenetworkingcustomendpoint_go">
 <a href="#servicenetworkingcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Networking<wbr>Custom<wbr>Endpoint</a>
@@ -1805,8 +1595,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusagecustomendpoint_go">
 <a href="#serviceusagecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Usage<wbr>Custom<wbr>Endpoint</a>
@@ -1814,8 +1603,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepocustomendpoint_go">
 <a href="#sourcerepocustomendpoint_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repo<wbr>Custom<wbr>Endpoint</a>
@@ -1823,8 +1611,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spannercustomendpoint_go">
 <a href="#spannercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Spanner<wbr>Custom<wbr>Endpoint</a>
@@ -1832,8 +1619,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcustomendpoint_go">
 <a href="#sqlcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Custom<wbr>Endpoint</a>
@@ -1841,8 +1627,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecustomendpoint_go">
 <a href="#storagecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Custom<wbr>Endpoint</a>
@@ -1850,8 +1635,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetransfercustomendpoint_go">
 <a href="#storagetransfercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -1859,8 +1643,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tpucustomendpoint_go">
 <a href="#tpucustomendpoint_go" style="color: inherit; text-decoration: inherit;">Tpu<wbr>Custom<wbr>Endpoint</a>
@@ -1868,8 +1651,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprojectoverride_go">
 <a href="#userprojectoverride_go" style="color: inherit; text-decoration: inherit;">User<wbr>Project<wbr>Override</a>
@@ -1877,8 +1659,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcaccesscustomendpoint_go">
 <a href="#vpcaccesscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
@@ -1886,8 +1667,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1895,14 +1675,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessapprovalcustomendpoint_nodejs">
 <a href="#accessapprovalcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
@@ -1910,8 +1687,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontextmanagercustomendpoint_nodejs">
 <a href="#accesscontextmanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -1919,8 +1695,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -1928,8 +1703,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectorycustomendpoint_nodejs">
 <a href="#activedirectorycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -1937,8 +1711,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigatewaycustomendpoint_nodejs">
 <a href="#apigatewaycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Gateway<wbr>Custom<wbr>Endpoint</a>
@@ -1946,8 +1719,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigeecustomendpoint_nodejs">
 <a href="#apigeecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">apigee<wbr>Custom<wbr>Endpoint</a>
@@ -1955,8 +1727,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appenginecustomendpoint_nodejs">
 <a href="#appenginecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -1964,8 +1735,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactregistrycustomendpoint_nodejs">
 <a href="#artifactregistrycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Registry<wbr>Custom<wbr>Endpoint</a>
@@ -1973,8 +1743,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batching_nodejs">
 <a href="#batching_nodejs" style="color: inherit; text-decoration: inherit;">batching</a>
@@ -1982,8 +1751,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerycustomendpoint_nodejs">
 <a href="#bigquerycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Custom<wbr>Endpoint</a>
@@ -1991,8 +1759,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryconnectioncustomendpoint_nodejs">
 <a href="#bigqueryconnectioncustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Connection<wbr>Custom<wbr>Endpoint</a>
@@ -2000,8 +1767,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquerydatatransfercustomendpoint_nodejs">
 <a href="#bigquerydatatransfercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Data<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -2009,8 +1775,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryreservationcustomendpoint_nodejs">
 <a href="#bigqueryreservationcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Reservation<wbr>Custom<wbr>Endpoint</a>
@@ -2018,8 +1783,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtablecustomendpoint_nodejs">
 <a href="#bigtablecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">bigtable<wbr>Custom<wbr>Endpoint</a>
@@ -2027,8 +1791,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcustomendpoint_nodejs">
 <a href="#billingcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Custom<wbr>Endpoint</a>
@@ -2036,8 +1799,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_nodejs">
 <a href="#billingproject_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Project</a>
@@ -2045,8 +1807,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binaryauthorizationcustomendpoint_nodejs">
 <a href="#binaryauthorizationcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Authorization<wbr>Custom<wbr>Endpoint</a>
@@ -2054,8 +1815,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudassetcustomendpoint_nodejs">
 <a href="#cloudassetcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
@@ -2063,8 +1823,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbillingcustomendpoint_nodejs">
 <a href="#cloudbillingcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
@@ -2072,8 +1831,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbuildcustomendpoint_nodejs">
 <a href="#cloudbuildcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
@@ -2081,8 +1839,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfunctionscustomendpoint_nodejs">
 <a href="#cloudfunctionscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
@@ -2090,8 +1847,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudidentitycustomendpoint_nodejs">
 <a href="#cloudidentitycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
@@ -2099,8 +1855,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudiotcustomendpoint_nodejs">
 <a href="#cloudiotcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Iot<wbr>Custom<wbr>Endpoint</a>
@@ -2108,8 +1863,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudruncustomendpoint_nodejs">
 <a href="#cloudruncustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run<wbr>Custom<wbr>Endpoint</a>
@@ -2117,8 +1871,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudschedulercustomendpoint_nodejs">
 <a href="#cloudschedulercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Scheduler<wbr>Custom<wbr>Endpoint</a>
@@ -2126,8 +1879,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudtaskscustomendpoint_nodejs">
 <a href="#cloudtaskscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Tasks<wbr>Custom<wbr>Endpoint</a>
@@ -2135,8 +1887,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="composercustomendpoint_nodejs">
 <a href="#composercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">composer<wbr>Custom<wbr>Endpoint</a>
@@ -2144,8 +1895,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computebetacustomendpoint_nodejs">
 <a href="#computebetacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -2153,8 +1903,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computecustomendpoint_nodejs">
 <a href="#computecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Custom<wbr>Endpoint</a>
@@ -2162,8 +1911,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containeranalysiscustomendpoint_nodejs">
 <a href="#containeranalysiscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Analysis<wbr>Custom<wbr>Endpoint</a>
@@ -2171,8 +1919,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerbetacustomendpoint_nodejs">
 <a href="#containerbetacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -2180,8 +1927,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containercustomendpoint_nodejs">
 <a href="#containercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Custom<wbr>Endpoint</a>
@@ -2189,8 +1935,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -2198,8 +1943,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogcustomendpoint_nodejs">
 <a href="#datacatalogcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Custom<wbr>Endpoint</a>
@@ -2207,8 +1951,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datafusioncustomendpoint_nodejs">
 <a href="#datafusioncustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Fusion<wbr>Custom<wbr>Endpoint</a>
@@ -2216,8 +1959,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalosspreventioncustomendpoint_nodejs">
 <a href="#datalosspreventioncustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Loss<wbr>Prevention<wbr>Custom<wbr>Endpoint</a>
@@ -2225,8 +1967,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataflowcustomendpoint_nodejs">
 <a href="#dataflowcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dataflow<wbr>Custom<wbr>Endpoint</a>
@@ -2234,8 +1975,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataprocbetacustomendpoint_nodejs">
 <a href="#dataprocbetacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -2243,8 +1983,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproccustomendpoint_nodejs">
 <a href="#dataproccustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Custom<wbr>Endpoint</a>
@@ -2252,8 +1991,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecustomendpoint_nodejs">
 <a href="#datastorecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Custom<wbr>Endpoint</a>
@@ -2261,8 +1999,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmanagercustomendpoint_nodejs">
 <a href="#deploymentmanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -2270,8 +2007,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dialogflowcustomendpoint_nodejs">
 <a href="#dialogflowcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dialogflow<wbr>Custom<wbr>Endpoint</a>
@@ -2279,8 +2015,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsbetacustomendpoint_nodejs">
 <a href="#dnsbetacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -2288,8 +2023,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnscustomendpoint_nodejs">
 <a href="#dnscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Custom<wbr>Endpoint</a>
@@ -2297,8 +2031,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="essentialcontactscustomendpoint_nodejs">
 <a href="#essentialcontactscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">essential<wbr>Contacts<wbr>Custom<wbr>Endpoint</a>
@@ -2306,8 +2039,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filestorecustomendpoint_nodejs">
 <a href="#filestorecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">filestore<wbr>Custom<wbr>Endpoint</a>
@@ -2315,8 +2047,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebasecustomendpoint_nodejs">
 <a href="#firebasecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">firebase<wbr>Custom<wbr>Endpoint</a>
@@ -2324,8 +2055,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firestorecustomendpoint_nodejs">
 <a href="#firestorecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">firestore<wbr>Custom<wbr>Endpoint</a>
@@ -2333,8 +2063,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameservicescustomendpoint_nodejs">
 <a href="#gameservicescustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Services<wbr>Custom<wbr>Endpoint</a>
@@ -2342,8 +2071,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcarecustomendpoint_nodejs">
 <a href="#healthcarecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">healthcare<wbr>Custom<wbr>Endpoint</a>
@@ -2351,8 +2079,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iambetacustomendpoint_nodejs">
 <a href="#iambetacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Beta<wbr>Custom<wbr>Endpoint</a>
@@ -2360,8 +2087,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcredentialscustomendpoint_nodejs">
 <a href="#iamcredentialscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Credentials<wbr>Custom<wbr>Endpoint</a>
@@ -2369,8 +2095,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcustomendpoint_nodejs">
 <a href="#iamcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Custom<wbr>Endpoint</a>
@@ -2378,8 +2103,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iapcustomendpoint_nodejs">
 <a href="#iapcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">iap<wbr>Custom<wbr>Endpoint</a>
@@ -2387,8 +2111,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityplatformcustomendpoint_nodejs">
 <a href="#identityplatformcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Platform<wbr>Custom<wbr>Endpoint</a>
@@ -2396,8 +2119,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccount_nodejs">
 <a href="#impersonateserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">impersonate<wbr>Service<wbr>Account</a>
@@ -2405,8 +2127,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonateserviceaccountdelegates_nodejs">
 <a href="#impersonateserviceaccountdelegates_nodejs" style="color: inherit; text-decoration: inherit;">impersonate<wbr>Service<wbr>Account<wbr>Delegates</a>
@@ -2414,8 +2135,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmscustomendpoint_nodejs">
 <a href="#kmscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Custom<wbr>Endpoint</a>
@@ -2423,8 +2143,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcustomendpoint_nodejs">
 <a href="#loggingcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Custom<wbr>Endpoint</a>
@@ -2432,8 +2151,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcachecustomendpoint_nodejs">
 <a href="#memcachecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Custom<wbr>Endpoint</a>
@@ -2441,8 +2159,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlenginecustomendpoint_nodejs">
 <a href="#mlenginecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Engine<wbr>Custom<wbr>Endpoint</a>
@@ -2450,8 +2167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringcustomendpoint_nodejs">
 <a href="#monitoringcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Custom<wbr>Endpoint</a>
@@ -2459,8 +2175,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmanagementcustomendpoint_nodejs">
 <a href="#networkmanagementcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -2468,8 +2183,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notebookscustomendpoint_nodejs">
 <a href="#notebookscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">notebooks<wbr>Custom<wbr>Endpoint</a>
@@ -2477,8 +2191,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconfigcustomendpoint_nodejs">
 <a href="#osconfigcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -2486,8 +2199,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oslogincustomendpoint_nodejs">
 <a href="#oslogincustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
@@ -2495,8 +2207,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatecacustomendpoint_nodejs">
 <a href="#privatecacustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">privateca<wbr>Custom<wbr>Endpoint</a>
@@ -2504,8 +2215,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2513,8 +2223,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubcustomendpoint_nodejs">
 <a href="#pubsubcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Custom<wbr>Endpoint</a>
@@ -2522,8 +2231,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsublitecustomendpoint_nodejs">
 <a href="#pubsublitecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Lite<wbr>Custom<wbr>Endpoint</a>
@@ -2531,8 +2239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rediscustomendpoint_nodejs">
 <a href="#rediscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Custom<wbr>Endpoint</a>
@@ -2540,8 +2247,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2549,8 +2255,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_nodejs">
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
@@ -2558,8 +2263,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagercustomendpoint_nodejs">
 <a href="#resourcemanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -2567,8 +2271,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemanagerv2beta1customendpoint_nodejs">
 <a href="#resourcemanagerv2beta1customendpoint_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Manager<wbr>V2beta1Custom<wbr>Endpoint</a>
@@ -2576,8 +2279,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_nodejs">
 <a href="#runtimeconfigcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Config<wbr>Custom<wbr>Endpoint</a>
@@ -2585,8 +2287,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfigcustomendpoint_nodejs">
 <a href="#runtimeconfigcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">runtimeconfig<wbr>Custom<wbr>Endpoint</a>
@@ -2594,8 +2295,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -2603,8 +2303,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretmanagercustomendpoint_nodejs">
 <a href="#secretmanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
@@ -2612,8 +2311,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycentercustomendpoint_nodejs">
 <a href="#securitycentercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Center<wbr>Custom<wbr>Endpoint</a>
@@ -2621,8 +2319,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityscannercustomendpoint_nodejs">
 <a href="#securityscannercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Scanner<wbr>Custom<wbr>Endpoint</a>
@@ -2630,8 +2327,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedirectorycustomendpoint_nodejs">
 <a href="#servicedirectorycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
@@ -2639,8 +2335,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemanagementcustomendpoint_nodejs">
 <a href="#servicemanagementcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Management<wbr>Custom<wbr>Endpoint</a>
@@ -2648,8 +2343,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicenetworkingcustomendpoint_nodejs">
 <a href="#servicenetworkingcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Networking<wbr>Custom<wbr>Endpoint</a>
@@ -2657,8 +2351,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusagecustomendpoint_nodejs">
 <a href="#serviceusagecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Usage<wbr>Custom<wbr>Endpoint</a>
@@ -2666,8 +2359,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepocustomendpoint_nodejs">
 <a href="#sourcerepocustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repo<wbr>Custom<wbr>Endpoint</a>
@@ -2675,8 +2367,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spannercustomendpoint_nodejs">
 <a href="#spannercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">spanner<wbr>Custom<wbr>Endpoint</a>
@@ -2684,8 +2375,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlcustomendpoint_nodejs">
 <a href="#sqlcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Custom<wbr>Endpoint</a>
@@ -2693,8 +2383,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecustomendpoint_nodejs">
 <a href="#storagecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Custom<wbr>Endpoint</a>
@@ -2702,8 +2391,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetransfercustomendpoint_nodejs">
 <a href="#storagetransfercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Transfer<wbr>Custom<wbr>Endpoint</a>
@@ -2711,8 +2399,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tpucustomendpoint_nodejs">
 <a href="#tpucustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">tpu<wbr>Custom<wbr>Endpoint</a>
@@ -2720,8 +2407,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprojectoverride_nodejs">
 <a href="#userprojectoverride_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Project<wbr>Override</a>
@@ -2729,8 +2415,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcaccesscustomendpoint_nodejs">
 <a href="#vpcaccesscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
@@ -2738,8 +2423,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2747,14 +2431,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_approval_custom_endpoint_python">
 <a href="#access_approval_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>approval_<wbr>custom_<wbr>endpoint</a>
@@ -2762,8 +2443,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_context_manager_custom_endpoint_python">
 <a href="#access_context_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>context_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
@@ -2771,8 +2451,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -2780,8 +2459,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_custom_endpoint_python">
 <a href="#active_directory_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>custom_<wbr>endpoint</a>
@@ -2789,8 +2467,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_gateway_custom_endpoint_python">
 <a href="#api_gateway_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>gateway_<wbr>custom_<wbr>endpoint</a>
@@ -2798,8 +2475,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apigee_custom_endpoint_python">
 <a href="#apigee_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">apigee_<wbr>custom_<wbr>endpoint</a>
@@ -2807,8 +2483,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_engine_custom_endpoint_python">
 <a href="#app_engine_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>custom_<wbr>endpoint</a>
@@ -2816,8 +2491,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_registry_custom_endpoint_python">
 <a href="#artifact_registry_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>registry_<wbr>custom_<wbr>endpoint</a>
@@ -2825,8 +2499,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batching_python">
 <a href="#batching_python" style="color: inherit; text-decoration: inherit;">batching</a>
@@ -2834,8 +2507,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="big_query_custom_endpoint_python">
 <a href="#big_query_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>custom_<wbr>endpoint</a>
@@ -2843,8 +2515,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquery_connection_custom_endpoint_python">
 <a href="#bigquery_connection_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>connection_<wbr>custom_<wbr>endpoint</a>
@@ -2852,8 +2523,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquery_data_transfer_custom_endpoint_python">
 <a href="#bigquery_data_transfer_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>data_<wbr>transfer_<wbr>custom_<wbr>endpoint</a>
@@ -2861,8 +2531,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquery_reservation_custom_endpoint_python">
 <a href="#bigquery_reservation_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>reservation_<wbr>custom_<wbr>endpoint</a>
@@ -2870,8 +2539,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigtable_custom_endpoint_python">
 <a href="#bigtable_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">bigtable_<wbr>custom_<wbr>endpoint</a>
@@ -2879,8 +2547,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_custom_endpoint_python">
 <a href="#billing_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>custom_<wbr>endpoint</a>
@@ -2888,8 +2555,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_project_python">
 <a href="#billing_project_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>project</a>
@@ -2897,8 +2563,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binary_authorization_custom_endpoint_python">
 <a href="#binary_authorization_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>authorization_<wbr>custom_<wbr>endpoint</a>
@@ -2906,8 +2571,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_asset_custom_endpoint_python">
 <a href="#cloud_asset_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>asset_<wbr>custom_<wbr>endpoint</a>
@@ -2915,8 +2579,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_billing_custom_endpoint_python">
 <a href="#cloud_billing_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>billing_<wbr>custom_<wbr>endpoint</a>
@@ -2924,8 +2587,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_build_custom_endpoint_python">
 <a href="#cloud_build_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>custom_<wbr>endpoint</a>
@@ -2933,8 +2595,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_functions_custom_endpoint_python">
 <a href="#cloud_functions_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>functions_<wbr>custom_<wbr>endpoint</a>
@@ -2942,8 +2603,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_identity_custom_endpoint_python">
 <a href="#cloud_identity_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>identity_<wbr>custom_<wbr>endpoint</a>
@@ -2951,8 +2611,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_iot_custom_endpoint_python">
 <a href="#cloud_iot_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>iot_<wbr>custom_<wbr>endpoint</a>
@@ -2960,8 +2619,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_run_custom_endpoint_python">
 <a href="#cloud_run_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run_<wbr>custom_<wbr>endpoint</a>
@@ -2969,8 +2627,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_scheduler_custom_endpoint_python">
 <a href="#cloud_scheduler_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>scheduler_<wbr>custom_<wbr>endpoint</a>
@@ -2978,8 +2635,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_tasks_custom_endpoint_python">
 <a href="#cloud_tasks_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tasks_<wbr>custom_<wbr>endpoint</a>
@@ -2987,8 +2643,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="composer_custom_endpoint_python">
 <a href="#composer_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">composer_<wbr>custom_<wbr>endpoint</a>
@@ -2996,8 +2651,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_beta_custom_endpoint_python">
 <a href="#compute_beta_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>beta_<wbr>custom_<wbr>endpoint</a>
@@ -3005,8 +2659,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_custom_endpoint_python">
 <a href="#compute_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>custom_<wbr>endpoint</a>
@@ -3014,8 +2667,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_analysis_custom_endpoint_python">
 <a href="#container_analysis_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">container_<wbr>analysis_<wbr>custom_<wbr>endpoint</a>
@@ -3023,8 +2675,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_beta_custom_endpoint_python">
 <a href="#container_beta_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">container_<wbr>beta_<wbr>custom_<wbr>endpoint</a>
@@ -3032,8 +2683,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_custom_endpoint_python">
 <a href="#container_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">container_<wbr>custom_<wbr>endpoint</a>
@@ -3041,8 +2691,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -3050,8 +2699,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_catalog_custom_endpoint_python">
 <a href="#data_catalog_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>custom_<wbr>endpoint</a>
@@ -3059,8 +2707,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_fusion_custom_endpoint_python">
 <a href="#data_fusion_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">data_<wbr>fusion_<wbr>custom_<wbr>endpoint</a>
@@ -3068,8 +2715,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_loss_prevention_custom_endpoint_python">
 <a href="#data_loss_prevention_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">data_<wbr>loss_<wbr>prevention_<wbr>custom_<wbr>endpoint</a>
@@ -3077,8 +2723,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataflow_custom_endpoint_python">
 <a href="#dataflow_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dataflow_<wbr>custom_<wbr>endpoint</a>
@@ -3086,8 +2731,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproc_beta_custom_endpoint_python">
 <a href="#dataproc_beta_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>beta_<wbr>custom_<wbr>endpoint</a>
@@ -3095,8 +2739,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproc_custom_endpoint_python">
 <a href="#dataproc_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>custom_<wbr>endpoint</a>
@@ -3104,8 +2747,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_custom_endpoint_python">
 <a href="#datastore_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>custom_<wbr>endpoint</a>
@@ -3113,8 +2755,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_manager_custom_endpoint_python">
 <a href="#deployment_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
@@ -3122,8 +2763,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dialogflow_custom_endpoint_python">
 <a href="#dialogflow_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dialogflow_<wbr>custom_<wbr>endpoint</a>
@@ -3131,8 +2771,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_beta_custom_endpoint_python">
 <a href="#dns_beta_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>beta_<wbr>custom_<wbr>endpoint</a>
@@ -3140,8 +2779,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_custom_endpoint_python">
 <a href="#dns_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>custom_<wbr>endpoint</a>
@@ -3149,8 +2787,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="essential_contacts_custom_endpoint_python">
 <a href="#essential_contacts_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">essential_<wbr>contacts_<wbr>custom_<wbr>endpoint</a>
@@ -3158,8 +2795,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filestore_custom_endpoint_python">
 <a href="#filestore_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">filestore_<wbr>custom_<wbr>endpoint</a>
@@ -3167,8 +2803,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebase_custom_endpoint_python">
 <a href="#firebase_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">firebase_<wbr>custom_<wbr>endpoint</a>
@@ -3176,8 +2811,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firestore_custom_endpoint_python">
 <a href="#firestore_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">firestore_<wbr>custom_<wbr>endpoint</a>
@@ -3185,8 +2819,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="game_services_custom_endpoint_python">
 <a href="#game_services_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">game_<wbr>services_<wbr>custom_<wbr>endpoint</a>
@@ -3194,8 +2827,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcare_custom_endpoint_python">
 <a href="#healthcare_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">healthcare_<wbr>custom_<wbr>endpoint</a>
@@ -3203,8 +2835,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_beta_custom_endpoint_python">
 <a href="#iam_beta_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>beta_<wbr>custom_<wbr>endpoint</a>
@@ -3212,8 +2843,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_credentials_custom_endpoint_python">
 <a href="#iam_credentials_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>credentials_<wbr>custom_<wbr>endpoint</a>
@@ -3221,8 +2851,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_custom_endpoint_python">
 <a href="#iam_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>custom_<wbr>endpoint</a>
@@ -3230,8 +2859,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iap_custom_endpoint_python">
 <a href="#iap_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">iap_<wbr>custom_<wbr>endpoint</a>
@@ -3239,8 +2867,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_platform_custom_endpoint_python">
 <a href="#identity_platform_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>platform_<wbr>custom_<wbr>endpoint</a>
@@ -3248,8 +2875,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonate_service_account_python">
 <a href="#impersonate_service_account_python" style="color: inherit; text-decoration: inherit;">impersonate_<wbr>service_<wbr>account</a>
@@ -3257,8 +2883,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="impersonate_service_account_delegates_python">
 <a href="#impersonate_service_account_delegates_python" style="color: inherit; text-decoration: inherit;">impersonate_<wbr>service_<wbr>account_<wbr>delegates</a>
@@ -3266,8 +2891,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_custom_endpoint_python">
 <a href="#kms_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>custom_<wbr>endpoint</a>
@@ -3275,8 +2899,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_custom_endpoint_python">
 <a href="#logging_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>custom_<wbr>endpoint</a>
@@ -3284,8 +2907,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memcache_custom_endpoint_python">
 <a href="#memcache_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>custom_<wbr>endpoint</a>
@@ -3293,8 +2915,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ml_engine_custom_endpoint_python">
 <a href="#ml_engine_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>engine_<wbr>custom_<wbr>endpoint</a>
@@ -3302,8 +2923,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_custom_endpoint_python">
 <a href="#monitoring_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>custom_<wbr>endpoint</a>
@@ -3311,8 +2931,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_management_custom_endpoint_python">
 <a href="#network_management_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">network_<wbr>management_<wbr>custom_<wbr>endpoint</a>
@@ -3320,8 +2939,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notebooks_custom_endpoint_python">
 <a href="#notebooks_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">notebooks_<wbr>custom_<wbr>endpoint</a>
@@ -3329,8 +2947,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_config_custom_endpoint_python">
 <a href="#os_config_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>config_<wbr>custom_<wbr>endpoint</a>
@@ -3338,8 +2955,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_login_custom_endpoint_python">
 <a href="#os_login_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>login_<wbr>custom_<wbr>endpoint</a>
@@ -3347,8 +2963,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateca_custom_endpoint_python">
 <a href="#privateca_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">privateca_<wbr>custom_<wbr>endpoint</a>
@@ -3356,8 +2971,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3365,8 +2979,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_PROJECT`, `GOOGLE_CLOUD_PROJECT`, `GCLOUD_PROJECT`, `CLOUDSDK_CORE_PROJECT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsub_custom_endpoint_python">
 <a href="#pubsub_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>custom_<wbr>endpoint</a>
@@ -3374,8 +2987,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsub_lite_custom_endpoint_python">
 <a href="#pubsub_lite_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>lite_<wbr>custom_<wbr>endpoint</a>
@@ -3383,8 +2995,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_custom_endpoint_python">
 <a href="#redis_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>custom_<wbr>endpoint</a>
@@ -3392,8 +3003,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3401,8 +3011,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_timeout_python">
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
@@ -3410,8 +3019,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_manager_custom_endpoint_python">
 <a href="#resource_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
@@ -3419,8 +3027,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_manager_v2beta1_custom_endpoint_python">
 <a href="#resource_manager_v2beta1_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>manager_<wbr>v2beta1_<wbr>custom_<wbr>endpoint</a>
@@ -3428,8 +3035,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_config_custom_endpoint_python">
 <a href="#runtime_config_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>config_<wbr>custom_<wbr>endpoint</a>
@@ -3437,8 +3043,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeconfig_custom_endpoint_python">
 <a href="#runtimeconfig_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">runtimeconfig_<wbr>custom_<wbr>endpoint</a>
@@ -3446,8 +3051,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -3455,8 +3059,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_manager_custom_endpoint_python">
 <a href="#secret_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
@@ -3464,8 +3067,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_center_custom_endpoint_python">
 <a href="#security_center_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">security_<wbr>center_<wbr>custom_<wbr>endpoint</a>
@@ -3473,8 +3075,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_scanner_custom_endpoint_python">
 <a href="#security_scanner_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">security_<wbr>scanner_<wbr>custom_<wbr>endpoint</a>
@@ -3482,8 +3083,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_directory_custom_endpoint_python">
 <a href="#service_directory_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>custom_<wbr>endpoint</a>
@@ -3491,8 +3091,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_management_custom_endpoint_python">
 <a href="#service_management_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>management_<wbr>custom_<wbr>endpoint</a>
@@ -3500,8 +3099,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_networking_custom_endpoint_python">
 <a href="#service_networking_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>networking_<wbr>custom_<wbr>endpoint</a>
@@ -3509,8 +3107,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_usage_custom_endpoint_python">
 <a href="#service_usage_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>usage_<wbr>custom_<wbr>endpoint</a>
@@ -3518,8 +3115,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_repo_custom_endpoint_python">
 <a href="#source_repo_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repo_<wbr>custom_<wbr>endpoint</a>
@@ -3527,8 +3123,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spanner_custom_endpoint_python">
 <a href="#spanner_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">spanner_<wbr>custom_<wbr>endpoint</a>
@@ -3536,8 +3131,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_custom_endpoint_python">
 <a href="#sql_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>custom_<wbr>endpoint</a>
@@ -3545,8 +3139,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_custom_endpoint_python">
 <a href="#storage_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>custom_<wbr>endpoint</a>
@@ -3554,8 +3147,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_transfer_custom_endpoint_python">
 <a href="#storage_transfer_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>transfer_<wbr>custom_<wbr>endpoint</a>
@@ -3563,8 +3155,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tpu_custom_endpoint_python">
 <a href="#tpu_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">tpu_<wbr>custom_<wbr>endpoint</a>
@@ -3572,8 +3163,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_project_override_python">
 <a href="#user_project_override_python" style="color: inherit; text-decoration: inherit;">user_<wbr>project_<wbr>override</a>
@@ -3581,8 +3171,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_access_custom_endpoint_python">
 <a href="#vpc_access_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>custom_<wbr>endpoint</a>
@@ -3590,8 +3179,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -3599,8 +3187,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_ZONE`, `GCLOUD_ZONE`, `CLOUDSDK_COMPUTE_ZONE`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3611,9 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3621,14 +3206,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3636,14 +3218,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3651,14 +3230,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3666,8 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3683,9 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="providerbatching">Provider<wbr>Batching</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebatching_csharp">
 <a href="#enablebatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batching</a>
@@ -3693,8 +3266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_csharp">
 <a href="#sendafter_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>After</a>
@@ -3702,14 +3274,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebatching_go">
 <a href="#enablebatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batching</a>
@@ -3717,8 +3286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_go">
 <a href="#sendafter_go" style="color: inherit; text-decoration: inherit;">Send<wbr>After</a>
@@ -3726,14 +3294,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebatching_nodejs">
 <a href="#enablebatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Batching</a>
@@ -3741,8 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_nodejs">
 <a href="#sendafter_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>After</a>
@@ -3750,14 +3314,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_batching_python">
 <a href="#enable_batching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batching</a>
@@ -3765,8 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_after_python">
 <a href="#send_after_python" style="color: inherit; text-decoration: inherit;">send_<wbr>after</a>
@@ -3774,8 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3786,6 +3345,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

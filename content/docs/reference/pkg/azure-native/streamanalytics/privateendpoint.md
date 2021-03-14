@@ -14,11 +14,17 @@ Complete information about the private endpoint.
 API Version: 2020-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a private endpoint
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -53,9 +59,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -91,9 +100,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -112,9 +124,12 @@ private_endpoint = azure_native.streamanalytics.PrivateEndpoint("privateEndpoint
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -134,9 +149,16 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateEndpoint Resource {#create}
@@ -161,9 +183,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -171,9 +191,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -181,9 +199,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -191,10 +207,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -220,9 +233,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -230,9 +241,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +249,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +257,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,18 +265,13 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -279,9 +279,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -289,9 +287,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -299,10 +295,7 @@ const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -317,9 +310,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -327,8 +318,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -336,8 +326,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointname_csharp">
 <a href="#privateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
@@ -345,8 +334,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -354,14 +342,11 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -369,8 +354,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -378,8 +362,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointname_go">
 <a href="#privateendpointname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
@@ -387,8 +370,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -396,14 +378,11 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -411,8 +390,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -420,8 +398,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointname_nodejs">
 <a href="#privateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
@@ -429,8 +406,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -438,14 +414,11 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -453,8 +426,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -462,8 +434,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_name_python">
 <a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
@@ -471,8 +442,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -480,8 +450,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -492,9 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -502,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -511,8 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -520,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -529,14 +493,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -544,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -553,8 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -562,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -571,14 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -586,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -595,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -604,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -613,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -628,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -646,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -655,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -672,9 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="privateendpointproperties">Private<wbr>Endpoint<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_csharp">
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -682,14 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_go">
 <a href="#manualprivatelinkserviceconnections_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -697,14 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnection">[]Private<wbr>Link<wbr>Service<wbr>Connection</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_nodejs">
 <a href="#manualprivatelinkserviceconnections_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -712,14 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnection">Private<wbr>Link<wbr>Service<wbr>Connection[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="manual_private_link_service_connections_python">
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
@@ -727,16 +661,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnection">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointpropertiesresponse">Private<wbr>Endpoint<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -744,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_csharp">
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -753,14 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -768,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_go">
 <a href="#manualprivatelinkserviceconnections_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -777,14 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionresponse">[]Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -792,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualprivatelinkserviceconnections_nodejs">
 <a href="#manualprivatelinkserviceconnections_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
@@ -801,14 +723,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -816,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date when this private endpoint was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_private_link_service_connections_python">
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
@@ -825,16 +743,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -842,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -851,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -860,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -875,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -884,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -893,14 +801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -908,8 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -917,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -926,14 +829,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -941,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -950,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -959,16 +857,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnection">Private<wbr>Link<wbr>Service<wbr>Connection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_csharp">
 <a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -976,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_csharp">
 <a href="#privatelinkserviceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -985,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_csharp">
 <a href="#requestmessage_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -994,14 +887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_go">
 <a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1009,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_go">
 <a href="#privatelinkserviceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -1018,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_go">
 <a href="#requestmessage_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -1027,14 +915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_nodejs">
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
@@ -1042,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_nodejs">
 <a href="#privatelinkserviceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -1051,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_nodejs">
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
@@ -1060,14 +943,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="group_ids_python">
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
@@ -1075,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_id_python">
 <a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
@@ -1084,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_message_python">
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
@@ -1093,16 +971,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_csharp">
 <a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1110,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1119,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_csharp">
 <a href="#privatelinkserviceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -1128,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_csharp">
 <a href="#requestmessage_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -1137,14 +1009,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_go">
 <a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -1152,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1161,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_go">
 <a href="#privatelinkserviceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -1170,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_go">
 <a href="#requestmessage_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -1179,14 +1045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupids_nodejs">
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
@@ -1194,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1203,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceid_nodejs">
 <a href="#privatelinkserviceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Id</a>
@@ -1212,8 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_nodejs">
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
@@ -1221,14 +1081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="group_ids_python">
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
@@ -1236,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1245,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_id_python">
 <a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
@@ -1254,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_message_python">
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
@@ -1263,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

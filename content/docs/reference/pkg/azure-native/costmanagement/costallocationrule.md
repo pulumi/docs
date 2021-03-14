@@ -14,11 +14,17 @@ The cost allocation rule model definition
 API Version: 2020-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CostAllocationRulesCreateResourceGroup
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -81,9 +87,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -141,9 +150,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -184,9 +196,12 @@ cost_allocation_rule = azure_native.costmanagement.CostAllocationRule("costAlloc
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -228,10 +243,17 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### CostAllocationRulesCreateTag
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -298,9 +320,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -361,9 +386,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -405,9 +433,12 @@ cost_allocation_rule = azure_native.costmanagement.CostAllocationRule("costAlloc
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -450,9 +481,16 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CostAllocationRule Resource {#create}
@@ -477,9 +515,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -487,9 +523,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -497,9 +531,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -507,10 +539,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -536,9 +565,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -546,9 +573,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -556,9 +581,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -566,9 +589,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -576,18 +597,13 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -595,9 +611,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -605,9 +619,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -615,10 +627,7 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -633,9 +642,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountid_csharp">
 <a href="#billingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -643,8 +650,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -652,8 +658,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruleproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -661,14 +666,11 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountid_go">
 <a href="#billingaccountid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Id</a>
@@ -676,8 +678,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -685,8 +686,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -694,14 +694,11 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountid_nodejs">
 <a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
@@ -709,8 +706,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -718,8 +714,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -727,14 +722,11 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_account_id_python">
 <a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
@@ -742,8 +734,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -751,8 +742,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -760,8 +750,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -772,9 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -782,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -791,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -800,14 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -815,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -824,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -833,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -848,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -857,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -866,14 +841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -890,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the rule. This is a read only value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -899,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -916,39 +885,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Fixed<wbr>Proportion</dt>
-    <dd>FixedProportion</dd>
-</dl>
+<dl class="tabular"><dt>Fixed<wbr>Proportion</dt>
+    <dd>FixedProportion</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Cost<wbr>Allocation<wbr>Policy<wbr>Type<wbr>Fixed<wbr>Proportion</dt>
-    <dd>FixedProportion</dd>
-</dl>
+<dl class="tabular"><dt>Cost<wbr>Allocation<wbr>Policy<wbr>Type<wbr>Fixed<wbr>Proportion</dt>
+    <dd>FixedProportion</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Fixed<wbr>Proportion</dt>
-    <dd>FixedProportion</dd>
-</dl>
+<dl class="tabular"><dt>Fixed<wbr>Proportion</dt>
+    <dd>FixedProportion</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FIXED_PROPORTION</dt>
-    <dd>FixedProportion</dd>
-</dl>
+<dl class="tabular"><dt>FIXED_PROPORTION</dt>
+    <dd>FixedProportion</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationproportion">Cost<wbr>Allocation<wbr>Proportion</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -956,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -965,14 +923,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -980,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -989,14 +943,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1004,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1013,14 +963,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1028,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1037,16 +983,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1054,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1063,14 +1005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1078,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1087,14 +1025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1102,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1111,14 +1045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1126,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1135,54 +1065,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Dimension</dt>
-    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd>
-    <dt>Tag</dt>
-    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Dimension</dt>
+    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd><dt>Tag</dt>
+    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Cost<wbr>Allocation<wbr>Resource<wbr>Type<wbr>Dimension</dt>
-    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd>
-    <dt>Cost<wbr>Allocation<wbr>Resource<wbr>Type<wbr>Tag</dt>
-    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Cost<wbr>Allocation<wbr>Resource<wbr>Type<wbr>Dimension</dt>
+    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd><dt>Cost<wbr>Allocation<wbr>Resource<wbr>Type<wbr>Tag</dt>
+    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Dimension</dt>
-    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd>
-    <dt>Tag</dt>
-    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Dimension</dt>
+    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd><dt>Tag</dt>
+    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DIMENSION</dt>
-    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd>
-    <dt>TAG</dt>
-    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>DIMENSION</dt>
+    <dd>Dimension{{% md %}}Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.{{% /md %}}</dd><dt>TAG</dt>
+    <dd>Tag{{% md %}}Allocates cost based on Azure Tag key value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_csharp">
 <a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
@@ -1190,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_csharp">
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1199,14 +1113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_go">
 <a href="#sourceresources_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
@@ -1214,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresource">[]Source<wbr>Cost<wbr>Allocation<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_go">
 <a href="#targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1223,14 +1133,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresource">[]Target<wbr>Cost<wbr>Allocation<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_nodejs">
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
@@ -1238,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_nodejs">
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
@@ -1247,14 +1153,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresource">Target<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="source_resources_python">
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
@@ -1262,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresource">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resources_python">
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
@@ -1271,16 +1173,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresource">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_csharp">
 <a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
@@ -1288,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_csharp">
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1297,14 +1195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_go">
 <a href="#sourceresources_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
@@ -1312,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresourceresponse">[]Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_go">
 <a href="#targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1321,14 +1215,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresourceresponse">[]Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourceresources_nodejs">
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
@@ -1336,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_nodejs">
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
@@ -1345,14 +1235,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="source_resources_python">
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
@@ -1360,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resources_python">
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
@@ -1369,16 +1255,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1386,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1395,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1404,14 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1419,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1428,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestatus">Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1437,14 +1313,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1452,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1461,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rulestatus">Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1470,14 +1341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1485,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1494,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#rulestatus">Rule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1503,16 +1369,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costallocationrulepropertiesresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -1520,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1529,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1538,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateddate_csharp">
 <a href="#updateddate_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Date</a>
@@ -1547,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1556,14 +1415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -1571,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1580,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1589,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateddate_go">
 <a href="#updateddate_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Date</a>
@@ -1598,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1607,14 +1459,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -1622,8 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1631,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1640,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updateddate_nodejs">
 <a href="#updateddate_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Date</a>
@@ -1649,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1658,14 +1503,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1673,8 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1682,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1691,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_date_python">
 <a href="#updated_date_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>date</a>
@@ -1700,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1709,62 +1547,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulestatus">Rule<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Active</dt>
-    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd>
-    <dt>Active</dt>
-    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd>
-    <dt>Processing</dt>
-    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Active</dt>
+    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd><dt>Active</dt>
+    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd><dt>Processing</dt>
+    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Rule<wbr>Status<wbr>Not<wbr>Active</dt>
-    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd>
-    <dt>Rule<wbr>Status<wbr>Active</dt>
-    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd>
-    <dt>Rule<wbr>Status<wbr>Processing</dt>
-    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Rule<wbr>Status<wbr>Not<wbr>Active</dt>
+    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd><dt>Rule<wbr>Status<wbr>Active</dt>
+    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd><dt>Rule<wbr>Status<wbr>Processing</dt>
+    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Active</dt>
-    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd>
-    <dt>Active</dt>
-    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd>
-    <dt>Processing</dt>
-    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Active</dt>
+    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd><dt>Active</dt>
+    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd><dt>Processing</dt>
+    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_ACTIVE</dt>
-    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd>
-    <dt>ACTIVE</dt>
-    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd>
-    <dt>PROCESSING</dt>
-    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>NOT_ACTIVE</dt>
+    <dd>NotActive{{% md %}}Rule is saved but not used to allocate costs.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>Active{{% md %}}Rule is saved and impacting cost allocation.{{% /md %}}</dd><dt>PROCESSING</dt>
+    <dd>Processing{{% md %}}Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1772,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1781,8 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1790,14 +1607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1805,8 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1814,8 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1823,14 +1635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1838,8 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1847,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1856,14 +1663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1871,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1880,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1889,16 +1691,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1906,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1915,8 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1924,14 +1721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1939,8 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1948,8 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1957,14 +1749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1972,8 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1981,8 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1990,14 +1777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2005,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -2014,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2023,16 +1805,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetcostallocationresource">Target<wbr>Cost<wbr>Allocation<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2040,8 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -2049,8 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationpolicytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -2058,8 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2067,14 +1843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2082,8 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -2091,8 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -2100,8 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2109,14 +1879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportion">[]Cost<wbr>Allocation<wbr>Proportion</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2124,8 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -2133,8 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -2142,8 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2151,14 +1915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportion">Cost<wbr>Allocation<wbr>Proportion[]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2166,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -2175,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -2184,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2193,16 +1951,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportion">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2210,8 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -2219,8 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -2228,8 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2237,14 +1989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2252,8 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -2261,8 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -2270,8 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2279,14 +2025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportionresponse">[]Cost<wbr>Allocation<wbr>Proportion<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2294,8 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -2303,8 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -2312,8 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2321,14 +2061,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2336,8 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -2345,8 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -2354,8 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2363,8 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

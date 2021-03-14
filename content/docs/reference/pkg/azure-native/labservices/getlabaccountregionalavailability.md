@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_csharp">
 <a href="#labaccountname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_go">
 <a href="#labaccountname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_nodejs">
 <a href="#labaccountname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_account_name_python">
 <a href="#lab_account_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="regionalavailability_csharp">
 <a href="#regionalavailability_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Availability</a>
@@ -166,14 +148,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Regional<wbr>Availability<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="regionalavailability_go">
 <a href="#regionalavailability_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Availability</a>
@@ -181,14 +160,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalavailabilityresponse">[]Regional<wbr>Availability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="regionalavailability_nodejs">
 <a href="#regionalavailability_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Availability</a>
@@ -196,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalavailabilityresponse">Regional<wbr>Availability<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="regional_availability_python">
 <a href="#regional_availability_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>availability</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalavailabilityresponse">Sequence[Regional<wbr>Availability<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Corresponding region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Corresponding region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeavailabilities_csharp">
 <a href="#sizeavailabilities_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Availabilities</a>
@@ -245,14 +214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeavailabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Size<wbr>Availability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -260,8 +226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Corresponding region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Corresponding region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeavailabilities_go">
 <a href="#sizeavailabilities_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Availabilities</a>
@@ -269,14 +234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeavailabilityresponse">[]Size<wbr>Availability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -284,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Corresponding region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Corresponding region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeavailabilities_nodejs">
 <a href="#sizeavailabilities_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Availabilities</a>
@@ -293,14 +254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeavailabilityresponse">Size<wbr>Availability<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -308,8 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Corresponding region{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Corresponding region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_availabilities_python">
 <a href="#size_availabilities_python" style="color: inherit; text-decoration: inherit;">size_<wbr>availabilities</a>
@@ -317,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sizeavailabilityresponse">Sequence[Size<wbr>Availability<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sizeavailabilityresponse">Size<wbr>Availability<wbr>Response</h4>
@@ -326,9 +282,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isavailable_csharp">
 <a href="#isavailable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Available</a>
@@ -336,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizecategory_csharp">
 <a href="#sizecategory_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Category</a>
@@ -345,14 +298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isavailable_go">
 <a href="#isavailable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Available</a>
@@ -360,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizecategory_go">
 <a href="#sizecategory_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Category</a>
@@ -369,14 +318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isavailable_nodejs">
 <a href="#isavailable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available</a>
@@ -384,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizecategory_nodejs">
 <a href="#sizecategory_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Category</a>
@@ -393,14 +338,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="is_available_python">
 <a href="#is_available_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available</a>
@@ -408,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not this size category is available{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_category_python">
 <a href="#size_category_python" style="color: inherit; text-decoration: inherit;">size_<wbr>category</a>
@@ -417,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The category of the size (Basic, Standard, Performance).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

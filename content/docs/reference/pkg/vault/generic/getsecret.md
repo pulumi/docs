@@ -48,9 +48,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -63,8 +61,7 @@ To read data from the "generic" secret backend mounted in Vault by
 default, this should be prefixed with `secret/`. Reading from other backends
 with this data source is possible; consult each backend's documentation
 to see which endpoints support the `GET` method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -72,14 +69,11 @@ to see which endpoints support the `GET` method.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -92,8 +86,7 @@ To read data from the "generic" secret backend mounted in Vault by
 default, this should be prefixed with `secret/`. Reading from other backends
 with this data source is possible; consult each backend's documentation
 to see which endpoints support the `GET` method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -101,14 +94,11 @@ to see which endpoints support the `GET` method.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -121,8 +111,7 @@ To read data from the "generic" secret backend mounted in Vault by
 default, this should be prefixed with `secret/`. Reading from other backends
 with this data source is possible; consult each backend's documentation
 to see which endpoints support the `GET` method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -130,14 +119,11 @@ to see which endpoints support the `GET` method.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -150,8 +136,7 @@ To read data from the "generic" secret backend mounted in Vault by
 default, this should be prefixed with `secret/`. Reading from other backends
 with this data source is possible; consult each backend's documentation
 to see which endpoints support the `GET` method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -159,8 +144,7 @@ to see which endpoints support the `GET` method.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -173,9 +157,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -187,8 +169,7 @@ The following output properties are available:
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datajson_csharp">
 <a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -198,8 +179,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -208,8 +188,7 @@ Vault, serialized in JSON format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_csharp">
 <a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -220,8 +199,7 @@ Vault, serialized in JSON format.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_csharp">
 <a href="#leaseid_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Id</a>
@@ -230,8 +208,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_csharp">
 <a href="#leaserenewable_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Renewable</a>
@@ -239,8 +216,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_csharp">
 <a href="#leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -248,8 +224,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -257,8 +232,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -266,14 +240,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -285,8 +256,7 @@ generated with this data may fail to apply.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datajson_go">
 <a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -296,8 +266,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -306,8 +275,7 @@ Vault, serialized in JSON format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_go">
 <a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -318,8 +286,7 @@ Vault, serialized in JSON format.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_go">
 <a href="#leaseid_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Id</a>
@@ -328,8 +295,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_go">
 <a href="#leaserenewable_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Renewable</a>
@@ -337,8 +303,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_go">
 <a href="#leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -346,8 +311,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -355,8 +319,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -364,14 +327,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -383,8 +343,7 @@ generated with this data may fail to apply.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datajson_nodejs">
 <a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
@@ -394,8 +353,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -404,8 +362,7 @@ Vault, serialized in JSON format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_nodejs">
 <a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
@@ -416,8 +373,7 @@ Vault, serialized in JSON format.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_nodejs">
 <a href="#leaseid_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Id</a>
@@ -426,8 +382,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_nodejs">
 <a href="#leaserenewable_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Renewable</a>
@@ -435,8 +390,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_nodejs">
 <a href="#leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
@@ -444,8 +398,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -453,8 +406,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -462,14 +414,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -481,8 +430,7 @@ generated with this data may fail to apply.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_json_python">
 <a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
@@ -492,8 +440,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,8 +449,7 @@ Vault, serialized in JSON format.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_duration_python">
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
@@ -514,8 +460,7 @@ Vault, serialized in JSON format.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_id_python">
 <a href="#lease_id_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>id</a>
@@ -524,8 +469,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_renewable_python">
 <a href="#lease_renewable_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>renewable</a>
@@ -533,8 +477,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_start_time_python">
 <a href="#lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
@@ -542,8 +485,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -551,8 +493,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -560,8 +501,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -575,6 +515,6 @@ generated with this data may fail to apply.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

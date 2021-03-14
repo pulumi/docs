@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -207,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -217,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedssl_csharp">
 <a href="#allowunverifiedssl_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl</a>
@@ -227,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
- It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitimeout_csharp">
 <a href="#apitimeout_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Timeout</a>
@@ -237,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebug_csharp">
 <a href="#clientdebug_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug</a>
@@ -247,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_csharp">
 <a href="#clientdebugpath_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path</a>
@@ -257,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_csharp">
 <a href="#clientdebugpathrun_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path<wbr>Run</a>
@@ -267,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistsession_csharp">
 <a href="#persistsession_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Session</a>
@@ -277,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
- It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_csharp">
 <a href="#restsessionpath_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Session<wbr>Path</a>
@@ -287,8 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_csharp">
 <a href="#vcenterserver_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Server</a>
@@ -296,8 +256,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_csharp">
 <a href="#vimkeepalive_csharp" style="color: inherit; text-decoration: inherit;">Vim<wbr>Keep<wbr>Alive</a>
@@ -306,8 +265,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
- It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_csharp">
 <a href="#vimsessionpath_csharp" style="color: inherit; text-decoration: inherit;">Vim<wbr>Session<wbr>Path</a>
@@ -316,8 +274,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_csharp">
 <a href="#vsphereserver_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Server</a>
@@ -326,14 +283,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -342,8 +296,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -352,8 +305,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedssl_go">
 <a href="#allowunverifiedssl_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl</a>
@@ -362,8 +314,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
- It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitimeout_go">
 <a href="#apitimeout_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Timeout</a>
@@ -372,8 +323,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebug_go">
 <a href="#clientdebug_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug</a>
@@ -382,8 +332,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_go">
 <a href="#clientdebugpath_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path</a>
@@ -392,8 +341,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_go">
 <a href="#clientdebugpathrun_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path<wbr>Run</a>
@@ -402,8 +350,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistsession_go">
 <a href="#persistsession_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Session</a>
@@ -412,8 +359,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
- It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_go">
 <a href="#restsessionpath_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Session<wbr>Path</a>
@@ -422,8 +368,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_go">
 <a href="#vcenterserver_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Server</a>
@@ -431,8 +376,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_go">
 <a href="#vimkeepalive_go" style="color: inherit; text-decoration: inherit;">Vim<wbr>Keep<wbr>Alive</a>
@@ -441,8 +385,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
- It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_go">
 <a href="#vimsessionpath_go" style="color: inherit; text-decoration: inherit;">Vim<wbr>Session<wbr>Path</a>
@@ -451,8 +394,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_go">
 <a href="#vsphereserver_go" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Server</a>
@@ -461,14 +403,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -477,8 +416,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -487,8 +425,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedssl_nodejs">
 <a href="#allowunverifiedssl_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl</a>
@@ -497,8 +434,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
- It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitimeout_nodejs">
 <a href="#apitimeout_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Timeout</a>
@@ -507,8 +443,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebug_nodejs">
 <a href="#clientdebug_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug</a>
@@ -517,8 +452,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}govmomi debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_nodejs">
 <a href="#clientdebugpath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path</a>
@@ -527,8 +461,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_nodejs">
 <a href="#clientdebugpathrun_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path<wbr>Run</a>
@@ -537,8 +470,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistsession_nodejs">
 <a href="#persistsession_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Session</a>
@@ -547,8 +479,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
- It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_nodejs">
 <a href="#restsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Session<wbr>Path</a>
@@ -557,8 +488,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_nodejs">
 <a href="#vcenterserver_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Server</a>
@@ -566,8 +496,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_nodejs">
 <a href="#vimkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Keep<wbr>Alive</a>
@@ -576,8 +505,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
- It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_nodejs">
 <a href="#vimsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Session<wbr>Path</a>
@@ -586,8 +514,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_nodejs">
 <a href="#vsphereserver_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Server</a>
@@ -596,14 +523,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -612,8 +536,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -622,8 +545,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_unverified_ssl_python">
 <a href="#allow_unverified_ssl_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unverified_<wbr>ssl</a>
@@ -632,8 +554,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
- It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_timeout_python">
 <a href="#api_timeout_python" style="color: inherit; text-decoration: inherit;">api_<wbr>timeout</a>
@@ -642,8 +563,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_debug_python">
 <a href="#client_debug_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug</a>
@@ -652,8 +572,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_debug_path_python">
 <a href="#client_debug_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path</a>
@@ -662,8 +581,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_debug_path_run_python">
 <a href="#client_debug_path_run_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path_<wbr>run</a>
@@ -672,8 +590,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
- It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persist_session_python">
 <a href="#persist_session_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>session</a>
@@ -682,8 +599,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
- It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rest_session_path_python">
 <a href="#rest_session_path_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>session_<wbr>path</a>
@@ -692,8 +608,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenter_server_python">
 <a href="#vcenter_server_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>server</a>
@@ -701,8 +616,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="vim_keep_alive_python">
 <a href="#vim_keep_alive_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>keep_<wbr>alive</a>
@@ -711,8 +625,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
- It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vim_session_path_python">
 <a href="#vim_session_path_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>session_<wbr>path</a>
@@ -721,8 +634,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
- It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphere_server_python">
 <a href="#vsphere_server_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>server</a>
@@ -731,8 +643,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -743,9 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -753,14 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -768,14 +674,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -783,14 +686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -798,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -816,6 +715,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

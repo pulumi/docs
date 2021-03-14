@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerservicename_csharp">
 <a href="#containerservicename_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Service<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerservicename_go">
 <a href="#containerservicename_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Service<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerservicename_nodejs">
 <a href="#containerservicename_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Service<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_service_name_python">
 <a href="#container_service_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpoolprofiles_csharp">
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_csharp">
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterprofile_csharp">
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customprofile_csharp">
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diagnosticsprofile_csharp">
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorprofile_csharp">
 <a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_csharp">
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_csharp">
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpoolprofiles_go">
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">[]Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_go">
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterprofile_go">
 <a href="#masterprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customprofile_go">
 <a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diagnosticsprofile_go">
 <a href="#diagnosticsprofile_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorprofile_go">
 <a href="#orchestratorprofile_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_go">
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_go">
 <a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpoolprofiles_nodejs">
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_nodejs">
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterprofile_nodejs">
 <a href="#masterprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Profile</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customprofile_nodejs">
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diagnosticsprofile_nodejs">
 <a href="#diagnosticsprofile_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Profile</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorprofile_nodejs">
 <a href="#orchestratorprofile_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Profile</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_nodejs">
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_nodejs">
 <a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
@@ -547,14 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agent_pool_profiles_python">
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofileresponse">Sequence[Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linux_profile_python">
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_profile_python">
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_profile_python">
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diagnostics_profile_python">
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestrator_profile_python">
 <a href="#orchestrator_profile_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>profile</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_principal_profile_python">
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windows_profile_python">
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -704,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -713,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -722,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -731,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -740,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -755,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -764,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -773,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -791,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -806,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
@@ -815,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -833,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -842,14 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestrator_csharp">
 <a href="#orchestrator_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
@@ -912,14 +802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestrator_go">
 <a href="#orchestrator_go" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
@@ -927,14 +814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestrator_nodejs">
 <a href="#orchestrator_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator</a>
@@ -942,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestrator_python">
 <a href="#orchestrator_python" style="color: inherit; text-decoration: inherit;">orchestrator</a>
@@ -957,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</h4>
@@ -966,9 +846,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vmdiagnostics_csharp">
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
@@ -976,14 +854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vmdiagnostics_go">
 <a href="#vmdiagnostics_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
@@ -991,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vmdiagnostics_nodejs">
 <a href="#vmdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Diagnostics</a>
@@ -1006,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="vm_diagnostics_python">
 <a href="#vm_diagnostics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>diagnostics</a>
@@ -1021,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</h4>
@@ -1030,9 +898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1040,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -1049,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1064,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -1073,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -1088,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -1097,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</h4>
@@ -1130,9 +982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -1140,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1149,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1158,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -1173,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1182,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1191,14 +1034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
@@ -1206,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1215,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1224,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
@@ -1239,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1248,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1257,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</h4>
@@ -1266,9 +1098,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestratortype_csharp">
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
@@ -1276,14 +1106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestratortype_go">
 <a href="#orchestratortype_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
@@ -1291,14 +1118,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestratortype_nodejs">
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
@@ -1306,14 +1130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="orchestrator_type_python">
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
@@ -1321,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</h4>
@@ -1330,9 +1150,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1340,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1349,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1364,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1373,14 +1186,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1388,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1397,14 +1206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1412,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1421,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</h4>
@@ -1430,9 +1234,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1440,14 +1242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1455,14 +1254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">[]Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -1470,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -1485,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
@@ -1494,9 +1286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -1504,14 +1294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -1519,14 +1306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -1534,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -1549,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</h4>
@@ -1558,9 +1338,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1568,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_csharp">
 <a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -1577,14 +1354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1592,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_go">
 <a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -1601,14 +1374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1616,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_nodejs">
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
@@ -1625,14 +1394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1640,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_uri_python">
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
@@ -1649,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</h4>
@@ -1658,9 +1422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -1668,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1677,14 +1438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -1692,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1701,14 +1458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -1716,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -1725,14 +1478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -1740,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -1749,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

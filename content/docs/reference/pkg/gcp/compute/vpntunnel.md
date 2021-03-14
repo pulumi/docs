@@ -23,11 +23,17 @@ To get more information about VpnTunnel, see:
 state as plain-text.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Vpn Tunnel Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -92,9 +98,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -171,9 +180,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -211,9 +223,12 @@ route1 = gcp.compute.Route("route1",
     next_hop_vpn_tunnel=tunnel1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -258,10 +273,17 @@ const route1 = new gcp.compute.Route("route1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Vpn Tunnel Beta
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -352,9 +374,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -434,9 +459,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -483,9 +511,12 @@ route1 = gcp.compute.Route("route1",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -548,9 +579,16 @@ const route1 = new gcp.compute.Route("route1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VPNTunnel Resource {#create}
@@ -575,9 +613,7 @@ const route1 = new gcp.compute.Route("route1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -585,9 +621,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -595,9 +629,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -605,10 +637,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -634,9 +663,7 @@ const route1 = new gcp.compute.Route("route1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -644,9 +671,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -654,9 +679,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -664,9 +687,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -674,18 +695,13 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -693,9 +709,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -703,9 +717,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -713,10 +725,7 @@ const route1 = new gcp.compute.Route("route1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -731,9 +740,7 @@ The VPNTunnel resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sharedsecret_csharp">
 <a href="#sharedsecret_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
@@ -744,8 +751,7 @@ The VPNTunnel resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -754,8 +760,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_csharp">
 <a href="#ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -766,8 +771,7 @@ gateway and the peer VPN gateway.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -776,8 +780,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtrafficselectors_csharp">
 <a href="#localtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Traffic<wbr>Selectors</a>
@@ -789,8 +792,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -805,8 +807,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgateway_csharp">
 <a href="#peerexternalgateway_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway</a>
@@ -815,8 +816,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgatewayinterface_csharp">
 <a href="#peerexternalgatewayinterface_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -825,8 +825,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peergcpgateway_csharp">
 <a href="#peergcpgateway_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Gcp<wbr>Gateway</a>
@@ -838,8 +837,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerip_csharp">
 <a href="#peerip_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip</a>
@@ -848,8 +846,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -859,8 +856,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -869,8 +865,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotetrafficselectors_csharp">
 <a href="#remotetrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Traffic<wbr>Selectors</a>
@@ -882,8 +877,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -892,8 +886,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvpngateway_csharp">
 <a href="#targetvpngateway_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vpn<wbr>Gateway</a>
@@ -903,8 +896,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngateway_csharp">
 <a href="#vpngateway_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway</a>
@@ -915,8 +907,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewayinterface_csharp">
 <a href="#vpngatewayinterface_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Interface</a>
@@ -925,14 +916,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sharedsecret_go">
 <a href="#sharedsecret_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
@@ -943,8 +931,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -953,8 +940,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_go">
 <a href="#ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -965,8 +951,7 @@ gateway and the peer VPN gateway.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -975,8 +960,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtrafficselectors_go">
 <a href="#localtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Traffic<wbr>Selectors</a>
@@ -988,8 +972,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1004,8 +987,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgateway_go">
 <a href="#peerexternalgateway_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway</a>
@@ -1014,8 +996,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgatewayinterface_go">
 <a href="#peerexternalgatewayinterface_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -1024,8 +1005,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peergcpgateway_go">
 <a href="#peergcpgateway_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Gcp<wbr>Gateway</a>
@@ -1037,8 +1017,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerip_go">
 <a href="#peerip_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip</a>
@@ -1047,8 +1026,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1058,8 +1036,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1068,8 +1045,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotetrafficselectors_go">
 <a href="#remotetrafficselectors_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Traffic<wbr>Selectors</a>
@@ -1081,8 +1057,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1091,8 +1066,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvpngateway_go">
 <a href="#targetvpngateway_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vpn<wbr>Gateway</a>
@@ -1102,8 +1076,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngateway_go">
 <a href="#vpngateway_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway</a>
@@ -1114,8 +1087,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewayinterface_go">
 <a href="#vpngatewayinterface_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Interface</a>
@@ -1124,14 +1096,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sharedsecret_nodejs">
 <a href="#sharedsecret_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret</a>
@@ -1142,8 +1111,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1152,8 +1120,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_nodejs">
 <a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
@@ -1164,8 +1131,7 @@ gateway and the peer VPN gateway.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1174,8 +1140,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtrafficselectors_nodejs">
 <a href="#localtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Traffic<wbr>Selectors</a>
@@ -1187,8 +1152,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1203,8 +1167,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgateway_nodejs">
 <a href="#peerexternalgateway_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>External<wbr>Gateway</a>
@@ -1213,8 +1176,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerexternalgatewayinterface_nodejs">
 <a href="#peerexternalgatewayinterface_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -1223,8 +1185,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peergcpgateway_nodejs">
 <a href="#peergcpgateway_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Gcp<wbr>Gateway</a>
@@ -1236,8 +1197,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerip_nodejs">
 <a href="#peerip_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip</a>
@@ -1246,8 +1206,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1257,8 +1216,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1267,8 +1225,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotetrafficselectors_nodejs">
 <a href="#remotetrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Traffic<wbr>Selectors</a>
@@ -1280,8 +1237,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1290,8 +1246,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvpngateway_nodejs">
 <a href="#targetvpngateway_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vpn<wbr>Gateway</a>
@@ -1301,8 +1256,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngateway_nodejs">
 <a href="#vpngateway_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway</a>
@@ -1313,8 +1267,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewayinterface_nodejs">
 <a href="#vpngatewayinterface_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Interface</a>
@@ -1323,14 +1276,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shared_secret_python">
 <a href="#shared_secret_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret</a>
@@ -1341,8 +1291,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1351,8 +1300,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_version_python">
 <a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
@@ -1363,8 +1311,7 @@ gateway and the peer VPN gateway.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1373,8 +1320,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_traffic_selectors_python">
 <a href="#local_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">local_<wbr>traffic_<wbr>selectors</a>
@@ -1386,8 +1332,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1402,8 +1347,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_external_gateway_python">
 <a href="#peer_external_gateway_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>external_<wbr>gateway</a>
@@ -1412,8 +1356,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_external_gateway_interface_python">
 <a href="#peer_external_gateway_interface_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>external_<wbr>gateway_<wbr>interface</a>
@@ -1422,8 +1365,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_gcp_gateway_python">
 <a href="#peer_gcp_gateway_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>gcp_<wbr>gateway</a>
@@ -1435,8 +1377,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_ip_python">
 <a href="#peer_ip_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip</a>
@@ -1445,8 +1386,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1456,8 +1396,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1466,8 +1405,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_traffic_selectors_python">
 <a href="#remote_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>traffic_<wbr>selectors</a>
@@ -1479,8 +1417,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1489,8 +1426,7 @@ Only IPv4 is supported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_vpn_gateway_python">
 <a href="#target_vpn_gateway_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vpn_<wbr>gateway</a>
@@ -1500,8 +1436,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_gateway_python">
 <a href="#vpn_gateway_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway</a>
@@ -1512,8 +1447,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_gateway_interface_python">
 <a href="#vpn_gateway_interface_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>interface</a>
@@ -1522,8 +1456,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1534,9 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1545,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detailedstatus_csharp">
 <a href="#detailedstatus_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Status</a>
@@ -1555,8 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1564,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1574,8 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1584,8 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedsecrethash_csharp">
 <a href="#sharedsecrethash_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret<wbr>Hash</a>
@@ -1594,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelid_csharp">
 <a href="#tunnelid_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Id</a>
@@ -1604,14 +1529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1620,8 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detailedstatus_go">
 <a href="#detailedstatus_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Status</a>
@@ -1630,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1639,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1649,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1659,8 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedsecrethash_go">
 <a href="#sharedsecrethash_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret<wbr>Hash</a>
@@ -1669,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelid_go">
 <a href="#tunnelid_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Id</a>
@@ -1679,14 +1595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1695,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detailedstatus_nodejs">
 <a href="#detailedstatus_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Status</a>
@@ -1705,8 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1714,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1724,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1734,8 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedsecrethash_nodejs">
 <a href="#sharedsecrethash_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret<wbr>Hash</a>
@@ -1744,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelid_nodejs">
 <a href="#tunnelid_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Id</a>
@@ -1754,14 +1661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1770,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detailed_status_python">
 <a href="#detailed_status_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>status</a>
@@ -1780,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1789,8 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1799,8 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1809,8 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_secret_hash_python">
 <a href="#shared_secret_hash_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret_<wbr>hash</a>
@@ -1819,8 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel_id_python">
 <a href="#tunnel_id_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>id</a>
@@ -1829,8 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1957,9 +1854,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1968,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1978,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailedstatus_csharp">
 <a href="#state_detailedstatus_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Status</a>
@@ -1988,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_csharp">
 <a href="#state_ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -2000,8 +1892,7 @@ The following state arguments are supported:
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2010,8 +1901,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2020,8 +1910,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localtrafficselectors_csharp">
 <a href="#state_localtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Traffic<wbr>Selectors</a>
@@ -2033,8 +1922,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2049,8 +1937,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgateway_csharp">
 <a href="#state_peerexternalgateway_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway</a>
@@ -2059,8 +1946,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgatewayinterface_csharp">
 <a href="#state_peerexternalgatewayinterface_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -2069,8 +1955,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peergcpgateway_csharp">
 <a href="#state_peergcpgateway_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Gcp<wbr>Gateway</a>
@@ -2082,8 +1967,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerip_csharp">
 <a href="#state_peerip_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip</a>
@@ -2092,8 +1976,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2103,8 +1986,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2113,8 +1995,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotetrafficselectors_csharp">
 <a href="#state_remotetrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Traffic<wbr>Selectors</a>
@@ -2126,8 +2007,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -2136,8 +2016,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2146,8 +2025,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecret_csharp">
 <a href="#state_sharedsecret_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
@@ -2158,8 +2036,7 @@ Only IPv4 is supported.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecrethash_csharp">
 <a href="#state_sharedsecrethash_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret<wbr>Hash</a>
@@ -2168,8 +2045,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvpngateway_csharp">
 <a href="#state_targetvpngateway_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vpn<wbr>Gateway</a>
@@ -2179,8 +2055,7 @@ gateway and the peer VPN gateway.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tunnelid_csharp">
 <a href="#state_tunnelid_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Id</a>
@@ -2189,8 +2064,7 @@ associated.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngateway_csharp">
 <a href="#state_vpngateway_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway</a>
@@ -2201,8 +2075,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayinterface_csharp">
 <a href="#state_vpngatewayinterface_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Interface</a>
@@ -2211,14 +2084,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2227,8 +2097,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2237,8 +2106,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailedstatus_go">
 <a href="#state_detailedstatus_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Status</a>
@@ -2247,8 +2115,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_go">
 <a href="#state_ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -2259,8 +2126,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2269,8 +2135,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2279,8 +2144,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localtrafficselectors_go">
 <a href="#state_localtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Traffic<wbr>Selectors</a>
@@ -2292,8 +2156,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2308,8 +2171,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgateway_go">
 <a href="#state_peerexternalgateway_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway</a>
@@ -2318,8 +2180,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgatewayinterface_go">
 <a href="#state_peerexternalgatewayinterface_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -2328,8 +2189,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peergcpgateway_go">
 <a href="#state_peergcpgateway_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Gcp<wbr>Gateway</a>
@@ -2341,8 +2201,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerip_go">
 <a href="#state_peerip_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip</a>
@@ -2351,8 +2210,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2362,8 +2220,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2372,8 +2229,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotetrafficselectors_go">
 <a href="#state_remotetrafficselectors_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Traffic<wbr>Selectors</a>
@@ -2385,8 +2241,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -2395,8 +2250,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2405,8 +2259,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecret_go">
 <a href="#state_sharedsecret_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
@@ -2417,8 +2270,7 @@ Only IPv4 is supported.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecrethash_go">
 <a href="#state_sharedsecrethash_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret<wbr>Hash</a>
@@ -2427,8 +2279,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvpngateway_go">
 <a href="#state_targetvpngateway_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vpn<wbr>Gateway</a>
@@ -2438,8 +2289,7 @@ gateway and the peer VPN gateway.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tunnelid_go">
 <a href="#state_tunnelid_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Id</a>
@@ -2448,8 +2298,7 @@ associated.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngateway_go">
 <a href="#state_vpngateway_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway</a>
@@ -2460,8 +2309,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayinterface_go">
 <a href="#state_vpngatewayinterface_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Interface</a>
@@ -2470,14 +2318,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -2486,8 +2331,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2496,8 +2340,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailedstatus_nodejs">
 <a href="#state_detailedstatus_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Status</a>
@@ -2506,8 +2349,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_nodejs">
 <a href="#state_ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
@@ -2518,8 +2360,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2528,8 +2369,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2538,8 +2378,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localtrafficselectors_nodejs">
 <a href="#state_localtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Traffic<wbr>Selectors</a>
@@ -2551,8 +2390,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2567,8 +2405,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgateway_nodejs">
 <a href="#state_peerexternalgateway_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>External<wbr>Gateway</a>
@@ -2577,8 +2414,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerexternalgatewayinterface_nodejs">
 <a href="#state_peerexternalgatewayinterface_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>External<wbr>Gateway<wbr>Interface</a>
@@ -2587,8 +2423,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peergcpgateway_nodejs">
 <a href="#state_peergcpgateway_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Gcp<wbr>Gateway</a>
@@ -2600,8 +2435,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerip_nodejs">
 <a href="#state_peerip_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip</a>
@@ -2610,8 +2444,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2621,8 +2454,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2631,8 +2463,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotetrafficselectors_nodejs">
 <a href="#state_remotetrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Traffic<wbr>Selectors</a>
@@ -2644,8 +2475,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -2654,8 +2484,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2664,8 +2493,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecret_nodejs">
 <a href="#state_sharedsecret_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret</a>
@@ -2676,8 +2504,7 @@ Only IPv4 is supported.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedsecrethash_nodejs">
 <a href="#state_sharedsecrethash_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret<wbr>Hash</a>
@@ -2686,8 +2513,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetvpngateway_nodejs">
 <a href="#state_targetvpngateway_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vpn<wbr>Gateway</a>
@@ -2697,8 +2523,7 @@ gateway and the peer VPN gateway.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tunnelid_nodejs">
 <a href="#state_tunnelid_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Id</a>
@@ -2707,8 +2532,7 @@ associated.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngateway_nodejs">
 <a href="#state_vpngateway_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway</a>
@@ -2719,8 +2543,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayinterface_nodejs">
 <a href="#state_vpngatewayinterface_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Interface</a>
@@ -2729,14 +2552,11 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2745,8 +2565,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2755,8 +2574,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailed_status_python">
 <a href="#state_detailed_status_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>status</a>
@@ -2765,8 +2583,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Detailed status message for the VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ike_version_python">
 <a href="#state_ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
@@ -2777,8 +2594,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     <dd>{{% md %}}IKE protocol version to use when establishing the VPN tunnel with
 peer VPN gateway.
 Acceptable IKE versions are 1 or 2. Default version is 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -2787,8 +2603,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2797,8 +2612,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this VpnTunnel.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_traffic_selectors_python">
 <a href="#state_local_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">local_<wbr>traffic_<wbr>selectors</a>
@@ -2810,8 +2624,7 @@ Acceptable IKE versions are 1 or 2. Default version is 2.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2826,8 +2639,7 @@ characters long and match the regular expression
 must be a lowercase letter, and all following characters must
 be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_external_gateway_python">
 <a href="#state_peer_external_gateway_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>external_<wbr>gateway</a>
@@ -2836,8 +2648,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the peer side external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_external_gateway_interface_python">
 <a href="#state_peer_external_gateway_interface_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>external_<wbr>gateway_<wbr>interface</a>
@@ -2846,8 +2657,7 @@ except the last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the external VPN gateway to which this VPN tunnel is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_gcp_gateway_python">
 <a href="#state_peer_gcp_gateway_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>gcp_<wbr>gateway</a>
@@ -2859,8 +2669,7 @@ except the last character, which cannot be a dash.
 If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
 ID in the peer GCP VPN gateway.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_ip_python">
 <a href="#state_peer_ip_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip</a>
@@ -2869,8 +2678,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the peer VPN gateway. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2880,8 +2688,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2890,8 +2697,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_traffic_selectors_python">
 <a href="#state_remote_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>traffic_<wbr>selectors</a>
@@ -2903,8 +2709,7 @@ If it is not provided, the provider project is used.
 peer VPN gateway. The value should be a CIDR formatted string,
 for example `192.168.0.0/16`. The ranges should be disjoint.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -2913,8 +2718,7 @@ Only IPv4 is supported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of router resource to be used for dynamic routing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2923,8 +2727,7 @@ Only IPv4 is supported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_secret_python">
 <a href="#state_shared_secret_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret</a>
@@ -2935,8 +2738,7 @@ Only IPv4 is supported.
     <dd>{{% md %}}Shared secret used to set the secure session between the Cloud VPN
 gateway and the peer VPN gateway.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_secret_hash_python">
 <a href="#state_shared_secret_hash_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret_<wbr>hash</a>
@@ -2945,8 +2747,7 @@ gateway and the peer VPN gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hash of the shared secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_vpn_gateway_python">
 <a href="#state_target_vpn_gateway_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vpn_<wbr>gateway</a>
@@ -2956,8 +2757,7 @@ gateway and the peer VPN gateway.
     </dt>
     <dd>{{% md %}}URL of the Target VPN gateway with which this VPN tunnel is
 associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tunnel_id_python">
 <a href="#state_tunnel_id_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>id</a>
@@ -2966,8 +2766,7 @@ associated.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_gateway_python">
 <a href="#state_vpn_gateway_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway</a>
@@ -2978,8 +2777,7 @@ associated.
     <dd>{{% md %}}URL of the VPN gateway with which this VPN tunnel is associated.
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a `gcp.compute.HaVpnGateway` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_gateway_interface_python">
 <a href="#state_vpn_gateway_interface_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>interface</a>
@@ -2988,8 +2786,7 @@ This field must reference a `gcp.compute.HaVpnGateway` resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interface ID of the VPN gateway with which this VPN tunnel is associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3027,6 +2824,6 @@ VpnTunnel can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

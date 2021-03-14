@@ -43,9 +43,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionuri_csharp">
 <a href="#connectionuri_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -210,8 +179,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -220,8 +188,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -230,8 +197,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_csharp">
 <a href="#defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -241,8 +207,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -251,8 +216,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -262,8 +226,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -273,8 +236,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_csharp">
 <a href="#verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -284,14 +246,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionuri_go">
 <a href="#connectionuri_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -300,8 +259,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -310,8 +268,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -320,8 +277,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_go">
 <a href="#defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -331,8 +287,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -341,8 +296,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_go">
 <a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -352,8 +306,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -363,8 +316,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_go">
 <a href="#verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -374,14 +326,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionuri_nodejs">
 <a href="#connectionuri_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Uri</a>
@@ -390,8 +339,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -400,8 +348,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -410,8 +357,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_nodejs">
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -421,8 +367,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -431,8 +376,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -442,8 +386,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -453,8 +396,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_nodejs">
 <a href="#verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
@@ -464,14 +406,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_uri_python">
 <a href="#connection_uri_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>uri</a>
@@ -480,8 +419,7 @@ Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -490,8 +428,7 @@ Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -500,8 +437,7 @@ Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_lease_ttl_seconds_python">
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -511,8 +447,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -521,8 +456,7 @@ issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_seconds_python">
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -532,8 +466,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -543,8 +476,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_connection_python">
 <a href="#verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
@@ -554,8 +486,7 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -566,9 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -576,14 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -591,14 +517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -606,14 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -621,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -749,9 +668,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_csharp">
 <a href="#state_connectionuri_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -760,8 +677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_csharp">
 <a href="#state_defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -771,8 +687,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -781,8 +696,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_csharp">
 <a href="#state_maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -792,8 +706,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -802,8 +715,7 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -813,8 +725,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -823,8 +734,7 @@ not begin or end with a `/`. Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_csharp">
 <a href="#state_verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -834,14 +744,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_go">
 <a href="#state_connectionuri_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -850,8 +757,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_go">
 <a href="#state_defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -861,8 +767,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -871,8 +776,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_go">
 <a href="#state_maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -882,8 +786,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -892,8 +795,7 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -903,8 +805,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -913,8 +814,7 @@ not begin or end with a `/`. Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_go">
 <a href="#state_verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -924,14 +824,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_nodejs">
 <a href="#state_connectionuri_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Uri</a>
@@ -940,8 +837,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_nodejs">
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -951,8 +847,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -961,8 +856,7 @@ issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_nodejs">
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -972,8 +866,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -982,8 +875,7 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -993,8 +885,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1003,8 +894,7 @@ not begin or end with a `/`. Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_nodejs">
 <a href="#state_verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
@@ -1014,14 +904,11 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connection_uri_python">
 <a href="#state_connection_uri_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>uri</a>
@@ -1030,8 +917,7 @@ Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ connection URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_lease_ttl_seconds_python">
 <a href="#state_default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1041,8 +927,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The default TTL for credentials
 issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1051,8 +936,7 @@ issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly description for this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_lease_ttl_seconds_python">
 <a href="#state_max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1062,8 +946,7 @@ issued by this backend.
     </dt>
     <dd>{{% md %}}The maximum TTL that can be requested
 for credentials issued by this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1072,8 +955,7 @@ for credentials issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1083,8 +965,7 @@ for credentials issued by this backend.
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1093,8 +974,7 @@ not begin or end with a `/`. Defaults to `aws`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the RabbitMQ management administrator username.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verify_connection_python">
 <a href="#state_verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
@@ -1104,8 +984,7 @@ not begin or end with a `/`. Defaults to `aws`.
     </dt>
     <dd>{{% md %}}Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1121,6 +1000,6 @@ Defaults to `true`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

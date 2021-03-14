@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_csharp">
 <a href="#watchlistalias_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistitemid_csharp">
 <a href="#watchlistitemid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_go">
 <a href="#watchlistalias_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistitemid_go">
 <a href="#watchlistitemid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_nodejs">
 <a href="#watchlistalias_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Alias</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistitemid_nodejs">
 <a href="#watchlistitemid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Id</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlist_alias_python">
 <a href="#watchlist_alias_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>alias</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlist_item_id_python">
 <a href="#watchlist_item_id_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>item_<wbr>id</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Item Id (GUID){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="itemskeyvalue_csharp">
 <a href="#itemskeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Key<wbr>Value</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitymapping_csharp">
 <a href="#entitymapping_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeleted_csharp">
 <a href="#isdeleted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemid_csharp">
 <a href="#watchlistitemid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemtype_csharp">
 <a href="#watchlistitemtype_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="itemskeyvalue_go">
 <a href="#itemskeyvalue_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Key<wbr>Value</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitymapping_go">
 <a href="#entitymapping_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeleted_go">
 <a href="#isdeleted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemid_go">
 <a href="#watchlistitemid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemtype_go">
 <a href="#watchlistitemtype_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="itemskeyvalue_nodejs">
 <a href="#itemskeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Key<wbr>Value</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitymapping_nodejs">
 <a href="#entitymapping_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeleted_nodejs">
 <a href="#isdeleted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deleted</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemid_nodejs">
 <a href="#watchlistitemid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Id</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlistitemtype_nodejs">
 <a href="#watchlistitemtype_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Type</a>
@@ -655,14 +580,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="items_key_value_python">
 <a href="#items_key_value_python" style="color: inherit; text-decoration: inherit;">items_<wbr>key_<wbr>value</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_mapping_python">
 <a href="#entity_mapping_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>mapping</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_deleted_python">
 <a href="#is_deleted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deleted</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlist_item_id_python">
 <a href="#watchlist_item_id_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>item_<wbr>id</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="watchlist_item_type_python">
 <a href="#watchlist_item_type_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>item_<wbr>type</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -802,9 +710,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -812,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -821,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -830,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -845,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -854,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -863,14 +762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -878,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -887,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -896,14 +790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -911,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -920,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -929,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

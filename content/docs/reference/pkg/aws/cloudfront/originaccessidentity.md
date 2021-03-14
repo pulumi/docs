@@ -193,11 +193,17 @@ class MyStack : Stack
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -215,9 +221,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -239,9 +248,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -249,9 +261,12 @@ import pulumi_aws as aws
 origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdentity", comment="Some comment")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -262,9 +277,16 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a OriginAccessIdentity Resource {#create}
@@ -289,9 +311,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -299,9 +319,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -309,9 +327,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -319,10 +335,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -348,9 +361,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -358,9 +369,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -368,9 +377,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -378,9 +385,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -388,18 +393,13 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -407,9 +407,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -417,9 +415,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -427,10 +423,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -445,9 +438,7 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -456,14 +447,11 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -472,14 +460,11 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -488,14 +473,11 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -504,8 +486,7 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -516,9 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="callerreference_csharp">
 <a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -528,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_csharp">
 <a href="#cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -539,8 +517,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -550,8 +527,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamarn_csharp">
 <a href="#iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
@@ -562,8 +538,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -571,8 +546,7 @@ E2QWRUHAPOMQZL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3canonicaluserid_csharp">
 <a href="#s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
@@ -583,14 +557,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="callerreference_go">
 <a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -600,8 +571,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_go">
 <a href="#cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -611,8 +581,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -622,8 +591,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamarn_go">
 <a href="#iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
@@ -634,8 +602,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -643,8 +610,7 @@ E2QWRUHAPOMQZL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3canonicaluserid_go">
 <a href="#s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
@@ -655,14 +621,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="callerreference_nodejs">
 <a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
@@ -672,8 +635,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_nodejs">
 <a href="#cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -683,8 +645,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -694,8 +655,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamarn_nodejs">
 <a href="#iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
@@ -706,8 +666,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -715,8 +674,7 @@ E2QWRUHAPOMQZL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3canonicaluserid_nodejs">
 <a href="#s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
@@ -727,14 +685,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="caller_reference_python">
 <a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
@@ -744,8 +699,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfront_access_identity_path_python">
 <a href="#cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
@@ -755,8 +709,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -766,8 +719,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iam_arn_python">
 <a href="#iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
@@ -778,8 +730,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +738,7 @@ E2QWRUHAPOMQZL`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3_canonical_user_id_python">
 <a href="#s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
@@ -799,8 +749,7 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -927,9 +876,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_csharp">
 <a href="#state_callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -939,8 +886,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_csharp">
 <a href="#state_cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -950,8 +896,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -960,8 +905,7 @@ origin access identity to use in CloudFront, see below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -971,8 +915,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_csharp">
 <a href="#state_iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
@@ -983,8 +926,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_csharp">
 <a href="#state_s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
@@ -995,14 +937,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_go">
 <a href="#state_callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -1012,8 +951,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_go">
 <a href="#state_cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -1023,8 +961,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -1033,8 +970,7 @@ origin access identity to use in CloudFront, see below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1044,8 +980,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_go">
 <a href="#state_iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
@@ -1056,8 +991,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_go">
 <a href="#state_s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
@@ -1068,14 +1002,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_nodejs">
 <a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
@@ -1085,8 +1016,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_nodejs">
 <a href="#state_cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
@@ -1096,8 +1026,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1106,8 +1035,7 @@ origin access identity to use in CloudFront, see below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1117,8 +1045,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_nodejs">
 <a href="#state_iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
@@ -1129,8 +1056,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_nodejs">
 <a href="#state_s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
@@ -1141,14 +1067,11 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_caller_reference_python">
 <a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
@@ -1158,8 +1081,7 @@ permission to an object in Amazon S3.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfront_access_identity_path_python">
 <a href="#state_cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
@@ -1169,8 +1091,7 @@ updates to the origin access identity.
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1179,8 +1100,7 @@ origin access identity to use in CloudFront, see below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1190,8 +1110,7 @@ origin access identity to use in CloudFront, see below.
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_arn_python">
 <a href="#state_iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
@@ -1202,8 +1121,7 @@ For example: `E2QWRUHAPOMQZL`.
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_canonical_user_id_python">
 <a href="#state_s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
@@ -1214,8 +1132,7 @@ E2QWRUHAPOMQZL`.
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1241,6 +1158,6 @@ Cloudfront Origin Access Identities can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

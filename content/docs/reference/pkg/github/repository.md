@@ -14,11 +14,17 @@ This resource allows you to create and manage repositories within your
 GitHub organization or personal account.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Github = Pulumi.Github;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_github as github
@@ -87,9 +99,12 @@ example = github.Repository("example",
     visibility="public")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -105,10 +120,17 @@ const example = new github.Repository("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With Github Pages Enabled
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Github = Pulumi.Github;
@@ -135,9 +157,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -166,9 +191,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_github as github
@@ -184,9 +212,12 @@ example = github.Repository("example",
     private=False)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -204,9 +235,16 @@ const example = new github.Repository("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Repository Resource {#create}
@@ -231,9 +269,7 @@ const example = new github.Repository("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -241,9 +277,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -251,9 +285,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -261,10 +293,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -290,9 +319,7 @@ const example = new github.Repository("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -300,9 +327,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -310,9 +335,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -320,9 +343,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -330,18 +351,13 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -349,9 +365,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -359,9 +373,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -369,10 +381,7 @@ const example = new github.Repository("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -387,9 +396,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmergecommit_csharp">
 <a href="#allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -398,8 +405,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrebasemerge_csharp">
 <a href="#allowrebasemerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
@@ -408,8 +414,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsquashmerge_csharp">
 <a href="#allowsquashmerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
@@ -418,8 +423,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveondestroy_csharp">
 <a href="#archiveondestroy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>On<wbr>Destroy</a>
@@ -428,8 +432,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archived_csharp">
 <a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -438,8 +441,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoinit_csharp">
 <a href="#autoinit_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
@@ -448,8 +450,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultbranch_csharp">
 <a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -460,8 +461,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="deletebranchonmerge_csharp">
 <a href="#deletebranchonmerge_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -470,8 +470,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -480,8 +479,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitignoretemplate_csharp">
 <a href="#gitignoretemplate_csharp" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
@@ -490,8 +488,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasdownloads_csharp">
 <a href="#hasdownloads_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
@@ -500,8 +497,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasissues_csharp">
 <a href="#hasissues_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
@@ -511,8 +507,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasprojects_csharp">
 <a href="#hasprojects_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
@@ -521,8 +516,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haswiki_csharp">
 <a href="#haswiki_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
@@ -532,8 +526,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepageurl_csharp">
 <a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -542,8 +535,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_csharp">
 <a href="#istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -552,8 +544,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetemplate_csharp">
 <a href="#licensetemplate_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
@@ -562,8 +553,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -572,8 +562,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_csharp">
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -582,8 +571,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_csharp">
 <a href="#private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -593,8 +581,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -603,8 +590,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -613,8 +599,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -623,8 +608,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabilityalerts_csharp">
 <a href="#vulnerabilityalerts_csharp" style="color: inherit; text-decoration: inherit;">Vulnerability<wbr>Alerts</a>
@@ -633,14 +617,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmergecommit_go">
 <a href="#allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -649,8 +630,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrebasemerge_go">
 <a href="#allowrebasemerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
@@ -659,8 +639,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsquashmerge_go">
 <a href="#allowsquashmerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
@@ -669,8 +648,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveondestroy_go">
 <a href="#archiveondestroy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>On<wbr>Destroy</a>
@@ -679,8 +657,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archived_go">
 <a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -689,8 +666,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoinit_go">
 <a href="#autoinit_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
@@ -699,8 +675,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultbranch_go">
 <a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -711,8 +686,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="deletebranchonmerge_go">
 <a href="#deletebranchonmerge_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -721,8 +695,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -731,8 +704,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitignoretemplate_go">
 <a href="#gitignoretemplate_go" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
@@ -741,8 +713,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasdownloads_go">
 <a href="#hasdownloads_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
@@ -751,8 +722,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasissues_go">
 <a href="#hasissues_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
@@ -762,8 +732,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasprojects_go">
 <a href="#hasprojects_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
@@ -772,8 +741,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haswiki_go">
 <a href="#haswiki_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
@@ -783,8 +751,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepageurl_go">
 <a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -793,8 +760,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_go">
 <a href="#istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -803,8 +769,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetemplate_go">
 <a href="#licensetemplate_go" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
@@ -813,8 +778,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -823,8 +787,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_go">
 <a href="#pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -833,8 +796,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_go">
 <a href="#private_go" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -844,8 +806,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -854,8 +815,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -864,8 +824,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -874,8 +833,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabilityalerts_go">
 <a href="#vulnerabilityalerts_go" style="color: inherit; text-decoration: inherit;">Vulnerability<wbr>Alerts</a>
@@ -884,14 +842,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowmergecommit_nodejs">
 <a href="#allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
@@ -900,8 +855,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowrebasemerge_nodejs">
 <a href="#allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
@@ -910,8 +864,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsquashmerge_nodejs">
 <a href="#allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
@@ -920,8 +873,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveondestroy_nodejs">
 <a href="#archiveondestroy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>On<wbr>Destroy</a>
@@ -930,8 +882,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archived_nodejs">
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -940,8 +891,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoinit_nodejs">
 <a href="#autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
@@ -950,8 +900,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultbranch_nodejs">
 <a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
@@ -962,8 +911,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="deletebranchonmerge_nodejs">
 <a href="#deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -972,8 +920,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -982,8 +929,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitignoretemplate_nodejs">
 <a href="#gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
@@ -992,8 +938,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasdownloads_nodejs">
 <a href="#hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
@@ -1002,8 +947,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasissues_nodejs">
 <a href="#hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
@@ -1013,8 +957,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hasprojects_nodejs">
 <a href="#hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
@@ -1023,8 +966,7 @@ on the repository.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haswiki_nodejs">
 <a href="#haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
@@ -1034,8 +976,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepageurl_nodejs">
 <a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
@@ -1044,8 +985,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_nodejs">
 <a href="#istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
@@ -1054,8 +994,7 @@ the repository.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetemplate_nodejs">
 <a href="#licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
@@ -1064,8 +1003,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1074,8 +1012,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_nodejs">
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -1084,8 +1021,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_nodejs">
 <a href="#private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
@@ -1095,8 +1031,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1105,8 +1040,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1115,8 +1049,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1125,8 +1058,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabilityalerts_nodejs">
 <a href="#vulnerabilityalerts_nodejs" style="color: inherit; text-decoration: inherit;">vulnerability<wbr>Alerts</a>
@@ -1135,14 +1067,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_merge_commit_python">
 <a href="#allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
@@ -1151,8 +1080,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_rebase_merge_python">
 <a href="#allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
@@ -1161,8 +1089,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_squash_merge_python">
 <a href="#allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
@@ -1171,8 +1098,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archive_on_destroy_python">
 <a href="#archive_on_destroy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>on_<wbr>destroy</a>
@@ -1181,8 +1107,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archived_python">
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -1191,8 +1116,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_init_python">
 <a href="#auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
@@ -1201,8 +1125,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="default_branch_python">
 <a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
@@ -1213,8 +1136,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="delete_branch_on_merge_python">
 <a href="#delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
@@ -1223,8 +1145,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1233,8 +1154,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gitignore_template_python">
 <a href="#gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
@@ -1243,8 +1163,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_downloads_python">
 <a href="#has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
@@ -1253,8 +1172,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_issues_python">
 <a href="#has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
@@ -1264,8 +1182,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_projects_python">
 <a href="#has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
@@ -1274,8 +1191,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="has_wiki_python">
 <a href="#has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
@@ -1285,8 +1201,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepage_url_python">
 <a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
@@ -1295,8 +1210,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_template_python">
 <a href="#is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
@@ -1305,8 +1219,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_template_python">
 <a href="#license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
@@ -1315,8 +1228,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1325,8 +1237,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_python">
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -1335,8 +1246,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="private_python">
 <a href="#private_python" style="color: inherit; text-decoration: inherit;">private</a>
@@ -1346,8 +1256,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1356,8 +1265,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1366,8 +1274,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1376,8 +1283,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerability_alerts_python">
 <a href="#vulnerability_alerts_python" style="color: inherit; text-decoration: inherit;">vulnerability_<wbr>alerts</a>
@@ -1386,8 +1292,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1398,9 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1408,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -1418,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitcloneurl_csharp">
 <a href="#gitcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
@@ -1428,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_csharp">
 <a href="#htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -1438,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_csharp">
 <a href="#httpcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
@@ -1448,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1457,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1467,8 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoid_csharp">
 <a href="#repoid_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Id</a>
@@ -1477,8 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_csharp">
 <a href="#sshcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
@@ -1487,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="svnurl_csharp">
 <a href="#svnurl_csharp" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
@@ -1497,14 +1391,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1512,8 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -1522,8 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitcloneurl_go">
 <a href="#gitcloneurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
@@ -1532,8 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_go">
 <a href="#htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -1542,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_go">
 <a href="#httpcloneurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
@@ -1552,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1561,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1571,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoid_go">
 <a href="#repoid_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Id</a>
@@ -1581,8 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_go">
 <a href="#sshcloneurl_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
@@ -1591,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="svnurl_go">
 <a href="#svnurl_go" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
@@ -1601,14 +1483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1616,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
@@ -1626,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gitcloneurl_nodejs">
 <a href="#gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
@@ -1636,8 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_nodejs">
 <a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -1646,8 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpcloneurl_nodejs">
 <a href="#httpcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Clone<wbr>Url</a>
@@ -1656,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1665,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -1675,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoid_nodejs">
 <a href="#repoid_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Id</a>
@@ -1685,8 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshcloneurl_nodejs">
 <a href="#sshcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Clone<wbr>Url</a>
@@ -1695,8 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="svnurl_nodejs">
 <a href="#svnurl_nodejs" style="color: inherit; text-decoration: inherit;">svn<wbr>Url</a>
@@ -1705,14 +1575,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1720,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="full_name_python">
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
@@ -1730,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_clone_url_python">
 <a href="#git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
@@ -1740,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="html_url_python">
 <a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -1750,8 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_clone_url_python">
 <a href="#http_clone_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>clone_<wbr>url</a>
@@ -1760,8 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1769,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -1779,8 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repo_id_python">
 <a href="#repo_id_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>id</a>
@@ -1789,8 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_clone_url_python">
 <a href="#ssh_clone_url_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>clone_<wbr>url</a>
@@ -1799,8 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="svn_url_python">
 <a href="#svn_url_python" style="color: inherit; text-decoration: inherit;">svn_<wbr>url</a>
@@ -1809,8 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1937,9 +1794,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowmergecommit_csharp">
 <a href="#state_allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -1948,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowrebasemerge_csharp">
 <a href="#state_allowrebasemerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
@@ -1958,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsquashmerge_csharp">
 <a href="#state_allowsquashmerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
@@ -1968,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archiveondestroy_csharp">
 <a href="#state_archiveondestroy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>On<wbr>Destroy</a>
@@ -1978,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archived_csharp">
 <a href="#state_archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -1988,8 +1839,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoinit_csharp">
 <a href="#state_autoinit_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
@@ -1998,8 +1848,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultbranch_csharp">
 <a href="#state_defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -2010,8 +1859,7 @@ The following state arguments are supported:
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletebranchonmerge_csharp">
 <a href="#state_deletebranchonmerge_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -2020,8 +1868,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2030,8 +1877,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2039,8 +1885,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullname_csharp">
 <a href="#state_fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -2049,8 +1894,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitcloneurl_csharp">
 <a href="#state_gitcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
@@ -2059,8 +1903,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitignoretemplate_csharp">
 <a href="#state_gitignoretemplate_csharp" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
@@ -2069,8 +1912,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasdownloads_csharp">
 <a href="#state_hasdownloads_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
@@ -2079,8 +1921,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasissues_csharp">
 <a href="#state_hasissues_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
@@ -2090,8 +1931,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasprojects_csharp">
 <a href="#state_hasprojects_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
@@ -2100,8 +1940,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haswiki_csharp">
 <a href="#state_haswiki_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
@@ -2111,8 +1950,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepageurl_csharp">
 <a href="#state_homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -2121,8 +1959,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_csharp">
 <a href="#state_htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -2131,8 +1968,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_csharp">
 <a href="#state_httpcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
@@ -2141,8 +1977,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_csharp">
 <a href="#state_istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -2151,8 +1986,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetemplate_csharp">
 <a href="#state_licensetemplate_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
@@ -2161,8 +1995,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2171,8 +2004,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_csharp">
 <a href="#state_nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -2181,8 +2013,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pages_csharp">
 <a href="#state_pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -2191,8 +2022,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_csharp">
 <a href="#state_private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -2202,8 +2032,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_repoid_csharp">
 <a href="#state_repoid_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Id</a>
@@ -2212,8 +2041,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_csharp">
 <a href="#state_sshcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
@@ -2222,8 +2050,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_svnurl_csharp">
 <a href="#state_svnurl_csharp" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
@@ -2232,8 +2059,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -2242,8 +2068,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_csharp">
 <a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -2252,8 +2077,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_csharp">
 <a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -2262,8 +2086,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vulnerabilityalerts_csharp">
 <a href="#state_vulnerabilityalerts_csharp" style="color: inherit; text-decoration: inherit;">Vulnerability<wbr>Alerts</a>
@@ -2272,14 +2095,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowmergecommit_go">
 <a href="#state_allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
@@ -2288,8 +2108,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowrebasemerge_go">
 <a href="#state_allowrebasemerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
@@ -2298,8 +2117,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsquashmerge_go">
 <a href="#state_allowsquashmerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
@@ -2308,8 +2126,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archiveondestroy_go">
 <a href="#state_archiveondestroy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>On<wbr>Destroy</a>
@@ -2318,8 +2135,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archived_go">
 <a href="#state_archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -2328,8 +2144,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoinit_go">
 <a href="#state_autoinit_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
@@ -2338,8 +2153,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultbranch_go">
 <a href="#state_defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -2350,8 +2164,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletebranchonmerge_go">
 <a href="#state_deletebranchonmerge_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -2360,8 +2173,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2370,8 +2182,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2379,8 +2190,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullname_go">
 <a href="#state_fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
@@ -2389,8 +2199,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitcloneurl_go">
 <a href="#state_gitcloneurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
@@ -2399,8 +2208,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitignoretemplate_go">
 <a href="#state_gitignoretemplate_go" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
@@ -2409,8 +2217,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasdownloads_go">
 <a href="#state_hasdownloads_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
@@ -2419,8 +2226,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasissues_go">
 <a href="#state_hasissues_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
@@ -2430,8 +2236,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasprojects_go">
 <a href="#state_hasprojects_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
@@ -2440,8 +2245,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haswiki_go">
 <a href="#state_haswiki_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
@@ -2451,8 +2255,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepageurl_go">
 <a href="#state_homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
@@ -2461,8 +2264,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_go">
 <a href="#state_htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -2471,8 +2273,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_go">
 <a href="#state_httpcloneurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
@@ -2481,8 +2282,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_go">
 <a href="#state_istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -2491,8 +2291,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetemplate_go">
 <a href="#state_licensetemplate_go" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
@@ -2501,8 +2300,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2511,8 +2309,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_go">
 <a href="#state_nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -2521,8 +2318,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pages_go">
 <a href="#state_pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -2531,8 +2327,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_go">
 <a href="#state_private_go" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -2542,8 +2337,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_repoid_go">
 <a href="#state_repoid_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Id</a>
@@ -2552,8 +2346,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_go">
 <a href="#state_sshcloneurl_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
@@ -2562,8 +2355,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_svnurl_go">
 <a href="#state_svnurl_go" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
@@ -2572,8 +2364,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -2582,8 +2373,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_go">
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -2592,8 +2382,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_go">
 <a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -2602,8 +2391,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vulnerabilityalerts_go">
 <a href="#state_vulnerabilityalerts_go" style="color: inherit; text-decoration: inherit;">Vulnerability<wbr>Alerts</a>
@@ -2612,14 +2400,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowmergecommit_nodejs">
 <a href="#state_allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
@@ -2628,8 +2413,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowrebasemerge_nodejs">
 <a href="#state_allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
@@ -2638,8 +2422,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsquashmerge_nodejs">
 <a href="#state_allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
@@ -2648,8 +2431,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archiveondestroy_nodejs">
 <a href="#state_archiveondestroy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>On<wbr>Destroy</a>
@@ -2658,8 +2440,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archived_nodejs">
 <a href="#state_archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -2668,8 +2449,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoinit_nodejs">
 <a href="#state_autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
@@ -2678,8 +2458,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultbranch_nodejs">
 <a href="#state_defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
@@ -2690,8 +2469,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletebranchonmerge_nodejs">
 <a href="#state_deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
@@ -2700,8 +2478,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2710,8 +2487,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2719,8 +2495,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullname_nodejs">
 <a href="#state_fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
@@ -2729,8 +2504,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitcloneurl_nodejs">
 <a href="#state_gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
@@ -2739,8 +2513,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitignoretemplate_nodejs">
 <a href="#state_gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
@@ -2749,8 +2522,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasdownloads_nodejs">
 <a href="#state_hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
@@ -2759,8 +2531,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasissues_nodejs">
 <a href="#state_hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
@@ -2770,8 +2541,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hasprojects_nodejs">
 <a href="#state_hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
@@ -2780,8 +2550,7 @@ on the repository.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haswiki_nodejs">
 <a href="#state_haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
@@ -2791,8 +2560,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepageurl_nodejs">
 <a href="#state_homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
@@ -2801,8 +2569,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_nodejs">
 <a href="#state_htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -2811,8 +2578,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcloneurl_nodejs">
 <a href="#state_httpcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Clone<wbr>Url</a>
@@ -2821,8 +2587,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_nodejs">
 <a href="#state_istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
@@ -2831,8 +2596,7 @@ the repository.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetemplate_nodejs">
 <a href="#state_licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
@@ -2841,8 +2605,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2851,8 +2614,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodeid_nodejs">
 <a href="#state_nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -2861,8 +2623,7 @@ the repository.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pages_nodejs">
 <a href="#state_pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -2871,8 +2632,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_nodejs">
 <a href="#state_private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
@@ -2882,8 +2642,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_repoid_nodejs">
 <a href="#state_repoid_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Id</a>
@@ -2892,8 +2651,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshcloneurl_nodejs">
 <a href="#state_sshcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Clone<wbr>Url</a>
@@ -2902,8 +2660,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_svnurl_nodejs">
 <a href="#state_svnurl_nodejs" style="color: inherit; text-decoration: inherit;">svn<wbr>Url</a>
@@ -2912,8 +2669,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -2922,8 +2678,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_nodejs">
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -2932,8 +2687,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_nodejs">
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -2942,8 +2696,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vulnerabilityalerts_nodejs">
 <a href="#state_vulnerabilityalerts_nodejs" style="color: inherit; text-decoration: inherit;">vulnerability<wbr>Alerts</a>
@@ -2952,14 +2705,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_merge_commit_python">
 <a href="#state_allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
@@ -2968,8 +2718,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_rebase_merge_python">
 <a href="#state_allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
@@ -2978,8 +2727,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_squash_merge_python">
 <a href="#state_allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
@@ -2988,8 +2736,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archive_on_destroy_python">
 <a href="#state_archive_on_destroy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>on_<wbr>destroy</a>
@@ -2998,8 +2745,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_archived_python">
 <a href="#state_archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -3008,8 +2754,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_init_python">
 <a href="#state_auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
@@ -3018,8 +2763,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_default_branch_python">
 <a href="#state_default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
@@ -3030,8 +2774,7 @@ Repositories are created as public (e.g. open source) by default.
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
 initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the github_branch_default resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_branch_on_merge_python">
 <a href="#state_delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
@@ -3040,8 +2783,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3050,8 +2792,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3059,8 +2800,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_name_python">
 <a href="#state_full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
@@ -3069,8 +2809,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_git_clone_url_python">
 <a href="#state_git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
@@ -3079,8 +2818,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitignore_template_python">
 <a href="#state_gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
@@ -3089,8 +2827,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_has_downloads_python">
 <a href="#state_has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
@@ -3099,8 +2836,7 @@ initial repository creation and create the target branch inside of the repositor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_has_issues_python">
 <a href="#state_has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
@@ -3110,8 +2846,7 @@ initial repository creation and create the target branch inside of the repositor
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_has_projects_python">
 <a href="#state_has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
@@ -3120,8 +2855,7 @@ on the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_has_wiki_python">
 <a href="#state_has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
@@ -3131,8 +2865,7 @@ on the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepage_url_python">
 <a href="#state_homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
@@ -3141,8 +2874,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_html_url_python">
 <a href="#state_html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -3151,8 +2883,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_clone_url_python">
 <a href="#state_http_clone_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>clone_<wbr>url</a>
@@ -3161,8 +2892,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_template_python">
 <a href="#state_is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
@@ -3171,8 +2901,7 @@ the repository.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_template_python">
 <a href="#state_license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
@@ -3181,8 +2910,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3191,8 +2919,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_id_python">
 <a href="#state_node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -3201,8 +2928,7 @@ the repository.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pages_python">
 <a href="#state_pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -3211,8 +2937,7 @@ the repository.
         <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The repository's Github Pages configuration. See Github Pages Configuration below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_private_python">
 <a href="#state_private_python" style="color: inherit; text-decoration: inherit;">private</a>
@@ -3222,8 +2947,7 @@ the repository.
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use visibility instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_repo_id_python">
 <a href="#state_repo_id_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>id</a>
@@ -3232,8 +2956,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Github ID for the repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssh_clone_url_python">
 <a href="#state_ssh_clone_url_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>clone_<wbr>url</a>
@@ -3242,8 +2965,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_svn_url_python">
 <a href="#state_svn_url_python" style="color: inherit; text-decoration: inherit;">svn_<wbr>url</a>
@@ -3252,8 +2974,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -3262,8 +2983,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_python">
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -3272,8 +2992,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_python">
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -3282,8 +3001,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vulnerability_alerts_python">
 <a href="#state_vulnerability_alerts_python" style="color: inherit; text-decoration: inherit;">vulnerability_<wbr>alerts</a>
@@ -3292,8 +3010,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3308,9 +3025,7 @@ Repositories are created as public (e.g. open source) by default.
 <h4 id="repositorypages">Repository<wbr>Pages</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3319,8 +3034,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_csharp">
 <a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -3329,8 +3043,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom404_csharp">
 <a href="#custom404_csharp" style="color: inherit; text-decoration: inherit;">Custom404</a>
@@ -3339,8 +3052,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_csharp">
 <a href="#htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -3349,8 +3061,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -3359,8 +3070,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -3368,14 +3078,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3384,8 +3091,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_go">
 <a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -3394,8 +3100,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom404_go">
 <a href="#custom404_go" style="color: inherit; text-decoration: inherit;">Custom404</a>
@@ -3404,8 +3109,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_go">
 <a href="#htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -3414,8 +3118,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -3424,8 +3127,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -3433,14 +3135,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3449,8 +3148,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_nodejs">
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -3459,8 +3157,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom404_nodejs">
 <a href="#custom404_nodejs" style="color: inherit; text-decoration: inherit;">custom404</a>
@@ -3469,8 +3166,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="htmlurl_nodejs">
 <a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -3479,8 +3175,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3489,8 +3184,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3498,14 +3192,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3514,8 +3205,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See Github Pages Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_python">
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -3524,8 +3214,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom404_python">
 <a href="#custom404_python" style="color: inherit; text-decoration: inherit;">custom404</a>
@@ -3534,8 +3223,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rendered Github Pages site has a custom 404 page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="html_url_python">
 <a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -3544,8 +3232,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered Github Pages site e.g. `https://username.github.io`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3554,8 +3241,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Github Pages site's build status e.g. `building` or `built`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3563,16 +3249,13 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="repositorypagessource">Repository<wbr>Pages<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -3581,8 +3264,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3591,14 +3273,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -3607,8 +3286,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3617,14 +3295,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -3633,8 +3308,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3643,14 +3317,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -3659,8 +3330,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3669,16 +3339,13 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="repositorytemplate">Repository<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -3686,8 +3353,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -3695,14 +3361,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -3710,8 +3373,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -3719,14 +3381,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -3734,8 +3393,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -3743,14 +3401,11 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -3758,8 +3413,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -3767,8 +3421,7 @@ Repositories are created as public (e.g. open source) by default.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3789,6 +3442,6 @@ Repositories can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 </dl>
 

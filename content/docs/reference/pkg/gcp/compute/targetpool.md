@@ -17,11 +17,17 @@ documentation](https://cloud.google.com/compute/docs/load-balancing/network/targ
 and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -91,9 +100,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -110,9 +122,12 @@ default_target_pool = gcp.compute.TargetPool("defaultTargetPool",
     health_checks=[default_http_health_check.name])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -132,9 +147,16 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TargetPool Resource {#create}
@@ -159,9 +181,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +189,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +197,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +205,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -218,9 +231,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -228,9 +239,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +247,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +255,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,18 +263,13 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -277,9 +277,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -287,9 +285,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -297,10 +293,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -315,9 +308,7 @@ The TargetPool resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backuppool_csharp">
 <a href="#backuppool_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -327,8 +318,7 @@ The TargetPool resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -337,8 +327,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverratio_csharp">
 <a href="#failoverratio_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
@@ -348,8 +337,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_csharp">
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
@@ -359,8 +347,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -373,8 +360,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -384,8 +370,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -395,8 +380,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -406,8 +390,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_csharp">
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -418,14 +401,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backuppool_go">
 <a href="#backuppool_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -435,8 +415,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -445,8 +424,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverratio_go">
 <a href="#failoverratio_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
@@ -456,8 +434,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_go">
 <a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
@@ -467,8 +444,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -481,8 +457,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -492,8 +467,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -503,8 +477,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -514,8 +487,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -526,14 +498,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backuppool_nodejs">
 <a href="#backuppool_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Pool</a>
@@ -543,8 +512,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -553,8 +521,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverratio_nodejs">
 <a href="#failoverratio_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Ratio</a>
@@ -564,8 +531,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_nodejs">
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
@@ -575,8 +541,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -589,8 +554,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +564,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -611,8 +574,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -622,8 +584,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_nodejs">
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
@@ -634,14 +595,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backup_pool_python">
 <a href="#backup_pool_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>pool</a>
@@ -651,8 +609,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -661,8 +618,7 @@ failover\_ratio.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_ratio_python">
 <a href="#failover_ratio_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>ratio</a>
@@ -672,8 +628,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_checks_python">
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
@@ -683,8 +638,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -697,8 +651,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -708,8 +661,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -719,8 +671,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -730,8 +681,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_affinity_python">
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
@@ -742,8 +692,7 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -754,9 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -764,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -774,14 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -789,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -799,14 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -814,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -824,14 +762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -839,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -849,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,9 +910,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backuppool_csharp">
 <a href="#state_backuppool_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -989,8 +920,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -999,8 +929,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverratio_csharp">
 <a href="#state_failoverratio_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
@@ -1010,8 +939,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_csharp">
 <a href="#state_healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
@@ -1021,8 +949,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_csharp">
 <a href="#state_instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1035,8 +962,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1046,8 +972,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1057,8 +982,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1068,8 +992,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1078,8 +1001,7 @@ region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_csharp">
 <a href="#state_sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -1090,14 +1012,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backuppool_go">
 <a href="#state_backuppool_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Pool</a>
@@ -1107,8 +1026,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1117,8 +1035,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverratio_go">
 <a href="#state_failoverratio_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
@@ -1128,8 +1045,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_go">
 <a href="#state_healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
@@ -1139,8 +1055,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_go">
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1153,8 +1068,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1164,8 +1078,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1175,8 +1088,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1186,8 +1098,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1196,8 +1107,7 @@ region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_go">
 <a href="#state_sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -1208,14 +1118,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backuppool_nodejs">
 <a href="#state_backuppool_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Pool</a>
@@ -1225,8 +1132,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1235,8 +1141,7 @@ failover\_ratio.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverratio_nodejs">
 <a href="#state_failoverratio_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Ratio</a>
@@ -1246,8 +1151,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_nodejs">
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
@@ -1257,8 +1161,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_nodejs">
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1271,8 +1174,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1282,8 +1184,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1293,8 +1194,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1304,8 +1204,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1314,8 +1213,7 @@ region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_nodejs">
 <a href="#state_sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
@@ -1326,14 +1224,11 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_pool_python">
 <a href="#state_backup_pool_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>pool</a>
@@ -1343,8 +1238,7 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
     </dt>
     <dd>{{% md %}}URL to the backup target pool. Must also set
 failover\_ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1353,8 +1247,7 @@ failover\_ratio.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual description field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_ratio_python">
 <a href="#state_failover_ratio_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>ratio</a>
@@ -1364,8 +1257,7 @@ failover\_ratio.
     </dt>
     <dd>{{% md %}}Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_checks_python">
 <a href="#state_health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
@@ -1375,8 +1267,7 @@ backup pool (which must also be set).
     </dt>
     <dd>{{% md %}}List of zero or one health check name or self_link. Only
 legacy `gcp.compute.HttpHealthCheck` is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_python">
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1389,8 +1280,7 @@ URLs, or in the form of "zone/name". Note that the instances need not exist
 at the time of target pool creation, so there is no need to use the
 interpolation to create a dependency on the instances from the
 target pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1400,8 +1290,7 @@ target pool.
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1411,8 +1300,7 @@ this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1422,8 +1310,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Where the target pool resides. Defaults to project
 region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1432,8 +1319,7 @@ region.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_affinity_python">
 <a href="#state_session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
@@ -1444,8 +1330,7 @@ region.
     <dd>{{% md %}}How to distribute load. Options are "NONE" (no
 affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1483,6 +1368,6 @@ Target pools can be imported using any of the following formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

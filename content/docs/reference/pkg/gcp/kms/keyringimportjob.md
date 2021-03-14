@@ -49,9 +49,7 @@ To get more information about KeyRingImportJob, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -59,9 +57,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -69,9 +65,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -79,10 +73,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -108,9 +99,7 @@ To get more information about KeyRingImportJob, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -118,9 +107,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -128,9 +115,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -138,9 +123,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -148,18 +131,13 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +145,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +153,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +161,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +176,7 @@ The KeyRingImportJob resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importjobid_csharp">
 <a href="#importjobid_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Job<wbr>Id</a>
@@ -216,8 +185,7 @@ The KeyRingImportJob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importmethod_csharp">
 <a href="#importmethod_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
@@ -227,8 +195,7 @@ The KeyRingImportJob resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyring_csharp">
 <a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -238,8 +205,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protectionlevel_csharp">
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -250,14 +216,11 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importjobid_go">
 <a href="#importjobid_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Job<wbr>Id</a>
@@ -266,8 +229,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importmethod_go">
 <a href="#importmethod_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
@@ -277,8 +239,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyring_go">
 <a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -288,8 +249,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protectionlevel_go">
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -300,14 +260,11 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importjobid_nodejs">
 <a href="#importjobid_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job<wbr>Id</a>
@@ -316,8 +273,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importmethod_nodejs">
 <a href="#importmethod_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Method</a>
@@ -327,8 +283,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyring_nodejs">
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
@@ -338,8 +293,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protectionlevel_nodejs">
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
@@ -350,14 +304,11 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="import_job_id_python">
 <a href="#import_job_id_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job_<wbr>id</a>
@@ -366,8 +317,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_method_python">
 <a href="#import_method_python" style="color: inherit; text-decoration: inherit;">import_<wbr>method</a>
@@ -377,8 +327,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_ring_python">
 <a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
@@ -388,8 +337,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protection_level_python">
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
@@ -400,8 +348,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -412,9 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attestations_csharp">
 <a href="#attestations_csharp" style="color: inherit; text-decoration: inherit;">Attestations</a>
@@ -425,8 +370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -435,8 +379,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -444,8 +387,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -454,8 +396,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -464,8 +405,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type"><a href="#keyringimportjobpublickey">List&lt;Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -474,14 +414,11 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attestations_go">
 <a href="#attestations_go" style="color: inherit; text-decoration: inherit;">Attestations</a>
@@ -492,8 +429,7 @@ ImportMethod is one with a protection level of HSM.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -502,8 +438,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -511,8 +446,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -521,8 +455,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -531,8 +464,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type"><a href="#keyringimportjobpublickey">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -541,14 +473,11 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attestations_nodejs">
 <a href="#attestations_nodejs" style="color: inherit; text-decoration: inherit;">attestations</a>
@@ -559,8 +488,7 @@ ImportMethod is one with a protection level of HSM.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -569,8 +497,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,8 +505,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -588,8 +514,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -598,8 +523,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type"><a href="#keyringimportjobpublickey">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -608,14 +532,11 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attestations_python">
 <a href="#attestations_python" style="color: inherit; text-decoration: inherit;">attestations</a>
@@ -626,8 +547,7 @@ ImportMethod is one with a protection level of HSM.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -636,8 +556,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -645,8 +564,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -655,8 +573,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -665,8 +582,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type"><a href="#keyringimportjobpublickey">Sequence[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -675,8 +591,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -803,9 +718,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestations_csharp">
 <a href="#state_attestations_csharp" style="color: inherit; text-decoration: inherit;">Attestations</a>
@@ -816,8 +729,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiretime_csharp">
 <a href="#state_expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -826,8 +738,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importjobid_csharp">
 <a href="#state_importjobid_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Job<wbr>Id</a>
@@ -836,8 +747,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importmethod_csharp">
 <a href="#state_importmethod_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
@@ -847,8 +757,7 @@ ImportMethod is one with a protection level of HSM.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_csharp">
 <a href="#state_keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -858,8 +767,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -868,8 +776,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectionlevel_csharp">
 <a href="#state_protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -880,8 +787,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_csharp">
 <a href="#state_publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -890,8 +796,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type"><a href="#keyringimportjobpublickey">List&lt;Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -900,14 +805,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestations_go">
 <a href="#state_attestations_go" style="color: inherit; text-decoration: inherit;">Attestations</a>
@@ -918,8 +820,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiretime_go">
 <a href="#state_expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -928,8 +829,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importjobid_go">
 <a href="#state_importjobid_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Job<wbr>Id</a>
@@ -938,8 +838,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importmethod_go">
 <a href="#state_importmethod_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Method</a>
@@ -949,8 +848,7 @@ ImportMethod is one with a protection level of HSM.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_go">
 <a href="#state_keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -960,8 +858,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -970,8 +867,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectionlevel_go">
 <a href="#state_protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -982,8 +878,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_go">
 <a href="#state_publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -992,8 +887,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type"><a href="#keyringimportjobpublickey">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1002,14 +896,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestations_nodejs">
 <a href="#state_attestations_nodejs" style="color: inherit; text-decoration: inherit;">attestations</a>
@@ -1020,8 +911,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiretime_nodejs">
 <a href="#state_expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -1030,8 +920,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importjobid_nodejs">
 <a href="#state_importjobid_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job<wbr>Id</a>
@@ -1040,8 +929,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importmethod_nodejs">
 <a href="#state_importmethod_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Method</a>
@@ -1051,8 +939,7 @@ ImportMethod is one with a protection level of HSM.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_nodejs">
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
@@ -1062,8 +949,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1072,8 +958,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectionlevel_nodejs">
 <a href="#state_protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
@@ -1084,8 +969,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_nodejs">
 <a href="#state_publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -1094,8 +978,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type"><a href="#keyringimportjobpublickey">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1104,14 +987,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestations_python">
 <a href="#state_attestations_python" style="color: inherit; text-decoration: inherit;">attestations</a>
@@ -1122,8 +1002,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
 ImportMethod is one with a protection level of HSM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expire_time_python">
 <a href="#state_expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -1132,8 +1011,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_job_id_python">
 <a href="#state_import_job_id_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job_<wbr>id</a>
@@ -1142,8 +1020,7 @@ ImportMethod is one with a protection level of HSM.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_method_python">
 <a href="#state_import_method_python" style="color: inherit; text-decoration: inherit;">import_<wbr>method</a>
@@ -1153,8 +1030,7 @@ ImportMethod is one with a protection level of HSM.
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_ring_python">
 <a href="#state_key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
@@ -1164,8 +1040,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1174,8 +1049,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protection_level_python">
 <a href="#state_protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
@@ -1186,8 +1060,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_keys_python">
 <a href="#state_public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -1196,8 +1069,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type"><a href="#keyringimportjobpublickey">Sequence[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1206,8 +1078,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1222,9 +1093,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <h4 id="keyringimportjobattestation">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1232,8 +1101,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1241,14 +1109,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1256,8 +1121,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1265,14 +1129,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1280,8 +1141,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1289,14 +1149,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1304,8 +1161,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1313,16 +1169,13 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyringimportjobpublickey">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pem_csharp">
 <a href="#pem_csharp" style="color: inherit; text-decoration: inherit;">Pem</a>
@@ -1330,14 +1183,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pem_go">
 <a href="#pem_go" style="color: inherit; text-decoration: inherit;">Pem</a>
@@ -1345,14 +1195,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pem_nodejs">
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
@@ -1360,14 +1207,11 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pem_python">
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>
@@ -1375,8 +1219,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1397,6 +1240,6 @@ KeyRingImportJob can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

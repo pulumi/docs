@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="galleries_csharp">
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedata_csharp">
 <a href="#templatedata_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Data</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="author_csharp">
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localized_csharp">
 <a href="#localized_csharp" style="color: inherit; text-decoration: inherit;">Localized</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="galleries_go">
 <a href="#galleries_go" style="color: inherit; text-decoration: inherit;">Galleries</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">[]Workbook<wbr>Template<wbr>Gallery<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedata_go">
 <a href="#templatedata_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Data</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="author_go">
 <a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localized_go">
 <a href="#localized_go" style="color: inherit; text-decoration: inherit;">Localized</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="galleries_nodejs">
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">Workbook<wbr>Template<wbr>Gallery<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templatedata_nodejs">
 <a href="#templatedata_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Data</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="author_nodejs">
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localized_nodejs">
 <a href="#localized_nodejs" style="color: inherit; text-decoration: inherit;">localized</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response[]}</span>
     </dt>
-    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -439,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="galleries_python">
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="template_data_python">
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="author_python">
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localized_python">
 <a href="#localized_python" style="color: inherit; text-decoration: inherit;">localized</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response]]</span>
     </dt>
-    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -578,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -587,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -596,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -671,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -680,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -689,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -698,14 +614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -722,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workbooktemplatelocalizedgalleryresponse">Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="galleries_csharp">
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedata_csharp">
 <a href="#templatedata_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Data</a>
@@ -777,14 +682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="galleries_go">
 <a href="#galleries_go" style="color: inherit; text-decoration: inherit;">Galleries</a>
@@ -792,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">[]Workbook<wbr>Template<wbr>Gallery<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedata_go">
 <a href="#templatedata_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Data</a>
@@ -801,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="galleries_nodejs">
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
@@ -816,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">Workbook<wbr>Template<wbr>Gallery<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedata_nodejs">
 <a href="#templatedata_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Data</a>
@@ -825,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="galleries_python">
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_data_python">
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

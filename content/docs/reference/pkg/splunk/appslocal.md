@@ -1,8 +1,8 @@
 
 ---
 title: "AppsLocal"
-title_tag: "Resource AppsLocal | Package Splunk"
-meta_desc: "Explore the AppsLocal resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AppsLocal"
+title_tag: "splunk.AppsLocal"
+meta_desc: "Documentation for the splunk.AppsLocal resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Create, install and manage apps on your Splunk instance
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -76,9 +88,12 @@ amazon_connect_app = splunk.AppsLocal("amazonConnectApp",
     filename=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -90,9 +105,16 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AppsLocal Resource {#create}
@@ -117,9 +139,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -127,9 +147,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -137,9 +155,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -147,10 +163,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -176,9 +189,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -186,9 +197,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -196,9 +205,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -206,9 +213,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -216,18 +221,13 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -235,9 +235,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -245,9 +243,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -255,10 +251,7 @@ const amazonConnectApp = new splunk.AppsLocal("amazon_connect_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -273,9 +266,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -284,8 +275,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_csharp">
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -294,8 +284,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_csharp">
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -304,8 +293,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configured_csharp">
 <a href="#configured_csharp" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -316,8 +304,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -326,8 +313,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitappname_csharp">
 <a href="#explicitappname_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Appname</a>
@@ -336,8 +322,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -348,8 +333,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -358,8 +342,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -371,8 +354,7 @@ The AppsLocal resource accepts the following [input]({{< relref "/docs/intro/con
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_csharp">
 <a href="#session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -381,8 +363,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_csharp">
 <a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -393,8 +374,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -403,8 +383,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visible_csharp">
 <a href="#visible_csharp" style="color: inherit; text-decoration: inherit;">Visible</a>
@@ -415,14 +394,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -431,8 +407,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_go">
 <a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -441,8 +416,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_go">
 <a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -451,8 +425,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configured_go">
 <a href="#configured_go" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -463,8 +436,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -473,8 +445,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitappname_go">
 <a href="#explicitappname_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Appname</a>
@@ -483,8 +454,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -495,8 +465,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -505,8 +474,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -518,8 +486,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_go">
 <a href="#session_go" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -528,8 +495,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_go">
 <a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -540,8 +506,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -550,8 +515,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visible_go">
 <a href="#visible_go" style="color: inherit; text-decoration: inherit;">Visible</a>
@@ -562,14 +526,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -578,8 +539,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_nodejs">
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -588,8 +548,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_nodejs">
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
@@ -598,8 +557,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configured_nodejs">
 <a href="#configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -610,8 +568,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -620,8 +577,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitappname_nodejs">
 <a href="#explicitappname_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Appname</a>
@@ -630,8 +586,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -642,8 +597,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -652,8 +606,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -665,8 +618,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_nodejs">
 <a href="#session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
@@ -675,8 +627,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_nodejs">
 <a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
@@ -687,8 +638,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -697,8 +647,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visible_nodejs">
 <a href="#visible_nodejs" style="color: inherit; text-decoration: inherit;">visible</a>
@@ -709,14 +658,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -725,8 +671,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_python">
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -735,8 +680,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_python">
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
@@ -745,8 +689,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configured_python">
 <a href="#configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -757,8 +700,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -767,8 +709,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicit_appname_python">
 <a href="#explicit_appname_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>appname</a>
@@ -777,8 +718,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -789,8 +729,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -799,8 +738,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -812,8 +750,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_python">
 <a href="#session_python" style="color: inherit; text-decoration: inherit;">session</a>
@@ -822,8 +759,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_python">
 <a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
@@ -834,8 +770,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -844,8 +779,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visible_python">
 <a href="#visible_python" style="color: inherit; text-decoration: inherit;">visible</a>
@@ -856,8 +790,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -868,9 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -878,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -893,14 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,14 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -923,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1051,9 +972,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1062,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_csharp">
 <a href="#state_auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -1072,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_author_csharp">
 <a href="#state_author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -1082,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configured_csharp">
 <a href="#state_configured_csharp" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -1094,8 +1010,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1104,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitappname_csharp">
 <a href="#state_explicitappname_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Appname</a>
@@ -1114,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_csharp">
 <a href="#state_filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1126,8 +1039,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1136,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1149,8 +1060,7 @@ The following state arguments are supported:
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_csharp">
 <a href="#state_session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -1159,8 +1069,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_csharp">
 <a href="#state_update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -1171,8 +1080,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1181,8 +1089,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visible_csharp">
 <a href="#state_visible_csharp" style="color: inherit; text-decoration: inherit;">Visible</a>
@@ -1193,14 +1100,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1209,8 +1113,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_go">
 <a href="#state_auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
@@ -1219,8 +1122,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_author_go">
 <a href="#state_author_go" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -1229,8 +1131,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configured_go">
 <a href="#state_configured_go" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -1241,8 +1142,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1251,8 +1151,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitappname_go">
 <a href="#state_explicitappname_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Appname</a>
@@ -1261,8 +1160,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_go">
 <a href="#state_filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1273,8 +1171,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1283,8 +1180,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1296,8 +1192,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_go">
 <a href="#state_session_go" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -1306,8 +1201,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_go">
 <a href="#state_update_go" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -1318,8 +1212,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1328,8 +1221,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visible_go">
 <a href="#state_visible_go" style="color: inherit; text-decoration: inherit;">Visible</a>
@@ -1340,14 +1232,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1356,8 +1245,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_nodejs">
 <a href="#state_auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -1366,8 +1254,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_author_nodejs">
 <a href="#state_author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
@@ -1376,8 +1263,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configured_nodejs">
 <a href="#state_configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -1388,8 +1274,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1398,8 +1283,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitappname_nodejs">
 <a href="#state_explicitappname_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Appname</a>
@@ -1408,8 +1292,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_nodejs">
 <a href="#state_filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1420,8 +1303,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1430,8 +1312,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1443,8 +1324,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_nodejs">
 <a href="#state_session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
@@ -1453,8 +1333,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_nodejs">
 <a href="#state_update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
@@ -1465,8 +1344,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1475,8 +1353,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visible_nodejs">
 <a href="#state_visible_nodejs" style="color: inherit; text-decoration: inherit;">visible</a>
@@ -1487,14 +1364,11 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1503,8 +1377,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type"><a href="#appslocalacl">Apps<wbr>Local<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_python">
 <a href="#state_auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
@@ -1513,8 +1386,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Splunkbase session token for operations like install and update that require login. Use auth or session when installing or updating an app through Splunkbase.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_author_python">
 <a href="#state_author_python" style="color: inherit; text-decoration: inherit;">author</a>
@@ -1523,8 +1395,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For apps posted to Splunkbase, use your Splunk account username. For internal apps, include your name and contact information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configured_python">
 <a href="#state_configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -1535,8 +1406,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Custom setup complete indication:
 <br>true = Custom app setup complete.
 <br>false = Custom app setup not complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1545,8 +1415,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short app description also displayed below the app title in Splunk Web Launcher.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicit_appname_python">
 <a href="#state_explicit_appname_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>appname</a>
@@ -1555,8 +1424,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom app name. Overrides name when installing an app from a file where filename is set to true. See also filename.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_python">
 <a href="#state_filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1567,8 +1435,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether to use the name value as the app source location.
 <br>true indicates that name is a path to a file to install.
 <br>false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1577,8 +1444,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App name displayed in Splunk Web, from five to eighty characters excluding the prefix "Splunk for".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1590,8 +1456,7 @@ The app folder name cannot include spaces or special characters.
 <br>filename = false indicates that name is the literal app name and that the app is created from Splunkbase using a template.
 <br>filename = true indicates that name is the URL or path to the local .tar, .tgz or .spl file. If name is the Splunkbase URL, set auth or session to authenticate the request.
 The app folder name cannot include spaces or special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_python">
 <a href="#state_session_python" style="color: inherit; text-decoration: inherit;">session</a>
@@ -1600,8 +1465,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login session token for installing or updating an app on Splunkbase. Alternatively, use auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_python">
 <a href="#state_update_python" style="color: inherit; text-decoration: inherit;">update</a>
@@ -1612,8 +1476,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}File-based update indication:
 <br>true specifies that filename should be used to update an existing app. If not specified, update defaults to
 <br>false, which indicates that filename should not be used to update an existing app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1622,8 +1485,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visible_python">
 <a href="#state_visible_python" style="color: inherit; text-decoration: inherit;">visible</a>
@@ -1634,8 +1496,7 @@ The app folder name cannot include spaces or special characters.
     <dd>{{% md %}}Indicates whether the app is visible and navigable from Splunk Web.
 <br>true = App is visible and navigable.
 <br>false = App is not visible or navigable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1650,9 +1511,7 @@ The app folder name cannot include spaces or special characters.
 <h4 id="appslocalacl">Apps<wbr>Local<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1660,8 +1519,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1669,8 +1527,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1678,8 +1535,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1687,8 +1543,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1696,8 +1551,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1705,8 +1559,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1714,8 +1567,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1723,8 +1575,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1732,8 +1583,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1741,8 +1591,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1750,14 +1599,11 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1765,8 +1611,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1774,8 +1619,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1783,8 +1627,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1792,8 +1635,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1801,8 +1643,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1810,8 +1651,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1819,8 +1659,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1828,8 +1667,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1837,8 +1675,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1846,8 +1683,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1855,14 +1691,11 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1870,8 +1703,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -1879,8 +1711,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -1888,8 +1719,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -1897,8 +1727,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -1906,8 +1735,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -1915,8 +1743,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1924,8 +1751,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1933,8 +1759,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1942,8 +1767,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1951,8 +1775,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1960,14 +1783,11 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1975,8 +1795,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -1984,8 +1803,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -1993,8 +1811,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -2002,8 +1819,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -2011,8 +1827,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -2020,8 +1835,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -2029,8 +1843,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -2038,8 +1851,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -2047,8 +1859,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -2056,8 +1867,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -2065,8 +1875,7 @@ The app folder name cannot include spaces or special characters.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2077,6 +1886,6 @@ The app folder name cannot include spaces or special characters.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 </dl>
 

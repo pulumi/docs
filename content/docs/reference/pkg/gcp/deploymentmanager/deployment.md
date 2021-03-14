@@ -25,11 +25,17 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Deployment Manager Deployment Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -62,13 +68,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -85,9 +97,12 @@ deployment = gcp.deploymentmanager.Deployment("deployment",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -107,9 +122,16 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Deployment Resource {#create}
@@ -134,9 +156,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -144,9 +164,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -154,9 +172,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -164,10 +180,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +206,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -203,9 +214,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -213,9 +222,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -223,9 +230,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -233,18 +238,13 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -252,9 +252,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -262,9 +260,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -272,10 +268,7 @@ const deployment = new gcp.deploymentmanager.Deployment("deployment", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -290,9 +283,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -303,8 +294,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpolicy_csharp">
 <a href="#createpolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
@@ -319,8 +309,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_csharp">
 <a href="#deletepolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
@@ -336,8 +325,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -346,8 +334,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -357,8 +344,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -368,8 +354,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -385,8 +370,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -396,14 +380,11 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -414,8 +395,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpolicy_go">
 <a href="#createpolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
@@ -430,8 +410,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_go">
 <a href="#deletepolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
@@ -447,8 +426,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -457,8 +435,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -468,8 +445,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +455,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -496,8 +471,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -507,14 +481,11 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -525,8 +496,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpolicy_nodejs">
 <a href="#createpolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Policy</a>
@@ -541,8 +511,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_nodejs">
 <a href="#deletepolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Policy</a>
@@ -558,8 +527,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -568,8 +536,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -579,8 +546,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -590,8 +556,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -607,8 +572,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -618,14 +582,11 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -636,8 +597,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_policy_python">
 <a href="#create_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>policy</a>
@@ -652,8 +612,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_policy_python">
 <a href="#delete_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>policy</a>
@@ -669,8 +628,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -679,8 +637,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -690,8 +647,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -701,8 +657,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -718,8 +673,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -729,8 +683,7 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -741,9 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -752,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -761,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manifest_csharp">
 <a href="#manifest_csharp" style="color: inherit; text-decoration: inherit;">Manifest</a>
@@ -771,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -781,14 +729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -797,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -806,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manifest_go">
 <a href="#manifest_go" style="color: inherit; text-decoration: inherit;">Manifest</a>
@@ -816,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -826,14 +768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -842,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -851,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manifest_nodejs">
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
@@ -861,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -871,14 +807,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -887,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -896,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manifest_python">
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
@@ -906,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -916,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,9 +973,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createpolicy_csharp">
 <a href="#state_createpolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
@@ -1061,8 +988,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_csharp">
 <a href="#state_deletepolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
@@ -1078,8 +1004,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1088,8 +1013,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1098,8 +1022,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1109,8 +1032,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manifest_csharp">
 <a href="#state_manifest_csharp" style="color: inherit; text-decoration: inherit;">Manifest</a>
@@ -1119,8 +1041,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1130,8 +1051,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_csharp">
 <a href="#state_preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -1147,8 +1067,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1158,8 +1077,7 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1168,8 +1086,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1180,14 +1097,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createpolicy_go">
 <a href="#state_createpolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
@@ -1202,8 +1116,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_go">
 <a href="#state_deletepolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
@@ -1219,8 +1132,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1229,8 +1141,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1239,8 +1150,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1250,8 +1160,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manifest_go">
 <a href="#state_manifest_go" style="color: inherit; text-decoration: inherit;">Manifest</a>
@@ -1260,8 +1169,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1179,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_go">
 <a href="#state_preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -1288,8 +1195,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1299,8 +1205,7 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1309,8 +1214,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1321,14 +1225,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createpolicy_nodejs">
 <a href="#state_createpolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Policy</a>
@@ -1343,8 +1244,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_nodejs">
 <a href="#state_deletepolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Policy</a>
@@ -1360,8 +1260,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -1370,8 +1269,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1380,8 +1278,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1391,8 +1288,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manifest_nodejs">
 <a href="#state_manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
@@ -1401,8 +1297,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1412,8 +1307,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_nodejs">
 <a href="#state_preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1429,8 +1323,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1440,8 +1333,7 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1450,8 +1342,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1462,14 +1353,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_policy_python">
 <a href="#state_create_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>policy</a>
@@ -1484,8 +1372,7 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
 Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_policy_python">
 <a href="#state_delete_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>policy</a>
@@ -1501,8 +1388,7 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
 Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -1511,8 +1397,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1521,8 +1406,7 @@ Possible values are `ABANDON` and `DELETE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1532,8 +1416,7 @@ Possible values are `ABANDON` and `DELETE`.
     </dt>
     <dd>{{% md %}}Key-value pairs to apply to this labels.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manifest_python">
 <a href="#state_manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
@@ -1542,8 +1425,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1553,8 +1435,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_python">
 <a href="#state_preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1570,8 +1451,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1581,8 +1461,7 @@ to true or if other fields are updated while preview is true.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1591,8 +1470,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1603,8 +1481,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
 configuration and relevant templates.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1619,9 +1496,7 @@ Structure is documented below.
 <h4 id="deploymentlabel">Deployment<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1630,8 +1505,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1640,14 +1514,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1656,8 +1527,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1666,14 +1536,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1682,8 +1549,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1692,14 +1558,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1708,8 +1571,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for label.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1718,16 +1580,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of label.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymenttarget">Deployment<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1737,8 +1596,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imports_csharp">
 <a href="#imports_csharp" style="color: inherit; text-decoration: inherit;">Imports</a>
@@ -1750,14 +1608,11 @@ Structure is documented below.
 used to import templates or other files. For example, you might
 import a text file in order to use the file in a template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1767,8 +1622,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imports_go">
 <a href="#imports_go" style="color: inherit; text-decoration: inherit;">Imports</a>
@@ -1780,14 +1634,11 @@ Structure is documented below.
 used to import templates or other files. For example, you might
 import a text file in order to use the file in a template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1797,8 +1648,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imports_nodejs">
 <a href="#imports_nodejs" style="color: inherit; text-decoration: inherit;">imports</a>
@@ -1810,14 +1660,11 @@ Structure is documented below.
 used to import templates or other files. For example, you might
 import a text file in order to use the file in a template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1827,8 +1674,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The root configuration file to use for this deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imports_python">
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
@@ -1840,16 +1686,13 @@ Structure is documented below.
 used to import templates or other files. For example, you might
 import a text file in order to use the file in a template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1858,14 +1701,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1874,14 +1714,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1890,14 +1727,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1906,16 +1740,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymenttargetimport">Deployment<wbr>Target<wbr>Import</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1924,8 +1755,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1935,14 +1765,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1951,8 +1778,7 @@ configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1962,14 +1788,11 @@ configuration.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1978,8 +1801,7 @@ configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1989,14 +1811,11 @@ configuration.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2005,8 +1824,7 @@ configuration.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2016,8 +1834,7 @@ configuration.
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2046,6 +1863,6 @@ Deployment can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

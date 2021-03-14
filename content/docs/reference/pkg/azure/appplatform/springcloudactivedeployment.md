@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.appplatform.SpringCloudActiveDeployment 
 Manages an Active Azure Spring Cloud Deployment.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -130,9 +139,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -162,9 +174,12 @@ example_spring_cloud_active_deployment = azure.appplatform.SpringCloudActiveDepl
     deployment_name=example_spring_cloud_java_deployment.name)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -199,9 +214,16 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SpringCloudActiveDeployment Resource {#create}
@@ -226,9 +248,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +256,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +264,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,10 +272,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -285,9 +298,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -295,9 +306,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -305,9 +314,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -315,9 +322,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -325,18 +330,13 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -344,9 +344,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -354,9 +352,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -364,10 +360,7 @@ const exampleSpringCloudActiveDeployment = new azure.appplatform.SpringCloudActi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -382,9 +375,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_csharp">
 <a href="#deploymentname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -393,8 +384,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="springcloudappid_csharp">
 <a href="#springcloudappid_csharp" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -403,14 +393,11 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_go">
 <a href="#deploymentname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -419,8 +406,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="springcloudappid_go">
 <a href="#springcloudappid_go" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -429,14 +415,11 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_nodejs">
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
@@ -445,8 +428,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="springcloudappid_nodejs">
 <a href="#springcloudappid_nodejs" style="color: inherit; text-decoration: inherit;">spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -455,14 +437,11 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_name_python">
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
@@ -471,8 +450,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spring_cloud_app_id_python">
 <a href="#spring_cloud_app_id_python" style="color: inherit; text-decoration: inherit;">spring_<wbr>cloud_<wbr>app_<wbr>id</a>
@@ -481,8 +459,7 @@ The SpringCloudActiveDeployment resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -493,9 +470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,14 +478,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -518,14 +490,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -533,14 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -548,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -676,9 +641,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentname_csharp">
 <a href="#state_deploymentname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -687,8 +650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_csharp">
 <a href="#state_springcloudappid_csharp" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -697,14 +659,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentname_go">
 <a href="#state_deploymentname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -713,8 +672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_go">
 <a href="#state_springcloudappid_go" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -723,14 +681,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentname_nodejs">
 <a href="#state_deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
@@ -739,8 +694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_nodejs">
 <a href="#state_springcloudappid_nodejs" style="color: inherit; text-decoration: inherit;">spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -749,14 +703,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_name_python">
 <a href="#state_deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
@@ -765,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of Spring Cloud Deployment which is going to be active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spring_cloud_app_id_python">
 <a href="#state_spring_cloud_app_id_python" style="color: inherit; text-decoration: inherit;">spring_<wbr>cloud_<wbr>app_<wbr>id</a>
@@ -775,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -802,6 +751,6 @@ Spring Cloud Active Deployment can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adfqdn_csharp">
 <a href="#adfqdn_csharp" style="color: inherit; text-decoration: inherit;">Ad<wbr>Fqdn</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentversion_csharp">
 <a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsfqdn_csharp">
 <a href="#dnsfqdn_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Fqdn</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errordetails_csharp">
 <a href="#errordetails_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Details</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extensions_csharp">
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatuschange_csharp">
 <a href="#laststatuschange_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Status<wbr>Change</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinefqdn_csharp">
 <a href="#machinefqdn_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Fqdn</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osname_csharp">
 <a href="#osname_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Name</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ossku_csharp">
 <a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osversion_csharp">
 <a href="#osversion_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmuuid_csharp">
 <a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uuid</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientpublickey_csharp">
 <a href="#clientpublickey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Public<wbr>Key</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locationdata_csharp">
 <a href="#locationdata_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Location<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinepropertiesresponseosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_csharp">
 <a href="#vmid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
@@ -418,14 +372,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adfqdn_go">
 <a href="#adfqdn_go" style="color: inherit; text-decoration: inherit;">Ad<wbr>Fqdn</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentversion_go">
 <a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsfqdn_go">
 <a href="#dnsfqdn_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Fqdn</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errordetails_go">
 <a href="#errordetails_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Details</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extensions_go">
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponse">[]Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatuschange_go">
 <a href="#laststatuschange_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Status<wbr>Change</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinefqdn_go">
 <a href="#machinefqdn_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Fqdn</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osname_go">
 <a href="#osname_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Name</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ossku_go">
 <a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Sku</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osversion_go">
 <a href="#osversion_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmuuid_go">
 <a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uuid</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientpublickey_go">
 <a href="#clientpublickey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Public<wbr>Key</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineresponseidentity">Machine<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locationdata_go">
 <a href="#locationdata_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationdataresponse">Location<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_go">
 <a href="#vmid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Id</a>
@@ -649,14 +576,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adfqdn_nodejs">
 <a href="#adfqdn_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Fqdn</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentversion_nodejs">
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsfqdn_nodejs">
 <a href="#dnsfqdn_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Fqdn</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errordetails_nodejs">
 <a href="#errordetails_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Details</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extensions_nodejs">
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponse">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="laststatuschange_nodejs">
 <a href="#laststatuschange_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Status<wbr>Change</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinefqdn_nodejs">
 <a href="#machinefqdn_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Fqdn</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osname_nodejs">
 <a href="#osname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Name</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ossku_nodejs">
 <a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Sku</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osversion_nodejs">
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmuuid_nodejs">
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uuid</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientpublickey_nodejs">
 <a href="#clientpublickey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Public<wbr>Key</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineresponseidentity">Machine<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locationdata_nodejs">
 <a href="#locationdata_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Data</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationdataresponse">Location<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmid_nodejs">
 <a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
@@ -880,14 +780,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ad_fqdn_python">
 <a href="#ad_fqdn_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>fqdn</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the AD fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agent_version_python">
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hybrid machine agent full version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_fqdn_python">
 <a href="#dns_fqdn_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>fqdn</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the DNS fully qualified display name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Windows domain name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_details_python">
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Details about the error state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extensions_python">
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponse">Sequence[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_status_change_python">
 <a href="#last_status_change_python" style="color: inherit; text-decoration: inherit;">last_<wbr>status_<wbr>change</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last status change.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machine_fqdn_python">
 <a href="#machine_fqdn_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>fqdn</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the hybrid machine FQDN.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_name_python">
 <a href="#os_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>name</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_sku_python">
 <a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Operating System product SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_version_python">
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Operating System running on the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the hybrid machine agent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_uuid_python">
 <a href="#vm_uuid_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uuid</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the Arc Machine's unique SMBIOS ID{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_public_key_python">
 <a href="#client_public_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>public_<wbr>key</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineresponseidentity">Machine<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_data_python">
 <a href="#location_data_python" style="color: inherit; text-decoration: inherit;">location_<wbr>data</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationdataresponse">Location<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_id_python">
 <a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,9 +998,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1136,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error's code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1145,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1154,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1163,14 +1030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1178,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error's code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1187,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1196,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1205,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1220,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error's code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1229,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1238,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1247,14 +1102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1262,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error's code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1271,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1280,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1289,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationdataresponse">Location<wbr>Data<wbr>Response</h4>
@@ -1298,9 +1146,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1308,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1317,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -1326,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="district_csharp">
 <a href="#district_csharp" style="color: inherit; text-decoration: inherit;">District</a>
@@ -1335,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1350,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1359,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -1368,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="district_go">
 <a href="#district_go" style="color: inherit; text-decoration: inherit;">District</a>
@@ -1377,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1392,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1401,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
@@ -1410,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="district_nodejs">
 <a href="#district_nodejs" style="color: inherit; text-decoration: inherit;">district</a>
@@ -1419,14 +1250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1434,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1443,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
@@ -1452,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="district_python">
 <a href="#district_python" style="color: inherit; text-decoration: inherit;">district</a>
@@ -1461,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machineextensioninstanceviewresponse">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</h4>
@@ -1470,9 +1294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1480,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1489,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1498,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1507,14 +1326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1522,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1531,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1540,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1549,14 +1362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1564,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1573,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -1582,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1591,14 +1398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1606,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1615,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -1624,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1633,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</h4>
@@ -1642,9 +1442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1652,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_csharp">
 <a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1661,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1670,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1679,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1688,14 +1482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1703,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_go">
 <a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1712,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1721,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1730,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1739,14 +1526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1754,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_nodejs">
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
@@ -1763,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1772,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1781,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1790,14 +1570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1805,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_status_python">
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
@@ -1814,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1823,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1832,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1841,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</h4>
@@ -1850,9 +1622,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computername_csharp">
 <a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
@@ -1860,14 +1630,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computername_go">
 <a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
@@ -1875,14 +1642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computername_nodejs">
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
@@ -1890,14 +1654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computer_name_python">
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
@@ -1905,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machineresponseidentity">Machine<wbr>Response<wbr>Identity</h4>
@@ -1914,9 +1674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1924,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1933,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1942,14 +1698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1957,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1966,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1975,14 +1726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1990,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1999,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2008,14 +1754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -2023,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2032,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2041,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

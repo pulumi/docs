@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_csharp">
 <a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_go">
 <a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultname_nodejs">
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Resource Group to which the vault belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_name_python">
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags assigned to the key vault resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Permissions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -443,14 +390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -467,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionsresponse">Permissions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -476,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -485,14 +426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -500,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -509,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionsresponse">Permissions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -518,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -527,14 +462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -542,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -551,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionsresponse">Permissions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipruleresponse">IPRule<wbr>Response</h4>
@@ -578,9 +506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -588,14 +514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -603,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -618,14 +538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</h4>
@@ -642,9 +558,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_csharp">
 <a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
@@ -652,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -661,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -670,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -679,14 +590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_go">
 <a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
@@ -694,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -703,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -712,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">[]IPRule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -721,14 +626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">[]Virtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_nodejs">
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
@@ -736,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -745,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -754,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
@@ -763,14 +662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_python">
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
@@ -778,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -787,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -796,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
@@ -805,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="permissionsresponse">Permissions<wbr>Response</h4>
@@ -814,9 +706,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -824,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_csharp">
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -833,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
@@ -842,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_csharp">
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -851,14 +738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -866,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_go">
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -875,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
@@ -884,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_go">
 <a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -893,14 +774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -908,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_nodejs">
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -917,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
@@ -926,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_nodejs">
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -935,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -950,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_python">
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -959,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
@@ -968,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_python">
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -977,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionitemresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response</h4>
@@ -986,9 +854,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -996,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1005,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1014,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1023,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1032,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1047,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1056,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1065,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1074,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1083,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1098,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1107,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1116,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1125,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1134,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1149,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1158,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1167,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -1176,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1185,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
@@ -1194,9 +1034,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1204,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1219,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1234,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1249,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
@@ -1258,9 +1086,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1268,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1277,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1286,14 +1110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1301,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1310,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1319,14 +1138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -1334,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1343,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1352,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -1367,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1376,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1385,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -1394,9 +1202,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1404,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU family name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1413,14 +1218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1428,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU family name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1437,14 +1238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1452,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU family name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1461,14 +1258,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1476,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU family name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1485,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</h4>
@@ -1494,9 +1286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -1504,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1513,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1522,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_csharp">
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -1531,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1540,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_csharp">
 <a href="#enablepurgeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1549,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerbacauthorization_csharp">
 <a href="#enablerbacauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
@@ -1558,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_csharp">
 <a href="#enablesoftdelete_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -1567,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordeployment_csharp">
 <a href="#enabledfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Deployment</a>
@@ -1576,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordiskencryption_csharp">
 <a href="#enabledfordiskencryption_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
@@ -1585,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfortemplatedeployment_csharp">
 <a href="#enabledfortemplatedeployment_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Template<wbr>Deployment</a>
@@ -1594,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_csharp">
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
@@ -1603,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1612,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1621,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaulturi_csharp">
 <a href="#vaulturi_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Uri</a>
@@ -1630,14 +1406,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -1645,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionitemresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1654,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1663,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_go">
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -1672,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyentryresponse">[]Access<wbr>Policy<wbr>Entry<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1681,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_go">
 <a href="#enablepurgeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1690,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerbacauthorization_go">
 <a href="#enablerbacauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
@@ -1699,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_go">
 <a href="#enablesoftdelete_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -1708,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordeployment_go">
 <a href="#enabledfordeployment_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Deployment</a>
@@ -1717,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordiskencryption_go">
 <a href="#enabledfordiskencryption_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
@@ -1726,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfortemplatedeployment_go">
 <a href="#enabledfortemplatedeployment_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>For<wbr>Template<wbr>Deployment</a>
@@ -1735,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_go">
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
@@ -1744,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1753,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_go">
 <a href="#softdeleteretentionindays_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1762,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaulturi_go">
 <a href="#vaulturi_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Uri</a>
@@ -1771,14 +1530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -1786,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionitemresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1795,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1804,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_nodejs">
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
@@ -1813,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyentryresponse">Access<wbr>Policy<wbr>Entry<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -1822,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_nodejs">
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
@@ -1831,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerbacauthorization_nodejs">
 <a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
@@ -1840,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_nodejs">
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
@@ -1849,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordeployment_nodejs">
 <a href="#enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
@@ -1858,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfordiskencryption_nodejs">
 <a href="#enabledfordiskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
@@ -1867,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledfortemplatedeployment_nodejs">
 <a href="#enabledfortemplatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Template<wbr>Deployment</a>
@@ -1876,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_nodejs">
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
@@ -1885,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1894,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1903,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaulturi_nodejs">
 <a href="#vaulturi_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Uri</a>
@@ -1912,14 +1654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -1927,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionitemresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1936,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1945,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_policies_python">
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
@@ -1954,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyentryresponse">Sequence[Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -1963,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_purge_protection_python">
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
@@ -1972,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_rbac_authorization_python">
 <a href="#enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
@@ -1981,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_soft_delete_python">
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
@@ -1990,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_for_deployment_python">
 <a href="#enabled_for_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>deployment</a>
@@ -1999,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_for_disk_encryption_python">
 <a href="#enabled_for_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>disk_<wbr>encryption</a>
@@ -2008,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_for_template_deployment_python">
 <a href="#enabled_for_template_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>template_<wbr>deployment</a>
@@ -2017,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_acls_python">
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
@@ -2026,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2035,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
@@ -2044,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vault_uri_python">
 <a href="#vault_uri_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>uri</a>
@@ -2053,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
@@ -2062,9 +1786,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2072,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_csharp">
 <a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -2081,14 +1802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2096,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_go">
 <a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -2105,14 +1822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2120,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_nodejs">
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -2129,14 +1842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2144,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_vnet_service_endpoint_python">
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
@@ -2153,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

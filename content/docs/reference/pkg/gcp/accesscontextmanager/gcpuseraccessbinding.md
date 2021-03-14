@@ -40,9 +40,7 @@ To get more information about GcpUserAccessBinding, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ To get more information about GcpUserAccessBinding, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ To get more information about GcpUserAccessBinding, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevels_csharp">
 <a href="#accesslevels_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
@@ -207,8 +176,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupkey_csharp">
 <a href="#groupkey_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
@@ -217,8 +185,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_csharp">
 <a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -227,14 +194,11 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevels_go">
 <a href="#accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
@@ -243,8 +207,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupkey_go">
 <a href="#groupkey_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
@@ -253,8 +216,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_go">
 <a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -263,14 +225,11 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevels_nodejs">
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
@@ -279,8 +238,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupkey_nodejs">
 <a href="#groupkey_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Key</a>
@@ -289,8 +247,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_nodejs">
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -299,14 +256,11 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_levels_python">
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
@@ -315,8 +269,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_key_python">
 <a href="#group_key_python" style="color: inherit; text-decoration: inherit;">group_<wbr>key</a>
@@ -325,8 +278,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_id_python">
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -335,8 +287,7 @@ The GcpUserAccessBinding resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -347,9 +298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -357,8 +306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -369,14 +317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -384,8 +329,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,14 +340,11 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -411,8 +352,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -423,14 +363,11 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -438,8 +375,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -450,8 +386,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -578,9 +513,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevels_csharp">
 <a href="#state_accesslevels_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
@@ -589,8 +522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupkey_csharp">
 <a href="#state_groupkey_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
@@ -599,8 +531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -611,8 +542,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organizationid_csharp">
 <a href="#state_organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -621,14 +551,11 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevels_go">
 <a href="#state_accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
@@ -637,8 +564,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupkey_go">
 <a href="#state_groupkey_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Key</a>
@@ -647,8 +573,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -659,8 +584,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organizationid_go">
 <a href="#state_organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -669,14 +593,11 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevels_nodejs">
 <a href="#state_accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
@@ -685,8 +606,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupkey_nodejs">
 <a href="#state_groupkey_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Key</a>
@@ -695,8 +615,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -707,8 +626,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organizationid_nodejs">
 <a href="#state_organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -717,14 +635,11 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_levels_python">
 <a href="#state_access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
@@ -733,8 +648,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_key_python">
 <a href="#state_group_key_python" style="color: inherit; text-decoration: inherit;">group_<wbr>key</a>
@@ -743,8 +657,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -755,8 +668,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
     <dd>{{% md %}}Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
 characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
 "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_id_python">
 <a href="#state_organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -765,8 +677,7 @@ characters (as defined by RFC 3986 Section 2.3). Should not be specified by the 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. ID of the parent organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -792,6 +703,6 @@ GcpUserAccessBinding can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

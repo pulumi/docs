@@ -51,27 +51,19 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 
@@ -84,9 +76,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domainownershipidentifier_csharp">
 <a href="#domainownershipidentifier_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Ownership<wbr>Identifier</a>
@@ -94,14 +84,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domainownershipidentifier_go">
 <a href="#domainownershipidentifier_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Ownership<wbr>Identifier</a>
@@ -109,14 +96,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domainownershipidentifier_nodejs">
 <a href="#domainownershipidentifier_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Ownership<wbr>Identifier</a>
@@ -124,14 +108,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="domain_ownership_identifier_python">
 <a href="#domain_ownership_identifier_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>ownership_<wbr>identifier</a>
@@ -139,8 +120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The domain ownership identifier value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

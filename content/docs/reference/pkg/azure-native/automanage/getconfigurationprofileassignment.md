@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofileassignmentname_csharp">
 <a href="#configurationprofileassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Assignment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_csharp">
 <a href="#vmname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofileassignmentname_go">
 <a href="#configurationprofileassignmentname_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Assignment<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_go">
 <a href="#vmname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configurationprofileassignmentname_nodejs">
 <a href="#configurationprofileassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Assignment<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_nodejs">
 <a href="#vmname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_profile_assignment_name_python">
 <a href="#configuration_profile_assignment_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>assignment_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The configuration profile assignment name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_name_python">
 <a href="#vm_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Outputs.<wbr>Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentpropertiesresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentpropertiesresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -313,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -328,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -337,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentpropertiesresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,9 +326,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="updatestatus_csharp">
 <a href="#updatestatus_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Status</a>
@@ -380,14 +334,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="updatestatus_go">
 <a href="#updatestatus_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Status</a>
@@ -395,14 +346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="updatestatus_nodejs">
 <a href="#updatestatus_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Status</a>
@@ -410,14 +358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="update_status_python">
 <a href="#update_status_python" style="color: inherit; text-decoration: inherit;">update_<wbr>status</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationprofileassignmentpropertiesresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Response</h4>
@@ -434,9 +378,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -444,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -453,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_csharp">
 <a href="#compliance_csharp" style="color: inherit; text-decoration: inherit;">Compliance</a>
@@ -462,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofile_csharp">
 <a href="#configurationprofile_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile</a>
@@ -471,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofilepreferenceid_csharp">
 <a href="#configurationprofilepreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Id</a>
@@ -480,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -489,14 +426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -504,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -513,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_go">
 <a href="#compliance_go" style="color: inherit; text-decoration: inherit;">Compliance</a>
@@ -522,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofile_go">
 <a href="#configurationprofile_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile</a>
@@ -531,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofilepreferenceid_go">
 <a href="#configurationprofilepreferenceid_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Id</a>
@@ -540,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -549,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -564,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -573,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_nodejs">
 <a href="#compliance_nodejs" style="color: inherit; text-decoration: inherit;">compliance</a>
@@ -582,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofile_nodejs">
 <a href="#configurationprofile_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile</a>
@@ -591,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprofilepreferenceid_nodejs">
 <a href="#configurationprofilepreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Id</a>
@@ -600,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -609,14 +530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -624,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_python">
 <a href="#compliance_python" style="color: inherit; text-decoration: inherit;">compliance</a>
@@ -642,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_profile_python">
 <a href="#configuration_profile_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile</a>
@@ -651,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_profile_preference_id_python">
 <a href="#configuration_profile_preference_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>id</a>
@@ -660,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

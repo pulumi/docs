@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agentpoolname_csharp">
 <a href="#agentpoolname_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agentpoolname_go">
 <a href="#agentpoolname_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agentpoolname_nodejs">
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agent_pool_name_python">
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeimageversion_csharp">
 <a href="#nodeimageversion_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Image<wbr>Version</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_csharp">
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautoscaling_csharp">
 <a href="#enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableencryptionathost_csharp">
 <a href="#enableencryptionathost_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletdisktype_csharp">
 <a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxosconfig_csharp">
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxpods_csharp">
 <a href="#maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincount_csharp">
 <a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodelabels_csharp">
 <a href="#nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodepublicipprefixid_csharp">
 <a href="#nodepublicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorversion_csharp">
 <a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisktype_csharp">
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -418,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podsubnetid_csharp">
 <a href="#podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
@@ -427,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -436,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetevictionpolicy_csharp">
 <a href="#scalesetevictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -445,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetpriority_csharp">
 <a href="#scalesetpriority_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
@@ -454,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotmaxprice_csharp">
 <a href="#spotmaxprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -463,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -472,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -481,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -490,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetsubnetid_csharp">
 <a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
@@ -499,14 +444,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeimageversion_go">
 <a href="#nodeimageversion_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Image<wbr>Version</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_go">
 <a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautoscaling_go">
 <a href="#enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableencryptionathost_go">
 <a href="#enableencryptionathost_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletdisktype_go">
 <a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxosconfig_go">
 <a href="#linuxosconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxcount_go">
 <a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxpods_go">
 <a href="#maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -649,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincount_go">
 <a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -658,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -667,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodelabels_go">
 <a href="#nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -676,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodepublicipprefixid_go">
 <a href="#nodepublicipprefixid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -685,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -694,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorversion_go">
 <a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -703,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -712,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisktype_go">
 <a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -721,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -730,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podsubnetid_go">
 <a href="#podsubnetid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
@@ -739,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -748,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetevictionpolicy_go">
 <a href="#scalesetevictionpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -757,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetpriority_go">
 <a href="#scalesetpriority_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
@@ -766,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotmaxprice_go">
 <a href="#spotmaxprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -775,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -784,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradesettings_go">
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -793,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -802,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetsubnetid_go">
 <a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
@@ -811,14 +720,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodeimageversion_nodejs">
 <a href="#nodeimageversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Image<wbr>Version</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_nodejs">
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -880,8 +780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -889,8 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautoscaling_nodejs">
 <a href="#enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
@@ -898,8 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableencryptionathost_nodejs">
 <a href="#enableencryptionathost_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -907,8 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -916,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
@@ -925,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletdisktype_nodejs">
 <a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
@@ -934,8 +828,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxosconfig_nodejs">
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
@@ -943,8 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -952,8 +844,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxpods_nodejs">
 <a href="#maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
@@ -961,8 +852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincount_nodejs">
 <a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
@@ -970,8 +860,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -979,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodelabels_nodejs">
 <a href="#nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
@@ -988,8 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodepublicipprefixid_nodejs">
 <a href="#nodepublicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -997,8 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -1006,8 +892,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestratorversion_nodejs">
 <a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
@@ -1015,8 +900,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -1024,8 +908,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="osdisktype_nodejs">
 <a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
@@ -1033,8 +916,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1042,8 +924,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podsubnetid_nodejs">
 <a href="#podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>ID</a>
@@ -1051,8 +932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -1060,8 +940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetevictionpolicy_nodejs">
 <a href="#scalesetevictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -1069,8 +948,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalesetpriority_nodejs">
 <a href="#scalesetpriority_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Priority</a>
@@ -1078,8 +956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotmaxprice_nodejs">
 <a href="#spotmaxprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
@@ -1087,8 +964,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1096,8 +972,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
@@ -1105,8 +980,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -1114,8 +988,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetsubnetid_nodejs">
 <a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>ID</a>
@@ -1123,14 +996,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1138,8 +1008,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1147,8 +1016,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_image_version_python">
 <a href="#node_image_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>image_<wbr>version</a>
@@ -1156,8 +1024,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="power_state_python">
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
@@ -1165,8 +1032,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1174,8 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1183,8 +1048,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1192,8 +1056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1201,8 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_auto_scaling_python">
 <a href="#enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
@@ -1210,8 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_encryption_at_host_python">
 <a href="#enable_encryption_at_host_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption_<wbr>at_<wbr>host</a>
@@ -1219,8 +1080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -1228,8 +1088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
@@ -1237,8 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubelet_disk_type_python">
 <a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
@@ -1246,8 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linux_os_config_python">
 <a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
@@ -1255,8 +1112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_count_python">
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -1264,8 +1120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_pods_python">
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
@@ -1273,8 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_count_python">
 <a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
@@ -1282,8 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1291,8 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_labels_python">
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
@@ -1300,8 +1152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_public_ip_prefix_id_python">
 <a href="#node_public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>ip_<wbr>prefix_<wbr>id</a>
@@ -1309,8 +1160,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -1318,8 +1168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orchestrator_version_python">
 <a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
@@ -1327,8 +1176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -1336,8 +1184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_disk_type_python">
 <a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
@@ -1345,8 +1192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1354,8 +1200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pod_subnet_id_python">
 <a href="#pod_subnet_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>subnet_<wbr>id</a>
@@ -1363,8 +1208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -1372,8 +1216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scale_set_eviction_policy_python">
 <a href="#scale_set_eviction_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>eviction_<wbr>policy</a>
@@ -1381,8 +1224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scale_set_priority_python">
 <a href="#scale_set_priority_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>priority</a>
@@ -1390,8 +1232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spot_max_price_python">
 <a href="#spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
@@ -1399,8 +1240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1408,8 +1248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upgrade_settings_python">
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -1417,8 +1256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -1426,8 +1264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnet_subnet_id_python">
 <a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
@@ -1435,8 +1272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1450,9 +1286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_csharp">
 <a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -1460,14 +1294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_go">
 <a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -1475,14 +1306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_nodejs">
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
@@ -1490,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_surge_python">
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
@@ -1505,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</h4>
@@ -1514,9 +1338,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_csharp">
 <a href="#allowedunsafesysctls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -1524,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_csharp">
 <a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -1533,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_csharp">
 <a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -1542,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_csharp">
 <a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
@@ -1551,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_csharp">
 <a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -1560,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_csharp">
 <a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
@@ -1569,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_csharp">
 <a href="#failswapon_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
@@ -1578,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_csharp">
 <a href="#imagegchighthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -1587,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_csharp">
 <a href="#imagegclowthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -1596,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_csharp">
 <a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
@@ -1605,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
@@ -1614,14 +1426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_go">
 <a href="#allowedunsafesysctls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -1629,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_go">
 <a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -1638,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_go">
 <a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -1647,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
 <a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
@@ -1656,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_go">
 <a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -1665,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_go">
 <a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
@@ -1674,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_go">
 <a href="#failswapon_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
@@ -1683,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_go">
 <a href="#imagegchighthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -1692,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_go">
 <a href="#imagegclowthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -1701,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_go">
 <a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
@@ -1710,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
@@ -1719,14 +1518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_nodejs">
 <a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -1734,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_nodejs">
 <a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -1743,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_nodejs">
 <a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -1752,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
@@ -1761,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_nodejs">
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -1770,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_nodejs">
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
@@ -1779,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_nodejs">
 <a href="#failswapon_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Swap<wbr>On</a>
@@ -1788,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_nodejs">
 <a href="#imagegchighthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -1797,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_nodejs">
 <a href="#imagegclowthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -1806,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_nodejs">
 <a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
@@ -1815,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
@@ -1824,14 +1610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_unsafe_sysctls_python">
 <a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
@@ -1839,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_log_max_files_python">
 <a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
@@ -1848,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_log_max_size_mb_python">
 <a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
@@ -1857,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
@@ -1866,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_period_python">
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
@@ -1875,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_manager_policy_python">
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
@@ -1884,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fail_swap_on_python">
 <a href="#fail_swap_on_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>swap_<wbr>on</a>
@@ -1893,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_gc_high_threshold_python">
 <a href="#image_gc_high_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>high_<wbr>threshold</a>
@@ -1902,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_gc_low_threshold_python">
 <a href="#image_gc_low_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>low_<wbr>threshold</a>
@@ -1911,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_max_pids_python">
 <a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
@@ -1920,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topology_manager_policy_python">
 <a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
@@ -1929,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</h4>
@@ -1938,9 +1710,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_csharp">
 <a href="#swapfilesizemb_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -1948,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_csharp">
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -1957,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_csharp">
 <a href="#transparenthugepagedefrag_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -1966,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_csharp">
 <a href="#transparenthugepageenabled_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -1975,14 +1742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_go">
 <a href="#swapfilesizemb_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -1990,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_go">
 <a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -1999,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_go">
 <a href="#transparenthugepagedefrag_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -2008,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_go">
 <a href="#transparenthugepageenabled_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -2017,14 +1778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_nodejs">
 <a href="#swapfilesizemb_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -2032,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_nodejs">
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -2041,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_nodejs">
 <a href="#transparenthugepagedefrag_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -2050,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_nodejs">
 <a href="#transparenthugepageenabled_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -2059,14 +1814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swap_file_size_mb_python">
 <a href="#swap_file_size_mb_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>file_<wbr>size_<wbr>mb</a>
@@ -2074,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_python">
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -2083,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparent_huge_page_defrag_python">
 <a href="#transparent_huge_page_defrag_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>defrag</a>
@@ -2092,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparent_huge_page_enabled_python">
 <a href="#transparent_huge_page_enabled_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>enabled</a>
@@ -2101,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="powerstateresponse">Power<wbr>State<wbr>Response</h4>
@@ -2110,9 +1858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2120,14 +1866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2135,14 +1878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2150,14 +1890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2165,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</h4>
@@ -2174,9 +1910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_csharp">
 <a href="#fsaiomaxnr_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -2184,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_csharp">
 <a href="#fsfilemax_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
@@ -2193,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_csharp">
 <a href="#fsinotifymaxuserwatches_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -2202,8 +1934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_csharp">
 <a href="#fsnropen_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
@@ -2211,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_csharp">
 <a href="#kernelthreadsmax_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
@@ -2220,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_csharp">
 <a href="#netcorenetdevmaxbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -2229,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_csharp">
 <a href="#netcoreoptmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -2238,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_csharp">
 <a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -2247,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -2256,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_csharp">
 <a href="#netcoresomaxconn_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
@@ -2265,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_csharp">
 <a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -2274,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
 <a href="#netcorewmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -2283,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_csharp">
 <a href="#netipv4iplocalportrange_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -2292,8 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_csharp">
 <a href="#netipv4neighdefaultgcthresh1_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -2301,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_csharp">
 <a href="#netipv4neighdefaultgcthresh2_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -2310,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_csharp">
 <a href="#netipv4neighdefaultgcthresh3_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -2319,8 +2038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_csharp">
 <a href="#netipv4tcpfintimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -2328,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_csharp">
 <a href="#netipv4tcpkeepaliveprobes_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -2337,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_csharp">
 <a href="#netipv4tcpkeepalivetime_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -2346,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_csharp">
 <a href="#netipv4tcpmaxsynbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -2355,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_csharp">
 <a href="#netipv4tcpmaxtwbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -2364,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -2373,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
 <a href="#netipv4tcpkeepaliveintvl_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -2382,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_csharp">
 <a href="#netnetfilternfconntrackbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -2391,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_csharp">
 <a href="#netnetfilternfconntrackmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -2400,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_csharp">
 <a href="#vmmaxmapcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -2409,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_csharp">
 <a href="#vmswappiness_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
@@ -2418,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_csharp">
 <a href="#vmvfscachepressure_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -2427,14 +2134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_go">
 <a href="#fsaiomaxnr_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -2442,8 +2146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_go">
 <a href="#fsfilemax_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
@@ -2451,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_go">
 <a href="#fsinotifymaxuserwatches_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -2460,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_go">
 <a href="#fsnropen_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
@@ -2469,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_go">
 <a href="#kernelthreadsmax_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
@@ -2478,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_go">
 <a href="#netcorenetdevmaxbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -2487,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_go">
 <a href="#netcoreoptmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -2496,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_go">
 <a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -2505,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -2514,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_go">
 <a href="#netcoresomaxconn_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
@@ -2523,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_go">
 <a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -2532,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
 <a href="#netcorewmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -2541,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_go">
 <a href="#netipv4iplocalportrange_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -2550,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_go">
 <a href="#netipv4neighdefaultgcthresh1_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -2559,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_go">
 <a href="#netipv4neighdefaultgcthresh2_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -2568,8 +2258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_go">
 <a href="#netipv4neighdefaultgcthresh3_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -2577,8 +2266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_go">
 <a href="#netipv4tcpfintimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -2586,8 +2274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_go">
 <a href="#netipv4tcpkeepaliveprobes_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -2595,8 +2282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_go">
 <a href="#netipv4tcpkeepalivetime_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -2604,8 +2290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_go">
 <a href="#netipv4tcpmaxsynbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -2613,8 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_go">
 <a href="#netipv4tcpmaxtwbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -2622,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -2631,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
 <a href="#netipv4tcpkeepaliveintvl_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -2640,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_go">
 <a href="#netnetfilternfconntrackbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -2649,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_go">
 <a href="#netnetfilternfconntrackmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -2658,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_go">
 <a href="#vmmaxmapcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -2667,8 +2346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_go">
 <a href="#vmswappiness_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
@@ -2676,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_go">
 <a href="#vmvfscachepressure_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -2685,14 +2362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_nodejs">
 <a href="#fsaiomaxnr_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -2700,8 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_nodejs">
 <a href="#fsfilemax_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>File<wbr>Max</a>
@@ -2709,8 +2382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_nodejs">
 <a href="#fsinotifymaxuserwatches_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -2718,8 +2390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_nodejs">
 <a href="#fsnropen_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Nr<wbr>Open</a>
@@ -2727,8 +2398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_nodejs">
 <a href="#kernelthreadsmax_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Threads<wbr>Max</a>
@@ -2736,8 +2406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_nodejs">
 <a href="#netcorenetdevmaxbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -2745,8 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_nodejs">
 <a href="#netcoreoptmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -2754,8 +2422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_nodejs">
 <a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -2763,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -2772,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_nodejs">
 <a href="#netcoresomaxconn_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Somaxconn</a>
@@ -2781,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_nodejs">
 <a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -2790,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
 <a href="#netcorewmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -2799,8 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_nodejs">
 <a href="#netipv4iplocalportrange_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -2808,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_nodejs">
 <a href="#netipv4neighdefaultgcthresh1_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -2817,8 +2478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_nodejs">
 <a href="#netipv4neighdefaultgcthresh2_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -2826,8 +2486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_nodejs">
 <a href="#netipv4neighdefaultgcthresh3_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -2835,8 +2494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_nodejs">
 <a href="#netipv4tcpfintimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -2844,8 +2502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_nodejs">
 <a href="#netipv4tcpkeepaliveprobes_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -2853,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_nodejs">
 <a href="#netipv4tcpkeepalivetime_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -2862,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_nodejs">
 <a href="#netipv4tcpmaxsynbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -2871,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_nodejs">
 <a href="#netipv4tcpmaxtwbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -2880,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -2889,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
 <a href="#netipv4tcpkeepaliveintvl_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -2898,8 +2550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_nodejs">
 <a href="#netnetfilternfconntrackbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -2907,8 +2558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_nodejs">
 <a href="#netnetfilternfconntrackmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -2916,8 +2566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_nodejs">
 <a href="#vmmaxmapcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -2925,8 +2574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_nodejs">
 <a href="#vmswappiness_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Swappiness</a>
@@ -2934,8 +2582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_nodejs">
 <a href="#vmvfscachepressure_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -2943,14 +2590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fs_aio_max_nr_python">
 <a href="#fs_aio_max_nr_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>aio_<wbr>max_<wbr>nr</a>
@@ -2958,8 +2602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_file_max_python">
 <a href="#fs_file_max_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>file_<wbr>max</a>
@@ -2967,8 +2610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_inotify_max_user_watches_python">
 <a href="#fs_inotify_max_user_watches_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>inotify_<wbr>max_<wbr>user_<wbr>watches</a>
@@ -2976,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_nr_open_python">
 <a href="#fs_nr_open_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>nr_<wbr>open</a>
@@ -2985,8 +2626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_threads_max_python">
 <a href="#kernel_threads_max_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>threads_<wbr>max</a>
@@ -2994,8 +2634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_netdev_max_backlog_python">
 <a href="#net_core_netdev_max_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>netdev_<wbr>max_<wbr>backlog</a>
@@ -3003,8 +2642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_optmem_max_python">
 <a href="#net_core_optmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>optmem_<wbr>max</a>
@@ -3012,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_rmem_default_python">
 <a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
@@ -3021,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
@@ -3030,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_somaxconn_python">
 <a href="#net_core_somaxconn_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>somaxconn</a>
@@ -3039,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_default_python">
 <a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
@@ -3048,8 +2682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
 <a href="#net_core_wmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>max</a>
@@ -3057,8 +2690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_ip_local_port_range_python">
 <a href="#net_ipv4_ip_local_port_range_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range</a>
@@ -3066,8 +2698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh1_python">
 <a href="#net_ipv4_neigh_default_gc_thresh1_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh1</a>
@@ -3075,8 +2706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh2_python">
 <a href="#net_ipv4_neigh_default_gc_thresh2_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh2</a>
@@ -3084,8 +2714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh3_python">
 <a href="#net_ipv4_neigh_default_gc_thresh3_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh3</a>
@@ -3093,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_fin_timeout_python">
 <a href="#net_ipv4_tcp_fin_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>fin_<wbr>timeout</a>
@@ -3102,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_keepalive_probes_python">
 <a href="#net_ipv4_tcp_keepalive_probes_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>probes</a>
@@ -3111,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_keepalive_time_python">
 <a href="#net_ipv4_tcp_keepalive_time_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>time</a>
@@ -3120,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_max_syn_backlog_python">
 <a href="#net_ipv4_tcp_max_syn_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>syn_<wbr>backlog</a>
@@ -3129,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_max_tw_buckets_python">
 <a href="#net_ipv4_tcp_max_tw_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>tw_<wbr>buckets</a>
@@ -3138,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
@@ -3147,8 +2770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
 <a href="#net_ipv4_tcpkeepalive_intvl_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcpkeepalive_<wbr>intvl</a>
@@ -3156,8 +2778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_netfilter_nf_conntrack_buckets_python">
 <a href="#net_netfilter_nf_conntrack_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>buckets</a>
@@ -3165,8 +2786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_netfilter_nf_conntrack_max_python">
 <a href="#net_netfilter_nf_conntrack_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>max</a>
@@ -3174,8 +2794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_max_map_count_python">
 <a href="#vm_max_map_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>max_<wbr>map_<wbr>count</a>
@@ -3183,8 +2802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_swappiness_python">
 <a href="#vm_swappiness_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>swappiness</a>
@@ -3192,8 +2810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_vfs_cache_pressure_python">
 <a href="#vm_vfs_cache_pressure_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>vfs_<wbr>cache_<wbr>pressure</a>
@@ -3201,8 +2818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

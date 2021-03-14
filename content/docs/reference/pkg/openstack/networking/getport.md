@@ -14,11 +14,17 @@ Use this data source to get the ID of an available OpenStack port.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -61,9 +70,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -71,9 +83,12 @@ import pulumi_openstack as openstack
 port1 = openstack.networking.get_port(name="port_1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -84,9 +99,16 @@ const port1 = pulumi.output(openstack.networking.getPort({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getPort {#using}
@@ -124,9 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -135,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -145,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -155,8 +173,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_csharp">
 <a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -165,8 +182,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -176,8 +192,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The port DNS name to filter. Available, when Neutron
 DNS extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_csharp">
 <a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -186,8 +201,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port IP address filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -196,8 +210,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -206,8 +219,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -216,8 +228,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -226,8 +237,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -236,8 +246,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -248,8 +257,7 @@ DNS extension is enabled.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve port ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -258,8 +266,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of port security group IDs to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -268,8 +275,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -278,8 +284,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of port tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -287,14 +292,11 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -303,8 +305,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -313,8 +314,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -323,8 +323,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_go">
 <a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -333,8 +332,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -344,8 +342,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
     </dt>
     <dd>{{% md %}}The port DNS name to filter. Available, when Neutron
 DNS extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_go">
 <a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -354,8 +351,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port IP address filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -364,8 +360,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -374,8 +369,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -384,8 +378,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -394,8 +387,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -404,8 +396,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -416,8 +407,7 @@ DNS extension is enabled.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve port ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -426,8 +416,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of port security group IDs to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -436,8 +425,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -446,8 +434,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of port tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -455,14 +442,11 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -471,8 +455,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -481,8 +464,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -491,8 +473,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_nodejs">
 <a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
@@ -501,8 +482,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -512,8 +492,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
     </dt>
     <dd>{{% md %}}The port DNS name to filter. Available, when Neutron
 DNS extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_nodejs">
 <a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -522,8 +501,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port IP address filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -532,8 +510,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -542,8 +519,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -552,8 +528,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -562,8 +537,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -572,8 +546,7 @@ DNS extension is enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -584,8 +557,7 @@ DNS extension is enabled.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve port ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -594,8 +566,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of port security group IDs to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -604,8 +575,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -614,8 +584,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of port tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -623,14 +592,11 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -639,8 +605,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -649,8 +614,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -659,8 +623,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the device the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_owner_python">
 <a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
@@ -669,8 +632,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -680,8 +642,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
     </dt>
     <dd>{{% md %}}The port DNS name to filter. Available, when Neutron
 DNS extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_python">
 <a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -690,8 +651,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port IP address filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -700,8 +660,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -710,8 +669,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -720,8 +678,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network the port belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -730,8 +687,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -740,8 +696,7 @@ DNS extension is enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -752,8 +707,7 @@ DNS extension is enabled.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve port ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -762,8 +716,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of port security group IDs to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -772,8 +725,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -782,8 +734,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of port tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -791,8 +742,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -805,9 +755,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_csharp">
 <a href="#allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -817,8 +765,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_csharp">
 <a href="#allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -827,8 +774,7 @@ order returned by the Network v2 API.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of security group IDs applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -837,8 +783,7 @@ order returned by the Network v2 API.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaddresspairs_csharp">
 <a href="#allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -849,8 +794,7 @@ order returned by the Network v2 API.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindings_csharp">
 <a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
@@ -859,8 +803,7 @@ below.
         <span class="property-type"><a href="#getportbinding">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Outputs.<wbr>Get<wbr>Port<wbr>Binding&gt;</a></span>
     </dt>
     <dd>{{% md %}}The port binding information. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_csharp">
 <a href="#dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -869,8 +812,7 @@ below.
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extradhcpoptions_csharp">
 <a href="#extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -880,8 +822,7 @@ below.
     </dt>
     <dd>{{% md %}}An extra DHCP option configured on the port.
 The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -890,8 +831,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -900,8 +840,7 @@ The structure is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -910,8 +849,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -920,8 +858,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceowner_csharp">
 <a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -930,8 +867,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -940,8 +876,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedip_csharp">
 <a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -949,8 +884,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -959,8 +893,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -969,8 +902,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -979,8 +911,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -989,8 +920,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -999,8 +929,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1009,8 +938,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1018,8 +946,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1027,8 +954,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1036,8 +962,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1045,14 +970,11 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_go">
 <a href="#allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -1062,8 +984,7 @@ The structure is described below.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_go">
 <a href="#allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1072,8 +993,7 @@ order returned by the Network v2 API.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of security group IDs applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1082,8 +1002,7 @@ order returned by the Network v2 API.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaddresspairs_go">
 <a href="#allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -1094,8 +1013,7 @@ order returned by the Network v2 API.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindings_go">
 <a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
@@ -1104,8 +1022,7 @@ below.
         <span class="property-type"><a href="#getportbinding">[]Get<wbr>Port<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The port binding information. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_go">
 <a href="#dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -1114,8 +1031,7 @@ below.
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extradhcpoptions_go">
 <a href="#extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -1125,8 +1041,7 @@ below.
     </dt>
     <dd>{{% md %}}An extra DHCP option configured on the port.
 The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1135,8 +1050,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1145,8 +1059,7 @@ The structure is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1155,8 +1068,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -1165,8 +1077,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceowner_go">
 <a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -1175,8 +1086,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1185,8 +1095,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedip_go">
 <a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -1194,8 +1103,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1204,8 +1112,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1214,8 +1121,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1224,8 +1130,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1234,8 +1139,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1244,8 +1148,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1254,8 +1157,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1263,8 +1165,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1272,8 +1173,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1281,8 +1181,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1290,14 +1189,11 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_nodejs">
 <a href="#allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
@@ -1307,8 +1203,7 @@ The structure is described below.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_nodejs">
 <a href="#allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1317,8 +1212,7 @@ order returned by the Network v2 API.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of security group IDs applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1327,8 +1221,7 @@ order returned by the Network v2 API.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaddresspairs_nodejs">
 <a href="#allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
@@ -1339,8 +1232,7 @@ order returned by the Network v2 API.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindings_nodejs">
 <a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
@@ -1349,8 +1241,7 @@ below.
         <span class="property-type"><a href="#getportbinding">Get<wbr>Port<wbr>Binding[]</a></span>
     </dt>
     <dd>{{% md %}}The port binding information. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_nodejs">
 <a href="#dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
@@ -1359,8 +1250,7 @@ below.
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extradhcpoptions_nodejs">
 <a href="#extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
@@ -1370,8 +1260,7 @@ below.
     </dt>
     <dd>{{% md %}}An extra DHCP option configured on the port.
 The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1380,8 +1269,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1390,8 +1278,7 @@ The structure is described below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1400,8 +1287,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -1410,8 +1296,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceowner_nodejs">
 <a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
@@ -1420,8 +1305,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1430,8 +1314,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedip_nodejs">
 <a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -1439,8 +1322,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -1449,8 +1331,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1459,8 +1340,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -1469,8 +1349,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1479,8 +1358,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1489,8 +1367,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1499,8 +1376,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -1508,8 +1384,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1517,8 +1392,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1526,8 +1400,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1535,14 +1408,11 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_fixed_ips_python">
 <a href="#all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
@@ -1552,8 +1422,7 @@ The structure is described below.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_security_group_ids_python">
 <a href="#all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1562,8 +1431,7 @@ order returned by the Network v2 API.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of security group IDs applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1572,8 +1440,7 @@ order returned by the Network v2 API.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowed_address_pairs_python">
 <a href="#allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
@@ -1584,8 +1451,7 @@ order returned by the Network v2 API.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindings_python">
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
@@ -1594,8 +1460,7 @@ below.
         <span class="property-type"><a href="#getportbinding">Sequence[Get<wbr>Port<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}The port binding information. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_assignments_python">
 <a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
@@ -1604,8 +1469,7 @@ below.
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extra_dhcp_options_python">
 <a href="#extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
@@ -1615,8 +1479,7 @@ below.
     </dt>
     <dd>{{% md %}}An extra DHCP option configured on the port.
 The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1625,8 +1488,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1635,8 +1497,7 @@ The structure is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1645,8 +1506,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -1655,8 +1515,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_owner_python">
 <a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
@@ -1665,8 +1524,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1675,8 +1533,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_ip_python">
 <a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -1684,8 +1541,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -1694,8 +1550,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1704,8 +1559,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1714,8 +1568,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1724,8 +1577,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1734,8 +1586,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1744,8 +1595,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -1753,8 +1603,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1762,8 +1611,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1771,8 +1619,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1780,8 +1627,7 @@ The structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1795,9 +1641,7 @@ The structure is described below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1806,8 +1650,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1816,14 +1659,11 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1832,8 +1672,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1842,14 +1681,11 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1858,8 +1694,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -1868,14 +1703,11 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1884,8 +1716,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -1894,8 +1725,7 @@ The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MAC address of the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getportbinding">Get<wbr>Port<wbr>Binding</h4>
@@ -1903,9 +1733,7 @@ The structure is described below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -1914,8 +1742,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host, which has the allocatee port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_csharp">
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -1924,8 +1751,7 @@ The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string containing the binding profile information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vifdetails_csharp">
 <a href="#vifdetails_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
@@ -1935,8 +1761,7 @@ The structure is described below.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional details for this
 specific binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viftype_csharp">
 <a href="#viftype_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
@@ -1945,8 +1770,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnictype_csharp">
 <a href="#vnictype_csharp" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
@@ -1955,14 +1779,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -1971,8 +1792,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host, which has the allocatee port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_go">
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -1981,8 +1801,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string containing the binding profile information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vifdetails_go">
 <a href="#vifdetails_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
@@ -1992,8 +1811,7 @@ specific binding.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional details for this
 specific binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viftype_go">
 <a href="#viftype_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
@@ -2002,8 +1820,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnictype_go">
 <a href="#vnictype_go" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
@@ -2012,14 +1829,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
@@ -2028,8 +1842,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host, which has the allocatee port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_nodejs">
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -2038,8 +1851,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string containing the binding profile information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vifdetails_nodejs">
 <a href="#vifdetails_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
@@ -2049,8 +1861,7 @@ specific binding.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional details for this
 specific binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viftype_nodejs">
 <a href="#viftype_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
@@ -2059,8 +1870,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnictype_nodejs">
 <a href="#vnictype_nodejs" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
@@ -2069,14 +1879,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
@@ -2085,8 +1892,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the host, which has the allocatee port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_python">
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -2095,8 +1901,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON string containing the binding profile information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vif_details_python">
 <a href="#vif_details_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>details</a>
@@ -2106,8 +1911,7 @@ specific binding.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional details for this
 specific binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vif_type_python">
 <a href="#vif_type_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>type</a>
@@ -2116,8 +1920,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnic_type_python">
 <a href="#vnic_type_python" style="color: inherit; text-decoration: inherit;">vnic_<wbr>type</a>
@@ -2126,8 +1929,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getportextradhcpoption">Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option</h4>
@@ -2135,9 +1937,7 @@ specific binding.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -2146,8 +1946,7 @@ specific binding.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2156,8 +1955,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2166,14 +1964,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -2182,8 +1977,7 @@ specific binding.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2192,8 +1986,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2202,14 +1995,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -2218,8 +2008,7 @@ specific binding.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP protocol version
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2228,8 +2017,7 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2238,14 +2026,11 @@ specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -2254,8 +2039,7 @@ specific binding.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2264,8 +2048,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the port.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2274,8 +2057,7 @@ specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2289,6 +2071,6 @@ specific binding.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

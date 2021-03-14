@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure-native.migrate.HyperVCollector resource 
 API Version: 2019-10-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### HyperVCollectors_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -54,9 +60,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -95,9 +104,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -123,9 +135,12 @@ hyper_v_collector = azure_native.migrate.HyperVCollector("hyperVCollector",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -152,9 +167,16 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a HyperVCollector Resource {#create}
@@ -179,9 +201,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -189,9 +209,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -199,9 +217,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -209,10 +225,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -238,9 +251,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -248,9 +259,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -258,9 +267,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -268,9 +275,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -278,18 +283,13 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -297,9 +297,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -307,9 +305,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -317,10 +313,7 @@ const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollecto
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -335,9 +328,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -345,8 +336,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -354,8 +344,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -363,8 +352,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervcollectorname_csharp">
 <a href="#hypervcollectorname_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VCollector<wbr>Name</a>
@@ -372,8 +360,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -381,14 +368,11 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -396,8 +380,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -405,8 +388,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -414,8 +396,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervcollectorname_go">
 <a href="#hypervcollectorname_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VCollector<wbr>Name</a>
@@ -423,8 +404,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -432,14 +412,11 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -447,8 +424,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -456,8 +432,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -465,8 +440,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervcollectorname_nodejs">
 <a href="#hypervcollectorname_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VCollector<wbr>Name</a>
@@ -474,8 +448,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -483,14 +456,11 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -498,8 +468,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -507,8 +476,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -516,8 +484,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hyper_v_collector_name_python">
 <a href="#hyper_v_collector_name_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>collector_<wbr>name</a>
@@ -525,8 +492,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of a Hyper-V collector within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -534,8 +500,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,9 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -556,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -565,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -574,14 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -589,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -598,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -607,14 +563,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -622,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -631,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -640,14 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -664,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -673,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -690,9 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="collectoragentproperties">Collector<wbr>Agent<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="spndetails_csharp">
 <a href="#spndetails_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
@@ -700,14 +643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="spndetails_go">
 <a href="#spndetails_go" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
@@ -715,14 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="spndetails_nodejs">
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
@@ -730,14 +667,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="spn_details_python">
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
@@ -745,16 +679,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -762,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_csharp">
 <a href="#lastheartbeatutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Utc</a>
@@ -771,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -780,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spndetails_csharp">
 <a href="#spndetails_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
@@ -789,14 +717,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -804,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_go">
 <a href="#lastheartbeatutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Utc</a>
@@ -813,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -822,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spndetails_go">
 <a href="#spndetails_go" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
@@ -831,14 +753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastheartbeatutc_nodejs">
 <a href="#lastheartbeatutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Utc</a>
@@ -855,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -864,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spndetails_nodejs">
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
@@ -873,14 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -888,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_heartbeat_utc_python">
 <a href="#last_heartbeat_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>utc</a>
@@ -897,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -906,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spn_details_python">
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
@@ -915,16 +825,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -932,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -941,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -950,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -959,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -968,14 +871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -983,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -992,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -1001,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1010,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1019,14 +915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -1034,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1043,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -1052,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1061,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1070,14 +959,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1085,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1094,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -1103,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1112,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1121,16 +1003,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -1138,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1147,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -1156,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1165,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1174,14 +1049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -1189,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -1198,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -1207,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1216,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1225,14 +1093,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -1240,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1249,8 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -1258,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1267,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1276,14 +1137,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1291,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1300,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -1309,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1318,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1327,16 +1181,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="collectorproperties">Collector<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_csharp">
 <a href="#agentproperties_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
@@ -1344,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_csharp">
 <a href="#discoverysiteid_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Site<wbr>Id</a>
@@ -1353,14 +1203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_go">
 <a href="#agentproperties_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
@@ -1368,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_go">
 <a href="#discoverysiteid_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Site<wbr>Id</a>
@@ -1377,14 +1223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_nodejs">
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
@@ -1392,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_nodejs">
 <a href="#discoverysiteid_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Site<wbr>Id</a>
@@ -1401,14 +1243,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agent_properties_python">
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
@@ -1416,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovery_site_id_python">
 <a href="#discovery_site_id_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>site_<wbr>id</a>
@@ -1425,16 +1263,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="collectorpropertiesresponse">Collector<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_csharp">
 <a href="#createdtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
@@ -1442,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_csharp">
 <a href="#updatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
@@ -1451,8 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_csharp">
 <a href="#agentproperties_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
@@ -1460,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_csharp">
 <a href="#discoverysiteid_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Site<wbr>Id</a>
@@ -1469,14 +1301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_go">
 <a href="#createdtimestamp_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
@@ -1484,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_go">
 <a href="#updatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
@@ -1493,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_go">
 <a href="#agentproperties_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
@@ -1502,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_go">
 <a href="#discoverysiteid_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Site<wbr>Id</a>
@@ -1511,14 +1337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimestamp_nodejs">
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
@@ -1526,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_nodejs">
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
@@ -1535,8 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentproperties_nodejs">
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
@@ -1544,8 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverysiteid_nodejs">
 <a href="#discoverysiteid_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Site<wbr>Id</a>
@@ -1553,14 +1373,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_timestamp_python">
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
@@ -1568,8 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_timestamp_python">
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
@@ -1577,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_properties_python">
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
@@ -1586,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovery_site_id_python">
 <a href="#discovery_site_id_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>site_<wbr>id</a>
@@ -1595,8 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

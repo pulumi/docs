@@ -1,6 +1,6 @@
 ---
 title: "Akamai"
-title_tag: "Package Akamai"
+title_tag: "Akamai Package"
 meta_desc: "A Pulumi package for creating and managing akamai cloud resources."
 menu:
     reference:
@@ -80,7 +80,7 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>1.1.1</dd>
 </dl>

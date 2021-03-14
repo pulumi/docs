@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharesubscriptionname_csharp">
 <a href="#sharesubscriptionname_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Subscription<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_csharp">
 <a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Continuation token{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Continuation token{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharesubscriptionname_go">
 <a href="#sharesubscriptionname_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Subscription<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_go">
 <a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Continuation token{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Continuation token{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharesubscriptionname_nodejs">
 <a href="#sharesubscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Subscription<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_nodejs">
 <a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Continuation token{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Continuation token{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the share account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_subscription_name_python">
 <a href="#share_subscription_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>subscription_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the shareSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_token_python">
 <a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Continuation token{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Continuation token{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">[]Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -295,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduledsourcesynchronizationsettingresponse">Sequence[Scheduled<wbr>Source<wbr>Synchronization<wbr>Setting<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Url of next result page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -334,9 +294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrenceinterval_csharp">
 <a href="#recurrenceinterval_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Interval</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronizationtime_csharp">
 <a href="#synchronizationtime_csharp" style="color: inherit; text-decoration: inherit;">Synchronization<wbr>Time</a>
@@ -353,14 +310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Synchronization time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Synchronization time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrenceinterval_go">
 <a href="#recurrenceinterval_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Interval</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronizationtime_go">
 <a href="#synchronizationtime_go" style="color: inherit; text-decoration: inherit;">Synchronization<wbr>Time</a>
@@ -377,14 +330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Synchronization time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Synchronization time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrenceinterval_nodejs">
 <a href="#recurrenceinterval_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Interval</a>
@@ -392,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronizationtime_nodejs">
 <a href="#synchronizationtime_nodejs" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Time</a>
@@ -401,14 +350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Synchronization time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Synchronization time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recurrence_interval_python">
 <a href="#recurrence_interval_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>interval</a>
@@ -416,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Recurrence Interval{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="synchronization_time_python">
 <a href="#synchronization_time_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>time</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Synchronization time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Synchronization time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

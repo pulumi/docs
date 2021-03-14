@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.loadbalancer.Pool resource with exam
 Manages a V2 pool resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -72,9 +81,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -89,9 +101,12 @@ pool1 = openstack.loadbalancer.Pool("pool1",
     protocol="HTTP")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,9 +123,16 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Pool Resource {#create}
@@ -135,9 +157,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +165,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +173,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,10 +181,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +207,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -204,9 +215,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +223,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +231,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,18 +239,13 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +253,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +261,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +269,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,9 +284,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_csharp">
 <a href="#lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -305,8 +296,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -316,8 +306,7 @@ in Octavia).
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -327,8 +316,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -337,8 +325,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerid_csharp">
 <a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -349,8 +336,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -361,8 +347,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -371,8 +356,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_csharp">
 <a href="#persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -383,8 +367,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -396,8 +379,7 @@ member or not. Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -408,14 +390,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_go">
 <a href="#lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -427,8 +406,7 @@ other than their own. Changing this creates a new pool.
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -438,8 +416,7 @@ in Octavia).
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -449,8 +426,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -459,8 +435,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerid_go">
 <a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -471,8 +446,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -483,8 +457,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,8 +466,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_go">
 <a href="#persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -505,8 +477,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -518,8 +489,7 @@ member or not. Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -530,14 +500,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_nodejs">
 <a href="#lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
@@ -549,8 +516,7 @@ other than their own. Changing this creates a new pool.
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -560,8 +526,7 @@ in Octavia).
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -571,8 +536,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -581,8 +545,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenerid_nodejs">
 <a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -593,8 +556,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
@@ -605,8 +567,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -615,8 +576,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_nodejs">
 <a href="#persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -627,8 +587,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -640,8 +599,7 @@ member or not. Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -652,14 +610,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lb_method_python">
 <a href="#lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
@@ -671,8 +626,7 @@ other than their own. Changing this creates a new pool.
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -682,8 +636,7 @@ in Octavia).
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -693,8 +646,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -703,8 +655,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_id_python">
 <a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -715,8 +666,7 @@ A valid value is true (UP) or false (DOWN).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancer_id_python">
 <a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
@@ -727,8 +677,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -737,8 +686,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_python">
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -749,8 +697,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -762,8 +709,7 @@ member or not. Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -774,8 +720,7 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -786,9 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -796,14 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,14 +751,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,14 +763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -841,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -969,9 +902,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -981,8 +912,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -991,8 +921,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_csharp">
 <a href="#state_lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -1004,8 +933,7 @@ A valid value is true (UP) or false (DOWN).
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_csharp">
 <a href="#state_listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1016,8 +944,7 @@ in Octavia).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -1028,8 +955,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1038,8 +964,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_csharp">
 <a href="#state_persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -1050,8 +975,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1061,8 +985,7 @@ member or not. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1074,8 +997,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1086,14 +1008,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1103,8 +1022,7 @@ other than their own. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1113,8 +1031,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_go">
 <a href="#state_lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -1126,8 +1043,7 @@ A valid value is true (UP) or false (DOWN).
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_go">
 <a href="#state_listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1138,8 +1054,7 @@ in Octavia).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -1150,8 +1065,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1160,8 +1074,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_go">
 <a href="#state_persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -1172,8 +1085,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1183,8 +1095,7 @@ member or not. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1196,8 +1107,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1208,14 +1118,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1225,8 +1132,7 @@ other than their own. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1235,8 +1141,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_nodejs">
 <a href="#state_lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
@@ -1248,8 +1153,7 @@ A valid value is true (UP) or false (DOWN).
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_nodejs">
 <a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -1260,8 +1164,7 @@ in Octavia).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
@@ -1272,8 +1175,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1282,8 +1184,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_nodejs">
 <a href="#state_persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -1294,8 +1195,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1305,8 +1205,7 @@ member or not. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1318,8 +1217,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1330,14 +1228,11 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1347,8 +1242,7 @@ other than their own. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1357,8 +1251,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lb_method_python">
 <a href="#state_lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
@@ -1370,8 +1263,7 @@ A valid value is true (UP) or false (DOWN).
 distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
 in Octavia).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_id_python">
 <a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -1382,8 +1274,7 @@ in Octavia).
     <dd>{{% md %}}The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_id_python">
 <a href="#state_loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
@@ -1394,8 +1285,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}The load balancer on which to provision this
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1404,8 +1294,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_python">
 <a href="#state_persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -1416,8 +1305,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1427,8 +1315,7 @@ member or not. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS, PROXY
 or UDP (supported only in Octavia). Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1440,8 +1327,7 @@ or UDP (supported only in Octavia). Changing this creates a new pool.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1452,8 +1338,7 @@ pool.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1468,9 +1353,7 @@ other than their own. Changing this creates a new pool.
 <h4 id="poolpersistence">Pool<wbr>Persistence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1480,8 +1363,7 @@ other than their own. Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The type of persistence mode. The current specification
 supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_csharp">
 <a href="#cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1491,14 +1373,11 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
     </dt>
     <dd>{{% md %}}The name of the cookie if persistence mode is set
 appropriately. Required if `type = APP_COOKIE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1508,8 +1387,7 @@ appropriately. Required if `type = APP_COOKIE`.
     </dt>
     <dd>{{% md %}}The type of persistence mode. The current specification
 supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_go">
 <a href="#cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1519,14 +1397,11 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
     </dt>
     <dd>{{% md %}}The name of the cookie if persistence mode is set
 appropriately. Required if `type = APP_COOKIE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1536,8 +1411,7 @@ appropriately. Required if `type = APP_COOKIE`.
     </dt>
     <dd>{{% md %}}The type of persistence mode. The current specification
 supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_nodejs">
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
@@ -1547,14 +1421,11 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
     </dt>
     <dd>{{% md %}}The name of the cookie if persistence mode is set
 appropriately. Required if `type = APP_COOKIE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1564,8 +1435,7 @@ appropriately. Required if `type = APP_COOKIE`.
     </dt>
     <dd>{{% md %}}The type of persistence mode. The current specification
 supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_name_python">
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
@@ -1575,8 +1445,7 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
     </dt>
     <dd>{{% md %}}The name of the cookie if persistence mode is set
 appropriately. Required if `type = APP_COOKIE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1597,6 +1466,6 @@ Load Balancer Pool can be imported using the Pool ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

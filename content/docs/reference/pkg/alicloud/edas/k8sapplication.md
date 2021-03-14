@@ -15,23 +15,38 @@ Create an EDAS k8s application.For information about EDAS K8s Application and ho
 > **NOTE:** Available in 1.105.0+
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -74,9 +89,16 @@ const _default = new alicloud.edas.K8sApplication("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a K8sApplication Resource {#create}
@@ -101,9 +123,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -111,9 +131,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -121,9 +139,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -131,10 +147,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -160,9 +173,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -170,9 +181,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -180,9 +189,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -190,9 +197,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -200,18 +205,13 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -219,9 +219,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -229,9 +227,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -239,10 +235,7 @@ const _default = new alicloud.edas.K8sApplication("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -257,9 +250,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -268,8 +259,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -278,8 +268,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationdescriotion_csharp">
 <a href="#applicationdescriotion_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Descriotion</a>
@@ -288,8 +277,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -298,8 +286,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commandargs_csharp">
 <a href="#commandargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Args</a>
@@ -308,8 +295,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edascontainerversion_csharp">
 <a href="#edascontainerversion_csharp" style="color: inherit; text-decoration: inherit;">Edas<wbr>Container<wbr>Version</a>
@@ -318,8 +304,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_csharp">
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -328,8 +313,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageurl_csharp">
 <a href="#imageurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -338,8 +322,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbid_csharp">
 <a href="#internetslbid_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Id</a>
@@ -348,8 +331,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbport_csharp">
 <a href="#internetslbport_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Port</a>
@@ -358,8 +340,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbprotocol_csharp">
 <a href="#internetslbprotocol_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Protocol</a>
@@ -368,8 +349,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internettargetport_csharp">
 <a href="#internettargetport_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Target<wbr>Port</a>
@@ -378,8 +358,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jdk_csharp">
 <a href="#jdk_csharp" style="color: inherit; text-decoration: inherit;">Jdk</a>
@@ -388,8 +367,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmcpu_csharp">
 <a href="#limitmcpu_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>MCpu</a>
@@ -398,8 +376,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmem_csharp">
 <a href="#limitmem_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Mem</a>
@@ -408,8 +385,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_csharp">
 <a href="#liveness_csharp" style="color: inherit; text-decoration: inherit;">Liveness</a>
@@ -418,8 +394,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localvolume_csharp">
 <a href="#localvolume_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Volume</a>
@@ -428,8 +403,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalregionid_csharp">
 <a href="#logicalregionid_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Region<wbr>Id</a>
@@ -438,8 +412,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountdescs_csharp">
 <a href="#mountdescs_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Descs</a>
@@ -448,8 +421,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -458,8 +430,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nasid_csharp">
 <a href="#nasid_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Id</a>
@@ -468,8 +439,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packagetype_csharp">
 <a href="#packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -478,8 +448,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageurl_csharp">
 <a href="#packageurl_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
@@ -488,8 +457,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageversion_csharp">
 <a href="#packageversion_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
@@ -498,8 +466,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststart_csharp">
 <a href="#poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
@@ -508,8 +475,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestop_csharp">
 <a href="#prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
@@ -518,8 +484,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readiness_csharp">
 <a href="#readiness_csharp" style="color: inherit; text-decoration: inherit;">Readiness</a>
@@ -528,8 +493,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicas_csharp">
 <a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
@@ -538,8 +502,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmcpu_csharp">
 <a href="#requestsmcpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>MCpu</a>
@@ -548,8 +511,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmem_csharp">
 <a href="#requestsmem_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Mem</a>
@@ -558,8 +520,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webcontainer_csharp">
 <a href="#webcontainer_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Container</a>
@@ -568,14 +529,11 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -584,8 +542,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -594,8 +551,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationdescriotion_go">
 <a href="#applicationdescriotion_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Descriotion</a>
@@ -604,8 +560,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -614,8 +569,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commandargs_go">
 <a href="#commandargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Args</a>
@@ -624,8 +578,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edascontainerversion_go">
 <a href="#edascontainerversion_go" style="color: inherit; text-decoration: inherit;">Edas<wbr>Container<wbr>Version</a>
@@ -634,8 +587,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_go">
 <a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -644,8 +596,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageurl_go">
 <a href="#imageurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -654,8 +605,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbid_go">
 <a href="#internetslbid_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Id</a>
@@ -664,8 +614,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbport_go">
 <a href="#internetslbport_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Port</a>
@@ -674,8 +623,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbprotocol_go">
 <a href="#internetslbprotocol_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Protocol</a>
@@ -684,8 +632,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internettargetport_go">
 <a href="#internettargetport_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Target<wbr>Port</a>
@@ -694,8 +641,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jdk_go">
 <a href="#jdk_go" style="color: inherit; text-decoration: inherit;">Jdk</a>
@@ -704,8 +650,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmcpu_go">
 <a href="#limitmcpu_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>MCpu</a>
@@ -714,8 +659,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmem_go">
 <a href="#limitmem_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Mem</a>
@@ -724,8 +668,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_go">
 <a href="#liveness_go" style="color: inherit; text-decoration: inherit;">Liveness</a>
@@ -734,8 +677,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localvolume_go">
 <a href="#localvolume_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Volume</a>
@@ -744,8 +686,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalregionid_go">
 <a href="#logicalregionid_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Region<wbr>Id</a>
@@ -754,8 +695,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountdescs_go">
 <a href="#mountdescs_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Descs</a>
@@ -764,8 +704,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -774,8 +713,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nasid_go">
 <a href="#nasid_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Id</a>
@@ -784,8 +722,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packagetype_go">
 <a href="#packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -794,8 +731,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageurl_go">
 <a href="#packageurl_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
@@ -804,8 +740,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageversion_go">
 <a href="#packageversion_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
@@ -814,8 +749,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststart_go">
 <a href="#poststart_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
@@ -824,8 +758,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestop_go">
 <a href="#prestop_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
@@ -834,8 +767,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readiness_go">
 <a href="#readiness_go" style="color: inherit; text-decoration: inherit;">Readiness</a>
@@ -844,8 +776,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicas_go">
 <a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
@@ -854,8 +785,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmcpu_go">
 <a href="#requestsmcpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>MCpu</a>
@@ -864,8 +794,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmem_go">
 <a href="#requestsmem_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Mem</a>
@@ -874,8 +803,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webcontainer_go">
 <a href="#webcontainer_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Container</a>
@@ -884,14 +812,11 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -900,8 +825,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -910,8 +834,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationdescriotion_nodejs">
 <a href="#applicationdescriotion_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Descriotion</a>
@@ -920,8 +843,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -930,8 +852,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commandargs_nodejs">
 <a href="#commandargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Args</a>
@@ -940,8 +861,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edascontainerversion_nodejs">
 <a href="#edascontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">edas<wbr>Container<wbr>Version</a>
@@ -950,8 +870,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_nodejs">
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -960,8 +879,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageurl_nodejs">
 <a href="#imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
@@ -970,8 +888,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbid_nodejs">
 <a href="#internetslbid_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Id</a>
@@ -980,8 +897,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbport_nodejs">
 <a href="#internetslbport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Port</a>
@@ -990,8 +906,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetslbprotocol_nodejs">
 <a href="#internetslbprotocol_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Protocol</a>
@@ -1000,8 +915,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internettargetport_nodejs">
 <a href="#internettargetport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Target<wbr>Port</a>
@@ -1010,8 +924,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jdk_nodejs">
 <a href="#jdk_nodejs" style="color: inherit; text-decoration: inherit;">jdk</a>
@@ -1020,8 +933,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmcpu_nodejs">
 <a href="#limitmcpu_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>MCpu</a>
@@ -1030,8 +942,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limitmem_nodejs">
 <a href="#limitmem_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Mem</a>
@@ -1040,8 +951,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_nodejs">
 <a href="#liveness_nodejs" style="color: inherit; text-decoration: inherit;">liveness</a>
@@ -1050,8 +960,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localvolume_nodejs">
 <a href="#localvolume_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Volume</a>
@@ -1060,8 +969,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalregionid_nodejs">
 <a href="#logicalregionid_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Region<wbr>Id</a>
@@ -1070,8 +978,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountdescs_nodejs">
 <a href="#mountdescs_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Descs</a>
@@ -1080,8 +987,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1090,8 +996,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nasid_nodejs">
 <a href="#nasid_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Id</a>
@@ -1100,8 +1005,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packagetype_nodejs">
 <a href="#packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
@@ -1110,8 +1014,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageurl_nodejs">
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
@@ -1120,8 +1023,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="packageversion_nodejs">
 <a href="#packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
@@ -1130,8 +1032,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststart_nodejs">
 <a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
@@ -1140,8 +1041,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestop_nodejs">
 <a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
@@ -1150,8 +1050,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readiness_nodejs">
 <a href="#readiness_nodejs" style="color: inherit; text-decoration: inherit;">readiness</a>
@@ -1160,8 +1059,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicas_nodejs">
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
@@ -1170,8 +1068,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmcpu_nodejs">
 <a href="#requestsmcpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>MCpu</a>
@@ -1180,8 +1077,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsmem_nodejs">
 <a href="#requestsmem_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Mem</a>
@@ -1190,8 +1086,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webcontainer_nodejs">
 <a href="#webcontainer_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Container</a>
@@ -1200,14 +1095,11 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -1216,8 +1108,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1226,8 +1117,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_descriotion_python">
 <a href="#application_descriotion_python" style="color: inherit; text-decoration: inherit;">application_<wbr>descriotion</a>
@@ -1236,8 +1126,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -1246,8 +1135,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_args_python">
 <a href="#command_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>args</a>
@@ -1256,8 +1144,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edas_container_version_python">
 <a href="#edas_container_version_python" style="color: inherit; text-decoration: inherit;">edas_<wbr>container_<wbr>version</a>
@@ -1266,8 +1153,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_python">
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -1276,8 +1162,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_url_python">
 <a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
@@ -1286,8 +1171,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_slb_id_python">
 <a href="#internet_slb_id_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>id</a>
@@ -1296,8 +1180,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_slb_port_python">
 <a href="#internet_slb_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>port</a>
@@ -1306,8 +1189,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_slb_protocol_python">
 <a href="#internet_slb_protocol_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>protocol</a>
@@ -1316,8 +1198,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_target_port_python">
 <a href="#internet_target_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>target_<wbr>port</a>
@@ -1326,8 +1207,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jdk_python">
 <a href="#jdk_python" style="color: inherit; text-decoration: inherit;">jdk</a>
@@ -1336,8 +1216,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_m_cpu_python">
 <a href="#limit_m_cpu_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>m_<wbr>cpu</a>
@@ -1346,8 +1225,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_mem_python">
 <a href="#limit_mem_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>mem</a>
@@ -1356,8 +1234,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_python">
 <a href="#liveness_python" style="color: inherit; text-decoration: inherit;">liveness</a>
@@ -1366,8 +1243,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_volume_python">
 <a href="#local_volume_python" style="color: inherit; text-decoration: inherit;">local_<wbr>volume</a>
@@ -1376,8 +1252,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logical_region_id_python">
 <a href="#logical_region_id_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>region_<wbr>id</a>
@@ -1386,8 +1261,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_descs_python">
 <a href="#mount_descs_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>descs</a>
@@ -1396,8 +1270,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1406,8 +1279,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nas_id_python">
 <a href="#nas_id_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>id</a>
@@ -1416,8 +1288,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_type_python">
 <a href="#package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
@@ -1426,8 +1297,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_url_python">
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
@@ -1436,8 +1306,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_version_python">
 <a href="#package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
@@ -1446,8 +1315,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_start_python">
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
@@ -1456,8 +1324,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_stop_python">
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
@@ -1466,8 +1333,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readiness_python">
 <a href="#readiness_python" style="color: inherit; text-decoration: inherit;">readiness</a>
@@ -1476,8 +1342,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicas_python">
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
@@ -1486,8 +1351,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_m_cpu_python">
 <a href="#requests_m_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>m_<wbr>cpu</a>
@@ -1496,8 +1360,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_mem_python">
 <a href="#requests_mem_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>mem</a>
@@ -1506,8 +1369,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_container_python">
 <a href="#web_container_python" style="color: inherit; text-decoration: inherit;">web_<wbr>container</a>
@@ -1516,8 +1378,7 @@ The K8sApplication resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1528,9 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1538,14 +1397,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1553,14 +1409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1568,14 +1421,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1583,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1711,9 +1560,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationdescriotion_csharp">
 <a href="#state_applicationdescriotion_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Descriotion</a>
@@ -1722,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationname_csharp">
 <a href="#state_applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -1732,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1742,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_csharp">
 <a href="#state_command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -1752,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commandargs_csharp">
 <a href="#state_commandargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Args</a>
@@ -1762,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edascontainerversion_csharp">
 <a href="#state_edascontainerversion_csharp" style="color: inherit; text-decoration: inherit;">Edas<wbr>Container<wbr>Version</a>
@@ -1772,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_csharp">
 <a href="#state_envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -1782,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_csharp">
 <a href="#state_imageurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -1792,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbid_csharp">
 <a href="#state_internetslbid_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Id</a>
@@ -1802,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbport_csharp">
 <a href="#state_internetslbport_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Port</a>
@@ -1812,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbprotocol_csharp">
 <a href="#state_internetslbprotocol_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Protocol</a>
@@ -1822,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internettargetport_csharp">
 <a href="#state_internettargetport_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Target<wbr>Port</a>
@@ -1832,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jdk_csharp">
 <a href="#state_jdk_csharp" style="color: inherit; text-decoration: inherit;">Jdk</a>
@@ -1842,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmcpu_csharp">
 <a href="#state_limitmcpu_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>MCpu</a>
@@ -1852,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmem_csharp">
 <a href="#state_limitmem_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Mem</a>
@@ -1862,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_liveness_csharp">
 <a href="#state_liveness_csharp" style="color: inherit; text-decoration: inherit;">Liveness</a>
@@ -1872,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localvolume_csharp">
 <a href="#state_localvolume_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Volume</a>
@@ -1882,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicalregionid_csharp">
 <a href="#state_logicalregionid_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Region<wbr>Id</a>
@@ -1892,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountdescs_csharp">
 <a href="#state_mountdescs_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Descs</a>
@@ -1902,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1912,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasid_csharp">
 <a href="#state_nasid_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Id</a>
@@ -1922,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_csharp">
 <a href="#state_packagetype_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -1932,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageurl_csharp">
 <a href="#state_packageurl_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
@@ -1942,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageversion_csharp">
 <a href="#state_packageversion_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
@@ -1952,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststart_csharp">
 <a href="#state_poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
@@ -1962,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prestop_csharp">
 <a href="#state_prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
@@ -1972,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readiness_csharp">
 <a href="#state_readiness_csharp" style="color: inherit; text-decoration: inherit;">Readiness</a>
@@ -1982,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_csharp">
 <a href="#state_replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
@@ -1992,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmcpu_csharp">
 <a href="#state_requestsmcpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>MCpu</a>
@@ -2002,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmem_csharp">
 <a href="#state_requestsmem_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Mem</a>
@@ -2012,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webcontainer_csharp">
 <a href="#state_webcontainer_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Container</a>
@@ -2022,14 +1839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationdescriotion_go">
 <a href="#state_applicationdescriotion_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Descriotion</a>
@@ -2038,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationname_go">
 <a href="#state_applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -2048,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -2058,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_go">
 <a href="#state_command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2068,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commandargs_go">
 <a href="#state_commandargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Args</a>
@@ -2078,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edascontainerversion_go">
 <a href="#state_edascontainerversion_go" style="color: inherit; text-decoration: inherit;">Edas<wbr>Container<wbr>Version</a>
@@ -2088,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_go">
 <a href="#state_envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -2098,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_go">
 <a href="#state_imageurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -2108,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbid_go">
 <a href="#state_internetslbid_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Id</a>
@@ -2118,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbport_go">
 <a href="#state_internetslbport_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Port</a>
@@ -2128,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbprotocol_go">
 <a href="#state_internetslbprotocol_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Slb<wbr>Protocol</a>
@@ -2138,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internettargetport_go">
 <a href="#state_internettargetport_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Target<wbr>Port</a>
@@ -2148,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jdk_go">
 <a href="#state_jdk_go" style="color: inherit; text-decoration: inherit;">Jdk</a>
@@ -2158,8 +1960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmcpu_go">
 <a href="#state_limitmcpu_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>MCpu</a>
@@ -2168,8 +1969,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmem_go">
 <a href="#state_limitmem_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Mem</a>
@@ -2178,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_liveness_go">
 <a href="#state_liveness_go" style="color: inherit; text-decoration: inherit;">Liveness</a>
@@ -2188,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localvolume_go">
 <a href="#state_localvolume_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Volume</a>
@@ -2198,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicalregionid_go">
 <a href="#state_logicalregionid_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Region<wbr>Id</a>
@@ -2208,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountdescs_go">
 <a href="#state_mountdescs_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Descs</a>
@@ -2218,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2228,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasid_go">
 <a href="#state_nasid_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Id</a>
@@ -2238,8 +2032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_go">
 <a href="#state_packagetype_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Type</a>
@@ -2248,8 +2041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageurl_go">
 <a href="#state_packageurl_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
@@ -2258,8 +2050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageversion_go">
 <a href="#state_packageversion_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
@@ -2268,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststart_go">
 <a href="#state_poststart_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
@@ -2278,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prestop_go">
 <a href="#state_prestop_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
@@ -2288,8 +2077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readiness_go">
 <a href="#state_readiness_go" style="color: inherit; text-decoration: inherit;">Readiness</a>
@@ -2298,8 +2086,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_go">
 <a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
@@ -2308,8 +2095,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmcpu_go">
 <a href="#state_requestsmcpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>MCpu</a>
@@ -2318,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmem_go">
 <a href="#state_requestsmem_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Mem</a>
@@ -2328,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webcontainer_go">
 <a href="#state_webcontainer_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Container</a>
@@ -2338,14 +2122,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationdescriotion_nodejs">
 <a href="#state_applicationdescriotion_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Descriotion</a>
@@ -2354,8 +2135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationname_nodejs">
 <a href="#state_applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -2364,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -2374,8 +2153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_nodejs">
 <a href="#state_command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2384,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commandargs_nodejs">
 <a href="#state_commandargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Args</a>
@@ -2394,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edascontainerversion_nodejs">
 <a href="#state_edascontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">edas<wbr>Container<wbr>Version</a>
@@ -2404,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_nodejs">
 <a href="#state_envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -2414,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_nodejs">
 <a href="#state_imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
@@ -2424,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbid_nodejs">
 <a href="#state_internetslbid_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Id</a>
@@ -2434,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbport_nodejs">
 <a href="#state_internetslbport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Port</a>
@@ -2444,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetslbprotocol_nodejs">
 <a href="#state_internetslbprotocol_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Slb<wbr>Protocol</a>
@@ -2454,8 +2225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internettargetport_nodejs">
 <a href="#state_internettargetport_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Target<wbr>Port</a>
@@ -2464,8 +2234,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jdk_nodejs">
 <a href="#state_jdk_nodejs" style="color: inherit; text-decoration: inherit;">jdk</a>
@@ -2474,8 +2243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmcpu_nodejs">
 <a href="#state_limitmcpu_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>MCpu</a>
@@ -2484,8 +2252,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitmem_nodejs">
 <a href="#state_limitmem_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Mem</a>
@@ -2494,8 +2261,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_liveness_nodejs">
 <a href="#state_liveness_nodejs" style="color: inherit; text-decoration: inherit;">liveness</a>
@@ -2504,8 +2270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localvolume_nodejs">
 <a href="#state_localvolume_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Volume</a>
@@ -2514,8 +2279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicalregionid_nodejs">
 <a href="#state_logicalregionid_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Region<wbr>Id</a>
@@ -2524,8 +2288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountdescs_nodejs">
 <a href="#state_mountdescs_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Descs</a>
@@ -2534,8 +2297,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2544,8 +2306,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nasid_nodejs">
 <a href="#state_nasid_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Id</a>
@@ -2554,8 +2315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagetype_nodejs">
 <a href="#state_packagetype_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Type</a>
@@ -2564,8 +2324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageurl_nodejs">
 <a href="#state_packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
@@ -2574,8 +2333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packageversion_nodejs">
 <a href="#state_packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
@@ -2584,8 +2342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststart_nodejs">
 <a href="#state_poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
@@ -2594,8 +2351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prestop_nodejs">
 <a href="#state_prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
@@ -2604,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readiness_nodejs">
 <a href="#state_readiness_nodejs" style="color: inherit; text-decoration: inherit;">readiness</a>
@@ -2614,8 +2369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_nodejs">
 <a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
@@ -2624,8 +2378,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmcpu_nodejs">
 <a href="#state_requestsmcpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>MCpu</a>
@@ -2634,8 +2387,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestsmem_nodejs">
 <a href="#state_requestsmem_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Mem</a>
@@ -2644,8 +2396,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webcontainer_nodejs">
 <a href="#state_webcontainer_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Container</a>
@@ -2654,14 +2405,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_descriotion_python">
 <a href="#state_application_descriotion_python" style="color: inherit; text-decoration: inherit;">application_<wbr>descriotion</a>
@@ -2670,8 +2418,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_name_python">
 <a href="#state_application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -2680,8 +2427,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -2690,8 +2436,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_python">
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2700,8 +2445,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set command, if set, will replace the startup command in the mirror when the mirror is started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_command_args_python">
 <a href="#state_command_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>args</a>
@@ -2710,8 +2454,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edas_container_version_python">
 <a href="#state_edas_container_version_python" style="color: inherit; text-decoration: inherit;">edas_<wbr>container_<wbr>version</a>
@@ -2720,8 +2463,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EDAS-Container version that the deployed package depends on. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_python">
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -2730,8 +2472,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_url_python">
 <a href="#state_image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
@@ -2740,8 +2481,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mirror address. When the package_type is set to 'Image', this parameter item is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_slb_id_python">
 <a href="#state_internet_slb_id_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>id</a>
@@ -2750,8 +2490,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_slb_port_python">
 <a href="#state_internet_slb_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>port</a>
@@ -2760,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The public network SLB front-end port, range 1~65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_slb_protocol_python">
 <a href="#state_internet_slb_protocol_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>slb_<wbr>protocol</a>
@@ -2770,8 +2508,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_target_port_python">
 <a href="#state_internet_target_port_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>target_<wbr>port</a>
@@ -2780,8 +2517,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jdk_python">
 <a href="#state_jdk_python" style="color: inherit; text-decoration: inherit;">jdk</a>
@@ -2790,8 +2526,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_m_cpu_python">
 <a href="#state_limit_m_cpu_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>m_<wbr>cpu</a>
@@ -2800,8 +2535,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_mem_python">
 <a href="#state_limit_mem_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>mem</a>
@@ -2810,8 +2544,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory limit of the application instance during application operation, unit: M.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_liveness_python">
 <a href="#state_liveness_python" style="color: inherit; text-decoration: inherit;">liveness</a>
@@ -2820,8 +2553,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_volume_python">
 <a href="#state_local_volume_python" style="color: inherit; text-decoration: inherit;">local_<wbr>volume</a>
@@ -2830,8 +2562,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logical_region_id_python">
 <a href="#state_logical_region_id_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>region_<wbr>id</a>
@@ -2840,8 +2571,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mount_descs_python">
 <a href="#state_mount_descs_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>descs</a>
@@ -2850,8 +2580,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2860,8 +2589,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nas_id_python">
 <a href="#state_nas_id_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>id</a>
@@ -2870,8 +2598,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_type_python">
 <a href="#state_package_type_python" style="color: inherit; text-decoration: inherit;">package_<wbr>type</a>
@@ -2880,8 +2607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application package type. Optional parameter values include: FatJar, WAR and Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_url_python">
 <a href="#state_package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
@@ -2890,8 +2616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_version_python">
 <a href="#state_package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
@@ -2900,8 +2625,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_start_python">
 <a href="#state_post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
@@ -2910,8 +2634,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execute script after startup
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pre_stop_python">
 <a href="#state_pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
@@ -2920,8 +2643,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execute script before stopping
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readiness_python">
 <a href="#state_readiness_python" style="color: inherit; text-decoration: inherit;">readiness</a>
@@ -2930,8 +2652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicas_python">
 <a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
@@ -2940,8 +2661,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of application instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requests_m_cpu_python">
 <a href="#state_requests_m_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>m_<wbr>cpu</a>
@@ -2950,8 +2670,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requests_mem_python">
 <a href="#state_requests_mem_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>mem</a>
@@ -2960,8 +2679,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_container_python">
 <a href="#state_web_container_python" style="color: inherit; text-decoration: inherit;">web_<wbr>container</a>
@@ -2970,8 +2688,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2997,6 +2714,6 @@ EDAS k8s application can be imported as below, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

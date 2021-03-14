@@ -16,11 +16,17 @@ The LDAP group mapper can be used to map an LDAP user's groups from some DN to K
 create the groups within Keycloak if they do not already exist.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Keycloak = Pulumi.Keycloak;
@@ -70,9 +76,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -129,9 +138,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_keycloak as keycloak
@@ -164,9 +176,12 @@ ldap_group_mapper = keycloak.ldap.GroupMapper("ldapGroupMapper",
     memberof_ldap_attribute="memberOf")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -203,9 +218,16 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GroupMapper Resource {#create}
@@ -230,9 +252,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +260,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +268,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,10 +276,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +302,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -299,9 +310,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -309,9 +318,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -319,9 +326,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,18 +334,13 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -348,9 +348,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -358,9 +356,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -368,10 +364,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -386,9 +379,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupnameldapattribute_csharp">
 <a href="#groupnameldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -397,8 +388,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupobjectclasses_csharp">
 <a href="#groupobjectclasses_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Classes</a>
@@ -407,8 +397,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapgroupsdn_csharp">
 <a href="#ldapgroupsdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Groups<wbr>Dn</a>
@@ -417,8 +406,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_csharp">
 <a href="#ldapuserfederationid_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -427,8 +415,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipldapattribute_csharp">
 <a href="#membershipldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Ldap<wbr>Attribute</a>
@@ -437,8 +424,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipuserldapattribute_csharp">
 <a href="#membershipuserldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -447,8 +433,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -457,8 +442,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropnonexistinggroupsduringsync_csharp">
 <a href="#dropnonexistinggroupsduringsync_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -467,8 +451,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsldapfilter_csharp">
 <a href="#groupsldapfilter_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Ldap<wbr>Filter</a>
@@ -477,8 +460,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupspath_csharp">
 <a href="#groupspath_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Path</a>
@@ -487,8 +469,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissinggroups_csharp">
 <a href="#ignoremissinggroups_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Groups</a>
@@ -497,8 +478,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedgroupattributes_csharp">
 <a href="#mappedgroupattributes_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Group<wbr>Attributes</a>
@@ -507,8 +487,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberofldapattribute_csharp">
 <a href="#memberofldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Memberof<wbr>Ldap<wbr>Attribute</a>
@@ -517,8 +496,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershipattributetype_csharp">
 <a href="#membershipattributetype_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Attribute<wbr>Type</a>
@@ -527,8 +505,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -537,8 +514,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +523,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preservegroupinheritance_csharp">
 <a href="#preservegroupinheritance_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Group<wbr>Inheritance</a>
@@ -557,8 +532,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userrolesretrievestrategy_csharp">
 <a href="#userrolesretrievestrategy_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -567,14 +541,11 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupnameldapattribute_go">
 <a href="#groupnameldapattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -583,8 +554,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupobjectclasses_go">
 <a href="#groupobjectclasses_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Classes</a>
@@ -593,8 +563,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapgroupsdn_go">
 <a href="#ldapgroupsdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Groups<wbr>Dn</a>
@@ -603,8 +572,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_go">
 <a href="#ldapuserfederationid_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -613,8 +581,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipldapattribute_go">
 <a href="#membershipldapattribute_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Ldap<wbr>Attribute</a>
@@ -623,8 +590,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipuserldapattribute_go">
 <a href="#membershipuserldapattribute_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -633,8 +599,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -643,8 +608,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropnonexistinggroupsduringsync_go">
 <a href="#dropnonexistinggroupsduringsync_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -653,8 +617,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsldapfilter_go">
 <a href="#groupsldapfilter_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Ldap<wbr>Filter</a>
@@ -663,8 +626,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupspath_go">
 <a href="#groupspath_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Path</a>
@@ -673,8 +635,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissinggroups_go">
 <a href="#ignoremissinggroups_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Groups</a>
@@ -683,8 +644,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedgroupattributes_go">
 <a href="#mappedgroupattributes_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Group<wbr>Attributes</a>
@@ -693,8 +653,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberofldapattribute_go">
 <a href="#memberofldapattribute_go" style="color: inherit; text-decoration: inherit;">Memberof<wbr>Ldap<wbr>Attribute</a>
@@ -703,8 +662,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershipattributetype_go">
 <a href="#membershipattributetype_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Attribute<wbr>Type</a>
@@ -713,8 +671,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -723,8 +680,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -733,8 +689,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preservegroupinheritance_go">
 <a href="#preservegroupinheritance_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Group<wbr>Inheritance</a>
@@ -743,8 +698,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userrolesretrievestrategy_go">
 <a href="#userrolesretrievestrategy_go" style="color: inherit; text-decoration: inherit;">User<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -753,14 +707,11 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupnameldapattribute_nodejs">
 <a href="#groupnameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -769,8 +720,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupobjectclasses_nodejs">
 <a href="#groupobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Classes</a>
@@ -779,8 +729,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapgroupsdn_nodejs">
 <a href="#ldapgroupsdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Groups<wbr>Dn</a>
@@ -789,8 +738,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_nodejs">
 <a href="#ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -799,8 +747,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipldapattribute_nodejs">
 <a href="#membershipldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Ldap<wbr>Attribute</a>
@@ -809,8 +756,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membershipuserldapattribute_nodejs">
 <a href="#membershipuserldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -819,8 +765,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -829,8 +774,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropnonexistinggroupsduringsync_nodejs">
 <a href="#dropnonexistinggroupsduringsync_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -839,8 +783,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsldapfilter_nodejs">
 <a href="#groupsldapfilter_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Ldap<wbr>Filter</a>
@@ -849,8 +792,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupspath_nodejs">
 <a href="#groupspath_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Path</a>
@@ -859,8 +801,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissinggroups_nodejs">
 <a href="#ignoremissinggroups_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Groups</a>
@@ -869,8 +810,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedgroupattributes_nodejs">
 <a href="#mappedgroupattributes_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Group<wbr>Attributes</a>
@@ -879,8 +819,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberofldapattribute_nodejs">
 <a href="#memberofldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">memberof<wbr>Ldap<wbr>Attribute</a>
@@ -889,8 +828,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershipattributetype_nodejs">
 <a href="#membershipattributetype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Attribute<wbr>Type</a>
@@ -899,8 +837,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -909,8 +846,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -919,8 +855,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preservegroupinheritance_nodejs">
 <a href="#preservegroupinheritance_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Group<wbr>Inheritance</a>
@@ -929,8 +864,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userrolesretrievestrategy_nodejs">
 <a href="#userrolesretrievestrategy_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -939,14 +873,11 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_name_ldap_attribute_python">
 <a href="#group_name_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>ldap_<wbr>attribute</a>
@@ -955,8 +886,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_object_classes_python">
 <a href="#group_object_classes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>classes</a>
@@ -965,8 +895,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldap_groups_dn_python">
 <a href="#ldap_groups_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>groups_<wbr>dn</a>
@@ -975,8 +904,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ldap_user_federation_id_python">
 <a href="#ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
@@ -985,8 +913,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membership_ldap_attribute_python">
 <a href="#membership_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>ldap_<wbr>attribute</a>
@@ -995,8 +922,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membership_user_ldap_attribute_python">
 <a href="#membership_user_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>user_<wbr>ldap_<wbr>attribute</a>
@@ -1005,8 +931,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -1015,8 +940,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drop_non_existing_groups_during_sync_python">
 <a href="#drop_non_existing_groups_during_sync_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>non_<wbr>existing_<wbr>groups_<wbr>during_<wbr>sync</a>
@@ -1025,8 +949,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_ldap_filter_python">
 <a href="#groups_ldap_filter_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>ldap_<wbr>filter</a>
@@ -1035,8 +958,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_path_python">
 <a href="#groups_path_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>path</a>
@@ -1045,8 +967,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_groups_python">
 <a href="#ignore_missing_groups_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>groups</a>
@@ -1055,8 +976,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapped_group_attributes_python">
 <a href="#mapped_group_attributes_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>group_<wbr>attributes</a>
@@ -1065,8 +985,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberof_ldap_attribute_python">
 <a href="#memberof_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">memberof_<wbr>ldap_<wbr>attribute</a>
@@ -1075,8 +994,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_attribute_type_python">
 <a href="#membership_attribute_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>attribute_<wbr>type</a>
@@ -1085,8 +1003,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1095,8 +1012,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1105,8 +1021,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserve_group_inheritance_python">
 <a href="#preserve_group_inheritance_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>group_<wbr>inheritance</a>
@@ -1115,8 +1030,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_roles_retrieve_strategy_python">
 <a href="#user_roles_retrieve_strategy_python" style="color: inherit; text-decoration: inherit;">user_<wbr>roles_<wbr>retrieve_<wbr>strategy</a>
@@ -1125,8 +1039,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1137,9 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1147,14 +1058,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1162,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1177,14 +1082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1192,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1320,9 +1221,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dropnonexistinggroupsduringsync_csharp">
 <a href="#state_dropnonexistinggroupsduringsync_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -1331,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameldapattribute_csharp">
 <a href="#state_groupnameldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -1341,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclasses_csharp">
 <a href="#state_groupobjectclasses_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Classes</a>
@@ -1351,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsldapfilter_csharp">
 <a href="#state_groupsldapfilter_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Ldap<wbr>Filter</a>
@@ -1361,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupspath_csharp">
 <a href="#state_groupspath_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Path</a>
@@ -1371,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoremissinggroups_csharp">
 <a href="#state_ignoremissinggroups_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Groups</a>
@@ -1381,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapgroupsdn_csharp">
 <a href="#state_ldapgroupsdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Groups<wbr>Dn</a>
@@ -1391,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_csharp">
 <a href="#state_ldapuserfederationid_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -1401,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappedgroupattributes_csharp">
 <a href="#state_mappedgroupattributes_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Group<wbr>Attributes</a>
@@ -1411,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberofldapattribute_csharp">
 <a href="#state_memberofldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Memberof<wbr>Ldap<wbr>Attribute</a>
@@ -1421,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipattributetype_csharp">
 <a href="#state_membershipattributetype_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Attribute<wbr>Type</a>
@@ -1431,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipldapattribute_csharp">
 <a href="#state_membershipldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Ldap<wbr>Attribute</a>
@@ -1441,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipuserldapattribute_csharp">
 <a href="#state_membershipuserldapattribute_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -1451,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1461,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1471,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preservegroupinheritance_csharp">
 <a href="#state_preservegroupinheritance_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Group<wbr>Inheritance</a>
@@ -1481,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -1491,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userrolesretrievestrategy_csharp">
 <a href="#state_userrolesretrievestrategy_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -1501,14 +1383,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dropnonexistinggroupsduringsync_go">
 <a href="#state_dropnonexistinggroupsduringsync_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -1517,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameldapattribute_go">
 <a href="#state_groupnameldapattribute_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -1527,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclasses_go">
 <a href="#state_groupobjectclasses_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Classes</a>
@@ -1537,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsldapfilter_go">
 <a href="#state_groupsldapfilter_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Ldap<wbr>Filter</a>
@@ -1547,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupspath_go">
 <a href="#state_groupspath_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Path</a>
@@ -1557,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoremissinggroups_go">
 <a href="#state_ignoremissinggroups_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Groups</a>
@@ -1567,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapgroupsdn_go">
 <a href="#state_ldapgroupsdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Groups<wbr>Dn</a>
@@ -1577,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_go">
 <a href="#state_ldapuserfederationid_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -1587,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappedgroupattributes_go">
 <a href="#state_mappedgroupattributes_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Group<wbr>Attributes</a>
@@ -1597,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberofldapattribute_go">
 <a href="#state_memberofldapattribute_go" style="color: inherit; text-decoration: inherit;">Memberof<wbr>Ldap<wbr>Attribute</a>
@@ -1607,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipattributetype_go">
 <a href="#state_membershipattributetype_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Attribute<wbr>Type</a>
@@ -1617,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipldapattribute_go">
 <a href="#state_membershipldapattribute_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Ldap<wbr>Attribute</a>
@@ -1627,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipuserldapattribute_go">
 <a href="#state_membershipuserldapattribute_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -1637,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1647,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1657,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preservegroupinheritance_go">
 <a href="#state_preservegroupinheritance_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Group<wbr>Inheritance</a>
@@ -1667,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -1677,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userrolesretrievestrategy_go">
 <a href="#state_userrolesretrievestrategy_go" style="color: inherit; text-decoration: inherit;">User<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -1687,14 +1549,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dropnonexistinggroupsduringsync_nodejs">
 <a href="#state_dropnonexistinggroupsduringsync_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
@@ -1703,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupnameldapattribute_nodejs">
 <a href="#state_groupnameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
@@ -1713,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupobjectclasses_nodejs">
 <a href="#state_groupobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Classes</a>
@@ -1723,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsldapfilter_nodejs">
 <a href="#state_groupsldapfilter_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Ldap<wbr>Filter</a>
@@ -1733,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupspath_nodejs">
 <a href="#state_groupspath_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Path</a>
@@ -1743,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoremissinggroups_nodejs">
 <a href="#state_ignoremissinggroups_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Groups</a>
@@ -1753,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapgroupsdn_nodejs">
 <a href="#state_ldapgroupsdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Groups<wbr>Dn</a>
@@ -1763,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_nodejs">
 <a href="#state_ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
@@ -1773,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappedgroupattributes_nodejs">
 <a href="#state_mappedgroupattributes_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Group<wbr>Attributes</a>
@@ -1783,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberofldapattribute_nodejs">
 <a href="#state_memberofldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">memberof<wbr>Ldap<wbr>Attribute</a>
@@ -1793,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipattributetype_nodejs">
 <a href="#state_membershipattributetype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Attribute<wbr>Type</a>
@@ -1803,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipldapattribute_nodejs">
 <a href="#state_membershipldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Ldap<wbr>Attribute</a>
@@ -1813,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membershipuserldapattribute_nodejs">
 <a href="#state_membershipuserldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
@@ -1823,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1833,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1843,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preservegroupinheritance_nodejs">
 <a href="#state_preservegroupinheritance_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Group<wbr>Inheritance</a>
@@ -1853,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -1863,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userrolesretrievestrategy_nodejs">
 <a href="#state_userrolesretrievestrategy_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
@@ -1873,14 +1715,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drop_non_existing_groups_during_sync_python">
 <a href="#state_drop_non_existing_groups_during_sync_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>non_<wbr>existing_<wbr>groups_<wbr>during_<wbr>sync</a>
@@ -1889,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_name_ldap_attribute_python">
 <a href="#state_group_name_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>ldap_<wbr>attribute</a>
@@ -1899,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_object_classes_python">
 <a href="#state_group_object_classes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>classes</a>
@@ -1909,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_ldap_filter_python">
 <a href="#state_groups_ldap_filter_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>ldap_<wbr>filter</a>
@@ -1919,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_path_python">
 <a href="#state_groups_path_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>path</a>
@@ -1929,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_missing_groups_python">
 <a href="#state_ignore_missing_groups_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>groups</a>
@@ -1939,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldap_groups_dn_python">
 <a href="#state_ldap_groups_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>groups_<wbr>dn</a>
@@ -1949,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ldap_user_federation_id_python">
 <a href="#state_ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
@@ -1959,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapped_group_attributes_python">
 <a href="#state_mapped_group_attributes_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>group_<wbr>attributes</a>
@@ -1969,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberof_ldap_attribute_python">
 <a href="#state_memberof_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">memberof_<wbr>ldap_<wbr>attribute</a>
@@ -1979,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membership_attribute_type_python">
 <a href="#state_membership_attribute_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>attribute_<wbr>type</a>
@@ -1989,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membership_ldap_attribute_python">
 <a href="#state_membership_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>ldap_<wbr>attribute</a>
@@ -1999,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membership_user_ldap_attribute_python">
 <a href="#state_membership_user_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>user_<wbr>ldap_<wbr>attribute</a>
@@ -2009,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2019,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2029,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preserve_group_inheritance_python">
 <a href="#state_preserve_group_inheritance_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>group_<wbr>inheritance</a>
@@ -2039,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -2049,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_roles_retrieve_strategy_python">
 <a href="#state_user_roles_retrieve_strategy_python" style="color: inherit; text-decoration: inherit;">user_<wbr>roles_<wbr>retrieve_<wbr>strategy</a>
@@ -2059,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2086,6 +1907,6 @@ LDAP mappers can be imported using the format `{{realm_id}}/{{ldap_user_federati
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 </dl>
 

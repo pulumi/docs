@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="globalparameters_csharp">
 <a href="#globalparameters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Global<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factoryidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoconfiguration_csharp">
 <a href="#repoconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factorygithubconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionconfigurationresponse">Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="globalparameters_go">
 <a href="#globalparameters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Global<wbr>Parameter<wbr>Specification<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factoryidentityresponse">Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoconfiguration_go">
 <a href="#repoconfiguration_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factorygithubconfigurationresponse">Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionconfigurationresponse">Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="globalparameters_nodejs">
 <a href="#globalparameters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Parameters</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Global<wbr>Parameter<wbr>Specification<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factoryidentityresponse">Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repoconfiguration_nodejs">
 <a href="#repoconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Configuration</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factorygithubconfigurationresponse">Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -547,14 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time the factory was created in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Factory provisioning state, example Succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionconfigurationresponse">Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_parameters_python">
 <a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Global<wbr>Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factoryidentityresponse">Factory<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether or not public network access is allowed for the data factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repo_configuration_python">
 <a href="#repo_configuration_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>configuration</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#factorygithubconfigurationresponse">Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</a> | <a href="#factoryvstsconfigurationresponse">Factory<wbr>VSTSConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentity_csharp">
 <a href="#userassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
@@ -704,14 +622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentity_go">
 <a href="#userassignedidentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
@@ -719,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentity_nodejs">
 <a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_python">
 <a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity to authenticate to customer's key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionconfigurationresponse">Encryption<wbr>Configuration<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultbaseurl_csharp">
 <a href="#vaultbaseurl_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Base<wbr>Url</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_csharp">
 <a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
@@ -795,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -810,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultbaseurl_go">
 <a href="#vaultbaseurl_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Base<wbr>Url</a>
@@ -819,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_go">
 <a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
@@ -837,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -852,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vaultbaseurl_nodejs">
 <a href="#vaultbaseurl_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Base<wbr>Url</a>
@@ -861,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -870,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_nodejs">
 <a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
@@ -879,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -894,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the key in Azure Key Vault to use as Customer Managed Key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vault_base_url_python">
 <a href="#vault_base_url_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>base_<wbr>url</a>
@@ -903,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The url of the Azure Key Vault used for CMK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_version_python">
 <a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the key used for CMK. If not provided, latest version will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="factorygithubconfigurationresponse">Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_csharp">
 <a href="#collaborationbranch_csharp" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
@@ -949,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_csharp">
 <a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -958,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_csharp">
 <a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -967,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -976,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_csharp">
 <a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
@@ -985,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1000,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_go">
 <a href="#collaborationbranch_go" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
@@ -1009,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_go">
 <a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -1018,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_go">
 <a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -1027,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1036,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_go">
 <a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
@@ -1045,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -1060,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_nodejs">
 <a href="#collaborationbranch_nodejs" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
@@ -1069,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_nodejs">
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
@@ -1078,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_nodejs">
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
@@ -1087,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1096,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_nodejs">
 <a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
@@ -1105,14 +966,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -1120,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaboration_branch_python">
 <a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
@@ -1129,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_name_python">
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
@@ -1138,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="root_folder_python">
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
@@ -1147,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1156,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_commit_id_python">
 <a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="factoryidentityresponse">Factory<wbr>Identity<wbr>Response</h4>
@@ -1174,9 +1026,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1184,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1193,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1202,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1211,14 +1058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1226,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1235,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1244,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1253,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1268,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1277,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1286,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -1295,14 +1130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1310,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1319,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1328,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -1337,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of user assigned identities for the factory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="factoryvstsconfigurationresponse">Factory<wbr>VSTSConfiguration<wbr>Response</h4>
@@ -1346,9 +1174,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1356,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_csharp">
 <a href="#collaborationbranch_csharp" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
@@ -1365,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1374,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_csharp">
 <a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -1383,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_csharp">
 <a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -1392,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_csharp">
 <a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
@@ -1401,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1410,14 +1230,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1425,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_go">
 <a href="#collaborationbranch_go" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
@@ -1434,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1443,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_go">
 <a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -1452,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_go">
 <a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -1461,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_go">
 <a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
@@ -1470,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1479,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -1494,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaborationbranch_nodejs">
 <a href="#collaborationbranch_nodejs" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
@@ -1503,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -1512,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_nodejs">
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
@@ -1521,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_nodejs">
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
@@ -1530,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcommitid_nodejs">
 <a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
@@ -1539,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1548,14 +1350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -1563,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="collaboration_branch_python">
 <a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
@@ -1572,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collaboration branch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -1581,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VSTS project name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_name_python">
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
@@ -1590,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Repository name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Repository name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="root_folder_python">
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
@@ -1599,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Root folder.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_commit_id_python">
 <a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
@@ -1608,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last commit id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last commit id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1617,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalparameterspecificationresponse">Global<wbr>Parameter<wbr>Specification<wbr>Response</h4>
@@ -1626,9 +1418,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1636,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1645,14 +1434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1660,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1669,14 +1454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1684,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1693,14 +1474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1708,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Global Parameter type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1717,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
